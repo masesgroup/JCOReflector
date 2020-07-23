@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.emit.PropertyToken;
 
 
 /**
  * The base .NET class managing System.Reflection.Emit.PropertyToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.PropertyToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.PropertyToken</a>
  */
-public class PropertyToken extends NetObject  {
+public class PropertyToken extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.Emit.PropertyToken
+     */
     public static final String className = "System.Reflection.Emit.PropertyToken";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class PropertyToken extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyToken}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyToken(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class PropertyToken extends NetObject  {
 
     // Constructors section
     
+    public PropertyToken() throws Throwable {
+    }
+
+
 
     
     // Methods section

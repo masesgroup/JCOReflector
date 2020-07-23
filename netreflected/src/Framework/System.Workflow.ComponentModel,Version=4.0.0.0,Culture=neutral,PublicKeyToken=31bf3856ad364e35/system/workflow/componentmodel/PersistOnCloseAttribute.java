@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.PersistOnCloseAttribute, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.PersistOnCloseAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.PersistOnCloseAttribute</a>
  */
-public class PersistOnCloseAttribute extends NetObject  {
+public class PersistOnCloseAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.PersistOnCloseAttribute
+     */
     public static final String className = "System.Workflow.ComponentModel.PersistOnCloseAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class PersistOnCloseAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PersistOnCloseAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static PersistOnCloseAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PersistOnCloseAttribute(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class PersistOnCloseAttribute extends NetObject  {
 
     // Constructors section
     
-
     public PersistOnCloseAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -123,41 +140,10 @@ public class PersistOnCloseAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

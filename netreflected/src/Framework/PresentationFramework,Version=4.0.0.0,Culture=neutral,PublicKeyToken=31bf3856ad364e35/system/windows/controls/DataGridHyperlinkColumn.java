@@ -38,29 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.DependencyProperty;
-import system.windows.FrameworkElement;
-import system.windows.controls.DataGridRow;
-import system.windows.LocalValueEnumerator;
-import system.windows.DependencyPropertyKey;
-import system.windows.controls.DataGridLength;
-import system.windows.controls.DataTemplateSelector;
+import system.windows.controls.DataGridBoundColumn;
 import system.windows.data.BindingBase;
-import system.windows.DataTemplate;
-import system.windows.DependencyObjectType;
 import system.windows.Style;
-import system.windows.threading.Dispatcher;
-import system.windows.Visibility;
 
 
 /**
  * The base .NET class managing System.Windows.Controls.DataGridHyperlinkColumn, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridHyperlinkColumn" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridHyperlinkColumn</a>
  */
-public class DataGridHyperlinkColumn extends NetObject  {
+public class DataGridHyperlinkColumn extends DataGridBoundColumn  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.DataGridHyperlinkColumn
+     */
     public static final String className = "System.Windows.Controls.DataGridHyperlinkColumn";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -113,7 +118,9 @@ public class DataGridHyperlinkColumn extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridHyperlinkColumn}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridHyperlinkColumn cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridHyperlinkColumn(from.getJCOInstance());
@@ -121,7 +128,6 @@ public class DataGridHyperlinkColumn extends NetObject  {
 
     // Constructors section
     
-
     public DataGridHyperlinkColumn() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -136,437 +142,10 @@ public class DataGridHyperlinkColumn extends NetObject  {
     
     // Methods section
     
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetValue(DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", dp == null ? null : dp.getJCOInstance());
-            return new NetObject(objGetValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject OnCopyingCellClipboardContent(NetObject item) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objOnCopyingCellClipboardContent = (JCObject)classInstance.Invoke("OnCopyingCellClipboardContent", item == null ? null : item.getJCOInstance());
-            return new NetObject(objOnCopyingCellClipboardContent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject ReadLocalValue(DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReadLocalValue = (JCObject)classInstance.Invoke("ReadLocalValue", dp == null ? null : dp.getJCOInstance());
-            return new NetObject(objReadLocalValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FrameworkElement GetCellContent(NetObject dataItem) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCellContent = (JCObject)classInstance.Invoke("GetCellContent", dataItem == null ? null : dataItem.getJCOInstance());
-            return new FrameworkElement(objGetCellContent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FrameworkElement GetCellContent(DataGridRow dataGridRow) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCellContent = (JCObject)classInstance.Invoke("GetCellContent", dataGridRow == null ? null : dataGridRow.getJCOInstance());
-            return new FrameworkElement(objGetCellContent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LocalValueEnumerator GetLocalValueEnumerator() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLocalValueEnumerator = (JCObject)classInstance.Invoke("GetLocalValueEnumerator");
-            return new LocalValueEnumerator(objGetLocalValueEnumerator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ClearValue(DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ClearValue", dp == null ? null : dp.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ClearValue(DependencyPropertyKey key) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ClearValue", key == null ? null : key.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CoerceValue(DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CoerceValue", dp == null ? null : dp.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InvalidateProperty(DependencyProperty dp) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InvalidateProperty", dp == null ? null : dp.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OnPastingCellClipboardContent(NetObject item, NetObject cellContent) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidCastException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnPastingCellClipboardContent", item == null ? null : item.getJCOInstance(), cellContent == null ? null : cellContent.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetCurrentValue(DependencyProperty dp, NetObject value) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetCurrentValue", dp == null ? null : dp.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetValue(DependencyProperty dp, NetObject value) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetValue", dp == null ? null : dp.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetValue(DependencyPropertyKey key, NetObject value) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetValue", key == null ? null : key.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("VerifyAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getCanUserReorder() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanUserReorder");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCanUserReorder(boolean CanUserReorder) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CanUserReorder", CanUserReorder);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanUserResize() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanUserResize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCanUserResize(boolean CanUserResize) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CanUserResize", CanUserResize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanUserSort() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanUserSort");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCanUserSort(boolean CanUserSort) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CanUserSort", CanUserSort);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsAutoGenerated() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsAutoGenerated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsAutoGenerated(boolean IsAutoGenerated) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsAutoGenerated", IsAutoGenerated);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsFrozen() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsFrozen");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsFrozen(boolean IsFrozen) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsFrozen", IsFrozen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsReadOnly() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsReadOnly", IsReadOnly);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSealed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSealed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getActualWidth() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("ActualWidth");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getMaxWidth() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("MaxWidth");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxWidth(double MaxWidth) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxWidth", MaxWidth);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getMinWidth() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("MinWidth");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMinWidth(double MinWidth) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MinWidth", MinWidth);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDisplayIndex() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DisplayIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDisplayIndex(int DisplayIndex) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DisplayIndex", DisplayIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getHeader() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Header");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHeader(NetObject Header) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Header", Header == null ? null : Header.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getHeaderStringFormat() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("HeaderStringFormat");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHeaderStringFormat(java.lang.String HeaderStringFormat) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HeaderStringFormat", HeaderStringFormat);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSortMemberPath() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SortMemberPath");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSortMemberPath(java.lang.String SortMemberPath) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SortMemberPath", SortMemberPath);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getTargetName() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -582,90 +161,6 @@ public class DataGridHyperlinkColumn extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetName", TargetName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataGridLength getWidth() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Width");
-            return new DataGridLength(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWidth(DataGridLength Width) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Width", Width == null ? null : Width.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataTemplateSelector getHeaderTemplateSelector() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplateSelector");
-            return new DataTemplateSelector(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHeaderTemplateSelector(DataTemplateSelector HeaderTemplateSelector) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HeaderTemplateSelector", HeaderTemplateSelector == null ? null : HeaderTemplateSelector.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BindingBase getBinding() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
-            return new BindingBase(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBinding(BindingBase Binding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Binding", Binding == null ? null : Binding.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BindingBase getClipboardContentBinding() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ClipboardContentBinding");
-            return new BindingBase(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setClipboardContentBinding(BindingBase ClipboardContentBinding) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ClipboardContentBinding", ClipboardContentBinding == null ? null : ClipboardContentBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -692,192 +187,23 @@ public class DataGridHyperlinkColumn extends NetObject  {
         }
     }
 
-    public DataTemplate getHeaderTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public Style getDefaultEditingElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
-            return new DataTemplate(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHeaderTemplate(DataTemplate HeaderTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DependencyObjectType getDependencyObjectType() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DependencyObjectType");
-            return new DependencyObjectType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Style getCellStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CellStyle");
+            JCObject val = (JCObject)classInstance.Get("DefaultEditingElementStyle");
             return new Style(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCellStyle(Style CellStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public Style getDefaultElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CellStyle", CellStyle == null ? null : CellStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Style getDefaultEditingElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("DefaultEditingElementStyle");
+            JCObject val = (JCObject)classInstance.Get("DefaultElementStyle");
             return new Style(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Style getDefaultElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("DefaultElementStyle");
-            return new Style(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Style getDragIndicatorStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DragIndicatorStyle");
-            return new Style(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDragIndicatorStyle(Style DragIndicatorStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DragIndicatorStyle", DragIndicatorStyle == null ? null : DragIndicatorStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Style getEditingElementStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EditingElementStyle");
-            return new Style(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEditingElementStyle(Style EditingElementStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EditingElementStyle", EditingElementStyle == null ? null : EditingElementStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Style getElementStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ElementStyle");
-            return new Style(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setElementStyle(Style ElementStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ElementStyle", ElementStyle == null ? null : ElementStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Style getHeaderStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("HeaderStyle");
-            return new Style(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHeaderStyle(Style HeaderStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HeaderStyle", HeaderStyle == null ? null : HeaderStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Dispatcher getDispatcher() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
-            return new Dispatcher(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Visibility getVisibility() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Visibility");
-            return new Visibility(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setVisibility(Visibility Visibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Visibility", Visibility == null ? null : Visibility.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

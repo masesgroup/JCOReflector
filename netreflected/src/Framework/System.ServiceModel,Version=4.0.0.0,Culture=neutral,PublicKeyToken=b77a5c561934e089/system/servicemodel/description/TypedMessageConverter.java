@@ -47,12 +47,27 @@ import system.servicemodel.XmlSerializerFormatAttribute;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.TypedMessageConverter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.TypedMessageConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.TypedMessageConverter</a>
  */
 public class TypedMessageConverter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.TypedMessageConverter
+     */
     public static final String className = "System.ServiceModel.Description.TypedMessageConverter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class TypedMessageConverter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypedMessageConverter}, a cast assert is made to check if types are compatible.
+     */
     public static TypedMessageConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TypedMessageConverter(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class TypedMessageConverter extends NetObject  {
 
     // Constructors section
     
+    public TypedMessageConverter() throws Throwable {
+    }
 
     
     // Methods section

@@ -43,12 +43,27 @@ import system.reflection.IMemberFilter;
 
 /**
  * The base .NET class managing System.Reflection.MemberFilter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MemberFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MemberFilter</a>
  */
 public class MemberFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.MemberFilter
+     */
     public static final String className = "System.Reflection.MemberFilter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IMemberFilter callerInstance = null;
@@ -156,7 +171,7 @@ public class MemberFilter extends JCDelegate implements IJCEventEmit, IJCOBridge
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final boolean DynamicInvoke(MemberInfo m, NetObject filterCriteria) throws Throwable {
+    public boolean METHOD_JAVA_NAME(MemberInfo m, NetObject filterCriteria) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -166,7 +181,9 @@ public class MemberFilter extends JCDelegate implements IJCEventEmit, IJCOBridge
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public boolean Invoke(MemberInfo m, NetObject filterCriteria) {
         return false;
     }

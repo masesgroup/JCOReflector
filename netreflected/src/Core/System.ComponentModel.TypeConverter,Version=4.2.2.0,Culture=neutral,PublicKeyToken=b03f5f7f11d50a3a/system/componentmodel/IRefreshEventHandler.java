@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.RefreshEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link RefreshEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.RefreshEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.RefreshEventHandler</a>
+ */
 public interface IRefreshEventHandler {
     public void Invoke(RefreshEventArgs e);
 }

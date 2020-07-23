@@ -42,12 +42,27 @@ import system.workflow.componentmodel.DependencyObject;
 import system.workflow.componentmodel.IGetValueOverride;
 /**
  * The base .NET class managing System.Workflow.ComponentModel.GetValueOverride, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.GetValueOverride" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.GetValueOverride</a>
  */
 public class GetValueOverride extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.GetValueOverride
+     */
     public static final String className = "System.Workflow.ComponentModel.GetValueOverride";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IGetValueOverride callerInstance = null;
@@ -153,7 +168,7 @@ public class GetValueOverride extends JCDelegate implements IJCEventEmit, IJCOBr
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke(DependencyObject d) throws Throwable {
+    public NetObject METHOD_JAVA_NAME(DependencyObject d) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -164,7 +179,9 @@ public class GetValueOverride extends JCDelegate implements IJCEventEmit, IJCOBr
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke(DependencyObject d) {
         return null;
     }

@@ -38,20 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.ConfigurationElement;
 import system.TimeSpan;
-import system.configuration.Configuration;
-import system.configuration.ConfigurationLockCollection;
-import system.configuration.ElementInformation;
 
 
 /**
  * The base .NET class managing System.Web.Configuration.BufferModeSettings, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.BufferModeSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.BufferModeSettings</a>
  */
-public class BufferModeSettings extends NetObject  {
+public class BufferModeSettings extends ConfigurationElement  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.BufferModeSettings
+     */
     public static final String className = "System.Web.Configuration.BufferModeSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +117,9 @@ public class BufferModeSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BufferModeSettings}, a cast assert is made to check if types are compatible.
+     */
     public static BufferModeSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BufferModeSettings(from.getJCOInstance());
@@ -112,6 +127,8 @@ public class BufferModeSettings extends NetObject  {
 
     // Constructors section
     
+    public BufferModeSettings() throws Throwable {
+    }
 
     public BufferModeSettings(java.lang.String name, int maxBufferSize, int maxFlushSize, int urgentFlushThreshold, TimeSpan regularFlushInterval, TimeSpan urgentFlushInterval, int maxBufferThreads) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         try {
@@ -124,43 +141,14 @@ public class BufferModeSettings extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getLockItem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("LockItem");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLockItem(boolean LockItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LockItem", LockItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getMaxBufferSize() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -236,72 +224,6 @@ public class BufferModeSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UrgentFlushThreshold", UrgentFlushThreshold);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Configuration getCurrentConfiguration() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentConfiguration");
-            return new Configuration(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ConfigurationLockCollection getLockAllAttributesExcept() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LockAllAttributesExcept");
-            return new ConfigurationLockCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ConfigurationLockCollection getLockAllElementsExcept() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LockAllElementsExcept");
-            return new ConfigurationLockCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ConfigurationLockCollection getLockAttributes() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LockAttributes");
-            return new ConfigurationLockCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ConfigurationLockCollection getLockElements() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LockElements");
-            return new ConfigurationLockCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ElementInformation getElementInformation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ElementInformation");
-            return new ElementInformation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

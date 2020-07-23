@@ -46,12 +46,27 @@ import system.GCCollectionMode;
 
 /**
  * The base .NET class managing System.GC, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.GC" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.GC</a>
  */
 public class GC extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.GC
+     */
     public static final String className = "System.GC";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class GC extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GC}, a cast assert is made to check if types are compatible.
+     */
     public static GC cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GC(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class GC extends NetObject  {
 
     // Constructors section
     
+    public GC() throws Throwable {
+    }
 
     
     // Methods section
@@ -415,11 +434,11 @@ public class GC extends NetObject  {
     
     // Properties section
     
-    public static int getMaxGeneration() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getMaxGeneration() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("MaxGeneration");
+            return (int)classInstance.Get("MaxGeneration");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

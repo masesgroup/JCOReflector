@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.sqlclient.SqlRowUpdatingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SqlRowUpdatingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowUpdatingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowUpdatingEventHandler</a>
+ */
 public interface ISqlRowUpdatingEventHandler {
     public void Invoke(NetObject sender, SqlRowUpdatingEventArgs e);
 }

@@ -44,12 +44,27 @@ import system.data.spatial.DbGeographyWellKnownValue;
 
 /**
  * The base .NET class managing System.Data.Spatial.DbGeography, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Spatial.DbGeography" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Spatial.DbGeography</a>
  */
 public class DbGeography extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Spatial.DbGeography
+     */
     public static final String className = "System.Data.Spatial.DbGeography";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DbGeography extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbGeography}, a cast assert is made to check if types are compatible.
+     */
     public static DbGeography cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbGeography(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class DbGeography extends NetObject  {
 
     // Constructors section
     
+    public DbGeography() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -196,11 +217,33 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    public static DbGeography FromBinary(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)dupParam0);
+            return new DbGeography(objFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbGeography FromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", wellKnownBinary, coordinateSystemId);
+            return new DbGeography(objFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeography FromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", dupParam0, dupParam1);
             return new DbGeography(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,6 +305,17 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    public static DbGeography GeographyCollectionFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGeographyCollectionFromBinary = (JCObject)classType.Invoke("GeographyCollectionFromBinary", dupParam0, dupParam1);
+            return new DbGeography(objGeographyCollectionFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbGeography GeographyCollectionFromText(java.lang.String geographyCollectionWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -295,6 +349,17 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    public static DbGeography LineFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLineFromBinary = (JCObject)classType.Invoke("LineFromBinary", dupParam0, dupParam1);
+            return new DbGeography(objLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbGeography LineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -311,6 +376,17 @@ public class DbGeography extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objMultiLineFromBinary = (JCObject)classType.Invoke("MultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objMultiLineFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeography MultiLineFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiLineFromBinary = (JCObject)classType.Invoke("MultiLineFromBinary", dupParam0, dupParam1);
             return new DbGeography(objMultiLineFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -339,6 +415,17 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    public static DbGeography MultiPointFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiPointFromBinary = (JCObject)classType.Invoke("MultiPointFromBinary", dupParam0, dupParam1);
+            return new DbGeography(objMultiPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbGeography MultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -355,6 +442,17 @@ public class DbGeography extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objMultiPolygonFromBinary = (JCObject)classType.Invoke("MultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objMultiPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeography MultiPolygonFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiPolygonFromBinary = (JCObject)classType.Invoke("MultiPolygonFromBinary", dupParam0, dupParam1);
             return new DbGeography(objMultiPolygonFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -394,6 +492,17 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    public static DbGeography PointFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPointFromBinary = (JCObject)classType.Invoke("PointFromBinary", dupParam0, dupParam1);
+            return new DbGeography(objPointFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbGeography PointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -410,6 +519,17 @@ public class DbGeography extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objPolygonFromBinary = (JCObject)classType.Invoke("PolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
+            return new DbGeography(objPolygonFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeography PolygonFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPolygonFromBinary = (JCObject)classType.Invoke("PolygonFromBinary", dupParam0, dupParam1);
             return new DbGeography(objPolygonFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -493,11 +613,11 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static int getDefaultCoordinateSystemId() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getDefaultCoordinateSystemId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("DefaultCoordinateSystemId");
+            return (int)classInstance.Get("DefaultCoordinateSystemId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

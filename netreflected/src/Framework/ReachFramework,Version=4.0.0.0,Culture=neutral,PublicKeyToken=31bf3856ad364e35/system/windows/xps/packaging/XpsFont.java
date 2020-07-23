@@ -38,19 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.io.Stream;
-import system.Uri;
+import system.windows.xps.packaging.XpsResource;
 import system.Guid;
 
 
 /**
  * The base .NET class managing System.Windows.Xps.Packaging.XpsFont, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.XpsFont" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.XpsFont</a>
  */
-public class XpsFont extends NetObject  {
+public class XpsFont extends XpsResource  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Packaging.XpsFont
+     */
     public static final String className = "System.Windows.Xps.Packaging.XpsFont";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +117,9 @@ public class XpsFont extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XpsFont}, a cast assert is made to check if types are compatible.
+     */
     public static XpsFont cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XpsFont(from.getJCOInstance());
@@ -111,47 +127,29 @@ public class XpsFont extends NetObject  {
 
     // Constructors section
     
+    public XpsFont() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public Stream GetStream() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream");
-            return new Stream(objGetStream);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri RelativeUri(Uri inUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRelativeUri = (JCObject)classInstance.Invoke("RelativeUri", inUri == null ? null : inUri.getJCOInstance());
-            return new Uri(objRelativeUri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Commit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Commit");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void ObfuscateFontData(byte[] fontData, Guid guid) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ObfuscateFontData", fontData, guid == null ? null : guid.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ObfuscateFontData(JCRefOut dupParam0, Guid dupParam1) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ObfuscateFontData", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,27 +184,6 @@ public class XpsFont extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsRestricted", IsRestricted);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getUri() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUri(Uri Uri) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Uri", Uri == null ? null : Uri.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

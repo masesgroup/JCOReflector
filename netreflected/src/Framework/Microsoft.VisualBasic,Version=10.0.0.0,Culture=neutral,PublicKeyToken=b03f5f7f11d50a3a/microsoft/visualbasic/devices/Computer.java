@@ -38,27 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.visualbasic.devices.ServerComputer;
 import microsoft.visualbasic.devices.Audio;
-import microsoft.visualbasic.devices.Clock;
-import microsoft.visualbasic.devices.ComputerInfo;
 import microsoft.visualbasic.devices.Keyboard;
 import microsoft.visualbasic.devices.Mouse;
-import microsoft.visualbasic.devices.Network;
 import microsoft.visualbasic.devices.Ports;
 import microsoft.visualbasic.myservices.ClipboardProxy;
-import microsoft.visualbasic.myservices.FileSystemProxy;
-import microsoft.visualbasic.myservices.RegistryProxy;
 import system.windows.forms.Screen;
 
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.Devices.Computer, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Devices.Computer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Devices.Computer</a>
  */
-public class Computer extends NetObject  {
+public class Computer extends ServerComputer  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.Devices.Computer
+     */
     public static final String className = "Microsoft.VisualBasic.Devices.Computer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +122,9 @@ public class Computer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Computer}, a cast assert is made to check if types are compatible.
+     */
     public static Computer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Computer(from.getJCOInstance());
@@ -119,7 +132,6 @@ public class Computer extends NetObject  {
 
     // Constructors section
     
-
     public Computer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -149,28 +161,6 @@ public class Computer extends NetObject  {
         }
     }
 
-    public Clock getClock() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Clock");
-            return new Clock(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ComputerInfo getInfo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Info");
-            return new ComputerInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Keyboard getKeyboard() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -193,17 +183,6 @@ public class Computer extends NetObject  {
         }
     }
 
-    public Network getNetwork() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Network");
-            return new Network(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Ports getPorts() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -221,38 +200,6 @@ public class Computer extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Clipboard");
             return new ClipboardProxy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FileSystemProxy getFileSystem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("FileSystem");
-            return new FileSystemProxy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public RegistryProxy getRegistry() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Registry");
-            return new RegistryProxy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

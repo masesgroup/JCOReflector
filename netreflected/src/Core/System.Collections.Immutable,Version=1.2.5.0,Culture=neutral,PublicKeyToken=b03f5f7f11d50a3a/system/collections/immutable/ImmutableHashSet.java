@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Collections.Immutable.ImmutableHashSet, System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Immutable.ImmutableHashSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Immutable.ImmutableHashSet</a>
  */
 public class ImmutableHashSet extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.Immutable
+     */
     public static final String assemblyShortName = "System.Collections.Immutable";
+    /**
+     * Qualified class name: System.Collections.Immutable.ImmutableHashSet
+     */
     public static final String className = "System.Collections.Immutable.ImmutableHashSet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ImmutableHashSet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImmutableHashSet}, a cast assert is made to check if types are compatible.
+     */
     public static ImmutableHashSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ImmutableHashSet(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ImmutableHashSet extends NetObject  {
 
     // Constructors section
     
+    public ImmutableHashSet() throws Throwable {
+    }
 
     
     // Methods section

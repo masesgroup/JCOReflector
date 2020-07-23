@@ -37,18 +37,39 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.build.tasks.hosting.ICscHostObject;
+import microsoft.build.tasks.hosting.ICscHostObjectImplementation;
+import microsoft.build.framework.ITaskHost;
+import microsoft.build.framework.ITaskHostImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Hosting.ICscHostObject2, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2</a>
  */
-public interface ICscHostObject2 extends IJCOBridgeReflected {
-
+public interface ICscHostObject2 extends IJCOBridgeReflected, ICscHostObject, ITaskHost {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Hosting.ICscHostObject2
+     */
+    public static final String className = "Microsoft.Build.Tasks.Hosting.ICscHostObject2";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICscHostObject2}, a cast assert is made to check if types are compatible.
+     */
     public static ICscHostObject2 ToICscHostObject2(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Tasks.Hosting.ICscHostObject2, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Tasks.v4.0"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICscHostObject2Implementation(from.getJCOInstance());
     }
@@ -91,91 +112,49 @@ public interface ICscHostObject2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Compile() throws Throwable;
 
-    public boolean IsDesignTime() throws Throwable;
 
-    public boolean IsUpToDate() throws Throwable;
 
-    public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable;
 
-    public boolean SetAddModules(java.lang.String[] addModules) throws Throwable;
 
-    public boolean SetAllowUnsafeBlocks(boolean allowUnsafeBlocks) throws Throwable;
 
-    public boolean SetBaseAddress(java.lang.String baseAddress) throws Throwable;
 
-    public boolean SetCheckForOverflowUnderflow(boolean checkForOverflowUnderflow) throws Throwable;
 
-    public boolean SetCodePage(int codePage) throws Throwable;
 
-    public boolean SetDebugType(java.lang.String debugType) throws Throwable;
 
-    public boolean SetDefineConstants(java.lang.String defineConstants) throws Throwable;
 
-    public boolean SetDelaySign(boolean delaySignExplicitlySet, boolean delaySign) throws Throwable;
 
-    public boolean SetDisabledWarnings(java.lang.String disabledWarnings) throws Throwable;
 
-    public boolean SetDocumentationFile(java.lang.String documentationFile) throws Throwable;
 
-    public boolean SetEmitDebugInformation(boolean emitDebugInformation) throws Throwable;
 
-    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable;
 
-    public boolean SetFileAlignment(int fileAlignment) throws Throwable;
 
-    public boolean SetGenerateFullPaths(boolean generateFullPaths) throws Throwable;
 
-    public boolean SetKeyContainer(java.lang.String keyContainer) throws Throwable;
 
-    public boolean SetKeyFile(java.lang.String keyFile) throws Throwable;
 
-    public boolean SetLangVersion(java.lang.String langVersion) throws Throwable;
 
-    public boolean SetLinkResources(ITaskItem[] linkResources) throws Throwable;
 
-    public boolean SetMainEntryPoint(java.lang.String targetType, java.lang.String mainEntryPoint) throws Throwable;
 
-    public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable;
 
-    public boolean SetNoConfig(boolean noConfig) throws Throwable;
 
-    public boolean SetNoStandardLib(boolean noStandardLib) throws Throwable;
 
-    public boolean SetOptimize(boolean optimize) throws Throwable;
 
-    public boolean SetOutputAssembly(java.lang.String outputAssembly) throws Throwable;
 
-    public boolean SetPdbFile(java.lang.String pdbFile) throws Throwable;
 
-    public boolean SetPlatform(java.lang.String platform) throws Throwable;
 
-    public boolean SetReferences(ITaskItem[] references) throws Throwable;
 
-    public boolean SetResources(ITaskItem[] resources) throws Throwable;
 
-    public boolean SetResponseFiles(ITaskItem[] responseFiles) throws Throwable;
 
-    public boolean SetSources(ITaskItem[] sources) throws Throwable;
 
-    public boolean SetTargetType(java.lang.String targetType) throws Throwable;
 
-    public boolean SetTreatWarningsAsErrors(boolean treatWarningsAsErrors) throws Throwable;
 
-    public boolean SetWarningLevel(int warningLevel) throws Throwable;
 
-    public boolean SetWarningsAsErrors(java.lang.String warningsAsErrors) throws Throwable;
 
-    public boolean SetWarningsNotAsErrors(java.lang.String warningsNotAsErrors) throws Throwable;
 
-    public boolean SetWin32Icon(java.lang.String win32Icon) throws Throwable;
 
     public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable;
 
-    public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable;
 
-    public void BeginInitialization() throws Throwable;
 
 
     

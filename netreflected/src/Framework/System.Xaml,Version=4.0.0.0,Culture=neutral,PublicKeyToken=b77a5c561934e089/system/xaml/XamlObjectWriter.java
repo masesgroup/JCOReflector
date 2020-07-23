@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xaml.XamlWriter;
 import system.xaml.XamlSchemaContext;
 import system.xaml.XamlObjectWriterSettings;
 import system.xaml.NamespaceDeclaration;
@@ -49,12 +50,27 @@ import system.windows.markup.INameScopeImplementation;
 
 /**
  * The base .NET class managing System.Xaml.XamlObjectWriter, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlObjectWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlObjectWriter</a>
  */
-public class XamlObjectWriter extends NetObject  {
+public class XamlObjectWriter extends XamlWriter  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.XamlObjectWriter
+     */
     public static final String className = "System.Xaml.XamlObjectWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class XamlObjectWriter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlObjectWriter}, a cast assert is made to check if types are compatible.
+     */
     public static XamlObjectWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlObjectWriter(from.getJCOInstance());
@@ -115,6 +133,8 @@ public class XamlObjectWriter extends NetObject  {
 
     // Constructors section
     
+    public XamlObjectWriter() throws Throwable {
+    }
 
     public XamlObjectWriter(XamlSchemaContext schemaContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xaml.XamlException {
         try {
@@ -137,6 +157,7 @@ public class XamlObjectWriter extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -145,16 +166,6 @@ public class XamlObjectWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Close() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,17 +282,6 @@ public class XamlObjectWriter extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("RootNameScope");
             return new INameScopeImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XamlSchemaContext getSchemaContext() throws Throwable, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SchemaContext");
-            return new XamlSchemaContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

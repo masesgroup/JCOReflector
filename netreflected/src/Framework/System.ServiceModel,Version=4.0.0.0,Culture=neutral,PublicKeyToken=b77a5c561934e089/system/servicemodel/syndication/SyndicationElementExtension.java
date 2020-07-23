@@ -46,12 +46,27 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.ServiceModel.Syndication.SyndicationElementExtension, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.SyndicationElementExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.SyndicationElementExtension</a>
  */
 public class SyndicationElementExtension extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Syndication.SyndicationElementExtension
+     */
     public static final String className = "System.ServiceModel.Syndication.SyndicationElementExtension";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class SyndicationElementExtension extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SyndicationElementExtension}, a cast assert is made to check if types are compatible.
+     */
     public static SyndicationElementExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SyndicationElementExtension(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class SyndicationElementExtension extends NetObject  {
 
     // Constructors section
     
+    public SyndicationElementExtension() throws Throwable {
+    }
 
     public SyndicationElementExtension(NetObject dataContractExtension) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
@@ -172,6 +191,7 @@ public class SyndicationElementExtension extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

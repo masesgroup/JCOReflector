@@ -44,12 +44,29 @@ import system.runtime.remoting.lifetime.ILeaseImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Lifetime.ISponsor, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Lifetime.ISponsor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Lifetime.ISponsor</a>
  */
 public interface ISponsor extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Lifetime.ISponsor
+     */
+    public static final String className = "System.Runtime.Remoting.Lifetime.ISponsor";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISponsor}, a cast assert is made to check if types are compatible.
+     */
     public static ISponsor ToISponsor(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Lifetime.ISponsor, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISponsorImplementation(from.getJCOInstance());
     }

@@ -41,19 +41,30 @@ import java.util.ArrayList;
 import system.net.mail.SmtpFailedRecipientException;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
-import system.net.mail.SmtpStatusCode;
-import system.reflection.MethodBase;
 
 /**
  * The base .NET class managing System.Net.Mail.SmtpFailedRecipientsException, System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetException}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpFailedRecipientsException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpFailedRecipientsException</a>
  */
-public class SmtpFailedRecipientsException extends NetException {
+public class SmtpFailedRecipientsException extends SmtpFailedRecipientException {
+    /**
+     * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.Mail
+     */
     public static final String assemblyShortName = "System.Net.Mail";
+    /**
+     * Qualified class name: System.Net.Mail.SmtpFailedRecipientsException
+     */
     public static final String className = "System.Net.Mail.SmtpFailedRecipientsException";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -127,7 +138,9 @@ public class SmtpFailedRecipientsException extends NetException {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SmtpFailedRecipientsException}, a cast assert is made to check if types are compatible.
+     */
     public static SmtpFailedRecipientsException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SmtpFailedRecipientsException(from.getJCOInstance());
@@ -135,7 +148,6 @@ public class SmtpFailedRecipientsException extends NetException {
 
     // Constructors section
     
-
     public SmtpFailedRecipientsException(java.lang.String message, SmtpFailedRecipientException[] innerExceptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -150,17 +162,6 @@ public class SmtpFailedRecipientsException extends NetException {
     
     // Methods section
     
-    public NetException GetBaseException() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetBaseException = (JCObject)classInstance.Invoke("GetBaseException");
-            return new NetException(objGetBaseException);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,49 +176,7 @@ public class SmtpFailedRecipientsException extends NetException {
     
     // Properties section
     
-    public int getHResult() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("HResult");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHResult(int HResult) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HResult", HResult);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Data");
-            return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getInnerException() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InnerException");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SmtpFailedRecipientException[] getInnerExceptions() throws Throwable {
+    public final SmtpFailedRecipientException[] getInnerExceptions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -229,88 +188,6 @@ public class SmtpFailedRecipientsException extends NetException {
             SmtpFailedRecipientException[] resultingArray = new SmtpFailedRecipientException[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SmtpStatusCode getStatusCode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StatusCode");
-            return new SmtpStatusCode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setStatusCode(SmtpStatusCode StatusCode) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("StatusCode", StatusCode == null ? null : StatusCode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MethodBase getTargetSite() throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TargetSite");
-            return new MethodBase(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getFailedRecipient() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("FailedRecipient");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getHelpLink() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("HelpLink");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHelpLink(java.lang.String HelpLink) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HelpLink", HelpLink);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSource() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Source");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSource(java.lang.String Source) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Source", Source);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

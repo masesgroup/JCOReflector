@@ -38,26 +38,37 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.SamlStatement;
 import system.identitymodel.policy.IAuthorizationPolicy;
 import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.identitymodel.claims.ClaimSet;
 import system.identitymodel.selectors.SamlSecurityTokenAuthenticator;
-import system.xml.XmlDictionaryReader;
-import system.identitymodel.tokens.SamlSerializer;
-import system.identitymodel.selectors.SecurityTokenSerializer;
-import system.identitymodel.selectors.SecurityTokenResolver;
-import system.xml.XmlDictionaryWriter;
 import system.identitymodel.tokens.SamlSubject;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.SamlSubjectStatement, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlSubjectStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlSubjectStatement</a>
  */
-public class SamlSubjectStatement extends NetObject  {
+public class SamlSubjectStatement extends SamlStatement  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.SamlSubjectStatement
+     */
     public static final String className = "System.IdentityModel.Tokens.SamlSubjectStatement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +121,9 @@ public class SamlSubjectStatement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SamlSubjectStatement}, a cast assert is made to check if types are compatible.
+     */
     public static SamlSubjectStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SamlSubjectStatement(from.getJCOInstance());
@@ -118,6 +131,8 @@ public class SamlSubjectStatement extends NetObject  {
 
     // Constructors section
     
+    public SamlSubjectStatement() throws Throwable {
+    }
 
     
     // Methods section
@@ -143,40 +158,10 @@ public class SamlSubjectStatement extends NetObject  {
         }
     }
 
-    public void ReadXml(XmlDictionaryReader reader, SamlSerializer samlSerializer, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), samlSerializer == null ? null : samlSerializer.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance(), outOfBandTokenResolver == null ? null : outOfBandTokenResolver.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteXml(XmlDictionaryWriter writer, SamlSerializer samlSerializer, SecurityTokenSerializer keyInfoSerializer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance(), samlSerializer == null ? null : samlSerializer.getJCOInstance(), keyInfoSerializer == null ? null : keyInfoSerializer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SamlSubject getSamlSubject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -45,12 +45,29 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Xml.IXmlMtomReaderInitializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlMtomReaderInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlMtomReaderInitializer</a>
  */
 public interface IXmlMtomReaderInitializer extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
+    public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Xml.IXmlMtomReaderInitializer
+     */
+    public static final String className = "System.Xml.IXmlMtomReaderInitializer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlMtomReaderInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlMtomReaderInitializer ToIXmlMtomReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xml.IXmlMtomReaderInitializer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Runtime.Serialization"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlMtomReaderInitializerImplementation(from.getJCOInstance());
     }
@@ -94,6 +111,8 @@ public interface IXmlMtomReaderInitializer extends IJCOBridgeReflected {
     // Methods section
     
     public void SetInput(byte[] buffer, int offset, int count, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas, int maxBufferSize, OnXmlDictionaryReaderClose onClose) throws Throwable;
+
+    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable;
 
     public void SetInput(Stream stream, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas, int maxBufferSize, OnXmlDictionaryReaderClose onClose) throws Throwable;
 

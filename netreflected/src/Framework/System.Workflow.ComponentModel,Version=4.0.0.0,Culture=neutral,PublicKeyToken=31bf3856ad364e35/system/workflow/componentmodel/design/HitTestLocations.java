@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.HitTestLocations, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.HitTestLocations" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.HitTestLocations</a>
  */
 public class HitTestLocations extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.HitTestLocations
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.HitTestLocations";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class HitTestLocations extends NetObject  {
 
     // Flags management section
 
-    public HitTestLocations add(HitTestLocations val) throws Throwable {
+    public final HitTestLocations add(HitTestLocations val) throws Throwable {
         return new HitTestLocations(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public HitTestLocations remove(HitTestLocations val) throws Throwable {
+    public final HitTestLocations remove(HitTestLocations val) throws Throwable {
         return new HitTestLocations(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(HitTestLocations val) throws Throwable {
+    public final boolean is(HitTestLocations val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(HitTestLocations val) throws Throwable {
+    public final boolean has(HitTestLocations val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

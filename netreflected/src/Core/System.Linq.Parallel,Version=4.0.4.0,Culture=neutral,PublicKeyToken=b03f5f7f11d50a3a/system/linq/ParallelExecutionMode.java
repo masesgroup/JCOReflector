@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Linq.ParallelExecutionMode, System.Linq.Parallel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.ParallelExecutionMode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.ParallelExecutionMode</a>
  */
 public class ParallelExecutionMode extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Linq.Parallel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Linq.Parallel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Parallel
+     */
     public static final String assemblyShortName = "System.Linq.Parallel";
+    /**
+     * Qualified class name: System.Linq.ParallelExecutionMode
+     */
     public static final String className = "System.Linq.ParallelExecutionMode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

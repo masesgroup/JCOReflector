@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.IO.MemoryMappedFiles.MemoryMappedFileRights, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFileRights" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFileRights</a>
  */
 public class MemoryMappedFileRights extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.IO.MemoryMappedFiles.MemoryMappedFileRights
+     */
     public static final String className = "System.IO.MemoryMappedFiles.MemoryMappedFileRights";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -149,19 +164,19 @@ public class MemoryMappedFileRights extends NetObject  {
 
     // Flags management section
 
-    public MemoryMappedFileRights add(MemoryMappedFileRights val) throws Throwable {
+    public final MemoryMappedFileRights add(MemoryMappedFileRights val) throws Throwable {
         return new MemoryMappedFileRights(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MemoryMappedFileRights remove(MemoryMappedFileRights val) throws Throwable {
+    public final MemoryMappedFileRights remove(MemoryMappedFileRights val) throws Throwable {
         return new MemoryMappedFileRights(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MemoryMappedFileRights val) throws Throwable {
+    public final boolean is(MemoryMappedFileRights val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MemoryMappedFileRights val) throws Throwable {
+    public final boolean has(MemoryMappedFileRights val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

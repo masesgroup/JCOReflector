@@ -44,12 +44,29 @@ import system.workflow.runtime.debugengine.ActivityHandlerDescriptor;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.DebugEngine.IWorkflowDebugger, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger</a>
  */
 public interface IWorkflowDebugger extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
+    public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.DebugEngine.IWorkflowDebugger
+     */
+    public static final String className = "System.Workflow.Runtime.DebugEngine.IWorkflowDebugger";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWorkflowDebugger}, a cast assert is made to check if types are compatible.
+     */
     public static IWorkflowDebugger ToIWorkflowDebugger(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Workflow.Runtime.DebugEngine.IWorkflowDebugger, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Workflow.Runtime"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IWorkflowDebuggerImplementation(from.getJCOInstance());
     }

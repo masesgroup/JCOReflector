@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.activities.WorkflowRole;
 
 
 /**
  * The base .NET class managing System.Workflow.Activities.WebWorkflowRole, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.WebWorkflowRole" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.WebWorkflowRole</a>
  */
-public class WebWorkflowRole extends NetObject  {
+public class WebWorkflowRole extends WorkflowRole  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.WebWorkflowRole
+     */
     public static final String className = "System.Workflow.Activities.WebWorkflowRole";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class WebWorkflowRole extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebWorkflowRole}, a cast assert is made to check if types are compatible.
+     */
     public static WebWorkflowRole cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebWorkflowRole(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class WebWorkflowRole extends NetObject  {
 
     // Constructors section
     
+    public WebWorkflowRole() throws Throwable {
+    }
 
     public WebWorkflowRole(java.lang.String roleName) throws Throwable, system.ArgumentNullException {
         try {
@@ -130,6 +150,7 @@ public class WebWorkflowRole extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -147,26 +168,6 @@ public class WebWorkflowRole extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getRoleProvider() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

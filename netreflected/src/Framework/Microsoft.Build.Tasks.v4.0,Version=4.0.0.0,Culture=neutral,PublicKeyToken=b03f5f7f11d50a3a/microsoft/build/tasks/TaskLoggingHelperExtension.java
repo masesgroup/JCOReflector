@@ -38,22 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.utilities.TaskLoggingHelper;
 import microsoft.build.framework.ITask;
 import microsoft.build.framework.ITaskImplementation;
 import system.resources.ResourceManager;
-import microsoft.build.framework.MessageImportance;
-import system.io.TextReader;
-import system.runtime.remoting.ObjRef;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.TaskLoggingHelperExtension, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.TaskLoggingHelperExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.TaskLoggingHelperExtension</a>
  */
-public class TaskLoggingHelperExtension extends NetObject  {
+public class TaskLoggingHelperExtension extends TaskLoggingHelper  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.TaskLoggingHelperExtension
+     */
     public static final String className = "Microsoft.Build.Tasks.TaskLoggingHelperExtension";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +119,9 @@ public class TaskLoggingHelperExtension extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TaskLoggingHelperExtension}, a cast assert is made to check if types are compatible.
+     */
     public static TaskLoggingHelperExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TaskLoggingHelperExtension(from.getJCOInstance());
@@ -114,6 +129,8 @@ public class TaskLoggingHelperExtension extends NetObject  {
 
     // Constructors section
     
+    public TaskLoggingHelperExtension() throws Throwable {
+    }
 
     public TaskLoggingHelperExtension(ITask taskInstance, ResourceManager primaryResources, ResourceManager sharedResources, java.lang.String helpKeywordPrefix) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
@@ -126,82 +143,10 @@ public class TaskLoggingHelperExtension extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean LogMessageFromText(java.lang.String lineOfText, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("LogMessageFromText", lineOfText, messageImportance == null ? null : messageImportance.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean LogMessagesFromFile(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("LogMessagesFromFile", fileName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean LogMessagesFromFile(java.lang.String fileName, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("LogMessagesFromFile", fileName, messageImportance == null ? null : messageImportance.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean LogMessagesFromStream(TextReader stream, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("LogMessagesFromStream", stream == null ? null : stream.getJCOInstance(), messageImportance == null ? null : messageImportance.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String FormatResourceString(java.lang.String resourceName, NetObject... args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -212,341 +157,10 @@ public class TaskLoggingHelperExtension extends NetObject  {
         }
     }
 
-    public java.lang.String FormatString(java.lang.String unformatted, NetObject... args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("FormatString", unformatted, toObjectFromArray(args));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetResourceMessage(java.lang.String resourceName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetResourceMessage", resourceName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogCommandLine(MessageImportance importance, java.lang.String commandLine) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogCommandLine", importance == null ? null : importance.getJCOInstance(), commandLine);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogCommandLine(java.lang.String commandLine) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogCommandLine", commandLine);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogCriticalMessage(java.lang.String subcategory, java.lang.String code, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogCriticalMessage", subcategory, code, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogError(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogError", message, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogError(java.lang.String subcategory, java.lang.String errorCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogError", subcategory, errorCode, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogErrorFromException(NetException exception) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogErrorFromException", exception == null ? null : exception.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogErrorFromException(NetException exception, boolean showStackTrace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.NotSupportedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogErrorFromException", exception == null ? null : exception.getJCOInstance(), showStackTrace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogErrorFromException(NetException exception, boolean showStackTrace, boolean showDetail, java.lang.String file) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogErrorFromException", exception == null ? null : exception.getJCOInstance(), showStackTrace, showDetail, file);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogErrorFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogErrorFromResources", messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogErrorFromResources(java.lang.String subcategoryResourceName, java.lang.String errorCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogErrorFromResources", subcategoryResourceName, errorCode, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogErrorWithCodeFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogErrorWithCodeFromResources", messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogErrorWithCodeFromResources(java.lang.String subcategoryResourceName, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogErrorWithCodeFromResources", subcategoryResourceName, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogExternalProjectFinished(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, boolean succeeded) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogExternalProjectFinished", message, helpKeyword, projectFile, succeeded);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogExternalProjectStarted(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogExternalProjectStarted", message, helpKeyword, projectFile, targetNames);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogMessage(MessageImportance importance, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogMessage", importance == null ? null : importance.getJCOInstance(), message, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogMessage(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogMessage", message, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogMessage(java.lang.String subcategory, java.lang.String code, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, MessageImportance importance, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogMessage", subcategory, code, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, importance == null ? null : importance.getJCOInstance(), message, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogMessageFromResources(MessageImportance importance, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogMessageFromResources", importance == null ? null : importance.getJCOInstance(), messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogMessageFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogMessageFromResources", messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarning(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarning", message, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarning(java.lang.String subcategory, java.lang.String warningCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarning", subcategory, warningCode, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarningFromException(NetException exception) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarningFromException", exception == null ? null : exception.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarningFromException(NetException exception, boolean showStackTrace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarningFromException", exception == null ? null : exception.getJCOInstance(), showStackTrace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarningFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarningFromResources", messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarningFromResources(java.lang.String subcategoryResourceName, java.lang.String warningCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarningFromResources", subcategoryResourceName, warningCode, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarningWithCodeFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarningWithCodeFromResources", messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LogWarningWithCodeFromResources(java.lang.String subcategoryResourceName, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LogWarningWithCodeFromResources", subcategoryResourceName, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, messageResourceName, toObjectFromArray(messageArgs));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void MarkAsInactive() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("MarkAsInactive");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getHasLoggedErrors() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("HasLoggedErrors");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ResourceManager getTaskResources() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TaskResources");
-            return new ResourceManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTaskResources(ResourceManager TaskResources) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TaskResources", TaskResources == null ? null : TaskResources.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ResourceManager getTaskSharedResources() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -563,26 +177,6 @@ public class TaskLoggingHelperExtension extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskSharedResources", TaskSharedResources == null ? null : TaskSharedResources.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getHelpKeywordPrefix() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("HelpKeywordPrefix");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHelpKeywordPrefix(java.lang.String HelpKeywordPrefix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HelpKeywordPrefix", HelpKeywordPrefix);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

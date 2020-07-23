@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.directoryservices.activedirectory.SyncFromAllServersEvent;
 import system.directoryservices.activedirectory.SyncFromAllServersOperationException;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SyncUpdateCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncUpdateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncUpdateCallback</a>
+ */
 public interface ISyncUpdateCallback {
     public boolean Invoke(SyncFromAllServersEvent eventType, java.lang.String targetServer, java.lang.String sourceServer, SyncFromAllServersOperationException exception);
 }

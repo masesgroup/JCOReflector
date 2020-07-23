@@ -46,12 +46,27 @@ import system.runtime.remoting.ObjectHandle;
 
 /**
  * The base .NET class managing System.Activator, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activator</a>
  */
 public class Activator extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Activator
+     */
     public static final String className = "System.Activator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class Activator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Activator}, a cast assert is made to check if types are compatible.
+     */
     public static Activator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Activator(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class Activator extends NetObject  {
 
     // Constructors section
     
+    public Activator() throws Throwable {
+    }
 
     
     // Methods section

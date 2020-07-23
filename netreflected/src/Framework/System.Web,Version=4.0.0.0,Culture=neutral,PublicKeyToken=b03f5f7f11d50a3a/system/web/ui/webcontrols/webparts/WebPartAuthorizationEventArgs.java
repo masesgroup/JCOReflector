@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs</a>
  */
-public class WebPartAuthorizationEventArgs extends NetObject  {
+public class WebPartAuthorizationEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs
+     */
     public static final String className = "System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class WebPartAuthorizationEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebPartAuthorizationEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static WebPartAuthorizationEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebPartAuthorizationEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class WebPartAuthorizationEventArgs extends NetObject  {
 
     // Constructors section
     
+    public WebPartAuthorizationEventArgs() throws Throwable {
+    }
 
     public WebPartAuthorizationEventArgs(NetType type, java.lang.String path, java.lang.String authorizationFilter, boolean isShared) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class WebPartAuthorizationEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

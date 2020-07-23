@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.Windows.Markup.XmlnsCompatibleWithAttribute, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XmlnsCompatibleWithAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XmlnsCompatibleWithAttribute</a>
  */
-public class XmlnsCompatibleWithAttribute extends NetObject  {
+public class XmlnsCompatibleWithAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Windows.Markup.XmlnsCompatibleWithAttribute
+     */
     public static final String className = "System.Windows.Markup.XmlnsCompatibleWithAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class XmlnsCompatibleWithAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlnsCompatibleWithAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static XmlnsCompatibleWithAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlnsCompatibleWithAttribute(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class XmlnsCompatibleWithAttribute extends NetObject  {
 
     // Constructors section
     
+    public XmlnsCompatibleWithAttribute() throws Throwable {
+    }
 
     public XmlnsCompatibleWithAttribute(java.lang.String oldNamespace, java.lang.String newNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -120,44 +140,14 @@ public class XmlnsCompatibleWithAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getNewNamespace() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

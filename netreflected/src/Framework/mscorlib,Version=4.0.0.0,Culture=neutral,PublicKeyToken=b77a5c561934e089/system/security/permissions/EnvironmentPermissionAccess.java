@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Permissions.EnvironmentPermissionAccess, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.EnvironmentPermissionAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.EnvironmentPermissionAccess</a>
  */
 public class EnvironmentPermissionAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Permissions.EnvironmentPermissionAccess
+     */
     public static final String className = "System.Security.Permissions.EnvironmentPermissionAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class EnvironmentPermissionAccess extends NetObject  {
 
     // Flags management section
 
-    public EnvironmentPermissionAccess add(EnvironmentPermissionAccess val) throws Throwable {
+    public final EnvironmentPermissionAccess add(EnvironmentPermissionAccess val) throws Throwable {
         return new EnvironmentPermissionAccess(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public EnvironmentPermissionAccess remove(EnvironmentPermissionAccess val) throws Throwable {
+    public final EnvironmentPermissionAccess remove(EnvironmentPermissionAccess val) throws Throwable {
         return new EnvironmentPermissionAccess(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(EnvironmentPermissionAccess val) throws Throwable {
+    public final boolean is(EnvironmentPermissionAccess val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(EnvironmentPermissionAccess val) throws Throwable {
+    public final boolean has(EnvironmentPermissionAccess val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

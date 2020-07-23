@@ -48,12 +48,29 @@ import system.web.ui.design.ViewEventHandler;
 
 /**
  * The base .NET class managing System.Web.UI.Design.IControlDesignerView, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IControlDesignerView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IControlDesignerView</a>
  */
 public interface IControlDesignerView extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
+    public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.IControlDesignerView
+     */
+    public static final String className = "System.Web.UI.Design.IControlDesignerView";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IControlDesignerView}, a cast assert is made to check if types are compatible.
+     */
     public static IControlDesignerView ToIControlDesignerView(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.UI.Design.IControlDesignerView, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Design"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IControlDesignerViewImplementation(from.getJCOInstance());
     }

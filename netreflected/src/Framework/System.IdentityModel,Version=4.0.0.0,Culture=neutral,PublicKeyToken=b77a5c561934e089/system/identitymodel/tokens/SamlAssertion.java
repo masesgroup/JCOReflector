@@ -53,12 +53,27 @@ import system.identitymodel.tokens.SigningCredentials;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.SamlAssertion, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlAssertion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlAssertion</a>
  */
 public class SamlAssertion extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.SamlAssertion
+     */
     public static final String className = "System.IdentityModel.Tokens.SamlAssertion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +126,9 @@ public class SamlAssertion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SamlAssertion}, a cast assert is made to check if types are compatible.
+     */
     public static SamlAssertion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SamlAssertion(from.getJCOInstance());
@@ -119,7 +136,6 @@ public class SamlAssertion extends NetObject  {
 
     // Constructors section
     
-
     public SamlAssertion() throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file

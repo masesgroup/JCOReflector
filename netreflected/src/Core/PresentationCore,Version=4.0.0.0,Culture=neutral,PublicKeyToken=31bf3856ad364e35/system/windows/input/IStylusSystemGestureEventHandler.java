@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.input.StylusSystemGestureEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StylusSystemGestureEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusSystemGestureEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusSystemGestureEventHandler</a>
+ */
 public interface IStylusSystemGestureEventHandler {
     public void Invoke(NetObject sender, StylusSystemGestureEventArgs e);
 }

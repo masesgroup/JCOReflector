@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Single;
 import system.Decimal;
 import system.UInt32;
@@ -50,12 +51,27 @@ import system.IFormatProviderImplementation;
 
 /**
  * The base .NET class managing System.Numerics.BigInteger, System.Runtime.Numerics, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.BigInteger" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.BigInteger</a>
  */
-public class BigInteger extends NetObject  {
+public class BigInteger extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Numerics, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Numerics, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Numerics
+     */
     public static final String assemblyShortName = "System.Runtime.Numerics";
+    /**
+     * Qualified class name: System.Numerics.BigInteger
+     */
     public static final String className = "System.Numerics.BigInteger";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +124,9 @@ public class BigInteger extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BigInteger}, a cast assert is made to check if types are compatible.
+     */
     public static BigInteger cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BigInteger(from.getJCOInstance());
@@ -116,6 +134,8 @@ public class BigInteger extends NetObject  {
 
     // Constructors section
     
+    public BigInteger() throws Throwable {
+    }
 
     public BigInteger(byte[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -196,6 +216,7 @@ public class BigInteger extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -619,33 +640,33 @@ public class BigInteger extends NetObject  {
         }
     }
 
-    public static BigInteger getMinusOne() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public BigInteger getMinusOne() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("MinusOne");
+            JCObject val = (JCObject)classInstance.Get("MinusOne");
             return new BigInteger(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static BigInteger getOne() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public BigInteger getOne() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("One");
+            JCObject val = (JCObject)classInstance.Get("One");
             return new BigInteger(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static BigInteger getZero() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public BigInteger getZero() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Zero");
+            JCObject val = (JCObject)classInstance.Get("Zero");
             return new BigInteger(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

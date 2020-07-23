@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.TransportBindingElementImporter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.TransportBindingElementImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.TransportBindingElementImporter</a>
  */
 public class TransportBindingElementImporter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.TransportBindingElementImporter
+     */
     public static final String className = "System.ServiceModel.Channels.TransportBindingElementImporter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class TransportBindingElementImporter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransportBindingElementImporter}, a cast assert is made to check if types are compatible.
+     */
     public static TransportBindingElementImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TransportBindingElementImporter(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class TransportBindingElementImporter extends NetObject  {
 
     // Constructors section
     
-
     public TransportBindingElementImporter() throws Throwable {
         try {
             // add reference to assemblyName.dll file

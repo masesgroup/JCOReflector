@@ -51,12 +51,27 @@ import system.codedom.CodeTypeDeclaration;
 
 /**
  * The base .NET class managing System.CodeDom.Compiler.ICodeGenerator, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.ICodeGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.ICodeGenerator</a>
  */
 public class ICodeGeneratorImplementation extends NetObject implements ICodeGenerator {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.CodeDom.Compiler.ICodeGenerator
+     */
     public static final String className = "System.CodeDom.Compiler.ICodeGenerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICodeGenerator}, a cast assert is made to check if types are compatible.
+     */
     public static ICodeGenerator ToICodeGenerator(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICodeGeneratorImplementation(from.getJCOInstance());

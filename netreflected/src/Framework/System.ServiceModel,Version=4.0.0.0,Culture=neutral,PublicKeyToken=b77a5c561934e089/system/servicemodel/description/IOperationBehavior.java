@@ -45,12 +45,29 @@ import system.servicemodel.dispatcher.DispatchOperation;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.IOperationBehavior, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.IOperationBehavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.IOperationBehavior</a>
  */
 public interface IOperationBehavior extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
+    public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.IOperationBehavior
+     */
+    public static final String className = "System.ServiceModel.Description.IOperationBehavior";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IOperationBehavior}, a cast assert is made to check if types are compatible.
+     */
     public static IOperationBehavior ToIOperationBehavior(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ServiceModel.Description.IOperationBehavior, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ServiceModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IOperationBehaviorImplementation(from.getJCOInstance());
     }

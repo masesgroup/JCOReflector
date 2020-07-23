@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.runtime.remoting.ObjRef;
+import system.MarshalByRefObject;
 
 
 /**
  * The base .NET class managing System.Web.Hosting.ISAPIRuntime, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.ISAPIRuntime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.ISAPIRuntime</a>
  */
-public class ISAPIRuntime extends NetObject  {
+public class ISAPIRuntime extends MarshalByRefObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Hosting.ISAPIRuntime
+     */
     public static final String className = "System.Web.Hosting.ISAPIRuntime";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ISAPIRuntime extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISAPIRuntime}, a cast assert is made to check if types are compatible.
+     */
     public static ISAPIRuntime cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISAPIRuntime(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class ISAPIRuntime extends NetObject  {
 
     // Constructors section
     
-
     public ISAPIRuntime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -124,34 +140,12 @@ public class ISAPIRuntime extends NetObject  {
     
     // Methods section
     
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
             return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

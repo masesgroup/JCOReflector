@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.framework.CustomBuildEventArgs;
 import system.DateTime;
-import microsoft.build.framework.BuildEventContext;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.ExternalProjectFinishedEventArgs, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ExternalProjectFinishedEventArgs</a>
  */
-public class ExternalProjectFinishedEventArgs extends NetObject  {
+public class ExternalProjectFinishedEventArgs extends CustomBuildEventArgs  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.ExternalProjectFinishedEventArgs
+     */
     public static final String className = "Microsoft.Build.Framework.ExternalProjectFinishedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ExternalProjectFinishedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExternalProjectFinishedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ExternalProjectFinishedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExternalProjectFinishedEventArgs(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class ExternalProjectFinishedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ExternalProjectFinishedEventArgs() throws Throwable {
+    }
 
     public ExternalProjectFinishedEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, java.lang.String projectFile, boolean succeeded) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
@@ -132,6 +151,7 @@ public class ExternalProjectFinishedEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -149,83 +169,11 @@ public class ExternalProjectFinishedEventArgs extends NetObject  {
         }
     }
 
-    public int getThreadId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ThreadId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BuildEventContext getBuildEventContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEventContext");
-            return new BuildEventContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBuildEventContext(BuildEventContext BuildEventContext) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BuildEventContext", BuildEventContext == null ? null : BuildEventContext.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getTimestamp() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Timestamp");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getHelpKeyword() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("HelpKeyword");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMessage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Message");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getProjectFile() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("ProjectFile");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSenderName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SenderName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

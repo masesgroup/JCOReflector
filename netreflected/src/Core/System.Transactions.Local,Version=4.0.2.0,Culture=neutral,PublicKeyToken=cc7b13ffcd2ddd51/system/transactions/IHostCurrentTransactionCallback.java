@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.transactions.Transaction;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link HostCurrentTransactionCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.HostCurrentTransactionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.HostCurrentTransactionCallback</a>
+ */
 public interface IHostCurrentTransactionCallback {
     public Transaction Invoke();
 }

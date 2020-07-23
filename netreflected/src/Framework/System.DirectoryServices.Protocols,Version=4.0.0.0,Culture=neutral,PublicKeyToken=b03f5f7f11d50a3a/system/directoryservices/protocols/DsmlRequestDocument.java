@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.directoryservices.protocols.DsmlDocument;
 import system.directoryservices.protocols.DirectoryRequest;
 import system.xml.XmlDocument;
 import system.directoryservices.protocols.DsmlDocumentProcessing;
@@ -47,12 +48,27 @@ import system.directoryservices.protocols.DsmlResponseOrder;
 
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.DsmlRequestDocument, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DsmlRequestDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DsmlRequestDocument</a>
  */
-public class DsmlRequestDocument extends NetObject  {
+public class DsmlRequestDocument extends DsmlDocument  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.DsmlRequestDocument
+     */
     public static final String className = "System.DirectoryServices.Protocols.DsmlRequestDocument";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class DsmlRequestDocument extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DsmlRequestDocument}, a cast assert is made to check if types are compatible.
+     */
     public static DsmlRequestDocument cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DsmlRequestDocument(from.getJCOInstance());
@@ -113,7 +131,6 @@ public class DsmlRequestDocument extends NetObject  {
 
     // Constructors section
     
-
     public DsmlRequestDocument() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file

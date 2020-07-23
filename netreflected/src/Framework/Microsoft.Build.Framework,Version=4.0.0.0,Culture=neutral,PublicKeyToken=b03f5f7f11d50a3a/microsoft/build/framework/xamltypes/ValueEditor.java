@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.XamlTypes.ValueEditor, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.XamlTypes.ValueEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.XamlTypes.ValueEditor</a>
  */
 public class ValueEditor extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.XamlTypes.ValueEditor
+     */
     public static final String className = "Microsoft.Build.Framework.XamlTypes.ValueEditor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ValueEditor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValueEditor}, a cast assert is made to check if types are compatible.
+     */
     public static ValueEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValueEditor(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class ValueEditor extends NetObject  {
 
     // Constructors section
     
-
     public ValueEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file

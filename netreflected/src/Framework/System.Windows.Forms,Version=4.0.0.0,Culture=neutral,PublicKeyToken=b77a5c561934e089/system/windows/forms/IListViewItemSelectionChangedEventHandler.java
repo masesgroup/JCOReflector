@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ListViewItemSelectionChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ListViewItemSelectionChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemSelectionChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemSelectionChangedEventHandler</a>
+ */
 public interface IListViewItemSelectionChangedEventHandler {
     public void Invoke(NetObject sender, ListViewItemSelectionChangedEventArgs e);
 }

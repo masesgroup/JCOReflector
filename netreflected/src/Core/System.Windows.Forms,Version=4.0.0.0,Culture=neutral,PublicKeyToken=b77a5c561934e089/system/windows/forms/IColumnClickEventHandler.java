@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ColumnClickEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ColumnClickEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ColumnClickEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ColumnClickEventHandler</a>
+ */
 public interface IColumnClickEventHandler {
     public void Invoke(NetObject sender, ColumnClickEventArgs e);
 }

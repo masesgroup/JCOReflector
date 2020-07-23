@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.AddingNewEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link AddingNewEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AddingNewEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AddingNewEventHandler</a>
+ */
 public interface IAddingNewEventHandler {
     public void Invoke(NetObject sender, AddingNewEventArgs e);
 }

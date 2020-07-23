@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.regularexpressions.Capture;
 import system.text.regularexpressions.Group;
 import system.text.regularexpressions.CaptureCollection;
 
 
 /**
  * The base .NET class managing System.Text.RegularExpressions.Group, System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.Group" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.Group</a>
  */
-public class Group extends NetObject  {
+public class Group extends Capture  {
+    /**
+     * Fully assembly qualified name: System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Text.RegularExpressions
+     */
     public static final String assemblyShortName = "System.Text.RegularExpressions";
+    /**
+     * Qualified class name: System.Text.RegularExpressions.Group
+     */
     public static final String className = "System.Text.RegularExpressions.Group";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class Group extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Group}, a cast assert is made to check if types are compatible.
+     */
     public static Group cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Group(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class Group extends NetObject  {
 
     // Constructors section
     
+    public Group() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -139,61 +161,11 @@ public class Group extends NetObject  {
         }
     }
 
-    public int getIndex() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Index");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIndex(int Index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Index", Index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Length");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLength(int Length) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Length", Length);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getValue() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Value");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.controls.DataGridColumnEventArgs;
 import system.windows.controls.DataGridColumn;
 import system.windows.controls.Control;
 
 
 /**
  * The base .NET class managing System.Windows.Controls.DataGridColumnReorderingEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs</a>
  */
-public class DataGridColumnReorderingEventArgs extends NetObject  {
+public class DataGridColumnReorderingEventArgs extends DataGridColumnEventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.DataGridColumnReorderingEventArgs
+     */
     public static final String className = "System.Windows.Controls.DataGridColumnReorderingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DataGridColumnReorderingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridColumnReorderingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridColumnReorderingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridColumnReorderingEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class DataGridColumnReorderingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridColumnReorderingEventArgs() throws Throwable {
+    }
 
     public DataGridColumnReorderingEventArgs(DataGridColumn dataGridColumn) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class DataGridColumnReorderingEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -186,17 +207,6 @@ public class DataGridColumnReorderingEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DropLocationIndicator", DropLocationIndicator == null ? null : DropLocationIndicator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataGridColumn getColumn() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Column");
-            return new DataGridColumn(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

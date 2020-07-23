@@ -42,12 +42,27 @@ import system.windows.DependencyObject;
 import system.windows.ICoerceValueCallback;
 /**
  * The base .NET class managing System.Windows.CoerceValueCallback, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoerceValueCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoerceValueCallback</a>
  */
 public class CoerceValueCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.CoerceValueCallback
+     */
     public static final String className = "System.Windows.CoerceValueCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ICoerceValueCallback callerInstance = null;
@@ -155,7 +170,7 @@ public class CoerceValueCallback extends JCDelegate implements IJCEventEmit, IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke(DependencyObject d, NetObject baseValue) throws Throwable {
+    public NetObject METHOD_JAVA_NAME(DependencyObject d, NetObject baseValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -166,7 +181,9 @@ public class CoerceValueCallback extends JCDelegate implements IJCEventEmit, IJC
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke(DependencyObject d, NetObject baseValue) {
         return null;
     }

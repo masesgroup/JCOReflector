@@ -48,12 +48,27 @@ import system.data.DataTable;
 
 /**
  * The base .NET class managing System.Data.DataRow, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataRow" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataRow</a>
  */
 public class DataRow extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.DataRow
+     */
     public static final String className = "System.Data.DataRow";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class DataRow extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataRow}, a cast assert is made to check if types are compatible.
+     */
     public static DataRow cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataRow(from.getJCOInstance());
@@ -114,6 +131,10 @@ public class DataRow extends NetObject  {
 
     // Constructors section
     
+    public DataRow() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -571,7 +592,7 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public NetObject[] getItemArray() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public final NetObject[] getItemArray() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

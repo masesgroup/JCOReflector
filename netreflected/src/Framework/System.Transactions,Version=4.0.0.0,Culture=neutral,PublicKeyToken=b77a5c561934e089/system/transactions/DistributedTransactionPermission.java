@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.CodeAccessPermission;
 import system.security.permissions.PermissionState;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
@@ -46,12 +47,27 @@ import system.security.SecurityElement;
 
 /**
  * The base .NET class managing System.Transactions.DistributedTransactionPermission, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.DistributedTransactionPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.DistributedTransactionPermission</a>
  */
-public class DistributedTransactionPermission extends NetObject  {
+public class DistributedTransactionPermission extends CodeAccessPermission  {
+    /**
+     * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Transactions
+     */
     public static final String assemblyShortName = "System.Transactions";
+    /**
+     * Qualified class name: System.Transactions.DistributedTransactionPermission
+     */
     public static final String className = "System.Transactions.DistributedTransactionPermission";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class DistributedTransactionPermission extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DistributedTransactionPermission}, a cast assert is made to check if types are compatible.
+     */
     public static DistributedTransactionPermission cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DistributedTransactionPermission(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class DistributedTransactionPermission extends NetObject  {
 
     // Constructors section
     
+    public DistributedTransactionPermission() throws Throwable {
+    }
 
     public DistributedTransactionPermission(PermissionState state) throws Throwable {
         try {
@@ -122,6 +142,7 @@ public class DistributedTransactionPermission extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -191,51 +212,11 @@ public class DistributedTransactionPermission extends NetObject  {
         }
     }
 
-    public void Assert() throws Throwable, system.security.SecurityException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Assert");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Demand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Demand");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Deny() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Deny");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void FromXml(SecurityElement securityElement) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", securityElement == null ? null : securityElement.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PermitOnly() throws Throwable, system.security.SecurityException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PermitOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -43,12 +43,29 @@ import system.security.policy.PolicyLevel;
 
 /**
  * The base .NET class managing System.Security.ISecurityPolicyEncodable, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityPolicyEncodable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityPolicyEncodable</a>
  */
 public interface ISecurityPolicyEncodable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.ISecurityPolicyEncodable
+     */
+    public static final String className = "System.Security.ISecurityPolicyEncodable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISecurityPolicyEncodable}, a cast assert is made to check if types are compatible.
+     */
     public static ISecurityPolicyEncodable ToISecurityPolicyEncodable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Security.ISecurityPolicyEncodable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISecurityPolicyEncodableImplementation(from.getJCOInstance());
     }

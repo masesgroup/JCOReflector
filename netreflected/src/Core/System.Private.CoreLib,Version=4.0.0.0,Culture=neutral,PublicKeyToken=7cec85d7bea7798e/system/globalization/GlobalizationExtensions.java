@@ -45,12 +45,27 @@ import system.globalization.CompareOptions;
 
 /**
  * The base .NET class managing System.Globalization.GlobalizationExtensions, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.GlobalizationExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.GlobalizationExtensions</a>
  */
 public class GlobalizationExtensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Globalization.GlobalizationExtensions
+     */
     public static final String className = "System.Globalization.GlobalizationExtensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class GlobalizationExtensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GlobalizationExtensions}, a cast assert is made to check if types are compatible.
+     */
     public static GlobalizationExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GlobalizationExtensions(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class GlobalizationExtensions extends NetObject  {
 
     // Constructors section
     
+    public GlobalizationExtensions() throws Throwable {
+    }
 
     
     // Methods section

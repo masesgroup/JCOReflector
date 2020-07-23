@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.Diagnostics.Contracts.ContractOptionAttribute, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Contracts.ContractOptionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Contracts.ContractOptionAttribute</a>
  */
-public class ContractOptionAttribute extends NetObject  {
+public class ContractOptionAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Diagnostics.Contracts.ContractOptionAttribute
+     */
     public static final String className = "System.Diagnostics.Contracts.ContractOptionAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ContractOptionAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContractOptionAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static ContractOptionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ContractOptionAttribute(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class ContractOptionAttribute extends NetObject  {
 
     // Constructors section
     
+    public ContractOptionAttribute() throws Throwable {
+    }
 
     public ContractOptionAttribute(java.lang.String category, java.lang.String setting, boolean enabled) throws Throwable {
         try {
@@ -130,29 +150,10 @@ public class ContractOptionAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -162,17 +163,6 @@ public class ContractOptionAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("Enabled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

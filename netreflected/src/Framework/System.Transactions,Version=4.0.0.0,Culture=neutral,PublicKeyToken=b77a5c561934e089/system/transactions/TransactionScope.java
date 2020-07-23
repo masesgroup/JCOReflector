@@ -48,12 +48,27 @@ import system.transactions.TransactionOptions;
 
 /**
  * The base .NET class managing System.Transactions.TransactionScope, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope</a>
  */
 public class TransactionScope extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Transactions
+     */
     public static final String assemblyShortName = "System.Transactions";
+    /**
+     * Qualified class name: System.Transactions.TransactionScope
+     */
     public static final String className = "System.Transactions.TransactionScope";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class TransactionScope extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionScope}, a cast assert is made to check if types are compatible.
+     */
     public static TransactionScope cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TransactionScope(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class TransactionScope extends NetObject  {
 
     // Constructors section
     
-
     public TransactionScope() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         try {
             // add reference to assemblyName.dll file

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.configuration.install.InstallEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link InstallEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallEventHandler</a>
+ */
 public interface IInstallEventHandler {
     public void Invoke(NetObject sender, InstallEventArgs e);
 }

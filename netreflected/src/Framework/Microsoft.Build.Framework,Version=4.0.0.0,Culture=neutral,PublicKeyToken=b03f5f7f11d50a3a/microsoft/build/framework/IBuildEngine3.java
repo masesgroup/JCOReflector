@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.build.framework.IBuildEngine2;
+import microsoft.build.framework.IBuildEngine2Implementation;
+import microsoft.build.framework.IBuildEngine;
+import microsoft.build.framework.IBuildEngineImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import microsoft.build.framework.BuildEngineResult;
@@ -48,12 +52,29 @@ import microsoft.build.framework.BuildWarningEventArgs;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.IBuildEngine3, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IBuildEngine3" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IBuildEngine3</a>
  */
-public interface IBuildEngine3 extends IJCOBridgeReflected {
-
+public interface IBuildEngine3 extends IJCOBridgeReflected, IBuildEngine2, IBuildEngine {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.IBuildEngine3
+     */
+    public static final String className = "Microsoft.Build.Framework.IBuildEngine3";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBuildEngine3}, a cast assert is made to check if types are compatible.
+     */
     public static IBuildEngine3 ToIBuildEngine3(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Framework.IBuildEngine3, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Framework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IBuildEngine3Implementation(from.getJCOInstance());
     }
@@ -96,19 +117,12 @@ public interface IBuildEngine3 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs) throws Throwable;
 
-    public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs, java.lang.String toolsVersion) throws Throwable;
 
-    public boolean BuildProjectFilesInParallel(java.lang.String[] projectFileNames, java.lang.String[] targetNames, IDictionary[] globalProperties, IDictionary[] targetOutputsPerProject, java.lang.String[] toolsVersion, boolean useResultsCache, boolean unloadProjectsOnCompletion) throws Throwable;
 
-    public void LogCustomEvent(CustomBuildEventArgs e) throws Throwable;
 
-    public void LogErrorEvent(BuildErrorEventArgs e) throws Throwable;
 
-    public void LogMessageEvent(BuildMessageEventArgs e) throws Throwable;
 
-    public void LogWarningEvent(BuildWarningEventArgs e) throws Throwable;
 
     public void Reacquire() throws Throwable;
 
@@ -118,16 +132,6 @@ public interface IBuildEngine3 extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getContinueOnError() throws Throwable;
-
-    public boolean getIsRunningMultipleNodes() throws Throwable;
-
-    public int getColumnNumberOfTaskNode() throws Throwable;
-
-    public int getLineNumberOfTaskNode() throws Throwable;
-
-    public java.lang.String getProjectFileOfTaskNode() throws Throwable;
-
 
 
     // Instance Events section

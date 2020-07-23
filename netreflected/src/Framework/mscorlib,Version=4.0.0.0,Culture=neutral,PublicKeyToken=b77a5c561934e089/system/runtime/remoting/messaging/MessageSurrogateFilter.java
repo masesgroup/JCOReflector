@@ -42,12 +42,27 @@ import system.runtime.remoting.messaging.IMessageSurrogateFilter;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.MessageSurrogateFilter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.MessageSurrogateFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.MessageSurrogateFilter</a>
  */
 public class MessageSurrogateFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.MessageSurrogateFilter
+     */
     public static final String className = "System.Runtime.Remoting.Messaging.MessageSurrogateFilter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IMessageSurrogateFilter callerInstance = null;
@@ -155,7 +170,7 @@ public class MessageSurrogateFilter extends JCDelegate implements IJCEventEmit, 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final boolean DynamicInvoke(java.lang.String key, NetObject value) throws Throwable {
+    public boolean METHOD_JAVA_NAME(java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -165,7 +180,9 @@ public class MessageSurrogateFilter extends JCDelegate implements IJCEventEmit, 
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public boolean Invoke(java.lang.String key, NetObject value) {
         return false;
     }

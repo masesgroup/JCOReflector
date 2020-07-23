@@ -38,21 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeTypeReference;
 import system.codedom.CodeExpression;
+import system.codedom.CodeTypeReference;
 import system.codedom.CodeExpressionCollection;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 
 
 /**
  * The base .NET class managing System.CodeDom.CodeArrayCreateExpression, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeArrayCreateExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeArrayCreateExpression</a>
  */
-public class CodeArrayCreateExpression extends NetObject  {
+public class CodeArrayCreateExpression extends CodeExpression  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.CodeArrayCreateExpression
+     */
     public static final String className = "System.CodeDom.CodeArrayCreateExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +118,9 @@ public class CodeArrayCreateExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeArrayCreateExpression}, a cast assert is made to check if types are compatible.
+     */
     public static CodeArrayCreateExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeArrayCreateExpression(from.getJCOInstance());
@@ -113,7 +128,6 @@ public class CodeArrayCreateExpression extends NetObject  {
 
     // Constructors section
     
-
     public CodeArrayCreateExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -290,17 +304,6 @@ public class CodeArrayCreateExpression extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateType", CreateType == null ? null : CreateType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

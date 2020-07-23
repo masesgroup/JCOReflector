@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.design.MenuCommandsChangedType;
 import system.componentmodel.design.MenuCommand;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.MenuCommandsChangedEventArgs, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.MenuCommandsChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.MenuCommandsChangedEventArgs</a>
  */
-public class MenuCommandsChangedEventArgs extends NetObject  {
+public class MenuCommandsChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.MenuCommandsChangedEventArgs
+     */
     public static final String className = "System.ComponentModel.Design.MenuCommandsChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class MenuCommandsChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MenuCommandsChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static MenuCommandsChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MenuCommandsChangedEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class MenuCommandsChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public MenuCommandsChangedEventArgs() throws Throwable {
+    }
 
     public MenuCommandsChangedEventArgs(MenuCommandsChangedType changeType, MenuCommand command) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class MenuCommandsChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

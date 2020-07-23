@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.PropertyMetadata;
 import system.windows.PropertyChangedCallback;
 import system.windows.CoerceValueCallback;
 
 
 /**
  * The base .NET class managing System.Windows.UIPropertyMetadata, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.UIPropertyMetadata" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.UIPropertyMetadata</a>
  */
-public class UIPropertyMetadata extends NetObject  {
+public class UIPropertyMetadata extends PropertyMetadata  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.UIPropertyMetadata
+     */
     public static final String className = "System.Windows.UIPropertyMetadata";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class UIPropertyMetadata extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UIPropertyMetadata}, a cast assert is made to check if types are compatible.
+     */
     public static UIPropertyMetadata cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UIPropertyMetadata(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class UIPropertyMetadata extends NetObject  {
 
     // Constructors section
     
-
     public UIPropertyMetadata() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -194,67 +211,6 @@ public class UIPropertyMetadata extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAnimationProhibited", IsAnimationProhibited);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getDefaultValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDefaultValue(NetObject DefaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DefaultValue", DefaultValue == null ? null : DefaultValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CoerceValueCallback getCoerceValueCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (CoerceValueCallback)classInstance.Get("CoerceValueCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCoerceValueCallback(CoerceValueCallback CoerceValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CoerceValueCallback", CoerceValueCallback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyChangedCallback getPropertyChangedCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (PropertyChangedCallback)classInstance.Get("PropertyChangedCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPropertyChangedCallback(PropertyChangedCallback PropertyChangedCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PropertyChangedCallback", PropertyChangedCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

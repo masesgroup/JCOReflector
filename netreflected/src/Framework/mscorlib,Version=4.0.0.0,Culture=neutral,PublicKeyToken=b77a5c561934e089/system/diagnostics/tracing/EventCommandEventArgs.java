@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.diagnostics.tracing.EventCommand;
 
 
 /**
  * The base .NET class managing System.Diagnostics.Tracing.EventCommandEventArgs, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs</a>
  */
-public class EventCommandEventArgs extends NetObject  {
+public class EventCommandEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.Tracing.EventCommandEventArgs
+     */
     public static final String className = "System.Diagnostics.Tracing.EventCommandEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class EventCommandEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventCommandEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static EventCommandEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventCommandEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class EventCommandEventArgs extends NetObject  {
 
     // Constructors section
     
+    public EventCommandEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

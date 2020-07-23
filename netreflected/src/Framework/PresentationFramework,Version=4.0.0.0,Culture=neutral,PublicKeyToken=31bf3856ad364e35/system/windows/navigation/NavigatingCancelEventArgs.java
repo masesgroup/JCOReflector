@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.CancelEventArgs;
 import system.net.WebRequest;
 import system.Uri;
 import system.windows.navigation.CustomContentState;
@@ -46,12 +47,27 @@ import system.windows.navigation.NavigationMode;
 
 /**
  * The base .NET class managing System.Windows.Navigation.NavigatingCancelEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs</a>
  */
-public class NavigatingCancelEventArgs extends NetObject  {
+public class NavigatingCancelEventArgs extends CancelEventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Navigation.NavigatingCancelEventArgs
+     */
     public static final String className = "System.Windows.Navigation.NavigatingCancelEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class NavigatingCancelEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NavigatingCancelEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static NavigatingCancelEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NavigatingCancelEventArgs(from.getJCOInstance());
@@ -112,6 +130,10 @@ public class NavigatingCancelEventArgs extends NetObject  {
 
     // Constructors section
     
+    public NavigatingCancelEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -120,26 +142,6 @@ public class NavigatingCancelEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsNavigationInitiator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

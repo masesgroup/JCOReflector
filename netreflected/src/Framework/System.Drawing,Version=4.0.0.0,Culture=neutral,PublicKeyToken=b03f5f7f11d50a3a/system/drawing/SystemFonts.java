@@ -43,12 +43,27 @@ import system.drawing.Font;
 
 /**
  * The base .NET class managing System.Drawing.SystemFonts, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.SystemFonts" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.SystemFonts</a>
  */
 public class SystemFonts extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.SystemFonts
+     */
     public static final String className = "System.Drawing.SystemFonts";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SystemFonts extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SystemFonts}, a cast assert is made to check if types are compatible.
+     */
     public static SystemFonts cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SystemFonts(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class SystemFonts extends NetObject  {
 
     // Constructors section
     
+    public SystemFonts() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -128,88 +149,88 @@ public class SystemFonts extends NetObject  {
     
     // Properties section
     
-    public static Font getCaptionFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Font getCaptionFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CaptionFont");
+            JCObject val = (JCObject)classInstance.Get("CaptionFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Font getDefaultFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Font getDefaultFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultFont");
+            JCObject val = (JCObject)classInstance.Get("DefaultFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Font getDialogFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Font getDialogFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DialogFont");
+            JCObject val = (JCObject)classInstance.Get("DialogFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Font getIconTitleFont() throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Font getIconTitleFont() throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("IconTitleFont");
+            JCObject val = (JCObject)classInstance.Get("IconTitleFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Font getMenuFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Font getMenuFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("MenuFont");
+            JCObject val = (JCObject)classInstance.Get("MenuFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Font getMessageBoxFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Font getMessageBoxFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("MessageBoxFont");
+            JCObject val = (JCObject)classInstance.Get("MessageBoxFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Font getSmallCaptionFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Font getSmallCaptionFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionFont");
+            JCObject val = (JCObject)classInstance.Get("SmallCaptionFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Font getStatusFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Font getStatusFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("StatusFont");
+            JCObject val = (JCObject)classInstance.Get("StatusFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

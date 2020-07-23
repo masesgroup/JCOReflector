@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.description.MetadataImporter;
 import system.servicemodel.description.MetadataSet;
 import system.servicemodel.description.ContractDescription;
 import system.web.services.description.PortType;
@@ -51,12 +52,27 @@ import system.xml.schema.XmlSchemaSet;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.WsdlImporter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.WsdlImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.WsdlImporter</a>
  */
-public class WsdlImporter extends NetObject  {
+public class WsdlImporter extends MetadataImporter  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.WsdlImporter
+     */
     public static final String className = "System.ServiceModel.Description.WsdlImporter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +125,9 @@ public class WsdlImporter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WsdlImporter}, a cast assert is made to check if types are compatible.
+     */
     public static WsdlImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WsdlImporter(from.getJCOInstance());
@@ -117,6 +135,8 @@ public class WsdlImporter extends NetObject  {
 
     // Constructors section
     
+    public WsdlImporter() throws Throwable {
+    }
 
     public WsdlImporter(MetadataSet metadata) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.TypeLoadException, system.RankException {
         try {
@@ -127,6 +147,7 @@ public class WsdlImporter extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

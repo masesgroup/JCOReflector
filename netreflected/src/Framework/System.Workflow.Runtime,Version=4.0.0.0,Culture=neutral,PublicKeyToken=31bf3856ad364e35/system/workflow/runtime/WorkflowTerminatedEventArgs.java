@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.runtime.WorkflowInstance;
+import system.workflow.runtime.WorkflowEventArgs;
 
 
 /**
  * The base .NET class managing System.Workflow.Runtime.WorkflowTerminatedEventArgs, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.WorkflowTerminatedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.WorkflowTerminatedEventArgs</a>
  */
-public class WorkflowTerminatedEventArgs extends NetObject  {
+public class WorkflowTerminatedEventArgs extends WorkflowEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.WorkflowTerminatedEventArgs
+     */
     public static final String className = "System.Workflow.Runtime.WorkflowTerminatedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class WorkflowTerminatedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowTerminatedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowTerminatedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowTerminatedEventArgs(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class WorkflowTerminatedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public WorkflowTerminatedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -123,17 +144,6 @@ public class WorkflowTerminatedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Exception");
             return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WorkflowInstance getWorkflowInstance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowInstance");
-            return new WorkflowInstance(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

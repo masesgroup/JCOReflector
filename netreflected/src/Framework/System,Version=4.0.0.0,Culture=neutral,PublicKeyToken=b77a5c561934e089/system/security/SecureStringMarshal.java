@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.SecureStringMarshal, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecureStringMarshal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecureStringMarshal</a>
  */
 public class SecureStringMarshal extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Security.SecureStringMarshal
+     */
     public static final String className = "System.Security.SecureStringMarshal";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SecureStringMarshal extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecureStringMarshal}, a cast assert is made to check if types are compatible.
+     */
     public static SecureStringMarshal cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecureStringMarshal(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class SecureStringMarshal extends NetObject  {
 
     // Constructors section
     
+    public SecureStringMarshal() throws Throwable {
+    }
 
     
     // Methods section

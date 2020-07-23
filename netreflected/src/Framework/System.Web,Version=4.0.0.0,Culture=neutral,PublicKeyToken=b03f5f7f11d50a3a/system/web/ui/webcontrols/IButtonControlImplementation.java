@@ -44,12 +44,27 @@ import system.web.ui.webcontrols.CommandEventHandler;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.IButtonControl, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.IButtonControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.IButtonControl</a>
  */
 public class IButtonControlImplementation extends NetObject implements IButtonControl {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.IButtonControl
+     */
     public static final String className = "System.Web.UI.WebControls.IButtonControl";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IButtonControl}, a cast assert is made to check if types are compatible.
+     */
     public static IButtonControl ToIButtonControl(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IButtonControlImplementation(from.getJCOInstance());

@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.threading.IParameterizedThreadStart;
 /**
  * The base .NET class managing System.Threading.ParameterizedThreadStart, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ParameterizedThreadStart" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ParameterizedThreadStart</a>
  */
 public class ParameterizedThreadStart extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.ParameterizedThreadStart
+     */
     public static final String className = "System.Threading.ParameterizedThreadStart";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IParameterizedThreadStart callerInstance = null;
@@ -146,7 +161,7 @@ public class ParameterizedThreadStart extends JCVoidDelegate implements IJCVoidE
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject obj) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -156,7 +171,9 @@ public class ParameterizedThreadStart extends JCVoidDelegate implements IJCVoidE
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject obj) {
     }
 }

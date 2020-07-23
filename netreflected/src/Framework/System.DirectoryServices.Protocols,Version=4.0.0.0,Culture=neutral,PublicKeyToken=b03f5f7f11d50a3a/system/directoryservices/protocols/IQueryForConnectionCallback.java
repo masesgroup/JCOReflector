@@ -41,7 +41,12 @@ import system.directoryservices.protocols.LdapConnection;
 import system.directoryservices.protocols.LdapDirectoryIdentifier;
 import system.net.NetworkCredential;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link QueryForConnectionCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.QueryForConnectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.QueryForConnectionCallback</a>
+ */
 public interface IQueryForConnectionCallback {
     public LdapConnection Invoke(LdapConnection primaryConnection, LdapConnection referralFromConnection, java.lang.String newDistinguishedName, LdapDirectoryIdentifier identifier, NetworkCredential credential, long currentUserToken);
 }

@@ -47,12 +47,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Drawing.Design.ToolboxItemContainer, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemContainer</a>
  */
 public class ToolboxItemContainer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing.Design
+     */
     public static final String assemblyShortName = "System.Drawing.Design";
+    /**
+     * Qualified class name: System.Drawing.Design.ToolboxItemContainer
+     */
     public static final String className = "System.Drawing.Design.ToolboxItemContainer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ToolboxItemContainer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolboxItemContainer}, a cast assert is made to check if types are compatible.
+     */
     public static ToolboxItemContainer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolboxItemContainer(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ToolboxItemContainer extends NetObject  {
 
     // Constructors section
     
+    public ToolboxItemContainer() throws Throwable {
+    }
 
     public ToolboxItemContainer(ToolboxItem item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
@@ -133,6 +152,7 @@ public class ToolboxItemContainer extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

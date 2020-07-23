@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.expressions.IArgumentProvider;
+import system.linq.expressions.IArgumentProviderImplementation;
 import system.linq.expressions.Expression;
 
 
 /**
  * The base .NET class managing System.Linq.Expressions.IDynamicExpression, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.IDynamicExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.IDynamicExpression</a>
  */
 public class IDynamicExpressionImplementation extends NetObject implements IDynamicExpression {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Linq.Expressions.IDynamicExpression
+     */
     public static final String className = "System.Linq.Expressions.IDynamicExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDynamicExpression}, a cast assert is made to check if types are compatible.
+     */
     public static IDynamicExpression ToIDynamicExpression(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDynamicExpressionImplementation(from.getJCOInstance());

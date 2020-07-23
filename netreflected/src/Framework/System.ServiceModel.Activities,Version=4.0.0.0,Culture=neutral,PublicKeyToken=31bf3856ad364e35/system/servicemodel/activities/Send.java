@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.Activity;
 import system.security.principal.TokenImpersonationLevel;
 import system.servicemodel.activities.SendContent;
 import system.servicemodel.activities.SerializerOption;
@@ -47,12 +48,27 @@ import system.xml.linq.XName;
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.Send, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Send" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Send</a>
  */
-public class Send extends NetObject  {
+public class Send extends Activity  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.Send
+     */
     public static final String className = "System.ServiceModel.Activities.Send";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class Send extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Send}, a cast assert is made to check if types are compatible.
+     */
     public static Send cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Send(from.getJCOInstance());
@@ -113,7 +131,6 @@ public class Send extends NetObject  {
 
     // Constructors section
     
-
     public Send() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -128,16 +145,6 @@ public class Send extends NetObject  {
     
     // Methods section
     
-    public boolean ShouldSerializeDisplayName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeDisplayName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -246,26 +253,6 @@ public class Send extends NetObject  {
         }
     }
 
-    public java.lang.String getDisplayName() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DisplayName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDisplayName(java.lang.String DisplayName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DisplayName", DisplayName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getEndpointConfigurationName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -281,16 +268,6 @@ public class Send extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndpointConfigurationName", EndpointConfigurationName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

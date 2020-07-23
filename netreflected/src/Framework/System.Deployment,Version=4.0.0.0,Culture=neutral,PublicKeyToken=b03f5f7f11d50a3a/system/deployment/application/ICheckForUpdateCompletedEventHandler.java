@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.deployment.application.CheckForUpdateCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CheckForUpdateCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.CheckForUpdateCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.CheckForUpdateCompletedEventHandler</a>
+ */
 public interface ICheckForUpdateCompletedEventHandler {
     public void Invoke(NetObject sender, CheckForUpdateCompletedEventArgs e);
 }

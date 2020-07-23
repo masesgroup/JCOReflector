@@ -52,12 +52,27 @@ import system.text.Encoding;
 
 /**
  * The base .NET class managing System.Console, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Console" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Console</a>
  */
 public class Console extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Console
+     */
     public static final String className = "System.Console";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class Console extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Console}, a cast assert is made to check if types are compatible.
+     */
     public static Console cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Console(from.getJCOInstance());
@@ -118,6 +135,8 @@ public class Console extends NetObject  {
 
     // Constructors section
     
+    public Console() throws Throwable {
+    }
 
     
     // Methods section
@@ -390,11 +409,31 @@ public class Console extends NetObject  {
         }
     }
 
+    public static void Write(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Write", (Object)dupParam0);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void Write(char[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", buffer, index, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Write(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Write", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,11 +619,31 @@ public class Console extends NetObject  {
         }
     }
 
+    public static void WriteLine(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteLine", (Object)dupParam0);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void WriteLine(char[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", buffer, index, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteLine(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteLine", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -734,438 +793,438 @@ public class Console extends NetObject  {
     
     // Properties section
     
-    public static boolean getCapsLock() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getCapsLock() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("CapsLock");
+            return (boolean)classInstance.Get("CapsLock");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getCursorVisible() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getCursorVisible() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("CursorVisible");
+            return (boolean)classInstance.Get("CursorVisible");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCursorVisible(boolean CursorVisible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCursorVisible(boolean CursorVisible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CursorVisible", CursorVisible);
+            classInstance.Set("CursorVisible", CursorVisible);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getIsErrorRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsErrorRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsErrorRedirected");
+            return (boolean)classInstance.Get("IsErrorRedirected");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getIsInputRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsInputRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsInputRedirected");
+            return (boolean)classInstance.Get("IsInputRedirected");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getIsOutputRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsOutputRedirected() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsOutputRedirected");
+            return (boolean)classInstance.Get("IsOutputRedirected");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getKeyAvailable() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getKeyAvailable() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("KeyAvailable");
+            return (boolean)classInstance.Get("KeyAvailable");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getNumberLock() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getNumberLock() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("NumberLock");
+            return (boolean)classInstance.Get("NumberLock");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getTreatControlCAsInput() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getTreatControlCAsInput() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("TreatControlCAsInput");
+            return (boolean)classInstance.Get("TreatControlCAsInput");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setTreatControlCAsInput(boolean TreatControlCAsInput) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setTreatControlCAsInput(boolean TreatControlCAsInput) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("TreatControlCAsInput", TreatControlCAsInput);
+            classInstance.Set("TreatControlCAsInput", TreatControlCAsInput);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getBufferHeight() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getBufferHeight() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("BufferHeight");
+            return (int)classInstance.Get("BufferHeight");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setBufferHeight(int BufferHeight) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setBufferHeight(int BufferHeight) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("BufferHeight", BufferHeight);
+            classInstance.Set("BufferHeight", BufferHeight);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getBufferWidth() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getBufferWidth() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("BufferWidth");
+            return (int)classInstance.Get("BufferWidth");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setBufferWidth(int BufferWidth) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setBufferWidth(int BufferWidth) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("BufferWidth", BufferWidth);
+            classInstance.Set("BufferWidth", BufferWidth);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getCursorLeft() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getCursorLeft() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("CursorLeft");
+            return (int)classInstance.Get("CursorLeft");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCursorLeft(int CursorLeft) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCursorLeft(int CursorLeft) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CursorLeft", CursorLeft);
+            classInstance.Set("CursorLeft", CursorLeft);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getCursorSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getCursorSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("CursorSize");
+            return (int)classInstance.Get("CursorSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCursorSize(int CursorSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCursorSize(int CursorSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CursorSize", CursorSize);
+            classInstance.Set("CursorSize", CursorSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getCursorTop() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getCursorTop() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("CursorTop");
+            return (int)classInstance.Get("CursorTop");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCursorTop(int CursorTop) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCursorTop(int CursorTop) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CursorTop", CursorTop);
+            classInstance.Set("CursorTop", CursorTop);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getLargestWindowHeight() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getLargestWindowHeight() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("LargestWindowHeight");
+            return (int)classInstance.Get("LargestWindowHeight");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getLargestWindowWidth() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getLargestWindowWidth() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("LargestWindowWidth");
+            return (int)classInstance.Get("LargestWindowWidth");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getWindowHeight() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getWindowHeight() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("WindowHeight");
+            return (int)classInstance.Get("WindowHeight");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setWindowHeight(int WindowHeight) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setWindowHeight(int WindowHeight) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("WindowHeight", WindowHeight);
+            classInstance.Set("WindowHeight", WindowHeight);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getWindowLeft() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getWindowLeft() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("WindowLeft");
+            return (int)classInstance.Get("WindowLeft");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setWindowLeft(int WindowLeft) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setWindowLeft(int WindowLeft) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("WindowLeft", WindowLeft);
+            classInstance.Set("WindowLeft", WindowLeft);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getWindowTop() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getWindowTop() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("WindowTop");
+            return (int)classInstance.Get("WindowTop");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setWindowTop(int WindowTop) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setWindowTop(int WindowTop) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("WindowTop", WindowTop);
+            classInstance.Set("WindowTop", WindowTop);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getWindowWidth() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getWindowWidth() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("WindowWidth");
+            return (int)classInstance.Get("WindowWidth");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setWindowWidth(int WindowWidth) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setWindowWidth(int WindowWidth) throws Throwable, system.io.IOException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("WindowWidth", WindowWidth);
+            classInstance.Set("WindowWidth", WindowWidth);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ConsoleColor getBackgroundColor() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ConsoleColor getBackgroundColor() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("BackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("BackgroundColor");
             return new ConsoleColor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setBackgroundColor(ConsoleColor BackgroundColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setBackgroundColor(ConsoleColor BackgroundColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("BackgroundColor", BackgroundColor == null ? null : BackgroundColor.getJCOInstance());
+            classInstance.Set("BackgroundColor", BackgroundColor == null ? null : BackgroundColor.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ConsoleColor getForegroundColor() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ConsoleColor getForegroundColor() throws Throwable, system.io.IOException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ForegroundColor");
+            JCObject val = (JCObject)classInstance.Get("ForegroundColor");
             return new ConsoleColor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setForegroundColor(ConsoleColor ForegroundColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setForegroundColor(ConsoleColor ForegroundColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("ForegroundColor", ForegroundColor == null ? null : ForegroundColor.getJCOInstance());
+            classInstance.Set("ForegroundColor", ForegroundColor == null ? null : ForegroundColor.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TextReader getIn() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TextReader getIn() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("In");
+            JCObject val = (JCObject)classInstance.Get("In");
             return new TextReader(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TextWriter getError() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TextWriter getError() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Error");
+            JCObject val = (JCObject)classInstance.Get("Error");
             return new TextWriter(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TextWriter getOut() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TextWriter getOut() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Out");
+            JCObject val = (JCObject)classInstance.Get("Out");
             return new TextWriter(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getTitle() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getTitle() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Title");
+            return (java.lang.String)classInstance.Get("Title");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setTitle(java.lang.String Title) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setTitle(java.lang.String Title) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("Title", Title);
+            classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Encoding getInputEncoding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Encoding getInputEncoding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("InputEncoding");
+            JCObject val = (JCObject)classInstance.Get("InputEncoding");
             return new Encoding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setInputEncoding(Encoding InputEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setInputEncoding(Encoding InputEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("InputEncoding", InputEncoding == null ? null : InputEncoding.getJCOInstance());
+            classInstance.Set("InputEncoding", InputEncoding == null ? null : InputEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Encoding getOutputEncoding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Encoding getOutputEncoding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutputEncoding");
+            JCObject val = (JCObject)classInstance.Get("OutputEncoding");
             return new Encoding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setOutputEncoding(Encoding OutputEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setOutputEncoding(Encoding OutputEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("OutputEncoding", OutputEncoding == null ? null : OutputEncoding.getJCOInstance());
+            classInstance.Set("OutputEncoding", OutputEncoding == null ? null : OutputEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

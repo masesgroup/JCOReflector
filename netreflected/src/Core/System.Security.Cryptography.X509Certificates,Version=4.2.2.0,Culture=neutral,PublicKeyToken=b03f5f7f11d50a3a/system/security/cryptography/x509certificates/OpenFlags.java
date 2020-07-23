@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Cryptography.X509Certificates.OpenFlags, System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.OpenFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.OpenFlags</a>
  */
 public class OpenFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.X509Certificates
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.X509Certificates";
+    /**
+     * Qualified class name: System.Security.Cryptography.X509Certificates.OpenFlags
+     */
     public static final String className = "System.Security.Cryptography.X509Certificates.OpenFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class OpenFlags extends NetObject  {
 
     // Flags management section
 
-    public OpenFlags add(OpenFlags val) throws Throwable {
+    public final OpenFlags add(OpenFlags val) throws Throwable {
         return new OpenFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public OpenFlags remove(OpenFlags val) throws Throwable {
+    public final OpenFlags remove(OpenFlags val) throws Throwable {
         return new OpenFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(OpenFlags val) throws Throwable {
+    public final boolean is(OpenFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(OpenFlags val) throws Throwable {
+    public final boolean has(OpenFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

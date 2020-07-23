@@ -49,12 +49,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.Security.Cryptography.X509Certificates.X509ChainPolicy, System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainPolicy</a>
  */
 public class X509ChainPolicy extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.X509Certificates
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.X509Certificates";
+    /**
+     * Qualified class name: System.Security.Cryptography.X509Certificates.X509ChainPolicy
+     */
     public static final String className = "System.Security.Cryptography.X509Certificates.X509ChainPolicy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class X509ChainPolicy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509ChainPolicy}, a cast assert is made to check if types are compatible.
+     */
     public static X509ChainPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509ChainPolicy(from.getJCOInstance());
@@ -115,7 +132,6 @@ public class X509ChainPolicy extends NetObject  {
 
     // Constructors section
     
-
     public X509ChainPolicy() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file

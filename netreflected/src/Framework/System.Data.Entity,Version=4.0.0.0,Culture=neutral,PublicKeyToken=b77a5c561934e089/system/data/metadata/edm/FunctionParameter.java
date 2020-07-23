@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.metadata.edm.MetadataItem;
 import system.data.metadata.edm.BuiltInTypeKind;
-import system.data.metadata.edm.Documentation;
 import system.data.metadata.edm.EdmFunction;
 import system.data.metadata.edm.ParameterMode;
 import system.data.metadata.edm.TypeUsage;
@@ -47,12 +47,27 @@ import system.data.metadata.edm.TypeUsage;
 
 /**
  * The base .NET class managing System.Data.Metadata.Edm.FunctionParameter, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.FunctionParameter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.FunctionParameter</a>
  */
-public class FunctionParameter extends NetObject  {
+public class FunctionParameter extends MetadataItem  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Metadata.Edm.FunctionParameter
+     */
     public static final String className = "System.Data.Metadata.Edm.FunctionParameter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class FunctionParameter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FunctionParameter}, a cast assert is made to check if types are compatible.
+     */
     public static FunctionParameter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FunctionParameter(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class FunctionParameter extends NetObject  {
 
     // Constructors section
     
+    public FunctionParameter() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -121,38 +142,6 @@ public class FunctionParameter extends NetObject  {
     
     // Properties section
     
-    public BuiltInTypeKind getBuiltInTypeKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuiltInTypeKind");
-            return new BuiltInTypeKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Documentation getDocumentation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Documentation");
-            return new Documentation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentation(Documentation Documentation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EdmFunction getDeclaringFunction() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

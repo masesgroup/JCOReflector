@@ -42,12 +42,27 @@ import system.net.DownloadProgressChangedEventArgs;
 import system.net.IDownloadProgressChangedEventHandler;
 /**
  * The base .NET class managing System.Net.DownloadProgressChangedEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadProgressChangedEventHandler</a>
  */
 public class DownloadProgressChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.DownloadProgressChangedEventHandler
+     */
     public static final String className = "System.Net.DownloadProgressChangedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDownloadProgressChangedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DownloadProgressChangedEventHandler extends JCVoidDelegate implemen
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DownloadProgressChangedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DownloadProgressChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DownloadProgressChangedEventHandler extends JCVoidDelegate implemen
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DownloadProgressChangedEventArgs e) {
     }
 }

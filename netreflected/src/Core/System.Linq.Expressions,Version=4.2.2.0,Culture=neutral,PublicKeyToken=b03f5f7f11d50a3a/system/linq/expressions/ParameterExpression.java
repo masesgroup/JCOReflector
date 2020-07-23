@@ -44,12 +44,27 @@ import system.linq.expressions.ExpressionType;
 
 /**
  * The base .NET class managing System.Linq.Expressions.ParameterExpression, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.ParameterExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.ParameterExpression</a>
  */
-public class ParameterExpression extends NetObject  {
+public class ParameterExpression extends Expression  {
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
     public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Linq.Expressions.ParameterExpression
+     */
     public static final String className = "System.Linq.Expressions.ParameterExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ParameterExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParameterExpression}, a cast assert is made to check if types are compatible.
+     */
     public static ParameterExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ParameterExpression(from.getJCOInstance());
@@ -110,57 +127,18 @@ public class ParameterExpression extends NetObject  {
 
     // Constructors section
     
+    public ParameterExpression() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public Expression Reduce() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReduce = (JCObject)classInstance.Invoke("Reduce");
-            return new Expression(objReduce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Expression ReduceAndCheck() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReduceAndCheck = (JCObject)classInstance.Invoke("ReduceAndCheck");
-            return new Expression(objReduceAndCheck);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Expression ReduceExtensions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReduceExtensions = (JCObject)classInstance.Invoke("ReduceExtensions");
-            return new Expression(objReduceExtensions);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getCanReduce() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanReduce");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsByRef() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -171,33 +149,11 @@ public class ParameterExpression extends NetObject  {
         }
     }
 
-    public ExpressionType getNodeType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new ExpressionType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

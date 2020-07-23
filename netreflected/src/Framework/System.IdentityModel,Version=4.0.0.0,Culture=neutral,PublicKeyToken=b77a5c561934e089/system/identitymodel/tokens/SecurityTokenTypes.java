@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.SecurityTokenTypes, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityTokenTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityTokenTypes</a>
  */
 public class SecurityTokenTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.SecurityTokenTypes
+     */
     public static final String className = "System.IdentityModel.Tokens.SecurityTokenTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SecurityTokenTypes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityTokenTypes}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityTokenTypes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityTokenTypes(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class SecurityTokenTypes extends NetObject  {
 
     // Constructors section
     
+    public SecurityTokenTypes() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,51 +135,51 @@ public class SecurityTokenTypes extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getKerberos() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getKerberos() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Kerberos");
+            return (java.lang.String)classInstance.Get("Kerberos");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getRsa() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getRsa() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Rsa");
+            return (java.lang.String)classInstance.Get("Rsa");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getSaml() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getSaml() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Saml");
+            return (java.lang.String)classInstance.Get("Saml");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getUserName() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getUserName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("UserName");
+            return (java.lang.String)classInstance.Get("UserName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getX509Certificate() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getX509Certificate() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("X509Certificate");
+            return (java.lang.String)classInstance.Get("X509Certificate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

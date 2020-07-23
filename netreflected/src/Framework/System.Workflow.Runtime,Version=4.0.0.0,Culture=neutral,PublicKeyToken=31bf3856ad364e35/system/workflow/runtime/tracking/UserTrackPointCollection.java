@@ -38,17 +38,31 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.runtime.tracking.UserTrackPoint;
 
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Tracking.UserTrackPointCollection, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPointCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPointCollection</a>
  */
 public class UserTrackPointCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.Tracking.UserTrackPointCollection
+     */
     public static final String className = "System.Workflow.Runtime.Tracking.UserTrackPointCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +115,9 @@ public class UserTrackPointCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UserTrackPointCollection}, a cast assert is made to check if types are compatible.
+     */
     public static UserTrackPointCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UserTrackPointCollection(from.getJCOInstance());
@@ -109,7 +125,6 @@ public class UserTrackPointCollection extends NetObject  {
 
     // Constructors section
     
-
     public UserTrackPointCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -124,247 +139,10 @@ public class UserTrackPointCollection extends NetObject  {
     
     // Methods section
     
-    public boolean Contains(UserTrackPoint item) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Remove(UserTrackPoint item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Remove", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int BinarySearch(UserTrackPoint item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("BinarySearch", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IndexOf(UserTrackPoint item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IndexOf(UserTrackPoint item, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance(), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IndexOf(UserTrackPoint item, int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance(), index, count);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int LastIndexOf(UserTrackPoint item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("LastIndexOf", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int LastIndexOf(UserTrackPoint item, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("LastIndexOf", item == null ? null : item.getJCOInstance(), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int LastIndexOf(UserTrackPoint item, int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("LastIndexOf", item == null ? null : item.getJCOInstance(), index, count);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UserTrackPoint[] ToArray() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<UserTrackPoint> resultingArrayList = new ArrayList<UserTrackPoint>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new UserTrackPoint(resultingObject));
-            }
-            UserTrackPoint[] resultingArray = new UserTrackPoint[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(UserTrackPoint item) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(int index, UserTrackPoint[] array, int arrayIndex, int count) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", index, toObjectFromArray(array), arrayIndex, count);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(UserTrackPoint[] array) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", (Object)toObjectFromArray(array));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(UserTrackPoint[] array, int arrayIndex) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), arrayIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Insert(int index, UserTrackPoint item) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Insert", index, item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveAt(int index) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveRange(int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveRange", index, count);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Reverse() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.RankException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Reverse");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Reverse(int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.RankException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Reverse", index, count);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Sort() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Sort");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getCapacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Capacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Capacity", Capacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.Control;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BuildTemplateMethod}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildTemplateMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildTemplateMethod</a>
+ */
 public interface IBuildTemplateMethod {
     public void Invoke(Control control);
 }

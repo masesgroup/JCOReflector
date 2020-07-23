@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.EnterpriseServices.IPlaybackControl, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.IPlaybackControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.IPlaybackControl</a>
  */
 public class IPlaybackControlImplementation extends NetObject implements IPlaybackControl {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.IPlaybackControl
+     */
     public static final String className = "System.EnterpriseServices.IPlaybackControl";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IPlaybackControlImplementation extends NetObject implements IPlayba
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPlaybackControl}, a cast assert is made to check if types are compatible.
+     */
     public static IPlaybackControl ToIPlaybackControl(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IPlaybackControlImplementation(from.getJCOInstance());

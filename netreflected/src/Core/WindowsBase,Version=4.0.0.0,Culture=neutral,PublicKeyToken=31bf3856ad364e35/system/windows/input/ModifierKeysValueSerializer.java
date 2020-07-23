@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.ValueSerializer;
 import system.windows.markup.IValueSerializerContext;
 import system.windows.markup.IValueSerializerContextImplementation;
 
 
 /**
  * The base .NET class managing System.Windows.Input.ModifierKeysValueSerializer, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ModifierKeysValueSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ModifierKeysValueSerializer</a>
  */
-public class ModifierKeysValueSerializer extends NetObject  {
+public class ModifierKeysValueSerializer extends ValueSerializer  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Input.ModifierKeysValueSerializer
+     */
     public static final String className = "System.Windows.Input.ModifierKeysValueSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ModifierKeysValueSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModifierKeysValueSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static ModifierKeysValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ModifierKeysValueSerializer(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class ModifierKeysValueSerializer extends NetObject  {
 
     // Constructors section
     
-
     public ModifierKeysValueSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file

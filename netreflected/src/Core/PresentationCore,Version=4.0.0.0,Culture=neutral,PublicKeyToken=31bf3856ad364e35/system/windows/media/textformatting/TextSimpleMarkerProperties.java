@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.media.textformatting.TextMarkerProperties;
 import system.windows.TextMarkerStyle;
 import system.windows.media.textformatting.TextParagraphProperties;
 import system.windows.media.textformatting.TextSource;
@@ -45,12 +46,27 @@ import system.windows.media.textformatting.TextSource;
 
 /**
  * The base .NET class managing System.Windows.Media.TextFormatting.TextSimpleMarkerProperties, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextSimpleMarkerProperties" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextSimpleMarkerProperties</a>
  */
-public class TextSimpleMarkerProperties extends NetObject  {
+public class TextSimpleMarkerProperties extends TextMarkerProperties  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.TextFormatting.TextSimpleMarkerProperties
+     */
     public static final String className = "System.Windows.Media.TextFormatting.TextSimpleMarkerProperties";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class TextSimpleMarkerProperties extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextSimpleMarkerProperties}, a cast assert is made to check if types are compatible.
+     */
     public static TextSimpleMarkerProperties cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TextSimpleMarkerProperties(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class TextSimpleMarkerProperties extends NetObject  {
 
     // Constructors section
     
+    public TextSimpleMarkerProperties() throws Throwable {
+    }
 
     public TextSimpleMarkerProperties(TextMarkerStyle style, double offset, int autoNumberingIndex, TextParagraphProperties textParagraphProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException {
         try {
@@ -123,6 +143,7 @@ public class TextSimpleMarkerProperties extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -130,27 +151,6 @@ public class TextSimpleMarkerProperties extends NetObject  {
     
     // Properties section
     
-    public double getOffset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("Offset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TextSource getTextSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TextSource");
-            return new TextSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.win32.CommonDialog;
 import system.componentmodel.CancelEventHandler;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.FileDialog, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.FileDialog" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.FileDialog</a>
  */
-public class FileDialog extends NetObject  {
+public class FileDialog extends CommonDialog  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: Microsoft.Win32.FileDialog
+     */
     public static final String className = "Microsoft.Win32.FileDialog";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class FileDialog extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileDialog}, a cast assert is made to check if types are compatible.
+     */
     public static FileDialog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileDialog(from.getJCOInstance());
@@ -109,10 +127,22 @@ public class FileDialog extends NetObject  {
 
     // Constructors section
     
+    public FileDialog() throws Throwable {
+    }
 
     
     // Methods section
     
+    public void Reset() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -252,27 +282,6 @@ public class FileDialog extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterIndex", FilterIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTag() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTag(NetObject Tag) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

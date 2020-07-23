@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes</a>
  */
 public class ServiceModelSecurityTokenTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes
+     */
     public static final String className = "System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceModelSecurityTokenTypes}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceModelSecurityTokenTypes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceModelSecurityTokenTypes(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
 
     // Constructors section
     
+    public ServiceModelSecurityTokenTypes() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,61 +135,61 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getAnonymousSslnego() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getAnonymousSslnego() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("AnonymousSslnego");
+            return (java.lang.String)classInstance.Get("AnonymousSslnego");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getMutualSslnego() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getMutualSslnego() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("MutualSslnego");
+            return (java.lang.String)classInstance.Get("MutualSslnego");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getSecureConversation() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getSecureConversation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("SecureConversation");
+            return (java.lang.String)classInstance.Get("SecureConversation");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getSecurityContext() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getSecurityContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("SecurityContext");
+            return (java.lang.String)classInstance.Get("SecurityContext");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getSpnego() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getSpnego() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Spnego");
+            return (java.lang.String)classInstance.Get("Spnego");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getSspiCredential() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getSspiCredential() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("SspiCredential");
+            return (java.lang.String)classInstance.Get("SspiCredential");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -44,10 +44,22 @@ import system.windows.forms.design.behavior.Adorner;
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollectionEnumerator, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollectionEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollectionEnumerator</a>
  */
 public class BehaviorServiceAdornerCollectionEnumerator extends NetObject implements Iterator<Adorner> {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollectionEnumerator
+     */
     public static final String className = "System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollectionEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class BehaviorServiceAdornerCollectionEnumerator extends NetObject implem
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public Adorner next() {
+	public final Adorner next() {
 		try {
 			return new Adorner(classInstance.next());
 		} catch (Throwable jce) {

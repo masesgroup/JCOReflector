@@ -38,20 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.accesscontrol.AuthorizationRule;
 import system.security.accesscontrol.AccessControlType;
-import system.security.accesscontrol.InheritanceFlags;
-import system.security.accesscontrol.PropagationFlags;
-import system.security.principal.IdentityReference;
 
 
 /**
  * The base .NET class managing System.Security.AccessControl.AccessRule, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AccessRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AccessRule</a>
  */
-public class AccessRule extends NetObject  {
+public class AccessRule extends AuthorizationRule  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.AccessRule
+     */
     public static final String className = "System.Security.AccessControl.AccessRule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +117,9 @@ public class AccessRule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AccessRule}, a cast assert is made to check if types are compatible.
+     */
     public static AccessRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AccessRule(from.getJCOInstance());
@@ -112,6 +127,8 @@ public class AccessRule extends NetObject  {
 
     // Constructors section
     
+    public AccessRule() throws Throwable {
+    }
 
     
     // Methods section
@@ -120,55 +137,12 @@ public class AccessRule extends NetObject  {
     
     // Properties section
     
-    public boolean getIsInherited() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInherited");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AccessControlType getAccessControlType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("AccessControlType");
             return new AccessControlType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InheritanceFlags getInheritanceFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InheritanceFlags");
-            return new InheritanceFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropagationFlags getPropagationFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropagationFlags");
-            return new PropagationFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IdentityReference getIdentityReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IdentityReference");
-            return new IdentityReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

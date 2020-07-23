@@ -38,20 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.accesscontrol.GenericSecurityDescriptor;
 import system.security.accesscontrol.ControlFlags;
 import system.security.principal.SecurityIdentifier;
 import system.security.accesscontrol.RawAcl;
-import system.security.accesscontrol.AccessControlSections;
 
 
 /**
  * The base .NET class managing System.Security.AccessControl.RawSecurityDescriptor, System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor</a>
  */
-public class RawSecurityDescriptor extends NetObject  {
+public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
+    /**
+     * Fully assembly qualified name: System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.AccessControl
+     */
     public static final String assemblyShortName = "System.Security.AccessControl";
+    /**
+     * Qualified class name: System.Security.AccessControl.RawSecurityDescriptor
+     */
     public static final String className = "System.Security.AccessControl.RawSecurityDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class RawSecurityDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RawSecurityDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static RawSecurityDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RawSecurityDescriptor(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class RawSecurityDescriptor extends NetObject  {
 
     // Constructors section
     
+    public RawSecurityDescriptor() throws Throwable {
+    }
 
     public RawSecurityDescriptor(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException {
         try {
@@ -144,29 +163,10 @@ public class RawSecurityDescriptor extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public java.lang.String GetSddlForm(AccessControlSections includeSections) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetSddlForm", includeSections == null ? null : includeSections.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetBinaryForm", binaryForm, offset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetFlags(ControlFlags flags) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -196,27 +196,6 @@ public class RawSecurityDescriptor extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceManagerControl", ResourceManagerControl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getBinaryLength() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("BinaryLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ControlFlags getControlFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ControlFlags");
-            return new ControlFlags(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,48 +238,6 @@ public class RawSecurityDescriptor extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SystemAcl", SystemAcl == null ? null : SystemAcl.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityIdentifier getGroup() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Group");
-            return new SecurityIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setGroup(SecurityIdentifier Group) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Group", Group == null ? null : Group.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityIdentifier getOwner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
-            return new SecurityIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOwner(SecurityIdentifier Owner) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Owner", Owner == null ? null : Owner.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

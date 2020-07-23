@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing Microsoft.Win32.SystemEvents, Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SystemEvents" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SystemEvents</a>
  */
 public class SystemEvents extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: Microsoft.Win32.SystemEvents
+     */
     public static final String assemblyShortName = "Microsoft.Win32.SystemEvents";
+    /**
+     * Qualified class name: Microsoft.Win32.SystemEvents
+     */
     public static final String className = "Microsoft.Win32.SystemEvents";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SystemEvents extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SystemEvents}, a cast assert is made to check if types are compatible.
+     */
     public static SystemEvents cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SystemEvents(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class SystemEvents extends NetObject  {
 
     // Constructors section
     
+    public SystemEvents() throws Throwable {
+    }
+
+
 
     
     // Methods section

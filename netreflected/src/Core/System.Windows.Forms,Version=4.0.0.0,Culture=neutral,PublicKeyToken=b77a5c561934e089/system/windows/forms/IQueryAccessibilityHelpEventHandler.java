@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.QueryAccessibilityHelpEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link QueryAccessibilityHelpEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventHandler</a>
+ */
 public interface IQueryAccessibilityHelpEventHandler {
     public void Invoke(NetObject sender, QueryAccessibilityHelpEventArgs e);
 }

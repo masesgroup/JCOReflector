@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.media.media3d.Vector3D;
 import system.windows.media.media3d.Quaternion;
 import system.IFormatProvider;
@@ -46,12 +47,27 @@ import system.IFormatProviderImplementation;
 
 /**
  * The base .NET class managing System.Windows.Media.Media3D.Quaternion, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.Quaternion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.Quaternion</a>
  */
-public class Quaternion extends NetObject  {
+public class Quaternion extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Media3D.Quaternion
+     */
     public static final String className = "System.Windows.Media.Media3D.Quaternion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class Quaternion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Quaternion}, a cast assert is made to check if types are compatible.
+     */
     public static Quaternion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Quaternion(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class Quaternion extends NetObject  {
 
     // Constructors section
     
+    public Quaternion() throws Throwable {
+    }
 
     public Quaternion(double x, double y, double z, double w) throws Throwable {
         try {
@@ -132,6 +152,7 @@ public class Quaternion extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -377,11 +398,11 @@ public class Quaternion extends NetObject  {
         }
     }
 
-    public static Quaternion getIdentity() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Quaternion getIdentity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Identity");
+            JCObject val = (JCObject)classInstance.Get("Identity");
             return new Quaternion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

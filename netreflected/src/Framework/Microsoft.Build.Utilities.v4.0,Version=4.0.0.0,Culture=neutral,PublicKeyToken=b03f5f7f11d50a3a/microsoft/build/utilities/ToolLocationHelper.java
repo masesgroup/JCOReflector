@@ -47,12 +47,27 @@ import system.Version;
 
 /**
  * The base .NET class managing Microsoft.Build.Utilities.ToolLocationHelper, Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper</a>
  */
 public class ToolLocationHelper extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Utilities.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Utilities.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Utilities.ToolLocationHelper
+     */
     public static final String className = "Microsoft.Build.Utilities.ToolLocationHelper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ToolLocationHelper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolLocationHelper}, a cast assert is made to check if types are compatible.
+     */
     public static ToolLocationHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolLocationHelper(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ToolLocationHelper extends NetObject  {
 
     // Constructors section
     
+    public ToolLocationHelper() throws Throwable {
+    }
 
     
     // Methods section
@@ -408,6 +427,16 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String dupParam0, java.lang.String dupParam1, Version dupParam2, JCRefOut dupParam3, java.lang.String dupParam4) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -448,6 +477,16 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    public static java.lang.String GetPlatformSDKLocation(java.lang.String dupParam0, Version dupParam1, JCRefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String GetProgramFilesReferenceAssemblyRoot() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -472,11 +511,11 @@ public class ToolLocationHelper extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getPathToSystem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPathToSystem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PathToSystem");
+            return (java.lang.String)classInstance.Get("PathToSystem");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

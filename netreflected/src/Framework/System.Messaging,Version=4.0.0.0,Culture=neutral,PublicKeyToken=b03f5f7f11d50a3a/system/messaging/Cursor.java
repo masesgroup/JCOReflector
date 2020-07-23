@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Messaging.Cursor, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.Cursor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.Cursor</a>
  */
 public class Cursor extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.Cursor
+     */
     public static final String className = "System.Messaging.Cursor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class Cursor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Cursor}, a cast assert is made to check if types are compatible.
+     */
     public static Cursor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Cursor(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class Cursor extends NetObject  {
 
     // Constructors section
     
+    public Cursor() throws Throwable {
+    }
+
+
 
     
     // Methods section

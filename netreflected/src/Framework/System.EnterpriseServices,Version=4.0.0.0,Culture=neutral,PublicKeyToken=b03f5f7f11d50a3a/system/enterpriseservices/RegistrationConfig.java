@@ -43,12 +43,27 @@ import system.enterpriseservices.InstallationFlags;
 
 /**
  * The base .NET class managing System.EnterpriseServices.RegistrationConfig, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.RegistrationConfig" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.RegistrationConfig</a>
  */
 public class RegistrationConfig extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.RegistrationConfig
+     */
     public static final String className = "System.EnterpriseServices.RegistrationConfig";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RegistrationConfig extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegistrationConfig}, a cast assert is made to check if types are compatible.
+     */
     public static RegistrationConfig cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RegistrationConfig(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class RegistrationConfig extends NetObject  {
 
     // Constructors section
     
-
     public RegistrationConfig() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.CollectionBase;
 import system.directoryservices.activedirectory.ActiveDirectorySchemaProperty;
 import system.directoryservices.activedirectory.ActiveDirectorySchemaPropertyCollection;
 import system.directoryservices.activedirectory.ReadOnlyActiveDirectorySchemaPropertyCollection;
@@ -45,12 +46,27 @@ import system.directoryservices.activedirectory.ReadOnlyActiveDirectorySchemaPro
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection, System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection</a>
  */
-public class ActiveDirectorySchemaPropertyCollection extends NetObject  {
+public class ActiveDirectorySchemaPropertyCollection extends CollectionBase  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class ActiveDirectorySchemaPropertyCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectorySchemaPropertyCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ActiveDirectorySchemaPropertyCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActiveDirectorySchemaPropertyCollection(from.getJCOInstance());
@@ -111,6 +129,10 @@ public class ActiveDirectorySchemaPropertyCollection extends NetObject  {
 
     // Constructors section
     
+    public ActiveDirectorySchemaPropertyCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -175,16 +197,6 @@ public class ActiveDirectorySchemaPropertyCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CopyTo(ActiveDirectorySchemaProperty[] properties, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -215,50 +227,10 @@ public class ActiveDirectorySchemaPropertyCollection extends NetObject  {
         }
     }
 
-    public void RemoveAt(int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getCapacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Capacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Capacity", Capacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

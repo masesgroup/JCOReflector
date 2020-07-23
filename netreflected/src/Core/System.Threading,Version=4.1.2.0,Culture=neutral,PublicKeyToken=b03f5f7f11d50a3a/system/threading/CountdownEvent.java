@@ -45,12 +45,27 @@ import system.threading.WaitHandle;
 
 /**
  * The base .NET class managing System.Threading.CountdownEvent, System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CountdownEvent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CountdownEvent</a>
  */
 public class CountdownEvent extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Threading
+     */
     public static final String assemblyShortName = "System.Threading";
+    /**
+     * Qualified class name: System.Threading.CountdownEvent
+     */
     public static final String className = "System.Threading.CountdownEvent";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CountdownEvent extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CountdownEvent}, a cast assert is made to check if types are compatible.
+     */
     public static CountdownEvent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CountdownEvent(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class CountdownEvent extends NetObject  {
 
     // Constructors section
     
+    public CountdownEvent() throws Throwable {
+    }
 
     public CountdownEvent(int initialCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -121,6 +140,7 @@ public class CountdownEvent extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

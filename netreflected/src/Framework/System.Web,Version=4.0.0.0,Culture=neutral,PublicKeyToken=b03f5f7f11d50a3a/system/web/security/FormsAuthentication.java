@@ -49,12 +49,27 @@ import system.web.SameSiteMode;
 
 /**
  * The base .NET class managing System.Web.Security.FormsAuthentication, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FormsAuthentication" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FormsAuthentication</a>
  */
 public class FormsAuthentication extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Security.FormsAuthentication
+     */
     public static final String className = "System.Web.Security.FormsAuthentication";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class FormsAuthentication extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FormsAuthentication}, a cast assert is made to check if types are compatible.
+     */
     public static FormsAuthentication cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FormsAuthentication(from.getJCOInstance());
@@ -115,7 +132,6 @@ public class FormsAuthentication extends NetObject  {
 
     // Constructors section
     
-
     public FormsAuthentication() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -308,144 +324,144 @@ public class FormsAuthentication extends NetObject  {
     
     // Properties section
     
-    public static boolean getCookiesSupported() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException, system.FormatException, system.ApplicationException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getCookiesSupported() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException, system.FormatException, system.ApplicationException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("CookiesSupported");
+            return (boolean)classInstance.Get("CookiesSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getEnableCrossAppRedirects() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getEnableCrossAppRedirects() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("EnableCrossAppRedirects");
+            return (boolean)classInstance.Get("EnableCrossAppRedirects");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getIsEnabled() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsEnabled() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsEnabled");
+            return (boolean)classInstance.Get("IsEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getRequireSSL() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getRequireSSL() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("RequireSSL");
+            return (boolean)classInstance.Get("RequireSSL");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getSlidingExpiration() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getSlidingExpiration() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("SlidingExpiration");
+            return (boolean)classInstance.Get("SlidingExpiration");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getCookieDomain() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getCookieDomain() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("CookieDomain");
+            return (java.lang.String)classInstance.Get("CookieDomain");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getDefaultUrl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getDefaultUrl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("DefaultUrl");
+            return (java.lang.String)classInstance.Get("DefaultUrl");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getFormsCookieName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getFormsCookieName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("FormsCookieName");
+            return (java.lang.String)classInstance.Get("FormsCookieName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getFormsCookiePath() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getFormsCookiePath() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("FormsCookiePath");
+            return (java.lang.String)classInstance.Get("FormsCookiePath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getLoginUrl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getLoginUrl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("LoginUrl");
+            return (java.lang.String)classInstance.Get("LoginUrl");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TimeSpan getTimeout() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeSpan getTimeout() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Timeout");
+            JCObject val = (JCObject)classInstance.Get("Timeout");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TicketCompatibilityMode getTicketCompatibilityMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TicketCompatibilityMode getTicketCompatibilityMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TicketCompatibilityMode");
+            JCObject val = (JCObject)classInstance.Get("TicketCompatibilityMode");
             return new TicketCompatibilityMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static HttpCookieMode getCookieMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HttpCookieMode getCookieMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CookieMode");
+            JCObject val = (JCObject)classInstance.Get("CookieMode");
             return new HttpCookieMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SameSiteMode getCookieSameSite() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SameSiteMode getCookieSameSite() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CookieSameSite");
+            JCObject val = (JCObject)classInstance.Get("CookieSameSite");
             return new SameSiteMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

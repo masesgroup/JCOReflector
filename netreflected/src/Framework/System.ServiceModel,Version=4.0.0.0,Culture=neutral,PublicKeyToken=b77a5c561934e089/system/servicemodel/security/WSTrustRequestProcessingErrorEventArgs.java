@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.WSTrustRequestProcessingErrorEventArgs, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustRequestProcessingErrorEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustRequestProcessingErrorEventArgs</a>
  */
-public class WSTrustRequestProcessingErrorEventArgs extends NetObject  {
+public class WSTrustRequestProcessingErrorEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.WSTrustRequestProcessingErrorEventArgs
+     */
     public static final String className = "System.ServiceModel.Security.WSTrustRequestProcessingErrorEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class WSTrustRequestProcessingErrorEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustRequestProcessingErrorEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static WSTrustRequestProcessingErrorEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WSTrustRequestProcessingErrorEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class WSTrustRequestProcessingErrorEventArgs extends NetObject  {
 
     // Constructors section
     
+    public WSTrustRequestProcessingErrorEventArgs() throws Throwable {
+    }
 
     public WSTrustRequestProcessingErrorEventArgs(java.lang.String requestType, NetException exception) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class WSTrustRequestProcessingErrorEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

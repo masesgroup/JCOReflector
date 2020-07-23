@@ -48,12 +48,27 @@ import system.data.sqltypes.StorageState;
 
 /**
  * The base .NET class managing System.Data.SqlTypes.SqlBytes, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlBytes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlBytes</a>
  */
 public class SqlBytes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlTypes.SqlBytes
+     */
     public static final String className = "System.Data.SqlTypes.SqlBytes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class SqlBytes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlBytes}, a cast assert is made to check if types are compatible.
+     */
     public static SqlBytes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlBytes(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class SqlBytes extends NetObject  {
 
     // Constructors section
     
-
     public SqlBytes() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +185,16 @@ public class SqlBytes extends NetObject  {
         }
     }
 
+    public long Read(long dupParam0, JCRefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("Read", dupParam0, dupParam1, dupParam2, dupParam3);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SqlBinary ToSqlBinary() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -216,6 +242,16 @@ public class SqlBytes extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", offset, buffer, offsetInBuffer, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(long dupParam0, JCRefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.sqltypes.SqlTypeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", dupParam0, dupParam1, dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,11 +329,11 @@ public class SqlBytes extends NetObject  {
         }
     }
 
-    public static SqlBytes getNull() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SqlBytes getNull() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Null");
+            JCObject val = (JCObject)classInstance.Get("Null");
             return new SqlBytes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

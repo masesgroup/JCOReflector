@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.FileIO.SpecialDirectories, Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.FileIO.SpecialDirectories" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.FileIO.SpecialDirectories</a>
  */
 public class SpecialDirectories extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic.Core
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic.Core";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.FileIO.SpecialDirectories
+     */
     public static final String className = "Microsoft.VisualBasic.FileIO.SpecialDirectories";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SpecialDirectories extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SpecialDirectories}, a cast assert is made to check if types are compatible.
+     */
     public static SpecialDirectories cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SpecialDirectories(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class SpecialDirectories extends NetObject  {
 
     // Constructors section
     
-
     public SpecialDirectories() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -127,91 +143,91 @@ public class SpecialDirectories extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getAllUsersApplicationData() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getAllUsersApplicationData() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("AllUsersApplicationData");
+            return (java.lang.String)classInstance.Get("AllUsersApplicationData");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getCurrentUserApplicationData() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getCurrentUserApplicationData() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("CurrentUserApplicationData");
+            return (java.lang.String)classInstance.Get("CurrentUserApplicationData");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getDesktop() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getDesktop() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Desktop");
+            return (java.lang.String)classInstance.Get("Desktop");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getMyDocuments() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getMyDocuments() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("MyDocuments");
+            return (java.lang.String)classInstance.Get("MyDocuments");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getMyMusic() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getMyMusic() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("MyMusic");
+            return (java.lang.String)classInstance.Get("MyMusic");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getMyPictures() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getMyPictures() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("MyPictures");
+            return (java.lang.String)classInstance.Get("MyPictures");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getProgramFiles() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getProgramFiles() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("ProgramFiles");
+            return (java.lang.String)classInstance.Get("ProgramFiles");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPrograms() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPrograms() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.OverflowException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Programs");
+            return (java.lang.String)classInstance.Get("Programs");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getTemp() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getTemp() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.DirectoryNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Temp");
+            return (java.lang.String)classInstance.Get("Temp");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

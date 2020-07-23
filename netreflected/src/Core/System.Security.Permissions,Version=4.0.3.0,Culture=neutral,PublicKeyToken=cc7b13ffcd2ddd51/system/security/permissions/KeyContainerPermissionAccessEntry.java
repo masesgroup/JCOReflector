@@ -44,12 +44,27 @@ import system.security.permissions.KeyContainerPermissionFlags;
 
 /**
  * The base .NET class managing System.Security.Permissions.KeyContainerPermissionAccessEntry, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry</a>
  */
 public class KeyContainerPermissionAccessEntry extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Permissions.KeyContainerPermissionAccessEntry
+     */
     public static final String className = "System.Security.Permissions.KeyContainerPermissionAccessEntry";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyContainerPermissionAccessEntry}, a cast assert is made to check if types are compatible.
+     */
     public static KeyContainerPermissionAccessEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new KeyContainerPermissionAccessEntry(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
 
     // Constructors section
     
+    public KeyContainerPermissionAccessEntry() throws Throwable {
+    }
 
     public KeyContainerPermissionAccessEntry(CspParameters parameters, KeyContainerPermissionFlags flags) throws Throwable {
         try {
@@ -140,6 +159,7 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

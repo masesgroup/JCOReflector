@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 import system.Guid;
 
 
 /**
  * The base .NET class managing System.EnterpriseServices.ApplicationIDAttribute, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ApplicationIDAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ApplicationIDAttribute</a>
  */
-public class ApplicationIDAttribute extends NetObject  {
+public class ApplicationIDAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.ApplicationIDAttribute
+     */
     public static final String className = "System.EnterpriseServices.ApplicationIDAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ApplicationIDAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationIDAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static ApplicationIDAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ApplicationIDAttribute(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ApplicationIDAttribute extends NetObject  {
 
     // Constructors section
     
+    public ApplicationIDAttribute() throws Throwable {
+    }
 
     public ApplicationIDAttribute(java.lang.String guid) throws Throwable, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
@@ -121,29 +141,10 @@ public class ApplicationIDAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -154,17 +155,6 @@ public class ApplicationIDAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Value");
             return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

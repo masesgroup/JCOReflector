@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.data.oracleclient.OracleBinary;
 import system.data.oracleclient.OracleBoolean;
 
 
 /**
  * The base .NET class managing System.Data.OracleClient.OracleBinary, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleBinary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleBinary</a>
  */
-public class OracleBinary extends NetObject  {
+public class OracleBinary extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.OracleClient
+     */
     public static final String assemblyShortName = "System.Data.OracleClient";
+    /**
+     * Qualified class name: System.Data.OracleClient.OracleBinary
+     */
     public static final String className = "System.Data.OracleClient.OracleBinary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class OracleBinary extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OracleBinary}, a cast assert is made to check if types are compatible.
+     */
     public static OracleBinary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OracleBinary(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class OracleBinary extends NetObject  {
 
     // Constructors section
     
+    public OracleBinary() throws Throwable {
+    }
 
     public OracleBinary(byte[] b) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class OracleBinary extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

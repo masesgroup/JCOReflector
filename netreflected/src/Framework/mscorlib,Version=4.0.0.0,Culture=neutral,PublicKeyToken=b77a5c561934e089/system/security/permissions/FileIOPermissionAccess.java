@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Permissions.FileIOPermissionAccess, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.FileIOPermissionAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.FileIOPermissionAccess</a>
  */
 public class FileIOPermissionAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Permissions.FileIOPermissionAccess
+     */
     public static final String className = "System.Security.Permissions.FileIOPermissionAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class FileIOPermissionAccess extends NetObject  {
 
     // Flags management section
 
-    public FileIOPermissionAccess add(FileIOPermissionAccess val) throws Throwable {
+    public final FileIOPermissionAccess add(FileIOPermissionAccess val) throws Throwable {
         return new FileIOPermissionAccess(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public FileIOPermissionAccess remove(FileIOPermissionAccess val) throws Throwable {
+    public final FileIOPermissionAccess remove(FileIOPermissionAccess val) throws Throwable {
         return new FileIOPermissionAccess(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(FileIOPermissionAccess val) throws Throwable {
+    public final boolean is(FileIOPermissionAccess val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(FileIOPermissionAccess val) throws Throwable {
+    public final boolean has(FileIOPermissionAccess val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

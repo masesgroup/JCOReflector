@@ -52,12 +52,27 @@ import system.windows.forms.Cursor;
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.Behavior.Behavior, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.Behavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.Behavior</a>
  */
 public class Behavior extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.Behavior.Behavior
+     */
     public static final String className = "System.Windows.Forms.Design.Behavior.Behavior";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class Behavior extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Behavior}, a cast assert is made to check if types are compatible.
+     */
     public static Behavior cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Behavior(from.getJCOInstance());
@@ -118,6 +135,8 @@ public class Behavior extends NetObject  {
 
     // Constructors section
     
+    public Behavior() throws Throwable {
+    }
 
     
     // Methods section

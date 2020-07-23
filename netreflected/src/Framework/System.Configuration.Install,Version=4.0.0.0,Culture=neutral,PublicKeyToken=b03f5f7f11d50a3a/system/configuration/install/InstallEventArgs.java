@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 
 
 /**
  * The base .NET class managing System.Configuration.Install.InstallEventArgs, System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallEventArgs</a>
  */
-public class InstallEventArgs extends NetObject  {
+public class InstallEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Configuration.Install
+     */
     public static final String assemblyShortName = "System.Configuration.Install";
+    /**
+     * Qualified class name: System.Configuration.Install.InstallEventArgs
+     */
     public static final String className = "System.Configuration.Install.InstallEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class InstallEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstallEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static InstallEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InstallEventArgs(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class InstallEventArgs extends NetObject  {
 
     // Constructors section
     
-
     public InstallEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -44,12 +44,27 @@ import system.windows.Point;
 import system.windows.controls.primitives.ICustomPopupPlacementCallback;
 /**
  * The base .NET class managing System.Windows.Controls.Primitives.CustomPopupPlacementCallback, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.CustomPopupPlacementCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.CustomPopupPlacementCallback</a>
  */
 public class CustomPopupPlacementCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.Primitives.CustomPopupPlacementCallback
+     */
     public static final String className = "System.Windows.Controls.Primitives.CustomPopupPlacementCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ICustomPopupPlacementCallback callerInstance = null;
@@ -169,7 +184,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final CustomPopupPlacement[] DynamicInvoke(Size popupSize, Size targetSize, Point offset) throws Throwable {
+    public CustomPopupPlacement[] METHOD_JAVA_NAME(Size popupSize, Size targetSize, Point offset) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -186,7 +201,9 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public CustomPopupPlacement[] Invoke(Size popupSize, Size targetSize, Point offset) {
         return null;
     }

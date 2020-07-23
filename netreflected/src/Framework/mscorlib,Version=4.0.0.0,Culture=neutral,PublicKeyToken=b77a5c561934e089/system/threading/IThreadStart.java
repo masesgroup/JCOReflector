@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ThreadStart}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadStart" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadStart</a>
+ */
 public interface IThreadStart {
     public void Invoke();
 }

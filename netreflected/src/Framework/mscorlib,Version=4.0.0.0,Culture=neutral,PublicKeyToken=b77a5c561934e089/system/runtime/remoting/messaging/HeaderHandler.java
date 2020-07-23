@@ -42,12 +42,27 @@ import system.runtime.remoting.messaging.Header;
 import system.runtime.remoting.messaging.IHeaderHandler;
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.HeaderHandler, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.HeaderHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.HeaderHandler</a>
  */
 public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.HeaderHandler
+     */
     public static final String className = "System.Runtime.Remoting.Messaging.HeaderHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IHeaderHandler callerInstance = null;
@@ -173,7 +188,7 @@ public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridg
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke(Header[] headers) throws Throwable {
+    public NetObject METHOD_JAVA_NAME(Header[] headers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -184,7 +199,9 @@ public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridg
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke(Header[] headers) {
         return null;
     }

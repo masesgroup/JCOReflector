@@ -43,12 +43,27 @@ import system.DateTime;
 
 /**
  * The base .NET class managing System.Web.Security.MembershipUser, System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MembershipUser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MembershipUser</a>
  */
 public class MembershipUser extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Web.ApplicationServices
+     */
     public static final String assemblyShortName = "System.Web.ApplicationServices";
+    /**
+     * Qualified class name: System.Web.Security.MembershipUser
+     */
     public static final String className = "System.Web.Security.MembershipUser";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class MembershipUser extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MembershipUser}, a cast assert is made to check if types are compatible.
+     */
     public static MembershipUser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MembershipUser(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class MembershipUser extends NetObject  {
 
     // Constructors section
     
+    public MembershipUser() throws Throwable {
+    }
 
     public MembershipUser(java.lang.String providerName, java.lang.String name, NetObject providerUserKey, java.lang.String email, java.lang.String passwordQuestion, java.lang.String comment, boolean isApproved, boolean isLockedOut, DateTime creationDate, DateTime lastLoginDate, DateTime lastActivityDate, DateTime lastPasswordChangedDate, DateTime lastLockoutDate) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.InvalidTimeZoneException, system.io.IOException, system.OverflowException {
         try {
@@ -119,6 +138,7 @@ public class MembershipUser extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

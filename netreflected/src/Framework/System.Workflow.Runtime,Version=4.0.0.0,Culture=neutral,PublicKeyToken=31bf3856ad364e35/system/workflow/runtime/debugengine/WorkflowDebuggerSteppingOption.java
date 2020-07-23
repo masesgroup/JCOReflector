@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption</a>
  */
 public class WorkflowDebuggerSteppingOption extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption
+     */
     public static final String className = "System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

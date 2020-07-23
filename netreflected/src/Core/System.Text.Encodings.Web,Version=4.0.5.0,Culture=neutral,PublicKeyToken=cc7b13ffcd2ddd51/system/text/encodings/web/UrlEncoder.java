@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.buffers.OperationStatus;
+import system.text.encodings.web.TextEncoder;
 import system.text.encodings.web.UrlEncoder;
 import system.text.encodings.web.TextEncoderSettings;
 import system.text.unicode.UnicodeRange;
-import system.io.TextWriter;
 
 
 /**
  * The base .NET class managing System.Text.Encodings.Web.UrlEncoder, System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encodings.Web.UrlEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encodings.Web.UrlEncoder</a>
  */
-public class UrlEncoder extends NetObject  {
+public class UrlEncoder extends TextEncoder  {
+    /**
+     * Fully assembly qualified name: System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Text.Encodings.Web
+     */
     public static final String assemblyShortName = "System.Text.Encodings.Web";
+    /**
+     * Qualified class name: System.Text.Encodings.Web.UrlEncoder
+     */
     public static final String className = "System.Text.Encodings.Web.UrlEncoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class UrlEncoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UrlEncoder}, a cast assert is made to check if types are compatible.
+     */
     public static UrlEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UrlEncoder(from.getJCOInstance());
@@ -113,30 +129,12 @@ public class UrlEncoder extends NetObject  {
 
     // Constructors section
     
+    public UrlEncoder() throws Throwable {
+    }
 
     
     // Methods section
     
-    public boolean WillEncode(int unicodeScalar) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("WillEncode", unicodeScalar);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String Encode(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("Encode", value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static UrlEncoder Create(TextEncoderSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -159,55 +157,15 @@ public class UrlEncoder extends NetObject  {
         }
     }
 
-    public void Encode(TextWriter output, char[] value, int startIndex, int characterCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Encode", output == null ? null : output.getJCOInstance(), value, startIndex, characterCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Encode(TextWriter output, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Encode", output == null ? null : output.getJCOInstance(), value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Encode(TextWriter output, java.lang.String value, int startIndex, int characterCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Encode", output == null ? null : output.getJCOInstance(), value, startIndex, characterCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getMaxOutputCharactersPerInputCharacter() throws Throwable {
+    public UrlEncoder getDefault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("MaxOutputCharactersPerInputCharacter");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UrlEncoder getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new UrlEncoder(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.MouseEventArgs;
 import system.windows.forms.TreeNode;
 import system.windows.forms.MouseButtons;
-import system.drawing.Point;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.TreeNodeMouseClickEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TreeNodeMouseClickEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TreeNodeMouseClickEventArgs</a>
  */
-public class TreeNodeMouseClickEventArgs extends NetObject  {
+public class TreeNodeMouseClickEventArgs extends MouseEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.TreeNodeMouseClickEventArgs
+     */
     public static final String className = "System.Windows.Forms.TreeNodeMouseClickEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class TreeNodeMouseClickEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TreeNodeMouseClickEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static TreeNodeMouseClickEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TreeNodeMouseClickEventArgs(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class TreeNodeMouseClickEventArgs extends NetObject  {
 
     // Constructors section
     
+    public TreeNodeMouseClickEventArgs() throws Throwable {
+    }
 
     public TreeNodeMouseClickEventArgs(TreeNode node, MouseButtons button, int clicks, int x, int y) throws Throwable {
         try {
@@ -123,6 +142,7 @@ public class TreeNodeMouseClickEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -130,68 +150,6 @@ public class TreeNodeMouseClickEventArgs extends NetObject  {
     
     // Properties section
     
-    public int getClicks() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Clicks");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDelta() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Delta");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getX() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("X");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getY() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Y");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Point getLocation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Location");
-            return new Point(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MouseButtons getButton() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Button");
-            return new MouseButtons(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TreeNode getNode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

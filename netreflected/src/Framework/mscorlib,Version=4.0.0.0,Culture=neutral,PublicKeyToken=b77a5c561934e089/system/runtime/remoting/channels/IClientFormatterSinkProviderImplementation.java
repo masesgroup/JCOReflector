@@ -38,22 +38,37 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.channels.IClientChannelSinkProvider;
+import system.runtime.remoting.channels.IClientChannelSinkProviderImplementation;
 import system.runtime.remoting.channels.IClientChannelSink;
 import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 import system.runtime.remoting.channels.IChannelSender;
 import system.runtime.remoting.channels.IChannelSenderImplementation;
-import system.runtime.remoting.channels.IClientChannelSinkProvider;
-import system.runtime.remoting.channels.IClientChannelSinkProviderImplementation;
 
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IClientFormatterSinkProvider, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientFormatterSinkProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientFormatterSinkProvider</a>
  */
 public class IClientFormatterSinkProviderImplementation extends NetObject implements IClientFormatterSinkProvider {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IClientFormatterSinkProvider
+     */
     public static final String className = "System.Runtime.Remoting.Channels.IClientFormatterSinkProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class IClientFormatterSinkProviderImplementation extends NetObject implem
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IClientFormatterSinkProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IClientFormatterSinkProvider ToIClientFormatterSinkProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IClientFormatterSinkProviderImplementation(from.getJCOInstance());

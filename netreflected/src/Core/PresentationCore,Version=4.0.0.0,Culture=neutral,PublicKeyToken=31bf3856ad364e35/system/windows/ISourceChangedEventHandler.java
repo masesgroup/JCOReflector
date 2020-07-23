@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.SourceChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SourceChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SourceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SourceChangedEventHandler</a>
+ */
 public interface ISourceChangedEventHandler {
     public void Invoke(NetObject sender, SourceChangedEventArgs e);
 }

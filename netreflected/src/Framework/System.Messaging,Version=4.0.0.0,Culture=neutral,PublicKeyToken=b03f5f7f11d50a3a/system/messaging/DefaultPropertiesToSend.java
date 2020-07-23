@@ -48,12 +48,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.Messaging.DefaultPropertiesToSend, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.DefaultPropertiesToSend" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.DefaultPropertiesToSend</a>
  */
 public class DefaultPropertiesToSend extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.DefaultPropertiesToSend
+     */
     public static final String className = "System.Messaging.DefaultPropertiesToSend";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class DefaultPropertiesToSend extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultPropertiesToSend}, a cast assert is made to check if types are compatible.
+     */
     public static DefaultPropertiesToSend cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DefaultPropertiesToSend(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class DefaultPropertiesToSend extends NetObject  {
 
     // Constructors section
     
-
     public DefaultPropertiesToSend() throws Throwable {
         try {
             // add reference to assemblyName.dll file

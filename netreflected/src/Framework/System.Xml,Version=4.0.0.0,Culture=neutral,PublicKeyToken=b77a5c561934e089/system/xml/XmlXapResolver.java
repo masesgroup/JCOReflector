@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.XmlResolver;
 import system.Uri;
 import system.xml.IApplicationResourceStreamResolver;
 import system.xml.IApplicationResourceStreamResolverImplementation;
-import system.net.ICredentials;
-import system.net.ICredentialsImplementation;
 
 
 /**
  * The base .NET class managing System.Xml.XmlXapResolver, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlXapResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlXapResolver</a>
  */
-public class XmlXapResolver extends NetObject  {
+public class XmlXapResolver extends XmlResolver  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlXapResolver
+     */
     public static final String className = "System.Xml.XmlXapResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class XmlXapResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlXapResolver}, a cast assert is made to check if types are compatible.
+     */
     public static XmlXapResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlXapResolver(from.getJCOInstance());
@@ -113,7 +129,6 @@ public class XmlXapResolver extends NetObject  {
 
     // Constructors section
     
-
     public XmlXapResolver() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -128,33 +143,12 @@ public class XmlXapResolver extends NetObject  {
     
     // Methods section
     
-    public boolean SupportsType(Uri absoluteUri, NetType type) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetEntity(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetEntity = (JCObject)classInstance.Invoke("GetEntity", absoluteUri == null ? null : absoluteUri.getJCOInstance(), role, ofObjectToReturn == null ? null : ofObjectToReturn.getJCOInstance());
             return new NetObject(objGetEntity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri ResolveUri(Uri baseUri, java.lang.String relativeUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveUri = (JCObject)classInstance.Invoke("ResolveUri", baseUri == null ? null : baseUri.getJCOInstance(), relativeUri);
-            return new Uri(objResolveUri);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,16 +168,6 @@ public class XmlXapResolver extends NetObject  {
     
     // Properties section
     
-    public void setCredentials(ICredentials Credentials) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

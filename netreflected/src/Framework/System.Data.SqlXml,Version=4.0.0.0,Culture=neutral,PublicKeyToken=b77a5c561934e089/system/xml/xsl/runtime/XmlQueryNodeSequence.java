@@ -40,17 +40,31 @@ import java.util.ArrayList;
 // Import section
 import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.runtime.XmlQueryNodeSequence;
-import system.Array;
 
 
 /**
  * The base .NET class managing System.Xml.Xsl.Runtime.XmlQueryNodeSequence, System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence</a>
  */
 public class XmlQueryNodeSequence extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.SqlXml
+     */
     public static final String assemblyShortName = "System.Data.SqlXml";
+    /**
+     * Qualified class name: System.Xml.Xsl.Runtime.XmlQueryNodeSequence
+     */
     public static final String className = "System.Xml.Xsl.Runtime.XmlQueryNodeSequence";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +117,9 @@ public class XmlQueryNodeSequence extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlQueryNodeSequence}, a cast assert is made to check if types are compatible.
+     */
     public static XmlQueryNodeSequence cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlQueryNodeSequence(from.getJCOInstance());
@@ -111,7 +127,6 @@ public class XmlQueryNodeSequence extends NetObject  {
 
     // Constructors section
     
-
     public XmlQueryNodeSequence() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,26 +171,6 @@ public class XmlQueryNodeSequence extends NetObject  {
     
     // Methods section
     
-    public boolean Contains(XPathNavigator value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IndexOf(XPathNavigator value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -198,51 +193,11 @@ public class XmlQueryNodeSequence extends NetObject  {
         }
     }
 
-    public void Add(XPathNavigator value) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddClone(XPathNavigator navigator) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClone", navigator == null ? null : navigator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(XPathNavigator[] array, int index) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SortByKeys(Array keys) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SortByKeys", keys == null ? null : keys.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,16 +222,6 @@ public class XmlQueryNodeSequence extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDocOrderDistinct", IsDocOrderDistinct);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

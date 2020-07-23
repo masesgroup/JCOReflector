@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.TimeSpan;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
@@ -46,12 +47,27 @@ import system.globalization.TimeSpanStyles;
 
 /**
  * The base .NET class managing System.TimeSpan, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.TimeSpan" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.TimeSpan</a>
  */
-public class TimeSpan extends NetObject  {
+public class TimeSpan extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.TimeSpan
+     */
     public static final String className = "System.TimeSpan";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class TimeSpan extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TimeSpan}, a cast assert is made to check if types are compatible.
+     */
     public static TimeSpan cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TimeSpan(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class TimeSpan extends NetObject  {
 
     // Constructors section
     
+    public TimeSpan() throws Throwable {
+    }
 
     public TimeSpan(int hours, int minutes, int seconds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -152,6 +172,7 @@ public class TimeSpan extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -413,11 +434,33 @@ public class TimeSpan extends NetObject  {
         }
     }
 
+    public static TimeSpan ParseExact(java.lang.String dupParam0, JCRefOut dupParam1, IFormatProvider dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return new TimeSpan(objParseExact);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static TimeSpan ParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", input, formats, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            return new TimeSpan(objParseExact);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TimeSpan ParseExact(java.lang.String dupParam0, JCRefOut dupParam1, IFormatProvider dupParam2, TimeSpanStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new TimeSpan(objParseExact);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

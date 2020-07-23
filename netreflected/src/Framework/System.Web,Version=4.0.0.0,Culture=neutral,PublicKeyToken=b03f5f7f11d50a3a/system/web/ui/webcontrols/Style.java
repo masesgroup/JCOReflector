@@ -38,33 +38,43 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.Component;
 import system.web.ui.StateBag;
-import system.runtime.remoting.ObjRef;
 import system.web.ui.CssStyleCollection;
 import system.web.ui.IUrlResolutionService;
 import system.web.ui.IUrlResolutionServiceImplementation;
 import system.web.ui.HtmlTextWriter;
 import system.web.ui.webcontrols.WebControl;
 import system.web.ui.webcontrols.Style;
-import system.componentmodel.IContainer;
-import system.componentmodel.IContainerImplementation;
-import system.componentmodel.ISite;
-import system.componentmodel.ISiteImplementation;
 import system.drawing.Color;
 import system.web.ui.webcontrols.BorderStyle;
 import system.web.ui.webcontrols.FontInfo;
 import system.web.ui.webcontrols.Unit;
-import system.EventHandler;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.Style, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.Style" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.Style</a>
  */
-public class Style extends NetObject  {
+public class Style extends Component  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.Style
+     */
     public static final String className = "System.Web.UI.WebControls.Style";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -117,7 +127,9 @@ public class Style extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Style}, a cast assert is made to check if types are compatible.
+     */
     public static Style cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Style(from.getJCOInstance());
@@ -125,7 +137,6 @@ public class Style extends NetObject  {
 
     // Constructors section
     
-
     public Style() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -150,39 +161,6 @@ public class Style extends NetObject  {
     
     // Methods section
     
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CssStyleCollection GetStyleAttributes(IUrlResolutionService urlResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -219,16 +197,6 @@ public class Style extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", s == null ? null : s.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,38 +241,6 @@ public class Style extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsEmpty");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IContainer getContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISite getSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(ISite Site) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,26 +438,6 @@ public class Style extends NetObject  {
 
     // Instance Events section
     
-
-    public void addDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
 }

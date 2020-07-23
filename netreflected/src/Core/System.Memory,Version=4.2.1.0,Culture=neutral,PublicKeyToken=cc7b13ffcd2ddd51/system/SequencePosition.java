@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.SequencePosition;
 
 
 /**
  * The base .NET class managing System.SequencePosition, System.Memory, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.SequencePosition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.SequencePosition</a>
  */
-public class SequencePosition extends NetObject  {
+public class SequencePosition extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Memory, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Memory, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Memory
+     */
     public static final String assemblyShortName = "System.Memory";
+    /**
+     * Qualified class name: System.SequencePosition
+     */
     public static final String className = "System.SequencePosition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SequencePosition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SequencePosition}, a cast assert is made to check if types are compatible.
+     */
     public static SequencePosition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SequencePosition(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SequencePosition extends NetObject  {
 
     // Constructors section
     
+    public SequencePosition() throws Throwable {
+    }
 
     public SequencePosition(NetObject object, int integer) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class SequencePosition extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

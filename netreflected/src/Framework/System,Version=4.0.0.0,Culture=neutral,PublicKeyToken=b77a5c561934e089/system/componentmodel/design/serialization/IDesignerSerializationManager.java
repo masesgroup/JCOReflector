@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.componentmodel.design.serialization.IDesignerSerializationProvider;
@@ -49,12 +51,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.IDesignerSerializationManager, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager</a>
  */
-public interface IDesignerSerializationManager extends IJCOBridgeReflected {
-
+public interface IDesignerSerializationManager extends IJCOBridgeReflected, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.IDesignerSerializationManager
+     */
+    public static final String className = "System.ComponentModel.Design.Serialization.IDesignerSerializationManager";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerSerializationManager}, a cast assert is made to check if types are compatible.
+     */
     public static IDesignerSerializationManager ToIDesignerSerializationManager(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.Serialization.IDesignerSerializationManager, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDesignerSerializationManagerImplementation(from.getJCOInstance());
     }
@@ -103,7 +122,6 @@ public interface IDesignerSerializationManager extends IJCOBridgeReflected {
 
     public NetObject GetSerializer(NetType objectType, NetType serializerType) throws Throwable;
 
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
     public java.lang.String GetName(NetObject value) throws Throwable;
 

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.ConfigurationFileMap;
 import system.web.configuration.VirtualDirectoryMappingCollection;
 
 
 /**
  * The base .NET class managing System.Web.Configuration.WebConfigurationFileMap, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.WebConfigurationFileMap" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.WebConfigurationFileMap</a>
  */
-public class WebConfigurationFileMap extends NetObject  {
+public class WebConfigurationFileMap extends ConfigurationFileMap  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.WebConfigurationFileMap
+     */
     public static final String className = "System.Web.Configuration.WebConfigurationFileMap";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class WebConfigurationFileMap extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebConfigurationFileMap}, a cast assert is made to check if types are compatible.
+     */
     public static WebConfigurationFileMap cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebConfigurationFileMap(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class WebConfigurationFileMap extends NetObject  {
 
     // Constructors section
     
-
     public WebConfigurationFileMap() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -149,26 +166,6 @@ public class WebConfigurationFileMap extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getMachineConfigFilename() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MachineConfigFilename");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMachineConfigFilename(java.lang.String MachineConfigFilename) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MachineConfigFilename", MachineConfigFilename);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public VirtualDirectoryMappingCollection getVirtualDirectories() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

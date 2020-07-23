@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.CurrentChangingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CurrentChangingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CurrentChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CurrentChangingEventHandler</a>
+ */
 public interface ICurrentChangingEventHandler {
     public void Invoke(NetObject sender, CurrentChangingEventArgs e);
 }

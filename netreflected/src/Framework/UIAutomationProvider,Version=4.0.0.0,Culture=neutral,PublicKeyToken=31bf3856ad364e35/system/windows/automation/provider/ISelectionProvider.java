@@ -43,12 +43,29 @@ import system.windows.automation.provider.IRawElementProviderSimpleImplementatio
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.ISelectionProvider, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ISelectionProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ISelectionProvider</a>
  */
 public interface ISelectionProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
+    public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.ISelectionProvider
+     */
+    public static final String className = "System.Windows.Automation.Provider.ISelectionProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISelectionProvider}, a cast assert is made to check if types are compatible.
+     */
     public static ISelectionProvider ToISelectionProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Automation.Provider.ISelectionProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "UIAutomationProvider"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISelectionProviderImplementation(from.getJCOInstance());
     }

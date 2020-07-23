@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Transactions.Enlistment, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.Enlistment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.Enlistment</a>
  */
 public class Enlistment extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.Enlistment
+     */
     public static final String className = "System.Transactions.Enlistment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class Enlistment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Enlistment}, a cast assert is made to check if types are compatible.
+     */
     public static Enlistment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Enlistment(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class Enlistment extends NetObject  {
 
     // Constructors section
     
+    public Enlistment() throws Throwable {
+    }
+
+
 
     
     // Methods section

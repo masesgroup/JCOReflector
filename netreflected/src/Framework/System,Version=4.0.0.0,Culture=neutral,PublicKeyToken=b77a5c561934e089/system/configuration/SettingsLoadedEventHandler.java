@@ -42,12 +42,27 @@ import system.configuration.SettingsLoadedEventArgs;
 import system.configuration.ISettingsLoadedEventHandler;
 /**
  * The base .NET class managing System.Configuration.SettingsLoadedEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingsLoadedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingsLoadedEventHandler</a>
  */
 public class SettingsLoadedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Configuration.SettingsLoadedEventHandler
+     */
     public static final String className = "System.Configuration.SettingsLoadedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISettingsLoadedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class SettingsLoadedEventHandler extends JCVoidDelegate implements IJCVoi
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, SettingsLoadedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, SettingsLoadedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class SettingsLoadedEventHandler extends JCVoidDelegate implements IJCVoi
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, SettingsLoadedEventArgs e) {
     }
 }

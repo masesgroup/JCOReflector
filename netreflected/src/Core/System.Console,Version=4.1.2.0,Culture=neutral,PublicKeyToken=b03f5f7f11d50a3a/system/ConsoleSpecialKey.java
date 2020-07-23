@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ConsoleSpecialKey, System.Console, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleSpecialKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleSpecialKey</a>
  */
 public class ConsoleSpecialKey extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Console, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Console, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Console
+     */
     public static final String assemblyShortName = "System.Console";
+    /**
+     * Qualified class name: System.ConsoleSpecialKey
+     */
     public static final String className = "System.ConsoleSpecialKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

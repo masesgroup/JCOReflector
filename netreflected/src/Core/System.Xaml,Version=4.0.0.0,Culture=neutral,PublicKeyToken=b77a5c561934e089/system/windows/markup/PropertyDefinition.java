@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.MemberDefinition;
 import system.xaml.XamlType;
 
 
 /**
  * The base .NET class managing System.Windows.Markup.PropertyDefinition, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.PropertyDefinition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.PropertyDefinition</a>
  */
-public class PropertyDefinition extends NetObject  {
+public class PropertyDefinition extends MemberDefinition  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Windows.Markup.PropertyDefinition
+     */
     public static final String className = "System.Windows.Markup.PropertyDefinition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class PropertyDefinition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyDefinition}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyDefinition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyDefinition(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class PropertyDefinition extends NetObject  {
 
     // Constructors section
     
-
     public PropertyDefinition() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -143,26 +160,6 @@ public class PropertyDefinition extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Modifier", Modifier);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

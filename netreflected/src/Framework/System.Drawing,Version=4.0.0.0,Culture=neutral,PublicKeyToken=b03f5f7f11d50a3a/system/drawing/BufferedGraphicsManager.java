@@ -43,12 +43,27 @@ import system.drawing.BufferedGraphicsContext;
 
 /**
  * The base .NET class managing System.Drawing.BufferedGraphicsManager, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BufferedGraphicsManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BufferedGraphicsManager</a>
  */
 public class BufferedGraphicsManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.BufferedGraphicsManager
+     */
     public static final String className = "System.Drawing.BufferedGraphicsManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class BufferedGraphicsManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BufferedGraphicsManager}, a cast assert is made to check if types are compatible.
+     */
     public static BufferedGraphicsManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BufferedGraphicsManager(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class BufferedGraphicsManager extends NetObject  {
 
     // Constructors section
     
+    public BufferedGraphicsManager() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -117,11 +138,11 @@ public class BufferedGraphicsManager extends NetObject  {
     
     // Properties section
     
-    public static BufferedGraphicsContext getCurrent() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public BufferedGraphicsContext getCurrent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            JCObject val = (JCObject)classInstance.Get("Current");
             return new BufferedGraphicsContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

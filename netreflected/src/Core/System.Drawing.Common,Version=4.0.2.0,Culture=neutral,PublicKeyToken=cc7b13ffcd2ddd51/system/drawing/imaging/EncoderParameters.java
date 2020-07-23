@@ -43,12 +43,27 @@ import system.drawing.imaging.EncoderParameter;
 
 /**
  * The base .NET class managing System.Drawing.Imaging.EncoderParameters, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.EncoderParameters" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.EncoderParameters</a>
  */
 public class EncoderParameters extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Imaging.EncoderParameters
+     */
     public static final String className = "System.Drawing.Imaging.EncoderParameters";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class EncoderParameters extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncoderParameters}, a cast assert is made to check if types are compatible.
+     */
     public static EncoderParameters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EncoderParameters(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class EncoderParameters extends NetObject  {
 
     // Constructors section
     
-
     public EncoderParameters() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -148,7 +164,7 @@ public class EncoderParameters extends NetObject  {
     
     // Properties section
     
-    public EncoderParameter[] getParam() throws Throwable {
+    public final EncoderParameter[] getParam() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

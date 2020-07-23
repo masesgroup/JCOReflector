@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Diagnostics.ICollectData, System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ICollectData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ICollectData</a>
  */
 public interface ICollectData extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.PerformanceCounter
+     */
+    public static final String assemblyShortName = "System.Diagnostics.PerformanceCounter";
+    /**
+     * Qualified class name: System.Diagnostics.ICollectData
+     */
+    public static final String className = "System.Diagnostics.ICollectData";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollectData}, a cast assert is made to check if types are compatible.
+     */
     public static ICollectData ToICollectData(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Diagnostics.ICollectData, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Diagnostics.PerformanceCounter"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICollectDataImplementation(from.getJCOInstance());
     }

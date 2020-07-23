@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.ServiceContractGenerationOptions, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationOptions</a>
  */
 public class ServiceContractGenerationOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.ServiceContractGenerationOptions
+     */
     public static final String className = "System.ServiceModel.Description.ServiceContractGenerationOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class ServiceContractGenerationOptions extends NetObject  {
 
     // Flags management section
 
-    public ServiceContractGenerationOptions add(ServiceContractGenerationOptions val) throws Throwable {
+    public final ServiceContractGenerationOptions add(ServiceContractGenerationOptions val) throws Throwable {
         return new ServiceContractGenerationOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ServiceContractGenerationOptions remove(ServiceContractGenerationOptions val) throws Throwable {
+    public final ServiceContractGenerationOptions remove(ServiceContractGenerationOptions val) throws Throwable {
         return new ServiceContractGenerationOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ServiceContractGenerationOptions val) throws Throwable {
+    public final boolean is(ServiceContractGenerationOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ServiceContractGenerationOptions val) throws Throwable {
+    public final boolean has(ServiceContractGenerationOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

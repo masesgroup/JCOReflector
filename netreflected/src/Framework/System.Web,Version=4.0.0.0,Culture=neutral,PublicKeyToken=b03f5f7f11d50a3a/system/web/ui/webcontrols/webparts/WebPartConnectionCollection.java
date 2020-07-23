@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.CollectionBase;
 import system.web.ui.webcontrols.webparts.WebPartConnection;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.WebParts.WebPartConnectionCollection, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionCollection</a>
  */
-public class WebPartConnectionCollection extends NetObject  {
+public class WebPartConnectionCollection extends CollectionBase  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.WebParts.WebPartConnectionCollection
+     */
     public static final String className = "System.Web.UI.WebControls.WebParts.WebPartConnectionCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class WebPartConnectionCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebPartConnectionCollection}, a cast assert is made to check if types are compatible.
+     */
     public static WebPartConnectionCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebPartConnectionCollection(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class WebPartConnectionCollection extends NetObject  {
 
     // Constructors section
     
+    public WebPartConnectionCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -138,16 +160,6 @@ public class WebPartConnectionCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("IndexOf", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,16 +195,6 @@ public class WebPartConnectionCollection extends NetObject  {
         }
     }
 
-    public void RemoveAt(int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -202,36 +204,6 @@ public class WebPartConnectionCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCapacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Capacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Capacity", Capacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -44,12 +44,27 @@ import system.runtime.remoting.ObjectHandle;
 
 /**
  * The base .NET class managing System.Deployment.Application.InPlaceHostingManager, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.InPlaceHostingManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.InPlaceHostingManager</a>
  */
 public class InPlaceHostingManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Deployment
+     */
     public static final String assemblyShortName = "System.Deployment";
+    /**
+     * Qualified class name: System.Deployment.Application.InPlaceHostingManager
+     */
     public static final String className = "System.Deployment.Application.InPlaceHostingManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class InPlaceHostingManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InPlaceHostingManager}, a cast assert is made to check if types are compatible.
+     */
     public static InPlaceHostingManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InPlaceHostingManager(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class InPlaceHostingManager extends NetObject  {
 
     // Constructors section
     
+    public InPlaceHostingManager() throws Throwable {
+    }
 
     public InPlaceHostingManager(Uri deploymentManifest) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OverflowException, system.deployment.application.InvalidDeploymentException, system.OutOfMemoryException, system.security.SecurityException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.NullReferenceException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         try {
@@ -130,6 +149,7 @@ public class InPlaceHostingManager extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

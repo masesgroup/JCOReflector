@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.security.RoleManagerEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link RoleManagerEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.RoleManagerEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.RoleManagerEventHandler</a>
+ */
 public interface IRoleManagerEventHandler {
     public void Invoke(NetObject sender, RoleManagerEventArgs e);
 }

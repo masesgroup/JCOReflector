@@ -46,12 +46,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.Json.IXmlJsonReaderInitializer, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Json.IXmlJsonReaderInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Json.IXmlJsonReaderInitializer</a>
  */
 public class IXmlJsonReaderInitializerImplementation extends NetObject implements IXmlJsonReaderInitializer {
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
     public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Runtime.Serialization.Json.IXmlJsonReaderInitializer
+     */
     public static final String className = "System.Runtime.Serialization.Json.IXmlJsonReaderInitializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class IXmlJsonReaderInitializerImplementation extends NetObject implement
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlJsonReaderInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlJsonReaderInitializer ToIXmlJsonReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXmlJsonReaderInitializerImplementation(from.getJCOInstance());
@@ -112,6 +129,16 @@ public class IXmlJsonReaderInitializerImplementation extends NetObject implement
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetInput", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

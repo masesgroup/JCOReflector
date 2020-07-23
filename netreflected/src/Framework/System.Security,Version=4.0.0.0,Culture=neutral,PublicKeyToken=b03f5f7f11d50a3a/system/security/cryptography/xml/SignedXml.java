@@ -54,12 +54,27 @@ import system.xml.XmlResolver;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Xml.SignedXml, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.SignedXml" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.SignedXml</a>
  */
 public class SignedXml extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Xml.SignedXml
+     */
     public static final String className = "System.Security.Cryptography.Xml.SignedXml";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class SignedXml extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SignedXml}, a cast assert is made to check if types are compatible.
+     */
     public static SignedXml cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SignedXml(from.getJCOInstance());
@@ -120,7 +137,6 @@ public class SignedXml extends NetObject  {
 
     // Constructors section
     
-
     public SignedXml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file

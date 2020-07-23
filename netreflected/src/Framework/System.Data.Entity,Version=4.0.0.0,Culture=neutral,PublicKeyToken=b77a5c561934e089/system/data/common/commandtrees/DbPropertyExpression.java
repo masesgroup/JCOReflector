@@ -38,21 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.common.commandtrees.DbExpression;
-import system.data.common.commandtrees.DbExpressionKind;
+import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.metadata.edm.EdmMember;
-import system.data.metadata.edm.TypeUsage;
 
 
 /**
  * The base .NET class managing System.Data.Common.CommandTrees.DbPropertyExpression, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbPropertyExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbPropertyExpression</a>
  */
-public class DbPropertyExpression extends NetObject  {
+public class DbPropertyExpression extends DbExpression  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.CommandTrees.DbPropertyExpression
+     */
     public static final String className = "System.Data.Common.CommandTrees.DbPropertyExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +118,9 @@ public class DbPropertyExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbPropertyExpression}, a cast assert is made to check if types are compatible.
+     */
     public static DbPropertyExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbPropertyExpression(from.getJCOInstance());
@@ -113,6 +128,10 @@ public class DbPropertyExpression extends NetObject  {
 
     // Constructors section
     
+    public DbPropertyExpression() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -142,34 +161,12 @@ public class DbPropertyExpression extends NetObject  {
         }
     }
 
-    public DbExpressionKind getExpressionKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
-            return new DbExpressionKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EdmMember getProperty() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Property");
             return new EdmMember(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeUsage getResultType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
-            return new TypeUsage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

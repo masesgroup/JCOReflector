@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.webcontrols.webparts.PersonalizationStateInfo;
 import system.DateTime;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo</a>
  */
-public class SharedPersonalizationStateInfo extends NetObject  {
+public class SharedPersonalizationStateInfo extends PersonalizationStateInfo  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo
+     */
     public static final String className = "System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SharedPersonalizationStateInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SharedPersonalizationStateInfo}, a cast assert is made to check if types are compatible.
+     */
     public static SharedPersonalizationStateInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SharedPersonalizationStateInfo(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SharedPersonalizationStateInfo extends NetObject  {
 
     // Constructors section
     
+    public SharedPersonalizationStateInfo() throws Throwable {
+    }
 
     public SharedPersonalizationStateInfo(java.lang.String path, DateTime lastUpdatedDate, int size, int sizeOfPersonalizations, int countOfPersonalizations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         try {
@@ -119,6 +139,7 @@ public class SharedPersonalizationStateInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -138,42 +159,11 @@ public class SharedPersonalizationStateInfo extends NetObject  {
         }
     }
 
-    public int getSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Size");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getSizeOfPersonalizations() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("SizeOfPersonalizations");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getLastUpdatedDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LastUpdatedDate");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Path");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

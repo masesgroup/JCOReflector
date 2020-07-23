@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.Saml2Statement;
 import system.identitymodel.tokens.Saml2Attribute;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.Saml2AttributeStatement, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.Saml2AttributeStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.Saml2AttributeStatement</a>
  */
-public class Saml2AttributeStatement extends NetObject  {
+public class Saml2AttributeStatement extends Saml2Statement  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.Saml2AttributeStatement
+     */
     public static final String className = "System.IdentityModel.Tokens.Saml2AttributeStatement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class Saml2AttributeStatement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Saml2AttributeStatement}, a cast assert is made to check if types are compatible.
+     */
     public static Saml2AttributeStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Saml2AttributeStatement(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class Saml2AttributeStatement extends NetObject  {
 
     // Constructors section
     
-
     public Saml2AttributeStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file

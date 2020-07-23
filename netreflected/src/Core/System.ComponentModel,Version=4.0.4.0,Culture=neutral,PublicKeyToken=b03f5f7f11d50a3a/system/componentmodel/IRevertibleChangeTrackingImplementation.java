@@ -38,16 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.IChangeTracking;
+import system.componentmodel.IChangeTrackingImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.IRevertibleChangeTracking, System.ComponentModel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IRevertibleChangeTracking" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IRevertibleChangeTracking</a>
  */
 public class IRevertibleChangeTrackingImplementation extends NetObject implements IRevertibleChangeTracking {
+    /**
+     * Fully assembly qualified name: System.ComponentModel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel
+     */
     public static final String assemblyShortName = "System.ComponentModel";
+    /**
+     * Qualified class name: System.ComponentModel.IRevertibleChangeTracking
+     */
     public static final String className = "System.ComponentModel.IRevertibleChangeTracking";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +112,9 @@ public class IRevertibleChangeTrackingImplementation extends NetObject implement
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRevertibleChangeTracking}, a cast assert is made to check if types are compatible.
+     */
     public static IRevertibleChangeTracking ToIRevertibleChangeTracking(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRevertibleChangeTrackingImplementation(from.getJCOInstance());

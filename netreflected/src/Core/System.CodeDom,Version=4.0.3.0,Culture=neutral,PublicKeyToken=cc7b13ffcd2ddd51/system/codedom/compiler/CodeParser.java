@@ -44,12 +44,27 @@ import system.io.TextReader;
 
 /**
  * The base .NET class managing System.CodeDom.Compiler.CodeParser, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeParser</a>
  */
 public class CodeParser extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.Compiler.CodeParser
+     */
     public static final String className = "System.CodeDom.Compiler.CodeParser";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CodeParser extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeParser}, a cast assert is made to check if types are compatible.
+     */
     public static CodeParser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeParser(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class CodeParser extends NetObject  {
 
     // Constructors section
     
+    public CodeParser() throws Throwable {
+    }
 
     
     // Methods section

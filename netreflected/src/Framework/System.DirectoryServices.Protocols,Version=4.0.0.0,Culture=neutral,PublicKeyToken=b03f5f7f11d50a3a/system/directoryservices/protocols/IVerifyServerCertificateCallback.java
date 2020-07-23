@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.directoryservices.protocols.LdapConnection;
 import system.security.cryptography.x509certificates.X509Certificate;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link VerifyServerCertificateCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.VerifyServerCertificateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.VerifyServerCertificateCallback</a>
+ */
 public interface IVerifyServerCertificateCallback {
     public boolean Invoke(LdapConnection connection, X509Certificate certificate);
 }

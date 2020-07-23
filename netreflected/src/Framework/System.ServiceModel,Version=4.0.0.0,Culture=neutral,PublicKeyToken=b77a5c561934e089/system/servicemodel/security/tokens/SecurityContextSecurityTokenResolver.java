@@ -38,25 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.selectors.SecurityTokenResolver;
 import system.TimeSpan;
 import system.servicemodel.security.tokens.SecurityContextSecurityToken;
-import system.identitymodel.tokens.SecurityKeyIdentifierClause;
-import system.identitymodel.tokens.SecurityKeyIdentifier;
-import system.identitymodel.tokens.SecurityKey;
-import system.identitymodel.tokens.SecurityToken;
 import system.xml.UniqueId;
-import system.xml.XmlNodeList;
 import system.DateTime;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenResolver, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenResolver</a>
  */
-public class SecurityContextSecurityTokenResolver extends NetObject  {
+public class SecurityContextSecurityTokenResolver extends SecurityTokenResolver  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenResolver
+     */
     public static final String className = "System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +120,9 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityContextSecurityTokenResolver}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityContextSecurityTokenResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityContextSecurityTokenResolver(from.getJCOInstance());
@@ -117,6 +130,8 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
 
     // Constructors section
     
+    public SecurityContextSecurityTokenResolver() throws Throwable {
+    }
 
     public SecurityContextSecurityTokenResolver(int securityContextCacheCapacity, boolean removeOldestTokensOnCacheFull) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
@@ -139,6 +154,7 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -147,39 +163,6 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("TryAddContext", token == null ? null : token.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityKey ResolveSecurityKey(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveSecurityKey = (JCObject)classInstance.Invoke("ResolveSecurityKey", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-            return new SecurityKey(objResolveSecurityKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityToken ResolveToken(SecurityKeyIdentifier keyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveToken = (JCObject)classInstance.Invoke("ResolveToken", keyIdentifier == null ? null : keyIdentifier.getJCOInstance());
-            return new SecurityToken(objResolveToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityToken ResolveToken(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveToken = (JCObject)classInstance.Invoke("ResolveToken", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-            return new SecurityToken(objResolveToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,16 +194,6 @@ public class SecurityContextSecurityTokenResolver extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearContexts");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void LoadCustomConfiguration(XmlNodeList nodelist) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("LoadCustomConfiguration", nodelist == null ? null : nodelist.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.SymLanguageVendor, System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.SymLanguageVendor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.SymLanguageVendor</a>
  */
 public class SymLanguageVendor extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.StackTrace
+     */
     public static final String assemblyShortName = "System.Diagnostics.StackTrace";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.SymLanguageVendor
+     */
     public static final String className = "System.Diagnostics.SymbolStore.SymLanguageVendor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SymLanguageVendor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SymLanguageVendor}, a cast assert is made to check if types are compatible.
+     */
     public static SymLanguageVendor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SymLanguageVendor(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class SymLanguageVendor extends NetObject  {
 
     // Constructors section
     
-
     public SymLanguageVendor() throws Throwable {
         try {
             // add reference to assemblyName.dll file

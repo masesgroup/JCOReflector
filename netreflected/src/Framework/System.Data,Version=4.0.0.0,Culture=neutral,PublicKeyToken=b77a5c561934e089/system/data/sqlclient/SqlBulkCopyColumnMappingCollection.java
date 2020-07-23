@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.CollectionBase;
 import system.data.sqlclient.SqlBulkCopyColumnMapping;
 
 
 /**
  * The base .NET class managing System.Data.SqlClient.SqlBulkCopyColumnMappingCollection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection</a>
  */
-public class SqlBulkCopyColumnMappingCollection extends NetObject  {
+public class SqlBulkCopyColumnMappingCollection extends CollectionBase  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlBulkCopyColumnMappingCollection
+     */
     public static final String className = "System.Data.SqlClient.SqlBulkCopyColumnMappingCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlBulkCopyColumnMappingCollection}, a cast assert is made to check if types are compatible.
+     */
     public static SqlBulkCopyColumnMappingCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlBulkCopyColumnMappingCollection(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
 
     // Constructors section
     
+    public SqlBulkCopyColumnMappingCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -188,7 +210,7 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void ClearNewSqlBulkCopyColumnMappingCollection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -228,7 +250,7 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
         }
     }
 
-    public void RemoveAt(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void RemoveAtNewSqlBulkCopyColumnMappingCollection(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -242,36 +264,6 @@ public class SqlBulkCopyColumnMappingCollection extends NetObject  {
     
     // Properties section
     
-    public int getCapacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Capacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Capacity", Capacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

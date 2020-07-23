@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.SecurityToken;
 import system.net.NetworkCredential;
 import system.security.principal.TokenImpersonationLevel;
-import system.identitymodel.tokens.SecurityKeyIdentifierClause;
-import system.identitymodel.tokens.SecurityKey;
 import system.DateTime;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.Tokens.SspiSecurityToken, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken</a>
  */
-public class SspiSecurityToken extends NetObject  {
+public class SspiSecurityToken extends SecurityToken  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.Tokens.SspiSecurityToken
+     */
     public static final String className = "System.ServiceModel.Security.Tokens.SspiSecurityToken";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class SspiSecurityToken extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SspiSecurityToken}, a cast assert is made to check if types are compatible.
+     */
     public static SspiSecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SspiSecurityToken(from.getJCOInstance());
@@ -113,6 +129,8 @@ public class SspiSecurityToken extends NetObject  {
 
     // Constructors section
     
+    public SspiSecurityToken() throws Throwable {
+    }
 
     public SspiSecurityToken(NetworkCredential networkCredential, boolean extractGroupsForWindowsAccounts, boolean allowUnauthenticatedCallers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
@@ -135,30 +153,10 @@ public class SspiSecurityToken extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityKey ResolveKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveKeyIdentifierClause = (JCObject)classInstance.Invoke("ResolveKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-            return new SecurityKey(objResolveKeyIdentifierClause);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -193,28 +191,6 @@ public class SspiSecurityToken extends NetObject  {
         }
     }
 
-    public DateTime getValidFrom() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidFrom");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getValidTo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidTo");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetworkCredential getNetworkCredential() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -232,16 +208,6 @@ public class SspiSecurityToken extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ImpersonationLevel");
             return new TokenImpersonationLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

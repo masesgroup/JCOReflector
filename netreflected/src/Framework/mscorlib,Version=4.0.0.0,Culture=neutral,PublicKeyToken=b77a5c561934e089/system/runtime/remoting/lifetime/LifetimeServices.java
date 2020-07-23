@@ -43,12 +43,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Lifetime.LifetimeServices, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Lifetime.LifetimeServices" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Lifetime.LifetimeServices</a>
  */
 public class LifetimeServices extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Lifetime.LifetimeServices
+     */
     public static final String className = "System.Runtime.Remoting.Lifetime.LifetimeServices";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class LifetimeServices extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LifetimeServices}, a cast assert is made to check if types are compatible.
+     */
     public static LifetimeServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LifetimeServices(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class LifetimeServices extends NetObject  {
 
     // Constructors section
     
-
     public LifetimeServices() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -128,85 +144,85 @@ public class LifetimeServices extends NetObject  {
     
     // Properties section
     
-    public static TimeSpan getLeaseManagerPollTime() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeSpan getLeaseManagerPollTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LeaseManagerPollTime");
+            JCObject val = (JCObject)classInstance.Get("LeaseManagerPollTime");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setLeaseManagerPollTime(TimeSpan LeaseManagerPollTime) throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setLeaseManagerPollTime(TimeSpan LeaseManagerPollTime) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("LeaseManagerPollTime", LeaseManagerPollTime == null ? null : LeaseManagerPollTime.getJCOInstance());
+            classInstance.Set("LeaseManagerPollTime", LeaseManagerPollTime == null ? null : LeaseManagerPollTime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TimeSpan getLeaseTime() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeSpan getLeaseTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LeaseTime");
+            JCObject val = (JCObject)classInstance.Get("LeaseTime");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setLeaseTime(TimeSpan LeaseTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setLeaseTime(TimeSpan LeaseTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("LeaseTime", LeaseTime == null ? null : LeaseTime.getJCOInstance());
+            classInstance.Set("LeaseTime", LeaseTime == null ? null : LeaseTime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TimeSpan getRenewOnCallTime() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeSpan getRenewOnCallTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("RenewOnCallTime");
+            JCObject val = (JCObject)classInstance.Get("RenewOnCallTime");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setRenewOnCallTime(TimeSpan RenewOnCallTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setRenewOnCallTime(TimeSpan RenewOnCallTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("RenewOnCallTime", RenewOnCallTime == null ? null : RenewOnCallTime.getJCOInstance());
+            classInstance.Set("RenewOnCallTime", RenewOnCallTime == null ? null : RenewOnCallTime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TimeSpan getSponsorshipTimeout() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeSpan getSponsorshipTimeout() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SponsorshipTimeout");
+            JCObject val = (JCObject)classInstance.Get("SponsorshipTimeout");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setSponsorshipTimeout(TimeSpan SponsorshipTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setSponsorshipTimeout(TimeSpan SponsorshipTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("SponsorshipTimeout", SponsorshipTimeout == null ? null : SponsorshipTimeout.getJCOInstance());
+            classInstance.Set("SponsorshipTimeout", SponsorshipTimeout == null ? null : SponsorshipTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

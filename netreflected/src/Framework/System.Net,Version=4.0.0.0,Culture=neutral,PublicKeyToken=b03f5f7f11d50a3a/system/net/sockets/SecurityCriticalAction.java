@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.net.sockets.ISecurityCriticalAction;
 /**
  * The base .NET class managing System.Net.Sockets.SecurityCriticalAction, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SecurityCriticalAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SecurityCriticalAction</a>
  */
 public class SecurityCriticalAction extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.Sockets.SecurityCriticalAction
+     */
     public static final String className = "System.Net.Sockets.SecurityCriticalAction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISecurityCriticalAction callerInstance = null;
@@ -144,7 +159,7 @@ public class SecurityCriticalAction extends JCVoidDelegate implements IJCVoidEve
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke() throws Throwable {
+    public void METHOD_JAVA_NAME() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -154,7 +169,9 @@ public class SecurityCriticalAction extends JCVoidDelegate implements IJCVoidEve
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke() {
     }
 }

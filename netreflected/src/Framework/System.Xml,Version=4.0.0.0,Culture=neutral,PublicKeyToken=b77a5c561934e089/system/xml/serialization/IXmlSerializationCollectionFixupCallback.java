@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link XmlSerializationCollectionFixupCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationCollectionFixupCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationCollectionFixupCallback</a>
+ */
 public interface IXmlSerializationCollectionFixupCallback {
     public void Invoke(NetObject collection, NetObject collectionItems);
 }

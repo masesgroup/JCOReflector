@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.PaintEventArgs;
 import system.drawing.Graphics;
 import system.drawing.Rectangle;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.TableLayoutCellPaintEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventArgs</a>
  */
-public class TableLayoutCellPaintEventArgs extends NetObject  {
+public class TableLayoutCellPaintEventArgs extends PaintEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.TableLayoutCellPaintEventArgs
+     */
     public static final String className = "System.Windows.Forms.TableLayoutCellPaintEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class TableLayoutCellPaintEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableLayoutCellPaintEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static TableLayoutCellPaintEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TableLayoutCellPaintEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class TableLayoutCellPaintEventArgs extends NetObject  {
 
     // Constructors section
     
+    public TableLayoutCellPaintEventArgs() throws Throwable {
+    }
 
     public TableLayoutCellPaintEventArgs(Graphics g, Rectangle clipRectangle, Rectangle cellBounds, int column, int row) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -122,19 +142,10 @@ public class TableLayoutCellPaintEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -159,33 +170,11 @@ public class TableLayoutCellPaintEventArgs extends NetObject  {
         }
     }
 
-    public Graphics getGraphics() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Rectangle getCellBounds() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("CellBounds");
-            return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Rectangle getClipRectangle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ClipRectangle");
             return new Rectangle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

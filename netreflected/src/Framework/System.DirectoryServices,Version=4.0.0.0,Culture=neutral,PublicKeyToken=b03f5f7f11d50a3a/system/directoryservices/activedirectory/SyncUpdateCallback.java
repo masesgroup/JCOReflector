@@ -44,12 +44,27 @@ import system.directoryservices.activedirectory.ISyncUpdateCallback;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.SyncUpdateCallback, System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncUpdateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncUpdateCallback</a>
  */
 public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.SyncUpdateCallback
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.SyncUpdateCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISyncUpdateCallback callerInstance = null;
@@ -161,7 +176,7 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final boolean DynamicInvoke(SyncFromAllServersEvent eventType, java.lang.String targetServer, java.lang.String sourceServer, SyncFromAllServersOperationException exception) throws Throwable {
+    public boolean METHOD_JAVA_NAME(SyncFromAllServersEvent eventType, java.lang.String targetServer, java.lang.String sourceServer, SyncFromAllServersOperationException exception) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -171,7 +186,9 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public boolean Invoke(SyncFromAllServersEvent eventType, java.lang.String targetServer, java.lang.String sourceServer, SyncFromAllServersOperationException exception) {
         return false;
     }

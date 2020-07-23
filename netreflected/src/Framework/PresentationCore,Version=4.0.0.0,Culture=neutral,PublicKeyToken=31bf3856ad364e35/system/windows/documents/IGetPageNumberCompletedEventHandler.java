@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.documents.GetPageNumberCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link GetPageNumberCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.GetPageNumberCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.GetPageNumberCompletedEventHandler</a>
+ */
 public interface IGetPageNumberCompletedEventHandler {
     public void Invoke(NetObject sender, GetPageNumberCompletedEventArgs e);
 }

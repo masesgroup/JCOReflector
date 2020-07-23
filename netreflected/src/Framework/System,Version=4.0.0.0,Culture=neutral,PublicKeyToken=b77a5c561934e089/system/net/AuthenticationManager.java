@@ -51,12 +51,27 @@ import system.net.ICredentialPolicyImplementation;
 
 /**
  * The base .NET class managing System.Net.AuthenticationManager, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationManager</a>
  */
 public class AuthenticationManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.AuthenticationManager
+     */
     public static final String className = "System.Net.AuthenticationManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class AuthenticationManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AuthenticationManager}, a cast assert is made to check if types are compatible.
+     */
     public static AuthenticationManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AuthenticationManager(from.getJCOInstance());
@@ -117,6 +134,10 @@ public class AuthenticationManager extends NetObject  {
 
     // Constructors section
     
+    public AuthenticationManager() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -177,44 +198,44 @@ public class AuthenticationManager extends NetObject  {
     
     // Properties section
     
-    public static IEnumerator getRegisteredModules() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IEnumerator getRegisteredModules() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("RegisteredModules");
+            JCObject val = (JCObject)classInstance.Get("RegisteredModules");
             return new IEnumeratorImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static StringDictionary getCustomTargetNameDictionary() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public StringDictionary getCustomTargetNameDictionary() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CustomTargetNameDictionary");
+            JCObject val = (JCObject)classInstance.Get("CustomTargetNameDictionary");
             return new StringDictionary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ICredentialPolicy getCredentialPolicy() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ICredentialPolicy getCredentialPolicy() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CredentialPolicy");
+            JCObject val = (JCObject)classInstance.Get("CredentialPolicy");
             return new ICredentialPolicyImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCredentialPolicy(ICredentialPolicy CredentialPolicy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCredentialPolicy(ICredentialPolicy CredentialPolicy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CredentialPolicy", CredentialPolicy == null ? null : CredentialPolicy.getJCOInstance());
+            classInstance.Set("CredentialPolicy", CredentialPolicy == null ? null : CredentialPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -43,12 +43,27 @@ import system.security.cryptography.KeySizes;
 
 /**
  * The base .NET class managing System.Security.Cryptography.AesCcm, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AesCcm" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AesCcm</a>
  */
 public class AesCcm extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.AesCcm
+     */
     public static final String className = "System.Security.Cryptography.AesCcm";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class AesCcm extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AesCcm}, a cast assert is made to check if types are compatible.
+     */
     public static AesCcm cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AesCcm(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class AesCcm extends NetObject  {
 
     // Constructors section
     
+    public AesCcm() throws Throwable {
+    }
 
     public AesCcm(byte[] key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.FormatException {
         try {
@@ -119,6 +138,7 @@ public class AesCcm extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -134,6 +154,26 @@ public class AesCcm extends NetObject  {
         }
     }
 
+    public void Decrypt(JCRefOut dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Decrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Encrypt(byte[] nonce, byte[] plaintext, byte[] ciphertext, byte[] tag, byte[] associatedData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -144,26 +184,36 @@ public class AesCcm extends NetObject  {
         }
     }
 
+    public void Encrypt(JCRefOut dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Encrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public static KeySizes getNonceByteSizes() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public KeySizes getNonceByteSizes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("NonceByteSizes");
+            JCObject val = (JCObject)classInstance.Get("NonceByteSizes");
             return new KeySizes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static KeySizes getTagByteSizes() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public KeySizes getTagByteSizes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TagByteSizes");
+            JCObject val = (JCObject)classInstance.Get("TagByteSizes");
             return new KeySizes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

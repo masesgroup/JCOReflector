@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.IDataRecord;
+import system.data.IDataRecordImplementation;
 import system.Single;
 import system.data.common.DbDataReader;
 import system.data.common.DbDataRecord;
@@ -51,12 +53,27 @@ import system.data.common.DataRecordInfo;
 
 /**
  * The base .NET class managing System.Data.IExtendedDataRecord, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IExtendedDataRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IExtendedDataRecord</a>
  */
 public class IExtendedDataRecordImplementation extends NetObject implements IExtendedDataRecord {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.IExtendedDataRecord
+     */
     public static final String className = "System.Data.IExtendedDataRecord";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +121,9 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExtendedDataRecord}, a cast assert is made to check if types are compatible.
+     */
     public static IExtendedDataRecord ToIExtendedDataRecord(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IExtendedDataRecordImplementation(from.getJCOInstance());
@@ -212,11 +231,31 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
         }
     }
 
+    public long GetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Invoke("GetChars", i, fieldoffset, buffer, bufferoffset, length);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

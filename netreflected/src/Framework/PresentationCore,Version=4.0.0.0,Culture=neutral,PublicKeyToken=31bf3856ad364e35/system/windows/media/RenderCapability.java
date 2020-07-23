@@ -43,12 +43,27 @@ import system.windows.Size;
 
 /**
  * The base .NET class managing System.Windows.Media.RenderCapability, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.RenderCapability" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.RenderCapability</a>
  */
 public class RenderCapability extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.RenderCapability
+     */
     public static final String className = "System.Windows.Media.RenderCapability";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RenderCapability extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RenderCapability}, a cast assert is made to check if types are compatible.
+     */
     public static RenderCapability cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RenderCapability(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class RenderCapability extends NetObject  {
 
     // Constructors section
     
+    public RenderCapability() throws Throwable {
+    }
 
     
     // Methods section
@@ -147,31 +166,31 @@ public class RenderCapability extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsShaderEffectSoftwareRenderingSupported() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsShaderEffectSoftwareRenderingSupported() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsShaderEffectSoftwareRenderingSupported");
+            return (boolean)classInstance.Get("IsShaderEffectSoftwareRenderingSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getTier() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getTier() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("Tier");
+            return (int)classInstance.Get("Tier");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Size getMaxHardwareTextureSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Size getMaxHardwareTextureSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("MaxHardwareTextureSize");
+            JCObject val = (JCObject)classInstance.Get("MaxHardwareTextureSize");
             return new Size(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

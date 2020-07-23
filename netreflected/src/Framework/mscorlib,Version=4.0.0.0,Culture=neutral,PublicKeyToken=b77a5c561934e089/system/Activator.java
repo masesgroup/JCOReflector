@@ -50,12 +50,27 @@ import system.security.policy.Evidence;
 
 /**
  * The base .NET class managing System.Activator, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activator</a>
  */
 public class Activator extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Activator
+     */
     public static final String className = "System.Activator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class Activator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Activator}, a cast assert is made to check if types are compatible.
+     */
     public static Activator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Activator(from.getJCOInstance());
@@ -116,6 +133,10 @@ public class Activator extends NetObject  {
 
     // Constructors section
     
+    public Activator() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -230,6 +251,17 @@ public class Activator extends NetObject  {
         }
     }
 
+    public static ObjectHandle CreateComInstanceFrom(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, AssemblyHashAlgorithm dupParam3) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.TypeLoadException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateComInstanceFrom = (JCObject)classType.Invoke("CreateComInstanceFrom", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return new ObjectHandle(objCreateComInstanceFrom);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ObjectHandle CreateInstance(ActivationContext activationContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.security.policy.PolicyException, system.OverflowException, system.RankException, system.NullReferenceException, system.runtime.remoting.RemotingException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -246,6 +278,17 @@ public class Activator extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", activationContext == null ? null : activationContext.getJCOInstance(), activationCustomData);
+            return new ObjectHandle(objCreateInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ObjectHandle CreateInstance(ActivationContext dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.OutOfMemoryException, system.MemberAccessException, system.security.policy.PolicyException, system.OverflowException, system.RankException, system.reflection.TargetParameterCountException, system.runtime.remoting.RemotingException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
             return new ObjectHandle(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

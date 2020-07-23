@@ -47,12 +47,27 @@ import system.windows.forms.ToolStripRenderer;
 
 /**
  * The base .NET class managing System.Windows.Forms.ToolStripManager, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripManager</a>
  */
 public class ToolStripManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ToolStripManager
+     */
     public static final String className = "System.Windows.Forms.ToolStripManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ToolStripManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripManager}, a cast assert is made to check if types are compatible.
+     */
     public static ToolStripManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolStripManager(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class ToolStripManager extends NetObject  {
 
     // Constructors section
     
+    public ToolStripManager() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -242,63 +263,63 @@ public class ToolStripManager extends NetObject  {
     
     // Properties section
     
-    public static boolean getVisualStylesEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getVisualStylesEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("VisualStylesEnabled");
+            return (boolean)classInstance.Get("VisualStylesEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setVisualStylesEnabled(boolean VisualStylesEnabled) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setVisualStylesEnabled(boolean VisualStylesEnabled) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("VisualStylesEnabled", VisualStylesEnabled);
+            classInstance.Set("VisualStylesEnabled", VisualStylesEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ToolStripManagerRenderMode getRenderMode() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ToolStripManagerRenderMode getRenderMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("RenderMode");
+            JCObject val = (JCObject)classInstance.Get("RenderMode");
             return new ToolStripManagerRenderMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setRenderMode(ToolStripManagerRenderMode RenderMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setRenderMode(ToolStripManagerRenderMode RenderMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("RenderMode", RenderMode == null ? null : RenderMode.getJCOInstance());
+            classInstance.Set("RenderMode", RenderMode == null ? null : RenderMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ToolStripRenderer getRenderer() throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ToolStripRenderer getRenderer() throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Renderer");
+            JCObject val = (JCObject)classInstance.Get("Renderer");
             return new ToolStripRenderer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setRenderer(ToolStripRenderer Renderer) throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setRenderer(ToolStripRenderer Renderer) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("Renderer", Renderer == null ? null : Renderer.getJCOInstance());
+            classInstance.Set("Renderer", Renderer == null ? null : Renderer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

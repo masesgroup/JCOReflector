@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.threading.channels.ChannelOptions;
 import system.threading.channels.BoundedChannelFullMode;
 
 
 /**
  * The base .NET class managing System.Threading.Channels.BoundedChannelOptions, System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.BoundedChannelOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.BoundedChannelOptions</a>
  */
-public class BoundedChannelOptions extends NetObject  {
+public class BoundedChannelOptions extends ChannelOptions  {
+    /**
+     * Fully assembly qualified name: System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Threading.Channels
+     */
     public static final String assemblyShortName = "System.Threading.Channels";
+    /**
+     * Qualified class name: System.Threading.Channels.BoundedChannelOptions
+     */
     public static final String className = "System.Threading.Channels.BoundedChannelOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class BoundedChannelOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BoundedChannelOptions}, a cast assert is made to check if types are compatible.
+     */
     public static BoundedChannelOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BoundedChannelOptions(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class BoundedChannelOptions extends NetObject  {
 
     // Constructors section
     
+    public BoundedChannelOptions() throws Throwable {
+    }
 
     public BoundedChannelOptions(int capacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -121,6 +141,7 @@ public class BoundedChannelOptions extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -128,66 +149,6 @@ public class BoundedChannelOptions extends NetObject  {
     
     // Properties section
     
-    public boolean getAllowSynchronousContinuations() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AllowSynchronousContinuations");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAllowSynchronousContinuations(boolean AllowSynchronousContinuations) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AllowSynchronousContinuations", AllowSynchronousContinuations);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSingleReader() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SingleReader");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSingleReader(boolean SingleReader) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SingleReader", SingleReader);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSingleWriter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SingleWriter");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSingleWriter(boolean SingleWriter) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SingleWriter", SingleWriter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getCapacity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

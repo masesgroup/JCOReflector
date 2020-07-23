@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.windows.forms.integration.IPropertyTranslator;
 /**
  * The base .NET class managing System.Windows.Forms.Integration.PropertyTranslator, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.PropertyTranslator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.PropertyTranslator</a>
  */
 public class PropertyTranslator extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsFormsIntegration
+     */
     public static final String assemblyShortName = "WindowsFormsIntegration";
+    /**
+     * Qualified class name: System.Windows.Forms.Integration.PropertyTranslator
+     */
     public static final String className = "System.Windows.Forms.Integration.PropertyTranslator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IPropertyTranslator callerInstance = null;
@@ -150,7 +165,7 @@ public class PropertyTranslator extends JCVoidDelegate implements IJCVoidEventEm
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject host, java.lang.String propertyName, NetObject value) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject host, java.lang.String propertyName, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -160,7 +175,9 @@ public class PropertyTranslator extends JCVoidDelegate implements IJCVoidEventEm
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject host, java.lang.String propertyName, NetObject value) {
     }
 }

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.IContainer;
@@ -45,12 +47,29 @@ import system.componentmodel.IContainerImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.ISite, System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ISite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ISite</a>
  */
-public interface ISite extends IJCOBridgeReflected {
-
+public interface ISite extends IJCOBridgeReflected, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.Primitives
+     */
+    public static final String assemblyShortName = "System.ComponentModel.Primitives";
+    /**
+     * Qualified class name: System.ComponentModel.ISite
+     */
+    public static final String className = "System.ComponentModel.ISite";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISite}, a cast assert is made to check if types are compatible.
+     */
     public static ISite ToISite(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.ISite, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ComponentModel.Primitives"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISiteImplementation(from.getJCOInstance());
     }
@@ -93,7 +112,6 @@ public interface ISite extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
 
     

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.IO.Packaging.CertificateEmbeddingOption, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.CertificateEmbeddingOption" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.CertificateEmbeddingOption</a>
  */
 public class CertificateEmbeddingOption extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.IO.Packaging.CertificateEmbeddingOption
+     */
     public static final String className = "System.IO.Packaging.CertificateEmbeddingOption";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

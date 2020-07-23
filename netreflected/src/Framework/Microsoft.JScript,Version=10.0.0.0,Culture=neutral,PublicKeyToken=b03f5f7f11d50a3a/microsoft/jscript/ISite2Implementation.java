@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing Microsoft.JScript.ISite2, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ISite2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ISite2</a>
  */
 public class ISite2Implementation extends NetObject implements ISite2 {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.ISite2
+     */
     public static final String className = "Microsoft.JScript.ISite2";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class ISite2Implementation extends NetObject implements ISite2 {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISite2}, a cast assert is made to check if types are compatible.
+     */
     public static ISite2 ToISite2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISite2Implementation(from.getJCOInstance());

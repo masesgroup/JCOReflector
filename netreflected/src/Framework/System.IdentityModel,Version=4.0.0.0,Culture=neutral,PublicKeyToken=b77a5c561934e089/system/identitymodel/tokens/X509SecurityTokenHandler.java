@@ -38,27 +38,39 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.SecurityTokenHandler;
 import system.identitymodel.selectors.X509CertificateValidator;
 import system.xml.XmlReader;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.identitymodel.tokens.SecurityToken;
-import system.identitymodel.tokens.SecurityTokenDescriptor;
-import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlNodeList;
 import system.xml.XmlWriter;
-import system.identitymodel.tokens.SecurityTokenHandlerCollection;
-import system.identitymodel.tokens.SecurityTokenHandlerConfiguration;
 import system.identitymodel.tokens.X509NTAuthChainTrustValidator;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509SecurityTokenHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509SecurityTokenHandler</a>
  */
-public class X509SecurityTokenHandler extends NetObject  {
+public class X509SecurityTokenHandler extends SecurityTokenHandler  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.X509SecurityTokenHandler
+     */
     public static final String className = "System.IdentityModel.Tokens.X509SecurityTokenHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +123,9 @@ public class X509SecurityTokenHandler extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509SecurityTokenHandler}, a cast assert is made to check if types are compatible.
+     */
     public static X509SecurityTokenHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509SecurityTokenHandler(from.getJCOInstance());
@@ -119,7 +133,6 @@ public class X509SecurityTokenHandler extends NetObject  {
 
     // Constructors section
     
-
     public X509SecurityTokenHandler() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,16 +187,6 @@ public class X509SecurityTokenHandler extends NetObject  {
         }
     }
 
-    public boolean CanReadToken(java.lang.String tokenString) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanReadToken", tokenString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CanReadToken(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -204,17 +207,6 @@ public class X509SecurityTokenHandler extends NetObject  {
         }
     }
 
-    public SecurityKeyIdentifierClause CreateSecurityTokenReference(SecurityToken token, boolean attached) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateSecurityTokenReference = (JCObject)classInstance.Invoke("CreateSecurityTokenReference", token == null ? null : token.getJCOInstance(), attached);
-            return new SecurityKeyIdentifierClause(objCreateSecurityTokenReference);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityKeyIdentifierClause ReadKeyIdentifierClause(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -226,55 +218,12 @@ public class X509SecurityTokenHandler extends NetObject  {
         }
     }
 
-    public SecurityToken CreateToken(SecurityTokenDescriptor tokenDescriptor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateToken = (JCObject)classInstance.Invoke("CreateToken", tokenDescriptor == null ? null : tokenDescriptor.getJCOInstance());
-            return new SecurityToken(objCreateToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityToken ReadToken(java.lang.String tokenString) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReadToken = (JCObject)classInstance.Invoke("ReadToken", tokenString);
-            return new SecurityToken(objReadToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityToken ReadToken(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.runtime.remoting.RemotingException, system.security.cryptography.CryptographicException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objReadToken = (JCObject)classInstance.Invoke("ReadToken", reader == null ? null : reader.getJCOInstance());
             return new SecurityToken(objReadToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityToken ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReadToken = (JCObject)classInstance.Invoke("ReadToken", reader == null ? null : reader.getJCOInstance(), tokenResolver == null ? null : tokenResolver.getJCOInstance());
-            return new SecurityToken(objReadToken);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String WriteToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("WriteToken", token == null ? null : token.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,26 +282,6 @@ public class X509SecurityTokenHandler extends NetObject  {
     
     // Properties section
     
-    public boolean getCanValidateToken() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanValidateToken");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanWriteToken() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanWriteToken");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getMapToWindows() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -414,48 +343,6 @@ public class X509SecurityTokenHandler extends NetObject  {
         }
     }
 
-    public SecurityTokenHandlerCollection getContainingCollection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ContainingCollection");
-            return new SecurityTokenHandlerCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setContainingCollection(SecurityTokenHandlerCollection ContainingCollection) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ContainingCollection", ContainingCollection == null ? null : ContainingCollection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityTokenHandlerConfiguration getConfiguration() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Configuration");
-            return new SecurityTokenHandlerConfiguration(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setConfiguration(SecurityTokenHandlerConfiguration Configuration) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Configuration", Configuration == null ? null : Configuration.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public X509NTAuthChainTrustValidator getX509NTAuthChainTrustValidator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -472,17 +359,6 @@ public class X509SecurityTokenHandler extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X509NTAuthChainTrustValidator", X509NTAuthChainTrustValidator == null ? null : X509NTAuthChainTrustValidator.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getTokenType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TokenType");
-            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

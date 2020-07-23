@@ -44,12 +44,27 @@ import system.io.BinaryWriter;
 
 /**
  * The base .NET class managing Microsoft.SqlServer.Server.IBinarySerialize, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.IBinarySerialize" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.IBinarySerialize</a>
  */
 public class IBinarySerializeImplementation extends NetObject implements IBinarySerialize {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: Microsoft.SqlServer.Server.IBinarySerialize
+     */
     public static final String className = "Microsoft.SqlServer.Server.IBinarySerialize";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IBinarySerializeImplementation extends NetObject implements IBinary
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBinarySerialize}, a cast assert is made to check if types are compatible.
+     */
     public static IBinarySerialize ToIBinarySerialize(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IBinarySerializeImplementation(from.getJCOInstance());

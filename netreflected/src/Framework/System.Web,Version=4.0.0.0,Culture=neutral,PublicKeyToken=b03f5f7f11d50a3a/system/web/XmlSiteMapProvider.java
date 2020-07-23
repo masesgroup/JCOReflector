@@ -38,22 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.HttpContext;
+import system.web.StaticSiteMapProvider;
 import system.web.SiteMapNode;
 import system.web.SiteMapNodeCollection;
 import system.collections.specialized.NameValueCollection;
-import system.web.SiteMapProvider;
-import system.web.SiteMapResolveEventHandler;
 
 
 /**
  * The base .NET class managing System.Web.XmlSiteMapProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.XmlSiteMapProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.XmlSiteMapProvider</a>
  */
-public class XmlSiteMapProvider extends NetObject  {
+public class XmlSiteMapProvider extends StaticSiteMapProvider  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.XmlSiteMapProvider
+     */
     public static final String className = "System.Web.XmlSiteMapProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +119,9 @@ public class XmlSiteMapProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSiteMapProvider}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSiteMapProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSiteMapProvider(from.getJCOInstance());
@@ -114,7 +129,6 @@ public class XmlSiteMapProvider extends NetObject  {
 
     // Constructors section
     
-
     public XmlSiteMapProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -129,16 +143,6 @@ public class XmlSiteMapProvider extends NetObject  {
     
     // Methods section
     
-    public boolean IsAccessibleToUser(HttpContext context, SiteMapNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsAccessibleToUser", context == null ? null : context.getJCOInstance(), node == null ? null : node.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SiteMapNode BuildSiteMap() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.NotSupportedException, system.OverflowException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.threading.ThreadAbortException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -161,17 +165,6 @@ public class XmlSiteMapProvider extends NetObject  {
         }
     }
 
-    public SiteMapNode FindSiteMapNode(HttpContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFindSiteMapNode = (JCObject)classInstance.Invoke("FindSiteMapNode", context == null ? null : context.getJCOInstance());
-            return new SiteMapNode(objFindSiteMapNode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SiteMapNode FindSiteMapNodeFromKey(java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.RankException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -183,56 +176,12 @@ public class XmlSiteMapProvider extends NetObject  {
         }
     }
 
-    public SiteMapNode GetCurrentNodeAndHintAncestorNodes(int upLevel) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException, system.configuration.ConfigurationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCurrentNodeAndHintAncestorNodes = (JCObject)classInstance.Invoke("GetCurrentNodeAndHintAncestorNodes", upLevel);
-            return new SiteMapNode(objGetCurrentNodeAndHintAncestorNodes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SiteMapNode GetCurrentNodeAndHintNeighborhoodNodes(int upLevel, int downLevel) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException, system.configuration.ConfigurationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCurrentNodeAndHintNeighborhoodNodes = (JCObject)classInstance.Invoke("GetCurrentNodeAndHintNeighborhoodNodes", upLevel, downLevel);
-            return new SiteMapNode(objGetCurrentNodeAndHintNeighborhoodNodes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SiteMapNode GetParentNode(SiteMapNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetParentNode = (JCObject)classInstance.Invoke("GetParentNode", node == null ? null : node.getJCOInstance());
             return new SiteMapNode(objGetParentNode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SiteMapNode GetParentNodeRelativeToCurrentNodeAndHintDownFromParent(int walkupLevels, int relativeDepthFromWalkup) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetParentNodeRelativeToCurrentNodeAndHintDownFromParent = (JCObject)classInstance.Invoke("GetParentNodeRelativeToCurrentNodeAndHintDownFromParent", walkupLevels, relativeDepthFromWalkup);
-            return new SiteMapNode(objGetParentNodeRelativeToCurrentNodeAndHintDownFromParent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SiteMapNode GetParentNodeRelativeToNodeAndHintDownFromParent(SiteMapNode node, int walkupLevels, int relativeDepthFromWalkup) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetParentNodeRelativeToNodeAndHintDownFromParent = (JCObject)classInstance.Invoke("GetParentNodeRelativeToNodeAndHintDownFromParent", node == null ? null : node.getJCOInstance(), walkupLevels, relativeDepthFromWalkup);
-            return new SiteMapNode(objGetParentNodeRelativeToNodeAndHintDownFromParent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,26 +208,6 @@ public class XmlSiteMapProvider extends NetObject  {
         }
     }
 
-    public void HintAncestorNodes(SiteMapNode node, int upLevel) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("HintAncestorNodes", node == null ? null : node.getJCOInstance(), upLevel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void HintNeighborhoodNodes(SiteMapNode node, int upLevel, int downLevel) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("HintNeighborhoodNodes", node == null ? null : node.getJCOInstance(), upLevel, downLevel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Initialize(java.lang.String name, NameValueCollection attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -293,154 +222,10 @@ public class XmlSiteMapProvider extends NetObject  {
     
     // Properties section
     
-    public boolean getEnableLocalization() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("EnableLocalization");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnableLocalization(boolean EnableLocalization) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EnableLocalization", EnableLocalization);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSecurityTrimmingEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SecurityTrimmingEnabled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getResourceKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ResourceKey");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setResourceKey(java.lang.String ResourceKey) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ResourceKey", ResourceKey);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SiteMapNode getCurrentNode() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException, system.configuration.ConfigurationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CurrentNode");
-            return new SiteMapNode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SiteMapNode getRootNode() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.InvalidOperationException, system.web.HttpRequestValidationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RootNode");
-            return new SiteMapNode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SiteMapProvider getParentProvider() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ParentProvider");
-            return new SiteMapProvider(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setParentProvider(SiteMapProvider ParentProvider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ParentProvider", ParentProvider == null ? null : ParentProvider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SiteMapProvider getRootProvider() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RootProvider");
-            return new SiteMapProvider(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
-
-    public void addSiteMapResolve(SiteMapResolveEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("SiteMapResolve", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeSiteMapResolve(SiteMapResolveEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("SiteMapResolve", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
 }

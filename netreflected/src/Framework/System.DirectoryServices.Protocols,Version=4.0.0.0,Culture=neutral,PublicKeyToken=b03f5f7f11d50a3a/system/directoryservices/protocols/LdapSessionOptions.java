@@ -49,12 +49,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.LdapSessionOptions, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.LdapSessionOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.LdapSessionOptions</a>
  */
 public class LdapSessionOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.LdapSessionOptions
+     */
     public static final String className = "System.DirectoryServices.Protocols.LdapSessionOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class LdapSessionOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LdapSessionOptions}, a cast assert is made to check if types are compatible.
+     */
     public static LdapSessionOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LdapSessionOptions(from.getJCOInstance());
@@ -115,6 +132,10 @@ public class LdapSessionOptions extends NetObject  {
 
     // Constructors section
     
+    public LdapSessionOptions() throws Throwable {
+    }
+
+
 
     
     // Methods section

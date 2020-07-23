@@ -48,12 +48,27 @@ import system.threading.Semaphore;
 
 /**
  * The base .NET class managing System.Threading.ThreadingAclExtensions, System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadingAclExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadingAclExtensions</a>
  */
 public class ThreadingAclExtensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Threading.AccessControl
+     */
     public static final String assemblyShortName = "System.Threading.AccessControl";
+    /**
+     * Qualified class name: System.Threading.ThreadingAclExtensions
+     */
     public static final String className = "System.Threading.ThreadingAclExtensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ThreadingAclExtensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ThreadingAclExtensions}, a cast assert is made to check if types are compatible.
+     */
     public static ThreadingAclExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ThreadingAclExtensions(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class ThreadingAclExtensions extends NetObject  {
 
     // Constructors section
     
+    public ThreadingAclExtensions() throws Throwable {
+    }
 
     
     // Methods section

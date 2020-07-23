@@ -47,12 +47,27 @@ import system.web.management.WebApplicationInformation;
 
 /**
  * The base .NET class managing System.Web.Management.WebBaseEvent, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Management.WebBaseEvent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Management.WebBaseEvent</a>
  */
 public class WebBaseEvent extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Management.WebBaseEvent
+     */
     public static final String className = "System.Web.Management.WebBaseEvent";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class WebBaseEvent extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebBaseEvent}, a cast assert is made to check if types are compatible.
+     */
     public static WebBaseEvent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebBaseEvent(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class WebBaseEvent extends NetObject  {
 
     // Constructors section
     
+    public WebBaseEvent() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -255,11 +276,11 @@ public class WebBaseEvent extends NetObject  {
         }
     }
 
-    public static WebApplicationInformation getApplicationInformation() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public WebApplicationInformation getApplicationInformation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ApplicationInformation");
+            JCObject val = (JCObject)classInstance.Get("ApplicationInformation");
             return new WebApplicationInformation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

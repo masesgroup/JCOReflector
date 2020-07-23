@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.accesscontrol.AuditRule;
 import system.security.principal.IdentityReference;
 import system.security.accesscontrol.SemaphoreRights;
 import system.security.accesscontrol.AuditFlags;
-import system.security.accesscontrol.InheritanceFlags;
-import system.security.accesscontrol.PropagationFlags;
 
 
 /**
  * The base .NET class managing System.Security.AccessControl.SemaphoreAuditRule, System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.SemaphoreAuditRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.SemaphoreAuditRule</a>
  */
-public class SemaphoreAuditRule extends NetObject  {
+public class SemaphoreAuditRule extends AuditRule  {
+    /**
+     * Fully assembly qualified name: System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Threading.AccessControl
+     */
     public static final String assemblyShortName = "System.Threading.AccessControl";
+    /**
+     * Qualified class name: System.Security.AccessControl.SemaphoreAuditRule
+     */
     public static final String className = "System.Security.AccessControl.SemaphoreAuditRule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class SemaphoreAuditRule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SemaphoreAuditRule}, a cast assert is made to check if types are compatible.
+     */
     public static SemaphoreAuditRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SemaphoreAuditRule(from.getJCOInstance());
@@ -113,6 +129,8 @@ public class SemaphoreAuditRule extends NetObject  {
 
     // Constructors section
     
+    public SemaphoreAuditRule() throws Throwable {
+    }
 
     public SemaphoreAuditRule(IdentityReference identity, SemaphoreRights eventRights, AuditFlags flags) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException {
         try {
@@ -125,6 +143,7 @@ public class SemaphoreAuditRule extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -132,66 +151,12 @@ public class SemaphoreAuditRule extends NetObject  {
     
     // Properties section
     
-    public boolean getIsInherited() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInherited");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AuditFlags getAuditFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AuditFlags");
-            return new AuditFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InheritanceFlags getInheritanceFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InheritanceFlags");
-            return new InheritanceFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropagationFlags getPropagationFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropagationFlags");
-            return new PropagationFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SemaphoreRights getSemaphoreRights() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("SemaphoreRights");
             return new SemaphoreRights(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IdentityReference getIdentityReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IdentityReference");
-            return new IdentityReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

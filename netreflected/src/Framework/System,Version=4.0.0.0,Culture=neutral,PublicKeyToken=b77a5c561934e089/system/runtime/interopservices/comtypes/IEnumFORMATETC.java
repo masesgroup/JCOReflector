@@ -42,12 +42,29 @@ import system.runtime.interopservices.comtypes.FORMATETC;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.IEnumFORMATETC, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumFORMATETC" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumFORMATETC</a>
  */
 public interface IEnumFORMATETC extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.IEnumFORMATETC
+     */
+    public static final String className = "System.Runtime.InteropServices.ComTypes.IEnumFORMATETC";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEnumFORMATETC}, a cast assert is made to check if types are compatible.
+     */
     public static IEnumFORMATETC ToIEnumFORMATETC(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices.ComTypes.IEnumFORMATETC, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IEnumFORMATETCImplementation(from.getJCOInstance());
     }

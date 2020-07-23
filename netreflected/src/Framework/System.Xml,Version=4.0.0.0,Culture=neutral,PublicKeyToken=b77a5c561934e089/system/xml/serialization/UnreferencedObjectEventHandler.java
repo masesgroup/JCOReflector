@@ -42,12 +42,27 @@ import system.xml.serialization.UnreferencedObjectEventArgs;
 import system.xml.serialization.IUnreferencedObjectEventHandler;
 /**
  * The base .NET class managing System.Xml.Serialization.UnreferencedObjectEventHandler, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler</a>
  */
 public class UnreferencedObjectEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.UnreferencedObjectEventHandler
+     */
     public static final String className = "System.Xml.Serialization.UnreferencedObjectEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IUnreferencedObjectEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class UnreferencedObjectEventHandler extends JCVoidDelegate implements IJ
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, UnreferencedObjectEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, UnreferencedObjectEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class UnreferencedObjectEventHandler extends JCVoidDelegate implements IJ
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, UnreferencedObjectEventArgs e) {
     }
 }

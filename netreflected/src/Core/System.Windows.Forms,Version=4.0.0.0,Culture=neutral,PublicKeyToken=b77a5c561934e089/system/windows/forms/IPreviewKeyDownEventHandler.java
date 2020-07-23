@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.PreviewKeyDownEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PreviewKeyDownEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PreviewKeyDownEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PreviewKeyDownEventHandler</a>
+ */
 public interface IPreviewKeyDownEventHandler {
     public void Invoke(NetObject sender, PreviewKeyDownEventArgs e);
 }

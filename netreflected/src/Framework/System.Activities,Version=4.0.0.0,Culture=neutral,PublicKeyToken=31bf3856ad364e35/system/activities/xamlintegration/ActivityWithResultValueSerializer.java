@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.ValueSerializer;
 import system.windows.markup.IValueSerializerContext;
 import system.windows.markup.IValueSerializerContextImplementation;
 
 
 /**
  * The base .NET class managing System.Activities.XamlIntegration.ActivityWithResultValueSerializer, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.ActivityWithResultValueSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.ActivityWithResultValueSerializer</a>
  */
-public class ActivityWithResultValueSerializer extends NetObject  {
+public class ActivityWithResultValueSerializer extends ValueSerializer  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.XamlIntegration.ActivityWithResultValueSerializer
+     */
     public static final String className = "System.Activities.XamlIntegration.ActivityWithResultValueSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ActivityWithResultValueSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityWithResultValueSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static ActivityWithResultValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivityWithResultValueSerializer(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class ActivityWithResultValueSerializer extends NetObject  {
 
     // Constructors section
     
-
     public ActivityWithResultValueSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -125,32 +142,11 @@ public class ActivityWithResultValueSerializer extends NetObject  {
     
     // Methods section
     
-    public boolean CanConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanConvertFromString", value, context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean CanConvertToString(NetObject value, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("CanConvertToString", value == null ? null : value.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject ConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objConvertFromString = (JCObject)classInstance.Invoke("ConvertFromString", value, context == null ? null : context.getJCOInstance());
-            return new NetObject(objConvertFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

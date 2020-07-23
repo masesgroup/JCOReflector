@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.build.framework.BuildFinishedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BuildFinishedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildFinishedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildFinishedEventHandler</a>
+ */
 public interface IBuildFinishedEventHandler {
     public void Invoke(NetObject sender, BuildFinishedEventArgs e);
 }

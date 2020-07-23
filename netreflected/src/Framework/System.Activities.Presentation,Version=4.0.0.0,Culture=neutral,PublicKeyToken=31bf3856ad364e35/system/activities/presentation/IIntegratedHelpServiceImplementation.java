@@ -43,12 +43,27 @@ import system.componentmodel.design.HelpKeywordType;
 
 /**
  * The base .NET class managing System.Activities.Presentation.IIntegratedHelpService, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.IIntegratedHelpService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.IIntegratedHelpService</a>
  */
 public class IIntegratedHelpServiceImplementation extends NetObject implements IIntegratedHelpService {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.IIntegratedHelpService
+     */
     public static final String className = "System.Activities.Presentation.IIntegratedHelpService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IIntegratedHelpServiceImplementation extends NetObject implements I
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IIntegratedHelpService}, a cast assert is made to check if types are compatible.
+     */
     public static IIntegratedHelpService ToIIntegratedHelpService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IIntegratedHelpServiceImplementation(from.getJCOInstance());

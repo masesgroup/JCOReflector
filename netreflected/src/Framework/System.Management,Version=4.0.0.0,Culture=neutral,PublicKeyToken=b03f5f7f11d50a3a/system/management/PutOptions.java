@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.management.ManagementOptions;
 import system.management.ManagementNamedValueCollection;
 import system.TimeSpan;
 import system.management.PutType;
@@ -45,12 +46,27 @@ import system.management.PutType;
 
 /**
  * The base .NET class managing System.Management.PutOptions, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.PutOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.PutOptions</a>
  */
-public class PutOptions extends NetObject  {
+public class PutOptions extends ManagementOptions  {
+    /**
+     * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Management
+     */
     public static final String assemblyShortName = "System.Management";
+    /**
+     * Qualified class name: System.Management.PutOptions
+     */
     public static final String className = "System.Management.PutOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class PutOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PutOptions}, a cast assert is made to check if types are compatible.
+     */
     public static PutOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PutOptions(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class PutOptions extends NetObject  {
 
     // Constructors section
     
-
     public PutOptions() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -181,27 +198,6 @@ public class PutOptions extends NetObject  {
         }
     }
 
-    public ManagementNamedValueCollection getContext() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Context");
-            return new ManagementNamedValueCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setContext(ManagementNamedValueCollection Context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Context", Context == null ? null : Context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PutType getType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -218,27 +214,6 @@ public class PutOptions extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TimeSpan getTimeout() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Timeout");
-            return new TimeSpan(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTimeout(TimeSpan Timeout) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Timeout", Timeout == null ? null : Timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Management.Instrumentation.ManagementConfigurationType, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.Instrumentation.ManagementConfigurationType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.Instrumentation.ManagementConfigurationType</a>
  */
 public class ManagementConfigurationType extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Management.Instrumentation.ManagementConfigurationType
+     */
     public static final String className = "System.Management.Instrumentation.ManagementConfigurationType";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

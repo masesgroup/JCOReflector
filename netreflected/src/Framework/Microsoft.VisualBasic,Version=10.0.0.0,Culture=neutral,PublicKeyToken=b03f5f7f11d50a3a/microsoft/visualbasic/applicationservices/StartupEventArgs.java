@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.CancelEventArgs;
 
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.StartupEventArgs, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupEventArgs</a>
  */
-public class StartupEventArgs extends NetObject  {
+public class StartupEventArgs extends CancelEventArgs  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.ApplicationServices.StartupEventArgs
+     */
     public static final String className = "Microsoft.VisualBasic.ApplicationServices.StartupEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class StartupEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StartupEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static StartupEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StartupEventArgs(from.getJCOInstance());
@@ -108,6 +126,9 @@ public class StartupEventArgs extends NetObject  {
 
     // Constructors section
     
+    public StartupEventArgs() throws Throwable {
+    }
+
 
 
     
@@ -117,26 +138,6 @@ public class StartupEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

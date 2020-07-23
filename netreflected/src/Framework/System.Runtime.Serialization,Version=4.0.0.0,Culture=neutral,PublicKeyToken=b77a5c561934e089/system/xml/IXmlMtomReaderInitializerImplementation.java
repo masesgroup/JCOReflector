@@ -46,12 +46,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Xml.IXmlMtomReaderInitializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlMtomReaderInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlMtomReaderInitializer</a>
  */
 public class IXmlMtomReaderInitializerImplementation extends NetObject implements IXmlMtomReaderInitializer {
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
     public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Xml.IXmlMtomReaderInitializer
+     */
     public static final String className = "System.Xml.IXmlMtomReaderInitializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class IXmlMtomReaderInitializerImplementation extends NetObject implement
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlMtomReaderInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlMtomReaderInitializer ToIXmlMtomReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXmlMtomReaderInitializerImplementation(from.getJCOInstance());
@@ -112,6 +129,16 @@ public class IXmlMtomReaderInitializerImplementation extends NetObject implement
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", buffer, offset, count, toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance(), maxBufferSize, onClose);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetInput", dupParam0, dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

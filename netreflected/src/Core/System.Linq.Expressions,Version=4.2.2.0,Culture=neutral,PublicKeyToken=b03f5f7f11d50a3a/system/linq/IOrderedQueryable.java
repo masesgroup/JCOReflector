@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.linq.IQueryable;
+import system.linq.IQueryableImplementation;
 import system.linq.expressions.Expression;
 import system.linq.IQueryProvider;
 import system.linq.IQueryProviderImplementation;
@@ -44,12 +46,29 @@ import system.linq.IQueryProviderImplementation;
 
 /**
  * The base .NET class managing System.Linq.IOrderedQueryable, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IOrderedQueryable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IOrderedQueryable</a>
  */
-public interface IOrderedQueryable extends IJCOBridgeReflected {
-
+public interface IOrderedQueryable extends IJCOBridgeReflected, IQueryable, IEnumerable {
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
+    public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Linq.IOrderedQueryable
+     */
+    public static final String className = "System.Linq.IOrderedQueryable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IOrderedQueryable}, a cast assert is made to check if types are compatible.
+     */
     public static IOrderedQueryable ToIOrderedQueryable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Linq.IOrderedQueryable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Linq.Expressions"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IOrderedQueryableImplementation(from.getJCOInstance());
     }
@@ -96,12 +115,6 @@ public interface IOrderedQueryable extends IJCOBridgeReflected {
     
     // Properties section
     
-    public Expression getExpression() throws Throwable;
-
-    public IQueryProvider getProvider() throws Throwable;
-
-    public NetType getElementType() throws Throwable;
-
 
 
     // Instance Events section

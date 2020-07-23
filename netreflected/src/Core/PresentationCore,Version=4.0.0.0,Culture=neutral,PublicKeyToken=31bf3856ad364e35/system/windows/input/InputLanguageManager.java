@@ -38,23 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.threading.DispatcherObject;
 import system.windows.DependencyObject;
 import system.globalization.CultureInfo;
 import system.windows.input.IInputLanguageSource;
 import system.windows.input.IInputLanguageSourceImplementation;
 import system.windows.input.InputLanguageManager;
-import system.windows.threading.Dispatcher;
 import system.windows.input.InputLanguageEventHandler;
 
 
 /**
  * The base .NET class managing System.Windows.Input.InputLanguageManager, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputLanguageManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputLanguageManager</a>
  */
-public class InputLanguageManager extends NetObject  {
+public class InputLanguageManager extends DispatcherObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.InputLanguageManager
+     */
     public static final String className = "System.Windows.Input.InputLanguageManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class InputLanguageManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InputLanguageManager}, a cast assert is made to check if types are compatible.
+     */
     public static InputLanguageManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InputLanguageManager(from.getJCOInstance());
@@ -115,20 +132,14 @@ public class InputLanguageManager extends NetObject  {
 
     // Constructors section
     
+    public InputLanguageManager() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean GetRestoreInputLanguage(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -200,16 +211,6 @@ public class InputLanguageManager extends NetObject  {
         }
     }
 
-    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("VerifyAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -246,23 +247,12 @@ public class InputLanguageManager extends NetObject  {
         }
     }
 
-    public static InputLanguageManager getCurrent() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Current");
-            return new InputLanguageManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Dispatcher getDispatcher() throws Throwable {
+    public InputLanguageManager getCurrent() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
-            return new Dispatcher(val);
+            JCObject val = (JCObject)classInstance.Get("Current");
+            return new InputLanguageManager(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

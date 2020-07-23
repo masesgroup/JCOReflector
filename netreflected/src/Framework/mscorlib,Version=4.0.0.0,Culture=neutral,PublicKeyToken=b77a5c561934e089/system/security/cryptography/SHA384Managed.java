@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.io.Stream;
+import system.security.cryptography.SHA384;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.SHA384Managed, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA384Managed" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA384Managed</a>
  */
-public class SHA384Managed extends NetObject  {
+public class SHA384Managed extends SHA384  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.SHA384Managed
+     */
     public static final String className = "System.Security.Cryptography.SHA384Managed";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SHA384Managed extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SHA384Managed}, a cast assert is made to check if types are compatible.
+     */
     public static SHA384Managed cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SHA384Managed(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SHA384Managed extends NetObject  {
 
     // Constructors section
     
-
     public SHA384Managed() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
@@ -124,112 +140,6 @@ public class SHA384Managed extends NetObject  {
     
     // Methods section
     
-    public byte[] ComputeHash(byte[] buffer) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ComputeHash", (Object)buffer);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexComputeHash = 0; indexComputeHash < resultingArrayList.size(); indexComputeHash++ ) {
-				resultingArray[indexComputeHash] = (byte)resultingArrayList.get(indexComputeHash);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] ComputeHash(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ComputeHash", buffer, offset, count);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexComputeHash = 0; indexComputeHash < resultingArrayList.size(); indexComputeHash++ ) {
-				resultingArray[indexComputeHash] = (byte)resultingArrayList.get(indexComputeHash);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] ComputeHash(Stream inputStream) throws Throwable, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ComputeHash", inputStream == null ? null : inputStream.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexComputeHash = 0; indexComputeHash < resultingArrayList.size(); indexComputeHash++ ) {
-				resultingArray[indexComputeHash] = (byte)resultingArrayList.get(indexComputeHash);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("TransformFinalBlock", inputBuffer, inputOffset, inputCount);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexTransformFinalBlock = 0; indexTransformFinalBlock < resultingArrayList.size(); indexTransformFinalBlock++ ) {
-				resultingArray[indexTransformFinalBlock] = (byte)resultingArrayList.get(indexTransformFinalBlock);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("TransformBlock", inputBuffer, inputOffset, inputCount, outputBuffer, outputOffset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Initialize() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -244,75 +154,6 @@ public class SHA384Managed extends NetObject  {
     
     // Properties section
     
-    public boolean getCanReuseTransform() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanReuseTransform");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanTransformMultipleBlocks() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanTransformMultipleBlocks");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] getHash() throws Throwable, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Hash");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexHash = 0; indexHash < resultingArrayList.size(); indexHash++ ) {
-				resultingArray[indexHash] = (byte)resultingArrayList.get(indexHash);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getHashSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("HashSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getInputBlockSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("InputBlockSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getOutputBlockSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("OutputBlockSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

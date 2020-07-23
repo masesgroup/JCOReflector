@@ -43,12 +43,27 @@ import system.threading.SynchronizationContext;
 
 /**
  * The base .NET class managing System.Net.UiSynchronizationContext, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UiSynchronizationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UiSynchronizationContext</a>
  */
 public class UiSynchronizationContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.UiSynchronizationContext
+     */
     public static final String className = "System.Net.UiSynchronizationContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class UiSynchronizationContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UiSynchronizationContext}, a cast assert is made to check if types are compatible.
+     */
     public static UiSynchronizationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UiSynchronizationContext(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class UiSynchronizationContext extends NetObject  {
 
     // Constructors section
     
+    public UiSynchronizationContext() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,42 +136,42 @@ public class UiSynchronizationContext extends NetObject  {
     
     // Properties section
     
-    public static int getManagedUiThreadId() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getManagedUiThreadId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("ManagedUiThreadId");
+            return (int)classInstance.Get("ManagedUiThreadId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setManagedUiThreadId(int ManagedUiThreadId) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setManagedUiThreadId(int ManagedUiThreadId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("ManagedUiThreadId", ManagedUiThreadId);
+            classInstance.Set("ManagedUiThreadId", ManagedUiThreadId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SynchronizationContext getCurrent() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SynchronizationContext getCurrent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            JCObject val = (JCObject)classInstance.Get("Current");
             return new SynchronizationContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCurrent(SynchronizationContext Current) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCurrent(SynchronizationContext Current) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("Current", Current == null ? null : Current.getJCOInstance());
+            classInstance.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,30 +38,40 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.Component;
 import system.data.common.DbDataReader;
 import system.data.CommandBehavior;
 import system.data.common.DbParameter;
-import system.runtime.remoting.ObjRef;
-import system.componentmodel.IContainer;
-import system.componentmodel.IContainerImplementation;
-import system.componentmodel.ISite;
-import system.componentmodel.ISiteImplementation;
 import system.data.CommandType;
 import system.data.common.DbConnection;
 import system.data.common.DbParameterCollection;
 import system.data.common.DbTransaction;
 import system.data.UpdateRowSource;
-import system.EventHandler;
 
 
 /**
  * The base .NET class managing System.Data.Common.DbCommand, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbCommand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbCommand</a>
  */
-public class DbCommand extends NetObject  {
+public class DbCommand extends Component  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.Common.DbCommand
+     */
     public static final String className = "System.Data.Common.DbCommand";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +124,9 @@ public class DbCommand extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbCommand}, a cast assert is made to check if types are compatible.
+     */
     public static DbCommand cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbCommand(from.getJCOInstance());
@@ -122,6 +134,8 @@ public class DbCommand extends NetObject  {
 
     // Constructors section
     
+    public DbCommand() throws Throwable {
+    }
 
     
     // Methods section
@@ -180,34 +194,21 @@ public class DbCommand extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
+            classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public void Prepare() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
+            classInstance.Invoke("Prepare");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,38 +253,6 @@ public class DbCommand extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandTimeout", CommandTimeout);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IContainer getContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISite getSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(ISite Site) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,26 +377,6 @@ public class DbCommand extends NetObject  {
 
     // Instance Events section
     
-
-    public void addDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
 }

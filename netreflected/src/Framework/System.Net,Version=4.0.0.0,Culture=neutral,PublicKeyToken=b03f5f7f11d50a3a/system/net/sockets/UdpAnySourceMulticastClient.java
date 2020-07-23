@@ -47,12 +47,27 @@ import system.net.IPEndPoint;
 
 /**
  * The base .NET class managing System.Net.Sockets.UdpAnySourceMulticastClient, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpAnySourceMulticastClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpAnySourceMulticastClient</a>
  */
 public class UdpAnySourceMulticastClient extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.Sockets.UdpAnySourceMulticastClient
+     */
     public static final String className = "System.Net.Sockets.UdpAnySourceMulticastClient";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class UdpAnySourceMulticastClient extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UdpAnySourceMulticastClient}, a cast assert is made to check if types are compatible.
+     */
     public static UdpAnySourceMulticastClient cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UdpAnySourceMulticastClient(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class UdpAnySourceMulticastClient extends NetObject  {
 
     // Constructors section
     
+    public UdpAnySourceMulticastClient() throws Throwable {
+    }
 
     public UdpAnySourceMulticastClient(IPAddress groupAddress, int localPort) throws Throwable {
         try {
@@ -123,6 +142,7 @@ public class UdpAnySourceMulticastClient extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -150,6 +170,17 @@ public class UdpAnySourceMulticastClient extends NetObject  {
         }
     }
 
+    public IAsyncResult BeginReceiveFromGroup(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginReceiveFromGroup = (JCObject)classInstance.Invoke("BeginReceiveFromGroup", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginReceiveFromGroup);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginSendTo(byte[] buffer, int offset, int count, IPEndPoint remoteEndPoint, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -161,11 +192,33 @@ public class UdpAnySourceMulticastClient extends NetObject  {
         }
     }
 
+    public IAsyncResult BeginSendTo(JCRefOut dupParam0, int dupParam1, int dupParam2, IPEndPoint dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginSendTo);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginSendToGroup(byte[] buffer, int offset, int count, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBeginSendToGroup = (JCObject)classInstance.Invoke("BeginSendToGroup", buffer, offset, count, callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginSendToGroup);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginSendToGroup(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginSendToGroup = (JCObject)classInstance.Invoke("BeginSendToGroup", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendToGroup);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

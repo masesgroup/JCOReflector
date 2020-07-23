@@ -42,12 +42,27 @@ import microsoft.visualbasic.devices.NetworkAvailableEventArgs;
 import microsoft.visualbasic.devices.INetworkAvailableEventHandler;
 /**
  * The base .NET class managing Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler</a>
  */
 public class NetworkAvailableEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler
+     */
     public static final String className = "Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     INetworkAvailableEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class NetworkAvailableEventHandler extends JCVoidDelegate implements IJCV
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, NetworkAvailableEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, NetworkAvailableEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class NetworkAvailableEventHandler extends JCVoidDelegate implements IJCV
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, NetworkAvailableEventArgs e) {
     }
 }

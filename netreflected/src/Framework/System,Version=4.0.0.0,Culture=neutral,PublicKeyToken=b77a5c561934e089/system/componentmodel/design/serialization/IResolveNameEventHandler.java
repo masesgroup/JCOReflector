@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.design.serialization.ResolveNameEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ResolveNameEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.ResolveNameEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.ResolveNameEventHandler</a>
+ */
 public interface IResolveNameEventHandler {
     public void Invoke(NetObject sender, ResolveNameEventArgs e);
 }

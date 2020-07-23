@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.xps.serialization.XpsSerializationProgressChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link XpsSerializationProgressChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler</a>
+ */
 public interface IXpsSerializationProgressChangedEventHandler {
     public void Invoke(NetObject sender, XpsSerializationProgressChangedEventArgs e);
 }

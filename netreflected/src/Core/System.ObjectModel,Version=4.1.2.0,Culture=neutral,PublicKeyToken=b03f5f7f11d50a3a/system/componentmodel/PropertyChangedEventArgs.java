@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.ComponentModel.PropertyChangedEventArgs, System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyChangedEventArgs</a>
  */
-public class PropertyChangedEventArgs extends NetObject  {
+public class PropertyChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ObjectModel
+     */
     public static final String assemblyShortName = "System.ObjectModel";
+    /**
+     * Qualified class name: System.ComponentModel.PropertyChangedEventArgs
+     */
     public static final String className = "System.ComponentModel.PropertyChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class PropertyChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyChangedEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class PropertyChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public PropertyChangedEventArgs() throws Throwable {
+    }
 
     public PropertyChangedEventArgs(java.lang.String propertyName) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class PropertyChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

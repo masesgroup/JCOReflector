@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.BerConverter, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.BerConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.BerConverter</a>
  */
 public class BerConverter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.BerConverter
+     */
     public static final String className = "System.DirectoryServices.Protocols.BerConverter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class BerConverter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BerConverter}, a cast assert is made to check if types are compatible.
+     */
     public static BerConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BerConverter(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class BerConverter extends NetObject  {
 
     // Constructors section
     
+    public BerConverter() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -137,6 +158,23 @@ public class BerConverter extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Decode", format, value);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new NetObject(resultingObject));
+            }
+            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject[] Decode(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Decode", dupParam0, dupParam1);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }

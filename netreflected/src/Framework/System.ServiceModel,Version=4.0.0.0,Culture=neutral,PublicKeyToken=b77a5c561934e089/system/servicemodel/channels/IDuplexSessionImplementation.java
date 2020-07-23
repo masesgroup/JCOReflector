@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.IInputSession;
+import system.servicemodel.channels.IInputSessionImplementation;
+import system.servicemodel.channels.ISession;
+import system.servicemodel.channels.ISessionImplementation;
+import system.servicemodel.channels.IOutputSession;
+import system.servicemodel.channels.IOutputSessionImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
@@ -46,12 +52,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.IDuplexSession, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IDuplexSession" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IDuplexSession</a>
  */
 public class IDuplexSessionImplementation extends NetObject implements IDuplexSession {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.IDuplexSession
+     */
     public static final String className = "System.ServiceModel.Channels.IDuplexSession";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +120,9 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDuplexSession}, a cast assert is made to check if types are compatible.
+     */
     public static IDuplexSession ToIDuplexSession(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDuplexSessionImplementation(from.getJCOInstance());

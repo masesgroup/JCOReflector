@@ -43,12 +43,27 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.ExecutionScope, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ExecutionScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ExecutionScope</a>
  */
 public class ExecutionScope extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.ExecutionScope
+     */
     public static final String className = "System.Runtime.CompilerServices.ExecutionScope";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ExecutionScope extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExecutionScope}, a cast assert is made to check if types are compatible.
+     */
     public static ExecutionScope cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExecutionScope(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class ExecutionScope extends NetObject  {
 
     // Constructors section
     
+    public ExecutionScope() throws Throwable {
+    }
+
+
 
     
     // Methods section

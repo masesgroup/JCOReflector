@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.configuration.Configuration;
 import system.web.ui.design.IProjectItem;
 import system.web.ui.design.IProjectItemImplementation;
@@ -45,12 +47,27 @@ import system.web.ui.design.IProjectItemImplementation;
 
 /**
  * The base .NET class managing System.Web.UI.Design.IWebApplication, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IWebApplication" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IWebApplication</a>
  */
 public class IWebApplicationImplementation extends NetObject implements IWebApplication {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.IWebApplication
+     */
     public static final String className = "System.Web.UI.Design.IWebApplication";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +115,9 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWebApplication}, a cast assert is made to check if types are compatible.
+     */
     public static IWebApplication ToIWebApplication(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWebApplicationImplementation(from.getJCOInstance());

@@ -46,12 +46,27 @@ import system.collections.specialized.NameValueCollection;
 
 /**
  * The base .NET class managing System.Web.HttpServerUtilityBase, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpServerUtilityBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpServerUtilityBase</a>
  */
 public class HttpServerUtilityBase extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.HttpServerUtilityBase
+     */
     public static final String className = "System.Web.HttpServerUtilityBase";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class HttpServerUtilityBase extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpServerUtilityBase}, a cast assert is made to check if types are compatible.
+     */
     public static HttpServerUtilityBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpServerUtilityBase(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class HttpServerUtilityBase extends NetObject  {
 
     // Constructors section
     
+    public HttpServerUtilityBase() throws Throwable {
+    }
 
     
     // Methods section
@@ -244,6 +263,16 @@ public class HttpServerUtilityBase extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (Object)input);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String UrlTokenEncode(JCRefOut dupParam0) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

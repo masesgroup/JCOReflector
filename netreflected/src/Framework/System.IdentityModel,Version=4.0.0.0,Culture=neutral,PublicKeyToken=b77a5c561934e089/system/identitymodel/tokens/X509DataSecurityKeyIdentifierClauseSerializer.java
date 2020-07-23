@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.SecurityKeyIdentifierClauseSerializer;
 import system.xml.XmlReader;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.xml.XmlWriter;
@@ -45,12 +46,27 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer</a>
  */
-public class X509DataSecurityKeyIdentifierClauseSerializer extends NetObject  {
+public class X509DataSecurityKeyIdentifierClauseSerializer extends SecurityKeyIdentifierClauseSerializer  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer
+     */
     public static final String className = "System.IdentityModel.Tokens.X509DataSecurityKeyIdentifierClauseSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class X509DataSecurityKeyIdentifierClauseSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509DataSecurityKeyIdentifierClauseSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static X509DataSecurityKeyIdentifierClauseSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509DataSecurityKeyIdentifierClauseSerializer(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class X509DataSecurityKeyIdentifierClauseSerializer extends NetObject  {
 
     // Constructors section
     
-
     public X509DataSecurityKeyIdentifierClauseSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file

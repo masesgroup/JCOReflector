@@ -49,12 +49,27 @@ import system.data.common.DbParameter;
 
 /**
  * The base .NET class managing System.Data.Common.DbProviderFactory, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbProviderFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbProviderFactory</a>
  */
 public class DbProviderFactory extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.Common.DbProviderFactory
+     */
     public static final String className = "System.Data.Common.DbProviderFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class DbProviderFactory extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbProviderFactory}, a cast assert is made to check if types are compatible.
+     */
     public static DbProviderFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbProviderFactory(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class DbProviderFactory extends NetObject  {
 
     // Constructors section
     
+    public DbProviderFactory() throws Throwable {
+    }
 
     
     // Methods section

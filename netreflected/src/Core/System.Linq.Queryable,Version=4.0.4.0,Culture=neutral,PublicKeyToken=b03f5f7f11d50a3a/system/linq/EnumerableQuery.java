@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Linq.EnumerableQuery, System.Linq.Queryable, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.EnumerableQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.EnumerableQuery</a>
  */
 public class EnumerableQuery extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Linq.Queryable, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Linq.Queryable, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Queryable
+     */
     public static final String assemblyShortName = "System.Linq.Queryable";
+    /**
+     * Qualified class name: System.Linq.EnumerableQuery
+     */
     public static final String className = "System.Linq.EnumerableQuery";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class EnumerableQuery extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EnumerableQuery}, a cast assert is made to check if types are compatible.
+     */
     public static EnumerableQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EnumerableQuery(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class EnumerableQuery extends NetObject  {
 
     // Constructors section
     
+    public EnumerableQuery() throws Throwable {
+    }
 
     
     // Methods section

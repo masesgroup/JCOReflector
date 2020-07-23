@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.NodeLabelEditEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link NodeLabelEditEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.NodeLabelEditEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.NodeLabelEditEventHandler</a>
+ */
 public interface INodeLabelEditEventHandler {
     public void Invoke(NetObject sender, NodeLabelEditEventArgs e);
 }

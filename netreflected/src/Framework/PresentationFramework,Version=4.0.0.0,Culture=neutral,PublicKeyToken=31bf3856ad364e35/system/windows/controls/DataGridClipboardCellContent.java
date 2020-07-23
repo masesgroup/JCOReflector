@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.controls.DataGridColumn;
 
 
 /**
  * The base .NET class managing System.Windows.Controls.DataGridClipboardCellContent, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridClipboardCellContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridClipboardCellContent</a>
  */
-public class DataGridClipboardCellContent extends NetObject  {
+public class DataGridClipboardCellContent extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.DataGridClipboardCellContent
+     */
     public static final String className = "System.Windows.Controls.DataGridClipboardCellContent";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DataGridClipboardCellContent extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridClipboardCellContent}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridClipboardCellContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridClipboardCellContent(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class DataGridClipboardCellContent extends NetObject  {
 
     // Constructors section
     
+    public DataGridClipboardCellContent() throws Throwable {
+    }
 
     public DataGridClipboardCellContent(NetObject item, DataGridColumn column, NetObject content) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class DataGridClipboardCellContent extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

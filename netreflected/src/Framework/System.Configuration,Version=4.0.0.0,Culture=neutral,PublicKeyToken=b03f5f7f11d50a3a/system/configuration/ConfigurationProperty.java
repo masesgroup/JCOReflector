@@ -45,12 +45,27 @@ import system.configuration.ConfigurationPropertyOptions;
 
 /**
  * The base .NET class managing System.Configuration.ConfigurationProperty, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationProperty</a>
  */
 public class ConfigurationProperty extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Configuration
+     */
     public static final String assemblyShortName = "System.Configuration";
+    /**
+     * Qualified class name: System.Configuration.ConfigurationProperty
+     */
     public static final String className = "System.Configuration.ConfigurationProperty";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ConfigurationProperty extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationProperty}, a cast assert is made to check if types are compatible.
+     */
     public static ConfigurationProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ConfigurationProperty(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ConfigurationProperty extends NetObject  {
 
     // Constructors section
     
+    public ConfigurationProperty() throws Throwable {
+    }
 
     public ConfigurationProperty(java.lang.String name, NetType type) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         try {
@@ -161,6 +180,7 @@ public class ConfigurationProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

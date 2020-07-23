@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.InkCanvasSelectionEditingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link InkCanvasSelectionEditingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventHandler</a>
+ */
 public interface IInkCanvasSelectionEditingEventHandler {
     public void Invoke(NetObject sender, InkCanvasSelectionEditingEventArgs e);
 }

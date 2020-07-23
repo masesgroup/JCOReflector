@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.InternalsVisibleToAttribute, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.InternalsVisibleToAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.InternalsVisibleToAttribute</a>
  */
-public class InternalsVisibleToAttribute extends NetObject  {
+public class InternalsVisibleToAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.InternalsVisibleToAttribute
+     */
     public static final String className = "System.Runtime.CompilerServices.InternalsVisibleToAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class InternalsVisibleToAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InternalsVisibleToAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static InternalsVisibleToAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InternalsVisibleToAttribute(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class InternalsVisibleToAttribute extends NetObject  {
 
     // Constructors section
     
+    public InternalsVisibleToAttribute() throws Throwable {
+    }
 
     public InternalsVisibleToAttribute(java.lang.String assemblyName) throws Throwable {
         try {
@@ -120,29 +140,10 @@ public class InternalsVisibleToAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -162,17 +163,6 @@ public class InternalsVisibleToAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllInternalsVisible", AllInternalsVisible);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

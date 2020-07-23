@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.ICryptoTransform, System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ICryptoTransform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ICryptoTransform</a>
  */
-public interface ICryptoTransform extends IJCOBridgeReflected {
-
+public interface ICryptoTransform extends IJCOBridgeReflected, IDisposable {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Primitives
+     */
+    public static final String assemblyShortName = "System.Security.Cryptography.Primitives";
+    /**
+     * Qualified class name: System.Security.Cryptography.ICryptoTransform
+     */
+    public static final String className = "System.Security.Cryptography.ICryptoTransform";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICryptoTransform}, a cast assert is made to check if types are compatible.
+     */
     public static ICryptoTransform ToICryptoTransform(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Security.Cryptography.ICryptoTransform, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Security.Cryptography.Primitives"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICryptoTransformImplementation(from.getJCOInstance());
     }
@@ -91,9 +110,12 @@ public interface ICryptoTransform extends IJCOBridgeReflected {
     
     public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) throws Throwable;
 
+    public byte[] TransformFinalBlock(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable;
+
     public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable;
 
-    public void Dispose() throws Throwable;
+    public int TransformBlock(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, int dupParam4) throws Throwable;
+
 
 
     

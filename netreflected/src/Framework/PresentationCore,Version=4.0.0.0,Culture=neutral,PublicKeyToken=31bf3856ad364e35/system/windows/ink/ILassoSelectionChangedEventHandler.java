@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.ink.LassoSelectionChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link LassoSelectionChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.LassoSelectionChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.LassoSelectionChangedEventHandler</a>
+ */
 public interface ILassoSelectionChangedEventHandler {
     public void Invoke(NetObject sender, LassoSelectionChangedEventArgs e);
 }

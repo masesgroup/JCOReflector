@@ -38,22 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.annotations.storage.AnnotationStore;
 import system.io.Stream;
 import system.windows.annotations.Annotation;
 import system.Guid;
-import system.windows.annotations.AnnotationAuthorChangedEventHandler;
-import system.windows.annotations.AnnotationResourceChangedEventHandler;
-import system.windows.annotations.storage.StoreContentChangedEventHandler;
 
 
 /**
  * The base .NET class managing System.Windows.Annotations.Storage.XmlStreamStore, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.XmlStreamStore" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.XmlStreamStore</a>
  */
-public class XmlStreamStore extends NetObject  {
+public class XmlStreamStore extends AnnotationStore  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.Storage.XmlStreamStore
+     */
     public static final String className = "System.Windows.Annotations.Storage.XmlStreamStore";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +119,9 @@ public class XmlStreamStore extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlStreamStore}, a cast assert is made to check if types are compatible.
+     */
     public static XmlStreamStore cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlStreamStore(from.getJCOInstance());
@@ -114,6 +129,8 @@ public class XmlStreamStore extends NetObject  {
 
     // Constructors section
     
+    public XmlStreamStore() throws Throwable {
+    }
 
     public XmlStreamStore(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.security.SecurityException {
         try {
@@ -124,6 +141,7 @@ public class XmlStreamStore extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -161,16 +179,6 @@ public class XmlStreamStore extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Flush() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -185,110 +193,10 @@ public class XmlStreamStore extends NetObject  {
     
     // Properties section
     
-    public boolean getAutoFlush() throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AutoFlush");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAutoFlush(boolean AutoFlush) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AutoFlush", AutoFlush);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
-
-    public void addAuthorChanged(AnnotationAuthorChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("AuthorChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeAuthorChanged(AnnotationAuthorChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("AuthorChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addAnchorChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("AnchorChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeAnchorChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("AnchorChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addCargoChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("CargoChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeCargoChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("CargoChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addStoreContentChanged(StoreContentChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("StoreContentChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeStoreContentChanged(StoreContentChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("StoreContentChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
 }

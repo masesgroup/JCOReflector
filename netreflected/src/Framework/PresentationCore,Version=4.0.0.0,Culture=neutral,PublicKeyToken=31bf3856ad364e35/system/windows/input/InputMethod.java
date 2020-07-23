@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.threading.DispatcherObject;
 import system.windows.DependencyObject;
 import system.windows.input.ImeConversionModeValues;
 import system.windows.input.ImeSentenceModeValues;
@@ -46,18 +47,32 @@ import system.windows.input.InputScope;
 import system.windows.UIElement;
 import system.windows.input.InputMethod;
 import system.windows.input.SpeechMode;
-import system.windows.threading.Dispatcher;
 import system.windows.input.InputMethodStateChangedEventHandler;
 
 
 /**
  * The base .NET class managing System.Windows.Input.InputMethod, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputMethod</a>
  */
-public class InputMethod extends NetObject  {
+public class InputMethod extends DispatcherObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.InputMethod
+     */
     public static final String className = "System.Windows.Input.InputMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class InputMethod extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InputMethod}, a cast assert is made to check if types are compatible.
+     */
     public static InputMethod cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InputMethod(from.getJCOInstance());
@@ -118,20 +135,14 @@ public class InputMethod extends NetObject  {
 
     // Constructors section
     
+    public InputMethod() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean GetIsInputMethodEnabled(DependencyObject target) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -306,16 +317,6 @@ public class InputMethod extends NetObject  {
         }
     }
 
-    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("VerifyAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -382,11 +383,11 @@ public class InputMethod extends NetObject  {
         }
     }
 
-    public static InputMethod getCurrent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public InputMethod getCurrent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            JCObject val = (JCObject)classInstance.Get("Current");
             return new InputMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -472,17 +473,6 @@ public class InputMethod extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpeechMode", SpeechMode == null ? null : SpeechMode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Dispatcher getDispatcher() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
-            return new Dispatcher(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

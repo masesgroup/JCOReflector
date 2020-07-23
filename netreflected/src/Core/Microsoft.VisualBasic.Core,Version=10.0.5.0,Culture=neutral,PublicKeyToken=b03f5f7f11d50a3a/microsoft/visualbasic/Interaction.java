@@ -43,12 +43,27 @@ import microsoft.visualbasic.CallType;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.Interaction, Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Interaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Interaction</a>
  */
 public class Interaction extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic.Core
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic.Core";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.Interaction
+     */
     public static final String className = "Microsoft.VisualBasic.Interaction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Interaction extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Interaction}, a cast assert is made to check if types are compatible.
+     */
     public static Interaction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Interaction(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class Interaction extends NetObject  {
 
     // Constructors section
     
+    public Interaction() throws Throwable {
+    }
+
+
 
     
     // Methods section

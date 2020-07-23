@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.SessionState.SessionStateActions, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateActions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateActions</a>
  */
 public class SessionStateActions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.SessionState.SessionStateActions
+     */
     public static final String className = "System.Web.SessionState.SessionStateActions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class SessionStateActions extends NetObject  {
 
     // Flags management section
 
-    public SessionStateActions add(SessionStateActions val) throws Throwable {
+    public final SessionStateActions add(SessionStateActions val) throws Throwable {
         return new SessionStateActions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SessionStateActions remove(SessionStateActions val) throws Throwable {
+    public final SessionStateActions remove(SessionStateActions val) throws Throwable {
         return new SessionStateActions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SessionStateActions val) throws Throwable {
+    public final boolean is(SessionStateActions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SessionStateActions val) throws Throwable {
+    public final boolean has(SessionStateActions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

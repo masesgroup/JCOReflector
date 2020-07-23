@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Web.Services.Protocols.PatternMatcher, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.PatternMatcher" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.PatternMatcher</a>
  */
 public class PatternMatcher extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Protocols.PatternMatcher
+     */
     public static final String className = "System.Web.Services.Protocols.PatternMatcher";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class PatternMatcher extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PatternMatcher}, a cast assert is made to check if types are compatible.
+     */
     public static PatternMatcher cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PatternMatcher(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class PatternMatcher extends NetObject  {
 
     // Constructors section
     
+    public PatternMatcher() throws Throwable {
+    }
 
     public PatternMatcher(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
         try {
@@ -118,6 +137,7 @@ public class PatternMatcher extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

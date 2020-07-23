@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Buffers.SequenceReaderExtensions, System.Memory, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.SequenceReaderExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.SequenceReaderExtensions</a>
  */
 public class SequenceReaderExtensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Memory, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Memory, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Memory
+     */
     public static final String assemblyShortName = "System.Memory";
+    /**
+     * Qualified class name: System.Buffers.SequenceReaderExtensions
+     */
     public static final String className = "System.Buffers.SequenceReaderExtensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SequenceReaderExtensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SequenceReaderExtensions}, a cast assert is made to check if types are compatible.
+     */
     public static SequenceReaderExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SequenceReaderExtensions(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class SequenceReaderExtensions extends NetObject  {
 
     // Constructors section
     
+    public SequenceReaderExtensions() throws Throwable {
+    }
 
     
     // Methods section

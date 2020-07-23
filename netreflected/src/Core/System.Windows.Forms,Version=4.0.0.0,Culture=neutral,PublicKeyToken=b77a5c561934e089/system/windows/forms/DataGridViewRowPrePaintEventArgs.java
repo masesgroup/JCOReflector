@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.HandledEventArgs;
 import system.windows.forms.DataGridView;
 import system.drawing.Graphics;
 import system.drawing.Rectangle;
@@ -48,12 +49,27 @@ import system.windows.forms.DataGridViewPaintParts;
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewRowPrePaintEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowPrePaintEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowPrePaintEventArgs</a>
  */
-public class DataGridViewRowPrePaintEventArgs extends NetObject  {
+public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewRowPrePaintEventArgs
+     */
     public static final String className = "System.Windows.Forms.DataGridViewRowPrePaintEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class DataGridViewRowPrePaintEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewRowPrePaintEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewRowPrePaintEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewRowPrePaintEventArgs(from.getJCOInstance());
@@ -114,6 +132,8 @@ public class DataGridViewRowPrePaintEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewRowPrePaintEventArgs() throws Throwable {
+    }
 
     public DataGridViewRowPrePaintEventArgs(DataGridView dataGridView, Graphics graphics, Rectangle clipBounds, Rectangle rowBounds, int rowIndex, DataGridViewElementStates rowState, java.lang.String errorText, DataGridViewCellStyle inheritedRowStyle, boolean isFirstDisplayedRow, boolean isLastVisibleRow) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -124,6 +144,7 @@ public class DataGridViewRowPrePaintEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -193,26 +214,6 @@ public class DataGridViewRowPrePaintEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getHandled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Handled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHandled(boolean Handled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Handled", Handled);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsFirstDisplayedRow() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

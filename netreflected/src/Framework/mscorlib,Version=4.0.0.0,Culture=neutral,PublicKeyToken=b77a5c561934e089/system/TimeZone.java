@@ -46,12 +46,27 @@ import system.TimeZone;
 
 /**
  * The base .NET class managing System.TimeZone, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.TimeZone" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.TimeZone</a>
  */
 public class TimeZone extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.TimeZone
+     */
     public static final String className = "System.TimeZone";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class TimeZone extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TimeZone}, a cast assert is made to check if types are compatible.
+     */
     public static TimeZone cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TimeZone(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class TimeZone extends NetObject  {
 
     // Constructors section
     
+    public TimeZone() throws Throwable {
+    }
 
     
     // Methods section
@@ -204,11 +223,11 @@ public class TimeZone extends NetObject  {
         }
     }
 
-    public static TimeZone getCurrentTimeZone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeZone getCurrentTimeZone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentTimeZone");
+            JCObject val = (JCObject)classInstance.Get("CurrentTimeZone");
             return new TimeZone(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.directoryservices.protocols.DirectoryControl;
 import system.directoryservices.protocols.ResultCode;
 
 
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.SortResponseControl, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.SortResponseControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.SortResponseControl</a>
  */
-public class SortResponseControl extends NetObject  {
+public class SortResponseControl extends DirectoryControl  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.SortResponseControl
+     */
     public static final String className = "System.DirectoryServices.Protocols.SortResponseControl";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SortResponseControl extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SortResponseControl}, a cast assert is made to check if types are compatible.
+     */
     public static SortResponseControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SortResponseControl(from.getJCOInstance());
@@ -109,73 +127,18 @@ public class SortResponseControl extends NetObject  {
 
     // Constructors section
     
+    public SortResponseControl() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public byte[] GetValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValue");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetValue = 0; indexGetValue < resultingArrayList.size(); indexGetValue++ ) {
-				resultingArray[indexGetValue] = (byte)resultingArrayList.get(indexGetValue);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getIsCritical() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsCritical");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsCritical(boolean IsCritical) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsCritical", IsCritical);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getServerSide() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ServerSide");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setServerSide(boolean ServerSide) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ServerSide", ServerSide);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ResultCode getResult() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -192,16 +155,6 @@ public class SortResponseControl extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("AttributeName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Type");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -46,12 +46,29 @@ import system.web.ui.webcontrols.Style;
 
 /**
  * The base .NET class managing System.Web.UI.Design.ITemplateEditingService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ITemplateEditingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ITemplateEditingService</a>
  */
 public interface ITemplateEditingService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
+    public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.ITemplateEditingService
+     */
+    public static final String className = "System.Web.UI.Design.ITemplateEditingService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITemplateEditingService}, a cast assert is made to check if types are compatible.
+     */
     public static ITemplateEditingService ToITemplateEditingService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.UI.Design.ITemplateEditingService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Design"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITemplateEditingServiceImplementation(from.getJCOInstance());
     }
@@ -98,7 +115,11 @@ public interface ITemplateEditingService extends IJCOBridgeReflected {
 
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames) throws Throwable;
 
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable;
+
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames, Style controlStyle, Style[] templateStyles) throws Throwable;
+
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable;
 
 
     

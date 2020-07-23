@@ -38,33 +38,41 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.DbCommand;
 import system.data.entityclient.EntityConnection;
 import system.data.entityclient.EntityTransaction;
-import system.data.common.DbDataReader;
+import system.data.entityclient.EntityDataReader;
 import system.data.CommandBehavior;
-import system.data.common.DbParameter;
-import system.runtime.remoting.ObjRef;
-import system.componentmodel.IContainer;
-import system.componentmodel.IContainerImplementation;
-import system.componentmodel.ISite;
-import system.componentmodel.ISiteImplementation;
+import system.data.entityclient.EntityParameter;
 import system.data.CommandType;
 import system.data.common.commandtrees.DbCommandTree;
-import system.data.common.DbConnection;
-import system.data.common.DbParameterCollection;
-import system.data.common.DbTransaction;
+import system.data.entityclient.EntityParameterCollection;
 import system.data.UpdateRowSource;
-import system.EventHandler;
 
 
 /**
  * The base .NET class managing System.Data.EntityClient.EntityCommand, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.EntityClient.EntityCommand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.EntityClient.EntityCommand</a>
  */
-public class EntityCommand extends NetObject  {
+public class EntityCommand extends DbCommand  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.EntityClient.EntityCommand
+     */
     public static final String className = "System.Data.EntityClient.EntityCommand";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -117,7 +125,9 @@ public class EntityCommand extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityCommand}, a cast assert is made to check if types are compatible.
+     */
     public static EntityCommand cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EntityCommand(from.getJCOInstance());
@@ -125,7 +135,6 @@ public class EntityCommand extends NetObject  {
 
     // Constructors section
     
-
     public EntityCommand() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -180,34 +189,34 @@ public class EntityCommand extends NetObject  {
         }
     }
 
-    public DbDataReader ExecuteReader() throws Throwable {
+    public EntityDataReader ExecuteReaderNewEntityCommand() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.data.MetadataException, system.threading.SynchronizationLockException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader");
-            return new DbDataReader(objExecuteReader);
+            return new EntityDataReader(objExecuteReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbDataReader ExecuteReader(CommandBehavior behavior) throws Throwable {
+    public EntityDataReader ExecuteReaderNewEntityCommand(CommandBehavior behavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
-            return new DbDataReader(objExecuteReader);
+            return new EntityDataReader(objExecuteReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbParameter CreateParameter() throws Throwable {
+    public EntityParameter CreateParameterNewEntityCommand() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
-            return new DbParameter(objCreateParameter);
+            return new EntityParameter(objCreateParameter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,39 +233,6 @@ public class EntityCommand extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String ToTraceString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.data.MetadataException, system.data.EntitySqlException, system.data.ProviderIncompatibleException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -267,30 +243,30 @@ public class EntityCommand extends NetObject  {
         }
     }
 
+    public void Cancel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Cancel");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Prepare() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.data.MetadataException, system.data.EntitySqlException, system.data.ProviderIncompatibleException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Prepare");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public boolean getDesignTimeVisible() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("DesignTimeVisible");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDesignTimeVisible(boolean DesignTimeVisible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DesignTimeVisible", DesignTimeVisible);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getEnablePlanCaching() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -306,79 +282,6 @@ public class EntityCommand extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnablePlanCaching", EnablePlanCaching);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCommandTimeout() throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("CommandTimeout");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCommandTimeout(int CommandTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CommandTimeout", CommandTimeout);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IContainer getContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISite getSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(ISite Site) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CommandType getCommandType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CommandType");
-            return new CommandType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCommandType(CommandType CommandType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CommandType", CommandType == null ? null : CommandType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,18 +308,18 @@ public class EntityCommand extends NetObject  {
         }
     }
 
-    public DbConnection getConnection() throws Throwable {
+    public EntityConnection getConnectionNewEntityCommand() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Connection");
-            return new DbConnection(val);
+            return new EntityConnection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setConnection(DbConnection Connection) throws Throwable {
+    public void setConnection(EntityConnection Connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -426,29 +329,29 @@ public class EntityCommand extends NetObject  {
         }
     }
 
-    public DbParameterCollection getParameters() throws Throwable {
+    public EntityParameterCollection getParametersNewEntityCommand() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Parameters");
-            return new DbParameterCollection(val);
+            return new EntityParameterCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbTransaction getTransaction() throws Throwable {
+    public EntityTransaction getTransactionNewEntityCommand() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Transaction");
-            return new DbTransaction(val);
+            return new EntityTransaction(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTransaction(DbTransaction Transaction) throws Throwable {
+    public void setTransaction(EntityTransaction Transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -458,71 +361,10 @@ public class EntityCommand extends NetObject  {
         }
     }
 
-    public UpdateRowSource getUpdatedRowSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UpdatedRowSource");
-            return new UpdateRowSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUpdatedRowSource(UpdateRowSource UpdatedRowSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UpdatedRowSource", UpdatedRowSource == null ? null : UpdatedRowSource.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getCommandText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CommandText");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCommandText(java.lang.String CommandText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CommandText", CommandText);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
-
-    public void addDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
 }

@@ -44,12 +44,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.Threading.Barrier, System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Barrier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Barrier</a>
  */
 public class Barrier extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Threading
+     */
     public static final String assemblyShortName = "System.Threading";
+    /**
+     * Qualified class name: System.Threading.Barrier
+     */
     public static final String className = "System.Threading.Barrier";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Barrier extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Barrier}, a cast assert is made to check if types are compatible.
+     */
     public static Barrier cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Barrier(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class Barrier extends NetObject  {
 
     // Constructors section
     
+    public Barrier() throws Throwable {
+    }
 
     public Barrier(int participantCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
@@ -120,6 +139,7 @@ public class Barrier extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

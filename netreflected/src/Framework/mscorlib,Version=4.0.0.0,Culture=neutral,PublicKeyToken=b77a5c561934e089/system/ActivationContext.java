@@ -44,12 +44,27 @@ import system.ApplicationIdentity;
 
 /**
  * The base .NET class managing System.ActivationContext, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ActivationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ActivationContext</a>
  */
 public class ActivationContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.ActivationContext
+     */
     public static final String className = "System.ActivationContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ActivationContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivationContext}, a cast assert is made to check if types are compatible.
+     */
     public static ActivationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivationContext(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class ActivationContext extends NetObject  {
 
     // Constructors section
     
+    public ActivationContext() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -130,6 +151,17 @@ public class ActivationContext extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreatePartialActivationContext = (JCObject)classType.Invoke("CreatePartialActivationContext", identity == null ? null : identity.getJCOInstance(), manifestPaths);
+            return new ActivationContext(objCreatePartialActivationContext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ActivationContext CreatePartialActivationContext(ApplicationIdentity dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreatePartialActivationContext = (JCObject)classType.Invoke("CreatePartialActivationContext", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
             return new ActivationContext(objCreatePartialActivationContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

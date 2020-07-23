@@ -48,12 +48,27 @@ import system.componentmodel.ISynchronizeInvokeImplementation;
 
 /**
  * The base .NET class managing System.Net.PeerToPeer.Collaboration.ContactManager, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.ContactManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.ContactManager</a>
  */
 public class ContactManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.PeerToPeer.Collaboration.ContactManager
+     */
     public static final String className = "System.Net.PeerToPeer.Collaboration.ContactManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ContactManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContactManager}, a cast assert is made to check if types are compatible.
+     */
     public static ContactManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ContactManager(from.getJCOInstance());
@@ -114,6 +131,10 @@ public class ContactManager extends NetObject  {
 
     // Constructors section
     
+    public ContactManager() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -236,11 +257,11 @@ public class ContactManager extends NetObject  {
         }
     }
 
-    public static PeerContact getLocalContact() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public PeerContact getLocalContact() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LocalContact");
+            JCObject val = (JCObject)classInstance.Get("LocalContact");
             return new PeerContact(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

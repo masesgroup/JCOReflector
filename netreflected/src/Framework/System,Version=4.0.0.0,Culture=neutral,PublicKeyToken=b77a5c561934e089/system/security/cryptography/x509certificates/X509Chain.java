@@ -48,12 +48,27 @@ import system.security.cryptography.x509certificates.X509ChainStatus;
 
 /**
  * The base .NET class managing System.Security.Cryptography.X509Certificates.X509Chain, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Chain" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Chain</a>
  */
 public class X509Chain extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Security.Cryptography.X509Certificates.X509Chain
+     */
     public static final String className = "System.Security.Cryptography.X509Certificates.X509Chain";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class X509Chain extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509Chain}, a cast assert is made to check if types are compatible.
+     */
     public static X509Chain cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509Chain(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class X509Chain extends NetObject  {
 
     // Constructors section
     
-
     public X509Chain() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -227,7 +243,7 @@ public class X509Chain extends NetObject  {
         }
     }
 
-    public X509ChainStatus[] getChainStatus() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public final X509ChainStatus[] getChainStatus() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

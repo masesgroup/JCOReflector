@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Data.OleDb.OleDbError, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbError" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbError</a>
  */
 public class OleDbError extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.OleDb.OleDbError
+     */
     public static final String className = "System.Data.OleDb.OleDbError";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class OleDbError extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OleDbError}, a cast assert is made to check if types are compatible.
+     */
     public static OleDbError cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OleDbError(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class OleDbError extends NetObject  {
 
     // Constructors section
     
+    public OleDbError() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpServerUtilityBase;
 import system.web.HttpServerUtility;
 import system.io.TextWriter;
 import system.web.IHttpHandler;
@@ -47,12 +48,27 @@ import system.collections.specialized.NameValueCollection;
 
 /**
  * The base .NET class managing System.Web.HttpServerUtilityWrapper, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpServerUtilityWrapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpServerUtilityWrapper</a>
  */
-public class HttpServerUtilityWrapper extends NetObject  {
+public class HttpServerUtilityWrapper extends HttpServerUtilityBase  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.HttpServerUtilityWrapper
+     */
     public static final String className = "System.Web.HttpServerUtilityWrapper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class HttpServerUtilityWrapper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpServerUtilityWrapper}, a cast assert is made to check if types are compatible.
+     */
     public static HttpServerUtilityWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpServerUtilityWrapper(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class HttpServerUtilityWrapper extends NetObject  {
 
     // Constructors section
     
+    public HttpServerUtilityWrapper() throws Throwable {
+    }
 
     public HttpServerUtilityWrapper(HttpServerUtility httpServerUtility) throws Throwable, system.ArgumentNullException {
         try {
@@ -123,6 +143,7 @@ public class HttpServerUtilityWrapper extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -256,6 +277,16 @@ public class HttpServerUtilityWrapper extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (Object)input);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String UrlTokenEncode(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,36 +466,6 @@ public class HttpServerUtilityWrapper extends NetObject  {
     
     // Properties section
     
-    public int getScriptTimeout() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ScriptTimeout");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setScriptTimeout(int ScriptTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ScriptTimeout", ScriptTimeout);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMachineName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MachineName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

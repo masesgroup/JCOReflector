@@ -42,12 +42,27 @@ import system.activities.ActivityWithResult;
 import system.activities.presentation.expressions.ICreateExpressionFromStringCallback;
 /**
  * The base .NET class managing System.Activities.Presentation.Expressions.CreateExpressionFromStringCallback, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Expressions.CreateExpressionFromStringCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Expressions.CreateExpressionFromStringCallback</a>
  */
 public class CreateExpressionFromStringCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Expressions.CreateExpressionFromStringCallback
+     */
     public static final String className = "System.Activities.Presentation.Expressions.CreateExpressionFromStringCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ICreateExpressionFromStringCallback callerInstance = null;
@@ -157,7 +172,7 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final ActivityWithResult DynamicInvoke(java.lang.String expressionText, boolean useLocationExpression, NetType expressionType) throws Throwable {
+    public ActivityWithResult METHOD_JAVA_NAME(java.lang.String expressionText, boolean useLocationExpression, NetType expressionType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -168,7 +183,9 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public ActivityWithResult Invoke(java.lang.String expressionText, boolean useLocationExpression, NetType expressionType) {
         return null;
     }

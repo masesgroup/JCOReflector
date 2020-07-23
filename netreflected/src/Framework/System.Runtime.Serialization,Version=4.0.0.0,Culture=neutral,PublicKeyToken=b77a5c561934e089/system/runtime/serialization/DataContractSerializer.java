@@ -38,11 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.serialization.XmlObjectSerializer;
 import system.runtime.serialization.DataContractSerializerSettings;
 import system.xml.XmlDictionaryString;
 import system.xml.XmlDictionaryReader;
 import system.xml.XmlReader;
-import system.io.Stream;
 import system.runtime.serialization.DataContractResolver;
 import system.xml.XmlDictionaryWriter;
 import system.xml.XmlWriter;
@@ -52,12 +52,27 @@ import system.runtime.serialization.IDataContractSurrogateImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.DataContractSerializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.DataContractSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.DataContractSerializer</a>
  */
-public class DataContractSerializer extends NetObject  {
+public class DataContractSerializer extends XmlObjectSerializer  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
     public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Runtime.Serialization.DataContractSerializer
+     */
     public static final String className = "System.Runtime.Serialization.DataContractSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class DataContractSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataContractSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static DataContractSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataContractSerializer(from.getJCOInstance());
@@ -118,6 +135,8 @@ public class DataContractSerializer extends NetObject  {
 
     // Constructors section
     
+    public DataContractSerializer() throws Throwable {
+    }
 
     public DataContractSerializer(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException {
         try {
@@ -160,6 +179,7 @@ public class DataContractSerializer extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -178,28 +198,6 @@ public class DataContractSerializer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsStartObject", reader == null ? null : reader.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject ReadObject(Stream stream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReadObject = (JCObject)classInstance.Invoke("ReadObject", stream == null ? null : stream.getJCOInstance());
-            return new NetObject(objReadObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject ReadObject(XmlDictionaryReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReadObject = (JCObject)classInstance.Invoke("ReadObject", reader == null ? null : reader.getJCOInstance());
-            return new NetObject(objReadObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,26 +262,6 @@ public class DataContractSerializer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndObject", writer == null ? null : writer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteObject(Stream stream, NetObject graph) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteObject", stream == null ? null : stream.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteObject(XmlDictionaryWriter writer, NetObject graph) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteObject", writer == null ? null : writer.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

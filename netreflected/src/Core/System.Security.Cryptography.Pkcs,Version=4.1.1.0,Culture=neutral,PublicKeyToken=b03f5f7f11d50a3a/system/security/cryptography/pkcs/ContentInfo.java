@@ -43,12 +43,27 @@ import system.security.cryptography.Oid;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.ContentInfo, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.ContentInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.ContentInfo</a>
  */
 public class ContentInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.ContentInfo
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.ContentInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ContentInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContentInfo}, a cast assert is made to check if types are compatible.
+     */
     public static ContentInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ContentInfo(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ContentInfo extends NetObject  {
 
     // Constructors section
     
+    public ContentInfo() throws Throwable {
+    }
 
     public ContentInfo(byte[] content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         try {
@@ -131,6 +150,7 @@ public class ContentInfo extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -139,6 +159,17 @@ public class ContentInfo extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetContentType = (JCObject)classType.Invoke("GetContentType", (Object)encodedMessage);
+            return new Oid(objGetContentType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Oid GetContentType(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetContentType = (JCObject)classType.Invoke("GetContentType", (Object)dupParam0);
             return new Oid(objGetContentType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

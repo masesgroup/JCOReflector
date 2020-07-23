@@ -45,12 +45,29 @@ import system.xml.XmlBinaryWriterSession;
 
 /**
  * The base .NET class managing System.Xml.IXmlBinaryWriterInitializer, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlBinaryWriterInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlBinaryWriterInitializer</a>
  */
 public interface IXmlBinaryWriterInitializer extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
+    public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Xml.IXmlBinaryWriterInitializer
+     */
+    public static final String className = "System.Xml.IXmlBinaryWriterInitializer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlBinaryWriterInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlBinaryWriterInitializer ToIXmlBinaryWriterInitializer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Xml.IXmlBinaryWriterInitializer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Private.DataContractSerialization"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlBinaryWriterInitializerImplementation(from.getJCOInstance());
     }

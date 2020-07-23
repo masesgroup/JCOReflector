@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.adapters.ControlAdapter;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.collections.specialized.NameValueCollection;
@@ -49,12 +50,27 @@ import system.collections.specialized.StringCollection;
 
 /**
  * The base .NET class managing System.Web.UI.Adapters.PageAdapter, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Adapters.PageAdapter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Adapters.PageAdapter</a>
  */
-public class PageAdapter extends NetObject  {
+public class PageAdapter extends ControlAdapter  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.Adapters.PageAdapter
+     */
     public static final String className = "System.Web.UI.Adapters.PageAdapter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class PageAdapter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageAdapter}, a cast assert is made to check if types are compatible.
+     */
     public static PageAdapter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PageAdapter(from.getJCOInstance());
@@ -115,6 +133,8 @@ public class PageAdapter extends NetObject  {
 
     // Constructors section
     
+    public PageAdapter() throws Throwable {
+    }
 
     
     // Methods section

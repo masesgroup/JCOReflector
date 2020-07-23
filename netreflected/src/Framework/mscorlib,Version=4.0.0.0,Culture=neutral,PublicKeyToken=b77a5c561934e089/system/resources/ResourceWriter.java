@@ -43,12 +43,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Resources.ResourceWriter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceWriter</a>
  */
 public class ResourceWriter extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Resources.ResourceWriter
+     */
     public static final String className = "System.Resources.ResourceWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ResourceWriter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceWriter}, a cast assert is made to check if types are compatible.
+     */
     public static ResourceWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResourceWriter(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ResourceWriter extends NetObject  {
 
     // Constructors section
     
+    public ResourceWriter() throws Throwable {
+    }
 
     public ResourceWriter(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
@@ -131,6 +150,7 @@ public class ResourceWriter extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -139,6 +159,16 @@ public class ResourceWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddResource(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddResource", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,6 +219,16 @@ public class ResourceWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResourceData", name, typeName, serializedData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddResourceData(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddResourceData", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

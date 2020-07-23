@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags, Microsoft.CSharp, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags</a>
  */
 public class CSharpArgumentInfoFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.CSharp, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.CSharp, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.CSharp
+     */
     public static final String assemblyShortName = "Microsoft.CSharp";
+    /**
+     * Qualified class name: Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags
+     */
     public static final String className = "Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class CSharpArgumentInfoFlags extends NetObject  {
 
     // Flags management section
 
-    public CSharpArgumentInfoFlags add(CSharpArgumentInfoFlags val) throws Throwable {
+    public final CSharpArgumentInfoFlags add(CSharpArgumentInfoFlags val) throws Throwable {
         return new CSharpArgumentInfoFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CSharpArgumentInfoFlags remove(CSharpArgumentInfoFlags val) throws Throwable {
+    public final CSharpArgumentInfoFlags remove(CSharpArgumentInfoFlags val) throws Throwable {
         return new CSharpArgumentInfoFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CSharpArgumentInfoFlags val) throws Throwable {
+    public final boolean is(CSharpArgumentInfoFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CSharpArgumentInfoFlags val) throws Throwable {
+    public final boolean has(CSharpArgumentInfoFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

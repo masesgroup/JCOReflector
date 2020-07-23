@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.Web.Services.Configuration.XmlFormatExtensionPointAttribute, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Configuration.XmlFormatExtensionPointAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Configuration.XmlFormatExtensionPointAttribute</a>
  */
-public class XmlFormatExtensionPointAttribute extends NetObject  {
+public class XmlFormatExtensionPointAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Configuration.XmlFormatExtensionPointAttribute
+     */
     public static final String className = "System.Web.Services.Configuration.XmlFormatExtensionPointAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class XmlFormatExtensionPointAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlFormatExtensionPointAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static XmlFormatExtensionPointAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlFormatExtensionPointAttribute(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class XmlFormatExtensionPointAttribute extends NetObject  {
 
     // Constructors section
     
+    public XmlFormatExtensionPointAttribute() throws Throwable {
+    }
 
     public XmlFormatExtensionPointAttribute(java.lang.String memberName) throws Throwable {
         try {
@@ -120,29 +140,10 @@ public class XmlFormatExtensionPointAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -162,17 +163,6 @@ public class XmlFormatExtensionPointAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowElements", AllowElements);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

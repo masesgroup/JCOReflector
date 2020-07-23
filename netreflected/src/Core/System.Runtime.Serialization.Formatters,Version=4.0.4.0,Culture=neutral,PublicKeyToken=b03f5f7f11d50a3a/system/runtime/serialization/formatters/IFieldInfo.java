@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.Formatters.IFieldInfo, System.Runtime.Serialization.Formatters, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.IFieldInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.IFieldInfo</a>
  */
 public interface IFieldInfo extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization.Formatters, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Runtime.Serialization.Formatters, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Serialization.Formatters
+     */
+    public static final String assemblyShortName = "System.Runtime.Serialization.Formatters";
+    /**
+     * Qualified class name: System.Runtime.Serialization.Formatters.IFieldInfo
+     */
+    public static final String className = "System.Runtime.Serialization.Formatters.IFieldInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFieldInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IFieldInfo ToIFieldInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.Serialization.Formatters, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Runtime.Serialization.Formatters.IFieldInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Runtime.Serialization.Formatters, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Runtime.Serialization.Formatters"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IFieldInfoImplementation(from.getJCOInstance());
     }

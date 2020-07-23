@@ -44,12 +44,27 @@ import system.collections.CaseInsensitiveComparer;
 
 /**
  * The base .NET class managing System.Collections.CaseInsensitiveComparer, System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.CaseInsensitiveComparer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.CaseInsensitiveComparer</a>
  */
 public class CaseInsensitiveComparer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.NonGeneric
+     */
     public static final String assemblyShortName = "System.Collections.NonGeneric";
+    /**
+     * Qualified class name: System.Collections.CaseInsensitiveComparer
+     */
     public static final String className = "System.Collections.CaseInsensitiveComparer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CaseInsensitiveComparer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CaseInsensitiveComparer}, a cast assert is made to check if types are compatible.
+     */
     public static CaseInsensitiveComparer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CaseInsensitiveComparer(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class CaseInsensitiveComparer extends NetObject  {
 
     // Constructors section
     
-
     public CaseInsensitiveComparer() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -149,22 +165,22 @@ public class CaseInsensitiveComparer extends NetObject  {
     
     // Properties section
     
-    public static CaseInsensitiveComparer getDefault() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CaseInsensitiveComparer getDefault() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new CaseInsensitiveComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static CaseInsensitiveComparer getDefaultInvariant() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CaseInsensitiveComparer getDefaultInvariant() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultInvariant");
+            JCObject val = (JCObject)classInstance.Get("DefaultInvariant");
             return new CaseInsensitiveComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

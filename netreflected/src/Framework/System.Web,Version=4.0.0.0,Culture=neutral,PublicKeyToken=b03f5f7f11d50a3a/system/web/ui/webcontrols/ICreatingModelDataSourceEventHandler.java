@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.CreatingModelDataSourceEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CreatingModelDataSourceEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CreatingModelDataSourceEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CreatingModelDataSourceEventHandler</a>
+ */
 public interface ICreatingModelDataSourceEventHandler {
     public void Invoke(NetObject sender, CreatingModelDataSourceEventArgs e);
 }

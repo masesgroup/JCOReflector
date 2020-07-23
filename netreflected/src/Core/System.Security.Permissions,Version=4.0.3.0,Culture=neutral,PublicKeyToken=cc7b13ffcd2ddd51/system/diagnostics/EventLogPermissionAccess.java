@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Diagnostics.EventLogPermissionAccess, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLogPermissionAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLogPermissionAccess</a>
  */
 public class EventLogPermissionAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Diagnostics.EventLogPermissionAccess
+     */
     public static final String className = "System.Diagnostics.EventLogPermissionAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class EventLogPermissionAccess extends NetObject  {
 
     // Flags management section
 
-    public EventLogPermissionAccess add(EventLogPermissionAccess val) throws Throwable {
+    public final EventLogPermissionAccess add(EventLogPermissionAccess val) throws Throwable {
         return new EventLogPermissionAccess(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public EventLogPermissionAccess remove(EventLogPermissionAccess val) throws Throwable {
+    public final EventLogPermissionAccess remove(EventLogPermissionAccess val) throws Throwable {
         return new EventLogPermissionAccess(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(EventLogPermissionAccess val) throws Throwable {
+    public final boolean is(EventLogPermissionAccess val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(EventLogPermissionAccess val) throws Throwable {
+    public final boolean has(EventLogPermissionAccess val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

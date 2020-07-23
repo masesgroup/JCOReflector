@@ -47,12 +47,27 @@ import system.resources.IResourceWriterImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IResourceService, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IResourceService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IResourceService</a>
  */
 public class IResourceServiceImplementation extends NetObject implements IResourceService {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IResourceService
+     */
     public static final String className = "System.ComponentModel.Design.IResourceService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class IResourceServiceImplementation extends NetObject implements IResour
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IResourceService}, a cast assert is made to check if types are compatible.
+     */
     public static IResourceService ToIResourceService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IResourceServiceImplementation(from.getJCOInstance());

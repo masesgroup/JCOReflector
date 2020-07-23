@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.TabControlEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TabControlEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TabControlEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TabControlEventHandler</a>
+ */
 public interface ITabControlEventHandler {
     public void Invoke(NetObject sender, TabControlEventArgs e);
 }

@@ -43,12 +43,27 @@ import system.xml.xsl.XsltSettings;
 
 /**
  * The base .NET class managing System.Xml.Xsl.XsltSettings, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltSettings</a>
  */
 public class XsltSettings extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.XsltSettings
+     */
     public static final String className = "System.Xml.Xsl.XsltSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class XsltSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XsltSettings}, a cast assert is made to check if types are compatible.
+     */
     public static XsltSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XsltSettings(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class XsltSettings extends NetObject  {
 
     // Constructors section
     
-
     public XsltSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,22 +194,22 @@ public class XsltSettings extends NetObject  {
         }
     }
 
-    public static XsltSettings getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public XsltSettings getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new XsltSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XsltSettings getTrustedXslt() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public XsltSettings getTrustedXslt() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TrustedXslt");
+            JCObject val = (JCObject)classInstance.Get("TrustedXslt");
             return new XsltSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

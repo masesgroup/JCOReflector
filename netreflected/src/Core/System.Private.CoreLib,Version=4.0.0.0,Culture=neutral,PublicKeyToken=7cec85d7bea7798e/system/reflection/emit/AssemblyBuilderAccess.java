@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.Emit.AssemblyBuilderAccess, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.AssemblyBuilderAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.AssemblyBuilderAccess</a>
  */
 public class AssemblyBuilderAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.Emit.AssemblyBuilderAccess
+     */
     public static final String className = "System.Reflection.Emit.AssemblyBuilderAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class AssemblyBuilderAccess extends NetObject  {
 
     // Flags management section
 
-    public AssemblyBuilderAccess add(AssemblyBuilderAccess val) throws Throwable {
+    public final AssemblyBuilderAccess add(AssemblyBuilderAccess val) throws Throwable {
         return new AssemblyBuilderAccess(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AssemblyBuilderAccess remove(AssemblyBuilderAccess val) throws Throwable {
+    public final AssemblyBuilderAccess remove(AssemblyBuilderAccess val) throws Throwable {
         return new AssemblyBuilderAccess(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AssemblyBuilderAccess val) throws Throwable {
+    public final boolean is(AssemblyBuilderAccess val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AssemblyBuilderAccess val) throws Throwable {
+    public final boolean has(AssemblyBuilderAccess val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

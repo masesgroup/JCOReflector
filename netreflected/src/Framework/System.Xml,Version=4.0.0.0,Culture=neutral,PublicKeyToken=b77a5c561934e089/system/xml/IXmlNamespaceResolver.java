@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.IXmlNamespaceResolver, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlNamespaceResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlNamespaceResolver</a>
  */
 public interface IXmlNamespaceResolver extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
+    public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.IXmlNamespaceResolver
+     */
+    public static final String className = "System.Xml.IXmlNamespaceResolver";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlNamespaceResolver}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlNamespaceResolver ToIXmlNamespaceResolver(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xml.IXmlNamespaceResolver, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlNamespaceResolverImplementation(from.getJCOInstance());
     }

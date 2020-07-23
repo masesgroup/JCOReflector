@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.AdditionalContext, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.AdditionalContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.AdditionalContext</a>
  */
 public class AdditionalContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Protocols.WSTrust.AdditionalContext
+     */
     public static final String className = "System.IdentityModel.Protocols.WSTrust.AdditionalContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class AdditionalContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AdditionalContext}, a cast assert is made to check if types are compatible.
+     */
     public static AdditionalContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AdditionalContext(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class AdditionalContext extends NetObject  {
 
     // Constructors section
     
-
     public AdditionalContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file

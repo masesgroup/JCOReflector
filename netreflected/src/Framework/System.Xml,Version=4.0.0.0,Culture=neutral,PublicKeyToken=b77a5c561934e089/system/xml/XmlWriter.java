@@ -56,12 +56,27 @@ import system.xml.XmlSpace;
 
 /**
  * The base .NET class managing System.Xml.XmlWriter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter</a>
  */
 public class XmlWriter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlWriter
+     */
     public static final String className = "System.Xml.XmlWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +129,9 @@ public class XmlWriter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlWriter}, a cast assert is made to check if types are compatible.
+     */
     public static XmlWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlWriter(from.getJCOInstance());
@@ -122,6 +139,8 @@ public class XmlWriter extends NetObject  {
 
     // Constructors section
     
+    public XmlWriter() throws Throwable {
+    }
 
     
     // Methods section
@@ -180,11 +199,33 @@ public class XmlWriter extends NetObject  {
         }
     }
 
+    public Task WriteBase64Async(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", dupParam0, dupParam1, dupParam2);
+            return new Task(objWriteBase64Async);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Task WriteBinHexAsync(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objWriteBinHexAsync = (JCObject)classInstance.Invoke("WriteBinHexAsync", buffer, index, count);
+            return new Task(objWriteBinHexAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task WriteBinHexAsync(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objWriteBinHexAsync = (JCObject)classInstance.Invoke("WriteBinHexAsync", dupParam0, dupParam1, dupParam2);
             return new Task(objWriteBinHexAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,6 +259,17 @@ public class XmlWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objWriteCharsAsync = (JCObject)classInstance.Invoke("WriteCharsAsync", buffer, index, count);
+            return new Task(objWriteCharsAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task WriteCharsAsync(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objWriteCharsAsync = (JCObject)classInstance.Invoke("WriteCharsAsync", dupParam0, dupParam1, dupParam2);
             return new Task(objWriteCharsAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -372,6 +424,17 @@ public class XmlWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objWriteRawAsync = (JCObject)classInstance.Invoke("WriteRawAsync", buffer, index, count);
+            return new Task(objWriteRawAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task WriteRawAsync(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objWriteRawAsync = (JCObject)classInstance.Invoke("WriteRawAsync", dupParam0, dupParam1, dupParam2);
             return new Task(objWriteRawAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -645,11 +708,31 @@ public class XmlWriter extends NetObject  {
         }
     }
 
+    public void WriteBase64(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteBase64", dupParam0, dupParam1, dupParam2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void WriteBinHex(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBinHex", buffer, index, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteBinHex(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteBinHex", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,6 +763,16 @@ public class XmlWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteChars", buffer, index, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteChars(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteChars", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -850,6 +943,16 @@ public class XmlWriter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRaw", buffer, index, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteRaw(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteRaw", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

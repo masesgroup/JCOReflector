@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.InitializingNewItemEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link InitializingNewItemEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InitializingNewItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InitializingNewItemEventHandler</a>
+ */
 public interface IInitializingNewItemEventHandler {
     public void Invoke(NetObject sender, InitializingNewItemEventArgs e);
 }

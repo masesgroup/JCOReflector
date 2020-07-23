@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.runtime.interopservices.ArrayWithOffset;
 
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ArrayWithOffset, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ArrayWithOffset" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ArrayWithOffset</a>
  */
-public class ArrayWithOffset extends NetObject  {
+public class ArrayWithOffset extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ArrayWithOffset
+     */
     public static final String className = "System.Runtime.InteropServices.ArrayWithOffset";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ArrayWithOffset extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ArrayWithOffset}, a cast assert is made to check if types are compatible.
+     */
     public static ArrayWithOffset cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ArrayWithOffset(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ArrayWithOffset extends NetObject  {
 
     // Constructors section
     
+    public ArrayWithOffset() throws Throwable {
+    }
 
     public ArrayWithOffset(NetObject array, int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -119,6 +139,7 @@ public class ArrayWithOffset extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.data.FilterEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link FilterEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.FilterEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.FilterEventHandler</a>
+ */
 public interface IFilterEventHandler {
     public void Invoke(NetObject sender, FilterEventArgs e);
 }

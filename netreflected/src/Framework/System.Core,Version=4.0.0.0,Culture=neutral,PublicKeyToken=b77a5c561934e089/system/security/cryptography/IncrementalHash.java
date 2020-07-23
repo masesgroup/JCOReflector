@@ -44,12 +44,27 @@ import system.security.cryptography.HashAlgorithmName;
 
 /**
  * The base .NET class managing System.Security.Cryptography.IncrementalHash, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.IncrementalHash" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.IncrementalHash</a>
  */
 public class IncrementalHash extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.IncrementalHash
+     */
     public static final String className = "System.Security.Cryptography.IncrementalHash";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class IncrementalHash extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IncrementalHash}, a cast assert is made to check if types are compatible.
+     */
     public static IncrementalHash cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IncrementalHash(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class IncrementalHash extends NetObject  {
 
     // Constructors section
     
+    public IncrementalHash() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -155,6 +176,17 @@ public class IncrementalHash extends NetObject  {
         }
     }
 
+    public static IncrementalHash CreateHMAC(HashAlgorithmName dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateHMAC = (JCObject)classType.Invoke("CreateHMAC", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            return new IncrementalHash(objCreateHMAC);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AppendData(byte[] data) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,11 +197,31 @@ public class IncrementalHash extends NetObject  {
         }
     }
 
+    public void AppendData(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AppendData", (Object)dupParam0);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AppendData(byte[] data, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendData", data, offset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AppendData(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AppendData", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

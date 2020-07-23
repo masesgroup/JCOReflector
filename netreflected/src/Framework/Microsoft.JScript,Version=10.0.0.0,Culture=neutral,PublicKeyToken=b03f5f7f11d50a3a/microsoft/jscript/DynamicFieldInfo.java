@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing Microsoft.JScript.DynamicFieldInfo, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.DynamicFieldInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.DynamicFieldInfo</a>
  */
 public class DynamicFieldInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.DynamicFieldInfo
+     */
     public static final String className = "Microsoft.JScript.DynamicFieldInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class DynamicFieldInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicFieldInfo}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicFieldInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicFieldInfo(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class DynamicFieldInfo extends NetObject  {
 
     // Constructors section
     
+    public DynamicFieldInfo() throws Throwable {
+    }
 
     public DynamicFieldInfo(java.lang.String name, NetObject value) throws Throwable {
         try {
@@ -128,6 +147,7 @@ public class DynamicFieldInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

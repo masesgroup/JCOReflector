@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.Configuration.IConfigMapPath, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.IConfigMapPath" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.IConfigMapPath</a>
  */
 public interface IConfigMapPath extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
+    public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.IConfigMapPath
+     */
+    public static final String className = "System.Web.Configuration.IConfigMapPath";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IConfigMapPath}, a cast assert is made to check if types are compatible.
+     */
     public static IConfigMapPath ToIConfigMapPath(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.Configuration.IConfigMapPath, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Web"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IConfigMapPathImplementation(from.getJCOInstance());
     }

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.PropertyDefinitionHandle;
 
 
 /**
  * The base .NET class managing System.Reflection.Metadata.PropertyDefinitionHandle, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.PropertyDefinitionHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.PropertyDefinitionHandle</a>
  */
-public class PropertyDefinitionHandle extends NetObject  {
+public class PropertyDefinitionHandle extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.PropertyDefinitionHandle
+     */
     public static final String className = "System.Reflection.Metadata.PropertyDefinitionHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class PropertyDefinitionHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyDefinitionHandle}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyDefinitionHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyDefinitionHandle(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class PropertyDefinitionHandle extends NetObject  {
 
     // Constructors section
     
+    public PropertyDefinitionHandle() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.compilation.BuildManagerHostUnloadEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BuildManagerHostUnloadEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildManagerHostUnloadEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildManagerHostUnloadEventHandler</a>
+ */
 public interface IBuildManagerHostUnloadEventHandler {
     public void Invoke(NetObject sender, BuildManagerHostUnloadEventArgs e);
 }

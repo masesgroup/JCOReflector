@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.IssuerNameRegistry;
 import system.identitymodel.tokens.SecurityToken;
 import system.xml.XmlNodeList;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry</a>
  */
-public class ConfigurationBasedIssuerNameRegistry extends NetObject  {
+public class ConfigurationBasedIssuerNameRegistry extends IssuerNameRegistry  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry
+     */
     public static final String className = "System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ConfigurationBasedIssuerNameRegistry extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationBasedIssuerNameRegistry}, a cast assert is made to check if types are compatible.
+     */
     public static ConfigurationBasedIssuerNameRegistry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ConfigurationBasedIssuerNameRegistry(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class ConfigurationBasedIssuerNameRegistry extends NetObject  {
 
     // Constructors section
     
-
     public ConfigurationBasedIssuerNameRegistry() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -130,26 +147,6 @@ public class ConfigurationBasedIssuerNameRegistry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetIssuerName", securityToken == null ? null : securityToken.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetIssuerName(SecurityToken securityToken, java.lang.String requestedIssuerName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetIssuerName", securityToken == null ? null : securityToken.getJCOInstance(), requestedIssuerName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetWindowsIssuerName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetWindowsIssuerName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

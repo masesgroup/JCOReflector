@@ -43,12 +43,27 @@ import system.windows.input.InputEventArgs;
 
 /**
  * The base .NET class managing System.Windows.Input.InputGesture, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputGesture" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputGesture</a>
  */
 public class InputGesture extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.InputGesture
+     */
     public static final String className = "System.Windows.Input.InputGesture";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class InputGesture extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InputGesture}, a cast assert is made to check if types are compatible.
+     */
     public static InputGesture cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InputGesture(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class InputGesture extends NetObject  {
 
     // Constructors section
     
+    public InputGesture() throws Throwable {
+    }
 
     
     // Methods section

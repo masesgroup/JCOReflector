@@ -45,12 +45,29 @@ import system.windows.controls.Panel;
 
 /**
  * The base .NET class managing System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo</a>
  */
 public interface IHierarchicalVirtualizationAndScrollInfo extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
+    public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo
+     */
+    public static final String className = "System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHierarchicalVirtualizationAndScrollInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IHierarchicalVirtualizationAndScrollInfo ToIHierarchicalVirtualizationAndScrollInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "PresentationFramework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IHierarchicalVirtualizationAndScrollInfoImplementation(from.getJCOInstance());
     }

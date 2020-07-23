@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Cryptography.PaddingMode, System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.PaddingMode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.PaddingMode</a>
  */
 public class PaddingMode extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Primitives
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Primitives";
+    /**
+     * Qualified class name: System.Security.Cryptography.PaddingMode
+     */
     public static final String className = "System.Security.Cryptography.PaddingMode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Web.HttpCacheVaryByContentEncodings, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpCacheVaryByContentEncodings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpCacheVaryByContentEncodings</a>
  */
 public class HttpCacheVaryByContentEncodings extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.HttpCacheVaryByContentEncodings
+     */
     public static final String className = "System.Web.HttpCacheVaryByContentEncodings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class HttpCacheVaryByContentEncodings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpCacheVaryByContentEncodings}, a cast assert is made to check if types are compatible.
+     */
     public static HttpCacheVaryByContentEncodings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpCacheVaryByContentEncodings(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class HttpCacheVaryByContentEncodings extends NetObject  {
 
     // Constructors section
     
-
     public HttpCacheVaryByContentEncodings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -147,6 +163,16 @@ public class HttpCacheVaryByContentEncodings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetContentEncodings", (Object)contentEncodings);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetContentEncodings(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetContentEncodings", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

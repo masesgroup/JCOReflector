@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.ProgressChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ProgressChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ProgressChangedEventHandler</a>
+ */
 public interface IProgressChangedEventHandler {
     public void Invoke(NetObject sender, ProgressChangedEventArgs e);
 }

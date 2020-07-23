@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.EnterpriseServices.XACTTRANSINFO, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.XACTTRANSINFO" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.XACTTRANSINFO</a>
  */
-public class XACTTRANSINFO extends NetObject  {
+public class XACTTRANSINFO extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.XACTTRANSINFO
+     */
     public static final String className = "System.EnterpriseServices.XACTTRANSINFO";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class XACTTRANSINFO extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XACTTRANSINFO}, a cast assert is made to check if types are compatible.
+     */
     public static XACTTRANSINFO cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XACTTRANSINFO(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class XACTTRANSINFO extends NetObject  {
 
     // Constructors section
     
+    public XACTTRANSINFO() throws Throwable {
+    }
+
+
 
     
     // Methods section

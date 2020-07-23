@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.EnterpriseServices.IServiceCall, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.IServiceCall" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.IServiceCall</a>
  */
 public class IServiceCallImplementation extends NetObject implements IServiceCall {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.IServiceCall
+     */
     public static final String className = "System.EnterpriseServices.IServiceCall";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IServiceCallImplementation extends NetObject implements IServiceCal
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IServiceCall}, a cast assert is made to check if types are compatible.
+     */
     public static IServiceCall ToIServiceCall(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IServiceCallImplementation(from.getJCOInstance());

@@ -45,12 +45,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Collections.Specialized.HybridDictionary, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.HybridDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.HybridDictionary</a>
  */
 public class HybridDictionary extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Collections.Specialized.HybridDictionary
+     */
     public static final String className = "System.Collections.Specialized.HybridDictionary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class HybridDictionary extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HybridDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static HybridDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HybridDictionary(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class HybridDictionary extends NetObject  {
 
     // Constructors section
     
-
     public HybridDictionary() throws Throwable {
         try {
             // add reference to assemblyName.dll file

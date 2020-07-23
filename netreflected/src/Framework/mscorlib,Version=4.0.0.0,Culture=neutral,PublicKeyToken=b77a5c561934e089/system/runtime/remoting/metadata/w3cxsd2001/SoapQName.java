@@ -43,12 +43,27 @@ import system.runtime.remoting.metadata.w3cxsd2001.SoapQName;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName</a>
  */
 public class SoapQName extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName
+     */
     public static final String className = "System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SoapQName extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapQName}, a cast assert is made to check if types are compatible.
+     */
     public static SoapQName cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapQName(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SoapQName extends NetObject  {
 
     // Constructors section
     
-
     public SoapQName() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -239,11 +255,11 @@ public class SoapQName extends NetObject  {
         }
     }
 
-    public static java.lang.String getXsdType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getXsdType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("XsdType");
+            return (java.lang.String)classInstance.Get("XsdType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.BinaryKeyIdentifierClause;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.identitymodel.tokens.SecurityKey;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.BinarySecretKeyIdentifierClause, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.BinarySecretKeyIdentifierClause" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.BinarySecretKeyIdentifierClause</a>
  */
-public class BinarySecretKeyIdentifierClause extends NetObject  {
+public class BinarySecretKeyIdentifierClause extends BinaryKeyIdentifierClause  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.BinarySecretKeyIdentifierClause
+     */
     public static final String className = "System.ServiceModel.Security.BinarySecretKeyIdentifierClause";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class BinarySecretKeyIdentifierClause extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BinarySecretKeyIdentifierClause}, a cast assert is made to check if types are compatible.
+     */
     public static BinarySecretKeyIdentifierClause cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BinarySecretKeyIdentifierClause(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class BinarySecretKeyIdentifierClause extends NetObject  {
 
     // Constructors section
     
+    public BinarySecretKeyIdentifierClause() throws Throwable {
+    }
 
     public BinarySecretKeyIdentifierClause(byte[] key) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
@@ -142,72 +162,15 @@ public class BinarySecretKeyIdentifierClause extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean Matches(byte[] data) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Matches", (Object)data);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Matches(byte[] data, int offset) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Matches", data, offset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] GetBuffer() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBuffer");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetBuffer = 0; indexGetBuffer < resultingArrayList.size(); indexGetBuffer++ ) {
-				resultingArray[indexGetBuffer] = (byte)resultingArrayList.get(indexGetBuffer);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] GetDerivationNonce() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDerivationNonce");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetDerivationNonce = 0; indexGetDerivationNonce < resultingArrayList.size(); indexGetDerivationNonce++ ) {
-				resultingArray[indexGetDerivationNonce] = (byte)resultingArrayList.get(indexGetDerivationNonce);
-            }
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,56 +210,6 @@ public class BinarySecretKeyIdentifierClause extends NetObject  {
     
     // Properties section
     
-    public boolean getCanCreateKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanCreateKey");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDerivationLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DerivationLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getClauseType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ClauseType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setId(java.lang.String Id) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Id", Id);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

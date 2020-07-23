@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.configuration.Configuration;
 import system.web.ui.design.IProjectItem;
 import system.web.ui.design.IProjectItemImplementation;
@@ -44,12 +46,29 @@ import system.web.ui.design.IProjectItemImplementation;
 
 /**
  * The base .NET class managing System.Web.UI.Design.IWebApplication, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IWebApplication" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IWebApplication</a>
  */
-public interface IWebApplication extends IJCOBridgeReflected {
-
+public interface IWebApplication extends IJCOBridgeReflected, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
+    public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.IWebApplication
+     */
+    public static final String className = "System.Web.UI.Design.IWebApplication";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWebApplication}, a cast assert is made to check if types are compatible.
+     */
     public static IWebApplication ToIWebApplication(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.UI.Design.IWebApplication, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Design"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IWebApplicationImplementation(from.getJCOInstance());
     }
@@ -94,7 +113,6 @@ public interface IWebApplication extends IJCOBridgeReflected {
     
     public Configuration OpenWebConfiguration(boolean isReadOnly) throws Throwable;
 
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
     public IProjectItem GetProjectItemFromUrl(java.lang.String appRelativeUrl) throws Throwable;
 

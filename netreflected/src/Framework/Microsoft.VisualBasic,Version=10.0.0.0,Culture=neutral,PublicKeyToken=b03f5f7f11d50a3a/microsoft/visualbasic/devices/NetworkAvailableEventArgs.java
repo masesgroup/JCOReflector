@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs</a>
  */
-public class NetworkAvailableEventArgs extends NetObject  {
+public class NetworkAvailableEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs
+     */
     public static final String className = "Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class NetworkAvailableEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetworkAvailableEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static NetworkAvailableEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NetworkAvailableEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class NetworkAvailableEventArgs extends NetObject  {
 
     // Constructors section
     
+    public NetworkAvailableEventArgs() throws Throwable {
+    }
 
     public NetworkAvailableEventArgs(boolean networkAvailable) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class NetworkAvailableEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -46,12 +46,27 @@ import system.xaml.XamlSchemaContext;
 
 /**
  * The base .NET class managing System.Xaml.XamlWriter, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter</a>
  */
 public class XamlWriter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.XamlWriter
+     */
     public static final String className = "System.Xaml.XamlWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class XamlWriter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlWriter}, a cast assert is made to check if types are compatible.
+     */
     public static XamlWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlWriter(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class XamlWriter extends NetObject  {
 
     // Constructors section
     
+    public XamlWriter() throws Throwable {
+    }
 
     
     // Methods section

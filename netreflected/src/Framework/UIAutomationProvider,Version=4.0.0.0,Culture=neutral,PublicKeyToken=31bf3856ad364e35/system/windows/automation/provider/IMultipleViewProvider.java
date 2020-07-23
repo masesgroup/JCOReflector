@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.IMultipleViewProvider, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IMultipleViewProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IMultipleViewProvider</a>
  */
 public interface IMultipleViewProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
+    public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.IMultipleViewProvider
+     */
+    public static final String className = "System.Windows.Automation.Provider.IMultipleViewProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMultipleViewProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IMultipleViewProvider ToIMultipleViewProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Automation.Provider.IMultipleViewProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "UIAutomationProvider"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IMultipleViewProviderImplementation(from.getJCOInstance());
     }

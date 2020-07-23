@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.DecoderFallbackBuffer;
 import system.text.DecoderReplacementFallback;
 
 
 /**
  * The base .NET class managing System.Text.DecoderReplacementFallbackBuffer, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderReplacementFallbackBuffer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderReplacementFallbackBuffer</a>
  */
-public class DecoderReplacementFallbackBuffer extends NetObject  {
+public class DecoderReplacementFallbackBuffer extends DecoderFallbackBuffer  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Text.DecoderReplacementFallbackBuffer
+     */
     public static final String className = "System.Text.DecoderReplacementFallbackBuffer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DecoderReplacementFallbackBuffer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DecoderReplacementFallbackBuffer}, a cast assert is made to check if types are compatible.
+     */
     public static DecoderReplacementFallbackBuffer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DecoderReplacementFallbackBuffer(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class DecoderReplacementFallbackBuffer extends NetObject  {
 
     // Constructors section
     
+    public DecoderReplacementFallbackBuffer() throws Throwable {
+    }
 
     public DecoderReplacementFallbackBuffer(DecoderReplacementFallback fallback) throws Throwable {
         try {
@@ -121,6 +141,7 @@ public class DecoderReplacementFallbackBuffer extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -129,6 +150,16 @@ public class DecoderReplacementFallbackBuffer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Fallback", bytesUnknown, index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Fallback(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Fallback", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,16 +199,6 @@ public class DecoderReplacementFallbackBuffer extends NetObject  {
     
     // Properties section
     
-    public int getRemaining() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Remaining");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

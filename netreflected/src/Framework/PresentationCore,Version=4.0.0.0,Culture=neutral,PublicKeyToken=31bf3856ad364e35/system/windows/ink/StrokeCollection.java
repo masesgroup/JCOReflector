@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.Stream;
-import system.windows.ink.Stroke;
 import system.Guid;
+import system.windows.ink.Stroke;
 import system.windows.ink.IncrementalLassoHitTester;
 import system.windows.ink.IncrementalStrokeHitTester;
 import system.windows.ink.StylusShape;
@@ -55,12 +55,27 @@ import system.windows.ink.StrokeCollectionChangedEventHandler;
 
 /**
  * The base .NET class managing System.Windows.Ink.StrokeCollection, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StrokeCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StrokeCollection</a>
  */
 public class StrokeCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Ink.StrokeCollection
+     */
     public static final String className = "System.Windows.Ink.StrokeCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -113,7 +128,9 @@ public class StrokeCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StrokeCollection}, a cast assert is made to check if types are compatible.
+     */
     public static StrokeCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StrokeCollection(from.getJCOInstance());
@@ -121,7 +138,6 @@ public class StrokeCollection extends NetObject  {
 
     // Constructors section
     
-
     public StrokeCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -146,16 +162,6 @@ public class StrokeCollection extends NetObject  {
     
     // Methods section
     
-    public boolean Contains(Stroke item) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ContainsPropertyData(Guid propertyDataId) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,17 +172,7 @@ public class StrokeCollection extends NetObject  {
         }
     }
 
-    public boolean Remove(Stroke item) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Remove", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int IndexOf(Stroke stroke) throws Throwable {
+    public int IndexOfNewStrokeCollection(Stroke stroke) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -291,16 +287,6 @@ public class StrokeCollection extends NetObject  {
         }
     }
 
-    public void Add(Stroke item) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Add(StrokeCollection strokes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -321,31 +307,11 @@ public class StrokeCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Clip(Rect bounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clip", bounds == null ? null : bounds.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(Stroke[] array, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,31 +337,11 @@ public class StrokeCollection extends NetObject  {
         }
     }
 
-    public void Insert(int index, Stroke item) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Insert", index, item == null ? null : item.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Remove(StrokeCollection strokes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", strokes == null ? null : strokes.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveAt(int index) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,16 +411,6 @@ public class StrokeCollection extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

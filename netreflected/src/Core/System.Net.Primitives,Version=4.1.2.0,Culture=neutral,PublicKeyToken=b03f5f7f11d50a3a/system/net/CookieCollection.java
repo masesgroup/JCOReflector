@@ -45,12 +45,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Net.CookieCollection, System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.CookieCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.CookieCollection</a>
  */
 public class CookieCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Primitives
+     */
     public static final String assemblyShortName = "System.Net.Primitives";
+    /**
+     * Qualified class name: System.Net.CookieCollection
+     */
     public static final String className = "System.Net.CookieCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CookieCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CookieCollection}, a cast assert is made to check if types are compatible.
+     */
     public static CookieCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CookieCollection(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class CookieCollection extends NetObject  {
 
     // Constructors section
     
-
     public CookieCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file

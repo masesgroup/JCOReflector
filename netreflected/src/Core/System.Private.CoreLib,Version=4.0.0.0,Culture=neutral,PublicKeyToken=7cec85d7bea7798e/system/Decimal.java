@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Single;
 import system.UInt32;
 import system.UInt64;
@@ -53,12 +54,27 @@ import system.UInt16;
 
 /**
  * The base .NET class managing System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Decimal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Decimal</a>
  */
-public class Decimal extends NetObject  {
+public class Decimal extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Decimal
+     */
     public static final String className = "System.Decimal";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +127,9 @@ public class Decimal extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Decimal}, a cast assert is made to check if types are compatible.
+     */
     public static Decimal cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Decimal(from.getJCOInstance());
@@ -119,6 +137,8 @@ public class Decimal extends NetObject  {
 
     // Constructors section
     
+    public Decimal() throws Throwable {
+    }
 
     public Decimal(double value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -199,6 +219,7 @@ public class Decimal extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

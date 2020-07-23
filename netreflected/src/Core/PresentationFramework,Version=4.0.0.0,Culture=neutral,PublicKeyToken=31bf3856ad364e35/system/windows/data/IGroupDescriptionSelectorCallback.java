@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.componentmodel.GroupDescription;
 import system.windows.data.CollectionViewGroup;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link GroupDescriptionSelectorCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.GroupDescriptionSelectorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.GroupDescriptionSelectorCallback</a>
+ */
 public interface IGroupDescriptionSelectorCallback {
     public GroupDescription Invoke(CollectionViewGroup group, int level);
 }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.IO.NotifyFilters, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.NotifyFilters" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.NotifyFilters</a>
  */
 public class NotifyFilters extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.IO.NotifyFilters
+     */
     public static final String className = "System.IO.NotifyFilters";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class NotifyFilters extends NetObject  {
 
     // Flags management section
 
-    public NotifyFilters add(NotifyFilters val) throws Throwable {
+    public final NotifyFilters add(NotifyFilters val) throws Throwable {
         return new NotifyFilters(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public NotifyFilters remove(NotifyFilters val) throws Throwable {
+    public final NotifyFilters remove(NotifyFilters val) throws Throwable {
         return new NotifyFilters(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(NotifyFilters val) throws Throwable {
+    public final boolean is(NotifyFilters val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(NotifyFilters val) throws Throwable {
+    public final boolean has(NotifyFilters val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

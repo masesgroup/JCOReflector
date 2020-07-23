@@ -38,21 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.IAsyncResult;
-import system.IAsyncResultImplementation;
-import system.io.Stream;
-import system.AsyncCallback;
+import system.servicemodel.channels.StreamUpgradeAcceptor;
 import system.servicemodel.security.SecurityMessageProperty;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor</a>
  */
-public class StreamSecurityUpgradeAcceptor extends NetObject  {
+public class StreamSecurityUpgradeAcceptor extends StreamUpgradeAcceptor  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor
+     */
     public static final String className = "System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +117,9 @@ public class StreamSecurityUpgradeAcceptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StreamSecurityUpgradeAcceptor}, a cast assert is made to check if types are compatible.
+     */
     public static StreamSecurityUpgradeAcceptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StreamSecurityUpgradeAcceptor(from.getJCOInstance());
@@ -113,53 +127,12 @@ public class StreamSecurityUpgradeAcceptor extends NetObject  {
 
     // Constructors section
     
+    public StreamSecurityUpgradeAcceptor() throws Throwable {
+    }
 
     
     // Methods section
     
-    public boolean CanUpgrade(java.lang.String contentType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanUpgrade", contentType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IAsyncResult BeginAcceptUpgrade(Stream stream, AsyncCallback callback, NetObject state) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginAcceptUpgrade = (JCObject)classInstance.Invoke("BeginAcceptUpgrade", stream == null ? null : stream.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
-            return new IAsyncResultImplementation(objBeginAcceptUpgrade);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream AcceptUpgrade(Stream stream) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAcceptUpgrade = (JCObject)classInstance.Invoke("AcceptUpgrade", stream == null ? null : stream.getJCOInstance());
-            return new Stream(objAcceptUpgrade);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream EndAcceptUpgrade(IAsyncResult result) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEndAcceptUpgrade = (JCObject)classInstance.Invoke("EndAcceptUpgrade", result == null ? null : result.getJCOInstance());
-            return new Stream(objEndAcceptUpgrade);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityMessageProperty GetRemoteSecurity() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

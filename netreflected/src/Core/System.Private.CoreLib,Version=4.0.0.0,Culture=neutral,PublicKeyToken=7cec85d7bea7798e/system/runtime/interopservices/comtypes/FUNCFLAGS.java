@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.FUNCFLAGS, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.FUNCFLAGS" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.FUNCFLAGS</a>
  */
 public class FUNCFLAGS extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.FUNCFLAGS
+     */
     public static final String className = "System.Runtime.InteropServices.ComTypes.FUNCFLAGS";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -149,19 +164,19 @@ public class FUNCFLAGS extends NetObject  {
 
     // Flags management section
 
-    public FUNCFLAGS add(FUNCFLAGS val) throws Throwable {
+    public final FUNCFLAGS add(FUNCFLAGS val) throws Throwable {
         return new FUNCFLAGS(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public FUNCFLAGS remove(FUNCFLAGS val) throws Throwable {
+    public final FUNCFLAGS remove(FUNCFLAGS val) throws Throwable {
         return new FUNCFLAGS(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(FUNCFLAGS val) throws Throwable {
+    public final boolean is(FUNCFLAGS val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(FUNCFLAGS val) throws Throwable {
+    public final boolean has(FUNCFLAGS val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -47,12 +47,27 @@ import system.Version;
 
 /**
  * The base .NET class managing System.Environment, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Environment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Environment</a>
  */
 public class Environment extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Environment
+     */
     public static final String className = "System.Environment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class Environment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Environment}, a cast assert is made to check if types are compatible.
+     */
     public static Environment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Environment(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class Environment extends NetObject  {
 
     // Constructors section
     
+    public Environment() throws Throwable {
+    }
 
     
     // Methods section
@@ -271,232 +290,232 @@ public class Environment extends NetObject  {
     
     // Properties section
     
-    public static boolean getHasShutdownStarted() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getHasShutdownStarted() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("HasShutdownStarted");
+            return (boolean)classInstance.Get("HasShutdownStarted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getIs64BitOperatingSystem() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIs64BitOperatingSystem() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("Is64BitOperatingSystem");
+            return (boolean)classInstance.Get("Is64BitOperatingSystem");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getIs64BitProcess() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIs64BitProcess() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("Is64BitProcess");
+            return (boolean)classInstance.Get("Is64BitProcess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getUserInteractive() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getUserInteractive() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("UserInteractive");
+            return (boolean)classInstance.Get("UserInteractive");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getCurrentManagedThreadId() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getCurrentManagedThreadId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("CurrentManagedThreadId");
+            return (int)classInstance.Get("CurrentManagedThreadId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getExitCode() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getExitCode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("ExitCode");
+            return (int)classInstance.Get("ExitCode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setExitCode(int ExitCode) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setExitCode(int ExitCode) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("ExitCode", ExitCode);
+            classInstance.Set("ExitCode", ExitCode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getProcessorCount() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getProcessorCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("ProcessorCount");
+            return (int)classInstance.Get("ProcessorCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getSystemPageSize() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getSystemPageSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("SystemPageSize");
+            return (int)classInstance.Get("SystemPageSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getTickCount() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getTickCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("TickCount");
+            return (int)classInstance.Get("TickCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long getTickCount64() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public long getTickCount64() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classType.Get("TickCount64");
+            return (long)classInstance.Get("TickCount64");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long getWorkingSet() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public long getWorkingSet() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classType.Get("WorkingSet");
+            return (long)classInstance.Get("WorkingSet");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static OperatingSystem getOSVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public OperatingSystem getOSVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OSVersion");
+            JCObject val = (JCObject)classInstance.Get("OSVersion");
             return new OperatingSystem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getCommandLine() throws Throwable, system.ApplicationException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getCommandLine() throws Throwable, system.ApplicationException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("CommandLine");
+            return (java.lang.String)classInstance.Get("CommandLine");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getCurrentDirectory() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getCurrentDirectory() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("CurrentDirectory");
+            return (java.lang.String)classInstance.Get("CurrentDirectory");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCurrentDirectory(java.lang.String CurrentDirectory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCurrentDirectory(java.lang.String CurrentDirectory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CurrentDirectory", CurrentDirectory);
+            classInstance.Set("CurrentDirectory", CurrentDirectory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getMachineName() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getMachineName() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("MachineName");
+            return (java.lang.String)classInstance.Get("MachineName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getNewLine() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getNewLine() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("NewLine");
+            return (java.lang.String)classInstance.Get("NewLine");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getStackTrace() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getStackTrace() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("StackTrace");
+            return (java.lang.String)classInstance.Get("StackTrace");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getSystemDirectory() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getSystemDirectory() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("SystemDirectory");
+            return (java.lang.String)classInstance.Get("SystemDirectory");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getUserDomainName() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getUserDomainName() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("UserDomainName");
+            return (java.lang.String)classInstance.Get("UserDomainName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getUserName() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getUserName() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("UserName");
+            return (java.lang.String)classInstance.Get("UserName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Version getVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Version getVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Version");
+            JCObject val = (JCObject)classInstance.Get("Version");
             return new Version(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

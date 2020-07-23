@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Net.Mime.DispositionTypeNames, System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mime.DispositionTypeNames" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mime.DispositionTypeNames</a>
  */
 public class DispositionTypeNames extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.Mail
+     */
     public static final String assemblyShortName = "System.Net.Mail";
+    /**
+     * Qualified class name: System.Net.Mime.DispositionTypeNames
+     */
     public static final String className = "System.Net.Mime.DispositionTypeNames";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class DispositionTypeNames extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DispositionTypeNames}, a cast assert is made to check if types are compatible.
+     */
     public static DispositionTypeNames cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DispositionTypeNames(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class DispositionTypeNames extends NetObject  {
 
     // Constructors section
     
+    public DispositionTypeNames() throws Throwable {
+    }
 
     
     // Methods section

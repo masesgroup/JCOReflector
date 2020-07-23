@@ -43,12 +43,29 @@ import system.workflow.componentmodel.ActivityExecutionContext;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.ICompensatableActivity, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.ICompensatableActivity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.ICompensatableActivity</a>
  */
 public interface ICompensatableActivity extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
+    public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.ICompensatableActivity
+     */
+    public static final String className = "System.Workflow.ComponentModel.ICompensatableActivity";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICompensatableActivity}, a cast assert is made to check if types are compatible.
+     */
     public static ICompensatableActivity ToICompensatableActivity(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Workflow.ComponentModel.ICompensatableActivity, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Workflow.ComponentModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICompensatableActivityImplementation(from.getJCOInstance());
     }

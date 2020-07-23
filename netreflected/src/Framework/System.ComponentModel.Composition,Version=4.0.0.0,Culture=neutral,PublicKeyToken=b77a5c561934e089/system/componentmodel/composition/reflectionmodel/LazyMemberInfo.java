@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.MemberInfo;
 import system.reflection.MemberTypes;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.ReflectionModel.LazyMemberInfo, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.ReflectionModel.LazyMemberInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.ReflectionModel.LazyMemberInfo</a>
  */
-public class LazyMemberInfo extends NetObject  {
+public class LazyMemberInfo extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.ReflectionModel.LazyMemberInfo
+     */
     public static final String className = "System.ComponentModel.Composition.ReflectionModel.LazyMemberInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class LazyMemberInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LazyMemberInfo}, a cast assert is made to check if types are compatible.
+     */
     public static LazyMemberInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LazyMemberInfo(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class LazyMemberInfo extends NetObject  {
 
     // Constructors section
     
+    public LazyMemberInfo() throws Throwable {
+    }
 
     public LazyMemberInfo(MemberInfo member) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
@@ -130,6 +150,7 @@ public class LazyMemberInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.documents.PaginationProgressEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PaginationProgressEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PaginationProgressEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PaginationProgressEventHandler</a>
+ */
 public interface IPaginationProgressEventHandler {
     public void Invoke(NetObject sender, PaginationProgressEventArgs e);
 }

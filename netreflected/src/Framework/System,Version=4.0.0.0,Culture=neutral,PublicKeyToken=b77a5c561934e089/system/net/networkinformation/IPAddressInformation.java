@@ -43,12 +43,27 @@ import system.net.IPAddress;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.IPAddressInformation, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPAddressInformation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPAddressInformation</a>
  */
 public class IPAddressInformation extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.IPAddressInformation
+     */
     public static final String className = "System.Net.NetworkInformation.IPAddressInformation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class IPAddressInformation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPAddressInformation}, a cast assert is made to check if types are compatible.
+     */
     public static IPAddressInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IPAddressInformation(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class IPAddressInformation extends NetObject  {
 
     // Constructors section
     
+    public IPAddressInformation() throws Throwable {
+    }
 
     
     // Methods section

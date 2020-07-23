@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.navigation.NavigationFailedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link NavigationFailedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationFailedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationFailedEventHandler</a>
+ */
 public interface INavigationFailedEventHandler {
     public void Invoke(NetObject sender, NavigationFailedEventArgs e);
 }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.PopupEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PopupEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PopupEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PopupEventHandler</a>
+ */
 public interface IPopupEventHandler {
     public void Invoke(NetObject sender, PopupEventArgs e);
 }

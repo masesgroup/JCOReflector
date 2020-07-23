@@ -43,12 +43,29 @@ import microsoft.build.tasks.deployment.bootstrapper.ProductBuilderCollection;
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings</a>
  */
 public interface IBuildSettings extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings
+     */
+    public static final String className = "Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBuildSettings}, a cast assert is made to check if types are compatible.
+     */
     public static IBuildSettings ToIBuildSettings(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Tasks.v4.0"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IBuildSettingsImplementation(from.getJCOInstance());
     }

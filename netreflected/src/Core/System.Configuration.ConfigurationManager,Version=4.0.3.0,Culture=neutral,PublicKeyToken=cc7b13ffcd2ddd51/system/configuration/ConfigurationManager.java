@@ -48,12 +48,27 @@ import system.configuration.ConnectionStringSettingsCollection;
 
 /**
  * The base .NET class managing System.Configuration.ConfigurationManager, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationManager</a>
  */
 public class ConfigurationManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.ConfigurationManager
+     */
     public static final String className = "System.Configuration.ConfigurationManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ConfigurationManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationManager}, a cast assert is made to check if types are compatible.
+     */
     public static ConfigurationManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ConfigurationManager(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class ConfigurationManager extends NetObject  {
 
     // Constructors section
     
+    public ConfigurationManager() throws Throwable {
+    }
 
     
     // Methods section
@@ -209,22 +228,22 @@ public class ConfigurationManager extends NetObject  {
     
     // Properties section
     
-    public static NameValueCollection getAppSettings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NameValueCollection getAppSettings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AppSettings");
+            JCObject val = (JCObject)classInstance.Get("AppSettings");
             return new NameValueCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ConnectionStringSettingsCollection getConnectionStrings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.configuration.ConfigurationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ConnectionStringSettingsCollection getConnectionStrings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.configuration.ConfigurationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ConnectionStrings");
+            JCObject val = (JCObject)classInstance.Get("ConnectionStrings");
             return new ConnectionStringSettingsCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

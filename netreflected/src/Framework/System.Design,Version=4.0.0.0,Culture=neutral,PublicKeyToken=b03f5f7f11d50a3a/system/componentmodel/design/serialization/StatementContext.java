@@ -43,12 +43,27 @@ import system.componentmodel.design.serialization.ObjectStatementCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.StatementContext, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.StatementContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.StatementContext</a>
  */
 public class StatementContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.StatementContext
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.StatementContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class StatementContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StatementContext}, a cast assert is made to check if types are compatible.
+     */
     public static StatementContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StatementContext(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class StatementContext extends NetObject  {
 
     // Constructors section
     
-
     public StatementContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file

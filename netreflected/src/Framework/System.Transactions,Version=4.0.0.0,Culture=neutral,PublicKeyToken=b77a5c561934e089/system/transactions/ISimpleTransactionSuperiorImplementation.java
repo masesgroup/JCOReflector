@@ -38,16 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.transactions.ITransactionPromoter;
+import system.transactions.ITransactionPromoterImplementation;
 
 
 /**
  * The base .NET class managing System.Transactions.ISimpleTransactionSuperior, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.ISimpleTransactionSuperior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.ISimpleTransactionSuperior</a>
  */
 public class ISimpleTransactionSuperiorImplementation extends NetObject implements ISimpleTransactionSuperior {
+    /**
+     * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Transactions
+     */
     public static final String assemblyShortName = "System.Transactions";
+    /**
+     * Qualified class name: System.Transactions.ISimpleTransactionSuperior
+     */
     public static final String className = "System.Transactions.ISimpleTransactionSuperior";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +112,9 @@ public class ISimpleTransactionSuperiorImplementation extends NetObject implemen
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISimpleTransactionSuperior}, a cast assert is made to check if types are compatible.
+     */
     public static ISimpleTransactionSuperior ToISimpleTransactionSuperior(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISimpleTransactionSuperiorImplementation(from.getJCOInstance());

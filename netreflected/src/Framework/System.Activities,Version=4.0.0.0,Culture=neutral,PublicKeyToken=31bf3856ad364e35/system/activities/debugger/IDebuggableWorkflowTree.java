@@ -42,12 +42,29 @@ import system.activities.Activity;
 
 /**
  * The base .NET class managing System.Activities.Debugger.IDebuggableWorkflowTree, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.IDebuggableWorkflowTree" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.IDebuggableWorkflowTree</a>
  */
 public interface IDebuggableWorkflowTree extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
+    public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Debugger.IDebuggableWorkflowTree
+     */
+    public static final String className = "System.Activities.Debugger.IDebuggableWorkflowTree";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDebuggableWorkflowTree}, a cast assert is made to check if types are compatible.
+     */
     public static IDebuggableWorkflowTree ToIDebuggableWorkflowTree(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Activities.Debugger.IDebuggableWorkflowTree, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Activities"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDebuggableWorkflowTreeImplementation(from.getJCOInstance());
     }

@@ -99,12 +99,27 @@ import system.data.common.commandtrees.DbUnionAllExpression;
 
 /**
  * The base .NET class managing System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder</a>
  */
 public class DbExpressionBuilder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder
+     */
     public static final String className = "System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -157,7 +172,9 @@ public class DbExpressionBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbExpressionBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static DbExpressionBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbExpressionBuilder(from.getJCOInstance());
@@ -165,6 +182,8 @@ public class DbExpressionBuilder extends NetObject  {
 
     // Constructors section
     
+    public DbExpressionBuilder() throws Throwable {
+    }
 
     
     // Methods section
@@ -1064,22 +1083,22 @@ public class DbExpressionBuilder extends NetObject  {
     
     // Properties section
     
-    public static DbConstantExpression getFalse() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DbConstantExpression getFalse() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("False");
+            JCObject val = (JCObject)classInstance.Get("False");
             return new DbConstantExpression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DbConstantExpression getTrue() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DbConstantExpression getTrue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("True");
+            JCObject val = (JCObject)classInstance.Get("True");
             return new DbConstantExpression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

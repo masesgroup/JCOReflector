@@ -45,12 +45,27 @@ import system.Version;
 
 /**
  * The base .NET class managing Microsoft.Build.Utilities.AssemblyFoldersExInfo, Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo</a>
  */
 public class AssemblyFoldersExInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Utilities.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Utilities.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Utilities.AssemblyFoldersExInfo
+     */
     public static final String className = "Microsoft.Build.Utilities.AssemblyFoldersExInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class AssemblyFoldersExInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyFoldersExInfo}, a cast assert is made to check if types are compatible.
+     */
     public static AssemblyFoldersExInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AssemblyFoldersExInfo(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     // Constructors section
     
+    public AssemblyFoldersExInfo() throws Throwable {
+    }
 
     public AssemblyFoldersExInfo(RegistryHive hive, RegistryView view, java.lang.String registryKey, java.lang.String directoryPath, Version targetFrameworkVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
@@ -121,6 +140,7 @@ public class AssemblyFoldersExInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

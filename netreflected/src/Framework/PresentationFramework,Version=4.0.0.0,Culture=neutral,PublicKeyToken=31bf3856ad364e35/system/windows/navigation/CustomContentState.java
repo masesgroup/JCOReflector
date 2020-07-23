@@ -44,12 +44,27 @@ import system.windows.navigation.NavigationMode;
 
 /**
  * The base .NET class managing System.Windows.Navigation.CustomContentState, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.CustomContentState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.CustomContentState</a>
  */
 public class CustomContentState extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Navigation.CustomContentState
+     */
     public static final String className = "System.Windows.Navigation.CustomContentState";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CustomContentState extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CustomContentState}, a cast assert is made to check if types are compatible.
+     */
     public static CustomContentState cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CustomContentState(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class CustomContentState extends NetObject  {
 
     // Constructors section
     
+    public CustomContentState() throws Throwable {
+    }
 
     
     // Methods section

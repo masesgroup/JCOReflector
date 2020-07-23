@@ -38,27 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.policy.CodeGroup;
 import system.security.policy.IMembershipCondition;
 import system.security.policy.IMembershipConditionImplementation;
-import system.security.policy.CodeGroup;
 import system.collections.DictionaryEntry;
 import system.security.policy.Evidence;
 import system.security.policy.PolicyStatement;
-import system.security.SecurityElement;
-import system.security.policy.PolicyLevel;
 import system.security.policy.CodeConnectAccess;
-import system.collections.IList;
-import system.collections.IListImplementation;
 
 
 /**
  * The base .NET class managing System.Security.Policy.NetCodeGroup, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.NetCodeGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.NetCodeGroup</a>
  */
-public class NetCodeGroup extends NetObject  {
+public class NetCodeGroup extends CodeGroup  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.NetCodeGroup
+     */
     public static final String className = "System.Security.Policy.NetCodeGroup";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +122,9 @@ public class NetCodeGroup extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetCodeGroup}, a cast assert is made to check if types are compatible.
+     */
     public static NetCodeGroup cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NetCodeGroup(from.getJCOInstance());
@@ -119,6 +132,8 @@ public class NetCodeGroup extends NetObject  {
 
     // Constructors section
     
+    public NetCodeGroup() throws Throwable {
+    }
 
     public NetCodeGroup(IMembershipCondition membershipCondition) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         try {
@@ -131,19 +146,10 @@ public class NetCodeGroup extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean Equals(CodeGroup cg, boolean compareChildren) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Equals", cg == null ? null : cg.getJCOInstance(), compareChildren);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DictionaryEntry[] GetConnectAccessRules() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -194,73 +200,11 @@ public class NetCodeGroup extends NetObject  {
         }
     }
 
-    public SecurityElement ToXml() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.FormatException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.InvalidCastException, system.NotSupportedException, system.RankException, system.NotImplementedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
-            return new SecurityElement(objToXml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityElement ToXml(PolicyLevel level) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.InvalidOperationException, system.InvalidCastException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml", level == null ? null : level.getJCOInstance());
-            return new SecurityElement(objToXml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddChild(CodeGroup group) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddChild", group == null ? null : group.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddConnectAccess(java.lang.String originScheme, CodeConnectAccess connectAccess) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddConnectAccess", originScheme, connectAccess == null ? null : connectAccess.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void FromXml(SecurityElement e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance(), level == null ? null : level.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveChild(CodeGroup group) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveChild", group == null ? null : group.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,139 +224,6 @@ public class NetCodeGroup extends NetObject  {
     
     // Properties section
     
-    public IList getChildren() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Children");
-            return new IListImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setChildren(IList Children) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Children", Children == null ? null : Children.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IMembershipCondition getMembershipCondition() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("MembershipCondition");
-            return new IMembershipConditionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMembershipCondition(IMembershipCondition MembershipCondition) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MembershipCondition", MembershipCondition == null ? null : MembershipCondition.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PolicyStatement getPolicyStatement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.InvalidCastException, system.NotSupportedException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PolicyStatement");
-            return new PolicyStatement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPolicyStatement(PolicyStatement PolicyStatement) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PolicyStatement", PolicyStatement == null ? null : PolicyStatement.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getAttributeString() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("AttributeString");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDescription(java.lang.String Description) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Description", Description);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMergeLogic() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("MergeLogic");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getPermissionSetName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("PermissionSetName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

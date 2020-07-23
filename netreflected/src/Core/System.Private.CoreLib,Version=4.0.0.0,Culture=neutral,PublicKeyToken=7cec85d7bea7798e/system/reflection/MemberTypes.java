@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.MemberTypes, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MemberTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MemberTypes</a>
  */
 public class MemberTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.MemberTypes
+     */
     public static final String className = "System.Reflection.MemberTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -145,19 +160,19 @@ public class MemberTypes extends NetObject  {
 
     // Flags management section
 
-    public MemberTypes add(MemberTypes val) throws Throwable {
+    public final MemberTypes add(MemberTypes val) throws Throwable {
         return new MemberTypes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MemberTypes remove(MemberTypes val) throws Throwable {
+    public final MemberTypes remove(MemberTypes val) throws Throwable {
         return new MemberTypes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MemberTypes val) throws Throwable {
+    public final boolean is(MemberTypes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MemberTypes val) throws Throwable {
+    public final boolean has(MemberTypes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

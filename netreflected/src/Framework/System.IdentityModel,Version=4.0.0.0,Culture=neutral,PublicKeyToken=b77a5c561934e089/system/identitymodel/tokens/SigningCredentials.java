@@ -44,12 +44,27 @@ import system.identitymodel.tokens.SecurityKeyIdentifier;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.SigningCredentials, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SigningCredentials" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SigningCredentials</a>
  */
 public class SigningCredentials extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.SigningCredentials
+     */
     public static final String className = "System.IdentityModel.Tokens.SigningCredentials";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class SigningCredentials extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SigningCredentials}, a cast assert is made to check if types are compatible.
+     */
     public static SigningCredentials cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SigningCredentials(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class SigningCredentials extends NetObject  {
 
     // Constructors section
     
+    public SigningCredentials() throws Throwable {
+    }
 
     public SigningCredentials(SecurityKey signingKey, java.lang.String signatureAlgorithm, java.lang.String digestAlgorithm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
@@ -130,6 +149,7 @@ public class SigningCredentials extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.IEditableCollectionView;
+import system.componentmodel.IEditableCollectionViewImplementation;
 import system.componentmodel.NewItemPlaceholderPosition;
 
 
 /**
  * The base .NET class managing System.ComponentModel.IEditableCollectionViewAddNewItem, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem</a>
  */
-public interface IEditableCollectionViewAddNewItem extends IJCOBridgeReflected {
-
+public interface IEditableCollectionViewAddNewItem extends IJCOBridgeReflected, IEditableCollectionView {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
+    public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.IEditableCollectionViewAddNewItem
+     */
+    public static final String className = "System.ComponentModel.IEditableCollectionViewAddNewItem";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEditableCollectionViewAddNewItem}, a cast assert is made to check if types are compatible.
+     */
     public static IEditableCollectionViewAddNewItem ToIEditableCollectionViewAddNewItem(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.ComponentModel.IEditableCollectionViewAddNewItem, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "WindowsBase"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IEditableCollectionViewAddNewItemImplementation(from.getJCOInstance());
     }
@@ -90,47 +109,21 @@ public interface IEditableCollectionViewAddNewItem extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject AddNew() throws Throwable;
 
     public NetObject AddNewItem(NetObject newItem) throws Throwable;
 
-    public void CancelEdit() throws Throwable;
 
-    public void CancelNew() throws Throwable;
 
-    public void CommitEdit() throws Throwable;
 
-    public void CommitNew() throws Throwable;
 
-    public void EditItem(NetObject item) throws Throwable;
 
-    public void Remove(NetObject item) throws Throwable;
 
-    public void RemoveAt(int index) throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getCanAddNew() throws Throwable;
-
     public boolean getCanAddNewItem() throws Throwable;
-
-    public boolean getCanCancelEdit() throws Throwable;
-
-    public boolean getCanRemove() throws Throwable;
-
-    public boolean getIsAddingNew() throws Throwable;
-
-    public boolean getIsEditingItem() throws Throwable;
-
-    public NewItemPlaceholderPosition getNewItemPlaceholderPosition() throws Throwable;
-
-    public void setNewItemPlaceholderPosition(NewItemPlaceholderPosition NewItemPlaceholderPosition) throws Throwable;
-
-    public NetObject getCurrentAddItem() throws Throwable;
-
-    public NetObject getCurrentEditItem() throws Throwable;
 
 
 

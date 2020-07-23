@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.management.ObjectPutEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ObjectPutEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectPutEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectPutEventHandler</a>
+ */
 public interface IObjectPutEventHandler {
     public void Invoke(NetObject sender, ObjectPutEventArgs e);
 }

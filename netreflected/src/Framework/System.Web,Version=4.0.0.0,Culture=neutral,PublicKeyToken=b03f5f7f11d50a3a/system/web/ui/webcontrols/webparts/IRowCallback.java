@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link RowCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.RowCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.RowCallback</a>
+ */
 public interface IRowCallback {
     public void Invoke(NetObject rowData);
 }

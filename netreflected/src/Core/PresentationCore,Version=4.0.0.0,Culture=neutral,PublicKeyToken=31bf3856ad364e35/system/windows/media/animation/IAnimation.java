@@ -42,12 +42,29 @@ import system.windows.media.animation.AnimationClock;
 
 /**
  * The base .NET class managing System.Windows.Media.Animation.IAnimation, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.IAnimation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.IAnimation</a>
  */
 public interface IAnimation extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
+    public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Animation.IAnimation
+     */
+    public static final String className = "System.Windows.Media.Animation.IAnimation";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAnimation}, a cast assert is made to check if types are compatible.
+     */
     public static IAnimation ToIAnimation(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Media.Animation.IAnimation, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "PresentationCore"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IAnimationImplementation(from.getJCOInstance());
     }

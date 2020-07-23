@@ -51,12 +51,29 @@ import system.diagnostics.symbolstore.ISymbolVariableImplementation;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolReader, System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader</a>
  */
 public interface ISymbolReader extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.StackTrace
+     */
+    public static final String assemblyShortName = "System.Diagnostics.StackTrace";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolReader
+     */
+    public static final String className = "System.Diagnostics.SymbolStore.ISymbolReader";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolReader}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolReader ToISymbolReader(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Diagnostics.SymbolStore.ISymbolReader, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Diagnostics.StackTrace"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISymbolReaderImplementation(from.getJCOInstance());
     }

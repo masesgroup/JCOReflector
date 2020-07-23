@@ -43,10 +43,22 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Collections.Specialized.StringEnumerator, System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.StringEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.StringEnumerator</a>
  */
 public class StringEnumerator extends NetObject implements Iterator<java.lang.String> {
+    /**
+     * Fully assembly qualified name: System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.Specialized
+     */
     public static final String assemblyShortName = "System.Collections.Specialized";
+    /**
+     * Qualified class name: System.Collections.Specialized.StringEnumerator
+     */
     public static final String className = "System.Collections.Specialized.StringEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -95,11 +107,11 @@ public class StringEnumerator extends NetObject implements Iterator<java.lang.St
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public java.lang.String next() {
+	public final java.lang.String next() {
 		try {
 			return (java.lang.String)classInstance.next().toString();
 		} catch (Throwable jce) {

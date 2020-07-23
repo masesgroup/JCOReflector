@@ -43,12 +43,27 @@ import microsoft.win32.RegistryValueKind;
 
 /**
  * The base .NET class managing Microsoft.Win32.Registry, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.Registry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.Registry</a>
  */
 public class Registry extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: Microsoft.Win32.Registry
+     */
     public static final String className = "Microsoft.Win32.Registry";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Registry extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Registry}, a cast assert is made to check if types are compatible.
+     */
     public static Registry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Registry(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class Registry extends NetObject  {
 
     // Constructors section
     
+    public Registry() throws Throwable {
+    }
 
     
     // Methods section

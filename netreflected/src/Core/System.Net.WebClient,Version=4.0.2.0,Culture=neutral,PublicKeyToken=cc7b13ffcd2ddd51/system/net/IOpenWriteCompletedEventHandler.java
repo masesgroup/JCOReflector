@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.net.OpenWriteCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link OpenWriteCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.OpenWriteCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.OpenWriteCompletedEventHandler</a>
+ */
 public interface IOpenWriteCompletedEventHandler {
     public void Invoke(NetObject sender, OpenWriteCompletedEventArgs e);
 }

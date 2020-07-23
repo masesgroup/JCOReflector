@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.presentation.propertyediting.PropertyValueSource;
 import system.activities.presentation.propertyediting.DependencyPropertyValueSource;
 
 
 /**
  * The base .NET class managing System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource</a>
  */
-public class DependencyPropertyValueSource extends NetObject  {
+public class DependencyPropertyValueSource extends PropertyValueSource  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource
+     */
     public static final String className = "System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DependencyPropertyValueSource extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DependencyPropertyValueSource}, a cast assert is made to check if types are compatible.
+     */
     public static DependencyPropertyValueSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DependencyPropertyValueSource(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class DependencyPropertyValueSource extends NetObject  {
 
     // Constructors section
     
+    public DependencyPropertyValueSource() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -217,99 +239,99 @@ public class DependencyPropertyValueSource extends NetObject  {
         }
     }
 
-    public static DependencyPropertyValueSource getCustomMarkupExtension() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getCustomMarkupExtension() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CustomMarkupExtension");
+            JCObject val = (JCObject)classInstance.Get("CustomMarkupExtension");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DependencyPropertyValueSource getDataBound() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getDataBound() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DataBound");
+            JCObject val = (JCObject)classInstance.Get("DataBound");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DependencyPropertyValueSource getDefaultValue() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getDefaultValue() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultValue");
+            JCObject val = (JCObject)classInstance.Get("DefaultValue");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DependencyPropertyValueSource getInherited() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getInherited() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Inherited");
+            JCObject val = (JCObject)classInstance.Get("Inherited");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DependencyPropertyValueSource getLocal() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getLocal() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Local");
+            JCObject val = (JCObject)classInstance.Get("Local");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DependencyPropertyValueSource getLocalDynamicResource() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getLocalDynamicResource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LocalDynamicResource");
+            JCObject val = (JCObject)classInstance.Get("LocalDynamicResource");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DependencyPropertyValueSource getLocalStaticResource() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getLocalStaticResource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LocalStaticResource");
+            JCObject val = (JCObject)classInstance.Get("LocalStaticResource");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DependencyPropertyValueSource getSystemResource() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getSystemResource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SystemResource");
+            JCObject val = (JCObject)classInstance.Get("SystemResource");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DependencyPropertyValueSource getTemplateBinding() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DependencyPropertyValueSource getTemplateBinding() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TemplateBinding");
+            JCObject val = (JCObject)classInstance.Get("TemplateBinding");
             return new DependencyPropertyValueSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

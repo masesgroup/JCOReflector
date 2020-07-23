@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.drawing.Point;
 import system.drawing.Size;
 import system.drawing.SizeF;
@@ -45,12 +46,27 @@ import system.drawing.SizeF;
 
 /**
  * The base .NET class managing System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Size" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Size</a>
  */
-public class Size extends NetObject  {
+public class Size extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Size
+     */
     public static final String className = "System.Drawing.Size";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class Size extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Size}, a cast assert is made to check if types are compatible.
+     */
     public static Size cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Size(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class Size extends NetObject  {
 
     // Constructors section
     
+    public Size() throws Throwable {
+    }
 
     public Size(int width, int height) throws Throwable {
         try {
@@ -131,6 +151,7 @@ public class Size extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

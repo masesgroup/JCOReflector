@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.SerializationBinder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.SerializationBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.SerializationBinder</a>
  */
 public class SerializationBinder extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.SerializationBinder
+     */
     public static final String className = "System.Runtime.Serialization.SerializationBinder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SerializationBinder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SerializationBinder}, a cast assert is made to check if types are compatible.
+     */
     public static SerializationBinder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SerializationBinder(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class SerializationBinder extends NetObject  {
 
     // Constructors section
     
+    public SerializationBinder() throws Throwable {
+    }
 
     
     // Methods section

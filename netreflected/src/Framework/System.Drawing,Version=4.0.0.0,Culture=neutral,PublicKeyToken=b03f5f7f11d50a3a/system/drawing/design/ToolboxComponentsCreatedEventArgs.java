@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 
 
 /**
  * The base .NET class managing System.Drawing.Design.ToolboxComponentsCreatedEventArgs, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxComponentsCreatedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxComponentsCreatedEventArgs</a>
  */
-public class ToolboxComponentsCreatedEventArgs extends NetObject  {
+public class ToolboxComponentsCreatedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Design.ToolboxComponentsCreatedEventArgs
+     */
     public static final String className = "System.Drawing.Design.ToolboxComponentsCreatedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ToolboxComponentsCreatedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolboxComponentsCreatedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ToolboxComponentsCreatedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolboxComponentsCreatedEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class ToolboxComponentsCreatedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ToolboxComponentsCreatedEventArgs() throws Throwable {
+    }
 
     public ToolboxComponentsCreatedEventArgs(IComponent[] components) throws Throwable {
         try {
@@ -122,6 +142,7 @@ public class ToolboxComponentsCreatedEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -129,7 +150,7 @@ public class ToolboxComponentsCreatedEventArgs extends NetObject  {
     
     // Properties section
     
-    public IComponent[] getComponents() throws Throwable {
+    public final IComponent[] getComponents() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

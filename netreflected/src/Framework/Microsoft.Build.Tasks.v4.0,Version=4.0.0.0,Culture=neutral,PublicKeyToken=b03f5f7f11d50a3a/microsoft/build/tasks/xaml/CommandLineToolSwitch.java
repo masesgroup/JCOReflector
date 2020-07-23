@@ -45,12 +45,27 @@ import microsoft.build.framework.ITaskItemImplementation;
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch</a>
  */
 public class CommandLineToolSwitch extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch
+     */
     public static final String className = "Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CommandLineToolSwitch extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommandLineToolSwitch}, a cast assert is made to check if types are compatible.
+     */
     public static CommandLineToolSwitch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CommandLineToolSwitch(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class CommandLineToolSwitch extends NetObject  {
 
     // Constructors section
     
-
     public CommandLineToolSwitch() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -300,7 +316,7 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
-    public ITaskItem[] getTaskItemArray() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
+    public final ITaskItem[] getTaskItemArray() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

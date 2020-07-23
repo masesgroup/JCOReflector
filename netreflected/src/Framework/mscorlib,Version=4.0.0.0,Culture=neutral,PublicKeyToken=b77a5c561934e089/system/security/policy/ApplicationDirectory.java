@@ -43,12 +43,27 @@ import system.security.policy.EvidenceBase;
 
 /**
  * The base .NET class managing System.Security.Policy.ApplicationDirectory, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ApplicationDirectory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ApplicationDirectory</a>
  */
-public class ApplicationDirectory extends NetObject  {
+public class ApplicationDirectory extends EvidenceBase  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.ApplicationDirectory
+     */
     public static final String className = "System.Security.Policy.ApplicationDirectory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ApplicationDirectory extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationDirectory}, a cast assert is made to check if types are compatible.
+     */
     public static ApplicationDirectory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ApplicationDirectory(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ApplicationDirectory extends NetObject  {
 
     // Constructors section
     
+    public ApplicationDirectory() throws Throwable {
+    }
 
     public ApplicationDirectory(java.lang.String name) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException {
         try {
@@ -119,6 +138,7 @@ public class ApplicationDirectory extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

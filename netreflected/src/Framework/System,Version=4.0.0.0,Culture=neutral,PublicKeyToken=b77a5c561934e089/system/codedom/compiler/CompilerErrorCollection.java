@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.CollectionBase;
 import system.codedom.compiler.CompilerError;
 import system.codedom.compiler.CompilerErrorCollection;
 
 
 /**
  * The base .NET class managing System.CodeDom.Compiler.CompilerErrorCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CompilerErrorCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CompilerErrorCollection</a>
  */
-public class CompilerErrorCollection extends NetObject  {
+public class CompilerErrorCollection extends CollectionBase  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.CodeDom.Compiler.CompilerErrorCollection
+     */
     public static final String className = "System.CodeDom.Compiler.CompilerErrorCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class CompilerErrorCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompilerErrorCollection}, a cast assert is made to check if types are compatible.
+     */
     public static CompilerErrorCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompilerErrorCollection(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class CompilerErrorCollection extends NetObject  {
 
     // Constructors section
     
-
     public CompilerErrorCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -195,16 +212,6 @@ public class CompilerErrorCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CopyTo(CompilerError[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -235,16 +242,6 @@ public class CompilerErrorCollection extends NetObject  {
         }
     }
 
-    public void RemoveAt(int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -264,36 +261,6 @@ public class CompilerErrorCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("HasWarnings");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCapacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Capacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Capacity", Capacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

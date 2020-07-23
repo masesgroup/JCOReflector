@@ -50,12 +50,29 @@ import system.diagnostics.symbolstore.SymbolToken;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolMethod, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod</a>
  */
 public interface ISymbolMethod extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolMethod
+     */
+    public static final String className = "System.Diagnostics.SymbolStore.ISymbolMethod";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolMethod}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolMethod ToISymbolMethod(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Diagnostics.SymbolStore.ISymbolMethod, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISymbolMethodImplementation(from.getJCOInstance());
     }
@@ -100,6 +117,8 @@ public interface ISymbolMethod extends IJCOBridgeReflected {
     
     public boolean GetSourceStartEnd(ISymbolDocument[] docs, int[] lines, int[] columns) throws Throwable;
 
+    public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable;
+
     public int GetOffset(ISymbolDocument document, int line, int column) throws Throwable;
 
     public int[] GetRanges(ISymbolDocument document, int line, int column) throws Throwable;
@@ -111,6 +130,8 @@ public interface ISymbolMethod extends IJCOBridgeReflected {
     public ISymbolVariable[] GetParameters() throws Throwable;
 
     public void GetSequencePoints(int[] offsets, ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
+
+    public void GetSequencePoints(JCRefOut dupParam0, ISymbolDocument[] dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable;
 
 
     

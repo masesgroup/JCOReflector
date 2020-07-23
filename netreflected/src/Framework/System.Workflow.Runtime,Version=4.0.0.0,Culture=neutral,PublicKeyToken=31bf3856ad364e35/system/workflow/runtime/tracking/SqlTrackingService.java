@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.runtime.tracking.TrackingService;
 import system.collections.specialized.NameValueCollection;
 
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingService</a>
  */
-public class SqlTrackingService extends NetObject  {
+public class SqlTrackingService extends TrackingService  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.Tracking.SqlTrackingService
+     */
     public static final String className = "System.Workflow.Runtime.Tracking.SqlTrackingService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SqlTrackingService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlTrackingService}, a cast assert is made to check if types are compatible.
+     */
     public static SqlTrackingService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlTrackingService(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SqlTrackingService extends NetObject  {
 
     // Constructors section
     
+    public SqlTrackingService() throws Throwable {
+    }
 
     public SqlTrackingService(NameValueCollection parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException {
         try {
@@ -129,6 +149,7 @@ public class SqlTrackingService extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

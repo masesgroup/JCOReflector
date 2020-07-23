@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.DataAnnotations.ValidationResult, System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.ValidationResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.ValidationResult</a>
  */
 public class ValidationResult extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.Annotations
+     */
     public static final String assemblyShortName = "System.ComponentModel.Annotations";
+    /**
+     * Qualified class name: System.ComponentModel.DataAnnotations.ValidationResult
+     */
     public static final String className = "System.ComponentModel.DataAnnotations.ValidationResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ValidationResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValidationResult}, a cast assert is made to check if types are compatible.
+     */
     public static ValidationResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValidationResult(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ValidationResult extends NetObject  {
 
     // Constructors section
     
+    public ValidationResult() throws Throwable {
+    }
 
     public ValidationResult(java.lang.String errorMessage) throws Throwable {
         try {
@@ -118,6 +137,7 @@ public class ValidationResult extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

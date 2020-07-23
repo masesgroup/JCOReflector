@@ -54,12 +54,27 @@ import system.directoryservices.activedirectory.ReadOnlySiteLinkCollection;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.ActiveDirectorySite, System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySite</a>
  */
 public class ActiveDirectorySite extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.ActiveDirectorySite
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.ActiveDirectorySite";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class ActiveDirectorySite extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectorySite}, a cast assert is made to check if types are compatible.
+     */
     public static ActiveDirectorySite cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActiveDirectorySite(from.getJCOInstance());
@@ -120,6 +137,8 @@ public class ActiveDirectorySite extends NetObject  {
 
     // Constructors section
     
+    public ActiveDirectorySite() throws Throwable {
+    }
 
     public ActiveDirectorySite(DirectoryContext context, java.lang.String siteName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         try {
@@ -130,6 +149,7 @@ public class ActiveDirectorySite extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

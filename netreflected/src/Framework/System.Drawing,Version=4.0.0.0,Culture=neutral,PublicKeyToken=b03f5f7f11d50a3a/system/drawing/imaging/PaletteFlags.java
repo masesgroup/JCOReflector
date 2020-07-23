@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Drawing.Imaging.PaletteFlags, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.PaletteFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.PaletteFlags</a>
  */
 public class PaletteFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Imaging.PaletteFlags
+     */
     public static final String className = "System.Drawing.Imaging.PaletteFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class PaletteFlags extends NetObject  {
 
     // Flags management section
 
-    public PaletteFlags add(PaletteFlags val) throws Throwable {
+    public final PaletteFlags add(PaletteFlags val) throws Throwable {
         return new PaletteFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PaletteFlags remove(PaletteFlags val) throws Throwable {
+    public final PaletteFlags remove(PaletteFlags val) throws Throwable {
         return new PaletteFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PaletteFlags val) throws Throwable {
+    public final boolean is(PaletteFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PaletteFlags val) throws Throwable {
+    public final boolean has(PaletteFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

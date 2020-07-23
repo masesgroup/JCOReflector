@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.Linq.ReaderOptions, System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.ReaderOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.ReaderOptions</a>
  */
 public class ReaderOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Private.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Linq.ReaderOptions
+     */
     public static final String className = "System.Xml.Linq.ReaderOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class ReaderOptions extends NetObject  {
 
     // Flags management section
 
-    public ReaderOptions add(ReaderOptions val) throws Throwable {
+    public final ReaderOptions add(ReaderOptions val) throws Throwable {
         return new ReaderOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ReaderOptions remove(ReaderOptions val) throws Throwable {
+    public final ReaderOptions remove(ReaderOptions val) throws Throwable {
         return new ReaderOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ReaderOptions val) throws Throwable {
+    public final boolean is(ReaderOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ReaderOptions val) throws Throwable {
+    public final boolean has(ReaderOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

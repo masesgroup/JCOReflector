@@ -42,12 +42,27 @@ import system.data.oracleclient.OracleInfoMessageEventArgs;
 import system.data.oracleclient.IOracleInfoMessageEventHandler;
 /**
  * The base .NET class managing System.Data.OracleClient.OracleInfoMessageEventHandler, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleInfoMessageEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleInfoMessageEventHandler</a>
  */
 public class OracleInfoMessageEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.OracleClient
+     */
     public static final String assemblyShortName = "System.Data.OracleClient";
+    /**
+     * Qualified class name: System.Data.OracleClient.OracleInfoMessageEventHandler
+     */
     public static final String className = "System.Data.OracleClient.OracleInfoMessageEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IOracleInfoMessageEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class OracleInfoMessageEventHandler extends JCVoidDelegate implements IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, OracleInfoMessageEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, OracleInfoMessageEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class OracleInfoMessageEventHandler extends JCVoidDelegate implements IJC
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, OracleInfoMessageEventArgs e) {
     }
 }

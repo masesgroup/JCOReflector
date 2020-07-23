@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.design.PropertyTab;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.componentmodel.PropertyDescriptor;
@@ -45,17 +46,31 @@ import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
 import system.Attribute;
-import system.drawing.Bitmap;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.EventsTab, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.EventsTab" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.EventsTab</a>
  */
-public class EventsTab extends NetObject  {
+public class EventsTab extends PropertyTab  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.EventsTab
+     */
     public static final String className = "System.Windows.Forms.Design.EventsTab";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class EventsTab extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventsTab}, a cast assert is made to check if types are compatible.
+     */
     public static EventsTab cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventsTab(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class EventsTab extends NetObject  {
 
     // Constructors section
     
+    public EventsTab() throws Throwable {
+    }
 
     public EventsTab(IServiceProvider sp) throws Throwable {
         try {
@@ -126,6 +145,7 @@ public class EventsTab extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -163,17 +183,6 @@ public class EventsTab extends NetObject  {
         }
     }
 
-    public PropertyDescriptorCollection GetProperties(NetObject component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", component == null ? null : component.getJCOInstance());
-            return new PropertyDescriptorCollection(objGetProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -185,78 +194,10 @@ public class EventsTab extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public Bitmap getBitmap() throws Throwable, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Bitmap");
-            return new Bitmap(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject[] getComponents() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Components");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetObject(resultingObject));
-            }
-            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setComponents(NetObject[] Components) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Components", toObjectFromArray(Components));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getHelpKeyword() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("HelpKeyword");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getTabName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("TabName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

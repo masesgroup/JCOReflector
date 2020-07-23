@@ -47,12 +47,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.ComponentModel.PropertyDescriptorCollection, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyDescriptorCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyDescriptorCollection</a>
  */
 public class PropertyDescriptorCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.PropertyDescriptorCollection
+     */
     public static final String className = "System.ComponentModel.PropertyDescriptorCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class PropertyDescriptorCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyDescriptorCollection}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyDescriptorCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyDescriptorCollection(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class PropertyDescriptorCollection extends NetObject  {
 
     // Constructors section
     
+    public PropertyDescriptorCollection() throws Throwable {
+    }
 
     public PropertyDescriptorCollection(PropertyDescriptor[] properties) throws Throwable {
         try {
@@ -133,6 +152,7 @@ public class PropertyDescriptorCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -212,11 +232,33 @@ public class PropertyDescriptorCollection extends NetObject  {
         }
     }
 
+    public PropertyDescriptorCollection Sort(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (Object)dupParam0);
+            return new PropertyDescriptorCollection(objSort);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PropertyDescriptorCollection Sort(java.lang.String[] names, IComparer comparer) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSort = (JCObject)classInstance.Invoke("Sort", names, comparer == null ? null : comparer.getJCOInstance());
+            return new PropertyDescriptorCollection(objSort);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDescriptorCollection Sort(JCRefOut dupParam0, IComparer dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new PropertyDescriptorCollection(objSort);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

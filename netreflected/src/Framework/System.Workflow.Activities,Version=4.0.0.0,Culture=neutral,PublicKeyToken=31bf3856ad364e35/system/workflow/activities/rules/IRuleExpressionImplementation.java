@@ -50,12 +50,27 @@ import system.text.StringBuilder;
 
 /**
  * The base .NET class managing System.Workflow.Activities.Rules.IRuleExpression, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression</a>
  */
 public class IRuleExpressionImplementation extends NetObject implements IRuleExpression {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.Rules.IRuleExpression
+     */
     public static final String className = "System.Workflow.Activities.Rules.IRuleExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRuleExpression}, a cast assert is made to check if types are compatible.
+     */
     public static IRuleExpression ToIRuleExpression(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRuleExpressionImplementation(from.getJCOInstance());

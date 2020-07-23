@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.ReadOnlyCollectionBase;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.security.authentication.extendedprotection.ServiceNameCollection;
@@ -45,12 +46,27 @@ import system.security.authentication.extendedprotection.ServiceNameCollection;
 
 /**
  * The base .NET class managing System.Security.Authentication.ExtendedProtection.ServiceNameCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ServiceNameCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ServiceNameCollection</a>
  */
-public class ServiceNameCollection extends NetObject  {
+public class ServiceNameCollection extends ReadOnlyCollectionBase  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Security.Authentication.ExtendedProtection.ServiceNameCollection
+     */
     public static final String className = "System.Security.Authentication.ExtendedProtection.ServiceNameCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class ServiceNameCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceNameCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceNameCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceNameCollection(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class ServiceNameCollection extends NetObject  {
 
     // Constructors section
     
+    public ServiceNameCollection() throws Throwable {
+    }
 
     public ServiceNameCollection(ICollection items) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException {
         try {
@@ -121,6 +141,7 @@ public class ServiceNameCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -162,16 +183,6 @@ public class ServiceNameCollection extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

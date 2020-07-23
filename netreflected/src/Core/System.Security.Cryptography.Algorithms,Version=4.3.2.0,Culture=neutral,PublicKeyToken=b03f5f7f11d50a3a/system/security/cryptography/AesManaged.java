@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.Aes;
 import system.security.cryptography.ICryptoTransform;
 import system.security.cryptography.ICryptoTransformImplementation;
 import system.security.cryptography.CipherMode;
@@ -47,12 +48,27 @@ import system.security.cryptography.PaddingMode;
 
 /**
  * The base .NET class managing System.Security.Cryptography.AesManaged, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AesManaged" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AesManaged</a>
  */
-public class AesManaged extends NetObject  {
+public class AesManaged extends Aes  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.AesManaged
+     */
     public static final String className = "System.Security.Cryptography.AesManaged";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class AesManaged extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AesManaged}, a cast assert is made to check if types are compatible.
+     */
     public static AesManaged cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AesManaged(from.getJCOInstance());
@@ -113,7 +131,6 @@ public class AesManaged extends NetObject  {
 
     // Constructors section
     
-
     public AesManaged() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -128,16 +145,6 @@ public class AesManaged extends NetObject  {
     
     // Methods section
     
-    public boolean ValidKeySize(int bitLength) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ValidKeySize", bitLength);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICryptoTransform CreateDecryptor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,6 +161,17 @@ public class AesManaged extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", rgbKey, rgbIV);
+            return new ICryptoTransformImplementation(objCreateDecryptor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICryptoTransform CreateDecryptor(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", dupParam0, dupParam1);
             return new ICryptoTransformImplementation(objCreateDecryptor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,21 +200,12 @@ public class AesManaged extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable {
+    public ICryptoTransform CreateEncryptor(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
+            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", dupParam0, dupParam1);
+            return new ICryptoTransformImplementation(objCreateEncryptor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,200 +235,6 @@ public class AesManaged extends NetObject  {
     
     // Properties section
     
-    public byte[] getIV() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("IV");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexIV = 0; indexIV < resultingArrayList.size(); indexIV++ ) {
-				resultingArray[indexIV] = (byte)resultingArrayList.get(indexIV);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIV(byte[] IV) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IV", IV);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] getKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Key");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexKey = 0; indexKey < resultingArrayList.size(); indexKey++ ) {
-				resultingArray[indexKey] = (byte)resultingArrayList.get(indexKey);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setKey(byte[] Key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Key", Key);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getBlockSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("BlockSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBlockSize(int BlockSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BlockSize", BlockSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getFeedbackSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("FeedbackSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setFeedbackSize(int FeedbackSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("FeedbackSize", FeedbackSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getKeySize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("KeySize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setKeySize(int KeySize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("KeySize", KeySize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CipherMode getMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
-            return new CipherMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMode(CipherMode Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public KeySizes[] getLegalBlockSizes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<KeySizes> resultingArrayList = new ArrayList<KeySizes>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("LegalBlockSizes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new KeySizes(resultingObject));
-            }
-            KeySizes[] resultingArray = new KeySizes[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public KeySizes[] getLegalKeySizes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<KeySizes> resultingArrayList = new ArrayList<KeySizes>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("LegalKeySizes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new KeySizes(resultingObject));
-            }
-            KeySizes[] resultingArray = new KeySizes[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PaddingMode getPadding() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
-            return new PaddingMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPadding(PaddingMode Padding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

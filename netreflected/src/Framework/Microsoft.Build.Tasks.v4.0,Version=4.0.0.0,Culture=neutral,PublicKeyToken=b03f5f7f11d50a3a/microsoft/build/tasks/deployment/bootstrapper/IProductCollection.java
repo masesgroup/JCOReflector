@@ -42,12 +42,29 @@ import microsoft.build.tasks.deployment.bootstrapper.Product;
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection</a>
  */
 public interface IProductCollection extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection
+     */
+    public static final String className = "Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProductCollection}, a cast assert is made to check if types are compatible.
+     */
     public static IProductCollection ToIProductCollection(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Tasks.v4.0"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IProductCollectionImplementation(from.getJCOInstance());
     }

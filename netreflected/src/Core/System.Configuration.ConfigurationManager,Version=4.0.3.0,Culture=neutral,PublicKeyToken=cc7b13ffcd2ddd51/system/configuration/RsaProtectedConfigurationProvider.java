@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.ProtectedConfigurationProvider;
 import system.xml.XmlNode;
-import system.collections.specialized.NameValueCollection;
 import system.security.cryptography.RSAParameters;
 
 
 /**
  * The base .NET class managing System.Configuration.RsaProtectedConfigurationProvider, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.RsaProtectedConfigurationProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.RsaProtectedConfigurationProvider</a>
  */
-public class RsaProtectedConfigurationProvider extends NetObject  {
+public class RsaProtectedConfigurationProvider extends ProtectedConfigurationProvider  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.RsaProtectedConfigurationProvider
+     */
     public static final String className = "System.Configuration.RsaProtectedConfigurationProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class RsaProtectedConfigurationProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RsaProtectedConfigurationProvider}, a cast assert is made to check if types are compatible.
+     */
     public static RsaProtectedConfigurationProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RsaProtectedConfigurationProvider(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class RsaProtectedConfigurationProvider extends NetObject  {
 
     // Constructors section
     
-
     public RsaProtectedConfigurationProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -188,16 +204,6 @@ public class RsaProtectedConfigurationProvider extends NetObject  {
         }
     }
 
-    public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -253,31 +259,11 @@ public class RsaProtectedConfigurationProvider extends NetObject  {
         }
     }
 
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getKeyContainerName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("KeyContainerName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing Microsoft.JScript.IObjectCompletionInfo, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.IObjectCompletionInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.IObjectCompletionInfo</a>
  */
 public interface IObjectCompletionInfo extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
+    public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.IObjectCompletionInfo
+     */
+    public static final String className = "Microsoft.JScript.IObjectCompletionInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IObjectCompletionInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IObjectCompletionInfo ToIObjectCompletionInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.JScript.IObjectCompletionInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.JScript"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IObjectCompletionInfoImplementation(from.getJCOInstance());
     }

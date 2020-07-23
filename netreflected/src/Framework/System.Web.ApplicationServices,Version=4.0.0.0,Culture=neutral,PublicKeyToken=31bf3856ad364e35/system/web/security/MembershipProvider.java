@@ -38,21 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.provider.ProviderBase;
 import system.web.security.MembershipUser;
 import system.web.security.MembershipUserCollection;
-import system.collections.specialized.NameValueCollection;
 import system.web.security.MembershipPasswordFormat;
 import system.web.security.MembershipValidatePasswordEventHandler;
 
 
 /**
  * The base .NET class managing System.Web.Security.MembershipProvider, System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MembershipProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MembershipProvider</a>
  */
-public class MembershipProvider extends NetObject  {
+public class MembershipProvider extends ProviderBase  {
+    /**
+     * Fully assembly qualified name: System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Web.ApplicationServices
+     */
     public static final String assemblyShortName = "System.Web.ApplicationServices";
+    /**
+     * Qualified class name: System.Web.Security.MembershipProvider
+     */
     public static final String className = "System.Web.Security.MembershipProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class MembershipProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MembershipProvider}, a cast assert is made to check if types are compatible.
+     */
     public static MembershipProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MembershipProvider(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class MembershipProvider extends NetObject  {
 
     // Constructors section
     
+    public MembershipProvider() throws Throwable {
+    }
 
     
     // Methods section
@@ -229,16 +248,6 @@ public class MembershipProvider extends NetObject  {
         }
     }
 
-    public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void UpdateUser(MembershipUser user) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -348,26 +357,6 @@ public class MembershipProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

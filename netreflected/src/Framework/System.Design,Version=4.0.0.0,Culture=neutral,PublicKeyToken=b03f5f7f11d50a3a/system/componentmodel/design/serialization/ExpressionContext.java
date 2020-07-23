@@ -43,12 +43,27 @@ import system.codedom.CodeExpression;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.ExpressionContext, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.ExpressionContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.ExpressionContext</a>
  */
 public class ExpressionContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.ExpressionContext
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.ExpressionContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ExpressionContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExpressionContext}, a cast assert is made to check if types are compatible.
+     */
     public static ExpressionContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExpressionContext(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ExpressionContext extends NetObject  {
 
     // Constructors section
     
+    public ExpressionContext() throws Throwable {
+    }
 
     public ExpressionContext(CodeExpression expression, NetType expressionType, NetObject owner) throws Throwable, system.ArgumentNullException {
         try {
@@ -129,6 +148,7 @@ public class ExpressionContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

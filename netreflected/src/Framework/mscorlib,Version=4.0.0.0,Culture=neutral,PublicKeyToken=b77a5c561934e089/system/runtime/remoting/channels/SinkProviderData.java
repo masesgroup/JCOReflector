@@ -46,12 +46,27 @@ import system.collections.IListImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.SinkProviderData, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.SinkProviderData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.SinkProviderData</a>
  */
 public class SinkProviderData extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.SinkProviderData
+     */
     public static final String className = "System.Runtime.Remoting.Channels.SinkProviderData";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class SinkProviderData extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SinkProviderData}, a cast assert is made to check if types are compatible.
+     */
     public static SinkProviderData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SinkProviderData(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class SinkProviderData extends NetObject  {
 
     // Constructors section
     
+    public SinkProviderData() throws Throwable {
+    }
 
     public SinkProviderData(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         try {
@@ -122,6 +141,7 @@ public class SinkProviderData extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

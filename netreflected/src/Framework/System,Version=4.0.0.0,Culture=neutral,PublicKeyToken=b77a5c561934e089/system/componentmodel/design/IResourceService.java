@@ -46,12 +46,29 @@ import system.resources.IResourceWriterImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IResourceService, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IResourceService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IResourceService</a>
  */
 public interface IResourceService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IResourceService
+     */
+    public static final String className = "System.ComponentModel.Design.IResourceService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IResourceService}, a cast assert is made to check if types are compatible.
+     */
     public static IResourceService ToIResourceService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.IResourceService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IResourceServiceImplementation(from.getJCOInstance());
     }

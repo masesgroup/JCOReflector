@@ -43,12 +43,27 @@ import system.directoryservices.SchemaNameCollection;
 
 /**
  * The base .NET class managing System.DirectoryServices.SchemaNameCollection, System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.SchemaNameCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.SchemaNameCollection</a>
  */
 public class SchemaNameCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.SchemaNameCollection
+     */
     public static final String className = "System.DirectoryServices.SchemaNameCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SchemaNameCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SchemaNameCollection}, a cast assert is made to check if types are compatible.
+     */
     public static SchemaNameCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SchemaNameCollection(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class SchemaNameCollection extends NetObject  {
 
     // Constructors section
     
+    public SchemaNameCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -163,6 +184,16 @@ public class SchemaNameCollection extends NetObject  {
         }
     }
 
+    public void AddRange(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddRange", (Object)dupParam0);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -178,6 +209,16 @@ public class SchemaNameCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", stringArray, index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CopyTo(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CopyTo", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

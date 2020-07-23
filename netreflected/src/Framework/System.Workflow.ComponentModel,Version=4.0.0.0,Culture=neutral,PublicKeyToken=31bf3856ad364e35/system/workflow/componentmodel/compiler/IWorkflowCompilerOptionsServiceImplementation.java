@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService</a>
  */
 public class IWorkflowCompilerOptionsServiceImplementation extends NetObject implements IWorkflowCompilerOptionsService {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService
+     */
     public static final String className = "System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IWorkflowCompilerOptionsServiceImplementation extends NetObject imp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWorkflowCompilerOptionsService}, a cast assert is made to check if types are compatible.
+     */
     public static IWorkflowCompilerOptionsService ToIWorkflowCompilerOptionsService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWorkflowCompilerOptionsServiceImplementation(from.getJCOInstance());

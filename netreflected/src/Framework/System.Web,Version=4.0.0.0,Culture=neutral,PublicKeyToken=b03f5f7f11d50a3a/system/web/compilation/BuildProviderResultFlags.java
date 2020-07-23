@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.Compilation.BuildProviderResultFlags, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildProviderResultFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildProviderResultFlags</a>
  */
 public class BuildProviderResultFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Compilation.BuildProviderResultFlags
+     */
     public static final String className = "System.Web.Compilation.BuildProviderResultFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class BuildProviderResultFlags extends NetObject  {
 
     // Flags management section
 
-    public BuildProviderResultFlags add(BuildProviderResultFlags val) throws Throwable {
+    public final BuildProviderResultFlags add(BuildProviderResultFlags val) throws Throwable {
         return new BuildProviderResultFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public BuildProviderResultFlags remove(BuildProviderResultFlags val) throws Throwable {
+    public final BuildProviderResultFlags remove(BuildProviderResultFlags val) throws Throwable {
         return new BuildProviderResultFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(BuildProviderResultFlags val) throws Throwable {
+    public final boolean is(BuildProviderResultFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(BuildProviderResultFlags val) throws Throwable {
+    public final boolean has(BuildProviderResultFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.IInputElement;
+import system.windows.IInputElementImplementation;
 import system.windows.RoutedEvent;
 import system.windows.RoutedEventArgs;
 import system.windows.input.KeyboardFocusChangedEventHandler;
@@ -53,12 +55,29 @@ import system.windows.input.TextCompositionEventHandler;
 
 /**
  * The base .NET class managing System.Windows.IFrameworkInputElement, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.IFrameworkInputElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.IFrameworkInputElement</a>
  */
-public interface IFrameworkInputElement extends IJCOBridgeReflected {
-
+public interface IFrameworkInputElement extends IJCOBridgeReflected, IInputElement {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
+    public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.IFrameworkInputElement
+     */
+    public static final String className = "System.Windows.IFrameworkInputElement";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFrameworkInputElement}, a cast assert is made to check if types are compatible.
+     */
     public static IFrameworkInputElement ToIFrameworkInputElement(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.IFrameworkInputElement, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "PresentationFramework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IFrameworkInputElementImplementation(from.getJCOInstance());
     }
@@ -101,44 +120,16 @@ public interface IFrameworkInputElement extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean CaptureMouse() throws Throwable;
 
-    public boolean CaptureStylus() throws Throwable;
 
-    public boolean Focus() throws Throwable;
 
-    public void RaiseEvent(RoutedEventArgs e) throws Throwable;
 
-    public void ReleaseMouseCapture() throws Throwable;
 
-    public void ReleaseStylusCapture() throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getFocusable() throws Throwable;
-
-    public void setFocusable(boolean Focusable) throws Throwable;
-
-    public boolean getIsEnabled() throws Throwable;
-
-    public boolean getIsKeyboardFocused() throws Throwable;
-
-    public boolean getIsKeyboardFocusWithin() throws Throwable;
-
-    public boolean getIsMouseCaptured() throws Throwable;
-
-    public boolean getIsMouseDirectlyOver() throws Throwable;
-
-    public boolean getIsMouseOver() throws Throwable;
-
-    public boolean getIsStylusCaptured() throws Throwable;
-
-    public boolean getIsStylusDirectlyOver() throws Throwable;
-
-    public boolean getIsStylusOver() throws Throwable;
-
     public java.lang.String getName() throws Throwable;
 
     public void setName(java.lang.String Name) throws Throwable;
@@ -147,197 +138,5 @@ public interface IFrameworkInputElement extends IJCOBridgeReflected {
 
     // Instance Events section
     
-    public void addGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable;
-
-    public void removeGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable;
-
-    public void addLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable;
-
-    public void removeLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable;
-
-    public void addPreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable;
-
-    public void removePreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable;
-
-    public void addPreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable;
-
-    public void removePreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable;
-
-    public void addKeyDown(KeyEventHandler handler) throws Throwable;
-
-    public void removeKeyDown(KeyEventHandler handler) throws Throwable;
-
-    public void addKeyUp(KeyEventHandler handler) throws Throwable;
-
-    public void removeKeyUp(KeyEventHandler handler) throws Throwable;
-
-    public void addPreviewKeyDown(KeyEventHandler handler) throws Throwable;
-
-    public void removePreviewKeyDown(KeyEventHandler handler) throws Throwable;
-
-    public void addPreviewKeyUp(KeyEventHandler handler) throws Throwable;
-
-    public void removePreviewKeyUp(KeyEventHandler handler) throws Throwable;
-
-    public void addMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable;
-
-    public void removeMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable;
-
-    public void addMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable;
-
-    public void removeMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable;
-
-    public void addMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable;
-
-    public void removeMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable;
-
-    public void addMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable;
-
-    public void removeMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable;
-
-    public void addPreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable;
-
-    public void removePreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable;
-
-    public void addPreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable;
-
-    public void removePreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable;
-
-    public void addPreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable;
-
-    public void removePreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable;
-
-    public void addPreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable;
-
-    public void removePreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable;
-
-    public void addGotMouseCapture(MouseEventHandler handler) throws Throwable;
-
-    public void removeGotMouseCapture(MouseEventHandler handler) throws Throwable;
-
-    public void addLostMouseCapture(MouseEventHandler handler) throws Throwable;
-
-    public void removeLostMouseCapture(MouseEventHandler handler) throws Throwable;
-
-    public void addMouseEnter(MouseEventHandler handler) throws Throwable;
-
-    public void removeMouseEnter(MouseEventHandler handler) throws Throwable;
-
-    public void addMouseLeave(MouseEventHandler handler) throws Throwable;
-
-    public void removeMouseLeave(MouseEventHandler handler) throws Throwable;
-
-    public void addMouseMove(MouseEventHandler handler) throws Throwable;
-
-    public void removeMouseMove(MouseEventHandler handler) throws Throwable;
-
-    public void addPreviewMouseMove(MouseEventHandler handler) throws Throwable;
-
-    public void removePreviewMouseMove(MouseEventHandler handler) throws Throwable;
-
-    public void addMouseWheel(MouseWheelEventHandler handler) throws Throwable;
-
-    public void removeMouseWheel(MouseWheelEventHandler handler) throws Throwable;
-
-    public void addPreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable;
-
-    public void removePreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable;
-
-    public void addStylusButtonDown(StylusButtonEventHandler handler) throws Throwable;
-
-    public void removeStylusButtonDown(StylusButtonEventHandler handler) throws Throwable;
-
-    public void addStylusButtonUp(StylusButtonEventHandler handler) throws Throwable;
-
-    public void removeStylusButtonUp(StylusButtonEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusDown(StylusDownEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusDown(StylusDownEventHandler handler) throws Throwable;
-
-    public void addStylusDown(StylusDownEventHandler handler) throws Throwable;
-
-    public void removeStylusDown(StylusDownEventHandler handler) throws Throwable;
-
-    public void addGotStylusCapture(StylusEventHandler handler) throws Throwable;
-
-    public void removeGotStylusCapture(StylusEventHandler handler) throws Throwable;
-
-    public void addLostStylusCapture(StylusEventHandler handler) throws Throwable;
-
-    public void removeLostStylusCapture(StylusEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusInAirMove(StylusEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusInAirMove(StylusEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusInRange(StylusEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusInRange(StylusEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusMove(StylusEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusMove(StylusEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusUp(StylusEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusUp(StylusEventHandler handler) throws Throwable;
-
-    public void addStylusEnter(StylusEventHandler handler) throws Throwable;
-
-    public void removeStylusEnter(StylusEventHandler handler) throws Throwable;
-
-    public void addStylusInAirMove(StylusEventHandler handler) throws Throwable;
-
-    public void removeStylusInAirMove(StylusEventHandler handler) throws Throwable;
-
-    public void addStylusInRange(StylusEventHandler handler) throws Throwable;
-
-    public void removeStylusInRange(StylusEventHandler handler) throws Throwable;
-
-    public void addStylusLeave(StylusEventHandler handler) throws Throwable;
-
-    public void removeStylusLeave(StylusEventHandler handler) throws Throwable;
-
-    public void addStylusMove(StylusEventHandler handler) throws Throwable;
-
-    public void removeStylusMove(StylusEventHandler handler) throws Throwable;
-
-    public void addStylusOutOfRange(StylusEventHandler handler) throws Throwable;
-
-    public void removeStylusOutOfRange(StylusEventHandler handler) throws Throwable;
-
-    public void addStylusUp(StylusEventHandler handler) throws Throwable;
-
-    public void removeStylusUp(StylusEventHandler handler) throws Throwable;
-
-    public void addPreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable;
-
-    public void removePreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable;
-
-    public void addStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable;
-
-    public void removeStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable;
-
-    public void addPreviewTextInput(TextCompositionEventHandler handler) throws Throwable;
-
-    public void removePreviewTextInput(TextCompositionEventHandler handler) throws Throwable;
-
-    public void addTextInput(TextCompositionEventHandler handler) throws Throwable;
-
-    public void removeTextInput(TextCompositionEventHandler handler) throws Throwable;
-
 
 }

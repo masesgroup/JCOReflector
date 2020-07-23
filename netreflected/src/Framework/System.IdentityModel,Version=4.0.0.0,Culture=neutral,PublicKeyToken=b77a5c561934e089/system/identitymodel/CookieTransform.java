@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.IdentityModel.CookieTransform, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.CookieTransform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.CookieTransform</a>
  */
 public class CookieTransform extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.CookieTransform
+     */
     public static final String className = "System.IdentityModel.CookieTransform";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class CookieTransform extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CookieTransform}, a cast assert is made to check if types are compatible.
+     */
     public static CookieTransform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CookieTransform(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class CookieTransform extends NetObject  {
 
     // Constructors section
     
+    public CookieTransform() throws Throwable {
+    }
 
     
     // Methods section
@@ -131,12 +150,50 @@ public class CookieTransform extends NetObject  {
         }
     }
 
+    public byte[] Decode(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decode", (Object)dupParam0);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexDecode = 0; indexDecode < resultingArrayList.size(); indexDecode++ ) {
+				resultingArray[indexDecode] = (byte)resultingArrayList.get(indexDecode);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] Encode(byte[] value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Encode", (Object)value);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexEncode = 0; indexEncode < resultingArrayList.size(); indexEncode++ ) {
+				resultingArray[indexEncode] = (byte)resultingArrayList.get(indexEncode);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] Encode(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encode", (Object)dupParam0);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

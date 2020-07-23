@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.Control;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ControlSkinDelegate}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.ControlSkinDelegate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.ControlSkinDelegate</a>
+ */
 public interface IControlSkinDelegate {
     public Control Invoke(Control control);
 }

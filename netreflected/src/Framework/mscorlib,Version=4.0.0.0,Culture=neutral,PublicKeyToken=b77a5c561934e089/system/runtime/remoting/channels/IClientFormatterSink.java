@@ -37,6 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.remoting.messaging.IMessageSink;
+import system.runtime.remoting.messaging.IMessageSinkImplementation;
+import system.runtime.remoting.channels.IClientChannelSink;
+import system.runtime.remoting.channels.IClientChannelSinkImplementation;
+import system.runtime.remoting.channels.IChannelSinkBase;
+import system.runtime.remoting.channels.IChannelSinkBaseImplementation;
 import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
@@ -44,26 +50,39 @@ import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
 import system.runtime.remoting.messaging.IMessageCtrl;
 import system.runtime.remoting.messaging.IMessageCtrlImplementation;
-import system.runtime.remoting.messaging.IMessageSink;
-import system.runtime.remoting.messaging.IMessageSinkImplementation;
 import system.runtime.remoting.channels.IClientChannelSinkStack;
 import system.runtime.remoting.channels.IClientChannelSinkStackImplementation;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStack;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStackImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
-import system.runtime.remoting.channels.IClientChannelSink;
-import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IClientFormatterSink, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientFormatterSink" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientFormatterSink</a>
  */
-public interface IClientFormatterSink extends IJCOBridgeReflected {
-
+public interface IClientFormatterSink extends IJCOBridgeReflected, IMessageSink, IClientChannelSink, IChannelSinkBase {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IClientFormatterSink
+     */
+    public static final String className = "System.Runtime.Remoting.Channels.IClientFormatterSink";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IClientFormatterSink}, a cast assert is made to check if types are compatible.
+     */
     public static IClientFormatterSink ToIClientFormatterSink(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Channels.IClientFormatterSink, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IClientFormatterSinkImplementation(from.getJCOInstance());
     }
@@ -106,26 +125,15 @@ public interface IClientFormatterSink extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable;
 
-    public IMessage SyncProcessMessage(IMessage msg) throws Throwable;
 
-    public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable;
 
-    public void AsyncProcessRequest(IClientChannelSinkStack sinkStack, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable;
 
-    public void AsyncProcessResponse(IClientResponseChannelSinkStack sinkStack, NetObject state, ITransportHeaders headers, Stream stream) throws Throwable;
 
 
     
     // Properties section
     
-    public IDictionary getProperties() throws Throwable;
-
-    public IClientChannelSink getNextChannelSink() throws Throwable;
-
-    public IMessageSink getNextSink() throws Throwable;
-
 
 
     // Instance Events section

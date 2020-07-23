@@ -43,12 +43,27 @@ import microsoft.build.tasks.deployment.manifestutilities.AssemblyIdentity;
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity</a>
  */
 public class AssemblyIdentity extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity
+     */
     public static final String className = "Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class AssemblyIdentity extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyIdentity}, a cast assert is made to check if types are compatible.
+     */
     public static AssemblyIdentity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AssemblyIdentity(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class AssemblyIdentity extends NetObject  {
 
     // Constructors section
     
-
     public AssemblyIdentity() throws Throwable {
         try {
             // add reference to assemblyName.dll file

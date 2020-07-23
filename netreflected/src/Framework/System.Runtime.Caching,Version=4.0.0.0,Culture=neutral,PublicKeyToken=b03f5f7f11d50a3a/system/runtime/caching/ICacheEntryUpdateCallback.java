@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.caching.CacheEntryUpdateArguments;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CacheEntryUpdateCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.CacheEntryUpdateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.CacheEntryUpdateCallback</a>
+ */
 public interface ICacheEntryUpdateCallback {
     public void Invoke(CacheEntryUpdateArguments arguments);
 }

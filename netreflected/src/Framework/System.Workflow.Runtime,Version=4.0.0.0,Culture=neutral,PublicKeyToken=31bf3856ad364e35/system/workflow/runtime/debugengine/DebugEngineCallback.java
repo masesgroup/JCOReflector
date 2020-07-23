@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.workflow.runtime.debugengine.IDebugEngineCallback;
 /**
  * The base .NET class managing System.Workflow.Runtime.DebugEngine.DebugEngineCallback, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.DebugEngineCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.DebugEngineCallback</a>
  */
 public class DebugEngineCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.DebugEngine.DebugEngineCallback
+     */
     public static final String className = "System.Workflow.Runtime.DebugEngine.DebugEngineCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDebugEngineCallback callerInstance = null;
@@ -144,7 +159,7 @@ public class DebugEngineCallback extends JCVoidDelegate implements IJCVoidEventE
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke() throws Throwable {
+    public void METHOD_JAVA_NAME() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -154,7 +169,9 @@ public class DebugEngineCallback extends JCVoidDelegate implements IJCVoidEventE
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke() {
     }
 }

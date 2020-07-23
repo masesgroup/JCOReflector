@@ -42,7 +42,12 @@ import system.IAsyncResultImplementation;
 import system.EventArgs;
 import system.AsyncCallback;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BeginEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.BeginEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.BeginEventHandler</a>
+ */
 public interface IBeginEventHandler {
     public IAsyncResult Invoke(NetObject sender, EventArgs e, AsyncCallback cb, NetObject extraData);
 }

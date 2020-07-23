@@ -45,12 +45,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Web.UI.DataBindingCollection, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.DataBindingCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.DataBindingCollection</a>
  */
 public class DataBindingCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.DataBindingCollection
+     */
     public static final String className = "System.Web.UI.DataBindingCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class DataBindingCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataBindingCollection}, a cast assert is made to check if types are compatible.
+     */
     public static DataBindingCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataBindingCollection(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class DataBindingCollection extends NetObject  {
 
     // Constructors section
     
-
     public DataBindingCollection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         try {
             // add reference to assemblyName.dll file

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.Principal.IIdentity, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IIdentity</a>
  */
 public class IIdentityImplementation extends NetObject implements IIdentity {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Principal.IIdentity
+     */
     public static final String className = "System.Security.Principal.IIdentity";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IIdentityImplementation extends NetObject implements IIdentity {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IIdentity}, a cast assert is made to check if types are compatible.
+     */
     public static IIdentity ToIIdentity(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IIdentityImplementation(from.getJCOInstance());

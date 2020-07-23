@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.Sockets.SocketFlags, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketFlags</a>
  */
 public class SocketFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.Sockets.SocketFlags
+     */
     public static final String className = "System.Net.Sockets.SocketFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -146,19 +161,19 @@ public class SocketFlags extends NetObject  {
 
     // Flags management section
 
-    public SocketFlags add(SocketFlags val) throws Throwable {
+    public final SocketFlags add(SocketFlags val) throws Throwable {
         return new SocketFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SocketFlags remove(SocketFlags val) throws Throwable {
+    public final SocketFlags remove(SocketFlags val) throws Throwable {
         return new SocketFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SocketFlags val) throws Throwable {
+    public final boolean is(SocketFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SocketFlags val) throws Throwable {
+    public final boolean has(SocketFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -43,12 +43,27 @@ import system.security.cryptography.Oid;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.AlgorithmIdentifier, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier</a>
  */
 public class AlgorithmIdentifier extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.AlgorithmIdentifier
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.AlgorithmIdentifier";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class AlgorithmIdentifier extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AlgorithmIdentifier}, a cast assert is made to check if types are compatible.
+     */
     public static AlgorithmIdentifier cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AlgorithmIdentifier(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class AlgorithmIdentifier extends NetObject  {
 
     // Constructors section
     
-
     public AlgorithmIdentifier() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file

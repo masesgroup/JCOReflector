@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.compilerservices.INotifyCompletion;
+import system.runtime.compilerservices.INotifyCompletionImplementation;
 import system.Action;
 
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.ICriticalNotifyCompletion, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ICriticalNotifyCompletion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ICriticalNotifyCompletion</a>
  */
 public class ICriticalNotifyCompletionImplementation extends NetObject implements ICriticalNotifyCompletion {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.ICriticalNotifyCompletion
+     */
     public static final String className = "System.Runtime.CompilerServices.ICriticalNotifyCompletion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class ICriticalNotifyCompletionImplementation extends NetObject implement
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICriticalNotifyCompletion}, a cast assert is made to check if types are compatible.
+     */
     public static ICriticalNotifyCompletion ToICriticalNotifyCompletion(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICriticalNotifyCompletionImplementation(from.getJCOInstance());

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.threading.tasks.sources.IValueTaskSource;
 import system.threading.tasks.sources.IValueTaskSourceImplementation;
 import system.threading.tasks.Task;
@@ -48,12 +49,27 @@ import system.runtime.compilerservices.ValueTaskAwaiter;
 
 /**
  * The base .NET class managing System.Threading.Tasks.ValueTask, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.ValueTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.ValueTask</a>
  */
-public class ValueTask extends NetObject  {
+public class ValueTask extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.Tasks.ValueTask
+     */
     public static final String className = "System.Threading.Tasks.ValueTask";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class ValueTask extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValueTask}, a cast assert is made to check if types are compatible.
+     */
     public static ValueTask cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValueTask(from.getJCOInstance());
@@ -114,6 +132,8 @@ public class ValueTask extends NetObject  {
 
     // Constructors section
     
+    public ValueTask() throws Throwable {
+    }
 
     public ValueTask(IValueTaskSource source, short token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -134,6 +154,7 @@ public class ValueTask extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

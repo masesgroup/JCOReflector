@@ -38,17 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.DataSourceView;
 import system.web.ui.webcontrols.SqlDataSource;
 import system.web.HttpContext;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.web.ui.DataSourceSelectArguments;
-import system.web.ui.DataSourceViewOperationCallback;
-import system.web.ui.DataSourceViewSelectCallback;
 import system.web.ui.ConflictOptions;
 import system.web.ui.webcontrols.ParameterCollection;
 import system.web.ui.webcontrols.SqlDataSourceCommandType;
-import system.EventHandler;
 import system.web.ui.webcontrols.SqlDataSourceCommandEventHandler;
 import system.web.ui.webcontrols.SqlDataSourceFilteringEventHandler;
 import system.web.ui.webcontrols.SqlDataSourceSelectingEventHandler;
@@ -57,12 +55,27 @@ import system.web.ui.webcontrols.SqlDataSourceStatusEventHandler;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.SqlDataSourceView, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SqlDataSourceView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SqlDataSourceView</a>
  */
-public class SqlDataSourceView extends NetObject  {
+public class SqlDataSourceView extends DataSourceView  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.SqlDataSourceView
+     */
     public static final String className = "System.Web.UI.WebControls.SqlDataSourceView";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -115,7 +128,9 @@ public class SqlDataSourceView extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlDataSourceView}, a cast assert is made to check if types are compatible.
+     */
     public static SqlDataSourceView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlDataSourceView(from.getJCOInstance());
@@ -123,6 +138,8 @@ public class SqlDataSourceView extends NetObject  {
 
     // Constructors section
     
+    public SqlDataSourceView() throws Throwable {
+    }
 
     public SqlDataSourceView(SqlDataSource owner, java.lang.String name, HttpContext context) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         try {
@@ -135,19 +152,10 @@ public class SqlDataSourceView extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean CanExecute(java.lang.String commandName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanExecute", commandName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int Delete(IDictionary keys, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -189,56 +197,6 @@ public class SqlDataSourceView extends NetObject  {
         }
     }
 
-    public void Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Delete", keys == null ? null : keys.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ExecuteCommand(java.lang.String commandName, IDictionary keys, IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ExecuteCommand", commandName, keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Insert(IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Update(IDictionary keys, IDictionary values, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -258,66 +216,6 @@ public class SqlDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelSelectOnNullParameter", CancelSelectOnNullParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanDelete() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanDelete");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanInsert() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanInsert");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanPage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanPage");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanRetrieveTotalRowCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanRetrieveTotalRowCount");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanSort() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanSort");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanUpdate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanUpdate");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,16 +276,6 @@ public class SqlDataSourceView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertCommand", InsertCommand);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,26 +525,6 @@ public class SqlDataSourceView extends NetObject  {
 
     // Instance Events section
     
-
-    public void addDataSourceViewChanged(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("DataSourceViewChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDataSourceViewChanged(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("DataSourceViewChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
     public void addDeleting(SqlDataSourceCommandEventHandler handler) throws Throwable {
         if (classInstance == null)

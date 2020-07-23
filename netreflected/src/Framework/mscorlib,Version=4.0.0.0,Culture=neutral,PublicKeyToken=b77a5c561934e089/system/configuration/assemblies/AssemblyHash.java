@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.configuration.assemblies.AssemblyHashAlgorithm;
 
 
 /**
  * The base .NET class managing System.Configuration.Assemblies.AssemblyHash, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Assemblies.AssemblyHash" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Assemblies.AssemblyHash</a>
  */
-public class AssemblyHash extends NetObject  {
+public class AssemblyHash extends ValueType  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Configuration.Assemblies.AssemblyHash
+     */
     public static final String className = "System.Configuration.Assemblies.AssemblyHash";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class AssemblyHash extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyHash}, a cast assert is made to check if types are compatible.
+     */
     public static AssemblyHash cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AssemblyHash(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class AssemblyHash extends NetObject  {
 
     // Constructors section
     
+    public AssemblyHash() throws Throwable {
+    }
 
     public AssemblyHash(byte[] value) throws Throwable, system.ArgumentNullException {
         try {
@@ -129,6 +149,7 @@ public class AssemblyHash extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -169,6 +190,16 @@ public class AssemblyHash extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", (Object)value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetValue(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetValue", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

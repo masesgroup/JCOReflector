@@ -45,12 +45,27 @@ import system.windows.automation.provider.ProviderOptions;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderAdviseEvents, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents</a>
  */
 public class IRawElementProviderAdviseEventsImplementation extends NetObject implements IRawElementProviderAdviseEvents {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
     public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.IRawElementProviderAdviseEvents
+     */
     public static final String className = "System.Windows.Automation.Provider.IRawElementProviderAdviseEvents";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRawElementProviderAdviseEvents}, a cast assert is made to check if types are compatible.
+     */
     public static IRawElementProviderAdviseEvents ToIRawElementProviderAdviseEvents(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRawElementProviderAdviseEventsImplementation(from.getJCOInstance());
@@ -138,11 +155,31 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
+    public void AdviseEventAdded(int dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AdviseEventAdded", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AdviseEventRemoved", eventId, properties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AdviseEventRemoved(int dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AdviseEventRemoved", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

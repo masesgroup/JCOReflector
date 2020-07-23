@@ -44,12 +44,27 @@ import system.diagnostics.eventing.reader.EventBookmark;
 
 /**
  * The base .NET class managing System.Diagnostics.Eventing.Reader.EventLogWatcher, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogWatcher" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogWatcher</a>
  */
 public class EventLogWatcher extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.EventLog
+     */
     public static final String assemblyShortName = "System.Diagnostics.EventLog";
+    /**
+     * Qualified class name: System.Diagnostics.Eventing.Reader.EventLogWatcher
+     */
     public static final String className = "System.Diagnostics.Eventing.Reader.EventLogWatcher";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class EventLogWatcher extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLogWatcher}, a cast assert is made to check if types are compatible.
+     */
     public static EventLogWatcher cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventLogWatcher(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class EventLogWatcher extends NetObject  {
 
     // Constructors section
     
+    public EventLogWatcher() throws Throwable {
+    }
 
     public EventLogWatcher(EventLogQuery eventQuery) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -150,6 +169,7 @@ public class EventLogWatcher extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

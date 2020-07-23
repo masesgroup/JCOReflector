@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.ListViewHitTestLocations, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewHitTestLocations" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewHitTestLocations</a>
  */
 public class ListViewHitTestLocations extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ListViewHitTestLocations
+     */
     public static final String className = "System.Windows.Forms.ListViewHitTestLocations";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class ListViewHitTestLocations extends NetObject  {
 
     // Flags management section
 
-    public ListViewHitTestLocations add(ListViewHitTestLocations val) throws Throwable {
+    public final ListViewHitTestLocations add(ListViewHitTestLocations val) throws Throwable {
         return new ListViewHitTestLocations(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ListViewHitTestLocations remove(ListViewHitTestLocations val) throws Throwable {
+    public final ListViewHitTestLocations remove(ListViewHitTestLocations val) throws Throwable {
         return new ListViewHitTestLocations(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ListViewHitTestLocations val) throws Throwable {
+    public final boolean is(ListViewHitTestLocations val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ListViewHitTestLocations val) throws Throwable {
+    public final boolean has(ListViewHitTestLocations val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

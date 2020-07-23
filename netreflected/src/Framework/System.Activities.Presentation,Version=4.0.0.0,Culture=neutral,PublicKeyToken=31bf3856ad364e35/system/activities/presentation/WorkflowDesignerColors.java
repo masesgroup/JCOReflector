@@ -46,12 +46,27 @@ import system.windows.media.FontFamily;
 
 /**
  * The base .NET class managing System.Activities.Presentation.WorkflowDesignerColors, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors</a>
  */
 public class WorkflowDesignerColors extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.WorkflowDesignerColors
+     */
     public static final String className = "System.Activities.Presentation.WorkflowDesignerColors";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class WorkflowDesignerColors extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowDesignerColors}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowDesignerColors cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowDesignerColors(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class WorkflowDesignerColors extends NetObject  {
 
     // Constructors section
     
+    public WorkflowDesignerColors() throws Throwable {
+    }
 
     
     // Methods section
@@ -120,842 +139,842 @@ public class WorkflowDesignerColors extends NetObject  {
     
     // Properties section
     
-    public static double getFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OverflowException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public double getFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OverflowException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (double)classType.Get("FontSize");
+            return (double)classInstance.Get("FontSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorBackgroundBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorBackgroundBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorBackgroundBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorBackgroundBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorBorderBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorBorderBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorBorderBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorBorderBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorCategoryCaptionTextBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorCategoryCaptionTextBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorCategoryCaptionTextBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorCategoryCaptionTextBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorPaneBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorPaneBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorPaneBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorPaneBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorPopupBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorPopupBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorPopupBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorPopupBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorSelectedBackgroundBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorSelectedBackgroundBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorSelectedBackgroundBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorSelectedBackgroundBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorSelectedForegroundBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorSelectedForegroundBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorSelectedForegroundBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorSelectedForegroundBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorTextBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorTextBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorTextBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorTextBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorToolBarBackgroundBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorToolBarBackgroundBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarBackgroundBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorToolBarBackgroundBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorToolBarItemHoverBackgroundBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorToolBarItemHoverBackgroundBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarItemHoverBackgroundBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorToolBarItemHoverBackgroundBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorToolBarItemHoverBorderBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorToolBarItemHoverBorderBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarItemHoverBorderBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorToolBarItemHoverBorderBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorToolBarItemSelectedBackgroundBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorToolBarItemSelectedBackgroundBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarItemSelectedBackgroundBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorToolBarItemSelectedBackgroundBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorToolBarItemSelectedBorderBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorToolBarItemSelectedBorderBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarItemSelectedBorderBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorToolBarItemSelectedBorderBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorToolBarSeparatorBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorToolBarSeparatorBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarSeparatorBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorToolBarSeparatorBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPropertyInspectorToolBarTextBoxBorderBrushKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPropertyInspectorToolBarTextBoxBorderBrushKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarTextBoxBorderBrushKey");
+            return (java.lang.String)classInstance.Get("PropertyInspectorToolBarTextBoxBorderBrushKey");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontWeight getFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontWeight getFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("FontWeight");
+            JCObject val = (JCObject)classInstance.Get("FontWeight");
             return new FontWeight(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Brush getDesignerViewExpandAllCollapseAllButtonBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Brush getDesignerViewExpandAllCollapseAllButtonBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewExpandAllCollapseAllButtonBrush");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewExpandAllCollapseAllButtonBrush");
             return new Brush(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Brush getDesignerViewExpandAllCollapseAllButtonMouseOverBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Brush getDesignerViewExpandAllCollapseAllButtonMouseOverBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewExpandAllCollapseAllButtonMouseOverBrush");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewExpandAllCollapseAllButtonMouseOverBrush");
             return new Brush(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Brush getDesignerViewExpandAllCollapseAllPressedBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Brush getDesignerViewExpandAllCollapseAllPressedBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewExpandAllCollapseAllPressedBrush");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewExpandAllCollapseAllPressedBrush");
             return new Brush(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Brush getFlowchartExpressionButtonBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Brush getFlowchartExpressionButtonBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("FlowchartExpressionButtonBrush");
+            JCObject val = (JCObject)classInstance.Get("FlowchartExpressionButtonBrush");
             return new Brush(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Brush getFlowchartExpressionButtonMouseOverBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Brush getFlowchartExpressionButtonMouseOverBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("FlowchartExpressionButtonMouseOverBrush");
+            JCObject val = (JCObject)classInstance.Get("FlowchartExpressionButtonMouseOverBrush");
             return new Brush(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Brush getFlowchartExpressionButtonPressedBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Brush getFlowchartExpressionButtonPressedBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("FlowchartExpressionButtonPressedBrush");
+            JCObject val = (JCObject)classInstance.Get("FlowchartExpressionButtonPressedBrush");
             return new Brush(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getActivityDesignerSelectedTitleForegroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getActivityDesignerSelectedTitleForegroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ActivityDesignerSelectedTitleForegroundColor");
+            JCObject val = (JCObject)classInstance.Get("ActivityDesignerSelectedTitleForegroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationBackgroundGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationBackgroundGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationBackgroundGradientBeginColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationBackgroundGradientBeginColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationBackgroundGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationBackgroundGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationBackgroundGradientEndColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationBackgroundGradientEndColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationBackgroundGradientMiddleColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationBackgroundGradientMiddleColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationBackgroundGradientMiddleColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationBackgroundGradientMiddleColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationBorderColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationDockButtonColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationDockButtonColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockButtonColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationDockButtonColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationDockButtonHoverBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationDockButtonHoverBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockButtonHoverBackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationDockButtonHoverBackgroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationDockButtonHoverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationDockButtonHoverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockButtonHoverBorderColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationDockButtonHoverBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationDockButtonHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationDockButtonHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockButtonHoverColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationDockButtonHoverColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationDockTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationDockTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockTextColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationDockTextColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getAnnotationUndockTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getAnnotationUndockTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationUndockTextColor");
+            JCObject val = (JCObject)classInstance.Get("AnnotationUndockTextColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuBackgroundGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuBackgroundGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuBackgroundGradientBeginColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuBackgroundGradientBeginColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuBackgroundGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuBackgroundGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuBackgroundGradientEndColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuBackgroundGradientEndColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuBorderColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuIconAreaColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuIconAreaColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuIconAreaColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuIconAreaColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuItemTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuItemTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuItemTextColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuItemTextDisabledColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuItemTextDisabledColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextDisabledColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuItemTextDisabledColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuItemTextHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuItemTextHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextHoverColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuItemTextHoverColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuItemTextHoverQuirkedColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuItemTextHoverQuirkedColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextHoverQuirkedColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuItemTextHoverQuirkedColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuItemTextSelectedColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuItemTextSelectedColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextSelectedColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuItemTextSelectedColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuMouseOverBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuMouseOverBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverBeginColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuMouseOverBeginColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuMouseOverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuMouseOverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverBorderColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuMouseOverBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuMouseOverEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuMouseOverEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverEndColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuMouseOverEndColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuMouseOverMiddle1Color() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuMouseOverMiddle1Color() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverMiddle1Color");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuMouseOverMiddle1Color");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuMouseOverMiddle2Color() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuMouseOverMiddle2Color() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverMiddle2Color");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuMouseOverMiddle2Color");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getContextMenuSeparatorColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContextMenuSeparatorColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuSeparatorColor");
+            JCObject val = (JCObject)classInstance.Get("ContextMenuSeparatorColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewBackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewBackgroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarCaptionActiveColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarCaptionActiveColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarCaptionActiveColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarCaptionActiveColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarCaptionColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarCaptionColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarCaptionColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarCaptionColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarColorGradientBeginColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarColorGradientBeginColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarColorGradientEndColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarColorGradientEndColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarControlBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarControlBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarControlBackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarControlBackgroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarHoverColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarHoverColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarHoverColorGradientBeginColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarHoverColorGradientBeginColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarHoverColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarHoverColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarHoverColorGradientEndColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarHoverColorGradientEndColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarSelectedColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarSelectedColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarSelectedColorGradientBeginColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarSelectedColorGradientBeginColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewShellBarSelectedColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewShellBarSelectedColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarSelectedColorGradientEndColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewShellBarSelectedColorGradientEndColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getDesignerViewStatusBarBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getDesignerViewStatusBarBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewStatusBarBackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("DesignerViewStatusBarBackgroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getFlowchartConnectorColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getFlowchartConnectorColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("FlowchartConnectorColor");
+            JCObject val = (JCObject)classInstance.Get("FlowchartConnectorColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getGridViewRowHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getGridViewRowHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("GridViewRowHoverColor");
+            JCObject val = (JCObject)classInstance.Get("GridViewRowHoverColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getOutlineViewBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getOutlineViewBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewBackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("OutlineViewBackgroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getOutlineViewCollapsedArrowBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getOutlineViewCollapsedArrowBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewCollapsedArrowBorderColor");
+            JCObject val = (JCObject)classInstance.Get("OutlineViewCollapsedArrowBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getOutlineViewCollapsedArrowHoverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getOutlineViewCollapsedArrowHoverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewCollapsedArrowHoverBorderColor");
+            JCObject val = (JCObject)classInstance.Get("OutlineViewCollapsedArrowHoverBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getOutlineViewExpandedArrowBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getOutlineViewExpandedArrowBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewExpandedArrowBorderColor");
+            JCObject val = (JCObject)classInstance.Get("OutlineViewExpandedArrowBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getOutlineViewExpandedArrowColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getOutlineViewExpandedArrowColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewExpandedArrowColor");
+            JCObject val = (JCObject)classInstance.Get("OutlineViewExpandedArrowColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getOutlineViewItemHighlightBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getOutlineViewItemHighlightBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewItemHighlightBackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("OutlineViewItemHighlightBackgroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getOutlineViewItemSelectedTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getOutlineViewItemSelectedTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewItemSelectedTextColor");
+            JCObject val = (JCObject)classInstance.Get("OutlineViewItemSelectedTextColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getOutlineViewItemTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getOutlineViewItemTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewItemTextColor");
+            JCObject val = (JCObject)classInstance.Get("OutlineViewItemTextColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getPropertyToolBarHightlightedButtonForegroundColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getPropertyToolBarHightlightedButtonForegroundColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PropertyToolBarHightlightedButtonForegroundColor");
+            JCObject val = (JCObject)classInstance.Get("PropertyToolBarHightlightedButtonForegroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getWorkflowViewElementBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getWorkflowViewElementBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementBackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("WorkflowViewElementBackgroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getWorkflowViewElementBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getWorkflowViewElementBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementBorderColor");
+            JCObject val = (JCObject)classInstance.Get("WorkflowViewElementBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getWorkflowViewElementCaptionColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getWorkflowViewElementCaptionColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementCaptionColor");
+            JCObject val = (JCObject)classInstance.Get("WorkflowViewElementCaptionColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getWorkflowViewElementSelectedBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getWorkflowViewElementSelectedBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementSelectedBackgroundColor");
+            JCObject val = (JCObject)classInstance.Get("WorkflowViewElementSelectedBackgroundColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getWorkflowViewElementSelectedBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getWorkflowViewElementSelectedBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementSelectedBorderColor");
+            JCObject val = (JCObject)classInstance.Get("WorkflowViewElementSelectedBorderColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color getWorkflowViewElementSelectedCaptionColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getWorkflowViewElementSelectedCaptionColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementSelectedCaptionColor");
+            JCObject val = (JCObject)classInstance.Get("WorkflowViewElementSelectedCaptionColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontFamily getFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontFamily getFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("FontFamily");
+            JCObject val = (JCObject)classInstance.Get("FontFamily");
             return new FontFamily(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -44,12 +44,27 @@ import system.directoryservices.protocols.SearchResultAttributeCollection;
 
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.SearchResultEntry, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.SearchResultEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.SearchResultEntry</a>
  */
 public class SearchResultEntry extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.SearchResultEntry
+     */
     public static final String className = "System.DirectoryServices.Protocols.SearchResultEntry";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class SearchResultEntry extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SearchResultEntry}, a cast assert is made to check if types are compatible.
+     */
     public static SearchResultEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SearchResultEntry(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class SearchResultEntry extends NetObject  {
 
     // Constructors section
     
+    public SearchResultEntry() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -118,7 +139,7 @@ public class SearchResultEntry extends NetObject  {
     
     // Properties section
     
-    public DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
+    public final DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

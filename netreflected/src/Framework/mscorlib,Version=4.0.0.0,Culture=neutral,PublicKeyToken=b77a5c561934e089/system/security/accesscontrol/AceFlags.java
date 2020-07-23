@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.AccessControl.AceFlags, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AceFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AceFlags</a>
  */
 public class AceFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.AceFlags
+     */
     public static final String className = "System.Security.AccessControl.AceFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -146,19 +161,19 @@ public class AceFlags extends NetObject  {
 
     // Flags management section
 
-    public AceFlags add(AceFlags val) throws Throwable {
+    public final AceFlags add(AceFlags val) throws Throwable {
         return new AceFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AceFlags remove(AceFlags val) throws Throwable {
+    public final AceFlags remove(AceFlags val) throws Throwable {
         return new AceFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AceFlags val) throws Throwable {
+    public final boolean is(AceFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AceFlags val) throws Throwable {
+    public final boolean has(AceFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

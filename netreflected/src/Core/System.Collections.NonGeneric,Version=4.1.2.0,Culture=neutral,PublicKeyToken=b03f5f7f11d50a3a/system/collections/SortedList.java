@@ -52,12 +52,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Collections.SortedList, System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.SortedList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.SortedList</a>
  */
 public class SortedList extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.NonGeneric
+     */
     public static final String assemblyShortName = "System.Collections.NonGeneric";
+    /**
+     * Qualified class name: System.Collections.SortedList
+     */
     public static final String className = "System.Collections.SortedList";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class SortedList extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SortedList}, a cast assert is made to check if types are compatible.
+     */
     public static SortedList cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SortedList(from.getJCOInstance());
@@ -118,7 +135,6 @@ public class SortedList extends NetObject  {
 
     // Constructors section
     
-
     public SortedList() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file

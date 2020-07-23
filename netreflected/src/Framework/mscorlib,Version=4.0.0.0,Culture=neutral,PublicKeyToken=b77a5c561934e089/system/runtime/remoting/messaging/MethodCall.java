@@ -51,12 +51,27 @@ import system.runtime.remoting.messaging.LogicalCallContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.MethodCall, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.MethodCall" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.MethodCall</a>
  */
 public class MethodCall extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.MethodCall
+     */
     public static final String className = "System.Runtime.Remoting.Messaging.MethodCall";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class MethodCall extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodCall}, a cast assert is made to check if types are compatible.
+     */
     public static MethodCall cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MethodCall(from.getJCOInstance());
@@ -117,6 +134,8 @@ public class MethodCall extends NetObject  {
 
     // Constructors section
     
+    public MethodCall() throws Throwable {
+    }
 
     public MethodCall(Header[] h1) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         try {
@@ -137,6 +156,7 @@ public class MethodCall extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -291,7 +311,7 @@ public class MethodCall extends NetObject  {
         }
     }
 
-    public NetObject[] getArgs() throws Throwable {
+    public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -308,7 +328,7 @@ public class MethodCall extends NetObject  {
         }
     }
 
-    public NetObject[] getInArgs() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public final NetObject[] getInArgs() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

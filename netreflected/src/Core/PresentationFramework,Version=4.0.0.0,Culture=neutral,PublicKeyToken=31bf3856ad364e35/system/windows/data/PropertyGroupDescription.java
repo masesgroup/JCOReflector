@@ -38,23 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.GroupDescription;
 import system.windows.data.IValueConverter;
 import system.windows.data.IValueConverterImplementation;
 import system.StringComparison;
 import system.globalization.CultureInfo;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
-import system.componentmodel.SortDescriptionCollection;
 
 
 /**
  * The base .NET class managing System.Windows.Data.PropertyGroupDescription, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.PropertyGroupDescription" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.PropertyGroupDescription</a>
  */
-public class PropertyGroupDescription extends NetObject  {
+public class PropertyGroupDescription extends GroupDescription  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Data.PropertyGroupDescription
+     */
     public static final String className = "System.Windows.Data.PropertyGroupDescription";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class PropertyGroupDescription extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyGroupDescription}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyGroupDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyGroupDescription(from.getJCOInstance());
@@ -115,7 +132,6 @@ public class PropertyGroupDescription extends NetObject  {
 
     // Constructors section
     
-
     public PropertyGroupDescription() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -170,26 +186,6 @@ public class PropertyGroupDescription extends NetObject  {
         }
     }
 
-    public boolean ShouldSerializeGroupNames() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeGroupNames");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean ShouldSerializeSortDescriptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeSortDescriptions");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GroupNameFromItem(NetObject item, int level, CultureInfo culture) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -205,55 +201,23 @@ public class PropertyGroupDescription extends NetObject  {
     
     // Properties section
     
-    public static IComparer getCompareNameAscending() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IComparer getCompareNameAscending() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CompareNameAscending");
+            JCObject val = (JCObject)classInstance.Get("CompareNameAscending");
             return new IComparerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IComparer getCompareNameDescending() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IComparer getCompareNameDescending() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CompareNameDescending");
+            JCObject val = (JCObject)classInstance.Get("CompareNameDescending");
             return new IComparerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IComparer getCustomSort() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CustomSort");
-            return new IComparerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCustomSort(IComparer CustomSort) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CustomSort", CustomSort == null ? null : CustomSort.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SortDescriptionCollection getSortDescriptions() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SortDescriptions");
-            return new SortDescriptionCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

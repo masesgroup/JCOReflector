@@ -43,12 +43,27 @@ import system.servicemodel.security.SecurityAlgorithmSuite;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite</a>
  */
 public class SecurityAlgorithmSuite extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.SecurityAlgorithmSuite
+     */
     public static final String className = "System.ServiceModel.Security.SecurityAlgorithmSuite";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SecurityAlgorithmSuite extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityAlgorithmSuite}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityAlgorithmSuite cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityAlgorithmSuite(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     // Constructors section
     
+    public SecurityAlgorithmSuite() throws Throwable {
+    }
 
     
     // Methods section
@@ -257,187 +276,187 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic128() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic128() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic128");
+            JCObject val = (JCObject)classInstance.Get("Basic128");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic128Rsa15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic128Rsa15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic128Rsa15");
+            JCObject val = (JCObject)classInstance.Get("Basic128Rsa15");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic128Sha256() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic128Sha256() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic128Sha256");
+            JCObject val = (JCObject)classInstance.Get("Basic128Sha256");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic128Sha256Rsa15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic128Sha256Rsa15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic128Sha256Rsa15");
+            JCObject val = (JCObject)classInstance.Get("Basic128Sha256Rsa15");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic192() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic192() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic192");
+            JCObject val = (JCObject)classInstance.Get("Basic192");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic192Rsa15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic192Rsa15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic192Rsa15");
+            JCObject val = (JCObject)classInstance.Get("Basic192Rsa15");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic192Sha256() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic192Sha256() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic192Sha256");
+            JCObject val = (JCObject)classInstance.Get("Basic192Sha256");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic192Sha256Rsa15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic192Sha256Rsa15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic192Sha256Rsa15");
+            JCObject val = (JCObject)classInstance.Get("Basic192Sha256Rsa15");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic256() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic256() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic256");
+            JCObject val = (JCObject)classInstance.Get("Basic256");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic256Rsa15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic256Rsa15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic256Rsa15");
+            JCObject val = (JCObject)classInstance.Get("Basic256Rsa15");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic256Sha256() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic256Sha256() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic256Sha256");
+            JCObject val = (JCObject)classInstance.Get("Basic256Sha256");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getBasic256Sha256Rsa15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getBasic256Sha256Rsa15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Basic256Sha256Rsa15");
+            JCObject val = (JCObject)classInstance.Get("Basic256Sha256Rsa15");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getTripleDes() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getTripleDes() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TripleDes");
+            JCObject val = (JCObject)classInstance.Get("TripleDes");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getTripleDesRsa15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getTripleDesRsa15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TripleDesRsa15");
+            JCObject val = (JCObject)classInstance.Get("TripleDesRsa15");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getTripleDesSha256() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getTripleDesSha256() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TripleDesSha256");
+            JCObject val = (JCObject)classInstance.Get("TripleDesSha256");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityAlgorithmSuite getTripleDesSha256Rsa15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityAlgorithmSuite getTripleDesSha256Rsa15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TripleDesSha256Rsa15");
+            JCObject val = (JCObject)classInstance.Get("TripleDesSha256Rsa15");
             return new SecurityAlgorithmSuite(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

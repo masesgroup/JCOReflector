@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Deployment.Application.CompatibleFramework, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.CompatibleFramework" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.CompatibleFramework</a>
  */
 public class CompatibleFramework extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Deployment
+     */
     public static final String assemblyShortName = "System.Deployment";
+    /**
+     * Qualified class name: System.Deployment.Application.CompatibleFramework
+     */
     public static final String className = "System.Deployment.Application.CompatibleFramework";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class CompatibleFramework extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompatibleFramework}, a cast assert is made to check if types are compatible.
+     */
     public static CompatibleFramework cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompatibleFramework(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class CompatibleFramework extends NetObject  {
 
     // Constructors section
     
+    public CompatibleFramework() throws Throwable {
+    }
+
+
 
     
     // Methods section

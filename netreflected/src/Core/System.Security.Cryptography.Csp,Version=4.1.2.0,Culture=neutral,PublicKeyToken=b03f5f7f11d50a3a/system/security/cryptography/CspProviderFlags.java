@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CspProviderFlags, System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CspProviderFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CspProviderFlags</a>
  */
 public class CspProviderFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Csp
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Csp";
+    /**
+     * Qualified class name: System.Security.Cryptography.CspProviderFlags
+     */
     public static final String className = "System.Security.Cryptography.CspProviderFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -145,19 +160,19 @@ public class CspProviderFlags extends NetObject  {
 
     // Flags management section
 
-    public CspProviderFlags add(CspProviderFlags val) throws Throwable {
+    public final CspProviderFlags add(CspProviderFlags val) throws Throwable {
         return new CspProviderFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CspProviderFlags remove(CspProviderFlags val) throws Throwable {
+    public final CspProviderFlags remove(CspProviderFlags val) throws Throwable {
         return new CspProviderFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CspProviderFlags val) throws Throwable {
+    public final boolean is(CspProviderFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CspProviderFlags val) throws Throwable {
+    public final boolean has(CspProviderFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

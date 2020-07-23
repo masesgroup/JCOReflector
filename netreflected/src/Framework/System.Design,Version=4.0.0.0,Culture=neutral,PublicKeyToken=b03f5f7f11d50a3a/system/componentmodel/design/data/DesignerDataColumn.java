@@ -43,12 +43,27 @@ import system.data.DbType;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Data.DesignerDataColumn, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn</a>
  */
 public class DesignerDataColumn extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Data.DesignerDataColumn
+     */
     public static final String className = "System.ComponentModel.Design.Data.DesignerDataColumn";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class DesignerDataColumn extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerDataColumn}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerDataColumn cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerDataColumn(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class DesignerDataColumn extends NetObject  {
 
     // Constructors section
     
+    public DesignerDataColumn() throws Throwable {
+    }
 
     public DesignerDataColumn(java.lang.String name, DbType dataType) throws Throwable {
         try {
@@ -139,6 +158,7 @@ public class DesignerDataColumn extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

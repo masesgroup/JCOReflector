@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.runtime.hosting.WorkflowPersistenceService;
 import system.collections.specialized.NameValueCollection;
 import system.TimeSpan;
 import system.Guid;
@@ -45,12 +46,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService</a>
  */
-public class SqlWorkflowPersistenceService extends NetObject  {
+public class SqlWorkflowPersistenceService extends WorkflowPersistenceService  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService
+     */
     public static final String className = "System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class SqlWorkflowPersistenceService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlWorkflowPersistenceService}, a cast assert is made to check if types are compatible.
+     */
     public static SqlWorkflowPersistenceService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlWorkflowPersistenceService(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class SqlWorkflowPersistenceService extends NetObject  {
 
     // Constructors section
     
+    public SqlWorkflowPersistenceService() throws Throwable {
+    }
 
     public SqlWorkflowPersistenceService(NameValueCollection parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
         try {
@@ -141,6 +161,7 @@ public class SqlWorkflowPersistenceService extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

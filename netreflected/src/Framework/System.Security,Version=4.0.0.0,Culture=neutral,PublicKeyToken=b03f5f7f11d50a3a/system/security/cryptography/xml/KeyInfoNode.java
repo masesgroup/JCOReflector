@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.xml.KeyInfoClause;
 import system.xml.XmlElement;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.Xml.KeyInfoNode, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfoNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfoNode</a>
  */
-public class KeyInfoNode extends NetObject  {
+public class KeyInfoNode extends KeyInfoClause  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Xml.KeyInfoNode
+     */
     public static final String className = "System.Security.Cryptography.Xml.KeyInfoNode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class KeyInfoNode extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyInfoNode}, a cast assert is made to check if types are compatible.
+     */
     public static KeyInfoNode cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new KeyInfoNode(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class KeyInfoNode extends NetObject  {
 
     // Constructors section
     
-
     public KeyInfoNode() throws Throwable {
         try {
             // add reference to assemblyName.dll file

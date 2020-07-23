@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.specialized.INotifyCollectionChanged;
+import system.collections.specialized.INotifyCollectionChangedImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.componentmodel.SortDescriptionCollection;
@@ -48,12 +50,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.ICollectionView, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICollectionView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICollectionView</a>
  */
-public interface ICollectionView extends IJCOBridgeReflected {
-
+public interface ICollectionView extends IJCOBridgeReflected, IEnumerable, INotifyCollectionChanged {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
+    public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.ICollectionView
+     */
+    public static final String className = "System.ComponentModel.ICollectionView";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollectionView}, a cast assert is made to check if types are compatible.
+     */
     public static ICollectionView ToICollectionView(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.ComponentModel.ICollectionView, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "WindowsBase"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICollectionViewImplementation(from.getJCOInstance());
     }
@@ -146,10 +165,6 @@ public interface ICollectionView extends IJCOBridgeReflected {
 
     // Instance Events section
     
-    public void addCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable;
-
-    public void removeCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable;
-
     public void addCurrentChanging(CurrentChangingEventHandler handler) throws Throwable;
 
     public void removeCurrentChanging(CurrentChangingEventHandler handler) throws Throwable;

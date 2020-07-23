@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Data.Objects.ObjectMaterializedEventArgs, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventArgs</a>
  */
-public class ObjectMaterializedEventArgs extends NetObject  {
+public class ObjectMaterializedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Objects.ObjectMaterializedEventArgs
+     */
     public static final String className = "System.Data.Objects.ObjectMaterializedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ObjectMaterializedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectMaterializedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectMaterializedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectMaterializedEventArgs(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class ObjectMaterializedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ObjectMaterializedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

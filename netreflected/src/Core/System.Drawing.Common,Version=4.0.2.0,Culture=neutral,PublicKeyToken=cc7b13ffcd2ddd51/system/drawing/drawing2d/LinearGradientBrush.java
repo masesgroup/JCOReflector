@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.drawing.Brush;
 import system.drawing.Point;
 import system.drawing.Color;
 import system.drawing.PointF;
@@ -54,12 +55,27 @@ import system.drawing.drawing2d.WrapMode;
 
 /**
  * The base .NET class managing System.Drawing.Drawing2D.LinearGradientBrush, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.LinearGradientBrush" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.LinearGradientBrush</a>
  */
-public class LinearGradientBrush extends NetObject  {
+public class LinearGradientBrush extends Brush  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Drawing2D.LinearGradientBrush
+     */
     public static final String className = "System.Drawing.Drawing2D.LinearGradientBrush";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +128,9 @@ public class LinearGradientBrush extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinearGradientBrush}, a cast assert is made to check if types are compatible.
+     */
     public static LinearGradientBrush cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LinearGradientBrush(from.getJCOInstance());
@@ -120,6 +138,8 @@ public class LinearGradientBrush extends NetObject  {
 
     // Constructors section
     
+    public LinearGradientBrush() throws Throwable {
+    }
 
     public LinearGradientBrush(Point point1, Point point2, Color color1, Color color2) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -202,6 +222,7 @@ public class LinearGradientBrush extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -211,38 +232,6 @@ public class LinearGradientBrush extends NetObject  {
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new NetObject(objClone);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +391,7 @@ public class LinearGradientBrush extends NetObject  {
         }
     }
 
-    public Color[] getLinearColors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public final Color[] getLinearColors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

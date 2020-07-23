@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.ExtensionDataObject, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ExtensionDataObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ExtensionDataObject</a>
  */
 public class ExtensionDataObject extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
     public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Runtime.Serialization.ExtensionDataObject
+     */
     public static final String className = "System.Runtime.Serialization.ExtensionDataObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ExtensionDataObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExtensionDataObject}, a cast assert is made to check if types are compatible.
+     */
     public static ExtensionDataObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExtensionDataObject(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class ExtensionDataObject extends NetObject  {
 
     // Constructors section
     
+    public ExtensionDataObject() throws Throwable {
+    }
+
+
 
     
     // Methods section

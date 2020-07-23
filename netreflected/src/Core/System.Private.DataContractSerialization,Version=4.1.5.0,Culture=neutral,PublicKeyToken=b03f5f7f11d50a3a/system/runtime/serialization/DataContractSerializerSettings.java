@@ -44,12 +44,27 @@ import system.xml.XmlDictionaryString;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.DataContractSerializerSettings, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings</a>
  */
 public class DataContractSerializerSettings extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
     public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Runtime.Serialization.DataContractSerializerSettings
+     */
     public static final String className = "System.Runtime.Serialization.DataContractSerializerSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DataContractSerializerSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataContractSerializerSettings}, a cast assert is made to check if types are compatible.
+     */
     public static DataContractSerializerSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataContractSerializerSettings(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class DataContractSerializerSettings extends NetObject  {
 
     // Constructors section
     
-
     public DataContractSerializerSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file

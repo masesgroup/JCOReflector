@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode</a>
  */
 public class PropertyContainerEditMode extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode
+     */
     public static final String className = "System.Activities.Presentation.PropertyEditing.PropertyContainerEditMode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

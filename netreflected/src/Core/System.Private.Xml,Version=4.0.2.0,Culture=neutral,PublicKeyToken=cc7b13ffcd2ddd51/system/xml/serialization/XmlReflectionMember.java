@@ -44,12 +44,27 @@ import system.xml.serialization.XmlAttributes;
 
 /**
  * The base .NET class managing System.Xml.Serialization.XmlReflectionMember, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlReflectionMember" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlReflectionMember</a>
  */
 public class XmlReflectionMember extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.XmlReflectionMember
+     */
     public static final String className = "System.Xml.Serialization.XmlReflectionMember";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class XmlReflectionMember extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlReflectionMember}, a cast assert is made to check if types are compatible.
+     */
     public static XmlReflectionMember cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlReflectionMember(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class XmlReflectionMember extends NetObject  {
 
     // Constructors section
     
-
     public XmlReflectionMember() throws Throwable {
         try {
             // add reference to assemblyName.dll file

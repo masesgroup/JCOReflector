@@ -38,7 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.channels.BindingElement;
+import system.servicemodel.channels.TransportBindingElement;
 import system.servicemodel.DeadLetterQueue;
 import system.servicemodel.MsmqTransportSecurity;
 import system.servicemodel.ReceiveErrorHandling;
@@ -48,12 +48,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.MsmqBindingElementBase, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.MsmqBindingElementBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.MsmqBindingElementBase</a>
  */
-public class MsmqBindingElementBase extends NetObject  {
+public class MsmqBindingElementBase extends TransportBindingElement  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.MsmqBindingElementBase
+     */
     public static final String className = "System.ServiceModel.Channels.MsmqBindingElementBase";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class MsmqBindingElementBase extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MsmqBindingElementBase}, a cast assert is made to check if types are compatible.
+     */
     public static MsmqBindingElementBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MsmqBindingElementBase(from.getJCOInstance());
@@ -114,21 +131,12 @@ public class MsmqBindingElementBase extends NetObject  {
 
     // Constructors section
     
+    public MsmqBindingElementBase() throws Throwable {
+    }
 
     
     // Methods section
     
-    public BindingElement Clone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new BindingElement(objClone);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -168,26 +176,6 @@ public class MsmqBindingElementBase extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExactlyOnce", ExactlyOnce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getManualAddressing() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ManualAddressing");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setManualAddressing(boolean ManualAddressing) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ManualAddressing", ManualAddressing);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,46 +291,6 @@ public class MsmqBindingElementBase extends NetObject  {
         }
     }
 
-    public long getMaxBufferPoolSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("MaxBufferPoolSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxBufferPoolSize(long MaxBufferPoolSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxBufferPoolSize", MaxBufferPoolSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getMaxReceivedMessageSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("MaxReceivedMessageSize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxReceivedMessageSize(long MaxReceivedMessageSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxReceivedMessageSize", MaxReceivedMessageSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DeadLetterQueue getDeadLetterQueue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -401,16 +349,6 @@ public class MsmqBindingElementBase extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveErrorHandling", ReceiveErrorHandling == null ? null : ReceiveErrorHandling.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getScheme() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Scheme");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

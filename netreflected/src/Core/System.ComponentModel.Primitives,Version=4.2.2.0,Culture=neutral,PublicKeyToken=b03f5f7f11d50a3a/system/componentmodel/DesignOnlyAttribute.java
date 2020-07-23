@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.ComponentModel.DesignOnlyAttribute, System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DesignOnlyAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DesignOnlyAttribute</a>
  */
-public class DesignOnlyAttribute extends NetObject  {
+public class DesignOnlyAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.Primitives
+     */
     public static final String assemblyShortName = "System.ComponentModel.Primitives";
+    /**
+     * Qualified class name: System.ComponentModel.DesignOnlyAttribute
+     */
     public static final String className = "System.ComponentModel.DesignOnlyAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class DesignOnlyAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignOnlyAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static DesignOnlyAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignOnlyAttribute(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class DesignOnlyAttribute extends NetObject  {
 
     // Constructors section
     
+    public DesignOnlyAttribute() throws Throwable {
+    }
 
     public DesignOnlyAttribute(boolean isDesignOnly) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class DesignOnlyAttribute extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -133,16 +154,6 @@ public class DesignOnlyAttribute extends NetObject  {
         }
     }
 
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -152,17 +163,6 @@ public class DesignOnlyAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsDesignOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

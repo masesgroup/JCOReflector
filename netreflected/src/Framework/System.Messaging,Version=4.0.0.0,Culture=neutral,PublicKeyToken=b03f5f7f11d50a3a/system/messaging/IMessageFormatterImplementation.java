@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ICloneable;
+import system.ICloneableImplementation;
 import system.messaging.Message;
 
 
 /**
  * The base .NET class managing System.Messaging.IMessageFormatter, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.IMessageFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.IMessageFormatter</a>
  */
 public class IMessageFormatterImplementation extends NetObject implements IMessageFormatter {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.IMessageFormatter
+     */
     public static final String className = "System.Messaging.IMessageFormatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class IMessageFormatterImplementation extends NetObject implements IMessa
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMessageFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static IMessageFormatter ToIMessageFormatter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IMessageFormatterImplementation(from.getJCOInstance());

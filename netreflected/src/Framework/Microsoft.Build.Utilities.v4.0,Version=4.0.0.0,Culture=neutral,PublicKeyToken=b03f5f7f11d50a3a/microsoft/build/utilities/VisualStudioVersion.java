@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing Microsoft.Build.Utilities.VisualStudioVersion, Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.VisualStudioVersion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.VisualStudioVersion</a>
  */
 public class VisualStudioVersion extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Utilities.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Utilities.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Utilities.VisualStudioVersion
+     */
     public static final String className = "Microsoft.Build.Utilities.VisualStudioVersion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

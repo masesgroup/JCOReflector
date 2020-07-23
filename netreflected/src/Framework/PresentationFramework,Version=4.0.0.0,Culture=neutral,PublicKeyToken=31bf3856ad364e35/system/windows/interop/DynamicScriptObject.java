@@ -38,30 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.dynamic.BinaryOperationBinder;
-import system.dynamic.ConvertBinder;
-import system.dynamic.CreateInstanceBinder;
-import system.dynamic.DeleteIndexBinder;
-import system.dynamic.DeleteMemberBinder;
+import system.dynamic.DynamicObject;
 import system.dynamic.GetIndexBinder;
 import system.dynamic.GetMemberBinder;
 import system.dynamic.InvokeBinder;
 import system.dynamic.InvokeMemberBinder;
 import system.dynamic.SetIndexBinder;
 import system.dynamic.SetMemberBinder;
-import system.dynamic.UnaryOperationBinder;
-import system.dynamic.DynamicMetaObject;
-import system.linq.expressions.Expression;
 
 
 /**
  * The base .NET class managing System.Windows.Interop.DynamicScriptObject, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.DynamicScriptObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.DynamicScriptObject</a>
  */
-public class DynamicScriptObject extends NetObject  {
+public class DynamicScriptObject extends DynamicObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Interop.DynamicScriptObject
+     */
     public static final String className = "System.Windows.Interop.DynamicScriptObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +122,9 @@ public class DynamicScriptObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicScriptObject}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicScriptObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicScriptObject(from.getJCOInstance());
@@ -122,30 +132,14 @@ public class DynamicScriptObject extends NetObject  {
 
     // Constructors section
     
+    public DynamicScriptObject() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public boolean TryDeleteIndex(DeleteIndexBinder binder, NetObject[] indexes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("TryDeleteIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean TryDeleteMember(DeleteMemberBinder binder) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("TryDeleteMember", binder == null ? null : binder.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean TrySetIndex(SetIndexBinder binder, NetObject[] indexes, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.RankException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -161,17 +155,6 @@ public class DynamicScriptObject extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject GetMetaObject(Expression parameter) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMetaObject = (JCObject)classInstance.Invoke("GetMetaObject", parameter == null ? null : parameter.getJCOInstance());
-            return new DynamicMetaObject(objGetMetaObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

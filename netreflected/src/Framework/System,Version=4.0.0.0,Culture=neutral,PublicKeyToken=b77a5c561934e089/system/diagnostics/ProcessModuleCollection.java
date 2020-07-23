@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.ReadOnlyCollectionBase;
 import system.diagnostics.ProcessModule;
 
 
 /**
  * The base .NET class managing System.Diagnostics.ProcessModuleCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ProcessModuleCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ProcessModuleCollection</a>
  */
-public class ProcessModuleCollection extends NetObject  {
+public class ProcessModuleCollection extends ReadOnlyCollectionBase  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Diagnostics.ProcessModuleCollection
+     */
     public static final String className = "System.Diagnostics.ProcessModuleCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ProcessModuleCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProcessModuleCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ProcessModuleCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ProcessModuleCollection(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ProcessModuleCollection extends NetObject  {
 
     // Constructors section
     
+    public ProcessModuleCollection() throws Throwable {
+    }
 
     public ProcessModuleCollection(ProcessModule[] processModules) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
@@ -119,6 +139,7 @@ public class ProcessModuleCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -158,16 +179,6 @@ public class ProcessModuleCollection extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

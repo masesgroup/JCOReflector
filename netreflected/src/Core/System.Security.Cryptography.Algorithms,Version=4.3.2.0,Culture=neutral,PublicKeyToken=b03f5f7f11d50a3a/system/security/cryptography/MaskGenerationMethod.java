@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.Cryptography.MaskGenerationMethod, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.MaskGenerationMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.MaskGenerationMethod</a>
  */
 public class MaskGenerationMethod extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.MaskGenerationMethod
+     */
     public static final String className = "System.Security.Cryptography.MaskGenerationMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class MaskGenerationMethod extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MaskGenerationMethod}, a cast assert is made to check if types are compatible.
+     */
     public static MaskGenerationMethod cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MaskGenerationMethod(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class MaskGenerationMethod extends NetObject  {
 
     // Constructors section
     
+    public MaskGenerationMethod() throws Throwable {
+    }
 
     
     // Methods section
@@ -118,6 +137,25 @@ public class MaskGenerationMethod extends NetObject  {
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateMask", rgbSeed, cbReturn);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGenerateMask = 0; indexGenerateMask < resultingArrayList.size(); indexGenerateMask++ ) {
+				resultingArray[indexGenerateMask] = (byte)resultingArrayList.get(indexGenerateMask);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] GenerateMask(JCRefOut dupParam0, int dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateMask", dupParam0, dupParam1);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

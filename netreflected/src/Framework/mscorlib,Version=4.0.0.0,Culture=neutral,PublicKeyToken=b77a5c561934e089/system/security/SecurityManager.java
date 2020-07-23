@@ -48,12 +48,27 @@ import system.security.PolicyLevelType;
 
 /**
  * The base .NET class managing System.Security.SecurityManager, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityManager</a>
  */
 public class SecurityManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.SecurityManager
+     */
     public static final String className = "System.Security.SecurityManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class SecurityManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityManager}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityManager(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class SecurityManager extends NetObject  {
 
     // Constructors section
     
+    public SecurityManager() throws Throwable {
+    }
 
     
     // Methods section
@@ -226,6 +245,16 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    public static void SavePolicy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.security.policy.PolicyException, system.security.SecurityException, system.security.XmlSyntaxException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SavePolicy");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void SavePolicyLevel(PolicyLevel level) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.policy.PolicyException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.XmlSyntaxException, system.RankException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -240,41 +269,41 @@ public class SecurityManager extends NetObject  {
     
     // Properties section
     
-    public static boolean getCheckExecutionRights() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getCheckExecutionRights() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("CheckExecutionRights");
+            return (boolean)classInstance.Get("CheckExecutionRights");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCheckExecutionRights(boolean CheckExecutionRights) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCheckExecutionRights(boolean CheckExecutionRights) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CheckExecutionRights", CheckExecutionRights);
+            classInstance.Set("CheckExecutionRights", CheckExecutionRights);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getSecurityEnabled() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getSecurityEnabled() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("SecurityEnabled");
+            return (boolean)classInstance.Get("SecurityEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setSecurityEnabled(boolean SecurityEnabled) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setSecurityEnabled(boolean SecurityEnabled) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("SecurityEnabled", SecurityEnabled);
+            classInstance.Set("SecurityEnabled", SecurityEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

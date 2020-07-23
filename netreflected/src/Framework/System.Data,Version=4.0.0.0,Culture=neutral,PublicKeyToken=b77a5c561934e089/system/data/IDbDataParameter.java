@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.data.IDataParameter;
+import system.data.IDataParameterImplementation;
 import system.data.DataRowVersion;
 import system.data.DbType;
 import system.data.ParameterDirection;
@@ -44,12 +46,29 @@ import system.data.ParameterDirection;
 
 /**
  * The base .NET class managing System.Data.IDbDataParameter, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbDataParameter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbDataParameter</a>
  */
-public interface IDbDataParameter extends IJCOBridgeReflected {
-
+public interface IDbDataParameter extends IJCOBridgeReflected, IDataParameter {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
+    public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.IDbDataParameter
+     */
+    public static final String className = "System.Data.IDbDataParameter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDbDataParameter}, a cast assert is made to check if types are compatible.
+     */
     public static IDbDataParameter ToIDbDataParameter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Data.IDbDataParameter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Data"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDbDataParameterImplementation(from.getJCOInstance());
     }
@@ -96,8 +115,6 @@ public interface IDbDataParameter extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getIsNullable() throws Throwable;
-
     public byte getPrecision() throws Throwable;
 
     public void setPrecision(byte Precision) throws Throwable;
@@ -109,30 +126,6 @@ public interface IDbDataParameter extends IJCOBridgeReflected {
     public int getSize() throws Throwable;
 
     public void setSize(int Size) throws Throwable;
-
-    public DataRowVersion getSourceVersion() throws Throwable;
-
-    public void setSourceVersion(DataRowVersion SourceVersion) throws Throwable;
-
-    public DbType getDbType() throws Throwable;
-
-    public void setDbType(DbType DbType) throws Throwable;
-
-    public ParameterDirection getDirection() throws Throwable;
-
-    public void setDirection(ParameterDirection Direction) throws Throwable;
-
-    public NetObject getValue() throws Throwable;
-
-    public void setValue(NetObject Value) throws Throwable;
-
-    public java.lang.String getParameterName() throws Throwable;
-
-    public void setParameterName(java.lang.String ParameterName) throws Throwable;
-
-    public java.lang.String getSourceColumn() throws Throwable;
-
-    public void setSourceColumn(java.lang.String SourceColumn) throws Throwable;
 
 
 

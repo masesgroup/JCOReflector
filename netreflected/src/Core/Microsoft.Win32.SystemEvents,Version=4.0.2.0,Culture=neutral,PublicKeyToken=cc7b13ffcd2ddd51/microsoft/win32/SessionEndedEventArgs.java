@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import microsoft.win32.SessionEndReasons;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.SessionEndedEventArgs, Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionEndedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionEndedEventArgs</a>
  */
-public class SessionEndedEventArgs extends NetObject  {
+public class SessionEndedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: Microsoft.Win32.SystemEvents
+     */
     public static final String assemblyShortName = "Microsoft.Win32.SystemEvents";
+    /**
+     * Qualified class name: Microsoft.Win32.SessionEndedEventArgs
+     */
     public static final String className = "Microsoft.Win32.SessionEndedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SessionEndedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionEndedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SessionEndedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionEndedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SessionEndedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SessionEndedEventArgs() throws Throwable {
+    }
 
     public SessionEndedEventArgs(SessionEndReasons reason) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class SessionEndedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.MarkupExtension;
 import system.windows.DependencyProperty;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
@@ -47,12 +48,27 @@ import system.windows.data.IValueConverterImplementation;
 
 /**
  * The base .NET class managing System.Windows.TemplateBindingExtension, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TemplateBindingExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TemplateBindingExtension</a>
  */
-public class TemplateBindingExtension extends NetObject  {
+public class TemplateBindingExtension extends MarkupExtension  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.TemplateBindingExtension
+     */
     public static final String className = "System.Windows.TemplateBindingExtension";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class TemplateBindingExtension extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateBindingExtension}, a cast assert is made to check if types are compatible.
+     */
     public static TemplateBindingExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TemplateBindingExtension(from.getJCOInstance());
@@ -113,7 +131,6 @@ public class TemplateBindingExtension extends NetObject  {
 
     // Constructors section
     
-
     public TemplateBindingExtension() throws Throwable {
         try {
             // add reference to assemblyName.dll file

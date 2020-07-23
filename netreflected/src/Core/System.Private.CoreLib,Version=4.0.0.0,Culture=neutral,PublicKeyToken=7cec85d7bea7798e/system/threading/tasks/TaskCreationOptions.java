@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Threading.Tasks.TaskCreationOptions, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.TaskCreationOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.TaskCreationOptions</a>
  */
 public class TaskCreationOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.Tasks.TaskCreationOptions
+     */
     public static final String className = "System.Threading.Tasks.TaskCreationOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class TaskCreationOptions extends NetObject  {
 
     // Flags management section
 
-    public TaskCreationOptions add(TaskCreationOptions val) throws Throwable {
+    public final TaskCreationOptions add(TaskCreationOptions val) throws Throwable {
         return new TaskCreationOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public TaskCreationOptions remove(TaskCreationOptions val) throws Throwable {
+    public final TaskCreationOptions remove(TaskCreationOptions val) throws Throwable {
         return new TaskCreationOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(TaskCreationOptions val) throws Throwable {
+    public final boolean is(TaskCreationOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(TaskCreationOptions val) throws Throwable {
+    public final boolean has(TaskCreationOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.text.SpanRuneEnumerator;
 import system.text.Rune;
 
 
 /**
  * The base .NET class managing System.Text.SpanRuneEnumerator, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.SpanRuneEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.SpanRuneEnumerator</a>
  */
-public class SpanRuneEnumerator extends NetObject  {
+public class SpanRuneEnumerator extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Text.SpanRuneEnumerator
+     */
     public static final String className = "System.Text.SpanRuneEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SpanRuneEnumerator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SpanRuneEnumerator}, a cast assert is made to check if types are compatible.
+     */
     public static SpanRuneEnumerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SpanRuneEnumerator(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class SpanRuneEnumerator extends NetObject  {
 
     // Constructors section
     
+    public SpanRuneEnumerator() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -43,10 +43,22 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Globalization.TextElementEnumerator, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.TextElementEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.TextElementEnumerator</a>
  */
 public class TextElementEnumerator extends NetObject implements Iterator<NetObject> {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Globalization.TextElementEnumerator
+     */
     public static final String className = "System.Globalization.TextElementEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -95,11 +107,11 @@ public class TextElementEnumerator extends NetObject implements Iterator<NetObje
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public NetObject next() {
+	public final NetObject next() {
 		try {
 			return new NetObject(classInstance.next());
 		} catch (Throwable jce) {

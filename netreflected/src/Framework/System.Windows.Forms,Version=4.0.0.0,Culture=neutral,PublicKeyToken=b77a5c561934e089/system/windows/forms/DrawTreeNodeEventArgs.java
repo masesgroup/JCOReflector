@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.drawing.Graphics;
 import system.windows.forms.TreeNode;
 import system.drawing.Rectangle;
@@ -46,12 +47,27 @@ import system.windows.forms.TreeNodeStates;
 
 /**
  * The base .NET class managing System.Windows.Forms.DrawTreeNodeEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs</a>
  */
-public class DrawTreeNodeEventArgs extends NetObject  {
+public class DrawTreeNodeEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DrawTreeNodeEventArgs
+     */
     public static final String className = "System.Windows.Forms.DrawTreeNodeEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class DrawTreeNodeEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DrawTreeNodeEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DrawTreeNodeEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DrawTreeNodeEventArgs(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class DrawTreeNodeEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DrawTreeNodeEventArgs() throws Throwable {
+    }
 
     public DrawTreeNodeEventArgs(Graphics graphics, TreeNode node, Rectangle bounds, TreeNodeStates state) throws Throwable {
         try {
@@ -122,6 +142,7 @@ public class DrawTreeNodeEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

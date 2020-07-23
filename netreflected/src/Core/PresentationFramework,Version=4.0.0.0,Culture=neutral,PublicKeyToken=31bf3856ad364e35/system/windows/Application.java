@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.threading.DispatcherObject;
 import system.windows.Window;
 import system.Uri;
 import system.windows.resources.StreamResourceInfo;
@@ -47,7 +48,6 @@ import system.reflection.Assembly;
 import system.windows.Application;
 import system.windows.ResourceDictionary;
 import system.windows.ShutdownMode;
-import system.windows.threading.Dispatcher;
 import system.windows.WindowCollection;
 import system.EventHandler;
 import system.windows.ExitEventHandler;
@@ -65,12 +65,27 @@ import system.windows.threading.DispatcherUnhandledExceptionEventHandler;
 
 /**
  * The base .NET class managing System.Windows.Application, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Application" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Application</a>
  */
-public class Application extends NetObject  {
+public class Application extends DispatcherObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Application
+     */
     public static final String className = "System.Windows.Application";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -123,7 +138,9 @@ public class Application extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Application}, a cast assert is made to check if types are compatible.
+     */
     public static Application cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Application(from.getJCOInstance());
@@ -131,7 +148,6 @@ public class Application extends NetObject  {
 
     // Constructors section
     
-
     public Application() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.PlatformNotSupportedException, system.NotSupportedException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.SystemException, system.net.WebException {
         try {
             // add reference to assemblyName.dll file
@@ -146,16 +162,6 @@ public class Application extends NetObject  {
     
     // Methods section
     
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int Run() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OverflowException, system.TimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -292,16 +298,6 @@ public class Application extends NetObject  {
         }
     }
 
-    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("VerifyAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -317,22 +313,22 @@ public class Application extends NetObject  {
         }
     }
 
-    public static Assembly getResourceAssembly() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Assembly getResourceAssembly() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ResourceAssembly");
+            JCObject val = (JCObject)classInstance.Get("ResourceAssembly");
             return new Assembly(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setResourceAssembly(Assembly ResourceAssembly) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setResourceAssembly(Assembly ResourceAssembly) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("ResourceAssembly", ResourceAssembly == null ? null : ResourceAssembly.getJCOInstance());
+            classInstance.Set("ResourceAssembly", ResourceAssembly == null ? null : ResourceAssembly.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,11 +355,11 @@ public class Application extends NetObject  {
         }
     }
 
-    public static Application getCurrent() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Application getCurrent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            JCObject val = (JCObject)classInstance.Get("Current");
             return new Application(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -407,17 +403,6 @@ public class Application extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShutdownMode", ShutdownMode == null ? null : ShutdownMode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Dispatcher getDispatcher() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
-            return new Dispatcher(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

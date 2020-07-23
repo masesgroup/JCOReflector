@@ -46,12 +46,29 @@ import microsoft.jscript.IVsaScriptScopeImplementation;
 
 /**
  * The base .NET class managing Microsoft.JScript.IVsaScriptScope, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.IVsaScriptScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.IVsaScriptScope</a>
  */
-public interface IVsaScriptScope extends IJCOBridgeReflected {
-
+public interface IVsaScriptScope extends IJCOBridgeReflected, IJSVsaItem {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
+    public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.IVsaScriptScope
+     */
+    public static final String className = "Microsoft.JScript.IVsaScriptScope";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVsaScriptScope}, a cast assert is made to check if types are compatible.
+     */
     public static IVsaScriptScope ToIVsaScriptScope(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.JScript.IVsaScriptScope, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.JScript"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IVsaScriptScopeImplementation(from.getJCOInstance());
     }
@@ -106,7 +123,6 @@ public interface IVsaScriptScope extends IJCOBridgeReflected {
 
     public NetObject GetObject() throws Throwable;
 
-    public NetObject GetOption(java.lang.String name) throws Throwable;
 
     public void RemoveItem(IJSVsaItem item) throws Throwable;
 
@@ -114,21 +130,12 @@ public interface IVsaScriptScope extends IJCOBridgeReflected {
 
     public void RemoveItemAtIndex(int index) throws Throwable;
 
-    public void SetOption(java.lang.String name, NetObject value) throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getIsDirty() throws Throwable;
-
     public IVsaScriptScope getParent() throws Throwable;
-
-    public JSVsaItemType getItemType() throws Throwable;
-
-    public java.lang.String getName() throws Throwable;
-
-    public void setName(java.lang.String Name) throws Throwable;
 
 
 

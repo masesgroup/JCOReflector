@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.diagnostics.tracing.EventActivityOptions;
 import system.diagnostics.tracing.EventKeywords;
 import system.diagnostics.tracing.EventLevel;
@@ -47,12 +48,27 @@ import system.diagnostics.tracing.EventTags;
 
 /**
  * The base .NET class managing System.Diagnostics.Tracing.EventSourceOptions, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions</a>
  */
-public class EventSourceOptions extends NetObject  {
+public class EventSourceOptions extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Diagnostics.Tracing.EventSourceOptions
+     */
     public static final String className = "System.Diagnostics.Tracing.EventSourceOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class EventSourceOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventSourceOptions}, a cast assert is made to check if types are compatible.
+     */
     public static EventSourceOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventSourceOptions(from.getJCOInstance());
@@ -113,6 +131,10 @@ public class EventSourceOptions extends NetObject  {
 
     // Constructors section
     
+    public EventSourceOptions() throws Throwable {
+    }
+
+
 
     
     // Methods section

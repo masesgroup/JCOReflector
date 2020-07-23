@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Guid;
 import system.data.sqltypes.SqlGuid;
 import system.data.sqltypes.SqlBinary;
@@ -49,12 +50,27 @@ import system.xml.schema.XmlSchemaSet;
 
 /**
  * The base .NET class managing System.Data.SqlTypes.SqlGuid, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlGuid" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlGuid</a>
  */
-public class SqlGuid extends NetObject  {
+public class SqlGuid extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.SqlTypes.SqlGuid
+     */
     public static final String className = "System.Data.SqlTypes.SqlGuid";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class SqlGuid extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlGuid}, a cast assert is made to check if types are compatible.
+     */
     public static SqlGuid cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlGuid(from.getJCOInstance());
@@ -115,6 +133,8 @@ public class SqlGuid extends NetObject  {
 
     // Constructors section
     
+    public SqlGuid() throws Throwable {
+    }
 
     public SqlGuid(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
@@ -155,6 +175,7 @@ public class SqlGuid extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

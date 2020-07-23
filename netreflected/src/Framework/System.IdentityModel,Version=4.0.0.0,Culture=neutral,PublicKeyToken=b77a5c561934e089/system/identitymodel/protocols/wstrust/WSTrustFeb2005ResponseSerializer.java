@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.protocols.wstrust.WSTrustResponseSerializer;
 import system.xml.XmlReader;
 import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
 import system.identitymodel.protocols.wstrust.WSTrustSerializationContext;
@@ -46,12 +47,27 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005ResponseSerializer, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005ResponseSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005ResponseSerializer</a>
  */
-public class WSTrustFeb2005ResponseSerializer extends NetObject  {
+public class WSTrustFeb2005ResponseSerializer extends WSTrustResponseSerializer  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005ResponseSerializer
+     */
     public static final String className = "System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005ResponseSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class WSTrustFeb2005ResponseSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustFeb2005ResponseSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static WSTrustFeb2005ResponseSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WSTrustFeb2005ResponseSerializer(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class WSTrustFeb2005ResponseSerializer extends NetObject  {
 
     // Constructors section
     
-
     public WSTrustFeb2005ResponseSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -137,17 +154,6 @@ public class WSTrustFeb2005ResponseSerializer extends NetObject  {
         }
     }
 
-    public RequestSecurityTokenResponse CreateInstance() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance");
-            return new RequestSecurityTokenResponse(objCreateInstance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RequestSecurityTokenResponse ReadXml(XmlReader reader, WSTrustSerializationContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,16 +170,6 @@ public class WSTrustFeb2005ResponseSerializer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXmlElement", reader == null ? null : reader.getJCOInstance(), rstr == null ? null : rstr.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Validate(RequestSecurityTokenResponse requestSecurityTokenResponse) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Validate", requestSecurityTokenResponse == null ? null : requestSecurityTokenResponse.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

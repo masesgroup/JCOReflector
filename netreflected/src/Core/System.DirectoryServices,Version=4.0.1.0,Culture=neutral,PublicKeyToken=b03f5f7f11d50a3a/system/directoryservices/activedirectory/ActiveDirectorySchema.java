@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.directoryservices.activedirectory.ActiveDirectoryPartition;
 import system.directoryservices.activedirectory.ActiveDirectorySchema;
 import system.directoryservices.activedirectory.DirectoryContext;
 import system.directoryservices.activedirectory.ActiveDirectorySchemaClass;
@@ -52,12 +53,27 @@ import system.directoryservices.activedirectory.DirectoryServer;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema</a>
  */
-public class ActiveDirectorySchema extends NetObject  {
+public class ActiveDirectorySchema extends ActiveDirectoryPartition  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +126,9 @@ public class ActiveDirectorySchema extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectorySchema}, a cast assert is made to check if types are compatible.
+     */
     public static ActiveDirectorySchema cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActiveDirectorySchema(from.getJCOInstance());
@@ -118,6 +136,10 @@ public class ActiveDirectorySchema extends NetObject  {
 
     // Constructors section
     
+    public ActiveDirectorySchema() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -265,16 +287,6 @@ public class ActiveDirectorySchema extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RefreshSchema() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -295,16 +307,6 @@ public class ActiveDirectorySchema extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("SchemaRoleOwner");
             return new DirectoryServer(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

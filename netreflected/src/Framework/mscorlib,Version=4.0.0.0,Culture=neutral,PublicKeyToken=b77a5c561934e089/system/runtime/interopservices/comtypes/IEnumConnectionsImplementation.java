@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.IEnumConnections, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumConnections" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumConnections</a>
  */
 public class IEnumConnectionsImplementation extends NetObject implements IEnumConnections {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.IEnumConnections
+     */
     public static final String className = "System.Runtime.InteropServices.ComTypes.IEnumConnections";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IEnumConnectionsImplementation extends NetObject implements IEnumCo
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEnumConnections}, a cast assert is made to check if types are compatible.
+     */
     public static IEnumConnections ToIEnumConnections(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IEnumConnectionsImplementation(from.getJCOInstance());
@@ -108,6 +125,16 @@ public class IEnumConnectionsImplementation extends NetObject implements IEnumCo
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Skip", celt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Reset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

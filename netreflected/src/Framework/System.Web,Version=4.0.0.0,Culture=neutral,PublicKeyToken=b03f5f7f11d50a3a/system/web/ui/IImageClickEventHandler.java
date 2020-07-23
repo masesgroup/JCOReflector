@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.ImageClickEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ImageClickEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.ImageClickEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.ImageClickEventHandler</a>
+ */
 public interface IImageClickEventHandler {
     public void Invoke(NetObject sender, ImageClickEventArgs e);
 }

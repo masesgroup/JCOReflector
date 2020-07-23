@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.protocols.LogicalMethodInfo;
+import system.web.services.protocols.ValueCollectionParameterReader;
 import system.web.HttpRequest;
 
 
 /**
  * The base .NET class managing System.Web.Services.Protocols.HtmlFormParameterReader, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.HtmlFormParameterReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.HtmlFormParameterReader</a>
  */
-public class HtmlFormParameterReader extends NetObject  {
+public class HtmlFormParameterReader extends ValueCollectionParameterReader  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Protocols.HtmlFormParameterReader
+     */
     public static final String className = "System.Web.Services.Protocols.HtmlFormParameterReader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class HtmlFormParameterReader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlFormParameterReader}, a cast assert is made to check if types are compatible.
+     */
     public static HtmlFormParameterReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HtmlFormParameterReader(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class HtmlFormParameterReader extends NetObject  {
 
     // Constructors section
     
-
     public HtmlFormParameterReader() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -125,34 +141,6 @@ public class HtmlFormParameterReader extends NetObject  {
     
     // Methods section
     
-    public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
-            return new NetObject(objGetInitializer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject[] GetInitializers(LogicalMethodInfo[] methodInfos) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (Object)toObjectFromArray(methodInfos));
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetObject(resultingObject));
-            }
-            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject[] Read(HttpRequest request) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.security.SecurityException, system.FormatException, system.OverflowException, system.web.HttpRequestValidationException, system.threading.ThreadAbortException, system.InvalidCastException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,16 +153,6 @@ public class HtmlFormParameterReader extends NetObject  {
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Initialize(NetObject o) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

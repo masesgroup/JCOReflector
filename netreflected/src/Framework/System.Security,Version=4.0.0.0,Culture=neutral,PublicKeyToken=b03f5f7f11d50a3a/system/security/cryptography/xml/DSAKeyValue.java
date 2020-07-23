@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.xml.KeyInfoClause;
 import system.security.cryptography.DSA;
 import system.xml.XmlElement;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.Xml.DSAKeyValue, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.DSAKeyValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.DSAKeyValue</a>
  */
-public class DSAKeyValue extends NetObject  {
+public class DSAKeyValue extends KeyInfoClause  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Xml.DSAKeyValue
+     */
     public static final String className = "System.Security.Cryptography.Xml.DSAKeyValue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DSAKeyValue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DSAKeyValue}, a cast assert is made to check if types are compatible.
+     */
     public static DSAKeyValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DSAKeyValue(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class DSAKeyValue extends NetObject  {
 
     // Constructors section
     
-
     public DSAKeyValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file

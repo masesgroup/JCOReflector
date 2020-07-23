@@ -48,12 +48,27 @@ import system.Version;
 
 /**
  * The base .NET class managing System.Net.Http.HttpResponseMessage, System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpResponseMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpResponseMessage</a>
  */
 public class HttpResponseMessage extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Http
+     */
     public static final String assemblyShortName = "System.Net.Http";
+    /**
+     * Qualified class name: System.Net.Http.HttpResponseMessage
+     */
     public static final String className = "System.Net.Http.HttpResponseMessage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class HttpResponseMessage extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpResponseMessage}, a cast assert is made to check if types are compatible.
+     */
     public static HttpResponseMessage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpResponseMessage(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class HttpResponseMessage extends NetObject  {
 
     // Constructors section
     
-
     public HttpResponseMessage() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Reflection.DispatchProxy, System.Reflection.DispatchProxy, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.DispatchProxy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.DispatchProxy</a>
  */
 public class DispatchProxy extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.DispatchProxy, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.DispatchProxy, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.DispatchProxy
+     */
     public static final String assemblyShortName = "System.Reflection.DispatchProxy";
+    /**
+     * Qualified class name: System.Reflection.DispatchProxy
+     */
     public static final String className = "System.Reflection.DispatchProxy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class DispatchProxy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DispatchProxy}, a cast assert is made to check if types are compatible.
+     */
     public static DispatchProxy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DispatchProxy(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class DispatchProxy extends NetObject  {
 
     // Constructors section
     
+    public DispatchProxy() throws Throwable {
+    }
 
     
     // Methods section

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.PingOptions, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingOptions</a>
  */
 public class PingOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.PingOptions
+     */
     public static final String className = "System.Net.NetworkInformation.PingOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class PingOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PingOptions}, a cast assert is made to check if types are compatible.
+     */
     public static PingOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PingOptions(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class PingOptions extends NetObject  {
 
     // Constructors section
     
-
     public PingOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file

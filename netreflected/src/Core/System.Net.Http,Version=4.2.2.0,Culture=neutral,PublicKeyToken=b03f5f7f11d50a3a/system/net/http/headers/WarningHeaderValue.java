@@ -44,12 +44,27 @@ import system.net.http.headers.WarningHeaderValue;
 
 /**
  * The base .NET class managing System.Net.Http.Headers.WarningHeaderValue, System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.WarningHeaderValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.WarningHeaderValue</a>
  */
 public class WarningHeaderValue extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Http
+     */
     public static final String assemblyShortName = "System.Net.Http";
+    /**
+     * Qualified class name: System.Net.Http.Headers.WarningHeaderValue
+     */
     public static final String className = "System.Net.Http.Headers.WarningHeaderValue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class WarningHeaderValue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WarningHeaderValue}, a cast assert is made to check if types are compatible.
+     */
     public static WarningHeaderValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WarningHeaderValue(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class WarningHeaderValue extends NetObject  {
 
     // Constructors section
     
+    public WarningHeaderValue() throws Throwable {
+    }
 
     public WarningHeaderValue(int code, java.lang.String agent, java.lang.String text) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         try {
@@ -130,6 +149,7 @@ public class WarningHeaderValue extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

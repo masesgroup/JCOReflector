@@ -51,12 +51,27 @@ import system.net.EndPoint;
 
 /**
  * The base .NET class managing System.Net.Sockets.TcpListener, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.TcpListener" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.TcpListener</a>
  */
 public class TcpListener extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.Sockets.TcpListener
+     */
     public static final String className = "System.Net.Sockets.TcpListener";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class TcpListener extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TcpListener}, a cast assert is made to check if types are compatible.
+     */
     public static TcpListener cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TcpListener(from.getJCOInstance());
@@ -117,6 +134,8 @@ public class TcpListener extends NetObject  {
 
     // Constructors section
     
+    public TcpListener() throws Throwable {
+    }
 
     public TcpListener(int port) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException {
         try {
@@ -147,6 +166,7 @@ public class TcpListener extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

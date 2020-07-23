@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CngExportPolicies, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngExportPolicies" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngExportPolicies</a>
  */
 public class CngExportPolicies extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.CngExportPolicies
+     */
     public static final String className = "System.Security.Cryptography.CngExportPolicies";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class CngExportPolicies extends NetObject  {
 
     // Flags management section
 
-    public CngExportPolicies add(CngExportPolicies val) throws Throwable {
+    public final CngExportPolicies add(CngExportPolicies val) throws Throwable {
         return new CngExportPolicies(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CngExportPolicies remove(CngExportPolicies val) throws Throwable {
+    public final CngExportPolicies remove(CngExportPolicies val) throws Throwable {
         return new CngExportPolicies(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CngExportPolicies val) throws Throwable {
+    public final boolean is(CngExportPolicies val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CngExportPolicies val) throws Throwable {
+    public final boolean has(CngExportPolicies val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

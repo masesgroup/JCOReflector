@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.win32.safehandles.SafeNCryptHandle;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle, System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle</a>
  */
-public class SafeNCryptKeyHandle extends NetObject  {
+public class SafeNCryptKeyHandle extends SafeNCryptHandle  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Cng
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Cng";
+    /**
+     * Qualified class name: Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle
+     */
     public static final String className = "Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SafeNCryptKeyHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SafeNCryptKeyHandle}, a cast assert is made to check if types are compatible.
+     */
     public static SafeNCryptKeyHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SafeNCryptKeyHandle(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class SafeNCryptKeyHandle extends NetObject  {
 
     // Constructors section
     
-
     public SafeNCryptKeyHandle() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -127,26 +144,6 @@ public class SafeNCryptKeyHandle extends NetObject  {
     
     // Properties section
     
-    public boolean getIsClosed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsClosed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInvalid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInvalid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

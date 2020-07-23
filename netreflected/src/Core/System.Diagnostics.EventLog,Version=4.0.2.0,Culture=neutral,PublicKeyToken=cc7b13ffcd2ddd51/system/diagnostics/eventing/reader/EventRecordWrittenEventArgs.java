@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.diagnostics.eventing.reader.EventRecord;
 
 
 /**
  * The base .NET class managing System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs</a>
  */
-public class EventRecordWrittenEventArgs extends NetObject  {
+public class EventRecordWrittenEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.EventLog
+     */
     public static final String assemblyShortName = "System.Diagnostics.EventLog";
+    /**
+     * Qualified class name: System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs
+     */
     public static final String className = "System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class EventRecordWrittenEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventRecordWrittenEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static EventRecordWrittenEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventRecordWrittenEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class EventRecordWrittenEventArgs extends NetObject  {
 
     // Constructors section
     
+    public EventRecordWrittenEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

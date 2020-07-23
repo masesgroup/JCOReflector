@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.design.DesignerVerbCollection;
@@ -45,12 +47,27 @@ import system.componentmodel.design.DesignerVerbCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IDesigner, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesigner</a>
  */
 public class IDesignerImplementation extends NetObject implements IDesigner {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IDesigner
+     */
     public static final String className = "System.ComponentModel.Design.IDesigner";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +115,9 @@ public class IDesignerImplementation extends NetObject implements IDesigner {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesigner}, a cast assert is made to check if types are compatible.
+     */
     public static IDesigner ToIDesigner(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDesignerImplementation(from.getJCOInstance());

@@ -46,12 +46,27 @@ import system.io.BinaryWriter;
 
 /**
  * The base .NET class managing System.Security.Claims.Claim, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Claims.Claim" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Claims.Claim</a>
  */
 public class Claim extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Claims.Claim
+     */
     public static final String className = "System.Security.Claims.Claim";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class Claim extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Claim}, a cast assert is made to check if types are compatible.
+     */
     public static Claim cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Claim(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class Claim extends NetObject  {
 
     // Constructors section
     
+    public Claim() throws Throwable {
+    }
 
     public Claim(BinaryReader reader) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.io.EndOfStreamException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.io.IOException {
         try {
@@ -182,6 +201,7 @@ public class Claim extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

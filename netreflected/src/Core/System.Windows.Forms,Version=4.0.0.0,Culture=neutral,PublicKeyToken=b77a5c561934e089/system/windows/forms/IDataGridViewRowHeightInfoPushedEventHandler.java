@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewRowHeightInfoPushedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewRowHeightInfoPushedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventHandler</a>
+ */
 public interface IDataGridViewRowHeightInfoPushedEventHandler {
     public void Invoke(NetObject sender, DataGridViewRowHeightInfoPushedEventArgs e);
 }

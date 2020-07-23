@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.ObjectDataSourceDisposingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ObjectDataSourceDisposingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler</a>
+ */
 public interface IObjectDataSourceDisposingEventHandler {
     public void Invoke(NetObject sender, ObjectDataSourceDisposingEventArgs e);
 }

@@ -38,20 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.tracking.TrackingRecord;
 import system.Guid;
 import system.activities.tracking.ActivityInfo;
-import system.DateTime;
-import system.diagnostics.TraceLevel;
 
 
 /**
  * The base .NET class managing System.Activities.Tracking.FaultPropagationRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.FaultPropagationRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.FaultPropagationRecord</a>
  */
-public class FaultPropagationRecord extends NetObject  {
+public class FaultPropagationRecord extends TrackingRecord  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Tracking.FaultPropagationRecord
+     */
     public static final String className = "System.Activities.Tracking.FaultPropagationRecord";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +118,9 @@ public class FaultPropagationRecord extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FaultPropagationRecord}, a cast assert is made to check if types are compatible.
+     */
     public static FaultPropagationRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FaultPropagationRecord(from.getJCOInstance());
@@ -112,6 +128,8 @@ public class FaultPropagationRecord extends NetObject  {
 
     // Constructors section
     
+    public FaultPropagationRecord() throws Throwable {
+    }
 
     public FaultPropagationRecord(Guid instanceId, long recordNumber, ActivityInfo faultSource, ActivityInfo faultHandler, boolean isFaultSource, NetException fault) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -122,6 +140,7 @@ public class FaultPropagationRecord extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -146,26 +165,6 @@ public class FaultPropagationRecord extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFaultSource", IsFaultSource);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getRecordNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("RecordNumber");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRecordNumber(long RecordNumber) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RecordNumber", RecordNumber);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,38 +212,6 @@ public class FaultPropagationRecord extends NetObject  {
         }
     }
 
-    public DateTime getEventTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventTime");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TraceLevel getLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Level");
-            return new TraceLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLevel(TraceLevel Level) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Level", Level == null ? null : Level.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetException getFault() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -261,27 +228,6 @@ public class FaultPropagationRecord extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Fault", Fault == null ? null : Fault.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getInstanceId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInstanceId(Guid InstanceId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InstanceId", InstanceId == null ? null : InstanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

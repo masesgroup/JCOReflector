@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.webcontrols.IDataBoundControl;
+import system.web.ui.webcontrols.IDataBoundControlImplementation;
 import system.web.ui.IDataSource;
 import system.web.ui.IDataSourceImplementation;
 import system.web.ui.webcontrols.DataBoundControlMode;
@@ -46,12 +48,27 @@ import system.web.ui.webcontrols.DataKey;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.IDataBoundItemControl, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.IDataBoundItemControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.IDataBoundItemControl</a>
  */
 public class IDataBoundItemControlImplementation extends NetObject implements IDataBoundItemControl {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.IDataBoundItemControl
+     */
     public static final String className = "System.Web.UI.WebControls.IDataBoundItemControl";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +116,9 @@ public class IDataBoundItemControlImplementation extends NetObject implements ID
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataBoundItemControl}, a cast assert is made to check if types are compatible.
+     */
     public static IDataBoundItemControl ToIDataBoundItemControl(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDataBoundItemControlImplementation(from.getJCOInstance());

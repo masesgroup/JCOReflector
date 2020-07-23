@@ -39,18 +39,31 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.HandledMouseEventArgs;
-import system.drawing.Point;
-import system.windows.forms.MouseButtons;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventArgs</a>
  */
-public class DataGridViewColumnDividerDoubleClickEventArgs extends NetObject  {
+public class DataGridViewColumnDividerDoubleClickEventArgs extends HandledMouseEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventArgs
+     */
     public static final String className = "System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +116,9 @@ public class DataGridViewColumnDividerDoubleClickEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewColumnDividerDoubleClickEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewColumnDividerDoubleClickEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewColumnDividerDoubleClickEventArgs(from.getJCOInstance());
@@ -111,6 +126,8 @@ public class DataGridViewColumnDividerDoubleClickEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewColumnDividerDoubleClickEventArgs() throws Throwable {
+    }
 
     public DataGridViewColumnDividerDoubleClickEventArgs(int columnIndex, HandledMouseEventArgs e) throws Throwable, system.ArgumentOutOfRangeException {
         try {
@@ -123,6 +140,7 @@ public class DataGridViewColumnDividerDoubleClickEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -130,93 +148,11 @@ public class DataGridViewColumnDividerDoubleClickEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getHandled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Handled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHandled(boolean Handled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Handled", Handled);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getClicks() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Clicks");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("ColumnIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDelta() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Delta");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getX() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("X");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getY() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Y");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Point getLocation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Location");
-            return new Point(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MouseButtons getButton() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Button");
-            return new MouseButtons(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

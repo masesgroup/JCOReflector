@@ -43,12 +43,27 @@ import microsoft.build.tasks.deployment.bootstrapper.Product;
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection</a>
  */
 public class ProductCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection
+     */
     public static final String className = "Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ProductCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProductCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ProductCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ProductCollection(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class ProductCollection extends NetObject  {
 
     // Constructors section
     
+    public ProductCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section

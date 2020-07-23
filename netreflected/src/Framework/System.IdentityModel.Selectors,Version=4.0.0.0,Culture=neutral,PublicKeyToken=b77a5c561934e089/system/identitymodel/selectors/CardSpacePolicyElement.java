@@ -44,12 +44,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.IdentityModel.Selectors.CardSpacePolicyElement, System.IdentityModel.Selectors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement</a>
  */
 public class CardSpacePolicyElement extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel.Selectors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel.Selectors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel.Selectors
+     */
     public static final String assemblyShortName = "System.IdentityModel.Selectors";
+    /**
+     * Qualified class name: System.IdentityModel.Selectors.CardSpacePolicyElement
+     */
     public static final String className = "System.IdentityModel.Selectors.CardSpacePolicyElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CardSpacePolicyElement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CardSpacePolicyElement}, a cast assert is made to check if types are compatible.
+     */
     public static CardSpacePolicyElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CardSpacePolicyElement(from.getJCOInstance());
@@ -110,6 +127,9 @@ public class CardSpacePolicyElement extends NetObject  {
 
     // Constructors section
     
+    public CardSpacePolicyElement() throws Throwable {
+    }
+
 
 
     

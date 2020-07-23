@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.commandtrees.DbModificationCommandTree;
 import system.data.common.commandtrees.DbExpression;
-import system.data.common.commandtrees.DbExpressionBinding;
 
 
 /**
  * The base .NET class managing System.Data.Common.CommandTrees.DbDeleteCommandTree, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbDeleteCommandTree" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbDeleteCommandTree</a>
  */
-public class DbDeleteCommandTree extends NetObject  {
+public class DbDeleteCommandTree extends DbModificationCommandTree  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.CommandTrees.DbDeleteCommandTree
+     */
     public static final String className = "System.Data.Common.CommandTrees.DbDeleteCommandTree";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DbDeleteCommandTree extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbDeleteCommandTree}, a cast assert is made to check if types are compatible.
+     */
     public static DbDeleteCommandTree cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbDeleteCommandTree(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class DbDeleteCommandTree extends NetObject  {
 
     // Constructors section
     
+    public DbDeleteCommandTree() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -124,17 +145,6 @@ public class DbDeleteCommandTree extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Predicate");
             return new DbExpression(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbExpressionBinding getTarget() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Target");
-            return new DbExpressionBinding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

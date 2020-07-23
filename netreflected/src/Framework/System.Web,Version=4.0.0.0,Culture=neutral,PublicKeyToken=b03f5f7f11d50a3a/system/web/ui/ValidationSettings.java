@@ -43,12 +43,27 @@ import system.web.ui.UnobtrusiveValidationMode;
 
 /**
  * The base .NET class managing System.Web.UI.ValidationSettings, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.ValidationSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.ValidationSettings</a>
  */
 public class ValidationSettings extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.ValidationSettings
+     */
     public static final String className = "System.Web.UI.ValidationSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ValidationSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValidationSettings}, a cast assert is made to check if types are compatible.
+     */
     public static ValidationSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValidationSettings(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ValidationSettings extends NetObject  {
 
     // Constructors section
     
+    public ValidationSettings() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,22 +136,22 @@ public class ValidationSettings extends NetObject  {
     
     // Properties section
     
-    public static UnobtrusiveValidationMode getUnobtrusiveValidationMode() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidCastException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public UnobtrusiveValidationMode getUnobtrusiveValidationMode() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidCastException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnobtrusiveValidationMode");
+            JCObject val = (JCObject)classInstance.Get("UnobtrusiveValidationMode");
             return new UnobtrusiveValidationMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setUnobtrusiveValidationMode(UnobtrusiveValidationMode UnobtrusiveValidationMode) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setUnobtrusiveValidationMode(UnobtrusiveValidationMode UnobtrusiveValidationMode) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("UnobtrusiveValidationMode", UnobtrusiveValidationMode == null ? null : UnobtrusiveValidationMode.getJCOInstance());
+            classInstance.Set("UnobtrusiveValidationMode", UnobtrusiveValidationMode == null ? null : UnobtrusiveValidationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

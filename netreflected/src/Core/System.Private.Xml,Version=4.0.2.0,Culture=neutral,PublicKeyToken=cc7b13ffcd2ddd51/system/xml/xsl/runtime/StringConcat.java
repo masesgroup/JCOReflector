@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Xml.Xsl.Runtime.StringConcat, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.StringConcat" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.StringConcat</a>
  */
-public class StringConcat extends NetObject  {
+public class StringConcat extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.Runtime.StringConcat
+     */
     public static final String className = "System.Xml.Xsl.Runtime.StringConcat";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class StringConcat extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringConcat}, a cast assert is made to check if types are compatible.
+     */
     public static StringConcat cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StringConcat(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class StringConcat extends NetObject  {
 
     // Constructors section
     
+    public StringConcat() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xaml.XamlWriter;
 import system.io.Stream;
 import system.xaml.XamlSchemaContext;
 import system.xaml.XamlXmlWriterSettings;
@@ -50,12 +51,27 @@ import system.xaml.XamlType;
 
 /**
  * The base .NET class managing System.Xaml.XamlXmlWriter, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlXmlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlXmlWriter</a>
  */
-public class XamlXmlWriter extends NetObject  {
+public class XamlXmlWriter extends XamlWriter  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.XamlXmlWriter
+     */
     public static final String className = "System.Xaml.XamlXmlWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +124,9 @@ public class XamlXmlWriter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlXmlWriter}, a cast assert is made to check if types are compatible.
+     */
     public static XamlXmlWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlXmlWriter(from.getJCOInstance());
@@ -116,6 +134,8 @@ public class XamlXmlWriter extends NetObject  {
 
     // Constructors section
     
+    public XamlXmlWriter() throws Throwable {
+    }
 
     public XamlXmlWriter(Stream stream, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.xml.XmlException, system.ObjectDisposedException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.threading.ThreadAbortException {
         try {
@@ -178,19 +198,10 @@ public class XamlXmlWriter extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public void Close() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Close");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Flush() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -275,17 +286,6 @@ public class XamlXmlWriter extends NetObject  {
     
     // Properties section
     
-    public XamlSchemaContext getSchemaContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SchemaContext");
-            return new XamlSchemaContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XamlXmlWriterSettings getSettings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

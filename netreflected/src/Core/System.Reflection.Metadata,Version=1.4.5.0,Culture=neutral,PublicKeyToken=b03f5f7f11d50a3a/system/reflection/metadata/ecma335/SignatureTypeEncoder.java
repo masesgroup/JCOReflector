@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
 import system.reflection.metadata.ecma335.CustomModifiersEncoder;
 import system.reflection.metadata.ecma335.GenericTypeArgumentsEncoder;
@@ -51,12 +52,27 @@ import system.reflection.metadata.PrimitiveTypeCode;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.Ecma335.SignatureTypeEncoder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.SignatureTypeEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.SignatureTypeEncoder</a>
  */
-public class SignatureTypeEncoder extends NetObject  {
+public class SignatureTypeEncoder extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.Ecma335.SignatureTypeEncoder
+     */
     public static final String className = "System.Reflection.Metadata.Ecma335.SignatureTypeEncoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +125,9 @@ public class SignatureTypeEncoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SignatureTypeEncoder}, a cast assert is made to check if types are compatible.
+     */
     public static SignatureTypeEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SignatureTypeEncoder(from.getJCOInstance());
@@ -117,6 +135,8 @@ public class SignatureTypeEncoder extends NetObject  {
 
     // Constructors section
     
+    public SignatureTypeEncoder() throws Throwable {
+    }
 
     public SignatureTypeEncoder(BlobBuilder builder) throws Throwable {
         try {
@@ -127,6 +147,7 @@ public class SignatureTypeEncoder extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -182,6 +203,46 @@ public class SignatureTypeEncoder extends NetObject  {
         try {
             JCObject objSZArray = (JCObject)classInstance.Invoke("SZArray");
             return new SignatureTypeEncoder(objSZArray);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Boolean() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Boolean");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Byte() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Byte");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Char() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Char");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Double() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Double");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

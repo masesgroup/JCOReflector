@@ -45,12 +45,27 @@ import system.security.principal.WindowsIdentity;
 
 /**
  * The base .NET class managing Microsoft.SqlServer.Server.SqlContext, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.SqlContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.SqlContext</a>
  */
 public class SqlContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: Microsoft.SqlServer.Server.SqlContext
+     */
     public static final String className = "Microsoft.SqlServer.Server.SqlContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class SqlContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlContext}, a cast assert is made to check if types are compatible.
+     */
     public static SqlContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlContext(from.getJCOInstance());
@@ -111,6 +128,10 @@ public class SqlContext extends NetObject  {
 
     // Constructors section
     
+    public SqlContext() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -119,43 +140,43 @@ public class SqlContext extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsAvailable() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsAvailable() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsAvailable");
+            return (boolean)classInstance.Get("IsAvailable");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SqlPipe getPipe() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SqlPipe getPipe() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Pipe");
+            JCObject val = (JCObject)classInstance.Get("Pipe");
             return new SqlPipe(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SqlTriggerContext getTriggerContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SqlTriggerContext getTriggerContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TriggerContext");
+            JCObject val = (JCObject)classInstance.Get("TriggerContext");
             return new SqlTriggerContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static WindowsIdentity getWindowsIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public WindowsIdentity getWindowsIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WindowsIdentity");
+            JCObject val = (JCObject)classInstance.Get("WindowsIdentity");
             return new WindowsIdentity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

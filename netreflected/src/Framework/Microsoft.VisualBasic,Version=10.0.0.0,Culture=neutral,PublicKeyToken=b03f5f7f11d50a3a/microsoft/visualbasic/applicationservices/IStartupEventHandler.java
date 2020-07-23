@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.visualbasic.applicationservices.StartupEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StartupEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupEventHandler</a>
+ */
 public interface IStartupEventHandler {
     public void Invoke(NetObject sender, StartupEventArgs e);
 }

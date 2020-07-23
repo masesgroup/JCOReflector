@@ -38,21 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.Constraint;
 import system.data.DataColumn;
 import system.data.AcceptRejectRule;
 import system.data.Rule;
 import system.data.DataTable;
-import system.data.PropertyCollection;
 
 
 /**
  * The base .NET class managing System.Data.ForeignKeyConstraint, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.ForeignKeyConstraint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.ForeignKeyConstraint</a>
  */
-public class ForeignKeyConstraint extends NetObject  {
+public class ForeignKeyConstraint extends Constraint  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.ForeignKeyConstraint
+     */
     public static final String className = "System.Data.ForeignKeyConstraint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ForeignKeyConstraint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ForeignKeyConstraint}, a cast assert is made to check if types are compatible.
+     */
     public static ForeignKeyConstraint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ForeignKeyConstraint(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ForeignKeyConstraint extends NetObject  {
 
     // Constructors section
     
+    public ForeignKeyConstraint() throws Throwable {
+    }
 
     public ForeignKeyConstraint(DataColumn parentColumn, DataColumn childColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.data.InvalidConstraintException, system.IndexOutOfRangeException, system.FormatException {
         try {
@@ -175,6 +194,7 @@ public class ForeignKeyConstraint extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -203,7 +223,7 @@ public class ForeignKeyConstraint extends NetObject  {
         }
     }
 
-    public DataColumn[] getColumns() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+    public final DataColumn[] getColumns() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -220,7 +240,7 @@ public class ForeignKeyConstraint extends NetObject  {
         }
     }
 
-    public DataColumn[] getRelatedColumns() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+    public final DataColumn[] getRelatedColumns() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -243,28 +263,6 @@ public class ForeignKeyConstraint extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("RelatedTable");
             return new DataTable(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataTable getTable() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Table");
-            return new DataTable(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyCollection getExtendedProperties() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedProperties");
-            return new PropertyCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,26 +305,6 @@ public class ForeignKeyConstraint extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateRule", UpdateRule == null ? null : UpdateRule.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getConstraintName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ConstraintName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setConstraintName(java.lang.String ConstraintName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ConstraintName", ConstraintName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

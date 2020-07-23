@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.WebBrowserDocumentCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WebBrowserDocumentCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserDocumentCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserDocumentCompletedEventHandler</a>
+ */
 public interface IWebBrowserDocumentCompletedEventHandler {
     public void Invoke(NetObject sender, WebBrowserDocumentCompletedEventArgs e);
 }

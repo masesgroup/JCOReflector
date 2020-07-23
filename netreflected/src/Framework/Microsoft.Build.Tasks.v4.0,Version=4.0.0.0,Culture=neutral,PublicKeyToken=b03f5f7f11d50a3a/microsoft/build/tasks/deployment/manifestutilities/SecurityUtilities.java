@@ -47,12 +47,27 @@ import system.security.SecureString;
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities</a>
  */
 public class SecurityUtilities extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities
+     */
     public static final String className = "Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class SecurityUtilities extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityUtilities}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityUtilities cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityUtilities(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class SecurityUtilities extends NetObject  {
 
     // Constructors section
     
+    public SecurityUtilities() throws Throwable {
+    }
 
     
     // Methods section
@@ -128,11 +147,33 @@ public class SecurityUtilities extends NetObject  {
         }
     }
 
+    public static PermissionSet ComputeZonePermissionSet(java.lang.String dupParam0, PermissionSet dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objComputeZonePermissionSet = (JCObject)classType.Invoke("ComputeZonePermissionSet", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            return new PermissionSet(objComputeZonePermissionSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static PermissionSet IdentityListToPermissionSet(java.lang.String[] ids) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.RankException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objIdentityListToPermissionSet = (JCObject)classType.Invoke("IdentityListToPermissionSet", (Object)ids);
+            return new PermissionSet(objIdentityListToPermissionSet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PermissionSet IdentityListToPermissionSet(JCRefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.RankException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objIdentityListToPermissionSet = (JCObject)classType.Invoke("IdentityListToPermissionSet", (Object)dupParam0);
             return new PermissionSet(objIdentityListToPermissionSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

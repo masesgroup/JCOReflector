@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.transactions.TransactionEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TransactionCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionCompletedEventHandler</a>
+ */
 public interface ITransactionCompletedEventHandler {
     public void Invoke(NetObject sender, TransactionEventArgs e);
 }

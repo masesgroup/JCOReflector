@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.EndpointIdentity;
 import system.identitymodel.claims.Claim;
 import system.security.cryptography.x509certificates.X509Certificate2;
 
 
 /**
  * The base .NET class managing System.ServiceModel.RsaEndpointIdentity, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.RsaEndpointIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.RsaEndpointIdentity</a>
  */
-public class RsaEndpointIdentity extends NetObject  {
+public class RsaEndpointIdentity extends EndpointIdentity  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.RsaEndpointIdentity
+     */
     public static final String className = "System.ServiceModel.RsaEndpointIdentity";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class RsaEndpointIdentity extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RsaEndpointIdentity}, a cast assert is made to check if types are compatible.
+     */
     public static RsaEndpointIdentity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RsaEndpointIdentity(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class RsaEndpointIdentity extends NetObject  {
 
     // Constructors section
     
+    public RsaEndpointIdentity() throws Throwable {
+    }
 
     public RsaEndpointIdentity(Claim identity) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException {
         try {
@@ -142,6 +162,7 @@ public class RsaEndpointIdentity extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -149,17 +170,6 @@ public class RsaEndpointIdentity extends NetObject  {
     
     // Properties section
     
-    public Claim getIdentityClaim() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IdentityClaim");
-            return new Claim(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

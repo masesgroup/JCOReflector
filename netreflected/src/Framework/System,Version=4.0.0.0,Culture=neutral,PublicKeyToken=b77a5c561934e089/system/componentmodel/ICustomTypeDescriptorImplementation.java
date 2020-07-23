@@ -49,12 +49,27 @@ import system.componentmodel.TypeConverter;
 
 /**
  * The base .NET class managing System.ComponentModel.ICustomTypeDescriptor, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICustomTypeDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICustomTypeDescriptor</a>
  */
 public class ICustomTypeDescriptorImplementation extends NetObject implements ICustomTypeDescriptor {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.ICustomTypeDescriptor
+     */
     public static final String className = "System.ComponentModel.ICustomTypeDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICustomTypeDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static ICustomTypeDescriptor ToICustomTypeDescriptor(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICustomTypeDescriptorImplementation(from.getJCOInstance());

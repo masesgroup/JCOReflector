@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.specialized.StringDictionary;
+import system.diagnostics.Switch;
 
 
 /**
  * The base .NET class managing System.Diagnostics.BooleanSwitch, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.BooleanSwitch" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.BooleanSwitch</a>
  */
-public class BooleanSwitch extends NetObject  {
+public class BooleanSwitch extends Switch  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Diagnostics.BooleanSwitch
+     */
     public static final String className = "System.Diagnostics.BooleanSwitch";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class BooleanSwitch extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BooleanSwitch}, a cast assert is made to check if types are compatible.
+     */
     public static BooleanSwitch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BooleanSwitch(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class BooleanSwitch extends NetObject  {
 
     // Constructors section
     
+    public BooleanSwitch() throws Throwable {
+    }
 
     public BooleanSwitch(java.lang.String displayName, java.lang.String description) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
@@ -129,6 +148,7 @@ public class BooleanSwitch extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -153,37 +173,6 @@ public class BooleanSwitch extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringDictionary getAttributes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new StringDictionary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDisplayName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

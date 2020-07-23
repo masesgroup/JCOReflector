@@ -54,12 +54,27 @@ import system.security.cryptography.pkcs.Pkcs12ConfidentialityMode;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.Pkcs12SafeContents, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12SafeContents" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12SafeContents</a>
  */
 public class Pkcs12SafeContents extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.Pkcs12SafeContents
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.Pkcs12SafeContents";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class Pkcs12SafeContents extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs12SafeContents}, a cast assert is made to check if types are compatible.
+     */
     public static Pkcs12SafeContents cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Pkcs12SafeContents(from.getJCOInstance());
@@ -120,7 +137,6 @@ public class Pkcs12SafeContents extends NetObject  {
 
     // Constructors section
     
-
     public Pkcs12SafeContents() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +195,17 @@ public class Pkcs12SafeContents extends NetObject  {
         }
     }
 
+    public Pkcs12ShroudedKeyBag AddShroudedKey(AsymmetricAlgorithm dupParam0, JCRefOut dupParam1, PbeParameters dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddShroudedKey = (JCObject)classInstance.Invoke("AddShroudedKey", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return new Pkcs12ShroudedKeyBag(objAddShroudedKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Pkcs12ShroudedKeyBag AddShroudedKey(AsymmetricAlgorithm key, java.lang.String password, PbeParameters pbeParameters) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -205,6 +232,16 @@ public class Pkcs12SafeContents extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt", (Object)passwordBytes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Decrypt(JCRefOut dupParam0) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Decrypt", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

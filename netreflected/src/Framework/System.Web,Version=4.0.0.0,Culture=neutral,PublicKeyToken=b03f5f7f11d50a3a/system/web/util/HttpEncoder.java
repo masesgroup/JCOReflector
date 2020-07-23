@@ -43,12 +43,27 @@ import system.web.util.HttpEncoder;
 
 /**
  * The base .NET class managing System.Web.Util.HttpEncoder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Util.HttpEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Util.HttpEncoder</a>
  */
 public class HttpEncoder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Util.HttpEncoder
+     */
     public static final String className = "System.Web.Util.HttpEncoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class HttpEncoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpEncoder}, a cast assert is made to check if types are compatible.
+     */
     public static HttpEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpEncoder(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class HttpEncoder extends NetObject  {
 
     // Constructors section
     
-
     public HttpEncoder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -128,32 +144,32 @@ public class HttpEncoder extends NetObject  {
     
     // Properties section
     
-    public static HttpEncoder getCurrent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HttpEncoder getCurrent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            JCObject val = (JCObject)classInstance.Get("Current");
             return new HttpEncoder(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCurrent(HttpEncoder Current) throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCurrent(HttpEncoder Current) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("Current", Current == null ? null : Current.getJCOInstance());
+            classInstance.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static HttpEncoder getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HttpEncoder getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new HttpEncoder(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

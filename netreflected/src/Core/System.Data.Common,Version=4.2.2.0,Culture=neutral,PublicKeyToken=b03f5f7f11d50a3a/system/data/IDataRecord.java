@@ -47,12 +47,29 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Data.IDataRecord, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataRecord</a>
  */
 public interface IDataRecord extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
+    public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.IDataRecord
+     */
+    public static final String className = "System.Data.IDataRecord";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataRecord}, a cast assert is made to check if types are compatible.
+     */
     public static IDataRecord ToIDataRecord(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Data.IDataRecord, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Data.Common"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDataRecordImplementation(from.getJCOInstance());
     }
@@ -115,7 +132,11 @@ public interface IDataRecord extends IJCOBridgeReflected {
 
     public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable;
 
+    public long GetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable;
+
     public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable;
+
+    public long GetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable;
 
     public long GetInt64(int i) throws Throwable;
 

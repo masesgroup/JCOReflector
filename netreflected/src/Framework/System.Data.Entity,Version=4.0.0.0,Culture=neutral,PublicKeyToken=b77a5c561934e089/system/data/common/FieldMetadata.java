@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.data.metadata.edm.EdmMember;
 
 
 /**
  * The base .NET class managing System.Data.Common.FieldMetadata, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.FieldMetadata" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.FieldMetadata</a>
  */
-public class FieldMetadata extends NetObject  {
+public class FieldMetadata extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.FieldMetadata
+     */
     public static final String className = "System.Data.Common.FieldMetadata";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class FieldMetadata extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FieldMetadata}, a cast assert is made to check if types are compatible.
+     */
     public static FieldMetadata cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FieldMetadata(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class FieldMetadata extends NetObject  {
 
     // Constructors section
     
+    public FieldMetadata() throws Throwable {
+    }
 
     public FieldMetadata(int ordinal, EdmMember fieldType) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class FieldMetadata extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

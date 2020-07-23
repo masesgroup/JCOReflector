@@ -43,12 +43,27 @@ import system.net.ServicePoint;
 import system.net.IBindIPEndPoint;
 /**
  * The base .NET class managing System.Net.BindIPEndPoint, System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.BindIPEndPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.BindIPEndPoint</a>
  */
 public class BindIPEndPoint extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.ServicePoint
+     */
     public static final String assemblyShortName = "System.Net.ServicePoint";
+    /**
+     * Qualified class name: System.Net.BindIPEndPoint
+     */
     public static final String className = "System.Net.BindIPEndPoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IBindIPEndPoint callerInstance = null;
@@ -158,7 +173,7 @@ public class BindIPEndPoint extends JCDelegate implements IJCEventEmit, IJCOBrid
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final IPEndPoint DynamicInvoke(ServicePoint servicePoint, IPEndPoint remoteEndPoint, int retryCount) throws Throwable {
+    public IPEndPoint METHOD_JAVA_NAME(ServicePoint servicePoint, IPEndPoint remoteEndPoint, int retryCount) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -169,7 +184,9 @@ public class BindIPEndPoint extends JCDelegate implements IJCEventEmit, IJCOBrid
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public IPEndPoint Invoke(ServicePoint servicePoint, IPEndPoint remoteEndPoint, int retryCount) {
         return null;
     }

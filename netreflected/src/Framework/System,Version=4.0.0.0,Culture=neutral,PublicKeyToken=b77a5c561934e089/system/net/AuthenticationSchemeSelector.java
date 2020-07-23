@@ -43,12 +43,27 @@ import system.net.HttpListenerRequest;
 import system.net.IAuthenticationSchemeSelector;
 /**
  * The base .NET class managing System.Net.AuthenticationSchemeSelector, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemeSelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemeSelector</a>
  */
 public class AuthenticationSchemeSelector extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.AuthenticationSchemeSelector
+     */
     public static final String className = "System.Net.AuthenticationSchemeSelector";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IAuthenticationSchemeSelector callerInstance = null;
@@ -154,7 +169,7 @@ public class AuthenticationSchemeSelector extends JCDelegate implements IJCEvent
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final AuthenticationSchemes DynamicInvoke(HttpListenerRequest httpRequest) throws Throwable {
+    public AuthenticationSchemes METHOD_JAVA_NAME(HttpListenerRequest httpRequest) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -165,7 +180,9 @@ public class AuthenticationSchemeSelector extends JCDelegate implements IJCEvent
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public AuthenticationSchemes Invoke(HttpListenerRequest httpRequest) {
         return null;
     }

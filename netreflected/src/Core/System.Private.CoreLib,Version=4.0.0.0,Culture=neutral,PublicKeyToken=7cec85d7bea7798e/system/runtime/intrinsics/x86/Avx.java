@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.intrinsics.x86.Sse42;
 
 
 /**
  * The base .NET class managing System.Runtime.Intrinsics.X86.Avx, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.X86.Avx" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.X86.Avx</a>
  */
-public class Avx extends NetObject  {
+public class Avx extends Sse42  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.Intrinsics.X86.Avx
+     */
     public static final String className = "System.Runtime.Intrinsics.X86.Avx";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class Avx extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Avx}, a cast assert is made to check if types are compatible.
+     */
     public static Avx cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Avx(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class Avx extends NetObject  {
 
     // Constructors section
     
+    public Avx() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,11 +136,11 @@ public class Avx extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsSupported() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsSupported() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsSupported");
+            return (boolean)classInstance.Get("IsSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

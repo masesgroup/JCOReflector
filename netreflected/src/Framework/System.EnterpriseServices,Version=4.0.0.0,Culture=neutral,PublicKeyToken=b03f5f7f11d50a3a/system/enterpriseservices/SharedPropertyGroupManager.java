@@ -43,12 +43,27 @@ import system.enterpriseservices.SharedPropertyGroup;
 
 /**
  * The base .NET class managing System.EnterpriseServices.SharedPropertyGroupManager, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.SharedPropertyGroupManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.SharedPropertyGroupManager</a>
  */
 public class SharedPropertyGroupManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.SharedPropertyGroupManager
+     */
     public static final String className = "System.EnterpriseServices.SharedPropertyGroupManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SharedPropertyGroupManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SharedPropertyGroupManager}, a cast assert is made to check if types are compatible.
+     */
     public static SharedPropertyGroupManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SharedPropertyGroupManager(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SharedPropertyGroupManager extends NetObject  {
 
     // Constructors section
     
-
     public SharedPropertyGroupManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file

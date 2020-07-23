@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.CollectionBase;
 import system.windows.forms.design.behavior.Adorner;
 import system.windows.forms.design.behavior.BehaviorService;
 import system.windows.forms.design.behavior.BehaviorServiceAdornerCollection;
@@ -46,12 +47,27 @@ import system.windows.forms.design.behavior.BehaviorServiceAdornerCollectionEnum
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection</a>
  */
-public class BehaviorServiceAdornerCollection extends NetObject implements Iterable<Adorner> {
+public class BehaviorServiceAdornerCollection extends CollectionBase implements Iterable<Adorner> {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection
+     */
     public static final String className = "System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BehaviorServiceAdornerCollection}, a cast assert is made to check if types are compatible.
+     */
     public static BehaviorServiceAdornerCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BehaviorServiceAdornerCollection(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
 
     // Constructors section
     
+    public BehaviorServiceAdornerCollection() throws Throwable {
+    }
 
     public BehaviorServiceAdornerCollection(Adorner[] value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         try {
@@ -142,6 +162,7 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -177,12 +198,12 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
         }
     }
 
-    public BehaviorServiceAdornerCollectionEnumerator GetEnumerator() throws Throwable {
+    public final BehaviorServiceAdornerCollectionEnumerator GetEnumerator() throws Throwable {
         return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<Adorner> iterator() {
+	public final java.util.Iterator<Adorner> iterator() {
 		return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
 	}
 
@@ -201,16 +222,6 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,50 +257,10 @@ public class BehaviorServiceAdornerCollection extends NetObject implements Itera
         }
     }
 
-    public void RemoveAt(int index) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getCapacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Capacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCapacity(int Capacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Capacity", Capacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

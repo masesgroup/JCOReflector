@@ -43,12 +43,27 @@ import system.Single;
 
 /**
  * The base .NET class managing System.Windows.Input.Manipulations.ManipulationVelocities2D, System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.ManipulationVelocities2D" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.ManipulationVelocities2D</a>
  */
 public class ManipulationVelocities2D extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Input.Manipulations
+     */
     public static final String assemblyShortName = "System.Windows.Input.Manipulations";
+    /**
+     * Qualified class name: System.Windows.Input.Manipulations.ManipulationVelocities2D
+     */
     public static final String className = "System.Windows.Input.Manipulations.ManipulationVelocities2D";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ManipulationVelocities2D extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManipulationVelocities2D}, a cast assert is made to check if types are compatible.
+     */
     public static ManipulationVelocities2D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ManipulationVelocities2D(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class ManipulationVelocities2D extends NetObject  {
 
     // Constructors section
     
+    public ManipulationVelocities2D() throws Throwable {
+    }
+
+
 
     
     // Methods section

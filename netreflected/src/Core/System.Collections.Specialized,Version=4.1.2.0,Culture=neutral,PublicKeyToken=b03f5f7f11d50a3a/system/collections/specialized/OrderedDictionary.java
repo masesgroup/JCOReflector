@@ -50,12 +50,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Collections.Specialized.OrderedDictionary, System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.OrderedDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.OrderedDictionary</a>
  */
 public class OrderedDictionary extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.Specialized
+     */
     public static final String assemblyShortName = "System.Collections.Specialized";
+    /**
+     * Qualified class name: System.Collections.Specialized.OrderedDictionary
+     */
     public static final String className = "System.Collections.Specialized.OrderedDictionary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class OrderedDictionary extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OrderedDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static OrderedDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OrderedDictionary(from.getJCOInstance());
@@ -116,7 +133,6 @@ public class OrderedDictionary extends NetObject  {
 
     // Constructors section
     
-
     public OrderedDictionary() throws Throwable {
         try {
             // add reference to assemblyName.dll file

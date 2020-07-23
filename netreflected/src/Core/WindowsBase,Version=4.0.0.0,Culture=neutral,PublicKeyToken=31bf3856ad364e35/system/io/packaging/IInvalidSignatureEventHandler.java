@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.io.packaging.SignatureVerificationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link InvalidSignatureEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.InvalidSignatureEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.InvalidSignatureEventHandler</a>
+ */
 public interface IInvalidSignatureEventHandler {
     public void Invoke(NetObject sender, SignatureVerificationEventArgs e);
 }

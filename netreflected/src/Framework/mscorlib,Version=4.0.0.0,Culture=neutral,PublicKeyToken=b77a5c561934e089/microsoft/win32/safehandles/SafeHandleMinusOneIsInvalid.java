@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.SafeHandle;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid</a>
  */
-public class SafeHandleMinusOneIsInvalid extends NetObject  {
+public class SafeHandleMinusOneIsInvalid extends SafeHandle  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid
+     */
     public static final String className = "Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SafeHandleMinusOneIsInvalid extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SafeHandleMinusOneIsInvalid}, a cast assert is made to check if types are compatible.
+     */
     public static SafeHandleMinusOneIsInvalid cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SafeHandleMinusOneIsInvalid(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class SafeHandleMinusOneIsInvalid extends NetObject  {
 
     // Constructors section
     
+    public SafeHandleMinusOneIsInvalid() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,26 +136,6 @@ public class SafeHandleMinusOneIsInvalid extends NetObject  {
     
     // Properties section
     
-    public boolean getIsClosed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsClosed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInvalid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInvalid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.routing.RouteBase;
 import system.web.routing.IRouteHandler;
 import system.web.routing.IRouteHandlerImplementation;
 import system.web.routing.RouteValueDictionary;
@@ -49,12 +50,27 @@ import system.web.routing.RequestContext;
 
 /**
  * The base .NET class managing System.Web.Routing.Route, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.Route" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.Route</a>
  */
-public class Route extends NetObject  {
+public class Route extends RouteBase  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Routing.Route
+     */
     public static final String className = "System.Web.Routing.Route";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class Route extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Route}, a cast assert is made to check if types are compatible.
+     */
     public static Route cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Route(from.getJCOInstance());
@@ -115,6 +133,8 @@ public class Route extends NetObject  {
 
     // Constructors section
     
+    public Route() throws Throwable {
+    }
 
     public Route(java.lang.String url, IRouteHandler routeHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
         try {
@@ -157,6 +177,7 @@ public class Route extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -186,26 +207,6 @@ public class Route extends NetObject  {
     
     // Properties section
     
-    public boolean getRouteExistingFiles() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("RouteExistingFiles");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRouteExistingFiles(boolean RouteExistingFiles) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RouteExistingFiles", RouteExistingFiles);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

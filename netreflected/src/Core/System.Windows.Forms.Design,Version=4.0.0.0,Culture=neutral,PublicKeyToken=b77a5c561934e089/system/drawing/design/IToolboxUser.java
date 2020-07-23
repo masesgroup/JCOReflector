@@ -42,12 +42,29 @@ import system.drawing.design.ToolboxItem;
 
 /**
  * The base .NET class managing System.Drawing.Design.IToolboxUser, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IToolboxUser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IToolboxUser</a>
  */
 public interface IToolboxUser extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
+    public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.Drawing.Design.IToolboxUser
+     */
+    public static final String className = "System.Drawing.Design.IToolboxUser";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IToolboxUser}, a cast assert is made to check if types are compatible.
+     */
     public static IToolboxUser ToIToolboxUser(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Drawing.Design.IToolboxUser, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Windows.Forms.Design"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IToolboxUserImplementation(from.getJCOInstance());
     }

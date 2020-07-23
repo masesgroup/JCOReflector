@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.IAppDomainSetup, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IAppDomainSetup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IAppDomainSetup</a>
  */
 public class IAppDomainSetupImplementation extends NetObject implements IAppDomainSetup {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.IAppDomainSetup
+     */
     public static final String className = "System.IAppDomainSetup";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAppDomainSetup}, a cast assert is made to check if types are compatible.
+     */
     public static IAppDomainSetup ToIAppDomainSetup(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IAppDomainSetupImplementation(from.getJCOInstance());

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.ISecurityEncodable;
+import system.security.ISecurityEncodableImplementation;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.SecurityElement;
@@ -45,12 +47,27 @@ import system.security.SecurityElement;
 
 /**
  * The base .NET class managing System.Security.IPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.IPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.IPermission</a>
  */
 public class IPermissionImplementation extends NetObject implements IPermission {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.IPermission
+     */
     public static final String className = "System.Security.IPermission";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +115,9 @@ public class IPermissionImplementation extends NetObject implements IPermission 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPermission}, a cast assert is made to check if types are compatible.
+     */
     public static IPermission ToIPermission(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IPermissionImplementation(from.getJCOInstance());

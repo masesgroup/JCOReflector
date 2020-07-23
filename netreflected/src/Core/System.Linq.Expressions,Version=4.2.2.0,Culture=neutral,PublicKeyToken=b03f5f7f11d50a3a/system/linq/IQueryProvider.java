@@ -44,12 +44,29 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Linq.IQueryProvider, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IQueryProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IQueryProvider</a>
  */
 public interface IQueryProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
+    public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Linq.IQueryProvider
+     */
+    public static final String className = "System.Linq.IQueryProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IQueryProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IQueryProvider ToIQueryProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Linq.IQueryProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Linq.Expressions"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IQueryProviderImplementation(from.getJCOInstance());
     }

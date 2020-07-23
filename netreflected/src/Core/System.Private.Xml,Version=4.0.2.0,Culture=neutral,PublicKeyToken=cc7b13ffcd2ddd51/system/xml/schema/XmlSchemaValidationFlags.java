@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.Schema.XmlSchemaValidationFlags, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaValidationFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaValidationFlags</a>
  */
 public class XmlSchemaValidationFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.XmlSchemaValidationFlags
+     */
     public static final String className = "System.Xml.Schema.XmlSchemaValidationFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class XmlSchemaValidationFlags extends NetObject  {
 
     // Flags management section
 
-    public XmlSchemaValidationFlags add(XmlSchemaValidationFlags val) throws Throwable {
+    public final XmlSchemaValidationFlags add(XmlSchemaValidationFlags val) throws Throwable {
         return new XmlSchemaValidationFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public XmlSchemaValidationFlags remove(XmlSchemaValidationFlags val) throws Throwable {
+    public final XmlSchemaValidationFlags remove(XmlSchemaValidationFlags val) throws Throwable {
         return new XmlSchemaValidationFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(XmlSchemaValidationFlags val) throws Throwable {
+    public final boolean is(XmlSchemaValidationFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(XmlSchemaValidationFlags val) throws Throwable {
+    public final boolean has(XmlSchemaValidationFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

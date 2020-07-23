@@ -43,12 +43,27 @@ import system.workflow.componentmodel.design.AmbientProperty;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.DesignerTheme, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.DesignerTheme" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.DesignerTheme</a>
  */
 public class DesignerTheme extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.DesignerTheme
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.DesignerTheme";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class DesignerTheme extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerTheme}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerTheme cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerTheme(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class DesignerTheme extends NetObject  {
 
     // Constructors section
     
+    public DesignerTheme() throws Throwable {
+    }
 
     
     // Methods section

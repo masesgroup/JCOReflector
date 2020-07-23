@@ -48,12 +48,29 @@ import system.reflection.ParameterAttributes;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolWriter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter</a>
  */
 public interface ISymbolWriter extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolWriter
+     */
+    public static final String className = "System.Diagnostics.SymbolStore.ISymbolWriter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolWriter}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolWriter ToISymbolWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Diagnostics.SymbolStore.ISymbolWriter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISymbolWriterImplementation(from.getJCOInstance());
     }
@@ -110,13 +127,21 @@ public interface ISymbolWriter extends IJCOBridgeReflected {
 
     public void DefineField(SymbolToken parent, java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
+    public void DefineField(SymbolToken dupParam0, java.lang.String dupParam1, FieldAttributes dupParam2, JCRefOut dupParam3, SymAddressKind dupParam4, int dupParam5, int dupParam6, int dupParam7) throws Throwable;
+
     public void DefineGlobalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
+    public void DefineGlobalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCRefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6) throws Throwable;
+
     public void DefineLocalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset) throws Throwable;
+
+    public void DefineLocalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCRefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6, int dupParam7, int dupParam8) throws Throwable;
 
     public void DefineParameter(java.lang.String name, ParameterAttributes attributes, int sequence, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
     public void DefineSequencePoints(ISymbolDocumentWriter document, int[] offsets, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
+
+    public void DefineSequencePoints(ISymbolDocumentWriter dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable;
 
     public void OpenMethod(SymbolToken method) throws Throwable;
 
@@ -127,6 +152,8 @@ public interface ISymbolWriter extends IJCOBridgeReflected {
     public void SetScopeRange(int scopeID, int startOffset, int endOffset) throws Throwable;
 
     public void SetSymAttribute(SymbolToken parent, java.lang.String name, byte[] data) throws Throwable;
+
+    public void SetSymAttribute(SymbolToken dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable;
 
     public void SetUserEntryPoint(SymbolToken entryMethod) throws Throwable;
 

@@ -47,12 +47,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.EndpointReference, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.EndpointReference" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.EndpointReference</a>
  */
 public class EndpointReference extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Protocols.WSTrust.EndpointReference
+     */
     public static final String className = "System.IdentityModel.Protocols.WSTrust.EndpointReference";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class EndpointReference extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EndpointReference}, a cast assert is made to check if types are compatible.
+     */
     public static EndpointReference cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EndpointReference(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class EndpointReference extends NetObject  {
 
     // Constructors section
     
+    public EndpointReference() throws Throwable {
+    }
 
     public EndpointReference(java.lang.String uri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException {
         try {
@@ -123,6 +142,7 @@ public class EndpointReference extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

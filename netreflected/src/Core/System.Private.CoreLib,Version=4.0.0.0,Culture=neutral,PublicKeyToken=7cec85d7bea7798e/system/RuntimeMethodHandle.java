@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.RuntimeMethodHandle;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
@@ -45,12 +46,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.RuntimeMethodHandle, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.RuntimeMethodHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.RuntimeMethodHandle</a>
  */
-public class RuntimeMethodHandle extends NetObject  {
+public class RuntimeMethodHandle extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.RuntimeMethodHandle
+     */
     public static final String className = "System.RuntimeMethodHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class RuntimeMethodHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuntimeMethodHandle}, a cast assert is made to check if types are compatible.
+     */
     public static RuntimeMethodHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RuntimeMethodHandle(from.getJCOInstance());
@@ -111,6 +129,10 @@ public class RuntimeMethodHandle extends NetObject  {
 
     // Constructors section
     
+    public RuntimeMethodHandle() throws Throwable {
+    }
+
+
 
     
     // Methods section

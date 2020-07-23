@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Diagnostics.ProcessPriorityClass, System.Diagnostics.Process, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ProcessPriorityClass" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ProcessPriorityClass</a>
  */
 public class ProcessPriorityClass extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.Process, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.Process, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.Process
+     */
     public static final String assemblyShortName = "System.Diagnostics.Process";
+    /**
+     * Qualified class name: System.Diagnostics.ProcessPriorityClass
+     */
     public static final String className = "System.Diagnostics.ProcessPriorityClass";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.Runtime.Serialization.CollectionDataContractAttribute, System.Runtime.Serialization.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute</a>
  */
-public class CollectionDataContractAttribute extends NetObject  {
+public class CollectionDataContractAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Serialization.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Serialization.Primitives
+     */
     public static final String assemblyShortName = "System.Runtime.Serialization.Primitives";
+    /**
+     * Qualified class name: System.Runtime.Serialization.CollectionDataContractAttribute
+     */
     public static final String className = "System.Runtime.Serialization.CollectionDataContractAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class CollectionDataContractAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CollectionDataContractAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static CollectionDataContractAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CollectionDataContractAttribute(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class CollectionDataContractAttribute extends NetObject  {
 
     // Constructors section
     
-
     public CollectionDataContractAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -123,26 +140,6 @@ public class CollectionDataContractAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -222,17 +219,6 @@ public class CollectionDataContractAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsValueNameSetExplicitly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,12 +42,27 @@ import system.windows.ink.PropertyDataChangedEventArgs;
 import system.windows.ink.IPropertyDataChangedEventHandler;
 /**
  * The base .NET class managing System.Windows.Ink.PropertyDataChangedEventHandler, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.PropertyDataChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.PropertyDataChangedEventHandler</a>
  */
 public class PropertyDataChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Ink.PropertyDataChangedEventHandler
+     */
     public static final String className = "System.Windows.Ink.PropertyDataChangedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IPropertyDataChangedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class PropertyDataChangedEventHandler extends JCVoidDelegate implements I
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, PropertyDataChangedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, PropertyDataChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class PropertyDataChangedEventHandler extends JCVoidDelegate implements I
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, PropertyDataChangedEventArgs e) {
     }
 }

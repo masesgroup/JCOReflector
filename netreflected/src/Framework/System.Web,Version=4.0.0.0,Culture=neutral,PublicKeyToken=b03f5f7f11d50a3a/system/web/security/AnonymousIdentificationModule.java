@@ -44,12 +44,27 @@ import system.web.security.AnonymousIdentificationEventHandler;
 
 /**
  * The base .NET class managing System.Web.Security.AnonymousIdentificationModule, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.AnonymousIdentificationModule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.AnonymousIdentificationModule</a>
  */
 public class AnonymousIdentificationModule extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Security.AnonymousIdentificationModule
+     */
     public static final String className = "System.Web.Security.AnonymousIdentificationModule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class AnonymousIdentificationModule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnonymousIdentificationModule}, a cast assert is made to check if types are compatible.
+     */
     public static AnonymousIdentificationModule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AnonymousIdentificationModule(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class AnonymousIdentificationModule extends NetObject  {
 
     // Constructors section
     
-
     public AnonymousIdentificationModule() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,11 +175,11 @@ public class AnonymousIdentificationModule extends NetObject  {
     
     // Properties section
     
-    public static boolean getEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("Enabled");
+            return (boolean)classInstance.Get("Enabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

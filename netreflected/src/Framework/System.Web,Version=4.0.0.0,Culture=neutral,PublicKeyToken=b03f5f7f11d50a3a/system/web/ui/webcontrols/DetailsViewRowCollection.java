@@ -43,12 +43,27 @@ import system.web.ui.webcontrols.DetailsViewRow;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.DetailsViewRowCollection, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewRowCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewRowCollection</a>
  */
 public class DetailsViewRowCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.DetailsViewRowCollection
+     */
     public static final String className = "System.Web.UI.WebControls.DetailsViewRowCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class DetailsViewRowCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DetailsViewRowCollection}, a cast assert is made to check if types are compatible.
+     */
     public static DetailsViewRowCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DetailsViewRowCollection(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class DetailsViewRowCollection extends NetObject  {
 
     // Constructors section
     
+    public DetailsViewRowCollection() throws Throwable {
+    }
 
     public DetailsViewRowCollection(NetArrayList rows) throws Throwable {
         try {
@@ -119,6 +138,7 @@ public class DetailsViewRowCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ListControlConvertEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ListControlConvertEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListControlConvertEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListControlConvertEventHandler</a>
+ */
 public interface IListControlConvertEventHandler {
     public void Invoke(NetObject sender, ListControlConvertEventArgs e);
 }

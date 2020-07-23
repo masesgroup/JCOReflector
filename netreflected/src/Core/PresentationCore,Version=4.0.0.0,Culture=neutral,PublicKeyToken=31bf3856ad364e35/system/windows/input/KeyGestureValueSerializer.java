@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.ValueSerializer;
 import system.windows.markup.IValueSerializerContext;
 import system.windows.markup.IValueSerializerContextImplementation;
 
 
 /**
  * The base .NET class managing System.Windows.Input.KeyGestureValueSerializer, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyGestureValueSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyGestureValueSerializer</a>
  */
-public class KeyGestureValueSerializer extends NetObject  {
+public class KeyGestureValueSerializer extends ValueSerializer  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.KeyGestureValueSerializer
+     */
     public static final String className = "System.Windows.Input.KeyGestureValueSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class KeyGestureValueSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyGestureValueSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static KeyGestureValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new KeyGestureValueSerializer(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class KeyGestureValueSerializer extends NetObject  {
 
     // Constructors section
     
-
     public KeyGestureValueSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file

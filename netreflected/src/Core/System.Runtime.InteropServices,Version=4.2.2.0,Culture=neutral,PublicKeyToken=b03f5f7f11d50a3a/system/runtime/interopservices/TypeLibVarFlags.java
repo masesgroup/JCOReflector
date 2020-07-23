@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.TypeLibVarFlags, System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.TypeLibVarFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.TypeLibVarFlags</a>
  */
 public class TypeLibVarFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.InteropServices
+     */
     public static final String assemblyShortName = "System.Runtime.InteropServices";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.TypeLibVarFlags
+     */
     public static final String className = "System.Runtime.InteropServices.TypeLibVarFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -149,19 +164,19 @@ public class TypeLibVarFlags extends NetObject  {
 
     // Flags management section
 
-    public TypeLibVarFlags add(TypeLibVarFlags val) throws Throwable {
+    public final TypeLibVarFlags add(TypeLibVarFlags val) throws Throwable {
         return new TypeLibVarFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public TypeLibVarFlags remove(TypeLibVarFlags val) throws Throwable {
+    public final TypeLibVarFlags remove(TypeLibVarFlags val) throws Throwable {
         return new TypeLibVarFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(TypeLibVarFlags val) throws Throwable {
+    public final boolean is(TypeLibVarFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(TypeLibVarFlags val) throws Throwable {
+    public final boolean has(TypeLibVarFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

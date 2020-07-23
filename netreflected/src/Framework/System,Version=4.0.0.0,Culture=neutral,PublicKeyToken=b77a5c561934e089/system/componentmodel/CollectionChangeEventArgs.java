@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.CollectionChangeAction;
 
 
 /**
  * The base .NET class managing System.ComponentModel.CollectionChangeEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CollectionChangeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CollectionChangeEventArgs</a>
  */
-public class CollectionChangeEventArgs extends NetObject  {
+public class CollectionChangeEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.CollectionChangeEventArgs
+     */
     public static final String className = "System.ComponentModel.CollectionChangeEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class CollectionChangeEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CollectionChangeEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static CollectionChangeEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CollectionChangeEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class CollectionChangeEventArgs extends NetObject  {
 
     // Constructors section
     
+    public CollectionChangeEventArgs() throws Throwable {
+    }
 
     public CollectionChangeEventArgs(CollectionChangeAction action, NetObject element) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class CollectionChangeEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -57,12 +57,27 @@ import system.runtime.serialization.formatters.TypeFilterLevel;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.BinaryServerFormatterSink, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink</a>
  */
 public class BinaryServerFormatterSink extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Remoting
+     */
     public static final String assemblyShortName = "System.Runtime.Remoting";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.BinaryServerFormatterSink
+     */
     public static final String className = "System.Runtime.Remoting.Channels.BinaryServerFormatterSink";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -115,7 +130,9 @@ public class BinaryServerFormatterSink extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BinaryServerFormatterSink}, a cast assert is made to check if types are compatible.
+     */
     public static BinaryServerFormatterSink cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BinaryServerFormatterSink(from.getJCOInstance());
@@ -123,6 +140,9 @@ public class BinaryServerFormatterSink extends NetObject  {
 
     // Constructors section
     
+    public BinaryServerFormatterSink() throws Throwable {
+    }
+
 
 
     

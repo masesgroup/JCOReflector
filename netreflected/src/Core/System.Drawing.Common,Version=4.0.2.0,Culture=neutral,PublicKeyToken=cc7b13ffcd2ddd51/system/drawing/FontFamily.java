@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.MarshalByRefObject;
 import system.drawing.text.GenericFontFamilies;
 import system.drawing.text.FontCollection;
 import system.drawing.FontStyle;
@@ -47,12 +48,27 @@ import system.drawing.Graphics;
 
 /**
  * The base .NET class managing System.Drawing.FontFamily, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.FontFamily" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.FontFamily</a>
  */
-public class FontFamily extends NetObject  {
+public class FontFamily extends MarshalByRefObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.FontFamily
+     */
     public static final String className = "System.Drawing.FontFamily";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class FontFamily extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontFamily}, a cast assert is made to check if types are compatible.
+     */
     public static FontFamily cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FontFamily(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class FontFamily extends NetObject  {
 
     // Constructors section
     
+    public FontFamily() throws Throwable {
+    }
 
     public FontFamily(GenericFontFamilies genericFamily) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
@@ -143,6 +163,7 @@ public class FontFamily extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -215,28 +236,6 @@ public class FontFamily extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String GetName(int language) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -261,45 +260,45 @@ public class FontFamily extends NetObject  {
     
     // Properties section
     
-    public static FontFamily getGenericMonospace() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontFamily getGenericMonospace() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("GenericMonospace");
+            JCObject val = (JCObject)classInstance.Get("GenericMonospace");
             return new FontFamily(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontFamily getGenericSansSerif() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontFamily getGenericSansSerif() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("GenericSansSerif");
+            JCObject val = (JCObject)classInstance.Get("GenericSansSerif");
             return new FontFamily(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontFamily getGenericSerif() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontFamily getGenericSerif() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("GenericSerif");
+            JCObject val = (JCObject)classInstance.Get("GenericSerif");
             return new FontFamily(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontFamily[] getFamilies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public final FontFamily[] getFamilies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<FontFamily> resultingArrayList = new ArrayList<FontFamily>();
-            JCObject resultingObjects = (JCObject)classType.Get("Families");
+            JCObject resultingObjects = (JCObject)classInstance.Get("Families");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FontFamily(resultingObject));
             }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.DataColumnChangeEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataColumnChangeEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataColumnChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataColumnChangeEventHandler</a>
+ */
 public interface IDataColumnChangeEventHandler {
     public void Invoke(NetObject sender, DataColumnChangeEventArgs e);
 }

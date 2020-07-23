@@ -37,18 +37,37 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.jscript.vsa.IJSVsaError;
+import microsoft.jscript.vsa.IJSVsaErrorImplementation;
 import microsoft.jscript.vsa.IJSVsaItem;
 import microsoft.jscript.vsa.IJSVsaItemImplementation;
 
 
 /**
  * The base .NET class managing Microsoft.JScript.IVsaFullErrorInfo, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo</a>
  */
-public interface IVsaFullErrorInfo extends IJCOBridgeReflected {
-
+public interface IVsaFullErrorInfo extends IJCOBridgeReflected, IJSVsaError {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
+    public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.IVsaFullErrorInfo
+     */
+    public static final String className = "Microsoft.JScript.IVsaFullErrorInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVsaFullErrorInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IVsaFullErrorInfo ToIVsaFullErrorInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.JScript.IVsaFullErrorInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.JScript"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IVsaFullErrorInfoImplementation(from.getJCOInstance());
     }
@@ -95,25 +114,7 @@ public interface IVsaFullErrorInfo extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getEndColumn() throws Throwable;
-
     public int getEndLine() throws Throwable;
-
-    public int getLine() throws Throwable;
-
-    public int getNumber() throws Throwable;
-
-    public int getSeverity() throws Throwable;
-
-    public int getStartColumn() throws Throwable;
-
-    public IJSVsaItem getSourceItem() throws Throwable;
-
-    public java.lang.String getDescription() throws Throwable;
-
-    public java.lang.String getLineText() throws Throwable;
-
-    public java.lang.String getSourceMoniker() throws Throwable;
 
 
 

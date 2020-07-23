@@ -38,18 +38,41 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.tasks.hosting.IVbcHostObject3;
+import microsoft.build.tasks.hosting.IVbcHostObject3Implementation;
+import microsoft.build.tasks.hosting.IVbcHostObject2;
+import microsoft.build.tasks.hosting.IVbcHostObject2Implementation;
+import microsoft.build.tasks.hosting.IVbcHostObject;
+import microsoft.build.tasks.hosting.IVbcHostObjectImplementation;
+import microsoft.build.framework.ITaskHost;
+import microsoft.build.framework.ITaskHostImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Hosting.IVbcHostObject4, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject4" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject4</a>
  */
 public class IVbcHostObject4Implementation extends NetObject implements IVbcHostObject4 {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Hosting.IVbcHostObject4
+     */
     public static final String className = "Microsoft.Build.Tasks.Hosting.IVbcHostObject4";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +120,9 @@ public class IVbcHostObject4Implementation extends NetObject implements IVbcHost
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVbcHostObject4}, a cast assert is made to check if types are compatible.
+     */
     public static IVbcHostObject4 ToIVbcHostObject4(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IVbcHostObject4Implementation(from.getJCOInstance());
@@ -145,11 +170,31 @@ public class IVbcHostObject4Implementation extends NetObject implements IVbcHost
         }
     }
 
+    public boolean SetAdditionalLibPaths(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (Object)dupParam0);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SetAddModules(java.lang.String[] addModules) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("SetAddModules", (Object)addModules);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean SetAddModules(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SetAddModules", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

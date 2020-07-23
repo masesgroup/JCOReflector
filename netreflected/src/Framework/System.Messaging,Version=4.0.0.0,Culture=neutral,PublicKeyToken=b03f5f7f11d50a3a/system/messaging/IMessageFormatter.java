@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.ICloneable;
+import system.ICloneableImplementation;
 import system.messaging.Message;
 
 
 /**
  * The base .NET class managing System.Messaging.IMessageFormatter, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.IMessageFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.IMessageFormatter</a>
  */
-public interface IMessageFormatter extends IJCOBridgeReflected {
-
+public interface IMessageFormatter extends IJCOBridgeReflected, ICloneable {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
+    public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.IMessageFormatter
+     */
+    public static final String className = "System.Messaging.IMessageFormatter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMessageFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static IMessageFormatter ToIMessageFormatter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Messaging.IMessageFormatter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Messaging"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IMessageFormatterImplementation(from.getJCOInstance());
     }
@@ -92,7 +111,6 @@ public interface IMessageFormatter extends IJCOBridgeReflected {
     
     public boolean CanRead(Message message) throws Throwable;
 
-    public NetObject Clone() throws Throwable;
 
     public NetObject Read(Message message) throws Throwable;
 

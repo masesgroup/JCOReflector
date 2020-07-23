@@ -44,12 +44,27 @@ import microsoft.jscript.JSToken;
 
 /**
  * The base .NET class managing Microsoft.JScript.JSScanner, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSScanner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSScanner</a>
  */
 public class JSScanner extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.JSScanner
+     */
     public static final String className = "Microsoft.JScript.JSScanner";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class JSScanner extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JSScanner}, a cast assert is made to check if types are compatible.
+     */
     public static JSScanner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new JSScanner(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class JSScanner extends NetObject  {
 
     // Constructors section
     
-
     public JSScanner() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file

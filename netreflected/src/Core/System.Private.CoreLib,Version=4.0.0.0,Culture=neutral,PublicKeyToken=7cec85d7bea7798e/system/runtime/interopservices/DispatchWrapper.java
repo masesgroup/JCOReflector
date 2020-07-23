@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.DispatchWrapper, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.DispatchWrapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.DispatchWrapper</a>
  */
 public class DispatchWrapper extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.DispatchWrapper
+     */
     public static final String className = "System.Runtime.InteropServices.DispatchWrapper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class DispatchWrapper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DispatchWrapper}, a cast assert is made to check if types are compatible.
+     */
     public static DispatchWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DispatchWrapper(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class DispatchWrapper extends NetObject  {
 
     // Constructors section
     
+    public DispatchWrapper() throws Throwable {
+    }
 
     public DispatchWrapper(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -118,6 +137,7 @@ public class DispatchWrapper extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

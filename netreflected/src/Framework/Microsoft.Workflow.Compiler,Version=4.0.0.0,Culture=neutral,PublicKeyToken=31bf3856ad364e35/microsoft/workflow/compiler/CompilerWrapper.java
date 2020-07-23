@@ -44,12 +44,27 @@ import system.workflow.componentmodel.compiler.WorkflowCompilerParameters;
 
 /**
  * The base .NET class managing Microsoft.Workflow.Compiler.CompilerWrapper, Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Workflow.Compiler.CompilerWrapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Workflow.Compiler.CompilerWrapper</a>
  */
 public class CompilerWrapper extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: Microsoft.Workflow.Compiler
+     */
     public static final String assemblyShortName = "Microsoft.Workflow.Compiler";
+    /**
+     * Qualified class name: Microsoft.Workflow.Compiler.CompilerWrapper
+     */
     public static final String className = "Microsoft.Workflow.Compiler.CompilerWrapper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CompilerWrapper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompilerWrapper}, a cast assert is made to check if types are compatible.
+     */
     public static CompilerWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompilerWrapper(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class CompilerWrapper extends NetObject  {
 
     // Constructors section
     
-
     public CompilerWrapper() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -130,6 +146,17 @@ public class CompilerWrapper extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCompile = (JCObject)classInstance.Invoke("Compile", parameters == null ? null : parameters.getJCOInstance(), files);
+            return new WorkflowCompilerResults(objCompile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowCompilerResults Compile(WorkflowCompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException, system.reflection.TargetParameterCountException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.io.EndOfStreamException, system.CannotUnloadAppDomainException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCompile = (JCObject)classInstance.Invoke("Compile", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
             return new WorkflowCompilerResults(objCompile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

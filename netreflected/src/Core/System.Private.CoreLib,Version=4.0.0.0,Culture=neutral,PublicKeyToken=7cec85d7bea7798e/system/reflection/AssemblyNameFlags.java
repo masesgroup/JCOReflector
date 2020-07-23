@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.AssemblyNameFlags, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.AssemblyNameFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.AssemblyNameFlags</a>
  */
 public class AssemblyNameFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.AssemblyNameFlags
+     */
     public static final String className = "System.Reflection.AssemblyNameFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class AssemblyNameFlags extends NetObject  {
 
     // Flags management section
 
-    public AssemblyNameFlags add(AssemblyNameFlags val) throws Throwable {
+    public final AssemblyNameFlags add(AssemblyNameFlags val) throws Throwable {
         return new AssemblyNameFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AssemblyNameFlags remove(AssemblyNameFlags val) throws Throwable {
+    public final AssemblyNameFlags remove(AssemblyNameFlags val) throws Throwable {
         return new AssemblyNameFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AssemblyNameFlags val) throws Throwable {
+    public final boolean is(AssemblyNameFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AssemblyNameFlags val) throws Throwable {
+    public final boolean has(AssemblyNameFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

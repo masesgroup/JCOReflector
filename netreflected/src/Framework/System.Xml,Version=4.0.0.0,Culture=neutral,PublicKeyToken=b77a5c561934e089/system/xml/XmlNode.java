@@ -53,12 +53,27 @@ import system.xml.XmlNodeType;
 
 /**
  * The base .NET class managing System.Xml.XmlNode, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNode</a>
  */
 public class XmlNode extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlNode
+     */
     public static final String className = "System.Xml.XmlNode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +126,9 @@ public class XmlNode extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlNode}, a cast assert is made to check if types are compatible.
+     */
     public static XmlNode cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlNode(from.getJCOInstance());
@@ -119,6 +136,8 @@ public class XmlNode extends NetObject  {
 
     // Constructors section
     
+    public XmlNode() throws Throwable {
+    }
 
     
     // Methods section

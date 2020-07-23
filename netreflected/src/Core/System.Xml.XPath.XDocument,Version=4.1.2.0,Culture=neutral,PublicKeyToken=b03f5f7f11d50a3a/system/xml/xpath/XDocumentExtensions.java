@@ -45,12 +45,27 @@ import system.xml.linq.XNode;
 
 /**
  * The base .NET class managing System.Xml.XPath.XDocumentExtensions, System.Xml.XPath.XDocument, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XPath.XDocumentExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XPath.XDocumentExtensions</a>
  */
 public class XDocumentExtensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml.XPath.XDocument, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Xml.XPath.XDocument, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Xml.XPath.XDocument
+     */
     public static final String assemblyShortName = "System.Xml.XPath.XDocument";
+    /**
+     * Qualified class name: System.Xml.XPath.XDocumentExtensions
+     */
     public static final String className = "System.Xml.XPath.XDocumentExtensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class XDocumentExtensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XDocumentExtensions}, a cast assert is made to check if types are compatible.
+     */
     public static XDocumentExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XDocumentExtensions(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class XDocumentExtensions extends NetObject  {
 
     // Constructors section
     
+    public XDocumentExtensions() throws Throwable {
+    }
 
     
     // Methods section

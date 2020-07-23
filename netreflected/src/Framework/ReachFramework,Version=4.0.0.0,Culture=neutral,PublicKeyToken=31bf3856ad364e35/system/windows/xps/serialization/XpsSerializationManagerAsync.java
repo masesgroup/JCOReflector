@@ -38,21 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.xps.serialization.XpsSerializationManager;
 import system.windows.xps.serialization.BasePackagingPolicy;
-import system.windows.xps.serialization.FontSubsetterCommitPolicies;
 import system.windows.xps.serialization.XpsSerializationCompletedEventHandler;
-import system.windows.xps.serialization.XpsSerializationPrintTicketRequiredEventHandler;
-import system.windows.xps.serialization.XpsSerializationProgressChangedEventHandler;
 
 
 /**
  * The base .NET class managing System.Windows.Xps.Serialization.XpsSerializationManagerAsync, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationManagerAsync" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationManagerAsync</a>
  */
-public class XpsSerializationManagerAsync extends NetObject  {
+public class XpsSerializationManagerAsync extends XpsSerializationManager  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Serialization.XpsSerializationManagerAsync
+     */
     public static final String className = "System.Windows.Xps.Serialization.XpsSerializationManagerAsync";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +118,9 @@ public class XpsSerializationManagerAsync extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XpsSerializationManagerAsync}, a cast assert is made to check if types are compatible.
+     */
     public static XpsSerializationManagerAsync cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XpsSerializationManagerAsync(from.getJCOInstance());
@@ -113,6 +128,8 @@ public class XpsSerializationManagerAsync extends NetObject  {
 
     // Constructors section
     
+    public XpsSerializationManagerAsync() throws Throwable {
+    }
 
     public XpsSerializationManagerAsync(BasePackagingPolicy packagingPolicy, boolean batchMode) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException {
         try {
@@ -123,6 +140,7 @@ public class XpsSerializationManagerAsync extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -158,40 +176,10 @@ public class XpsSerializationManagerAsync extends NetObject  {
         }
     }
 
-    public void SetFontSubsettingCountPolicy(int countPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetFontSubsettingCountPolicy", countPolicy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetFontSubsettingPolicy(FontSubsetterCommitPolicies policy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetFontSubsettingPolicy", policy == null ? null : policy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getIsBatchMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsBatchMode");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
@@ -212,46 +200,6 @@ public class XpsSerializationManagerAsync extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("XpsSerializationCompleted", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addXpsSerializationPrintTicketRequired(XpsSerializationPrintTicketRequiredEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("XpsSerializationPrintTicketRequired", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeXpsSerializationPrintTicketRequired(XpsSerializationPrintTicketRequiredEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("XpsSerializationPrintTicketRequired", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addXpsSerializationProgressChanged(XpsSerializationProgressChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("XpsSerializationProgressChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeXpsSerializationProgressChanged(XpsSerializationProgressChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("XpsSerializationProgressChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,17 +37,38 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.IList;
+import system.collections.IListImplementation;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.Array;
 
 
 /**
  * The base .NET class managing System.Data.IDataParameterCollection, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataParameterCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataParameterCollection</a>
  */
-public interface IDataParameterCollection extends IJCOBridgeReflected {
-
+public interface IDataParameterCollection extends IJCOBridgeReflected, IList, ICollection, IEnumerable {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
+    public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.IDataParameterCollection
+     */
+    public static final String className = "System.Data.IDataParameterCollection";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataParameterCollection}, a cast assert is made to check if types are compatible.
+     */
     public static IDataParameterCollection ToIDataParameterCollection(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Data.IDataParameterCollection, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Data.Common"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDataParameterCollectionImplementation(from.getJCOInstance());
     }
@@ -90,25 +111,17 @@ public interface IDataParameterCollection extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Contains(NetObject value) throws Throwable;
 
     public boolean Contains(java.lang.String parameterName) throws Throwable;
 
-    public int Add(NetObject value) throws Throwable;
 
-    public int IndexOf(NetObject value) throws Throwable;
 
     public int IndexOf(java.lang.String parameterName) throws Throwable;
 
-    public void Clear() throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
 
-    public void Insert(int index, NetObject value) throws Throwable;
 
-    public void Remove(NetObject value) throws Throwable;
 
-    public void RemoveAt(int index) throws Throwable;
 
     public void RemoveAt(java.lang.String parameterName) throws Throwable;
 
@@ -116,16 +129,6 @@ public interface IDataParameterCollection extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getIsFixedSize() throws Throwable;
-
-    public boolean getIsReadOnly() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
-
-    public int getCount() throws Throwable;
-
-    public NetObject getSyncRoot() throws Throwable;
-
 
 
     // Instance Events section

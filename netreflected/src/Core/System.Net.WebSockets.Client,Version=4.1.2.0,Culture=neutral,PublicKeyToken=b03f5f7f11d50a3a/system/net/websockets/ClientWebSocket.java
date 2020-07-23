@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.websockets.WebSocket;
 import system.threading.tasks.Task;
 import system.net.websockets.WebSocketCloseStatus;
 import system.threading.CancellationToken;
@@ -49,12 +50,27 @@ import system.net.websockets.WebSocketState;
 
 /**
  * The base .NET class managing System.Net.WebSockets.ClientWebSocket, System.Net.WebSockets.Client, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.ClientWebSocket" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.ClientWebSocket</a>
  */
-public class ClientWebSocket extends NetObject  {
+public class ClientWebSocket extends WebSocket  {
+    /**
+     * Fully assembly qualified name: System.Net.WebSockets.Client, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.WebSockets.Client, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.WebSockets.Client
+     */
     public static final String assemblyShortName = "System.Net.WebSockets.Client";
+    /**
+     * Qualified class name: System.Net.WebSockets.ClientWebSocket
+     */
     public static final String className = "System.Net.WebSockets.ClientWebSocket";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class ClientWebSocket extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClientWebSocket}, a cast assert is made to check if types are compatible.
+     */
     public static ClientWebSocket cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ClientWebSocket(from.getJCOInstance());
@@ -115,7 +133,6 @@ public class ClientWebSocket extends NetObject  {
 
     // Constructors section
     
-
     public ClientWebSocket() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +180,26 @@ public class ClientWebSocket extends NetObject  {
         }
     }
 
+    public void Abort() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.ArgumentNullException, system.AggregateException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Abort");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -173,37 +210,6 @@ public class ClientWebSocket extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Options");
             return new ClientWebSocketOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WebSocketState getState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("State");
-            return new WebSocketState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getCloseStatusDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CloseStatusDescription");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSubProtocol() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SubProtocol");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

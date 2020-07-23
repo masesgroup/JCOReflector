@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Diagnostics.Eventing.Reader.EventLevel, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLevel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLevel</a>
  */
 public class EventLevel extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.EventLog
+     */
     public static final String assemblyShortName = "System.Diagnostics.EventLog";
+    /**
+     * Qualified class name: System.Diagnostics.Eventing.Reader.EventLevel
+     */
     public static final String className = "System.Diagnostics.Eventing.Reader.EventLevel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class EventLevel extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLevel}, a cast assert is made to check if types are compatible.
+     */
     public static EventLevel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventLevel(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class EventLevel extends NetObject  {
 
     // Constructors section
     
+    public EventLevel() throws Throwable {
+    }
+
+
 
     
     // Methods section

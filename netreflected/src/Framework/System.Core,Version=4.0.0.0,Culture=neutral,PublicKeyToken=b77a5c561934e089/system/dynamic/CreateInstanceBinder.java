@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.dynamic.DynamicMetaObjectBinder;
 import system.dynamic.DynamicMetaObject;
-import system.linq.expressions.Expression;
 import system.dynamic.CallInfo;
 
 
 /**
  * The base .NET class managing System.Dynamic.CreateInstanceBinder, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.CreateInstanceBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.CreateInstanceBinder</a>
  */
-public class CreateInstanceBinder extends NetObject  {
+public class CreateInstanceBinder extends DynamicMetaObjectBinder  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Dynamic.CreateInstanceBinder
+     */
     public static final String className = "System.Dynamic.CreateInstanceBinder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CreateInstanceBinder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CreateInstanceBinder}, a cast assert is made to check if types are compatible.
+     */
     public static CreateInstanceBinder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CreateInstanceBinder(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class CreateInstanceBinder extends NetObject  {
 
     // Constructors section
     
+    public CreateInstanceBinder() throws Throwable {
+    }
 
     
     // Methods section
@@ -121,28 +140,6 @@ public class CreateInstanceBinder extends NetObject  {
         try {
             JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
             return new DynamicMetaObject(objBind);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject Defer(DynamicMetaObject target, DynamicMetaObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefer = (JCObject)classInstance.Invoke("Defer", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
-            return new DynamicMetaObject(objDefer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DynamicMetaObject Defer(DynamicMetaObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefer = (JCObject)classInstance.Invoke("Defer", (Object)toObjectFromArray(args));
-            return new DynamicMetaObject(objDefer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,17 +167,6 @@ public class CreateInstanceBinder extends NetObject  {
         }
     }
 
-    public Expression GetUpdateExpression(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetUpdateExpression = (JCObject)classInstance.Invoke("GetUpdateExpression", type == null ? null : type.getJCOInstance());
-            return new Expression(objGetUpdateExpression);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -191,17 +177,6 @@ public class CreateInstanceBinder extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("CallInfo");
             return new CallInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getReturnType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
-            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

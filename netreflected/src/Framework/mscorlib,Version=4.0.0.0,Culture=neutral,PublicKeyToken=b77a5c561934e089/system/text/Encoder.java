@@ -44,12 +44,27 @@ import system.text.EncoderFallbackBuffer;
 
 /**
  * The base .NET class managing System.Text.Encoder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encoder</a>
  */
 public class Encoder extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Text.Encoder
+     */
     public static final String className = "System.Text.Encoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Encoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Encoder}, a cast assert is made to check if types are compatible.
+     */
     public static Encoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Encoder(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class Encoder extends NetObject  {
 
     // Constructors section
     
+    public Encoder() throws Throwable {
+    }
 
     
     // Methods section
@@ -124,11 +143,41 @@ public class Encoder extends NetObject  {
         }
     }
 
+    public int GetByteCount(JCRefOut dupParam0, int dupParam1, int dupParam2, boolean dupParam3) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetByteCount", dupParam0, dupParam1, dupParam2, dupParam3);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, boolean flush) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetBytes", chars, charIndex, charCount, bytes, byteIndex, flush);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetBytes(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, int dupParam4, boolean dupParam5) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Reset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

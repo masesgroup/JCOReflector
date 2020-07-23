@@ -44,12 +44,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Reflection.ModuleExtensions, System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleExtensions</a>
  */
 public class ModuleExtensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.TypeExtensions
+     */
     public static final String assemblyShortName = "System.Reflection.TypeExtensions";
+    /**
+     * Qualified class name: System.Reflection.ModuleExtensions
+     */
     public static final String className = "System.Reflection.ModuleExtensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ModuleExtensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModuleExtensions}, a cast assert is made to check if types are compatible.
+     */
     public static ModuleExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ModuleExtensions(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class ModuleExtensions extends NetObject  {
 
     // Constructors section
     
+    public ModuleExtensions() throws Throwable {
+    }
 
     
     // Methods section

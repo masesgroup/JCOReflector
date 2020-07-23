@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.FileAttribute, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.FileAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.FileAttribute</a>
  */
 public class FileAttribute extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.FileAttribute
+     */
     public static final String className = "Microsoft.VisualBasic.FileAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class FileAttribute extends NetObject  {
 
     // Flags management section
 
-    public FileAttribute add(FileAttribute val) throws Throwable {
+    public final FileAttribute add(FileAttribute val) throws Throwable {
         return new FileAttribute(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public FileAttribute remove(FileAttribute val) throws Throwable {
+    public final FileAttribute remove(FileAttribute val) throws Throwable {
         return new FileAttribute(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(FileAttribute val) throws Throwable {
+    public final boolean is(FileAttribute val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(FileAttribute val) throws Throwable {
+    public final boolean has(FileAttribute val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

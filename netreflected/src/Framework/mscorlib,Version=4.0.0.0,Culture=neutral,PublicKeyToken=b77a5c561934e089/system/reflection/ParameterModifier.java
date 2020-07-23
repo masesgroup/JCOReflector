@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Reflection.ParameterModifier, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ParameterModifier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ParameterModifier</a>
  */
-public class ParameterModifier extends NetObject  {
+public class ParameterModifier extends ValueType  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.ParameterModifier
+     */
     public static final String className = "System.Reflection.ParameterModifier";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ParameterModifier extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParameterModifier}, a cast assert is made to check if types are compatible.
+     */
     public static ParameterModifier cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ParameterModifier(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class ParameterModifier extends NetObject  {
 
     // Constructors section
     
+    public ParameterModifier() throws Throwable {
+    }
 
     public ParameterModifier(int parameterCount) throws Throwable, system.ArgumentException {
         try {
@@ -118,6 +138,7 @@ public class ParameterModifier extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.MarshalByRefObject;
 import system.web.compilation.ClientBuildManagerParameter;
 import system.componentmodel.TypeDescriptionProvider;
 import system.codedom.CodeCompileUnit;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
-import system.runtime.remoting.ObjRef;
 import system.web.hosting.IRegisteredObject;
 import system.web.hosting.IRegisteredObjectImplementation;
 import system.web.compilation.ClientBuildManagerCallback;
@@ -53,12 +53,27 @@ import system.web.compilation.BuildManagerHostUnloadEventHandler;
 
 /**
  * The base .NET class managing System.Web.Compilation.ClientBuildManager, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.ClientBuildManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.ClientBuildManager</a>
  */
-public class ClientBuildManager extends NetObject  {
+public class ClientBuildManager extends MarshalByRefObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Compilation.ClientBuildManager
+     */
     public static final String className = "System.Web.Compilation.ClientBuildManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +126,9 @@ public class ClientBuildManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClientBuildManager}, a cast assert is made to check if types are compatible.
+     */
     public static ClientBuildManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ClientBuildManager(from.getJCOInstance());
@@ -119,6 +136,8 @@ public class ClientBuildManager extends NetObject  {
 
     // Constructors section
     
+    public ClientBuildManager() throws Throwable {
+    }
 
     public ClientBuildManager(java.lang.String appVirtualDir, java.lang.String appPhysicalSourceDir) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.web.HttpException {
         try {
@@ -161,6 +180,7 @@ public class ClientBuildManager extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -195,34 +215,12 @@ public class ClientBuildManager extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
             return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,6 +350,16 @@ public class ClientBuildManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompileFile", virtualPath, callback == null ? null : callback.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PrecompileApplication() throws Throwable, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.web.HttpException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.provider.ProviderException, system.SystemException, system.io.IOException, system.runtime.remoting.RemotingException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PrecompileApplication");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

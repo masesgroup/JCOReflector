@@ -42,12 +42,27 @@ import system.EventArgs;
 import microsoft.visualbasic.applicationservices.IShutdownEventHandler;
 /**
  * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.ShutdownEventHandler, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ShutdownEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ShutdownEventHandler</a>
  */
 public class ShutdownEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.ApplicationServices.ShutdownEventHandler
+     */
     public static final String className = "Microsoft.VisualBasic.ApplicationServices.ShutdownEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IShutdownEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ShutdownEventHandler extends JCVoidDelegate implements IJCVoidEvent
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, EventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, EventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ShutdownEventHandler extends JCVoidDelegate implements IJCVoidEvent
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, EventArgs e) {
     }
 }

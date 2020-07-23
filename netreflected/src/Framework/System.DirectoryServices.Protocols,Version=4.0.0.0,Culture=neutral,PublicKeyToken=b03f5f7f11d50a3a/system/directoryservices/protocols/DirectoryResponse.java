@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.directoryservices.protocols.DirectoryOperation;
 import system.directoryservices.protocols.DirectoryControl;
 import system.directoryservices.protocols.ResultCode;
 import system.Uri;
@@ -45,12 +46,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.DirectoryResponse, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DirectoryResponse" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DirectoryResponse</a>
  */
-public class DirectoryResponse extends NetObject  {
+public class DirectoryResponse extends DirectoryOperation  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.DirectoryResponse
+     */
     public static final String className = "System.DirectoryServices.Protocols.DirectoryResponse";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class DirectoryResponse extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryResponse}, a cast assert is made to check if types are compatible.
+     */
     public static DirectoryResponse cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DirectoryResponse(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class DirectoryResponse extends NetObject  {
 
     // Constructors section
     
+    public DirectoryResponse() throws Throwable {
+    }
 
     
     // Methods section
@@ -119,7 +139,7 @@ public class DirectoryResponse extends NetObject  {
     
     // Properties section
     
-    public DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
+    public final DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -177,7 +197,7 @@ public class DirectoryResponse extends NetObject  {
         }
     }
 
-    public Uri[] getReferral() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.MemberAccessException, system.InvalidOperationException, system.NullReferenceException, system.UriFormatException {
+    public final Uri[] getReferral() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.MemberAccessException, system.InvalidOperationException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

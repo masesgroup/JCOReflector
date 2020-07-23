@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Data.DataViewRowState, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataViewRowState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataViewRowState</a>
  */
 public class DataViewRowState extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.DataViewRowState
+     */
     public static final String className = "System.Data.DataViewRowState";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class DataViewRowState extends NetObject  {
 
     // Flags management section
 
-    public DataViewRowState add(DataViewRowState val) throws Throwable {
+    public final DataViewRowState add(DataViewRowState val) throws Throwable {
         return new DataViewRowState(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public DataViewRowState remove(DataViewRowState val) throws Throwable {
+    public final DataViewRowState remove(DataViewRowState val) throws Throwable {
         return new DataViewRowState(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(DataViewRowState val) throws Throwable {
+    public final boolean is(DataViewRowState val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(DataViewRowState val) throws Throwable {
+    public final boolean has(DataViewRowState val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.xml.serialization.XmlElementEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link XmlElementEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlElementEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlElementEventHandler</a>
+ */
 public interface IXmlElementEventHandler {
     public void Invoke(NetObject sender, XmlElementEventArgs e);
 }

@@ -38,20 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.description.ServiceDescriptionFormatExtensionCollection;
-import system.xml.serialization.XmlSerializerNamespaces;
-import system.xml.XmlAttribute;
-import system.xml.XmlElement;
+import system.web.services.description.DocumentableItem;
 
 
 /**
  * The base .NET class managing System.Web.Services.Description.NamedItem, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.NamedItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.NamedItem</a>
  */
-public class NamedItem extends NetObject  {
+public class NamedItem extends DocumentableItem  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Description.NamedItem
+     */
     public static final String className = "System.Web.Services.Description.NamedItem";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +116,9 @@ public class NamedItem extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NamedItem}, a cast assert is made to check if types are compatible.
+     */
     public static NamedItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NamedItem(from.getJCOInstance());
@@ -112,6 +126,8 @@ public class NamedItem extends NetObject  {
 
     // Constructors section
     
+    public NamedItem() throws Throwable {
+    }
 
     
     // Methods section
@@ -120,26 +136,6 @@ public class NamedItem extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getDocumentation() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Documentation");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentation(java.lang.String Documentation) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Documentation", Documentation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -155,86 +151,6 @@ public class NamedItem extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ServiceDescriptionFormatExtensionCollection getExtensions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Extensions");
-            return new ServiceDescriptionFormatExtensionCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSerializerNamespaces getNamespaces() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
-            return new XmlSerializerNamespaces(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNamespaces(XmlSerializerNamespaces Namespaces) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Namespaces", Namespaces == null ? null : Namespaces.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlAttribute[] getExtensibleAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<XmlAttribute> resultingArrayList = new ArrayList<XmlAttribute>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ExtensibleAttributes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new XmlAttribute(resultingObject));
-            }
-            XmlAttribute[] resultingArray = new XmlAttribute[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setExtensibleAttributes(XmlAttribute[] ExtensibleAttributes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ExtensibleAttributes", toObjectFromArray(ExtensibleAttributes));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlElement getDocumentationElement() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DocumentationElement");
-            return new XmlElement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentationElement(XmlElement DocumentationElement) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DocumentationElement", DocumentationElement == null ? null : DocumentationElement.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

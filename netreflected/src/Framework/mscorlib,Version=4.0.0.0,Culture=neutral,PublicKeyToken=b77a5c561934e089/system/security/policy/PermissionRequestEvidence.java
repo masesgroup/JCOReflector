@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.PermissionSet;
 import system.security.policy.EvidenceBase;
+import system.security.PermissionSet;
 import system.security.policy.PermissionRequestEvidence;
 
 
 /**
  * The base .NET class managing System.Security.Policy.PermissionRequestEvidence, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.PermissionRequestEvidence" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.PermissionRequestEvidence</a>
  */
-public class PermissionRequestEvidence extends NetObject  {
+public class PermissionRequestEvidence extends EvidenceBase  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.PermissionRequestEvidence
+     */
     public static final String className = "System.Security.Policy.PermissionRequestEvidence";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class PermissionRequestEvidence extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PermissionRequestEvidence}, a cast assert is made to check if types are compatible.
+     */
     public static PermissionRequestEvidence cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PermissionRequestEvidence(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class PermissionRequestEvidence extends NetObject  {
 
     // Constructors section
     
+    public PermissionRequestEvidence() throws Throwable {
+    }
 
     public PermissionRequestEvidence(PermissionSet request, PermissionSet optional, PermissionSet denied) throws Throwable, system.InvalidOperationException, system.NotSupportedException {
         try {
@@ -121,6 +140,7 @@ public class PermissionRequestEvidence extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

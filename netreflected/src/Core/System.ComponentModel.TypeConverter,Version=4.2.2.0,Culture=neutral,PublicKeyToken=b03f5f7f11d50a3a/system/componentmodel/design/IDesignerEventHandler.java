@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.design.DesignerEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DesignerEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerEventHandler</a>
+ */
 public interface IDesignerEventHandler {
     public void Invoke(NetObject sender, DesignerEventArgs e);
 }

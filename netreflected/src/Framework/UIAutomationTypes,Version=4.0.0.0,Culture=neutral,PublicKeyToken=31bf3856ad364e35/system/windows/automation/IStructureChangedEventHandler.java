@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.automation.StructureChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StructureChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.StructureChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.StructureChangedEventHandler</a>
+ */
 public interface IStructureChangedEventHandler {
     public void Invoke(NetObject sender, StructureChangedEventArgs e);
 }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.HttpContext;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link HttpResponseSubstitutionCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpResponseSubstitutionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpResponseSubstitutionCallback</a>
+ */
 public interface IHttpResponseSubstitutionCallback {
     public java.lang.String Invoke(HttpContext context);
 }

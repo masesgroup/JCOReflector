@@ -38,16 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import accessibility.IAccPropServices;
+import accessibility.IAccPropServicesImplementation;
 
 
 /**
  * The base .NET class managing Accessibility.CAccPropServices, Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Accessibility.CAccPropServices" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Accessibility.CAccPropServices</a>
  */
 public class CAccPropServicesImplementation extends NetObject implements CAccPropServices {
+    /**
+     * Fully assembly qualified name: Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Accessibility
+     */
     public static final String assemblyShortName = "Accessibility";
+    /**
+     * Qualified class name: Accessibility.CAccPropServices
+     */
     public static final String className = "Accessibility.CAccPropServices";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +112,9 @@ public class CAccPropServicesImplementation extends NetObject implements CAccPro
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CAccPropServices}, a cast assert is made to check if types are compatible.
+     */
     public static CAccPropServices ToCAccPropServices(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CAccPropServicesImplementation(from.getJCOInstance());

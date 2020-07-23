@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Xml.XmlQualifiedName, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlQualifiedName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlQualifiedName</a>
  */
 public class XmlQualifiedName extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlQualifiedName
+     */
     public static final String className = "System.Xml.XmlQualifiedName";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class XmlQualifiedName extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlQualifiedName}, a cast assert is made to check if types are compatible.
+     */
     public static XmlQualifiedName cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlQualifiedName(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class XmlQualifiedName extends NetObject  {
 
     // Constructors section
     
-
     public XmlQualifiedName() throws Throwable {
         try {
             // add reference to assemblyName.dll file

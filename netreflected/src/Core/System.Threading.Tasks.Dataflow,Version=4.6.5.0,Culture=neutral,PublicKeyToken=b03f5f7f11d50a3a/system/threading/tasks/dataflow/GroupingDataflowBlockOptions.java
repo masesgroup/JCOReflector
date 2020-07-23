@@ -38,18 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.threading.CancellationToken;
-import system.threading.tasks.TaskScheduler;
+import system.threading.tasks.dataflow.DataflowBlockOptions;
 
 
 /**
  * The base .NET class managing System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions, System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions</a>
  */
-public class GroupingDataflowBlockOptions extends NetObject  {
+public class GroupingDataflowBlockOptions extends DataflowBlockOptions  {
+    /**
+     * Fully assembly qualified name: System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Threading.Tasks.Dataflow
+     */
     public static final String assemblyShortName = "System.Threading.Tasks.Dataflow";
+    /**
+     * Qualified class name: System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions
+     */
     public static final String className = "System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +116,9 @@ public class GroupingDataflowBlockOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GroupingDataflowBlockOptions}, a cast assert is made to check if types are compatible.
+     */
     public static GroupingDataflowBlockOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GroupingDataflowBlockOptions(from.getJCOInstance());
@@ -110,7 +126,6 @@ public class GroupingDataflowBlockOptions extends NetObject  {
 
     // Constructors section
     
-
     public GroupingDataflowBlockOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -129,26 +144,6 @@ public class GroupingDataflowBlockOptions extends NetObject  {
     
     // Properties section
     
-    public boolean getEnsureOrdered() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("EnsureOrdered");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnsureOrdered(boolean EnsureOrdered) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EnsureOrdered", EnsureOrdered);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getGreedy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -169,46 +164,6 @@ public class GroupingDataflowBlockOptions extends NetObject  {
         }
     }
 
-    public int getBoundedCapacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("BoundedCapacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBoundedCapacity(int BoundedCapacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BoundedCapacity", BoundedCapacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getMaxMessagesPerTask() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaxMessagesPerTask");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMaxMessagesPerTask(int MaxMessagesPerTask) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("MaxMessagesPerTask", MaxMessagesPerTask);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public long getMaxNumberOfGroups() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -224,68 +179,6 @@ public class GroupingDataflowBlockOptions extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxNumberOfGroups", MaxNumberOfGroups);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getNameFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("NameFormat");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNameFormat(java.lang.String NameFormat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("NameFormat", NameFormat);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CancellationToken getCancellationToken() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CancellationToken");
-            return new CancellationToken(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TaskScheduler getTaskScheduler() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TaskScheduler");
-            return new TaskScheduler(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTaskScheduler(TaskScheduler TaskScheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TaskScheduler", TaskScheduler == null ? null : TaskScheduler.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

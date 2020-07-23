@@ -48,12 +48,27 @@ import system.transactions.HostCurrentTransactionCallback;
 
 /**
  * The base .NET class managing System.Transactions.TransactionManager, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionManager</a>
  */
 public class TransactionManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Transactions
+     */
     public static final String assemblyShortName = "System.Transactions";
+    /**
+     * Qualified class name: System.Transactions.TransactionManager
+     */
     public static final String className = "System.Transactions.TransactionManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class TransactionManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionManager}, a cast assert is made to check if types are compatible.
+     */
     public static TransactionManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TransactionManager(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class TransactionManager extends NetObject  {
 
     // Constructors section
     
+    public TransactionManager() throws Throwable {
+    }
 
     
     // Methods section
@@ -123,6 +142,17 @@ public class TransactionManager extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objReenlist = (JCObject)classType.Invoke("Reenlist", resourceManagerIdentifier == null ? null : resourceManagerIdentifier.getJCOInstance(), recoveryInformation, enlistmentNotification == null ? null : enlistmentNotification.getJCOInstance());
+            return new Enlistment(objReenlist);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Enlistment Reenlist(Guid dupParam0, JCRefOut dupParam1, IEnlistmentNotification dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.runtime.interopservices.COMException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objReenlist = (JCObject)classType.Invoke("Reenlist", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new Enlistment(objReenlist);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -143,43 +173,43 @@ public class TransactionManager extends NetObject  {
     
     // Properties section
     
-    public static TimeSpan getDefaultTimeout() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.TypeLoadException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeSpan getDefaultTimeout() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.TypeLoadException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultTimeout");
+            JCObject val = (JCObject)classInstance.Get("DefaultTimeout");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TimeSpan getMaximumTimeout() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.TypeLoadException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeSpan getMaximumTimeout() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.TypeLoadException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("MaximumTimeout");
+            JCObject val = (JCObject)classInstance.Get("MaximumTimeout");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static HostCurrentTransactionCallback getHostCurrentCallback() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HostCurrentTransactionCallback getHostCurrentCallback() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (HostCurrentTransactionCallback)classType.Get("HostCurrentCallback");
+            return (HostCurrentTransactionCallback)classInstance.Get("HostCurrentCallback");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setHostCurrentCallback(HostCurrentTransactionCallback HostCurrentCallback) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setHostCurrentCallback(HostCurrentTransactionCallback HostCurrentCallback) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("HostCurrentCallback", HostCurrentCallback);
+            classInstance.Set("HostCurrentCallback", HostCurrentCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

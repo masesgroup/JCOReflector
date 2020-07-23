@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.presentation.propertyediting.PropertyValueEditor;
 import system.windows.DataTemplate;
 import system.activities.presentation.propertyediting.PropertyValue;
 import system.windows.IInputElement;
@@ -46,12 +47,27 @@ import system.windows.IInputElementImplementation;
 
 /**
  * The base .NET class managing System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor</a>
  */
-public class DialogPropertyValueEditor extends NetObject  {
+public class DialogPropertyValueEditor extends PropertyValueEditor  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor
+     */
     public static final String className = "System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class DialogPropertyValueEditor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DialogPropertyValueEditor}, a cast assert is made to check if types are compatible.
+     */
     public static DialogPropertyValueEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DialogPropertyValueEditor(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class DialogPropertyValueEditor extends NetObject  {
 
     // Constructors section
     
-
     public DialogPropertyValueEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,27 +184,6 @@ public class DialogPropertyValueEditor extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DialogEditorTemplate", DialogEditorTemplate == null ? null : DialogEditorTemplate.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataTemplate getInlineEditorTemplate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InlineEditorTemplate");
-            return new DataTemplate(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInlineEditorTemplate(DataTemplate InlineEditorTemplate) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InlineEditorTemplate", InlineEditorTemplate == null ? null : InlineEditorTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

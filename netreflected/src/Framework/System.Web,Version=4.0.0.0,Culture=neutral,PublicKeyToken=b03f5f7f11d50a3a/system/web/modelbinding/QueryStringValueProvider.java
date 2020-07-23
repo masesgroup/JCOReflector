@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.modelbinding.NameValueCollectionValueProvider;
 import system.web.modelbinding.ModelBindingExecutionContext;
-import system.web.modelbinding.ValueProviderResult;
 
 
 /**
  * The base .NET class managing System.Web.ModelBinding.QueryStringValueProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.QueryStringValueProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.QueryStringValueProvider</a>
  */
-public class QueryStringValueProvider extends NetObject  {
+public class QueryStringValueProvider extends NameValueCollectionValueProvider  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.ModelBinding.QueryStringValueProvider
+     */
     public static final String className = "System.Web.ModelBinding.QueryStringValueProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class QueryStringValueProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link QueryStringValueProvider}, a cast assert is made to check if types are compatible.
+     */
     public static QueryStringValueProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new QueryStringValueProvider(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class QueryStringValueProvider extends NetObject  {
 
     // Constructors section
     
+    public QueryStringValueProvider() throws Throwable {
+    }
 
     public QueryStringValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         try {
@@ -122,41 +141,10 @@ public class QueryStringValueProvider extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean ContainsPrefix(java.lang.String prefix) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ContainsPrefix", prefix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ValueProviderResult GetValue(java.lang.String key) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", key);
-            return new ValueProviderResult(objGetValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", key, skipValidation);
-            return new ValueProviderResult(objGetValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

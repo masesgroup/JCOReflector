@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.Intrinsics.Arm.Arm64.Sha256, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.Arm.Arm64.Sha256" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.Arm.Arm64.Sha256</a>
  */
 public class Sha256 extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.Intrinsics.Arm.Arm64.Sha256
+     */
     public static final String className = "System.Runtime.Intrinsics.Arm.Arm64.Sha256";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class Sha256 extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Sha256}, a cast assert is made to check if types are compatible.
+     */
     public static Sha256 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Sha256(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class Sha256 extends NetObject  {
 
     // Constructors section
     
+    public Sha256() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,11 +135,11 @@ public class Sha256 extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsSupported() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsSupported() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsSupported");
+            return (boolean)classInstance.Get("IsSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

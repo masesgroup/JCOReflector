@@ -42,12 +42,27 @@ import system.data.FillErrorEventArgs;
 import system.data.IFillErrorEventHandler;
 /**
  * The base .NET class managing System.Data.FillErrorEventHandler, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.FillErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.FillErrorEventHandler</a>
  */
 public class FillErrorEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.FillErrorEventHandler
+     */
     public static final String className = "System.Data.FillErrorEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IFillErrorEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class FillErrorEventHandler extends JCVoidDelegate implements IJCVoidEven
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, FillErrorEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, FillErrorEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class FillErrorEventHandler extends JCVoidDelegate implements IJCVoidEven
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, FillErrorEventArgs e) {
     }
 }

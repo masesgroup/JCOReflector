@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.InheritanceFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.InheritanceFlags</a>
  */
 public class InheritanceFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.AccessControl
+     */
     public static final String assemblyShortName = "System.Security.AccessControl";
+    /**
+     * Qualified class name: System.Security.AccessControl.InheritanceFlags
+     */
     public static final String className = "System.Security.AccessControl.InheritanceFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class InheritanceFlags extends NetObject  {
 
     // Flags management section
 
-    public InheritanceFlags add(InheritanceFlags val) throws Throwable {
+    public final InheritanceFlags add(InheritanceFlags val) throws Throwable {
         return new InheritanceFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public InheritanceFlags remove(InheritanceFlags val) throws Throwable {
+    public final InheritanceFlags remove(InheritanceFlags val) throws Throwable {
         return new InheritanceFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(InheritanceFlags val) throws Throwable {
+    public final boolean is(InheritanceFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(InheritanceFlags val) throws Throwable {
+    public final boolean has(InheritanceFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

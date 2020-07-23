@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DrawListViewColumnHeaderEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DrawListViewColumnHeaderEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawListViewColumnHeaderEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawListViewColumnHeaderEventHandler</a>
+ */
 public interface IDrawListViewColumnHeaderEventHandler {
     public void Invoke(NetObject sender, DrawListViewColumnHeaderEventArgs e);
 }

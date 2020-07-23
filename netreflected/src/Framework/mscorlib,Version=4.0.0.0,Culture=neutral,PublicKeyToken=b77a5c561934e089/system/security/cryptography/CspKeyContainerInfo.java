@@ -45,12 +45,27 @@ import system.security.cryptography.KeyNumber;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CspKeyContainerInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CspKeyContainerInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CspKeyContainerInfo</a>
  */
 public class CspKeyContainerInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.CspKeyContainerInfo
+     */
     public static final String className = "System.Security.Cryptography.CspKeyContainerInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CspKeyContainerInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CspKeyContainerInfo}, a cast assert is made to check if types are compatible.
+     */
     public static CspKeyContainerInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CspKeyContainerInfo(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class CspKeyContainerInfo extends NetObject  {
 
     // Constructors section
     
+    public CspKeyContainerInfo() throws Throwable {
+    }
 
     public CspKeyContainerInfo(CspParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException {
         try {
@@ -121,6 +140,7 @@ public class CspKeyContainerInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

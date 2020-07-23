@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.XmlElement;
 import system.identitymodel.tokens.SecurityToken;
+import system.xml.XmlElement;
 import system.DateTime;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
-import system.identitymodel.tokens.SecurityKey;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.GenericXmlSecurityToken, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken</a>
  */
-public class GenericXmlSecurityToken extends NetObject  {
+public class GenericXmlSecurityToken extends SecurityToken  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.GenericXmlSecurityToken
+     */
     public static final String className = "System.IdentityModel.Tokens.GenericXmlSecurityToken";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class GenericXmlSecurityToken extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GenericXmlSecurityToken}, a cast assert is made to check if types are compatible.
+     */
     public static GenericXmlSecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GenericXmlSecurityToken(from.getJCOInstance());
@@ -113,6 +129,9 @@ public class GenericXmlSecurityToken extends NetObject  {
 
     // Constructors section
     
+    public GenericXmlSecurityToken() throws Throwable {
+    }
+
 
 
     
@@ -128,43 +147,10 @@ public class GenericXmlSecurityToken extends NetObject  {
         }
     }
 
-    public SecurityKey ResolveKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveKeyIdentifierClause = (JCObject)classInstance.Invoke("ResolveKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-            return new SecurityKey(objResolveKeyIdentifierClause);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public DateTime getValidFrom() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidFrom");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getValidTo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidTo");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityKeyIdentifierClause getExternalTokenReference() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -193,16 +179,6 @@ public class GenericXmlSecurityToken extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("ProofToken");
             return new SecurityToken(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

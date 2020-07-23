@@ -48,12 +48,27 @@ import system.servicemodel.description.ServiceContractGenerationOptions;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.ServiceContractGenerator, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceContractGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceContractGenerator</a>
  */
 public class ServiceContractGenerator extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.ServiceContractGenerator
+     */
     public static final String className = "System.ServiceModel.Description.ServiceContractGenerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ServiceContractGenerator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceContractGenerator}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceContractGenerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceContractGenerator(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class ServiceContractGenerator extends NetObject  {
 
     // Constructors section
     
-
     public ServiceContractGenerator() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.TypeLoadException, system.reflection.AmbiguousMatchException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file

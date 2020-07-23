@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Xps.XpsDocumentNotificationLevel, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.XpsDocumentNotificationLevel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.XpsDocumentNotificationLevel</a>
  */
 public class XpsDocumentNotificationLevel extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Windows.Xps.XpsDocumentNotificationLevel
+     */
     public static final String className = "System.Windows.Xps.XpsDocumentNotificationLevel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

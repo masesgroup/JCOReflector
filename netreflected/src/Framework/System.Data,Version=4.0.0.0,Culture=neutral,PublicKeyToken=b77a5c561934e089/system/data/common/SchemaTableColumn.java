@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Data.Common.SchemaTableColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.SchemaTableColumn" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.SchemaTableColumn</a>
  */
 public class SchemaTableColumn extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.Common.SchemaTableColumn
+     */
     public static final String className = "System.Data.Common.SchemaTableColumn";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SchemaTableColumn extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SchemaTableColumn}, a cast assert is made to check if types are compatible.
+     */
     public static SchemaTableColumn cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SchemaTableColumn(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class SchemaTableColumn extends NetObject  {
 
     // Constructors section
     
+    public SchemaTableColumn() throws Throwable {
+    }
 
     
     // Methods section

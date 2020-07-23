@@ -38,10 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.SettingsBase;
 import system.configuration.SettingsContext;
 import system.configuration.SettingsPropertyCollection;
-import system.configuration.SettingsProviderCollection;
 import system.configuration.SettingsPropertyValueCollection;
+import system.configuration.SettingsProviderCollection;
 import system.componentmodel.PropertyChangedEventHandler;
 import system.configuration.SettingChangingEventHandler;
 import system.configuration.SettingsLoadedEventHandler;
@@ -50,12 +51,27 @@ import system.configuration.SettingsSavingEventHandler;
 
 /**
  * The base .NET class managing System.Configuration.ApplicationSettingsBase, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ApplicationSettingsBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ApplicationSettingsBase</a>
  */
-public class ApplicationSettingsBase extends NetObject  {
+public class ApplicationSettingsBase extends SettingsBase  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.ApplicationSettingsBase
+     */
     public static final String className = "System.Configuration.ApplicationSettingsBase";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +124,9 @@ public class ApplicationSettingsBase extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationSettingsBase}, a cast assert is made to check if types are compatible.
+     */
     public static ApplicationSettingsBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ApplicationSettingsBase(from.getJCOInstance());
@@ -116,6 +134,8 @@ public class ApplicationSettingsBase extends NetObject  {
 
     // Constructors section
     
+    public ApplicationSettingsBase() throws Throwable {
+    }
 
     
     // Methods section
@@ -126,16 +146,6 @@ public class ApplicationSettingsBase extends NetObject  {
         try {
             JCObject objGetPreviousVersion = (JCObject)classInstance.Invoke("GetPreviousVersion", propertyName);
             return new NetObject(objGetPreviousVersion);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Initialize(SettingsContext context, SettingsPropertyCollection properties, SettingsProviderCollection providers) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", context == null ? null : context.getJCOInstance(), properties == null ? null : properties.getJCOInstance(), providers == null ? null : providers.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,60 +195,6 @@ public class ApplicationSettingsBase extends NetObject  {
     
     // Properties section
     
-    public boolean getIsSynchronized() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSynchronized");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SettingsContext getContext() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Context");
-            return new SettingsContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SettingsPropertyCollection getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new SettingsPropertyCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SettingsPropertyValueCollection getPropertyValues() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropertyValues");
-            return new SettingsPropertyValueCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SettingsProviderCollection getProviders() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Providers");
-            return new SettingsProviderCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getSettingsKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

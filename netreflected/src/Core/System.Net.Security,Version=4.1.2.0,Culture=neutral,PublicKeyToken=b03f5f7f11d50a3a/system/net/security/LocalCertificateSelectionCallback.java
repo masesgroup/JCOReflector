@@ -43,12 +43,27 @@ import system.security.cryptography.x509certificates.X509CertificateCollection;
 import system.net.security.ILocalCertificateSelectionCallback;
 /**
  * The base .NET class managing System.Net.Security.LocalCertificateSelectionCallback, System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.LocalCertificateSelectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.LocalCertificateSelectionCallback</a>
  */
 public class LocalCertificateSelectionCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Security
+     */
     public static final String assemblyShortName = "System.Net.Security";
+    /**
+     * Qualified class name: System.Net.Security.LocalCertificateSelectionCallback
+     */
     public static final String className = "System.Net.Security.LocalCertificateSelectionCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ILocalCertificateSelectionCallback callerInstance = null;
@@ -186,7 +201,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final X509Certificate DynamicInvoke(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers) throws Throwable {
+    public X509Certificate METHOD_JAVA_NAME(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -197,7 +212,9 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public X509Certificate Invoke(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers) {
         return null;
     }

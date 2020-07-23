@@ -46,12 +46,27 @@ import system.windows.input.ICommandImplementation;
 
 /**
  * The base .NET class managing System.Windows.Input.ICommandSource, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ICommandSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ICommandSource</a>
  */
 public class ICommandSourceImplementation extends NetObject implements ICommandSource {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.ICommandSource
+     */
     public static final String className = "System.Windows.Input.ICommandSource";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class ICommandSourceImplementation extends NetObject implements ICommandS
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICommandSource}, a cast assert is made to check if types are compatible.
+     */
     public static ICommandSource ToICommandSource(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICommandSourceImplementation(from.getJCOInstance());

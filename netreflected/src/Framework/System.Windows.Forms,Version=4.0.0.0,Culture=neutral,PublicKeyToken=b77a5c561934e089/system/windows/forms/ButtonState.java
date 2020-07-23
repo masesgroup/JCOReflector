@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.ButtonState, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ButtonState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ButtonState</a>
  */
 public class ButtonState extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ButtonState
+     */
     public static final String className = "System.Windows.Forms.ButtonState";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class ButtonState extends NetObject  {
 
     // Flags management section
 
-    public ButtonState add(ButtonState val) throws Throwable {
+    public final ButtonState add(ButtonState val) throws Throwable {
         return new ButtonState(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ButtonState remove(ButtonState val) throws Throwable {
+    public final ButtonState remove(ButtonState val) throws Throwable {
         return new ButtonState(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ButtonState val) throws Throwable {
+    public final boolean is(ButtonState val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ButtonState val) throws Throwable {
+    public final boolean has(ButtonState val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

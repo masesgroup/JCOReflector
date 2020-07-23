@@ -45,12 +45,27 @@ import system.net.security.IRemoteCertificateValidationCallback;
 
 /**
  * The base .NET class managing System.Net.Security.RemoteCertificateValidationCallback, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback</a>
  */
 public class RemoteCertificateValidationCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.Security.RemoteCertificateValidationCallback
+     */
     public static final String className = "System.Net.Security.RemoteCertificateValidationCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IRemoteCertificateValidationCallback callerInstance = null;
@@ -162,7 +177,7 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final boolean DynamicInvoke(NetObject sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) throws Throwable {
+    public boolean METHOD_JAVA_NAME(NetObject sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -172,7 +187,9 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public boolean Invoke(NetObject sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) {
         return false;
     }

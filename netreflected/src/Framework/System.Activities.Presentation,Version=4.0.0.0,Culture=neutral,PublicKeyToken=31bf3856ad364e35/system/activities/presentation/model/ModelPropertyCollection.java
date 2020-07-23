@@ -38,18 +38,31 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.presentation.model.ModelProperty;
-import system.windows.DependencyProperty;
 
 
 /**
  * The base .NET class managing System.Activities.Presentation.Model.ModelPropertyCollection, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.ModelPropertyCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.ModelPropertyCollection</a>
  */
 public class ModelPropertyCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Model.ModelPropertyCollection
+     */
     public static final String className = "System.Activities.Presentation.Model.ModelPropertyCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +115,9 @@ public class ModelPropertyCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelPropertyCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ModelPropertyCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ModelPropertyCollection(from.getJCOInstance());
@@ -110,32 +125,12 @@ public class ModelPropertyCollection extends NetObject  {
 
     // Constructors section
     
+    public ModelPropertyCollection() throws Throwable {
+    }
 
     
     // Methods section
     
-    public ModelProperty Find(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", name);
-            return new ModelProperty(objFind);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelProperty Find(DependencyProperty value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", value == null ? null : value.getJCOInstance());
-            return new ModelProperty(objFind);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

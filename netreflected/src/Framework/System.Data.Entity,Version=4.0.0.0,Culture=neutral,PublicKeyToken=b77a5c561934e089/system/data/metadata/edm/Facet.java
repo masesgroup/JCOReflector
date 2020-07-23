@@ -38,20 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.metadata.edm.MetadataItem;
 import system.data.metadata.edm.BuiltInTypeKind;
-import system.data.metadata.edm.Documentation;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.FacetDescription;
 
 
 /**
  * The base .NET class managing System.Data.Metadata.Edm.Facet, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.Facet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.Facet</a>
  */
-public class Facet extends NetObject  {
+public class Facet extends MetadataItem  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Metadata.Edm.Facet
+     */
     public static final String className = "System.Data.Metadata.Edm.Facet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class Facet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Facet}, a cast assert is made to check if types are compatible.
+     */
     public static Facet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Facet(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class Facet extends NetObject  {
 
     // Constructors section
     
+    public Facet() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -125,38 +146,6 @@ public class Facet extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsUnbounded");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public BuiltInTypeKind getBuiltInTypeKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuiltInTypeKind");
-            return new BuiltInTypeKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Documentation getDocumentation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Documentation");
-            return new Documentation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentation(Documentation Documentation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

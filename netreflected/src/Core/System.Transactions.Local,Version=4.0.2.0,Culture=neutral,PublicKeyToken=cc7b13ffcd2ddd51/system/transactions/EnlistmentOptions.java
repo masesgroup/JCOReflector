@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Transactions.EnlistmentOptions, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.EnlistmentOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.EnlistmentOptions</a>
  */
 public class EnlistmentOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.EnlistmentOptions
+     */
     public static final String className = "System.Transactions.EnlistmentOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class EnlistmentOptions extends NetObject  {
 
     // Flags management section
 
-    public EnlistmentOptions add(EnlistmentOptions val) throws Throwable {
+    public final EnlistmentOptions add(EnlistmentOptions val) throws Throwable {
         return new EnlistmentOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public EnlistmentOptions remove(EnlistmentOptions val) throws Throwable {
+    public final EnlistmentOptions remove(EnlistmentOptions val) throws Throwable {
         return new EnlistmentOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(EnlistmentOptions val) throws Throwable {
+    public final boolean is(EnlistmentOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(EnlistmentOptions val) throws Throwable {
+    public final boolean has(EnlistmentOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

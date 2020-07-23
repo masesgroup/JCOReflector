@@ -45,12 +45,27 @@ import system.workflow.runtime.IWorkBatchImplementation;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.WorkflowEnvironment, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.WorkflowEnvironment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.WorkflowEnvironment</a>
  */
 public class WorkflowEnvironment extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.WorkflowEnvironment
+     */
     public static final String className = "System.Workflow.Runtime.WorkflowEnvironment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class WorkflowEnvironment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowEnvironment}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowEnvironment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowEnvironment(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class WorkflowEnvironment extends NetObject  {
 
     // Constructors section
     
+    public WorkflowEnvironment() throws Throwable {
+    }
 
     
     // Methods section
@@ -119,22 +138,22 @@ public class WorkflowEnvironment extends NetObject  {
     
     // Properties section
     
-    public static Guid getWorkflowInstanceId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Guid getWorkflowInstanceId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowInstanceId");
+            JCObject val = (JCObject)classInstance.Get("WorkflowInstanceId");
             return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IWorkBatch getWorkBatch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IWorkBatch getWorkBatch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WorkBatch");
+            JCObject val = (JCObject)classInstance.Get("WorkBatch");
             return new IWorkBatchImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.Constraint;
 import system.data.DataColumn;
 import system.data.DataTable;
-import system.data.PropertyCollection;
 
 
 /**
  * The base .NET class managing System.Data.UniqueConstraint, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.UniqueConstraint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.UniqueConstraint</a>
  */
-public class UniqueConstraint extends NetObject  {
+public class UniqueConstraint extends Constraint  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.UniqueConstraint
+     */
     public static final String className = "System.Data.UniqueConstraint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class UniqueConstraint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UniqueConstraint}, a cast assert is made to check if types are compatible.
+     */
     public static UniqueConstraint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UniqueConstraint(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class UniqueConstraint extends NetObject  {
 
     // Constructors section
     
+    public UniqueConstraint() throws Throwable {
+    }
 
     public UniqueConstraint(DataColumn column) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         try {
@@ -203,6 +222,7 @@ public class UniqueConstraint extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -220,7 +240,7 @@ public class UniqueConstraint extends NetObject  {
         }
     }
 
-    public DataColumn[] getColumns() throws Throwable {
+    public final DataColumn[] getColumns() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -232,48 +252,6 @@ public class UniqueConstraint extends NetObject  {
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataTable getTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Table");
-            return new DataTable(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyCollection getExtendedProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedProperties");
-            return new PropertyCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getConstraintName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ConstraintName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setConstraintName(java.lang.String ConstraintName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ConstraintName", ConstraintName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,12 +42,27 @@ import system.componentmodel.design.ComponentEventArgs;
 import system.componentmodel.design.IComponentEventHandler;
 /**
  * The base .NET class managing System.ComponentModel.Design.ComponentEventHandler, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentEventHandler</a>
  */
 public class ComponentEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ComponentEventHandler
+     */
     public static final String className = "System.ComponentModel.Design.ComponentEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IComponentEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ComponentEventHandler extends JCVoidDelegate implements IJCVoidEven
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ComponentEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ComponentEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ComponentEventHandler extends JCVoidDelegate implements IJCVoidEven
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ComponentEventArgs e) {
     }
 }

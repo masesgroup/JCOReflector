@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.json.serialization.JsonConverterFactory;
 import system.text.json.JsonNamingPolicy;
 import system.text.json.serialization.JsonConverter;
 import system.text.json.JsonSerializerOptions;
@@ -45,12 +46,27 @@ import system.text.json.JsonSerializerOptions;
 
 /**
  * The base .NET class managing System.Text.Json.Serialization.JsonStringEnumConverter, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonStringEnumConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonStringEnumConverter</a>
  */
-public class JsonStringEnumConverter extends NetObject  {
+public class JsonStringEnumConverter extends JsonConverterFactory  {
+    /**
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Text.Json
+     */
     public static final String assemblyShortName = "System.Text.Json";
+    /**
+     * Qualified class name: System.Text.Json.Serialization.JsonStringEnumConverter
+     */
     public static final String className = "System.Text.Json.Serialization.JsonStringEnumConverter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class JsonStringEnumConverter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonStringEnumConverter}, a cast assert is made to check if types are compatible.
+     */
     public static JsonStringEnumConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new JsonStringEnumConverter(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class JsonStringEnumConverter extends NetObject  {
 
     // Constructors section
     
-
     public JsonStringEnumConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file

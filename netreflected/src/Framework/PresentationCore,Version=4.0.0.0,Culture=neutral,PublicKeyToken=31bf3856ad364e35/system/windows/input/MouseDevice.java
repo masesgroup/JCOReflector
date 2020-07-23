@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.input.InputDevice;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.input.CaptureMode;
@@ -45,17 +46,31 @@ import system.windows.input.Cursor;
 import system.windows.Point;
 import system.windows.input.MouseButtonState;
 import system.windows.PresentationSource;
-import system.windows.threading.Dispatcher;
 
 
 /**
  * The base .NET class managing System.Windows.Input.MouseDevice, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.MouseDevice" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.MouseDevice</a>
  */
-public class MouseDevice extends NetObject  {
+public class MouseDevice extends InputDevice  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.MouseDevice
+     */
     public static final String className = "System.Windows.Input.MouseDevice";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class MouseDevice extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MouseDevice}, a cast assert is made to check if types are compatible.
+     */
     public static MouseDevice cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MouseDevice(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class MouseDevice extends NetObject  {
 
     // Constructors section
     
+    public MouseDevice() throws Throwable {
+    }
 
     
     // Methods section
@@ -135,16 +154,6 @@ public class MouseDevice extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,16 +200,6 @@ public class MouseDevice extends NetObject  {
         }
     }
 
-    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("VerifyAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -221,17 +220,6 @@ public class MouseDevice extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("DirectlyOver");
-            return new IInputElementImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IInputElement getTarget() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Target");
             return new IInputElementImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -309,28 +297,6 @@ public class MouseDevice extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("XButton2");
             return new MouseButtonState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PresentationSource getActiveSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ActiveSource");
-            return new PresentationSource(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Dispatcher getDispatcher() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
-            return new Dispatcher(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.io.RenamedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link RenamedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.RenamedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.RenamedEventHandler</a>
+ */
 public interface IRenamedEventHandler {
     public void Invoke(NetObject sender, RenamedEventArgs e);
 }

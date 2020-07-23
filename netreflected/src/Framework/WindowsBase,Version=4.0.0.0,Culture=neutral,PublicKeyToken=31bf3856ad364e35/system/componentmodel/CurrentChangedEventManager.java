@@ -38,21 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.WeakEventManager;
 import system.componentmodel.ICollectionView;
 import system.componentmodel.ICollectionViewImplementation;
 import system.windows.IWeakEventListener;
 import system.windows.IWeakEventListenerImplementation;
-import system.windows.threading.Dispatcher;
 
 
 /**
  * The base .NET class managing System.ComponentModel.CurrentChangedEventManager, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CurrentChangedEventManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CurrentChangedEventManager</a>
  */
-public class CurrentChangedEventManager extends NetObject  {
+public class CurrentChangedEventManager extends WeakEventManager  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.CurrentChangedEventManager
+     */
     public static final String className = "System.ComponentModel.CurrentChangedEventManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class CurrentChangedEventManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CurrentChangedEventManager}, a cast assert is made to check if types are compatible.
+     */
     public static CurrentChangedEventManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CurrentChangedEventManager(from.getJCOInstance());
@@ -113,20 +130,14 @@ public class CurrentChangedEventManager extends NetObject  {
 
     // Constructors section
     
+    public CurrentChangedEventManager() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void AddListener(ICollectionView source, IWeakEventListener listener) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -147,31 +158,10 @@ public class CurrentChangedEventManager extends NetObject  {
         }
     }
 
-    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("VerifyAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public Dispatcher getDispatcher() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
-            return new Dispatcher(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

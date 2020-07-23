@@ -43,12 +43,27 @@ import system.servicemodel.security.SecurityVersion;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.SecurityVersion, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecurityVersion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecurityVersion</a>
  */
 public class SecurityVersion extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.SecurityVersion
+     */
     public static final String className = "System.ServiceModel.Security.SecurityVersion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SecurityVersion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityVersion}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityVersion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityVersion(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class SecurityVersion extends NetObject  {
 
     // Constructors section
     
+    public SecurityVersion() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,22 +136,22 @@ public class SecurityVersion extends NetObject  {
     
     // Properties section
     
-    public static SecurityVersion getWSSecurity10() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityVersion getWSSecurity10() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity10");
+            JCObject val = (JCObject)classInstance.Get("WSSecurity10");
             return new SecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecurityVersion getWSSecurity11() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecurityVersion getWSSecurity11() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity11");
+            JCObject val = (JCObject)classInstance.Get("WSSecurity11");
             return new SecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

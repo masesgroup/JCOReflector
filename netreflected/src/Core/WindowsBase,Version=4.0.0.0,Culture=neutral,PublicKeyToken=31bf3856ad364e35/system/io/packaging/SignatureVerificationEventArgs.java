@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.io.packaging.PackageDigitalSignature;
 import system.io.packaging.VerifyResult;
 
 
 /**
  * The base .NET class managing System.IO.Packaging.SignatureVerificationEventArgs, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.SignatureVerificationEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.SignatureVerificationEventArgs</a>
  */
-public class SignatureVerificationEventArgs extends NetObject  {
+public class SignatureVerificationEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.IO.Packaging.SignatureVerificationEventArgs
+     */
     public static final String className = "System.IO.Packaging.SignatureVerificationEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SignatureVerificationEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SignatureVerificationEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SignatureVerificationEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SignatureVerificationEventArgs(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class SignatureVerificationEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SignatureVerificationEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

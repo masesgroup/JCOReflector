@@ -45,12 +45,27 @@ import system.web.IHttpHandlerImplementation;
 
 /**
  * The base .NET class managing System.Web.Routing.PageRouteHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.PageRouteHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.PageRouteHandler</a>
  */
 public class PageRouteHandler extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Routing.PageRouteHandler
+     */
     public static final String className = "System.Web.Routing.PageRouteHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class PageRouteHandler extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageRouteHandler}, a cast assert is made to check if types are compatible.
+     */
     public static PageRouteHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PageRouteHandler(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class PageRouteHandler extends NetObject  {
 
     // Constructors section
     
+    public PageRouteHandler() throws Throwable {
+    }
 
     public PageRouteHandler(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
@@ -131,6 +150,7 @@ public class PageRouteHandler extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

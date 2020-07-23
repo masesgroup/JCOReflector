@@ -43,12 +43,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.RedirectionLocation, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.RedirectionLocation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.RedirectionLocation</a>
  */
 public class RedirectionLocation extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.RedirectionLocation
+     */
     public static final String className = "System.ServiceModel.Channels.RedirectionLocation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RedirectionLocation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RedirectionLocation}, a cast assert is made to check if types are compatible.
+     */
     public static RedirectionLocation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RedirectionLocation(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class RedirectionLocation extends NetObject  {
 
     // Constructors section
     
+    public RedirectionLocation() throws Throwable {
+    }
 
     public RedirectionLocation(Uri address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -119,6 +138,7 @@ public class RedirectionLocation extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

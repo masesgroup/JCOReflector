@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.AsymmetricSignatureFormatter;
 import system.security.cryptography.AsymmetricAlgorithm;
-import system.security.cryptography.HashAlgorithm;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.DSASignatureFormatter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DSASignatureFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DSASignatureFormatter</a>
  */
-public class DSASignatureFormatter extends NetObject  {
+public class DSASignatureFormatter extends AsymmetricSignatureFormatter  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.DSASignatureFormatter
+     */
     public static final String className = "System.Security.Cryptography.DSASignatureFormatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DSASignatureFormatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DSASignatureFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static DSASignatureFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DSASignatureFormatter(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class DSASignatureFormatter extends NetObject  {
 
     // Constructors section
     
-
     public DSASignatureFormatter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -154,12 +170,12 @@ public class DSASignatureFormatter extends NetObject  {
         }
     }
 
-    public byte[] CreateSignature(HashAlgorithm hash) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public byte[] CreateSignature(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", hash == null ? null : hash.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)dupParam0);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

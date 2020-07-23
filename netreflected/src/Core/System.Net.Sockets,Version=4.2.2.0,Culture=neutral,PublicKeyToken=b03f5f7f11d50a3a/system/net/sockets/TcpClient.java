@@ -52,12 +52,27 @@ import system.net.sockets.Socket;
 
 /**
  * The base .NET class managing System.Net.Sockets.TcpClient, System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.TcpClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.TcpClient</a>
  */
 public class TcpClient extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Sockets
+     */
     public static final String assemblyShortName = "System.Net.Sockets";
+    /**
+     * Qualified class name: System.Net.Sockets.TcpClient
+     */
     public static final String className = "System.Net.Sockets.TcpClient";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class TcpClient extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TcpClient}, a cast assert is made to check if types are compatible.
+     */
     public static TcpClient cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TcpClient(from.getJCOInstance());
@@ -118,7 +135,6 @@ public class TcpClient extends NetObject  {
 
     // Constructors section
     
-
     public TcpClient() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file

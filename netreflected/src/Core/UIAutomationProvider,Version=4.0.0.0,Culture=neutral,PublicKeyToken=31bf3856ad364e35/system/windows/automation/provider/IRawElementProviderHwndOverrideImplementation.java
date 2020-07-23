@@ -45,12 +45,27 @@ import system.windows.automation.provider.ProviderOptions;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderHwndOverride, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderHwndOverride" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderHwndOverride</a>
  */
 public class IRawElementProviderHwndOverrideImplementation extends NetObject implements IRawElementProviderHwndOverride {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
     public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.IRawElementProviderHwndOverride
+     */
     public static final String className = "System.Windows.Automation.Provider.IRawElementProviderHwndOverride";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class IRawElementProviderHwndOverrideImplementation extends NetObject imp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRawElementProviderHwndOverride}, a cast assert is made to check if types are compatible.
+     */
     public static IRawElementProviderHwndOverride ToIRawElementProviderHwndOverride(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRawElementProviderHwndOverrideImplementation(from.getJCOInstance());

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Messaging.MessageQueueAccessRights, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueAccessRights" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueAccessRights</a>
  */
 public class MessageQueueAccessRights extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.MessageQueueAccessRights
+     */
     public static final String className = "System.Messaging.MessageQueueAccessRights";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -151,19 +166,19 @@ public class MessageQueueAccessRights extends NetObject  {
 
     // Flags management section
 
-    public MessageQueueAccessRights add(MessageQueueAccessRights val) throws Throwable {
+    public final MessageQueueAccessRights add(MessageQueueAccessRights val) throws Throwable {
         return new MessageQueueAccessRights(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MessageQueueAccessRights remove(MessageQueueAccessRights val) throws Throwable {
+    public final MessageQueueAccessRights remove(MessageQueueAccessRights val) throws Throwable {
         return new MessageQueueAccessRights(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MessageQueueAccessRights val) throws Throwable {
+    public final boolean is(MessageQueueAccessRights val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MessageQueueAccessRights val) throws Throwable {
+    public final boolean has(MessageQueueAccessRights val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

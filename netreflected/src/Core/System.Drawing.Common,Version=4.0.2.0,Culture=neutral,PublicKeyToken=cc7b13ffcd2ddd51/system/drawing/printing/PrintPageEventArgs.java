@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.drawing.Graphics;
 import system.drawing.Rectangle;
 import system.drawing.printing.PageSettings;
@@ -45,12 +46,27 @@ import system.drawing.printing.PageSettings;
 
 /**
  * The base .NET class managing System.Drawing.Printing.PrintPageEventArgs, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintPageEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintPageEventArgs</a>
  */
-public class PrintPageEventArgs extends NetObject  {
+public class PrintPageEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Printing.PrintPageEventArgs
+     */
     public static final String className = "System.Drawing.Printing.PrintPageEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class PrintPageEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintPageEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static PrintPageEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrintPageEventArgs(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class PrintPageEventArgs extends NetObject  {
 
     // Constructors section
     
+    public PrintPageEventArgs() throws Throwable {
+    }
 
     public PrintPageEventArgs(Graphics graphics, Rectangle marginBounds, Rectangle pageBounds, PageSettings pageSettings) throws Throwable {
         try {
@@ -121,6 +141,7 @@ public class PrintPageEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

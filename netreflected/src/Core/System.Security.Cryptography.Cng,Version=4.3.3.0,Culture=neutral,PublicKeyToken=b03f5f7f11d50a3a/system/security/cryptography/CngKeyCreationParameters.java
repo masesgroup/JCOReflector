@@ -46,12 +46,27 @@ import system.security.cryptography.CngUIPolicy;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CngKeyCreationParameters, System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters</a>
  */
 public class CngKeyCreationParameters extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Cng
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Cng";
+    /**
+     * Qualified class name: System.Security.Cryptography.CngKeyCreationParameters
+     */
     public static final String className = "System.Security.Cryptography.CngKeyCreationParameters";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class CngKeyCreationParameters extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CngKeyCreationParameters}, a cast assert is made to check if types are compatible.
+     */
     public static CngKeyCreationParameters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CngKeyCreationParameters(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class CngKeyCreationParameters extends NetObject  {
 
     // Constructors section
     
-
     public CngKeyCreationParameters() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file

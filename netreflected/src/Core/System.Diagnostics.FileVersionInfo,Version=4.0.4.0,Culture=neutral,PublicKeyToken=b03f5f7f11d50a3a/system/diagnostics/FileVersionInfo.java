@@ -43,12 +43,27 @@ import system.diagnostics.FileVersionInfo;
 
 /**
  * The base .NET class managing System.Diagnostics.FileVersionInfo, System.Diagnostics.FileVersionInfo, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.FileVersionInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.FileVersionInfo</a>
  */
 public class FileVersionInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.FileVersionInfo, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.FileVersionInfo, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.FileVersionInfo
+     */
     public static final String assemblyShortName = "System.Diagnostics.FileVersionInfo";
+    /**
+     * Qualified class name: System.Diagnostics.FileVersionInfo
+     */
     public static final String className = "System.Diagnostics.FileVersionInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FileVersionInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileVersionInfo}, a cast assert is made to check if types are compatible.
+     */
     public static FileVersionInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileVersionInfo(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class FileVersionInfo extends NetObject  {
 
     // Constructors section
     
+    public FileVersionInfo() throws Throwable {
+    }
+
+
 
     
     // Methods section

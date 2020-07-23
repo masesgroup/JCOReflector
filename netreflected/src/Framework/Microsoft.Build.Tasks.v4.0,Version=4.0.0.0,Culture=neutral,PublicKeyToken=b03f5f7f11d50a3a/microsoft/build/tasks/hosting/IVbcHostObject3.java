@@ -37,18 +37,41 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.build.tasks.hosting.IVbcHostObject2;
+import microsoft.build.tasks.hosting.IVbcHostObject2Implementation;
+import microsoft.build.tasks.hosting.IVbcHostObject;
+import microsoft.build.tasks.hosting.IVbcHostObjectImplementation;
+import microsoft.build.framework.ITaskHost;
+import microsoft.build.framework.ITaskHostImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Hosting.IVbcHostObject3, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3</a>
  */
-public interface IVbcHostObject3 extends IJCOBridgeReflected {
-
+public interface IVbcHostObject3 extends IJCOBridgeReflected, IVbcHostObject2, IVbcHostObject, ITaskHost {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Hosting.IVbcHostObject3
+     */
+    public static final String className = "Microsoft.Build.Tasks.Hosting.IVbcHostObject3";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVbcHostObject3}, a cast assert is made to check if types are compatible.
+     */
     public static IVbcHostObject3 ToIVbcHostObject3(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Tasks.Hosting.IVbcHostObject3, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Tasks.v4.0"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IVbcHostObject3Implementation(from.getJCOInstance());
     }
@@ -91,105 +114,56 @@ public interface IVbcHostObject3 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Compile() throws Throwable;
 
-    public boolean IsDesignTime() throws Throwable;
 
-    public boolean IsUpToDate() throws Throwable;
 
-    public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable;
 
-    public boolean SetAddModules(java.lang.String[] addModules) throws Throwable;
 
-    public boolean SetBaseAddress(java.lang.String targetType, java.lang.String baseAddress) throws Throwable;
 
-    public boolean SetCodePage(int codePage) throws Throwable;
 
-    public boolean SetDebugType(boolean emitDebugInformation, java.lang.String debugType) throws Throwable;
 
-    public boolean SetDefineConstants(java.lang.String defineConstants) throws Throwable;
 
-    public boolean SetDelaySign(boolean delaySign) throws Throwable;
 
-    public boolean SetDisabledWarnings(java.lang.String disabledWarnings) throws Throwable;
 
-    public boolean SetDocumentationFile(java.lang.String documentationFile) throws Throwable;
 
-    public boolean SetErrorReport(java.lang.String errorReport) throws Throwable;
 
-    public boolean SetFileAlignment(int fileAlignment) throws Throwable;
 
-    public boolean SetGenerateDocumentation(boolean generateDocumentation) throws Throwable;
 
-    public boolean SetImports(ITaskItem[] importsList) throws Throwable;
 
-    public boolean SetKeyContainer(java.lang.String keyContainer) throws Throwable;
 
-    public boolean SetKeyFile(java.lang.String keyFile) throws Throwable;
 
     public boolean SetLanguageVersion(java.lang.String languageVersion) throws Throwable;
 
-    public boolean SetLinkResources(ITaskItem[] linkResources) throws Throwable;
 
-    public boolean SetMainEntryPoint(java.lang.String mainEntryPoint) throws Throwable;
 
-    public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable;
 
-    public boolean SetNoConfig(boolean noConfig) throws Throwable;
 
-    public boolean SetNoStandardLib(boolean noStandardLib) throws Throwable;
 
-    public boolean SetNoWarnings(boolean noWarnings) throws Throwable;
 
-    public boolean SetOptimize(boolean optimize) throws Throwable;
 
-    public boolean SetOptionCompare(java.lang.String optionCompare) throws Throwable;
 
-    public boolean SetOptionExplicit(boolean optionExplicit) throws Throwable;
 
-    public boolean SetOptionInfer(boolean optionInfer) throws Throwable;
 
-    public boolean SetOptionStrict(boolean optionStrict) throws Throwable;
 
-    public boolean SetOptionStrictType(java.lang.String optionStrictType) throws Throwable;
 
-    public boolean SetOutputAssembly(java.lang.String outputAssembly) throws Throwable;
 
-    public boolean SetPlatform(java.lang.String platform) throws Throwable;
 
-    public boolean SetReferences(ITaskItem[] references) throws Throwable;
 
-    public boolean SetRemoveIntegerChecks(boolean removeIntegerChecks) throws Throwable;
 
-    public boolean SetResources(ITaskItem[] resources) throws Throwable;
 
-    public boolean SetResponseFiles(ITaskItem[] responseFiles) throws Throwable;
 
-    public boolean SetRootNamespace(java.lang.String rootNamespace) throws Throwable;
 
-    public boolean SetSdkPath(java.lang.String sdkPath) throws Throwable;
 
-    public boolean SetSources(ITaskItem[] sources) throws Throwable;
 
-    public boolean SetTargetCompactFramework(boolean targetCompactFramework) throws Throwable;
 
-    public boolean SetTargetType(java.lang.String targetType) throws Throwable;
 
-    public boolean SetTreatWarningsAsErrors(boolean treatWarningsAsErrors) throws Throwable;
 
-    public boolean SetWarningsAsErrors(java.lang.String warningsAsErrors) throws Throwable;
 
-    public boolean SetWarningsNotAsErrors(java.lang.String warningsNotAsErrors) throws Throwable;
 
-    public boolean SetWin32Icon(java.lang.String win32Icon) throws Throwable;
 
-    public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable;
 
-    public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable;
 
-    public void BeginInitialization() throws Throwable;
 
-    public void EndInitialization() throws Throwable;
 
 
     

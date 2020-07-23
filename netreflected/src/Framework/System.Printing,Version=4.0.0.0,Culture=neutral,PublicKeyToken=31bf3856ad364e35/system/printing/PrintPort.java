@@ -38,18 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.printing.indexedproperties.PrintPropertyDictionary;
 import system.printing.PrintSystemObject;
 
 
 /**
  * The base .NET class managing System.Printing.PrintPort, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintPort" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintPort</a>
  */
-public class PrintPort extends NetObject  {
+public class PrintPort extends PrintSystemObject  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Printing.PrintPort
+     */
     public static final String className = "System.Printing.PrintPort";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +116,9 @@ public class PrintPort extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintPort}, a cast assert is made to check if types are compatible.
+     */
     public static PrintPort cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrintPort(from.getJCOInstance());
@@ -110,6 +126,10 @@ public class PrintPort extends NetObject  {
 
     // Constructors section
     
+    public PrintPort() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -119,16 +139,6 @@ public class PrintPort extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -148,58 +158,6 @@ public class PrintPort extends NetObject  {
     
     // Properties section
     
-    public PrintPropertyDictionary getPropertiesCollection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropertiesCollection");
-            return new PrintPropertyDictionary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPropertiesCollection(PrintPropertyDictionary PropertiesCollection) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PropertiesCollection", PropertiesCollection == null ? null : PropertiesCollection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PrintSystemObject getParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new PrintSystemObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

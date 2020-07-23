@@ -43,12 +43,27 @@ import system.configuration.ProtectedConfigurationProviderCollection;
 
 /**
  * The base .NET class managing System.Configuration.ProtectedConfiguration, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ProtectedConfiguration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ProtectedConfiguration</a>
  */
 public class ProtectedConfiguration extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.ProtectedConfiguration
+     */
     public static final String className = "System.Configuration.ProtectedConfiguration";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ProtectedConfiguration extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProtectedConfiguration}, a cast assert is made to check if types are compatible.
+     */
     public static ProtectedConfiguration cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ProtectedConfiguration(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ProtectedConfiguration extends NetObject  {
 
     // Constructors section
     
+    public ProtectedConfiguration() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,22 +136,22 @@ public class ProtectedConfiguration extends NetObject  {
     
     // Properties section
     
-    public static ProtectedConfigurationProviderCollection getProviders() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.TypeLoadException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ProtectedConfigurationProviderCollection getProviders() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.TypeLoadException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Providers");
+            JCObject val = (JCObject)classInstance.Get("Providers");
             return new ProtectedConfigurationProviderCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getDefaultProvider() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.configuration.ConfigurationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getDefaultProvider() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.configuration.ConfigurationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("DefaultProvider");
+            return (java.lang.String)classInstance.Get("DefaultProvider");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

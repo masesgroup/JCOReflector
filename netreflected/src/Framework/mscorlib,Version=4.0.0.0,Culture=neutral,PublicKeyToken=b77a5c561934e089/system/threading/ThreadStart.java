@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.threading.IThreadStart;
 /**
  * The base .NET class managing System.Threading.ThreadStart, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadStart" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadStart</a>
  */
 public class ThreadStart extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Threading.ThreadStart
+     */
     public static final String className = "System.Threading.ThreadStart";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IThreadStart callerInstance = null;
@@ -144,7 +159,7 @@ public class ThreadStart extends JCVoidDelegate implements IJCVoidEventEmit, IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke() throws Throwable {
+    public void METHOD_JAVA_NAME() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -154,7 +169,9 @@ public class ThreadStart extends JCVoidDelegate implements IJCVoidEventEmit, IJC
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke() {
     }
 }

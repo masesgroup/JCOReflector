@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IMultitargetHelperService, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService</a>
  */
 public interface IMultitargetHelperService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
+    public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IMultitargetHelperService
+     */
+    public static final String className = "System.ComponentModel.Design.IMultitargetHelperService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMultitargetHelperService}, a cast assert is made to check if types are compatible.
+     */
     public static IMultitargetHelperService ToIMultitargetHelperService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.IMultitargetHelperService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Windows.Forms.Design"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IMultitargetHelperServiceImplementation(from.getJCOInstance());
     }

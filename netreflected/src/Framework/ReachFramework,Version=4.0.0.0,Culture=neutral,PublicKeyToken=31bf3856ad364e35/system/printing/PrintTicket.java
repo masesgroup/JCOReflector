@@ -48,12 +48,27 @@ import system.componentmodel.PropertyChangedEventHandler;
 
 /**
  * The base .NET class managing System.Printing.PrintTicket, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintTicket" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintTicket</a>
  */
 public class PrintTicket extends NetObject  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Printing.PrintTicket
+     */
     public static final String className = "System.Printing.PrintTicket";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class PrintTicket extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintTicket}, a cast assert is made to check if types are compatible.
+     */
     public static PrintTicket cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrintTicket(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class PrintTicket extends NetObject  {
 
     // Constructors section
     
-
     public PrintTicket() throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         try {
             // add reference to assemblyName.dll file

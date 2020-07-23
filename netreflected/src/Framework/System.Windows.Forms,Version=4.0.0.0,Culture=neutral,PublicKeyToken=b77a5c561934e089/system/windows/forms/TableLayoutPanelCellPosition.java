@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.TableLayoutPanelCellPosition, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutPanelCellPosition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutPanelCellPosition</a>
  */
-public class TableLayoutPanelCellPosition extends NetObject  {
+public class TableLayoutPanelCellPosition extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.TableLayoutPanelCellPosition
+     */
     public static final String className = "System.Windows.Forms.TableLayoutPanelCellPosition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class TableLayoutPanelCellPosition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableLayoutPanelCellPosition}, a cast assert is made to check if types are compatible.
+     */
     public static TableLayoutPanelCellPosition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TableLayoutPanelCellPosition(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class TableLayoutPanelCellPosition extends NetObject  {
 
     // Constructors section
     
+    public TableLayoutPanelCellPosition() throws Throwable {
+    }
 
     public TableLayoutPanelCellPosition(int column, int row) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -118,6 +138,7 @@ public class TableLayoutPanelCellPosition extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

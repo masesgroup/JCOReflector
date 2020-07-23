@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.drawing.printing.PrintEventArgs;
 import system.drawing.printing.PageSettings;
-import system.drawing.printing.PrintAction;
 
 
 /**
  * The base .NET class managing System.Drawing.Printing.QueryPageSettingsEventArgs, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.QueryPageSettingsEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.QueryPageSettingsEventArgs</a>
  */
-public class QueryPageSettingsEventArgs extends NetObject  {
+public class QueryPageSettingsEventArgs extends PrintEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Printing.QueryPageSettingsEventArgs
+     */
     public static final String className = "System.Drawing.Printing.QueryPageSettingsEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class QueryPageSettingsEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link QueryPageSettingsEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static QueryPageSettingsEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new QueryPageSettingsEventArgs(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class QueryPageSettingsEventArgs extends NetObject  {
 
     // Constructors section
     
+    public QueryPageSettingsEventArgs() throws Throwable {
+    }
 
     public QueryPageSettingsEventArgs(PageSettings pageSettings) throws Throwable {
         try {
@@ -122,6 +141,7 @@ public class QueryPageSettingsEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -129,26 +149,6 @@ public class QueryPageSettingsEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PageSettings getPageSettings() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,17 +165,6 @@ public class QueryPageSettingsEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageSettings", PageSettings == null ? null : PageSettings.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PrintAction getPrintAction() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PrintAction");
-            return new PrintAction(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

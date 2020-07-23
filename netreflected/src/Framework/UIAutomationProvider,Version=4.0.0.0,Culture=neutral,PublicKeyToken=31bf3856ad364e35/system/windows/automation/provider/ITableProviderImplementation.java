@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.automation.provider.IGridProvider;
+import system.windows.automation.provider.IGridProviderImplementation;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 import system.windows.automation.RowOrColumnMajor;
@@ -45,12 +47,27 @@ import system.windows.automation.RowOrColumnMajor;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.ITableProvider, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ITableProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ITableProvider</a>
  */
 public class ITableProviderImplementation extends NetObject implements ITableProvider {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
     public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.ITableProvider
+     */
     public static final String className = "System.Windows.Automation.Provider.ITableProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +115,9 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITableProvider}, a cast assert is made to check if types are compatible.
+     */
     public static ITableProvider ToITableProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITableProviderImplementation(from.getJCOInstance());

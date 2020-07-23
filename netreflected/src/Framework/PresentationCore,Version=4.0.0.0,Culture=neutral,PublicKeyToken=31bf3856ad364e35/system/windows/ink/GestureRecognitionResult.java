@@ -44,12 +44,27 @@ import system.windows.ink.RecognitionConfidence;
 
 /**
  * The base .NET class managing System.Windows.Ink.GestureRecognitionResult, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.GestureRecognitionResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.GestureRecognitionResult</a>
  */
 public class GestureRecognitionResult extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Ink.GestureRecognitionResult
+     */
     public static final String className = "System.Windows.Ink.GestureRecognitionResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class GestureRecognitionResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GestureRecognitionResult}, a cast assert is made to check if types are compatible.
+     */
     public static GestureRecognitionResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GestureRecognitionResult(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class GestureRecognitionResult extends NetObject  {
 
     // Constructors section
     
+    public GestureRecognitionResult() throws Throwable {
+    }
+
+
 
     
     // Methods section

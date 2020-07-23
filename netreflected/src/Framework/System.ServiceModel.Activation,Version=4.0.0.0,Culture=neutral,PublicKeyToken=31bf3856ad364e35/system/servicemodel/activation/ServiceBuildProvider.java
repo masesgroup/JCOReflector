@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.compilation.BuildProvider;
 import system.codedom.compiler.CompilerResults;
 import system.web.compilation.BuildProviderResultFlags;
 import system.web.compilation.AssemblyBuilder;
@@ -48,12 +49,27 @@ import system.web.compilation.CompilerType;
 
 /**
  * The base .NET class managing System.ServiceModel.Activation.ServiceBuildProvider, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activation.ServiceBuildProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activation.ServiceBuildProvider</a>
  */
-public class ServiceBuildProvider extends NetObject  {
+public class ServiceBuildProvider extends BuildProvider  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activation
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activation";
+    /**
+     * Qualified class name: System.ServiceModel.Activation.ServiceBuildProvider
+     */
     public static final String className = "System.ServiceModel.Activation.ServiceBuildProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class ServiceBuildProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceBuildProvider}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceBuildProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceBuildProvider(from.getJCOInstance());
@@ -114,7 +132,6 @@ public class ServiceBuildProvider extends NetObject  {
 
     // Constructors section
     
-
     public ServiceBuildProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -134,17 +151,6 @@ public class ServiceBuildProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetCustomString", results == null ? null : results.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetGeneratedType(CompilerResults results) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetGeneratedType = (JCObject)classInstance.Invoke("GetGeneratedType", results == null ? null : results.getJCOInstance());
-            return new NetType(objGetGeneratedType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,42 +177,10 @@ public class ServiceBuildProvider extends NetObject  {
         }
     }
 
-    public void ProcessCompileErrors(CompilerResults results) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ProcessCompileErrors", results == null ? null : results.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public ICollection getVirtualPathDependencies() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VirtualPathDependencies");
-            return new ICollectionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CompilerType getCodeCompilerType() throws Throwable, system.web.HttpException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CodeCompilerType");
-            return new CompilerType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

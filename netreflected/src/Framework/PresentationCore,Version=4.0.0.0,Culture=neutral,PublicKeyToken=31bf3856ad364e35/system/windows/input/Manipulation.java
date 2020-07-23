@@ -50,12 +50,27 @@ import system.windows.input.manipulations.ManipulationParameters2D;
 
 /**
  * The base .NET class managing System.Windows.Input.Manipulation, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulation</a>
  */
 public class Manipulation extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.Manipulation
+     */
     public static final String className = "System.Windows.Input.Manipulation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class Manipulation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Manipulation}, a cast assert is made to check if types are compatible.
+     */
     public static Manipulation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Manipulation(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class Manipulation extends NetObject  {
 
     // Constructors section
     
+    public Manipulation() throws Throwable {
+    }
 
     
     // Methods section

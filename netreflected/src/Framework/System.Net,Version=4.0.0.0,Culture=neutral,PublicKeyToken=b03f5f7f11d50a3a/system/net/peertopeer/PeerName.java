@@ -44,12 +44,27 @@ import system.net.peertopeer.PeerName;
 
 /**
  * The base .NET class managing System.Net.PeerToPeer.PeerName, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.PeerName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.PeerName</a>
  */
 public class PeerName extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.PeerToPeer.PeerName
+     */
     public static final String className = "System.Net.PeerToPeer.PeerName";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class PeerName extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeerName}, a cast assert is made to check if types are compatible.
+     */
     public static PeerName cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PeerName(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class PeerName extends NetObject  {
 
     // Constructors section
     
+    public PeerName() throws Throwable {
+    }
 
     public PeerName(java.lang.String remotePeerName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         try {
@@ -130,6 +149,7 @@ public class PeerName extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -46,12 +46,29 @@ import system.net.IAuthenticationModuleImplementation;
 
 /**
  * The base .NET class managing System.Net.ICredentialPolicy, System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentialPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentialPolicy</a>
  */
 public interface ICredentialPolicy extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Requests
+     */
+    public static final String assemblyShortName = "System.Net.Requests";
+    /**
+     * Qualified class name: System.Net.ICredentialPolicy
+     */
+    public static final String className = "System.Net.ICredentialPolicy";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICredentialPolicy}, a cast assert is made to check if types are compatible.
+     */
     public static ICredentialPolicy ToICredentialPolicy(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Net.ICredentialPolicy, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Net.Requests"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICredentialPolicyImplementation(from.getJCOInstance());
     }

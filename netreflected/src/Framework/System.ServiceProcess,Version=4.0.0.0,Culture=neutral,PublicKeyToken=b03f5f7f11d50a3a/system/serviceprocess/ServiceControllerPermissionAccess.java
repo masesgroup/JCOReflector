@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ServiceProcess.ServiceControllerPermissionAccess, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceControllerPermissionAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceControllerPermissionAccess</a>
  */
 public class ServiceControllerPermissionAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ServiceProcess
+     */
     public static final String assemblyShortName = "System.ServiceProcess";
+    /**
+     * Qualified class name: System.ServiceProcess.ServiceControllerPermissionAccess
+     */
     public static final String className = "System.ServiceProcess.ServiceControllerPermissionAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class ServiceControllerPermissionAccess extends NetObject  {
 
     // Flags management section
 
-    public ServiceControllerPermissionAccess add(ServiceControllerPermissionAccess val) throws Throwable {
+    public final ServiceControllerPermissionAccess add(ServiceControllerPermissionAccess val) throws Throwable {
         return new ServiceControllerPermissionAccess(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ServiceControllerPermissionAccess remove(ServiceControllerPermissionAccess val) throws Throwable {
+    public final ServiceControllerPermissionAccess remove(ServiceControllerPermissionAccess val) throws Throwable {
         return new ServiceControllerPermissionAccess(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ServiceControllerPermissionAccess val) throws Throwable {
+    public final boolean is(ServiceControllerPermissionAccess val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ServiceControllerPermissionAccess val) throws Throwable {
+    public final boolean has(ServiceControllerPermissionAccess val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

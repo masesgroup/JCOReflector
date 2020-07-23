@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.buffers.OperationStatus;
 
 
 /**
  * The base .NET class managing System.IO.Compression.BrotliDecoder, System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.BrotliDecoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.BrotliDecoder</a>
  */
-public class BrotliDecoder extends NetObject  {
+public class BrotliDecoder extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IO.Compression.Brotli
+     */
     public static final String assemblyShortName = "System.IO.Compression.Brotli";
+    /**
+     * Qualified class name: System.IO.Compression.BrotliDecoder
+     */
     public static final String className = "System.IO.Compression.BrotliDecoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class BrotliDecoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BrotliDecoder}, a cast assert is made to check if types are compatible.
+     */
     public static BrotliDecoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BrotliDecoder(from.getJCOInstance());
@@ -109,10 +127,24 @@ public class BrotliDecoder extends NetObject  {
 
     // Constructors section
     
+    public BrotliDecoder() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
+    public void Dispose() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

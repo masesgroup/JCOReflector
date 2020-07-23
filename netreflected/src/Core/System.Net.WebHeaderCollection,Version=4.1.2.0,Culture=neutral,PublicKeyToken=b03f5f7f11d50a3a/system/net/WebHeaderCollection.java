@@ -41,19 +41,33 @@ import java.util.ArrayList;
 import system.collections.specialized.NameValueCollection;
 import system.net.HttpRequestHeader;
 import system.net.HttpResponseHeader;
-import system.Array;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
 
 /**
  * The base .NET class managing System.Net.WebHeaderCollection, System.Net.WebHeaderCollection, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebHeaderCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebHeaderCollection</a>
  */
-public class WebHeaderCollection extends NetObject  {
+public class WebHeaderCollection extends NameValueCollection  {
+    /**
+     * Fully assembly qualified name: System.Net.WebHeaderCollection, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.WebHeaderCollection, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.WebHeaderCollection
+     */
     public static final String assemblyShortName = "System.Net.WebHeaderCollection";
+    /**
+     * Qualified class name: System.Net.WebHeaderCollection
+     */
     public static final String className = "System.Net.WebHeaderCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +120,9 @@ public class WebHeaderCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebHeaderCollection}, a cast assert is made to check if types are compatible.
+     */
     public static WebHeaderCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebHeaderCollection(from.getJCOInstance());
@@ -114,7 +130,6 @@ public class WebHeaderCollection extends NetObject  {
 
     // Constructors section
     
-
     public WebHeaderCollection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -129,16 +144,6 @@ public class WebHeaderCollection extends NetObject  {
     
     // Methods section
     
-    public boolean HasKeys() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("HasKeys");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsRestricted(java.lang.String headerName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -246,16 +251,6 @@ public class WebHeaderCollection extends NetObject  {
         }
     }
 
-    public void Add(NameValueCollection c) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", c == null ? null : c.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Add(HttpRequestHeader header, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -301,16 +296,6 @@ public class WebHeaderCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(Array dest, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", dest == null ? null : dest.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,35 +385,6 @@ public class WebHeaderCollection extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String[] getAllKeys() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AllKeys");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-			for(int indexAllKeys = 0; indexAllKeys < resultingArrayList.size(); indexAllKeys++ ) {
-				resultingArray[indexAllKeys] = (java.lang.String)resultingArrayList.get(indexAllKeys);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

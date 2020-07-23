@@ -44,10 +44,22 @@ import system.xml.schema.XmlSchemaObject;
 
 /**
  * The base .NET class managing System.Xml.Schema.XmlSchemaObjectEnumerator, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectEnumerator</a>
  */
 public class XmlSchemaObjectEnumerator extends NetObject implements Iterator<XmlSchemaObject> {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.XmlSchemaObjectEnumerator
+     */
     public static final String className = "System.Xml.Schema.XmlSchemaObjectEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class XmlSchemaObjectEnumerator extends NetObject implements Iterator<Xml
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public XmlSchemaObject next() {
+	public final XmlSchemaObject next() {
 		try {
 			return new XmlSchemaObject(classInstance.next());
 		} catch (Throwable jce) {

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.AsymmetricKeyExchangeDeformatter;
 import system.security.cryptography.AsymmetricAlgorithm;
 import system.security.cryptography.RandomNumberGenerator;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.RSAPKCS1KeyExchangeDeformatter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSAPKCS1KeyExchangeDeformatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSAPKCS1KeyExchangeDeformatter</a>
  */
-public class RSAPKCS1KeyExchangeDeformatter extends NetObject  {
+public class RSAPKCS1KeyExchangeDeformatter extends AsymmetricKeyExchangeDeformatter  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.RSAPKCS1KeyExchangeDeformatter
+     */
     public static final String className = "System.Security.Cryptography.RSAPKCS1KeyExchangeDeformatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class RSAPKCS1KeyExchangeDeformatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RSAPKCS1KeyExchangeDeformatter}, a cast assert is made to check if types are compatible.
+     */
     public static RSAPKCS1KeyExchangeDeformatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RSAPKCS1KeyExchangeDeformatter(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class RSAPKCS1KeyExchangeDeformatter extends NetObject  {
 
     // Constructors section
     
-
     public RSAPKCS1KeyExchangeDeformatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -154,6 +171,25 @@ public class RSAPKCS1KeyExchangeDeformatter extends NetObject  {
         }
     }
 
+    public byte[] DecryptKeyExchange(JCRefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKeyExchange", (Object)dupParam0);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexDecryptKeyExchange = 0; indexDecryptKeyExchange < resultingArrayList.size(); indexDecryptKeyExchange++ ) {
+				resultingArray[indexDecryptKeyExchange] = (byte)resultingArrayList.get(indexDecryptKeyExchange);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetKey(AsymmetricAlgorithm key) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -184,26 +220,6 @@ public class RSAPKCS1KeyExchangeDeformatter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RNG", RNG == null ? null : RNG.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getParameters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Parameters");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setParameters(java.lang.String Parameters) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Parameters", Parameters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

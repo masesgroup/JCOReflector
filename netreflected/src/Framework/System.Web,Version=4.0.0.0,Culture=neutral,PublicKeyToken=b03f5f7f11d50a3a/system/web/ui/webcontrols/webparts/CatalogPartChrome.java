@@ -45,12 +45,27 @@ import system.web.ui.webcontrols.webparts.CatalogPart;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.WebParts.CatalogPartChrome, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.CatalogPartChrome" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.CatalogPartChrome</a>
  */
 public class CatalogPartChrome extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.WebParts.CatalogPartChrome
+     */
     public static final String className = "System.Web.UI.WebControls.WebParts.CatalogPartChrome";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CatalogPartChrome extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CatalogPartChrome}, a cast assert is made to check if types are compatible.
+     */
     public static CatalogPartChrome cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CatalogPartChrome(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class CatalogPartChrome extends NetObject  {
 
     // Constructors section
     
+    public CatalogPartChrome() throws Throwable {
+    }
 
     public CatalogPartChrome(CatalogZoneBase zone) throws Throwable, system.ArgumentNullException {
         try {
@@ -121,6 +140,7 @@ public class CatalogPartChrome extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

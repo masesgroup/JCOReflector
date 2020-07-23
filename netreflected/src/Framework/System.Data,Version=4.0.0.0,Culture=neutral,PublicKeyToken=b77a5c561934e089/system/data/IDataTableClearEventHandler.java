@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.DataTableClearEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataTableClearEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableClearEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableClearEventHandler</a>
+ */
 public interface IDataTableClearEventHandler {
     public void Invoke(NetObject sender, DataTableClearEventArgs e);
 }

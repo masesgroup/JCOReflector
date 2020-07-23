@@ -38,19 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
+import system.windows.ResourceKey;
 import system.reflection.Assembly;
 
 
 /**
  * The base .NET class managing System.Windows.TemplateKey, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TemplateKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TemplateKey</a>
  */
-public class TemplateKey extends NetObject  {
+public class TemplateKey extends ResourceKey  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.TemplateKey
+     */
     public static final String className = "System.Windows.TemplateKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +117,9 @@ public class TemplateKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateKey}, a cast assert is made to check if types are compatible.
+     */
     public static TemplateKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TemplateKey(from.getJCOInstance());
@@ -111,21 +127,12 @@ public class TemplateKey extends NetObject  {
 
     // Constructors section
     
+    public TemplateKey() throws Throwable {
+    }
 
     
     // Methods section
     
-    public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objProvideValue = (JCObject)classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
-            return new NetObject(objProvideValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -146,17 +153,6 @@ public class TemplateKey extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataType", DataType == null ? null : DataType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly getAssembly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Assembly");
-            return new Assembly(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

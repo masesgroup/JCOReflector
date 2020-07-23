@@ -43,12 +43,27 @@ import system.Single;
 
 /**
  * The base .NET class managing System.Windows.Input.Manipulations.ManipulationDelta2D, System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D</a>
  */
 public class ManipulationDelta2D extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Input.Manipulations
+     */
     public static final String assemblyShortName = "System.Windows.Input.Manipulations";
+    /**
+     * Qualified class name: System.Windows.Input.Manipulations.ManipulationDelta2D
+     */
     public static final String className = "System.Windows.Input.Manipulations.ManipulationDelta2D";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ManipulationDelta2D extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManipulationDelta2D}, a cast assert is made to check if types are compatible.
+     */
     public static ManipulationDelta2D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ManipulationDelta2D(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class ManipulationDelta2D extends NetObject  {
 
     // Constructors section
     
+    public ManipulationDelta2D() throws Throwable {
+    }
+
+
 
     
     // Methods section

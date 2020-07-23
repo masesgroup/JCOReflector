@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WaitCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.WaitCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.WaitCallback</a>
+ */
 public interface IWaitCallback {
     public void Invoke(NetObject state);
 }

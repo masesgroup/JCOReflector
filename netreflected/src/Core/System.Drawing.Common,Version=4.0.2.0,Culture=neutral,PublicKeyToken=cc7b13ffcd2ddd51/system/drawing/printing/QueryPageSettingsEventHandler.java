@@ -42,12 +42,27 @@ import system.drawing.printing.QueryPageSettingsEventArgs;
 import system.drawing.printing.IQueryPageSettingsEventHandler;
 /**
  * The base .NET class managing System.Drawing.Printing.QueryPageSettingsEventHandler, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.QueryPageSettingsEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.QueryPageSettingsEventHandler</a>
  */
 public class QueryPageSettingsEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Printing.QueryPageSettingsEventHandler
+     */
     public static final String className = "System.Drawing.Printing.QueryPageSettingsEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IQueryPageSettingsEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class QueryPageSettingsEventHandler extends JCVoidDelegate implements IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, QueryPageSettingsEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, QueryPageSettingsEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class QueryPageSettingsEventHandler extends JCVoidDelegate implements IJC
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, QueryPageSettingsEventArgs e) {
     }
 }

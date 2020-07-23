@@ -46,12 +46,27 @@ import system.runtime.remoting.lifetime.LeaseState;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Lifetime.ILease, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Lifetime.ILease" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Lifetime.ILease</a>
  */
 public class ILeaseImplementation extends NetObject implements ILease {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Lifetime.ILease
+     */
     public static final String className = "System.Runtime.Remoting.Lifetime.ILease";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class ILeaseImplementation extends NetObject implements ILease {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ILease}, a cast assert is made to check if types are compatible.
+     */
     public static ILease ToILease(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ILeaseImplementation(from.getJCOInstance());

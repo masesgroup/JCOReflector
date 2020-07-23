@@ -63,12 +63,27 @@ import system.componentmodel.IComNativeDescriptorHandlerImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.TypeDescriptor, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.TypeDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.TypeDescriptor</a>
  */
 public class TypeDescriptor extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.TypeDescriptor
+     */
     public static final String className = "System.ComponentModel.TypeDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -121,7 +136,9 @@ public class TypeDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static TypeDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TypeDescriptor(from.getJCOInstance());
@@ -129,6 +146,10 @@ public class TypeDescriptor extends NetObject  {
 
     // Constructors section
     
+    public TypeDescriptor() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -807,43 +828,43 @@ public class TypeDescriptor extends NetObject  {
     
     // Properties section
     
-    public static IComNativeDescriptorHandler getComNativeDescriptorHandler() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IComNativeDescriptorHandler getComNativeDescriptorHandler() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ComNativeDescriptorHandler");
+            JCObject val = (JCObject)classInstance.Get("ComNativeDescriptorHandler");
             return new IComNativeDescriptorHandlerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setComNativeDescriptorHandler(IComNativeDescriptorHandler ComNativeDescriptorHandler) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setComNativeDescriptorHandler(IComNativeDescriptorHandler ComNativeDescriptorHandler) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("ComNativeDescriptorHandler", ComNativeDescriptorHandler == null ? null : ComNativeDescriptorHandler.getJCOInstance());
+            classInstance.Set("ComNativeDescriptorHandler", ComNativeDescriptorHandler == null ? null : ComNativeDescriptorHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetType getComObjectType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetType getComObjectType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ComObjectType");
+            JCObject val = (JCObject)classInstance.Get("ComObjectType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetType getInterfaceType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetType getInterfaceType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("InterfaceType");
+            JCObject val = (JCObject)classInstance.Get("InterfaceType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

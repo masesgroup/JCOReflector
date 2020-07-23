@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
+import system.data.IDataRecord;
+import system.data.IDataRecordImplementation;
 import system.Single;
 import system.data.DataTable;
 import system.data.IDataReader;
@@ -48,12 +52,29 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Data.IDataReader, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataReader</a>
  */
-public interface IDataReader extends IJCOBridgeReflected {
-
+public interface IDataReader extends IJCOBridgeReflected, IDisposable, IDataRecord {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
+    public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.IDataReader
+     */
+    public static final String className = "System.Data.IDataReader";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataReader}, a cast assert is made to check if types are compatible.
+     */
     public static IDataReader ToIDataReader(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Data.IDataReader, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Data.Common"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDataReaderImplementation(from.getJCOInstance());
     }
@@ -96,59 +117,36 @@ public interface IDataReader extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean GetBoolean(int i) throws Throwable;
 
-    public boolean IsDBNull(int i) throws Throwable;
 
     public boolean NextResult() throws Throwable;
 
     public boolean Read() throws Throwable;
 
-    public byte GetByte(int i) throws Throwable;
 
-    public char GetChar(int i) throws Throwable;
 
-    public double GetDouble(int i) throws Throwable;
 
-    public short GetInt16(int i) throws Throwable;
 
-    public int GetInt32(int i) throws Throwable;
 
-    public int GetOrdinal(java.lang.String name) throws Throwable;
 
-    public int GetValues(NetObject[] values) throws Throwable;
 
-    public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable;
 
-    public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable;
 
-    public long GetInt64(int i) throws Throwable;
 
-    public Single GetFloat(int i) throws Throwable;
 
     public DataTable GetSchemaTable() throws Throwable;
 
-    public IDataReader GetData(int i) throws Throwable;
 
-    public DateTime GetDateTime(int i) throws Throwable;
 
-    public Decimal GetDecimal(int i) throws Throwable;
 
-    public Guid GetGuid(int i) throws Throwable;
 
-    public NetObject GetValue(int i) throws Throwable;
 
-    public java.lang.String GetDataTypeName(int i) throws Throwable;
 
-    public java.lang.String GetName(int i) throws Throwable;
 
-    public java.lang.String GetString(int i) throws Throwable;
 
-    public NetType GetFieldType(int i) throws Throwable;
 
     public void Close() throws Throwable;
 
-    public void Dispose() throws Throwable;
 
 
     
@@ -157,8 +155,6 @@ public interface IDataReader extends IJCOBridgeReflected {
     public boolean getIsClosed() throws Throwable;
 
     public int getDepth() throws Throwable;
-
-    public int getFieldCount() throws Throwable;
 
     public int getRecordsAffected() throws Throwable;
 

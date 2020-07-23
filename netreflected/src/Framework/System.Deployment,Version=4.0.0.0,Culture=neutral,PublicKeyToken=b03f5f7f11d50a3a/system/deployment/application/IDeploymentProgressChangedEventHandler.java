@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.deployment.application.DeploymentProgressChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DeploymentProgressChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.DeploymentProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.DeploymentProgressChangedEventHandler</a>
+ */
 public interface IDeploymentProgressChangedEventHandler {
     public void Invoke(NetObject sender, DeploymentProgressChangedEventArgs e);
 }

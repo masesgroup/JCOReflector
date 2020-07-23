@@ -45,12 +45,27 @@ import system.windows.controls.ScrollViewer;
 
 /**
  * The base .NET class managing System.Windows.Controls.Primitives.IScrollInfo, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo</a>
  */
 public class IScrollInfoImplementation extends NetObject implements IScrollInfo {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.Primitives.IScrollInfo
+     */
     public static final String className = "System.Windows.Controls.Primitives.IScrollInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IScrollInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IScrollInfo ToIScrollInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IScrollInfoImplementation(from.getJCOInstance());

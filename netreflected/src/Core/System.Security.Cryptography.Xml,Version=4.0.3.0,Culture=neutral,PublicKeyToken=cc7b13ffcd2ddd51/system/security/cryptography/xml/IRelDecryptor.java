@@ -44,12 +44,29 @@ import system.security.cryptography.xml.KeyInfo;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Xml.IRelDecryptor, System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor</a>
  */
 public interface IRelDecryptor extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Cryptography.Xml
+     */
+    public static final String assemblyShortName = "System.Security.Cryptography.Xml";
+    /**
+     * Qualified class name: System.Security.Cryptography.Xml.IRelDecryptor
+     */
+    public static final String className = "System.Security.Cryptography.Xml.IRelDecryptor";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRelDecryptor}, a cast assert is made to check if types are compatible.
+     */
     public static IRelDecryptor ToIRelDecryptor(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Security.Cryptography.Xml.IRelDecryptor, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Security.Cryptography.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRelDecryptorImplementation(from.getJCOInstance());
     }

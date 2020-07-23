@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.DataListCommandEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataListCommandEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataListCommandEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataListCommandEventHandler</a>
+ */
 public interface IDataListCommandEventHandler {
     public void Invoke(NetObject source, DataListCommandEventArgs e);
 }

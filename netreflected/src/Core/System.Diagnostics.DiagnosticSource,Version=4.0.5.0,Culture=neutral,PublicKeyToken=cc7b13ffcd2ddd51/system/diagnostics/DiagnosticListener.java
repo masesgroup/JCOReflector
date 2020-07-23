@@ -38,19 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.diagnostics.Activity;
+import system.diagnostics.DiagnosticSource;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.diagnostics.Activity;
 
 
 /**
  * The base .NET class managing System.Diagnostics.DiagnosticListener, System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.DiagnosticListener" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.DiagnosticListener</a>
  */
-public class DiagnosticListener extends NetObject  {
+public class DiagnosticListener extends DiagnosticSource  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.DiagnosticSource
+     */
     public static final String assemblyShortName = "System.Diagnostics.DiagnosticSource";
+    /**
+     * Qualified class name: System.Diagnostics.DiagnosticListener
+     */
     public static final String className = "System.Diagnostics.DiagnosticListener";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class DiagnosticListener extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiagnosticListener}, a cast assert is made to check if types are compatible.
+     */
     public static DiagnosticListener cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DiagnosticListener(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class DiagnosticListener extends NetObject  {
 
     // Constructors section
     
+    public DiagnosticListener() throws Throwable {
+    }
 
     public DiagnosticListener(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -121,6 +141,7 @@ public class DiagnosticListener extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -156,12 +177,11 @@ public class DiagnosticListener extends NetObject  {
         }
     }
 
-    public Activity StartActivity(Activity activity, NetObject args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+    public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objStartActivity = (JCObject)classInstance.Invoke("StartActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : args.getJCOInstance());
-            return new Activity(objStartActivity);
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,16 +202,6 @@ public class DiagnosticListener extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnActivityImport", activity == null ? null : activity.getJCOInstance(), payload == null ? null : payload.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void StopActivity(Activity activity, NetObject args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("StopActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : args.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.AccessControl.MutexRights, System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.MutexRights" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.MutexRights</a>
  */
 public class MutexRights extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Threading.AccessControl
+     */
     public static final String assemblyShortName = "System.Threading.AccessControl";
+    /**
+     * Qualified class name: System.Security.AccessControl.MutexRights
+     */
     public static final String className = "System.Security.AccessControl.MutexRights";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class MutexRights extends NetObject  {
 
     // Flags management section
 
-    public MutexRights add(MutexRights val) throws Throwable {
+    public final MutexRights add(MutexRights val) throws Throwable {
         return new MutexRights(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MutexRights remove(MutexRights val) throws Throwable {
+    public final MutexRights remove(MutexRights val) throws Throwable {
         return new MutexRights(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MutexRights val) throws Throwable {
+    public final boolean is(MutexRights val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MutexRights val) throws Throwable {
+    public final boolean has(MutexRights val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

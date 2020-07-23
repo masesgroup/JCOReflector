@@ -46,12 +46,27 @@ import system.globalization.DigitShapes;
 
 /**
  * The base .NET class managing System.Globalization.NumberFormatInfo, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.NumberFormatInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.NumberFormatInfo</a>
  */
 public class NumberFormatInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Globalization.NumberFormatInfo
+     */
     public static final String className = "System.Globalization.NumberFormatInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class NumberFormatInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NumberFormatInfo}, a cast assert is made to check if types are compatible.
+     */
     public static NumberFormatInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NumberFormatInfo(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class NumberFormatInfo extends NetObject  {
 
     // Constructors section
     
-
     public NumberFormatInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -453,22 +469,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
-    public static NumberFormatInfo getCurrentInfo() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NumberFormatInfo getCurrentInfo() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentInfo");
+            JCObject val = (JCObject)classInstance.Get("CurrentInfo");
             return new NumberFormatInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NumberFormatInfo getInvariantInfo() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NumberFormatInfo getInvariantInfo() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("InvariantInfo");
+            JCObject val = (JCObject)classInstance.Get("InvariantInfo");
             return new NumberFormatInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

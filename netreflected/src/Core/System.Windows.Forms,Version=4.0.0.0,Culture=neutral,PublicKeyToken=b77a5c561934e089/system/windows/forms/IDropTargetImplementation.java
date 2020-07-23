@@ -44,12 +44,27 @@ import system.EventArgs;
 
 /**
  * The base .NET class managing System.Windows.Forms.IDropTarget, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IDropTarget" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IDropTarget</a>
  */
 public class IDropTargetImplementation extends NetObject implements IDropTarget {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.IDropTarget
+     */
     public static final String className = "System.Windows.Forms.IDropTarget";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IDropTargetImplementation extends NetObject implements IDropTarget 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDropTarget}, a cast assert is made to check if types are compatible.
+     */
     public static IDropTarget ToIDropTarget(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDropTargetImplementation(from.getJCOInstance());

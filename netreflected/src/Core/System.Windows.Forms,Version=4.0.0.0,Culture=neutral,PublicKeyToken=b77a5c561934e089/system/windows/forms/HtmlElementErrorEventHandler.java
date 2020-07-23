@@ -42,12 +42,27 @@ import system.windows.forms.HtmlElementErrorEventArgs;
 import system.windows.forms.IHtmlElementErrorEventHandler;
 /**
  * The base .NET class managing System.Windows.Forms.HtmlElementErrorEventHandler, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlElementErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlElementErrorEventHandler</a>
  */
 public class HtmlElementErrorEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.HtmlElementErrorEventHandler
+     */
     public static final String className = "System.Windows.Forms.HtmlElementErrorEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IHtmlElementErrorEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class HtmlElementErrorEventHandler extends JCVoidDelegate implements IJCV
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, HtmlElementErrorEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, HtmlElementErrorEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class HtmlElementErrorEventHandler extends JCVoidDelegate implements IJCV
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, HtmlElementErrorEventArgs e) {
     }
 }

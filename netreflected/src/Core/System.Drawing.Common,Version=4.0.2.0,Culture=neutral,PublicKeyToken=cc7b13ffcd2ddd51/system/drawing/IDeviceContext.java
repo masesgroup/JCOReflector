@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
  * The base .NET class managing System.Drawing.IDeviceContext, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.IDeviceContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.IDeviceContext</a>
  */
-public interface IDeviceContext extends IJCOBridgeReflected {
-
+public interface IDeviceContext extends IJCOBridgeReflected, IDisposable {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
+    public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.IDeviceContext
+     */
+    public static final String className = "System.Drawing.IDeviceContext";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDeviceContext}, a cast assert is made to check if types are compatible.
+     */
     public static IDeviceContext ToIDeviceContext(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Drawing.IDeviceContext, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Drawing.Common"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDeviceContextImplementation(from.getJCOInstance());
     }
@@ -89,6 +108,9 @@ public interface IDeviceContext extends IJCOBridgeReflected {
 
     // Methods section
     
+
+    public void ReleaseHdc() throws Throwable;
+
 
     
     // Properties section

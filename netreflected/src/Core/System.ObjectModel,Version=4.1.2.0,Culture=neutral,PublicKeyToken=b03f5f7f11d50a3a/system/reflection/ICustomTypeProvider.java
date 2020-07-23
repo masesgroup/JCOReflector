@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.ICustomTypeProvider, System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ICustomTypeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ICustomTypeProvider</a>
  */
 public interface ICustomTypeProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ObjectModel
+     */
+    public static final String assemblyShortName = "System.ObjectModel";
+    /**
+     * Qualified class name: System.Reflection.ICustomTypeProvider
+     */
+    public static final String className = "System.Reflection.ICustomTypeProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICustomTypeProvider}, a cast assert is made to check if types are compatible.
+     */
     public static ICustomTypeProvider ToICustomTypeProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Reflection.ICustomTypeProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ObjectModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICustomTypeProviderImplementation(from.getJCOInstance());
     }

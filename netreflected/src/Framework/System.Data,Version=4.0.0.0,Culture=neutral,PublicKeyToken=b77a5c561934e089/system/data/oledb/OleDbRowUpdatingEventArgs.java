@@ -38,22 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.RowUpdatingEventArgs;
 import system.data.DataRow;
 import system.data.IDbCommand;
 import system.data.IDbCommandImplementation;
 import system.data.StatementType;
 import system.data.common.DataTableMapping;
-import system.data.UpdateStatus;
+import system.data.oledb.OleDbCommand;
 
 
 /**
  * The base .NET class managing System.Data.OleDb.OleDbRowUpdatingEventArgs, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbRowUpdatingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbRowUpdatingEventArgs</a>
  */
-public class OleDbRowUpdatingEventArgs extends NetObject  {
+public class OleDbRowUpdatingEventArgs extends RowUpdatingEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.OleDb.OleDbRowUpdatingEventArgs
+     */
     public static final String className = "System.Data.OleDb.OleDbRowUpdatingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class OleDbRowUpdatingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OleDbRowUpdatingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static OleDbRowUpdatingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OleDbRowUpdatingEventArgs(from.getJCOInstance());
@@ -114,6 +132,8 @@ public class OleDbRowUpdatingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public OleDbRowUpdatingEventArgs() throws Throwable {
+    }
 
     public OleDbRowUpdatingEventArgs(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
@@ -126,6 +146,7 @@ public class OleDbRowUpdatingEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -133,97 +154,22 @@ public class OleDbRowUpdatingEventArgs extends NetObject  {
     
     // Properties section
     
-    public DataTableMapping getTableMapping() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TableMapping");
-            return new DataTableMapping(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataRow getRow() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Row");
-            return new DataRow(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDbCommand getCommand() throws Throwable {
+    public OleDbCommand getCommandNewOleDbRowUpdatingEventArgs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Command");
-            return new IDbCommandImplementation(val);
+            return new OleDbCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCommand(IDbCommand Command) throws Throwable {
+    public void setCommand(OleDbCommand Command) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StatementType getStatementType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StatementType");
-            return new StatementType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UpdateStatus getStatus() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Status");
-            return new UpdateStatus(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setStatus(UpdateStatus Status) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Status", Status == null ? null : Status.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getErrors() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setErrors(NetException Errors) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Errors", Errors == null ? null : Errors.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

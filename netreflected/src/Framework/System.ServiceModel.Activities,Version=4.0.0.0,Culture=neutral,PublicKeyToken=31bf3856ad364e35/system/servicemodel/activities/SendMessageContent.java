@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.activities.SendContent;
 import system.activities.InArgument;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.SendMessageContent, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.SendMessageContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.SendMessageContent</a>
  */
-public class SendMessageContent extends NetObject  {
+public class SendMessageContent extends SendContent  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.SendMessageContent
+     */
     public static final String className = "System.ServiceModel.Activities.SendMessageContent";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SendMessageContent extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SendMessageContent}, a cast assert is made to check if types are compatible.
+     */
     public static SendMessageContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SendMessageContent(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class SendMessageContent extends NetObject  {
 
     // Constructors section
     
-
     public SendMessageContent() throws Throwable {
         try {
             // add reference to assemblyName.dll file

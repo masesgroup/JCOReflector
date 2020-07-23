@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.IO.Packaging.PackageRelationshipCollection, System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.PackageRelationshipCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.PackageRelationshipCollection</a>
  */
 public class PackageRelationshipCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.IO.Packaging
+     */
     public static final String assemblyShortName = "System.IO.Packaging";
+    /**
+     * Qualified class name: System.IO.Packaging.PackageRelationshipCollection
+     */
     public static final String className = "System.IO.Packaging.PackageRelationshipCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class PackageRelationshipCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PackageRelationshipCollection}, a cast assert is made to check if types are compatible.
+     */
     public static PackageRelationshipCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PackageRelationshipCollection(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class PackageRelationshipCollection extends NetObject  {
 
     // Constructors section
     
+    public PackageRelationshipCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section

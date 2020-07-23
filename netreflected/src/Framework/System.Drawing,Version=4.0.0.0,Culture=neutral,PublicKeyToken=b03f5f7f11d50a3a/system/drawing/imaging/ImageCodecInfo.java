@@ -45,12 +45,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Drawing.Imaging.ImageCodecInfo, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.ImageCodecInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.ImageCodecInfo</a>
  */
 public class ImageCodecInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Imaging.ImageCodecInfo
+     */
     public static final String className = "System.Drawing.Imaging.ImageCodecInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ImageCodecInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImageCodecInfo}, a cast assert is made to check if types are compatible.
+     */
     public static ImageCodecInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ImageCodecInfo(from.getJCOInstance());
@@ -111,6 +128,10 @@ public class ImageCodecInfo extends NetObject  {
 
     // Constructors section
     
+    public ImageCodecInfo() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -38,30 +38,41 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.Component;
 import system.diagnostics.EventLog;
 import system.diagnostics.EventSourceCreationData;
 import system.diagnostics.OverflowAction;
 import system.diagnostics.EventLogEntryType;
 import system.diagnostics.EventInstance;
-import system.componentmodel.IContainer;
-import system.componentmodel.IContainerImplementation;
-import system.componentmodel.ISite;
-import system.componentmodel.ISiteImplementation;
 import system.componentmodel.ISynchronizeInvoke;
 import system.componentmodel.ISynchronizeInvokeImplementation;
 import system.diagnostics.EventLogEntryCollection;
 import system.diagnostics.EntryWrittenEventHandler;
-import system.EventHandler;
 
 
 /**
  * The base .NET class managing System.Diagnostics.EventLog, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLog" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLog</a>
  */
-public class EventLog extends NetObject  {
+public class EventLog extends Component  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.EventLog
+     */
     public static final String assemblyShortName = "System.Diagnostics.EventLog";
+    /**
+     * Qualified class name: System.Diagnostics.EventLog
+     */
     public static final String className = "System.Diagnostics.EventLog";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +125,9 @@ public class EventLog extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLog}, a cast assert is made to check if types are compatible.
+     */
     public static EventLog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventLog(from.getJCOInstance());
@@ -122,7 +135,6 @@ public class EventLog extends NetObject  {
 
     // Constructors section
     
-
     public EventLog() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -241,28 +253,6 @@ public class EventLog extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String LogNameFromSourceName(java.lang.String source, java.lang.String machineName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -373,16 +363,6 @@ public class EventLog extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void EndInit() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -463,6 +443,16 @@ public class EventLog extends NetObject  {
         }
     }
 
+    public void WriteEntry(java.lang.String dupParam0, EventLogEntryType dupParam1, int dupParam2, short dupParam3, JCRefOut dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.UnauthorizedAccessException, system.io.IOException, system.security.SecurityException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteEntry", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3, dupParam4);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void WriteEntry(java.lang.String source, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -513,11 +503,31 @@ public class EventLog extends NetObject  {
         }
     }
 
+    public static void WriteEntry(java.lang.String dupParam0, java.lang.String dupParam1, EventLogEntryType dupParam2, int dupParam3, short dupParam4, JCRefOut dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.UnauthorizedAccessException, system.io.IOException, system.security.SecurityException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteEntry", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4, dupParam5);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void WriteEvent(EventInstance instance, byte[] data, NetObject... values) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.security.SecurityException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEvent", instance == null ? null : instance.getJCOInstance(), data, toObjectFromArray(values));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteEvent(EventInstance dupParam0, JCRefOut dupParam1, NetObject... dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.security.SecurityException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.ApplicationException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteEvent", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, toObjectFromArray(dupParam2));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,6 +548,16 @@ public class EventLog extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEvent", source, instance == null ? null : instance.getJCOInstance(), data, toObjectFromArray(values));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteEvent(java.lang.String dupParam0, EventInstance dupParam1, JCRefOut dupParam2, NetObject... dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.security.SecurityException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.ApplicationException, system.componentmodel.Win32Exception {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteEvent", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, toObjectFromArray(dupParam3));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,38 +622,6 @@ public class EventLog extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumKilobytes", MaximumKilobytes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IContainer getContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISite getSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(ISite Site) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -772,26 +760,6 @@ public class EventLog extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EntryWritten", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

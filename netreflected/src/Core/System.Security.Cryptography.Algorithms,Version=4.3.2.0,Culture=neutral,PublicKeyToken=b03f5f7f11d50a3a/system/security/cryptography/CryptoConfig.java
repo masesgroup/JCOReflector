@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CryptoConfig, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptoConfig" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptoConfig</a>
  */
 public class CryptoConfig extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.CryptoConfig
+     */
     public static final String className = "System.Security.Cryptography.CryptoConfig";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class CryptoConfig extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CryptoConfig}, a cast assert is made to check if types are compatible.
+     */
     public static CryptoConfig cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CryptoConfig(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class CryptoConfig extends NetObject  {
 
     // Constructors section
     
-
     public CryptoConfig() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +200,16 @@ public class CryptoConfig extends NetObject  {
         }
     }
 
+    public static void AddAlgorithm(NetType dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddAlgorithm", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void AddOID(java.lang.String oid, java.lang.String... names) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -194,15 +220,25 @@ public class CryptoConfig extends NetObject  {
         }
     }
 
+    public static void AddOID(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddOID", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public static boolean getAllowOnlyFipsAlgorithms() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getAllowOnlyFipsAlgorithms() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("AllowOnlyFipsAlgorithms");
+            return (boolean)classInstance.Get("AllowOnlyFipsAlgorithms");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

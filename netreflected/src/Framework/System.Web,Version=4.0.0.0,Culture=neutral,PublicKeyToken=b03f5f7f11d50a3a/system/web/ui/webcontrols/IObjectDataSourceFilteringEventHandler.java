@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.ObjectDataSourceFilteringEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ObjectDataSourceFilteringEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler</a>
+ */
 public interface IObjectDataSourceFilteringEventHandler {
     public void Invoke(NetObject sender, ObjectDataSourceFilteringEventArgs e);
 }

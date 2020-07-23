@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.serialization.BasicDesignerLoader;
 import system.io.TextReader;
 import system.io.TextWriter;
 import system.workflow.componentmodel.Activity;
-import system.componentmodel.design.serialization.IDesignerLoaderHost;
-import system.componentmodel.design.serialization.IDesignerLoaderHostImplementation;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.WorkflowDesignerLoader, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowDesignerLoader</a>
  */
-public class WorkflowDesignerLoader extends NetObject  {
+public class WorkflowDesignerLoader extends BasicDesignerLoader  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.WorkflowDesignerLoader
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.WorkflowDesignerLoader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class WorkflowDesignerLoader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowDesignerLoader}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowDesignerLoader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowDesignerLoader(from.getJCOInstance());
@@ -113,6 +129,8 @@ public class WorkflowDesignerLoader extends NetObject  {
 
     // Constructors section
     
+    public WorkflowDesignerLoader() throws Throwable {
+    }
 
     
     // Methods section
@@ -144,16 +162,6 @@ public class WorkflowDesignerLoader extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddActivityToDesigner", activity == null ? null : activity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void BeginLoad(IDesignerLoaderHost host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("BeginLoad", host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,16 +216,6 @@ public class WorkflowDesignerLoader extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("InDebugMode");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getLoading() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Loading");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

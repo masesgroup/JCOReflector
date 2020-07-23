@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.ServiceProviders;
 import system.xml.XmlWriter;
 import system.windows.markup.XamlWriterMode;
 
 
 /**
  * The base .NET class managing System.Windows.Markup.XamlDesignerSerializationManager, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlDesignerSerializationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlDesignerSerializationManager</a>
  */
-public class XamlDesignerSerializationManager extends NetObject  {
+public class XamlDesignerSerializationManager extends ServiceProviders  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Markup.XamlDesignerSerializationManager
+     */
     public static final String className = "System.Windows.Markup.XamlDesignerSerializationManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class XamlDesignerSerializationManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlDesignerSerializationManager}, a cast assert is made to check if types are compatible.
+     */
     public static XamlDesignerSerializationManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlDesignerSerializationManager(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class XamlDesignerSerializationManager extends NetObject  {
 
     // Constructors section
     
+    public XamlDesignerSerializationManager() throws Throwable {
+    }
 
     public XamlDesignerSerializationManager(XmlWriter xmlWriter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
@@ -122,30 +142,10 @@ public class XamlDesignerSerializationManager extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public NetObject GetService(NetType serviceType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
-            return new NetObject(objGetService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddService(NetType serviceType, NetObject service) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), service == null ? null : service.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

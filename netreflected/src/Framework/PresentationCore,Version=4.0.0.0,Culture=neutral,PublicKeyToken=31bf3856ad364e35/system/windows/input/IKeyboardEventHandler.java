@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.input.KeyboardEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link KeyboardEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyboardEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyboardEventHandler</a>
+ */
 public interface IKeyboardEventHandler {
     public void Invoke(NetObject sender, KeyboardEventArgs e);
 }

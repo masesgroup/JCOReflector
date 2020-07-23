@@ -42,12 +42,27 @@ import system.componentmodel.design.DesignerTransactionCloseEventArgs;
 import system.componentmodel.design.IDesignerTransactionCloseEventHandler;
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignerTransactionCloseEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerTransactionCloseEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerTransactionCloseEventHandler</a>
  */
 public class DesignerTransactionCloseEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignerTransactionCloseEventHandler
+     */
     public static final String className = "System.ComponentModel.Design.DesignerTransactionCloseEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDesignerTransactionCloseEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DesignerTransactionCloseEventHandler extends JCVoidDelegate impleme
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DesignerTransactionCloseEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DesignerTransactionCloseEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DesignerTransactionCloseEventHandler extends JCVoidDelegate impleme
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DesignerTransactionCloseEventArgs e) {
     }
 }

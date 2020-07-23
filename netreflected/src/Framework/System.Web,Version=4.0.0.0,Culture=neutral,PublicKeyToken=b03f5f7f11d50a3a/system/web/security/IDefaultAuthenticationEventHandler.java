@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.security.DefaultAuthenticationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DefaultAuthenticationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.DefaultAuthenticationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.DefaultAuthenticationEventHandler</a>
+ */
 public interface IDefaultAuthenticationEventHandler {
     public void Invoke(NetObject sender, DefaultAuthenticationEventArgs e);
 }

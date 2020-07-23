@@ -48,12 +48,27 @@ import system.activities.xamlintegration.ICompiledExpressionRootImplementation;
 
 /**
  * The base .NET class managing System.Activities.Expressions.CompiledExpressionInvoker, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker</a>
  */
 public class CompiledExpressionInvoker extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Expressions.CompiledExpressionInvoker
+     */
     public static final String className = "System.Activities.Expressions.CompiledExpressionInvoker";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class CompiledExpressionInvoker extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompiledExpressionInvoker}, a cast assert is made to check if types are compatible.
+     */
     public static CompiledExpressionInvoker cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompiledExpressionInvoker(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class CompiledExpressionInvoker extends NetObject  {
 
     // Constructors section
     
+    public CompiledExpressionInvoker() throws Throwable {
+    }
 
     public CompiledExpressionInvoker(ITextExpression expression, boolean isReference, CodeActivityMetadata metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
@@ -124,6 +143,7 @@ public class CompiledExpressionInvoker extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.componentmodel.ListSortDirection;
 
 
 /**
  * The base .NET class managing System.ComponentModel.SortDescription, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.SortDescription" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.SortDescription</a>
  */
-public class SortDescription extends NetObject  {
+public class SortDescription extends ValueType  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.SortDescription
+     */
     public static final String className = "System.ComponentModel.SortDescription";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SortDescription extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SortDescription}, a cast assert is made to check if types are compatible.
+     */
     public static SortDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SortDescription(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SortDescription extends NetObject  {
 
     // Constructors section
     
+    public SortDescription() throws Throwable {
+    }
 
     public SortDescription(java.lang.String propertyName, ListSortDirection direction) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
@@ -119,6 +139,7 @@ public class SortDescription extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -44,12 +44,27 @@ import system.runtime.remoting.metadata.w3cxsd2001.SoapDay;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDay, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDay" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDay</a>
  */
 public class SoapDay extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDay
+     */
     public static final String className = "System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDay";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class SoapDay extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapDay}, a cast assert is made to check if types are compatible.
+     */
     public static SoapDay cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapDay(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class SoapDay extends NetObject  {
 
     // Constructors section
     
-
     public SoapDay() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,11 +197,11 @@ public class SoapDay extends NetObject  {
         }
     }
 
-    public static java.lang.String getXsdType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getXsdType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("XsdType");
+            return (java.lang.String)classInstance.Get("XsdType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

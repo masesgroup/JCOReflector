@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TypeFilter}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter</a>
+ */
 public interface ITypeFilter {
     public boolean Invoke(NetType m, NetObject filterCriteria);
 }

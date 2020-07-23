@@ -38,20 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.commandtrees.DbExpression;
 import system.data.common.commandtrees.DbExpressionVisitor;
-import system.data.common.commandtrees.DbExpressionKind;
 import system.data.common.commandtrees.DbGroupExpressionBinding;
-import system.data.metadata.edm.TypeUsage;
 
 
 /**
  * The base .NET class managing System.Data.Common.CommandTrees.DbGroupByExpression, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbGroupByExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbGroupByExpression</a>
  */
-public class DbGroupByExpression extends NetObject  {
+public class DbGroupByExpression extends DbExpression  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.CommandTrees.DbGroupByExpression
+     */
     public static final String className = "System.Data.Common.CommandTrees.DbGroupByExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +118,9 @@ public class DbGroupByExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbGroupByExpression}, a cast assert is made to check if types are compatible.
+     */
     public static DbGroupByExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbGroupByExpression(from.getJCOInstance());
@@ -112,6 +128,10 @@ public class DbGroupByExpression extends NetObject  {
 
     // Constructors section
     
+    public DbGroupByExpression() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -130,34 +150,12 @@ public class DbGroupByExpression extends NetObject  {
     
     // Properties section
     
-    public DbExpressionKind getExpressionKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
-            return new DbExpressionKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbGroupExpressionBinding getInput() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Input");
             return new DbGroupExpressionBinding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeUsage getResultType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
-            return new TypeUsage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

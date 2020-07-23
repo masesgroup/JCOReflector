@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.ConfigurationValidatorBase;
 
 
 /**
  * The base .NET class managing System.Configuration.IntegerValidator, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IntegerValidator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IntegerValidator</a>
  */
-public class IntegerValidator extends NetObject  {
+public class IntegerValidator extends ConfigurationValidatorBase  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.IntegerValidator
+     */
     public static final String className = "System.Configuration.IntegerValidator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class IntegerValidator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IntegerValidator}, a cast assert is made to check if types are compatible.
+     */
     public static IntegerValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IntegerValidator(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class IntegerValidator extends NetObject  {
 
     // Constructors section
     
+    public IntegerValidator() throws Throwable {
+    }
 
     public IntegerValidator(int minValue, int maxValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -138,6 +158,7 @@ public class IntegerValidator extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

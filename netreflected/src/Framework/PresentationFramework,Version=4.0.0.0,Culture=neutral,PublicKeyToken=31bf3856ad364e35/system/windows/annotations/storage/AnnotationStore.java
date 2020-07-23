@@ -47,12 +47,27 @@ import system.windows.annotations.storage.StoreContentChangedEventHandler;
 
 /**
  * The base .NET class managing System.Windows.Annotations.Storage.AnnotationStore, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore</a>
  */
 public class AnnotationStore extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.Storage.AnnotationStore
+     */
     public static final String className = "System.Windows.Annotations.Storage.AnnotationStore";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class AnnotationStore extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnnotationStore}, a cast assert is made to check if types are compatible.
+     */
     public static AnnotationStore cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AnnotationStore(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class AnnotationStore extends NetObject  {
 
     // Constructors section
     
+    public AnnotationStore() throws Throwable {
+    }
 
     
     // Methods section

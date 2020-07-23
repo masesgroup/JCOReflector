@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.threading.ThreadExceptionEventArgs;
 
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs</a>
  */
-public class UnhandledExceptionEventArgs extends NetObject  {
+public class UnhandledExceptionEventArgs extends ThreadExceptionEventArgs  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs
+     */
     public static final String className = "Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class UnhandledExceptionEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnhandledExceptionEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static UnhandledExceptionEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UnhandledExceptionEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class UnhandledExceptionEventArgs extends NetObject  {
 
     // Constructors section
     
+    public UnhandledExceptionEventArgs() throws Throwable {
+    }
 
     public UnhandledExceptionEventArgs(boolean exitApplication, NetException exception) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class UnhandledExceptionEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -142,17 +163,6 @@ public class UnhandledExceptionEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExitApplication", ExitApplication);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getException() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Exception");
-            return new NetException(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.xml.schema.ValidationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ValidationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.ValidationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.ValidationEventHandler</a>
+ */
 public interface IValidationEventHandler {
     public void Invoke(NetObject sender, ValidationEventArgs e);
 }

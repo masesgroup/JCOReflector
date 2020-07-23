@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.messaging.AccessControlEntry;
 import system.messaging.Trustee;
 import system.messaging.MessageQueueAccessRights;
 import system.messaging.AccessControlEntryType;
-import system.messaging.GenericAccessRights;
-import system.messaging.StandardAccessRights;
 
 
 /**
  * The base .NET class managing System.Messaging.MessageQueueAccessControlEntry, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueAccessControlEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueAccessControlEntry</a>
  */
-public class MessageQueueAccessControlEntry extends NetObject  {
+public class MessageQueueAccessControlEntry extends AccessControlEntry  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.MessageQueueAccessControlEntry
+     */
     public static final String className = "System.Messaging.MessageQueueAccessControlEntry";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class MessageQueueAccessControlEntry extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageQueueAccessControlEntry}, a cast assert is made to check if types are compatible.
+     */
     public static MessageQueueAccessControlEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MessageQueueAccessControlEntry(from.getJCOInstance());
@@ -113,6 +129,8 @@ public class MessageQueueAccessControlEntry extends NetObject  {
 
     // Constructors section
     
+    public MessageQueueAccessControlEntry() throws Throwable {
+    }
 
     public MessageQueueAccessControlEntry(Trustee trustee, MessageQueueAccessRights rights) throws Throwable, system.ArgumentNullException {
         try {
@@ -135,6 +153,7 @@ public class MessageQueueAccessControlEntry extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -142,48 +161,6 @@ public class MessageQueueAccessControlEntry extends NetObject  {
     
     // Properties section
     
-    public AccessControlEntryType getEntryType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EntryType");
-            return new AccessControlEntryType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEntryType(AccessControlEntryType EntryType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EntryType", EntryType == null ? null : EntryType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public GenericAccessRights getGenericAccessRights() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("GenericAccessRights");
-            return new GenericAccessRights(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setGenericAccessRights(GenericAccessRights GenericAccessRights) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("GenericAccessRights", GenericAccessRights == null ? null : GenericAccessRights.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MessageQueueAccessRights getMessageQueueAccessRights() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -200,48 +177,6 @@ public class MessageQueueAccessControlEntry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageQueueAccessRights", MessageQueueAccessRights == null ? null : MessageQueueAccessRights.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StandardAccessRights getStandardAccessRights() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StandardAccessRights");
-            return new StandardAccessRights(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setStandardAccessRights(StandardAccessRights StandardAccessRights) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("StandardAccessRights", StandardAccessRights == null ? null : StandardAccessRights.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Trustee getTrustee() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Trustee");
-            return new Trustee(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTrustee(Trustee Trustee) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Trustee", Trustee == null ? null : Trustee.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.ContextMenuEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ContextMenuEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ContextMenuEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ContextMenuEventHandler</a>
+ */
 public interface IContextMenuEventHandler {
     public void Invoke(NetObject sender, ContextMenuEventArgs e);
 }

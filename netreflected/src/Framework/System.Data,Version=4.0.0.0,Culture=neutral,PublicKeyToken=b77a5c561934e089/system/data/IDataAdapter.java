@@ -50,12 +50,29 @@ import system.data.MissingSchemaAction;
 
 /**
  * The base .NET class managing System.Data.IDataAdapter, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataAdapter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataAdapter</a>
  */
 public interface IDataAdapter extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
+    public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.IDataAdapter
+     */
+    public static final String className = "System.Data.IDataAdapter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataAdapter}, a cast assert is made to check if types are compatible.
+     */
     public static IDataAdapter ToIDataAdapter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Data.IDataAdapter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Data"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDataAdapterImplementation(from.getJCOInstance());
     }

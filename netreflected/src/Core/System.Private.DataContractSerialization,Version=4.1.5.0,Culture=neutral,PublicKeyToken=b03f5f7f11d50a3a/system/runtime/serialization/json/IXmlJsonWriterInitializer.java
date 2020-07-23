@@ -43,12 +43,29 @@ import system.text.Encoding;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.Json.IXmlJsonWriterInitializer, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Json.IXmlJsonWriterInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Json.IXmlJsonWriterInitializer</a>
  */
 public interface IXmlJsonWriterInitializer extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
+    public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Runtime.Serialization.Json.IXmlJsonWriterInitializer
+     */
+    public static final String className = "System.Runtime.Serialization.Json.IXmlJsonWriterInitializer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlJsonWriterInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlJsonWriterInitializer ToIXmlJsonWriterInitializer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Runtime.Serialization.Json.IXmlJsonWriterInitializer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Private.DataContractSerialization"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlJsonWriterInitializerImplementation(from.getJCOInstance());
     }

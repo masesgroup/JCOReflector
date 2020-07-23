@@ -43,12 +43,27 @@ import system.activities.presentation.model.AttachedProperty;
 
 /**
  * The base .NET class managing System.Activities.Presentation.Model.AttachedPropertiesService, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.AttachedPropertiesService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.AttachedPropertiesService</a>
  */
 public class AttachedPropertiesService extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Model.AttachedPropertiesService
+     */
     public static final String className = "System.Activities.Presentation.Model.AttachedPropertiesService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class AttachedPropertiesService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AttachedPropertiesService}, a cast assert is made to check if types are compatible.
+     */
     public static AttachedPropertiesService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AttachedPropertiesService(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class AttachedPropertiesService extends NetObject  {
 
     // Constructors section
     
-
     public AttachedPropertiesService() throws Throwable {
         try {
             // add reference to assemblyName.dll file

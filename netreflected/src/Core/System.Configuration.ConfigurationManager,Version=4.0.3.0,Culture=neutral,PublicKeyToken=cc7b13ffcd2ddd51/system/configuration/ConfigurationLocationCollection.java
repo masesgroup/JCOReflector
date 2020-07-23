@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.ReadOnlyCollectionBase;
 import system.configuration.ConfigurationLocation;
 
 
 /**
  * The base .NET class managing System.Configuration.ConfigurationLocationCollection, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationLocationCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationLocationCollection</a>
  */
-public class ConfigurationLocationCollection extends NetObject  {
+public class ConfigurationLocationCollection extends ReadOnlyCollectionBase  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.ConfigurationLocationCollection
+     */
     public static final String className = "System.Configuration.ConfigurationLocationCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ConfigurationLocationCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationLocationCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ConfigurationLocationCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ConfigurationLocationCollection(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class ConfigurationLocationCollection extends NetObject  {
 
     // Constructors section
     
+    public ConfigurationLocationCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -117,16 +139,6 @@ public class ConfigurationLocationCollection extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

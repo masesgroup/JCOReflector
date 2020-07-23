@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.net.peertopeer.collaboration.PeerChangeType;
 import system.net.peertopeer.collaboration.PeerContact;
 import system.net.peertopeer.collaboration.PeerEndPoint;
@@ -45,12 +46,27 @@ import system.net.peertopeer.collaboration.PeerEndPoint;
 
 /**
  * The base .NET class managing System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs</a>
  */
-public class SubscriptionListChangedEventArgs extends NetObject  {
+public class SubscriptionListChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs
+     */
     public static final String className = "System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class SubscriptionListChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SubscriptionListChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SubscriptionListChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SubscriptionListChangedEventArgs(from.getJCOInstance());
@@ -111,6 +129,10 @@ public class SubscriptionListChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SubscriptionListChangedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

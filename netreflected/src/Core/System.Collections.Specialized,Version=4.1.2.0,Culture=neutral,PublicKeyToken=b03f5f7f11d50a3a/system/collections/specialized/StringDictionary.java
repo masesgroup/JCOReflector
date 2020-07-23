@@ -45,12 +45,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Collections.Specialized.StringDictionary, System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.StringDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.StringDictionary</a>
  */
 public class StringDictionary extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.Specialized
+     */
     public static final String assemblyShortName = "System.Collections.Specialized";
+    /**
+     * Qualified class name: System.Collections.Specialized.StringDictionary
+     */
     public static final String className = "System.Collections.Specialized.StringDictionary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class StringDictionary extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static StringDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StringDictionary(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class StringDictionary extends NetObject  {
 
     // Constructors section
     
-
     public StringDictionary() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file

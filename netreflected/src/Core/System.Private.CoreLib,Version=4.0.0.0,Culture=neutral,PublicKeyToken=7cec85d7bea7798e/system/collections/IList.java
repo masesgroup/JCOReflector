@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.Array;
 
 
 /**
  * The base .NET class managing System.Collections.IList, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IList</a>
  */
-public interface IList extends IJCOBridgeReflected {
-
+public interface IList extends IJCOBridgeReflected, ICollection, IEnumerable {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Collections.IList
+     */
+    public static final String className = "System.Collections.IList";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IList}, a cast assert is made to check if types are compatible.
+     */
     public static IList ToIList(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Collections.IList, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IListImplementation(from.getJCOInstance());
     }
@@ -98,7 +117,6 @@ public interface IList extends IJCOBridgeReflected {
 
     public void Clear() throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Insert(int index, NetObject value) throws Throwable;
 
@@ -113,12 +131,6 @@ public interface IList extends IJCOBridgeReflected {
     public boolean getIsFixedSize() throws Throwable;
 
     public boolean getIsReadOnly() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
-
-    public int getCount() throws Throwable;
-
-    public NetObject getSyncRoot() throws Throwable;
 
 
 

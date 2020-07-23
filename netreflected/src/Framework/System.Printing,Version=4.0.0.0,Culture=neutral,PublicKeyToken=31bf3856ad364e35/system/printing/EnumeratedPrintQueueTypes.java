@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Printing.EnumeratedPrintQueueTypes, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.EnumeratedPrintQueueTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.EnumeratedPrintQueueTypes</a>
  */
 public class EnumeratedPrintQueueTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Printing.EnumeratedPrintQueueTypes
+     */
     public static final String className = "System.Printing.EnumeratedPrintQueueTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -151,19 +166,19 @@ public class EnumeratedPrintQueueTypes extends NetObject  {
 
     // Flags management section
 
-    public EnumeratedPrintQueueTypes add(EnumeratedPrintQueueTypes val) throws Throwable {
+    public final EnumeratedPrintQueueTypes add(EnumeratedPrintQueueTypes val) throws Throwable {
         return new EnumeratedPrintQueueTypes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public EnumeratedPrintQueueTypes remove(EnumeratedPrintQueueTypes val) throws Throwable {
+    public final EnumeratedPrintQueueTypes remove(EnumeratedPrintQueueTypes val) throws Throwable {
         return new EnumeratedPrintQueueTypes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(EnumeratedPrintQueueTypes val) throws Throwable {
+    public final boolean is(EnumeratedPrintQueueTypes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(EnumeratedPrintQueueTypes val) throws Throwable {
+    public final boolean has(EnumeratedPrintQueueTypes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

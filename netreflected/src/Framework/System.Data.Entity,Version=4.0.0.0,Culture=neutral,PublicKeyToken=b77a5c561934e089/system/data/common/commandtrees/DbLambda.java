@@ -46,12 +46,27 @@ import system.data.metadata.edm.TypeUsage;
 
 /**
  * The base .NET class managing System.Data.Common.CommandTrees.DbLambda, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbLambda" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbLambda</a>
  */
 public class DbLambda extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.CommandTrees.DbLambda
+     */
     public static final String className = "System.Data.Common.CommandTrees.DbLambda";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class DbLambda extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbLambda}, a cast assert is made to check if types are compatible.
+     */
     public static DbLambda cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbLambda(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class DbLambda extends NetObject  {
 
     // Constructors section
     
+    public DbLambda() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -51,12 +51,27 @@ import system.workflow.runtime.WorkflowInstance;
 
 /**
  * The base .NET class managing System.Workflow.Activities.StateMachineWorkflowInstance, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateMachineWorkflowInstance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateMachineWorkflowInstance</a>
  */
 public class StateMachineWorkflowInstance extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.StateMachineWorkflowInstance
+     */
     public static final String className = "System.Workflow.Activities.StateMachineWorkflowInstance";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class StateMachineWorkflowInstance extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StateMachineWorkflowInstance}, a cast assert is made to check if types are compatible.
+     */
     public static StateMachineWorkflowInstance cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StateMachineWorkflowInstance(from.getJCOInstance());
@@ -117,6 +134,8 @@ public class StateMachineWorkflowInstance extends NetObject  {
 
     // Constructors section
     
+    public StateMachineWorkflowInstance() throws Throwable {
+    }
 
     public StateMachineWorkflowInstance(WorkflowRuntime runtime, Guid instanceId) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
         try {
@@ -127,6 +146,7 @@ public class StateMachineWorkflowInstance extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

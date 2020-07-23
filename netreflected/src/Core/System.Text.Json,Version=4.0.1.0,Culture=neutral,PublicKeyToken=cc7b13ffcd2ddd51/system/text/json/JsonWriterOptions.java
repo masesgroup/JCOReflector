@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.text.encodings.web.JavaScriptEncoder;
 
 
 /**
  * The base .NET class managing System.Text.Json.JsonWriterOptions, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonWriterOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonWriterOptions</a>
  */
-public class JsonWriterOptions extends NetObject  {
+public class JsonWriterOptions extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Text.Json
+     */
     public static final String assemblyShortName = "System.Text.Json";
+    /**
+     * Qualified class name: System.Text.Json.JsonWriterOptions
+     */
     public static final String className = "System.Text.Json.JsonWriterOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class JsonWriterOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonWriterOptions}, a cast assert is made to check if types are compatible.
+     */
     public static JsonWriterOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new JsonWriterOptions(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class JsonWriterOptions extends NetObject  {
 
     // Constructors section
     
+    public JsonWriterOptions() throws Throwable {
+    }
+
+
 
     
     // Methods section

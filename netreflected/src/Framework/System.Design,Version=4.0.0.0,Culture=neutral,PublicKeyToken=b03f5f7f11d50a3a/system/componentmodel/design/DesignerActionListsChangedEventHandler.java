@@ -42,12 +42,27 @@ import system.componentmodel.design.DesignerActionListsChangedEventArgs;
 import system.componentmodel.design.IDesignerActionListsChangedEventHandler;
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignerActionListsChangedEventHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionListsChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionListsChangedEventHandler</a>
  */
 public class DesignerActionListsChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignerActionListsChangedEventHandler
+     */
     public static final String className = "System.ComponentModel.Design.DesignerActionListsChangedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDesignerActionListsChangedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DesignerActionListsChangedEventHandler extends JCVoidDelegate imple
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DesignerActionListsChangedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DesignerActionListsChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DesignerActionListsChangedEventHandler extends JCVoidDelegate imple
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DesignerActionListsChangedEventArgs e) {
     }
 }

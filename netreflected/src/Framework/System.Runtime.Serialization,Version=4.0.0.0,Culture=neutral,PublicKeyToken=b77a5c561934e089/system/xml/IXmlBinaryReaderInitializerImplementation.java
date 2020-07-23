@@ -48,12 +48,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Xml.IXmlBinaryReaderInitializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlBinaryReaderInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlBinaryReaderInitializer</a>
  */
 public class IXmlBinaryReaderInitializerImplementation extends NetObject implements IXmlBinaryReaderInitializer {
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
     public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Xml.IXmlBinaryReaderInitializer
+     */
     public static final String className = "System.Xml.IXmlBinaryReaderInitializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class IXmlBinaryReaderInitializerImplementation extends NetObject impleme
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlBinaryReaderInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlBinaryReaderInitializer ToIXmlBinaryReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXmlBinaryReaderInitializerImplementation(from.getJCOInstance());
@@ -114,6 +131,16 @@ public class IXmlBinaryReaderInitializerImplementation extends NetObject impleme
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", buffer, offset, count, dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance(), onClose);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetInput", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

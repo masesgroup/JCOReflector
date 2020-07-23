@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.FrameworkPropertyMetadataOptions, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkPropertyMetadataOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkPropertyMetadataOptions</a>
  */
 public class FrameworkPropertyMetadataOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.FrameworkPropertyMetadataOptions
+     */
     public static final String className = "System.Windows.FrameworkPropertyMetadataOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -148,19 +163,19 @@ public class FrameworkPropertyMetadataOptions extends NetObject  {
 
     // Flags management section
 
-    public FrameworkPropertyMetadataOptions add(FrameworkPropertyMetadataOptions val) throws Throwable {
+    public final FrameworkPropertyMetadataOptions add(FrameworkPropertyMetadataOptions val) throws Throwable {
         return new FrameworkPropertyMetadataOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public FrameworkPropertyMetadataOptions remove(FrameworkPropertyMetadataOptions val) throws Throwable {
+    public final FrameworkPropertyMetadataOptions remove(FrameworkPropertyMetadataOptions val) throws Throwable {
         return new FrameworkPropertyMetadataOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(FrameworkPropertyMetadataOptions val) throws Throwable {
+    public final boolean is(FrameworkPropertyMetadataOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(FrameworkPropertyMetadataOptions val) throws Throwable {
+    public final boolean has(FrameworkPropertyMetadataOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -42,12 +42,27 @@ import system.data.sqlclient.SqlRowUpdatingEventArgs;
 import system.data.sqlclient.ISqlRowUpdatingEventHandler;
 /**
  * The base .NET class managing System.Data.SqlClient.SqlRowUpdatingEventHandler, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowUpdatingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowUpdatingEventHandler</a>
  */
 public class SqlRowUpdatingEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlRowUpdatingEventHandler
+     */
     public static final String className = "System.Data.SqlClient.SqlRowUpdatingEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISqlRowUpdatingEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class SqlRowUpdatingEventHandler extends JCVoidDelegate implements IJCVoi
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, SqlRowUpdatingEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, SqlRowUpdatingEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class SqlRowUpdatingEventHandler extends JCVoidDelegate implements IJCVoi
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, SqlRowUpdatingEventArgs e) {
     }
 }

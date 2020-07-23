@@ -38,20 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeTypeReference;
 import system.codedom.CodeExpression;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
+import system.codedom.CodeTypeReference;
 
 
 /**
  * The base .NET class managing System.CodeDom.CodeDelegateCreateExpression, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeDelegateCreateExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeDelegateCreateExpression</a>
  */
-public class CodeDelegateCreateExpression extends NetObject  {
+public class CodeDelegateCreateExpression extends CodeExpression  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.CodeDelegateCreateExpression
+     */
     public static final String className = "System.CodeDom.CodeDelegateCreateExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +117,9 @@ public class CodeDelegateCreateExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeDelegateCreateExpression}, a cast assert is made to check if types are compatible.
+     */
     public static CodeDelegateCreateExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeDelegateCreateExpression(from.getJCOInstance());
@@ -112,7 +127,6 @@ public class CodeDelegateCreateExpression extends NetObject  {
 
     // Constructors section
     
-
     public CodeDelegateCreateExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,17 +192,6 @@ public class CodeDelegateCreateExpression extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DelegateType", DelegateType == null ? null : DelegateType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

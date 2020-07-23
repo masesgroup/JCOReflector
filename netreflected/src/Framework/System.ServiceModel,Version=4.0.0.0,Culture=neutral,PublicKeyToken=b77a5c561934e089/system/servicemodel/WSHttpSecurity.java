@@ -45,12 +45,27 @@ import system.servicemodel.SecurityMode;
 
 /**
  * The base .NET class managing System.ServiceModel.WSHttpSecurity, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.WSHttpSecurity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.WSHttpSecurity</a>
  */
 public class WSHttpSecurity extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.WSHttpSecurity
+     */
     public static final String className = "System.ServiceModel.WSHttpSecurity";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class WSHttpSecurity extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSHttpSecurity}, a cast assert is made to check if types are compatible.
+     */
     public static WSHttpSecurity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WSHttpSecurity(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class WSHttpSecurity extends NetObject  {
 
     // Constructors section
     
-
     public WSHttpSecurity() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file

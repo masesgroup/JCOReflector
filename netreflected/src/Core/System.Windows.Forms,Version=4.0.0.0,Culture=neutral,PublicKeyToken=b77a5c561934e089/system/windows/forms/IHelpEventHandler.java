@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.HelpEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link HelpEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HelpEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HelpEventHandler</a>
+ */
 public interface IHelpEventHandler {
     public void Invoke(NetObject sender, HelpEventArgs hlpevent);
 }

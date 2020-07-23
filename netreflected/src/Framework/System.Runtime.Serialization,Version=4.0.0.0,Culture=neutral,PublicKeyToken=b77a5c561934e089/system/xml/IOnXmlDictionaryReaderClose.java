@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.xml.XmlDictionaryReader;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link OnXmlDictionaryReaderClose}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.OnXmlDictionaryReaderClose" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.OnXmlDictionaryReaderClose</a>
+ */
 public interface IOnXmlDictionaryReaderClose {
     public void Invoke(XmlDictionaryReader reader);
 }

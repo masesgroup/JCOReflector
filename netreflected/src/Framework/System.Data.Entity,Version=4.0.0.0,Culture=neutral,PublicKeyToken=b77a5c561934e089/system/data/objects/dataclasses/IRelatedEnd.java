@@ -45,12 +45,29 @@ import system.data.metadata.edm.RelationshipSet;
 
 /**
  * The base .NET class managing System.Data.Objects.DataClasses.IRelatedEnd, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd</a>
  */
 public interface IRelatedEnd extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
+    public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Objects.DataClasses.IRelatedEnd
+     */
+    public static final String className = "System.Data.Objects.DataClasses.IRelatedEnd";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRelatedEnd}, a cast assert is made to check if types are compatible.
+     */
     public static IRelatedEnd ToIRelatedEnd(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Data.Objects.DataClasses.IRelatedEnd, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Data.Entity"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRelatedEndImplementation(from.getJCOInstance());
     }

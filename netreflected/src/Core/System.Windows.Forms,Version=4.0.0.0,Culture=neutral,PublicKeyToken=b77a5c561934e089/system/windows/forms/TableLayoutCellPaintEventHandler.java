@@ -42,12 +42,27 @@ import system.windows.forms.TableLayoutCellPaintEventArgs;
 import system.windows.forms.ITableLayoutCellPaintEventHandler;
 /**
  * The base .NET class managing System.Windows.Forms.TableLayoutCellPaintEventHandler, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventHandler</a>
  */
 public class TableLayoutCellPaintEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.TableLayoutCellPaintEventHandler
+     */
     public static final String className = "System.Windows.Forms.TableLayoutCellPaintEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ITableLayoutCellPaintEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class TableLayoutCellPaintEventHandler extends JCVoidDelegate implements 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, TableLayoutCellPaintEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, TableLayoutCellPaintEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class TableLayoutCellPaintEventHandler extends JCVoidDelegate implements 
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, TableLayoutCellPaintEventArgs e) {
     }
 }

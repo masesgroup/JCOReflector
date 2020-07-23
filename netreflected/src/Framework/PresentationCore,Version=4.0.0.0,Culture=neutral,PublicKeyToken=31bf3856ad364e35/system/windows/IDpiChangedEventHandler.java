@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.DpiChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DpiChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DpiChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DpiChangedEventHandler</a>
+ */
 public interface IDpiChangedEventHandler {
     public void Invoke(NetObject sender, DpiChangedEventArgs e);
 }

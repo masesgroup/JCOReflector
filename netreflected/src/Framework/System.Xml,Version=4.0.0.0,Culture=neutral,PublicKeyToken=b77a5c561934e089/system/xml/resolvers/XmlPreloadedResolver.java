@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.xml.resolvers.XmlKnownDtds;
 import system.xml.XmlResolver;
+import system.xml.resolvers.XmlKnownDtds;
 import system.Uri;
 import system.io.Stream;
 import system.net.ICredentials;
@@ -48,12 +48,27 @@ import system.net.ICredentialsImplementation;
 
 /**
  * The base .NET class managing System.Xml.Resolvers.XmlPreloadedResolver, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Resolvers.XmlPreloadedResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Resolvers.XmlPreloadedResolver</a>
  */
-public class XmlPreloadedResolver extends NetObject  {
+public class XmlPreloadedResolver extends XmlResolver  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Resolvers.XmlPreloadedResolver
+     */
     public static final String className = "System.Xml.Resolvers.XmlPreloadedResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class XmlPreloadedResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlPreloadedResolver}, a cast assert is made to check if types are compatible.
+     */
     public static XmlPreloadedResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlPreloadedResolver(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class XmlPreloadedResolver extends NetObject  {
 
     // Constructors section
     
-
     public XmlPreloadedResolver() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
@@ -201,11 +217,31 @@ public class XmlPreloadedResolver extends NetObject  {
         }
     }
 
+    public void Add(Uri dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Add(Uri uri, byte[] value, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", uri == null ? null : uri.getJCOInstance(), value, offset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Add(Uri dupParam0, JCRefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,16 +281,6 @@ public class XmlPreloadedResolver extends NetObject  {
     
     // Properties section
     
-    public void setCredentials(ICredentials Credentials) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

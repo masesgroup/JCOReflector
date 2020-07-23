@@ -44,10 +44,22 @@ import system.runtime.serialization.SerializationEntry;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.SerializationInfoEnumerator, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.SerializationInfoEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.SerializationInfoEnumerator</a>
  */
 public class SerializationInfoEnumerator extends NetObject implements Iterator<SerializationEntry> {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.SerializationInfoEnumerator
+     */
     public static final String className = "System.Runtime.Serialization.SerializationInfoEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class SerializationInfoEnumerator extends NetObject implements Iterator<S
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public SerializationEntry next() {
+	public final SerializationEntry next() {
 		try {
 			return new SerializationEntry(classInstance.next());
 		} catch (Throwable jce) {

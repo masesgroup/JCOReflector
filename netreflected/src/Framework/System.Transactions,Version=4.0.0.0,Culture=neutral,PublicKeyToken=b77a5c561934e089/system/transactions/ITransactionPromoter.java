@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Transactions.ITransactionPromoter, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.ITransactionPromoter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.ITransactionPromoter</a>
  */
 public interface ITransactionPromoter extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Transactions
+     */
+    public static final String assemblyShortName = "System.Transactions";
+    /**
+     * Qualified class name: System.Transactions.ITransactionPromoter
+     */
+    public static final String className = "System.Transactions.ITransactionPromoter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITransactionPromoter}, a cast assert is made to check if types are compatible.
+     */
     public static ITransactionPromoter ToITransactionPromoter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Transactions.ITransactionPromoter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Transactions"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITransactionPromoterImplementation(from.getJCOInstance());
     }

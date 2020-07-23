@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.Size;
 
 
 /**
  * The base .NET class managing System.Windows.AutoResizedEventArgs, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.AutoResizedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.AutoResizedEventArgs</a>
  */
-public class AutoResizedEventArgs extends NetObject  {
+public class AutoResizedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.AutoResizedEventArgs
+     */
     public static final String className = "System.Windows.AutoResizedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class AutoResizedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AutoResizedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static AutoResizedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AutoResizedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class AutoResizedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public AutoResizedEventArgs() throws Throwable {
+    }
 
     public AutoResizedEventArgs(Size size) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class AutoResizedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

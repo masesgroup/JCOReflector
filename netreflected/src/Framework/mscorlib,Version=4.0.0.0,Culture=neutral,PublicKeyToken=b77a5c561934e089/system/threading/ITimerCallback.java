@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TimerCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.TimerCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.TimerCallback</a>
+ */
 public interface ITimerCallback {
     public void Invoke(NetObject state);
 }

@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Configuration.Install.IManagedInstaller, System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.IManagedInstaller" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.IManagedInstaller</a>
  */
 public interface IManagedInstaller extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Configuration.Install
+     */
+    public static final String assemblyShortName = "System.Configuration.Install";
+    /**
+     * Qualified class name: System.Configuration.Install.IManagedInstaller
+     */
+    public static final String className = "System.Configuration.Install.IManagedInstaller";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IManagedInstaller}, a cast assert is made to check if types are compatible.
+     */
     public static IManagedInstaller ToIManagedInstaller(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Configuration.Install.IManagedInstaller, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Configuration.Install"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IManagedInstallerImplementation(from.getJCOInstance());
     }

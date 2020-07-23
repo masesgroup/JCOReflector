@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.AsyncCompletedEventArgs;
 import system.net.networkinformation.PingReply;
 
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.PingCompletedEventArgs, System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingCompletedEventArgs</a>
  */
-public class PingCompletedEventArgs extends NetObject  {
+public class PingCompletedEventArgs extends AsyncCompletedEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Ping
+     */
     public static final String assemblyShortName = "System.Net.Ping";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.PingCompletedEventArgs
+     */
     public static final String className = "System.Net.NetworkInformation.PingCompletedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class PingCompletedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PingCompletedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static PingCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PingCompletedEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class PingCompletedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public PingCompletedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -117,44 +139,12 @@ public class PingCompletedEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancelled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancelled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getError() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Error");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PingReply getReply() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Reply");
             return new PingReply(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getUserState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserState");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

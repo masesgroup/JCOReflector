@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Permissions.FileDialogPermissionAccess, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.FileDialogPermissionAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.FileDialogPermissionAccess</a>
  */
 public class FileDialogPermissionAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Permissions.FileDialogPermissionAccess
+     */
     public static final String className = "System.Security.Permissions.FileDialogPermissionAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class FileDialogPermissionAccess extends NetObject  {
 
     // Flags management section
 
-    public FileDialogPermissionAccess add(FileDialogPermissionAccess val) throws Throwable {
+    public final FileDialogPermissionAccess add(FileDialogPermissionAccess val) throws Throwable {
         return new FileDialogPermissionAccess(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public FileDialogPermissionAccess remove(FileDialogPermissionAccess val) throws Throwable {
+    public final FileDialogPermissionAccess remove(FileDialogPermissionAccess val) throws Throwable {
         return new FileDialogPermissionAccess(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(FileDialogPermissionAccess val) throws Throwable {
+    public final boolean is(FileDialogPermissionAccess val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(FileDialogPermissionAccess val) throws Throwable {
+    public final boolean has(FileDialogPermissionAccess val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

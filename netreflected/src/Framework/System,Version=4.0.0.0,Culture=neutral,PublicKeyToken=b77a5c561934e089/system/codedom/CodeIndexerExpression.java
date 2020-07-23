@@ -40,18 +40,31 @@ import java.util.ArrayList;
 // Import section
 import system.codedom.CodeExpression;
 import system.codedom.CodeExpressionCollection;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 
 
 /**
  * The base .NET class managing System.CodeDom.CodeIndexerExpression, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeIndexerExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeIndexerExpression</a>
  */
-public class CodeIndexerExpression extends NetObject  {
+public class CodeIndexerExpression extends CodeExpression  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.CodeDom.CodeIndexerExpression
+     */
     public static final String className = "System.CodeDom.CodeIndexerExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +117,9 @@ public class CodeIndexerExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeIndexerExpression}, a cast assert is made to check if types are compatible.
+     */
     public static CodeIndexerExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeIndexerExpression(from.getJCOInstance());
@@ -112,7 +127,6 @@ public class CodeIndexerExpression extends NetObject  {
 
     // Constructors section
     
-
     public CodeIndexerExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,17 +182,6 @@ public class CodeIndexerExpression extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Indices");
             return new CodeExpressionCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

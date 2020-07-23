@@ -45,12 +45,29 @@ import system.windows.media.animation.AnimationTimeline;
 
 /**
  * The base .NET class managing System.Windows.Media.Animation.IAnimatable, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.IAnimatable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.IAnimatable</a>
  */
 public interface IAnimatable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
+    public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Animation.IAnimatable
+     */
+    public static final String className = "System.Windows.Media.Animation.IAnimatable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAnimatable}, a cast assert is made to check if types are compatible.
+     */
     public static IAnimatable ToIAnimatable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Media.Animation.IAnimatable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "PresentationCore"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IAnimatableImplementation(from.getJCOInstance());
     }

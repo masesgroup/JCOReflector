@@ -53,12 +53,27 @@ import system.UInt64;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.SerializationInfo, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.SerializationInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.SerializationInfo</a>
  */
 public class SerializationInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.SerializationInfo
+     */
     public static final String className = "System.Runtime.Serialization.SerializationInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +126,9 @@ public class SerializationInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SerializationInfo}, a cast assert is made to check if types are compatible.
+     */
     public static SerializationInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SerializationInfo(from.getJCOInstance());
@@ -119,6 +136,8 @@ public class SerializationInfo extends NetObject  {
 
     // Constructors section
     
+    public SerializationInfo() throws Throwable {
+    }
 
     public SerializationInfo(NetType type, IFormatterConverter converter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -139,6 +158,7 @@ public class SerializationInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -528,11 +548,11 @@ public class SerializationInfo extends NetObject  {
     
     // Properties section
     
-    public static boolean getDeserializationInProgress() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getDeserializationInProgress() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("DeserializationInProgress");
+            return (boolean)classInstance.Get("DeserializationInProgress");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

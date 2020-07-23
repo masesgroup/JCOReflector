@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.threading.DispatcherOperation;
 import system.windows.threading.Dispatcher;
 
 
 /**
  * The base .NET class managing System.Windows.Threading.DispatcherHookEventArgs, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherHookEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherHookEventArgs</a>
  */
-public class DispatcherHookEventArgs extends NetObject  {
+public class DispatcherHookEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Threading.DispatcherHookEventArgs
+     */
     public static final String className = "System.Windows.Threading.DispatcherHookEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DispatcherHookEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DispatcherHookEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DispatcherHookEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DispatcherHookEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class DispatcherHookEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DispatcherHookEventArgs() throws Throwable {
+    }
 
     public DispatcherHookEventArgs(DispatcherOperation operation) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class DispatcherHookEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

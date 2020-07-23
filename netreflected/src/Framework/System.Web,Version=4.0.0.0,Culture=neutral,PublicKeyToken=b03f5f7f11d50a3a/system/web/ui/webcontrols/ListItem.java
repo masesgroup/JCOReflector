@@ -44,12 +44,27 @@ import system.web.ui.AttributeCollection;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.ListItem, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ListItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ListItem</a>
  */
 public class ListItem extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.ListItem
+     */
     public static final String className = "System.Web.UI.WebControls.ListItem";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ListItem extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListItem}, a cast assert is made to check if types are compatible.
+     */
     public static ListItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ListItem(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class ListItem extends NetObject  {
 
     // Constructors section
     
-
     public ListItem() throws Throwable {
         try {
             // add reference to assemblyName.dll file

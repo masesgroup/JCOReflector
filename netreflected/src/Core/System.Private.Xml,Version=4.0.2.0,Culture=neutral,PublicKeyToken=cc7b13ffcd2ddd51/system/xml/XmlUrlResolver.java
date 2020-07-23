@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.XmlResolver;
 import system.Uri;
 import system.net.cache.RequestCachePolicy;
 import system.net.ICredentials;
@@ -48,12 +49,27 @@ import system.net.IWebProxyImplementation;
 
 /**
  * The base .NET class managing System.Xml.XmlUrlResolver, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlUrlResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlUrlResolver</a>
  */
-public class XmlUrlResolver extends NetObject  {
+public class XmlUrlResolver extends XmlResolver  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlUrlResolver
+     */
     public static final String className = "System.Xml.XmlUrlResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class XmlUrlResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlUrlResolver}, a cast assert is made to check if types are compatible.
+     */
     public static XmlUrlResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlUrlResolver(from.getJCOInstance());
@@ -114,7 +132,6 @@ public class XmlUrlResolver extends NetObject  {
 
     // Constructors section
     
-
     public XmlUrlResolver() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -129,16 +146,6 @@ public class XmlUrlResolver extends NetObject  {
     
     // Methods section
     
-    public boolean SupportsType(Uri absoluteUri, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetEntity(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,16 +177,6 @@ public class XmlUrlResolver extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CachePolicy", CachePolicy == null ? null : CachePolicy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCredentials(ICredentials Credentials) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

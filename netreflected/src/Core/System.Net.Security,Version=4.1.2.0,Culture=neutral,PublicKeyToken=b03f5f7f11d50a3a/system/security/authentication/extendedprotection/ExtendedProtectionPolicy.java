@@ -48,12 +48,27 @@ import system.security.authentication.extendedprotection.ServiceNameCollection;
 
 /**
  * The base .NET class managing System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy, System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy</a>
  */
 public class ExtendedProtectionPolicy extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Security
+     */
     public static final String assemblyShortName = "System.Net.Security";
+    /**
+     * Qualified class name: System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy
+     */
     public static final String className = "System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ExtendedProtectionPolicy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExtendedProtectionPolicy}, a cast assert is made to check if types are compatible.
+     */
     public static ExtendedProtectionPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExtendedProtectionPolicy(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class ExtendedProtectionPolicy extends NetObject  {
 
     // Constructors section
     
+    public ExtendedProtectionPolicy() throws Throwable {
+    }
 
     public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement) throws Throwable {
         try {
@@ -156,6 +175,7 @@ public class ExtendedProtectionPolicy extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -163,11 +183,11 @@ public class ExtendedProtectionPolicy extends NetObject  {
     
     // Properties section
     
-    public static boolean getOSSupportsExtendedProtection() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getOSSupportsExtendedProtection() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("OSSupportsExtendedProtection");
+            return (boolean)classInstance.Get("OSSupportsExtendedProtection");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

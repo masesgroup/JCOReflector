@@ -37,19 +37,38 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.Array;
+import system.collections.IDictionary;
+import system.collections.IDictionaryImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.Array;
 
 
 /**
  * The base .NET class managing System.Collections.Specialized.IOrderedDictionary, System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.IOrderedDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.IOrderedDictionary</a>
  */
-public interface IOrderedDictionary extends IJCOBridgeReflected {
-
+public interface IOrderedDictionary extends IJCOBridgeReflected, IDictionary, ICollection, IEnumerable {
+    /**
+     * Fully assembly qualified name: System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.Specialized
+     */
+    public static final String assemblyShortName = "System.Collections.Specialized";
+    /**
+     * Qualified class name: System.Collections.Specialized.IOrderedDictionary
+     */
+    public static final String className = "System.Collections.Specialized.IOrderedDictionary";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IOrderedDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static IOrderedDictionary ToIOrderedDictionary(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Collections.Specialized.IOrderedDictionary, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Collections.Specialized"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IOrderedDictionaryImplementation(from.getJCOInstance());
     }
@@ -92,17 +111,12 @@ public interface IOrderedDictionary extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Contains(NetObject key) throws Throwable;
 
-    public void Add(NetObject key, NetObject value) throws Throwable;
 
-    public void Clear() throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Insert(int index, NetObject key, NetObject value) throws Throwable;
 
-    public void Remove(NetObject key) throws Throwable;
 
     public void RemoveAt(int index) throws Throwable;
 
@@ -110,20 +124,6 @@ public interface IOrderedDictionary extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getIsFixedSize() throws Throwable;
-
-    public boolean getIsReadOnly() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
-
-    public int getCount() throws Throwable;
-
-    public ICollection getKeys() throws Throwable;
-
-    public ICollection getValues() throws Throwable;
-
-    public NetObject getSyncRoot() throws Throwable;
-
 
 
     // Instance Events section

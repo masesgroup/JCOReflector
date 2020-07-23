@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.IDataAdapter;
+import system.data.IDataAdapterImplementation;
 import system.data.DataSet;
 import system.data.DataTable;
 import system.data.SchemaType;
@@ -53,12 +55,27 @@ import system.data.MissingSchemaAction;
 
 /**
  * The base .NET class managing System.Data.IDbDataAdapter, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbDataAdapter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbDataAdapter</a>
  */
 public class IDbDataAdapterImplementation extends NetObject implements IDbDataAdapter {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.IDbDataAdapter
+     */
     public static final String className = "System.Data.IDbDataAdapter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +123,9 @@ public class IDbDataAdapterImplementation extends NetObject implements IDbDataAd
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDbDataAdapter}, a cast assert is made to check if types are compatible.
+     */
     public static IDbDataAdapter ToIDbDataAdapter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDbDataAdapterImplementation(from.getJCOInstance());

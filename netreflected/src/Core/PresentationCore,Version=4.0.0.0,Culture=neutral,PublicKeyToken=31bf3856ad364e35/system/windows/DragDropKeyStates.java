@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.DragDropKeyStates, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DragDropKeyStates" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DragDropKeyStates</a>
  */
 public class DragDropKeyStates extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.DragDropKeyStates
+     */
     public static final String className = "System.Windows.DragDropKeyStates";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class DragDropKeyStates extends NetObject  {
 
     // Flags management section
 
-    public DragDropKeyStates add(DragDropKeyStates val) throws Throwable {
+    public final DragDropKeyStates add(DragDropKeyStates val) throws Throwable {
         return new DragDropKeyStates(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public DragDropKeyStates remove(DragDropKeyStates val) throws Throwable {
+    public final DragDropKeyStates remove(DragDropKeyStates val) throws Throwable {
         return new DragDropKeyStates(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(DragDropKeyStates val) throws Throwable {
+    public final boolean is(DragDropKeyStates val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(DragDropKeyStates val) throws Throwable {
+    public final boolean has(DragDropKeyStates val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

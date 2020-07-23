@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.data.oracleclient.OracleMonthSpan;
 import system.data.oracleclient.OracleBoolean;
 
 
 /**
  * The base .NET class managing System.Data.OracleClient.OracleMonthSpan, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleMonthSpan" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleMonthSpan</a>
  */
-public class OracleMonthSpan extends NetObject  {
+public class OracleMonthSpan extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.OracleClient
+     */
     public static final String assemblyShortName = "System.Data.OracleClient";
+    /**
+     * Qualified class name: System.Data.OracleClient.OracleMonthSpan
+     */
     public static final String className = "System.Data.OracleClient.OracleMonthSpan";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class OracleMonthSpan extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OracleMonthSpan}, a cast assert is made to check if types are compatible.
+     */
     public static OracleMonthSpan cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OracleMonthSpan(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class OracleMonthSpan extends NetObject  {
 
     // Constructors section
     
+    public OracleMonthSpan() throws Throwable {
+    }
 
     public OracleMonthSpan(int months) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
@@ -140,6 +160,7 @@ public class OracleMonthSpan extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

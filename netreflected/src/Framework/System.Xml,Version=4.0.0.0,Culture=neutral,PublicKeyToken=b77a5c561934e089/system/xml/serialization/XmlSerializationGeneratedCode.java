@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Xml.Serialization.XmlSerializationGeneratedCode, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationGeneratedCode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationGeneratedCode</a>
  */
 public class XmlSerializationGeneratedCode extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.XmlSerializationGeneratedCode
+     */
     public static final String className = "System.Xml.Serialization.XmlSerializationGeneratedCode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class XmlSerializationGeneratedCode extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSerializationGeneratedCode}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSerializationGeneratedCode cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSerializationGeneratedCode(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class XmlSerializationGeneratedCode extends NetObject  {
 
     // Constructors section
     
+    public XmlSerializationGeneratedCode() throws Throwable {
+    }
 
     
     // Methods section

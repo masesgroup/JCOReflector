@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.media.HitTestResult;
 import system.windows.media.Visual;
 import system.windows.media.IntersectionDetail;
-import system.windows.DependencyObject;
 
 
 /**
  * The base .NET class managing System.Windows.Media.GeometryHitTestResult, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GeometryHitTestResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GeometryHitTestResult</a>
  */
-public class GeometryHitTestResult extends NetObject  {
+public class GeometryHitTestResult extends HitTestResult  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.GeometryHitTestResult
+     */
     public static final String className = "System.Windows.Media.GeometryHitTestResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class GeometryHitTestResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GeometryHitTestResult}, a cast assert is made to check if types are compatible.
+     */
     public static GeometryHitTestResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GeometryHitTestResult(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class GeometryHitTestResult extends NetObject  {
 
     // Constructors section
     
+    public GeometryHitTestResult() throws Throwable {
+    }
 
     public GeometryHitTestResult(Visual visualHit, IntersectionDetail intersectionDetail) throws Throwable {
         try {
@@ -123,6 +142,7 @@ public class GeometryHitTestResult extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -130,23 +150,23 @@ public class GeometryHitTestResult extends NetObject  {
     
     // Properties section
     
-    public DependencyObject getVisualHit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VisualHit");
-            return new DependencyObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IntersectionDetail getIntersectionDetail() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("IntersectionDetail");
             return new IntersectionDetail(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Visual getVisualHitNewGeometryHitTestResult() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("VisualHit");
+            return new Visual(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

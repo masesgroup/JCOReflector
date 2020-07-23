@@ -47,12 +47,27 @@ import system.xaml.XamlDirective;
 
 /**
  * The base .NET class managing System.Xaml.XamlType, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlType</a>
  */
 public class XamlType extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.XamlType
+     */
     public static final String className = "System.Xaml.XamlType";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class XamlType extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlType}, a cast assert is made to check if types are compatible.
+     */
     public static XamlType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlType(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class XamlType extends NetObject  {
 
     // Constructors section
     
+    public XamlType() throws Throwable {
+    }
 
     public XamlType(NetType underlyingType, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         try {
@@ -133,6 +152,7 @@ public class XamlType extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

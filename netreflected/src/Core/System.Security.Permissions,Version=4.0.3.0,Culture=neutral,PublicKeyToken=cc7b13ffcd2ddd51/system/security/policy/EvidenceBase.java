@@ -43,12 +43,27 @@ import system.security.policy.EvidenceBase;
 
 /**
  * The base .NET class managing System.Security.Policy.EvidenceBase, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.EvidenceBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.EvidenceBase</a>
  */
 public class EvidenceBase extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Policy.EvidenceBase
+     */
     public static final String className = "System.Security.Policy.EvidenceBase";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class EvidenceBase extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EvidenceBase}, a cast assert is made to check if types are compatible.
+     */
     public static EvidenceBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EvidenceBase(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class EvidenceBase extends NetObject  {
 
     // Constructors section
     
+    public EvidenceBase() throws Throwable {
+    }
 
     
     // Methods section

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.LayoutSettings;
 import system.windows.forms.FlowDirection;
 import system.windows.forms.layout.LayoutEngine;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.FlowLayoutSettings, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FlowLayoutSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FlowLayoutSettings</a>
  */
-public class FlowLayoutSettings extends NetObject  {
+public class FlowLayoutSettings extends LayoutSettings  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.FlowLayoutSettings
+     */
     public static final String className = "System.Windows.Forms.FlowLayoutSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class FlowLayoutSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FlowLayoutSettings}, a cast assert is made to check if types are compatible.
+     */
     public static FlowLayoutSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FlowLayoutSettings(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class FlowLayoutSettings extends NetObject  {
 
     // Constructors section
     
+    public FlowLayoutSettings() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -174,17 +196,6 @@ public class FlowLayoutSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlowDirection", FlowDirection == null ? null : FlowDirection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LayoutEngine getLayoutEngine() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LayoutEngine");
-            return new LayoutEngine(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Text.RegularExpressions.RegexOptions, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.RegexOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.RegexOptions</a>
  */
 public class RegexOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Text.RegularExpressions.RegexOptions
+     */
     public static final String className = "System.Text.RegularExpressions.RegexOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -146,19 +161,19 @@ public class RegexOptions extends NetObject  {
 
     // Flags management section
 
-    public RegexOptions add(RegexOptions val) throws Throwable {
+    public final RegexOptions add(RegexOptions val) throws Throwable {
         return new RegexOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public RegexOptions remove(RegexOptions val) throws Throwable {
+    public final RegexOptions remove(RegexOptions val) throws Throwable {
         return new RegexOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(RegexOptions val) throws Throwable {
+    public final boolean is(RegexOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(RegexOptions val) throws Throwable {
+    public final boolean has(RegexOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

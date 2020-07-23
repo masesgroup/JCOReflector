@@ -44,10 +44,22 @@ import system.security.cryptography.pkcs.RecipientInfo;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.RecipientInfoEnumerator, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.RecipientInfoEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.RecipientInfoEnumerator</a>
  */
 public class RecipientInfoEnumerator extends NetObject implements Iterator<RecipientInfo> {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.RecipientInfoEnumerator
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.RecipientInfoEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class RecipientInfoEnumerator extends NetObject implements Iterator<Recip
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public RecipientInfo next() {
+	public final RecipientInfo next() {
 		try {
 			return new RecipientInfo(classInstance.next());
 		} catch (Throwable jce) {

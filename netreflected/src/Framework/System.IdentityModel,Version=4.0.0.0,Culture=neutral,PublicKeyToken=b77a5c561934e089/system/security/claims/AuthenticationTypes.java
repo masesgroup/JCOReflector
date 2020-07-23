@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.Claims.AuthenticationTypes, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Claims.AuthenticationTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Claims.AuthenticationTypes</a>
  */
 public class AuthenticationTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.Security.Claims.AuthenticationTypes
+     */
     public static final String className = "System.Security.Claims.AuthenticationTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class AuthenticationTypes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AuthenticationTypes}, a cast assert is made to check if types are compatible.
+     */
     public static AuthenticationTypes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AuthenticationTypes(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class AuthenticationTypes extends NetObject  {
 
     // Constructors section
     
+    public AuthenticationTypes() throws Throwable {
+    }
 
     
     // Methods section

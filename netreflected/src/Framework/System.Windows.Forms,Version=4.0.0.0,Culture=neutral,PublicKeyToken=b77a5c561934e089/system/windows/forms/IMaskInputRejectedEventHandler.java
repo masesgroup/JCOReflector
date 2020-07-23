@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.MaskInputRejectedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MaskInputRejectedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.MaskInputRejectedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.MaskInputRejectedEventHandler</a>
+ */
 public interface IMaskInputRejectedEventHandler {
     public void Invoke(NetObject sender, MaskInputRejectedEventArgs e);
 }

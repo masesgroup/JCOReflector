@@ -44,12 +44,27 @@ import system.componentmodel.IContainerImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.INameCreationService, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.INameCreationService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.INameCreationService</a>
  */
 public class INameCreationServiceImplementation extends NetObject implements INameCreationService {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.INameCreationService
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.INameCreationService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class INameCreationServiceImplementation extends NetObject implements INa
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INameCreationService}, a cast assert is made to check if types are compatible.
+     */
     public static INameCreationService ToINameCreationService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new INameCreationServiceImplementation(from.getJCOInstance());

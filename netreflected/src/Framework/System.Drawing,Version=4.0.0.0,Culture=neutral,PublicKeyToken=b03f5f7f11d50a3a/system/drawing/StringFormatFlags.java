@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Drawing.StringFormatFlags, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.StringFormatFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.StringFormatFlags</a>
  */
 public class StringFormatFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.StringFormatFlags
+     */
     public static final String className = "System.Drawing.StringFormatFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -145,19 +160,19 @@ public class StringFormatFlags extends NetObject  {
 
     // Flags management section
 
-    public StringFormatFlags add(StringFormatFlags val) throws Throwable {
+    public final StringFormatFlags add(StringFormatFlags val) throws Throwable {
         return new StringFormatFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public StringFormatFlags remove(StringFormatFlags val) throws Throwable {
+    public final StringFormatFlags remove(StringFormatFlags val) throws Throwable {
         return new StringFormatFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(StringFormatFlags val) throws Throwable {
+    public final boolean is(StringFormatFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(StringFormatFlags val) throws Throwable {
+    public final boolean has(StringFormatFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.provider.ProviderBase;
 import system.web.caching.CacheDependency;
 import system.collections.IDictionaryEnumerator;
 import system.collections.IDictionaryEnumeratorImplementation;
@@ -48,12 +49,27 @@ import system.collections.specialized.NameValueCollection;
 
 /**
  * The base .NET class managing System.Web.Caching.CacheStoreProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.CacheStoreProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.CacheStoreProvider</a>
  */
-public class CacheStoreProvider extends NetObject  {
+public class CacheStoreProvider extends ProviderBase  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Caching.CacheStoreProvider
+     */
     public static final String className = "System.Web.Caching.CacheStoreProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class CacheStoreProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CacheStoreProvider}, a cast assert is made to check if types are compatible.
+     */
     public static CacheStoreProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CacheStoreProvider(from.getJCOInstance());
@@ -114,6 +132,8 @@ public class CacheStoreProvider extends NetObject  {
 
     // Constructors section
     
+    public CacheStoreProvider() throws Throwable {
+    }
 
     
     // Methods section
@@ -193,7 +213,7 @@ public class CacheStoreProvider extends NetObject  {
         }
     }
 
-    public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable {
+    public void InitializeNewCacheStoreProvider(java.lang.String name, NameValueCollection config) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -242,26 +262,6 @@ public class CacheStoreProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Get("SizeInBytes");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

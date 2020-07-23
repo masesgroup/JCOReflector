@@ -38,25 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.drawing.design.UITypeEditor;
+import system.drawing.design.UITypeEditorEditStyle;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
-import system.drawing.design.UITypeEditorEditStyle;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.windows.forms.TreeView;
-import system.drawing.design.PaintValueEventArgs;
-import system.drawing.Graphics;
-import system.drawing.Rectangle;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ObjectSelectorEditor, System.Windows.Forms.Design.Editors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ObjectSelectorEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ObjectSelectorEditor</a>
  */
-public class ObjectSelectorEditor extends NetObject  {
+public class ObjectSelectorEditor extends UITypeEditor  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design.Editors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design.Editors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design.Editors
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design.Editors";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ObjectSelectorEditor
+     */
     public static final String className = "System.ComponentModel.Design.ObjectSelectorEditor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +122,9 @@ public class ObjectSelectorEditor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectSelectorEditor}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectSelectorEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectSelectorEditor(from.getJCOInstance());
@@ -117,41 +132,12 @@ public class ObjectSelectorEditor extends NetObject  {
 
     // Constructors section
     
+    public ObjectSelectorEditor() throws Throwable {
+    }
 
     
     // Methods section
     
-    public boolean GetPaintValueSupported() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetPaintValueSupported(ITypeDescriptorContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UITypeEditorEditStyle GetEditStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle");
-            return new UITypeEditorEditStyle(objGetEditStyle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -174,42 +160,11 @@ public class ObjectSelectorEditor extends NetObject  {
         }
     }
 
-    public NetObject EditValue(IServiceProvider provider, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new NetObject(objEditValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void ApplyTreeViewThemeStyles(TreeView treeView) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ApplyTreeViewThemeStyles", treeView == null ? null : treeView.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PaintValue(PaintValueEventArgs e) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PaintValue", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PaintValue(NetObject value, Graphics canvas, Rectangle rectangle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PaintValue", value == null ? null : value.getJCOInstance(), canvas == null ? null : canvas.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,16 +184,6 @@ public class ObjectSelectorEditor extends NetObject  {
     
     // Properties section
     
-    public boolean getIsDropDownResizable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDropDownResizable");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

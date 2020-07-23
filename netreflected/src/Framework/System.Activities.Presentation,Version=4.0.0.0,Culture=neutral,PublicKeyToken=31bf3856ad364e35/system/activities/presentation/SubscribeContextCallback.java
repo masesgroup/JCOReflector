@@ -42,12 +42,27 @@ import system.activities.presentation.ContextItem;
 import system.activities.presentation.ISubscribeContextCallback;
 /**
  * The base .NET class managing System.Activities.Presentation.SubscribeContextCallback, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.SubscribeContextCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.SubscribeContextCallback</a>
  */
 public class SubscribeContextCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.SubscribeContextCallback
+     */
     public static final String className = "System.Activities.Presentation.SubscribeContextCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISubscribeContextCallback callerInstance = null;
@@ -147,7 +162,7 @@ public class SubscribeContextCallback extends JCVoidDelegate implements IJCVoidE
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(ContextItem item) throws Throwable {
+    public void METHOD_JAVA_NAME(ContextItem item) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -157,7 +172,9 @@ public class SubscribeContextCallback extends JCVoidDelegate implements IJCVoidE
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(ContextItem item) {
     }
 }

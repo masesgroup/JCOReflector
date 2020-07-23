@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.accesscontrol.AccessRule;
 import system.security.principal.IdentityReference;
 import system.security.accesscontrol.FileSystemRights;
 import system.security.accesscontrol.AccessControlType;
@@ -47,12 +48,27 @@ import system.security.accesscontrol.PropagationFlags;
 
 /**
  * The base .NET class managing System.Security.AccessControl.FileSystemAccessRule, System.IO.FileSystem.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.FileSystemAccessRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.FileSystemAccessRule</a>
  */
-public class FileSystemAccessRule extends NetObject  {
+public class FileSystemAccessRule extends AccessRule  {
+    /**
+     * Fully assembly qualified name: System.IO.FileSystem.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.IO.FileSystem.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.IO.FileSystem.AccessControl
+     */
     public static final String assemblyShortName = "System.IO.FileSystem.AccessControl";
+    /**
+     * Qualified class name: System.Security.AccessControl.FileSystemAccessRule
+     */
     public static final String className = "System.Security.AccessControl.FileSystemAccessRule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class FileSystemAccessRule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileSystemAccessRule}, a cast assert is made to check if types are compatible.
+     */
     public static FileSystemAccessRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileSystemAccessRule(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class FileSystemAccessRule extends NetObject  {
 
     // Constructors section
     
+    public FileSystemAccessRule() throws Throwable {
+    }
 
     public FileSystemAccessRule(IdentityReference identity, FileSystemRights fileSystemRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
@@ -155,6 +175,7 @@ public class FileSystemAccessRule extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -162,66 +183,12 @@ public class FileSystemAccessRule extends NetObject  {
     
     // Properties section
     
-    public boolean getIsInherited() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInherited");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AccessControlType getAccessControlType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AccessControlType");
-            return new AccessControlType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileSystemRights getFileSystemRights() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("FileSystemRights");
             return new FileSystemRights(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InheritanceFlags getInheritanceFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InheritanceFlags");
-            return new InheritanceFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropagationFlags getPropagationFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropagationFlags");
-            return new PropagationFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IdentityReference getIdentityReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IdentityReference");
-            return new IdentityReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.linq.expressions.Expression;
+import system.linq.expressions.ExpressionVisitor;
 
 
 /**
  * The base .NET class managing System.Linq.Expressions.DynamicExpressionVisitor, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.DynamicExpressionVisitor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.DynamicExpressionVisitor</a>
  */
-public class DynamicExpressionVisitor extends NetObject  {
+public class DynamicExpressionVisitor extends ExpressionVisitor  {
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
     public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Linq.Expressions.DynamicExpressionVisitor
+     */
     public static final String className = "System.Linq.Expressions.DynamicExpressionVisitor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class DynamicExpressionVisitor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicExpressionVisitor}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicExpressionVisitor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicExpressionVisitor(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class DynamicExpressionVisitor extends NetObject  {
 
     // Constructors section
     
-
     public DynamicExpressionVisitor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -124,17 +140,6 @@ public class DynamicExpressionVisitor extends NetObject  {
     
     // Methods section
     
-    public Expression Visit(Expression node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objVisit = (JCObject)classInstance.Invoke("Visit", node == null ? null : node.getJCOInstance());
-            return new Expression(objVisit);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

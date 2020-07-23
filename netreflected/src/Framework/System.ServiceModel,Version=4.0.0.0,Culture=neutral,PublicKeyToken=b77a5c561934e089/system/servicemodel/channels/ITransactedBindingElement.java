@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.ITransactedBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ITransactedBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ITransactedBindingElement</a>
  */
 public interface ITransactedBindingElement extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
+    public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.ITransactedBindingElement
+     */
+    public static final String className = "System.ServiceModel.Channels.ITransactedBindingElement";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITransactedBindingElement}, a cast assert is made to check if types are compatible.
+     */
     public static ITransactedBindingElement ToITransactedBindingElement(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ServiceModel.Channels.ITransactedBindingElement, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ServiceModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITransactedBindingElementImplementation(from.getJCOInstance());
     }

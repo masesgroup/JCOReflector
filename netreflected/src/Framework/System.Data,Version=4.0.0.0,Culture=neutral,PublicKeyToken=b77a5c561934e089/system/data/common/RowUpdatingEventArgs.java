@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.data.DataRow;
 import system.data.IDbCommand;
 import system.data.IDbCommandImplementation;
@@ -48,12 +49,27 @@ import system.data.UpdateStatus;
 
 /**
  * The base .NET class managing System.Data.Common.RowUpdatingEventArgs, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.RowUpdatingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.RowUpdatingEventArgs</a>
  */
-public class RowUpdatingEventArgs extends NetObject  {
+public class RowUpdatingEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.Common.RowUpdatingEventArgs
+     */
     public static final String className = "System.Data.Common.RowUpdatingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class RowUpdatingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RowUpdatingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static RowUpdatingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RowUpdatingEventArgs(from.getJCOInstance());
@@ -114,6 +132,8 @@ public class RowUpdatingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public RowUpdatingEventArgs() throws Throwable {
+    }
 
     public RowUpdatingEventArgs(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
@@ -124,6 +144,7 @@ public class RowUpdatingEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.specialized.INotifyCollectionChanged;
+import system.collections.specialized.INotifyCollectionChangedImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.componentmodel.SortDescriptionCollection;
@@ -49,12 +51,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.ICollectionView, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICollectionView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICollectionView</a>
  */
-public class ICollectionViewImplementation extends NetObject implements ICollectionView {
+public class ICollectionViewImplementation extends IEnumerableImplementation implements ICollectionView {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.ICollectionView
+     */
     public static final String className = "System.ComponentModel.ICollectionView";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +119,9 @@ public class ICollectionViewImplementation extends NetObject implements ICollect
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollectionView}, a cast assert is made to check if types are compatible.
+     */
     public static ICollectionView ToICollectionView(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICollectionViewImplementation(from.getJCOInstance());

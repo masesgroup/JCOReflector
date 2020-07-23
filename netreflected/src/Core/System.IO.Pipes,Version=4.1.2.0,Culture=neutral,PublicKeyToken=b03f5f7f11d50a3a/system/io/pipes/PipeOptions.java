@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.IO.Pipes.PipeOptions, System.IO.Pipes, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipeOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipeOptions</a>
  */
 public class PipeOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IO.Pipes, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.IO.Pipes, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.IO.Pipes
+     */
     public static final String assemblyShortName = "System.IO.Pipes";
+    /**
+     * Qualified class name: System.IO.Pipes.PipeOptions
+     */
     public static final String className = "System.IO.Pipes.PipeOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class PipeOptions extends NetObject  {
 
     // Flags management section
 
-    public PipeOptions add(PipeOptions val) throws Throwable {
+    public final PipeOptions add(PipeOptions val) throws Throwable {
         return new PipeOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PipeOptions remove(PipeOptions val) throws Throwable {
+    public final PipeOptions remove(PipeOptions val) throws Throwable {
         return new PipeOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PipeOptions val) throws Throwable {
+    public final boolean is(PipeOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PipeOptions val) throws Throwable {
+    public final boolean has(PipeOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

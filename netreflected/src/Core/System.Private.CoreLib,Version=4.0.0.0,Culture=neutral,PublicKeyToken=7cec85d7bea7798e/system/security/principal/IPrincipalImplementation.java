@@ -44,12 +44,27 @@ import system.security.principal.IIdentityImplementation;
 
 /**
  * The base .NET class managing System.Security.Principal.IPrincipal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IPrincipal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IPrincipal</a>
  */
 public class IPrincipalImplementation extends NetObject implements IPrincipal {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Security.Principal.IPrincipal
+     */
     public static final String className = "System.Security.Principal.IPrincipal";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IPrincipalImplementation extends NetObject implements IPrincipal {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPrincipal}, a cast assert is made to check if types are compatible.
+     */
     public static IPrincipal ToIPrincipal(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IPrincipalImplementation(from.getJCOInstance());

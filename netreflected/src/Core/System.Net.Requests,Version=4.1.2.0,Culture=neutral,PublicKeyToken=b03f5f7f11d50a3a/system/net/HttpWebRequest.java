@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.WebRequest;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
@@ -52,24 +53,37 @@ import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
 import system.net.IWebProxy;
 import system.net.IWebProxyImplementation;
-import system.net.security.AuthenticationLevel;
 import system.net.security.RemoteCertificateValidationCallback;
 import system.net.ServicePoint;
 import system.net.WebHeaderCollection;
 import system.security.cryptography.x509certificates.X509CertificateCollection;
-import system.security.principal.TokenImpersonationLevel;
 import system.Uri;
 import system.Version;
 
 
 /**
  * The base .NET class managing System.Net.HttpWebRequest, System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpWebRequest" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpWebRequest</a>
  */
-public class HttpWebRequest extends NetObject  {
+public class HttpWebRequest extends WebRequest  {
+    /**
+     * Fully assembly qualified name: System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Requests
+     */
     public static final String assemblyShortName = "System.Net.Requests";
+    /**
+     * Qualified class name: System.Net.HttpWebRequest
+     */
     public static final String className = "System.Net.HttpWebRequest";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -122,7 +136,9 @@ public class HttpWebRequest extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpWebRequest}, a cast assert is made to check if types are compatible.
+     */
     public static HttpWebRequest cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpWebRequest(from.getJCOInstance());
@@ -130,7 +146,6 @@ public class HttpWebRequest extends NetObject  {
 
     // Constructors section
     
-
     public HttpWebRequest() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -211,23 +226,11 @@ public class HttpWebRequest extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void Abort() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.AggregateException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
+            classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,26 +430,6 @@ public class HttpWebRequest extends NetObject  {
         }
     }
 
-    public boolean getPreAuthenticate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("PreAuthenticate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPreAuthenticate(boolean PreAuthenticate) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PreAuthenticate", PreAuthenticate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getSendChunked() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -497,26 +480,6 @@ public class HttpWebRequest extends NetObject  {
         }
     }
 
-    public boolean getUseDefaultCredentials() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UseDefaultCredentials");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setUseDefaultCredentials(boolean UseDefaultCredentials) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("UseDefaultCredentials", UseDefaultCredentials);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getContinueTimeout() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -537,41 +500,41 @@ public class HttpWebRequest extends NetObject  {
         }
     }
 
-    public static int getDefaultMaximumErrorResponseLength() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getDefaultMaximumErrorResponseLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("DefaultMaximumErrorResponseLength");
+            return (int)classInstance.Get("DefaultMaximumErrorResponseLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultMaximumErrorResponseLength(int DefaultMaximumErrorResponseLength) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultMaximumErrorResponseLength(int DefaultMaximumErrorResponseLength) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultMaximumErrorResponseLength", DefaultMaximumErrorResponseLength);
+            classInstance.Set("DefaultMaximumErrorResponseLength", DefaultMaximumErrorResponseLength);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getDefaultMaximumResponseHeadersLength() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getDefaultMaximumResponseHeadersLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("DefaultMaximumResponseHeadersLength");
+            return (int)classInstance.Get("DefaultMaximumResponseHeadersLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultMaximumResponseHeadersLength(int DefaultMaximumResponseHeadersLength) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultMaximumResponseHeadersLength(int DefaultMaximumResponseHeadersLength) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultMaximumResponseHeadersLength", DefaultMaximumResponseHeadersLength);
+            classInstance.Set("DefaultMaximumResponseHeadersLength", DefaultMaximumResponseHeadersLength);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,46 +600,6 @@ public class HttpWebRequest extends NetObject  {
         }
     }
 
-    public int getTimeout() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Timeout");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTimeout(int Timeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Timeout", Timeout);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getContentLength() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("ContentLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setContentLength(long ContentLength) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ContentLength", ContentLength);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DateTime getDate() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.net.ProtocolViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -719,43 +642,22 @@ public class HttpWebRequest extends NetObject  {
         }
     }
 
-    public RequestCachePolicy getCachePolicy() throws Throwable {
+    public RequestCachePolicy getDefaultCachePolicy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CachePolicy");
+            JCObject val = (JCObject)classInstance.Get("DefaultCachePolicy");
             return new RequestCachePolicy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCachePolicy(RequestCachePolicy CachePolicy) throws Throwable {
+    public void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("CachePolicy", CachePolicy == null ? null : CachePolicy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static RequestCachePolicy getDefaultCachePolicy() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("DefaultCachePolicy");
-            return new RequestCachePolicy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
+            classInstance.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -823,69 +725,6 @@ public class HttpWebRequest extends NetObject  {
         }
     }
 
-    public ICredentials getCredentials() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Credentials");
-            return new ICredentialsImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCredentials(ICredentials Credentials) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IWebProxy getProxy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Proxy");
-            return new IWebProxyImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setProxy(IWebProxy Proxy) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Proxy", Proxy == null ? null : Proxy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AuthenticationLevel getAuthenticationLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationLevel");
-            return new AuthenticationLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAuthenticationLevel(AuthenticationLevel AuthenticationLevel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AuthenticationLevel", AuthenticationLevel == null ? null : AuthenticationLevel.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RemoteCertificateValidationCallback getServerCertificateValidationCallback() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -917,27 +756,6 @@ public class HttpWebRequest extends NetObject  {
         }
     }
 
-    public WebHeaderCollection getHeaders() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
-            return new WebHeaderCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHeaders(WebHeaderCollection Headers) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Headers", Headers == null ? null : Headers.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public X509CertificateCollection getClientCertificates() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -954,27 +772,6 @@ public class HttpWebRequest extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCertificates", ClientCertificates == null ? null : ClientCertificates.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TokenImpersonationLevel getImpersonationLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ImpersonationLevel");
-            return new TokenImpersonationLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setImpersonationLevel(TokenImpersonationLevel ImpersonationLevel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ImpersonationLevel", ImpersonationLevel == null ? null : ImpersonationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1015,46 +812,6 @@ public class HttpWebRequest extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Connection", Connection);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getConnectionGroupName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ConnectionGroupName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setConnectionGroupName(java.lang.String ConnectionGroupName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ConnectionGroupName", ConnectionGroupName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getContentType() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ContentType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setContentType(java.lang.String ContentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ContentType", ContentType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1115,26 +872,6 @@ public class HttpWebRequest extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MediaType", MediaType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getMethod() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Method");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setMethod(java.lang.String Method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Method", Method);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1205,17 +942,6 @@ public class HttpWebRequest extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Address");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getRequestUri() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RequestUri");
             return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

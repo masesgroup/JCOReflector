@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.ServiceHealthData, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceHealthData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceHealthData</a>
  */
 public class ServiceHealthData extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.ServiceHealthData
+     */
     public static final String className = "System.ServiceModel.Description.ServiceHealthData";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ServiceHealthData extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceHealthData}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceHealthData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceHealthData(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ServiceHealthData extends NetObject  {
 
     // Constructors section
     
+    public ServiceHealthData() throws Throwable {
+    }
 
     public ServiceHealthData(java.lang.String key, java.lang.String[] values) throws Throwable, system.ArgumentNullException {
         try {
@@ -118,6 +137,7 @@ public class ServiceHealthData extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

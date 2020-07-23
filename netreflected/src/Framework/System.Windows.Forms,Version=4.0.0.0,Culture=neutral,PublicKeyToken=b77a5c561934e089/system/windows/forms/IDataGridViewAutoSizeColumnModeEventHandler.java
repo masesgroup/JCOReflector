@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewAutoSizeColumnModeEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewAutoSizeColumnModeEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAutoSizeColumnModeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAutoSizeColumnModeEventHandler</a>
+ */
 public interface IDataGridViewAutoSizeColumnModeEventHandler {
     public void Invoke(NetObject sender, DataGridViewAutoSizeColumnModeEventArgs e);
 }

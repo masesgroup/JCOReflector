@@ -50,12 +50,29 @@ import system.servicemodel.peerresolvers.UnregisterInfo;
 
 /**
  * The base .NET class managing System.ServiceModel.PeerResolvers.IPeerResolverContract, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.PeerResolvers.IPeerResolverContract" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.PeerResolvers.IPeerResolverContract</a>
  */
 public interface IPeerResolverContract extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
+    public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.PeerResolvers.IPeerResolverContract
+     */
+    public static final String className = "System.ServiceModel.PeerResolvers.IPeerResolverContract";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPeerResolverContract}, a cast assert is made to check if types are compatible.
+     */
     public static IPeerResolverContract ToIPeerResolverContract(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ServiceModel.PeerResolvers.IPeerResolverContract, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ServiceModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPeerResolverContractImplementation(from.getJCOInstance());
     }

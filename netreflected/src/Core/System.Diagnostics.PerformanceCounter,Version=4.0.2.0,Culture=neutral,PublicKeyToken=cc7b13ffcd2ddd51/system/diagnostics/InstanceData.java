@@ -43,12 +43,27 @@ import system.diagnostics.CounterSample;
 
 /**
  * The base .NET class managing System.Diagnostics.InstanceData, System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InstanceData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InstanceData</a>
  */
 public class InstanceData extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.PerformanceCounter
+     */
     public static final String assemblyShortName = "System.Diagnostics.PerformanceCounter";
+    /**
+     * Qualified class name: System.Diagnostics.InstanceData
+     */
     public static final String className = "System.Diagnostics.InstanceData";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class InstanceData extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceData}, a cast assert is made to check if types are compatible.
+     */
     public static InstanceData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InstanceData(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class InstanceData extends NetObject  {
 
     // Constructors section
     
+    public InstanceData() throws Throwable {
+    }
 
     public InstanceData(java.lang.String instanceName, CounterSample sample) throws Throwable {
         try {
@@ -119,6 +138,7 @@ public class InstanceData extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -49,12 +49,27 @@ import system.windows.forms.DataObject;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.MyServices.ClipboardProxy, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.MyServices.ClipboardProxy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.MyServices.ClipboardProxy</a>
  */
 public class ClipboardProxy extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.MyServices.ClipboardProxy
+     */
     public static final String className = "Microsoft.VisualBasic.MyServices.ClipboardProxy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class ClipboardProxy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClipboardProxy}, a cast assert is made to check if types are compatible.
+     */
     public static ClipboardProxy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ClipboardProxy(from.getJCOInstance());
@@ -115,6 +132,10 @@ public class ClipboardProxy extends NetObject  {
 
     // Constructors section
     
+    public ClipboardProxy() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -269,6 +290,16 @@ public class ClipboardProxy extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAudio", (Object)audioBytes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetAudio(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.ThreadStateException, system.IndexOutOfRangeException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetAudio", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

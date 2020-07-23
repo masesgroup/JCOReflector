@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.printing.ConflictStatus;
 import system.printing.PrintTicket;
 
 
 /**
  * The base .NET class managing System.Printing.ValidationResult, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.ValidationResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.ValidationResult</a>
  */
-public class ValidationResult extends NetObject  {
+public class ValidationResult extends ValueType  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Printing.ValidationResult
+     */
     public static final String className = "System.Printing.ValidationResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ValidationResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValidationResult}, a cast assert is made to check if types are compatible.
+     */
     public static ValidationResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValidationResult(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class ValidationResult extends NetObject  {
 
     // Constructors section
     
+    public ValidationResult() throws Throwable {
+    }
+
+
 
     
     // Methods section

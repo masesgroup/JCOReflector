@@ -43,12 +43,27 @@ import system.enterpriseservices.compensatingresourcemanager.LogRecordFlags;
 
 /**
  * The base .NET class managing System.EnterpriseServices.CompensatingResourceManager.LogRecord, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.LogRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.LogRecord</a>
  */
 public class LogRecord extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.CompensatingResourceManager.LogRecord
+     */
     public static final String className = "System.EnterpriseServices.CompensatingResourceManager.LogRecord";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class LogRecord extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LogRecord}, a cast assert is made to check if types are compatible.
+     */
     public static LogRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LogRecord(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class LogRecord extends NetObject  {
 
     // Constructors section
     
+    public LogRecord() throws Throwable {
+    }
+
+
 
     
     // Methods section

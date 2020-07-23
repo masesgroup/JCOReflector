@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.controls.primitives.IItemContainerGenerator;
+import system.windows.controls.primitives.IItemContainerGeneratorImplementation;
 import system.windows.controls.primitives.GeneratorPosition;
 import system.IDisposable;
 import system.IDisposableImplementation;
@@ -48,12 +50,29 @@ import system.windows.DependencyObject;
 
 /**
  * The base .NET class managing System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator</a>
  */
-public interface IRecyclingItemContainerGenerator extends IJCOBridgeReflected {
-
+public interface IRecyclingItemContainerGenerator extends IJCOBridgeReflected, IItemContainerGenerator {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
+    public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator
+     */
+    public static final String className = "System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRecyclingItemContainerGenerator}, a cast assert is made to check if types are compatible.
+     */
     public static IRecyclingItemContainerGenerator ToIRecyclingItemContainerGenerator(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "PresentationFramework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRecyclingItemContainerGeneratorImplementation(from.getJCOInstance());
     }
@@ -96,25 +115,16 @@ public interface IRecyclingItemContainerGenerator extends IJCOBridgeReflected {
 
     // Methods section
     
-    public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable;
 
-    public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction) throws Throwable;
 
-    public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction, boolean allowStartAtRealizedItem) throws Throwable;
 
-    public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable;
 
-    public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable;
 
-    public DependencyObject GenerateNext() throws Throwable;
 
-    public void PrepareItemContainer(DependencyObject container) throws Throwable;
 
     public void Recycle(GeneratorPosition position, int count) throws Throwable;
 
-    public void Remove(GeneratorPosition position, int count) throws Throwable;
 
-    public void RemoveAll() throws Throwable;
 
 
     

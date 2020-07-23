@@ -37,18 +37,37 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.build.framework.ITaskHost;
+import microsoft.build.framework.ITaskHostImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Hosting.ICscHostObject, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject</a>
  */
-public interface ICscHostObject extends IJCOBridgeReflected {
-
+public interface ICscHostObject extends IJCOBridgeReflected, ITaskHost {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Hosting.ICscHostObject
+     */
+    public static final String className = "Microsoft.Build.Tasks.Hosting.ICscHostObject";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICscHostObject}, a cast assert is made to check if types are compatible.
+     */
     public static ICscHostObject ToICscHostObject(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Tasks.Hosting.ICscHostObject, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Tasks.v4.0"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICscHostObjectImplementation(from.getJCOInstance());
     }
@@ -99,7 +118,11 @@ public interface ICscHostObject extends IJCOBridgeReflected {
 
     public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable;
 
+    public boolean SetAdditionalLibPaths(JCRefOut dupParam0) throws Throwable;
+
     public boolean SetAddModules(java.lang.String[] addModules) throws Throwable;
+
+    public boolean SetAddModules(JCRefOut dupParam0) throws Throwable;
 
     public boolean SetAllowUnsafeBlocks(boolean allowUnsafeBlocks) throws Throwable;
 

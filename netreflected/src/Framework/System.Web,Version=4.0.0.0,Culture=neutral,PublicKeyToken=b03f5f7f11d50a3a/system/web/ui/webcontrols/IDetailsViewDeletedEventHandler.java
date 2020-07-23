@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.DetailsViewDeletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DetailsViewDeletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewDeletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewDeletedEventHandler</a>
+ */
 public interface IDetailsViewDeletedEventHandler {
     public void Invoke(NetObject sender, DetailsViewDeletedEventArgs e);
 }

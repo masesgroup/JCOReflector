@@ -42,12 +42,27 @@ import system.xml.xsl.XsltMessageEncounteredEventArgs;
 import system.xml.xsl.IXsltMessageEncounteredEventHandler;
 /**
  * The base .NET class managing System.Xml.Xsl.XsltMessageEncounteredEventHandler, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltMessageEncounteredEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltMessageEncounteredEventHandler</a>
  */
 public class XsltMessageEncounteredEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.XsltMessageEncounteredEventHandler
+     */
     public static final String className = "System.Xml.Xsl.XsltMessageEncounteredEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IXsltMessageEncounteredEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class XsltMessageEncounteredEventHandler extends JCVoidDelegate implement
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, XsltMessageEncounteredEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, XsltMessageEncounteredEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class XsltMessageEncounteredEventHandler extends JCVoidDelegate implement
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, XsltMessageEncounteredEventArgs e) {
     }
 }

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.xml.serialization.UnreferencedObjectEventHandler;
 import system.xml.serialization.XmlAttributeEventHandler;
 import system.xml.serialization.XmlElementEventHandler;
@@ -46,12 +47,27 @@ import system.xml.serialization.XmlNodeEventHandler;
 
 /**
  * The base .NET class managing System.Xml.Serialization.XmlDeserializationEvents, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents</a>
  */
-public class XmlDeserializationEvents extends NetObject  {
+public class XmlDeserializationEvents extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.XmlDeserializationEvents
+     */
     public static final String className = "System.Xml.Serialization.XmlDeserializationEvents";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class XmlDeserializationEvents extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDeserializationEvents}, a cast assert is made to check if types are compatible.
+     */
     public static XmlDeserializationEvents cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlDeserializationEvents(from.getJCOInstance());
@@ -112,6 +130,10 @@ public class XmlDeserializationEvents extends NetObject  {
 
     // Constructors section
     
+    public XmlDeserializationEvents() throws Throwable {
+    }
+
+
 
     
     // Methods section

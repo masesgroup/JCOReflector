@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.threading.IContextCallback;
 /**
  * The base .NET class managing System.Threading.ContextCallback, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ContextCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ContextCallback</a>
  */
 public class ContextCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.ContextCallback
+     */
     public static final String className = "System.Threading.ContextCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IContextCallback callerInstance = null;
@@ -146,7 +161,7 @@ public class ContextCallback extends JCVoidDelegate implements IJCVoidEventEmit,
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject state) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -156,7 +171,9 @@ public class ContextCallback extends JCVoidDelegate implements IJCVoidEventEmit,
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject state) {
     }
 }

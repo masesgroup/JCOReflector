@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.policy.EvidenceBase;
 import system.reflection.Assembly;
 import system.security.cryptography.HashAlgorithm;
-import system.security.policy.EvidenceBase;
 import system.security.policy.Hash;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
@@ -48,12 +48,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.Security.Policy.Hash, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Hash" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Hash</a>
  */
-public class Hash extends NetObject  {
+public class Hash extends EvidenceBase  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Policy.Hash
+     */
     public static final String className = "System.Security.Policy.Hash";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class Hash extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Hash}, a cast assert is made to check if types are compatible.
+     */
     public static Hash cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Hash(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class Hash extends NetObject  {
 
     // Constructors section
     
+    public Hash() throws Throwable {
+    }
 
     public Hash(Assembly assembly) throws Throwable {
         try {
@@ -124,6 +143,7 @@ public class Hash extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -148,22 +168,22 @@ public class Hash extends NetObject  {
         }
     }
 
-    public EvidenceBase Clone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new EvidenceBase(objClone);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Hash CreateMD5(byte[] md5) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (Object)md5);
+            return new Hash(objCreateMD5);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Hash CreateMD5(JCRefOut dupParam0) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (Object)dupParam0);
             return new Hash(objCreateMD5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,11 +201,33 @@ public class Hash extends NetObject  {
         }
     }
 
+    public static Hash CreateSHA1(JCRefOut dupParam0) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (Object)dupParam0);
+            return new Hash(objCreateSHA1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Hash CreateSHA256(byte[] sha256) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (Object)sha256);
+            return new Hash(objCreateSHA256);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Hash CreateSHA256(JCRefOut dupParam0) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (Object)dupParam0);
             return new Hash(objCreateSHA256);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

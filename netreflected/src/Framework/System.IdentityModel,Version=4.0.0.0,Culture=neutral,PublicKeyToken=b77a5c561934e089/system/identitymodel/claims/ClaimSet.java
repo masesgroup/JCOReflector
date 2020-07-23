@@ -44,12 +44,27 @@ import system.identitymodel.claims.ClaimSet;
 
 /**
  * The base .NET class managing System.IdentityModel.Claims.ClaimSet, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.ClaimSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.ClaimSet</a>
  */
 public class ClaimSet extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Claims.ClaimSet
+     */
     public static final String className = "System.IdentityModel.Claims.ClaimSet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ClaimSet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClaimSet}, a cast assert is made to check if types are compatible.
+     */
     public static ClaimSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ClaimSet(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class ClaimSet extends NetObject  {
 
     // Constructors section
     
+    public ClaimSet() throws Throwable {
+    }
 
     
     // Methods section
@@ -149,22 +168,22 @@ public class ClaimSet extends NetObject  {
         }
     }
 
-    public static ClaimSet getSystem() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ClaimSet getSystem() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("System");
+            JCObject val = (JCObject)classInstance.Get("System");
             return new ClaimSet(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ClaimSet getWindows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.SystemException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ClaimSet getWindows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.SystemException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Windows");
+            JCObject val = (JCObject)classInstance.Get("Windows");
             return new ClaimSet(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

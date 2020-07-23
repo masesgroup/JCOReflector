@@ -38,7 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Array;
+import system.collections.DictionaryBase;
 import system.diagnostics.InstanceDataCollection;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
@@ -46,12 +46,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Diagnostics.InstanceDataCollectionCollection, System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection</a>
  */
-public class InstanceDataCollectionCollection extends NetObject  {
+public class InstanceDataCollectionCollection extends DictionaryBase  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.PerformanceCounter
+     */
     public static final String assemblyShortName = "System.Diagnostics.PerformanceCounter";
+    /**
+     * Qualified class name: System.Diagnostics.InstanceDataCollectionCollection
+     */
     public static final String className = "System.Diagnostics.InstanceDataCollectionCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class InstanceDataCollectionCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceDataCollectionCollection}, a cast assert is made to check if types are compatible.
+     */
     public static InstanceDataCollectionCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InstanceDataCollectionCollection(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class InstanceDataCollectionCollection extends NetObject  {
 
     // Constructors section
     
-
     public InstanceDataCollectionCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -137,26 +153,6 @@ public class InstanceDataCollectionCollection extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CopyTo(InstanceDataCollection[] counters, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -171,16 +167,6 @@ public class InstanceDataCollectionCollection extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICollection getKeys() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

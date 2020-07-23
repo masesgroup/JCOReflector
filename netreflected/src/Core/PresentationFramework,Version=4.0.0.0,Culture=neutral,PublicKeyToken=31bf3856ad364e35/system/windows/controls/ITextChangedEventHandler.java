@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.TextChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TextChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextChangedEventHandler</a>
+ */
 public interface ITextChangedEventHandler {
     public void Invoke(NetObject sender, TextChangedEventArgs e);
 }

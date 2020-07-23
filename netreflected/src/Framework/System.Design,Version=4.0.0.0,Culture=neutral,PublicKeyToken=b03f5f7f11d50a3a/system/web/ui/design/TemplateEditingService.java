@@ -49,12 +49,27 @@ import system.web.ui.webcontrols.Style;
 
 /**
  * The base .NET class managing System.Web.UI.Design.TemplateEditingService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TemplateEditingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TemplateEditingService</a>
  */
 public class TemplateEditingService extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.TemplateEditingService
+     */
     public static final String className = "System.Web.UI.Design.TemplateEditingService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class TemplateEditingService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateEditingService}, a cast assert is made to check if types are compatible.
+     */
     public static TemplateEditingService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TemplateEditingService(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class TemplateEditingService extends NetObject  {
 
     // Constructors section
     
+    public TemplateEditingService() throws Throwable {
+    }
 
     public TemplateEditingService(IDesignerHost designerHost) throws Throwable, system.ArgumentNullException {
         try {
@@ -125,6 +144,7 @@ public class TemplateEditingService extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -151,11 +171,33 @@ public class TemplateEditingService extends NetObject  {
         }
     }
 
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            return new ITemplateEditingFrameImplementation(objCreateFrame);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames, Style controlStyle, Style[] templateStyles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", designer == null ? null : designer.getJCOInstance(), frameName, templateNames, controlStyle == null ? null : controlStyle.getJCOInstance(), toObjectFromArray(templateStyles));
+            return new ITemplateEditingFrameImplementation(objCreateFrame);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4));
             return new ITemplateEditingFrameImplementation(objCreateFrame);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

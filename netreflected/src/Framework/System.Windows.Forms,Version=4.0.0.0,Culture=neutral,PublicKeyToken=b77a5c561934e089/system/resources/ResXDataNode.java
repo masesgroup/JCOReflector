@@ -47,12 +47,27 @@ import system.reflection.AssemblyName;
 
 /**
  * The base .NET class managing System.Resources.ResXDataNode, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResXDataNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResXDataNode</a>
  */
 public class ResXDataNode extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Resources.ResXDataNode
+     */
     public static final String className = "System.Resources.ResXDataNode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ResXDataNode extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResXDataNode}, a cast assert is made to check if types are compatible.
+     */
     public static ResXDataNode cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResXDataNode(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ResXDataNode extends NetObject  {
 
     // Constructors section
     
+    public ResXDataNode() throws Throwable {
+    }
 
     public ResXDataNode(java.lang.String name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         try {
@@ -133,6 +152,7 @@ public class ResXDataNode extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

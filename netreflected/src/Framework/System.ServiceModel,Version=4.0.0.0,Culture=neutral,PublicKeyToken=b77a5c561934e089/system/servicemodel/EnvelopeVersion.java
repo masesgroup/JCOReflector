@@ -43,12 +43,27 @@ import system.servicemodel.EnvelopeVersion;
 
 /**
  * The base .NET class managing System.ServiceModel.EnvelopeVersion, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.EnvelopeVersion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.EnvelopeVersion</a>
  */
 public class EnvelopeVersion extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.EnvelopeVersion
+     */
     public static final String className = "System.ServiceModel.EnvelopeVersion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class EnvelopeVersion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EnvelopeVersion}, a cast assert is made to check if types are compatible.
+     */
     public static EnvelopeVersion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EnvelopeVersion(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class EnvelopeVersion extends NetObject  {
 
     // Constructors section
     
+    public EnvelopeVersion() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -136,33 +157,33 @@ public class EnvelopeVersion extends NetObject  {
     
     // Properties section
     
-    public static EnvelopeVersion getNone() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public EnvelopeVersion getNone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            JCObject val = (JCObject)classInstance.Get("None");
             return new EnvelopeVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static EnvelopeVersion getSoap11() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public EnvelopeVersion getSoap11() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Soap11");
+            JCObject val = (JCObject)classInstance.Get("Soap11");
             return new EnvelopeVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static EnvelopeVersion getSoap12() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public EnvelopeVersion getSoap12() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Soap12");
+            JCObject val = (JCObject)classInstance.Get("Soap12");
             return new EnvelopeVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

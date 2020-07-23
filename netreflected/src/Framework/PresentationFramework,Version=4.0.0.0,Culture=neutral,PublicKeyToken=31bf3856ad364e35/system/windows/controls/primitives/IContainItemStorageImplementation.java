@@ -43,12 +43,27 @@ import system.windows.DependencyProperty;
 
 /**
  * The base .NET class managing System.Windows.Controls.Primitives.IContainItemStorage, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage</a>
  */
 public class IContainItemStorageImplementation extends NetObject implements IContainItemStorage {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.Primitives.IContainItemStorage
+     */
     public static final String className = "System.Windows.Controls.Primitives.IContainItemStorage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContainItemStorage}, a cast assert is made to check if types are compatible.
+     */
     public static IContainItemStorage ToIContainItemStorage(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IContainItemStorageImplementation(from.getJCOInstance());

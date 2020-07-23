@@ -44,12 +44,27 @@ import system.security.cryptography.AsnEncodedDataEnumerator;
 
 /**
  * The base .NET class managing System.Security.Cryptography.AsnEncodedDataCollection, System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsnEncodedDataCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsnEncodedDataCollection</a>
  */
 public class AsnEncodedDataCollection extends NetObject implements Iterable<AsnEncodedData> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Encoding
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Encoding";
+    /**
+     * Qualified class name: System.Security.Cryptography.AsnEncodedDataCollection
+     */
     public static final String className = "System.Security.Cryptography.AsnEncodedDataCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class AsnEncodedDataCollection extends NetObject implements Iterable<AsnE
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsnEncodedDataCollection}, a cast assert is made to check if types are compatible.
+     */
     public static AsnEncodedDataCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsnEncodedDataCollection(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class AsnEncodedDataCollection extends NetObject implements Iterable<AsnE
 
     // Constructors section
     
-
     public AsnEncodedDataCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -145,12 +161,12 @@ public class AsnEncodedDataCollection extends NetObject implements Iterable<AsnE
         }
     }
 
-    public AsnEncodedDataEnumerator GetEnumerator() throws Throwable {
+    public final AsnEncodedDataEnumerator GetEnumerator() throws Throwable {
         return new AsnEncodedDataEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<AsnEncodedData> iterator() {
+	public final java.util.Iterator<AsnEncodedData> iterator() {
 		return new AsnEncodedDataEnumerator(classInstance);
 	}
 

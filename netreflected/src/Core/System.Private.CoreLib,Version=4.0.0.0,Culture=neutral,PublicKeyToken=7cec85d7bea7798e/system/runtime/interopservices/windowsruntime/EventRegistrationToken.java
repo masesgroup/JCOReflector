@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.UInt64;
 import system.runtime.interopservices.windowsruntime.EventRegistrationToken;
 
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken</a>
  */
-public class EventRegistrationToken extends NetObject  {
+public class EventRegistrationToken extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken
+     */
     public static final String className = "System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class EventRegistrationToken extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventRegistrationToken}, a cast assert is made to check if types are compatible.
+     */
     public static EventRegistrationToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventRegistrationToken(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class EventRegistrationToken extends NetObject  {
 
     // Constructors section
     
+    public EventRegistrationToken() throws Throwable {
+    }
 
     public EventRegistrationToken(UInt64 value) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class EventRegistrationToken extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Messaging.StandardAccessRights, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.StandardAccessRights" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.StandardAccessRights</a>
  */
 public class StandardAccessRights extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.StandardAccessRights
+     */
     public static final String className = "System.Messaging.StandardAccessRights";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -147,19 +162,19 @@ public class StandardAccessRights extends NetObject  {
 
     // Flags management section
 
-    public StandardAccessRights add(StandardAccessRights val) throws Throwable {
+    public final StandardAccessRights add(StandardAccessRights val) throws Throwable {
         return new StandardAccessRights(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public StandardAccessRights remove(StandardAccessRights val) throws Throwable {
+    public final StandardAccessRights remove(StandardAccessRights val) throws Throwable {
         return new StandardAccessRights(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(StandardAccessRights val) throws Throwable {
+    public final boolean is(StandardAccessRights val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(StandardAccessRights val) throws Throwable {
+    public final boolean has(StandardAccessRights val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

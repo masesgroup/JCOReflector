@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.ResourceLocation, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ResourceLocation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ResourceLocation</a>
  */
 public class ResourceLocation extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.ResourceLocation
+     */
     public static final String className = "System.Reflection.ResourceLocation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class ResourceLocation extends NetObject  {
 
     // Flags management section
 
-    public ResourceLocation add(ResourceLocation val) throws Throwable {
+    public final ResourceLocation add(ResourceLocation val) throws Throwable {
         return new ResourceLocation(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ResourceLocation remove(ResourceLocation val) throws Throwable {
+    public final ResourceLocation remove(ResourceLocation val) throws Throwable {
         return new ResourceLocation(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ResourceLocation val) throws Throwable {
+    public final boolean is(ResourceLocation val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ResourceLocation val) throws Throwable {
+    public final boolean has(ResourceLocation val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

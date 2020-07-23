@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Single;
 import system.numerics.Vector2;
 import system.numerics.Matrix3x2;
@@ -49,12 +50,27 @@ import system.IFormatProviderImplementation;
 
 /**
  * The base .NET class managing System.Numerics.Vector2, System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Vector2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Vector2</a>
  */
-public class Vector2 extends NetObject  {
+public class Vector2 extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Numerics
+     */
     public static final String assemblyShortName = "System.Numerics";
+    /**
+     * Qualified class name: System.Numerics.Vector2
+     */
     public static final String className = "System.Numerics.Vector2";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class Vector2 extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector2}, a cast assert is made to check if types are compatible.
+     */
     public static Vector2 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Vector2(from.getJCOInstance());
@@ -115,6 +133,8 @@ public class Vector2 extends NetObject  {
 
     // Constructors section
     
+    public Vector2() throws Throwable {
+    }
 
     public Vector2(Single value) throws Throwable {
         try {
@@ -135,6 +155,7 @@ public class Vector2 extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -480,44 +501,44 @@ public class Vector2 extends NetObject  {
     
     // Properties section
     
-    public static Vector2 getOne() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector2 getOne() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("One");
+            JCObject val = (JCObject)classInstance.Get("One");
             return new Vector2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector2 getUnitX() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector2 getUnitX() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnitX");
+            JCObject val = (JCObject)classInstance.Get("UnitX");
             return new Vector2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector2 getUnitY() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector2 getUnitY() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnitY");
+            JCObject val = (JCObject)classInstance.Get("UnitY");
             return new Vector2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector2 getZero() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector2 getZero() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Zero");
+            JCObject val = (JCObject)classInstance.Get("Zero");
             return new Vector2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

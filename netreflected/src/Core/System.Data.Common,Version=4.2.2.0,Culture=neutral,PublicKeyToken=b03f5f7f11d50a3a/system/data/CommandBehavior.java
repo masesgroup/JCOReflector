@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Data.CommandBehavior, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.CommandBehavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.CommandBehavior</a>
  */
 public class CommandBehavior extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.CommandBehavior
+     */
     public static final String className = "System.Data.CommandBehavior";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class CommandBehavior extends NetObject  {
 
     // Flags management section
 
-    public CommandBehavior add(CommandBehavior val) throws Throwable {
+    public final CommandBehavior add(CommandBehavior val) throws Throwable {
         return new CommandBehavior(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CommandBehavior remove(CommandBehavior val) throws Throwable {
+    public final CommandBehavior remove(CommandBehavior val) throws Throwable {
         return new CommandBehavior(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CommandBehavior val) throws Throwable {
+    public final boolean is(CommandBehavior val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CommandBehavior val) throws Throwable {
+    public final boolean has(CommandBehavior val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.selectors.SecurityTokenAuthenticator;
 import system.identitymodel.selectors.X509CertificateValidator;
-import system.identitymodel.tokens.SecurityToken;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Selectors.X509SecurityTokenAuthenticator, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.X509SecurityTokenAuthenticator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.X509SecurityTokenAuthenticator</a>
  */
-public class X509SecurityTokenAuthenticator extends NetObject  {
+public class X509SecurityTokenAuthenticator extends SecurityTokenAuthenticator  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Selectors.X509SecurityTokenAuthenticator
+     */
     public static final String className = "System.IdentityModel.Selectors.X509SecurityTokenAuthenticator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class X509SecurityTokenAuthenticator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509SecurityTokenAuthenticator}, a cast assert is made to check if types are compatible.
+     */
     public static X509SecurityTokenAuthenticator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509SecurityTokenAuthenticator(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class X509SecurityTokenAuthenticator extends NetObject  {
 
     // Constructors section
     
-
     public X509SecurityTokenAuthenticator() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -155,16 +171,6 @@ public class X509SecurityTokenAuthenticator extends NetObject  {
     
     // Methods section
     
-    public boolean CanValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanValidateToken", token == null ? null : token.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

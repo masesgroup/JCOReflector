@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Data.Common.SupportedJoinOperators, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.SupportedJoinOperators" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.SupportedJoinOperators</a>
  */
 public class SupportedJoinOperators extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.Common.SupportedJoinOperators
+     */
     public static final String className = "System.Data.Common.SupportedJoinOperators";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class SupportedJoinOperators extends NetObject  {
 
     // Flags management section
 
-    public SupportedJoinOperators add(SupportedJoinOperators val) throws Throwable {
+    public final SupportedJoinOperators add(SupportedJoinOperators val) throws Throwable {
         return new SupportedJoinOperators(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SupportedJoinOperators remove(SupportedJoinOperators val) throws Throwable {
+    public final SupportedJoinOperators remove(SupportedJoinOperators val) throws Throwable {
         return new SupportedJoinOperators(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SupportedJoinOperators val) throws Throwable {
+    public final boolean is(SupportedJoinOperators val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SupportedJoinOperators val) throws Throwable {
+    public final boolean has(SupportedJoinOperators val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

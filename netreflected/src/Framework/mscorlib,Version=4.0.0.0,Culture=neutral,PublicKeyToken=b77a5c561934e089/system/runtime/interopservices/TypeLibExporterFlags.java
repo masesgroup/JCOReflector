@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.TypeLibExporterFlags, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.TypeLibExporterFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.TypeLibExporterFlags</a>
  */
 public class TypeLibExporterFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.TypeLibExporterFlags
+     */
     public static final String className = "System.Runtime.InteropServices.TypeLibExporterFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class TypeLibExporterFlags extends NetObject  {
 
     // Flags management section
 
-    public TypeLibExporterFlags add(TypeLibExporterFlags val) throws Throwable {
+    public final TypeLibExporterFlags add(TypeLibExporterFlags val) throws Throwable {
         return new TypeLibExporterFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public TypeLibExporterFlags remove(TypeLibExporterFlags val) throws Throwable {
+    public final TypeLibExporterFlags remove(TypeLibExporterFlags val) throws Throwable {
         return new TypeLibExporterFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(TypeLibExporterFlags val) throws Throwable {
+    public final boolean is(TypeLibExporterFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(TypeLibExporterFlags val) throws Throwable {
+    public final boolean has(TypeLibExporterFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

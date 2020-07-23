@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Activities.VariableModifiers, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.VariableModifiers" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.VariableModifiers</a>
  */
 public class VariableModifiers extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.VariableModifiers
+     */
     public static final String className = "System.Activities.VariableModifiers";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class VariableModifiers extends NetObject  {
 
     // Flags management section
 
-    public VariableModifiers add(VariableModifiers val) throws Throwable {
+    public final VariableModifiers add(VariableModifiers val) throws Throwable {
         return new VariableModifiers(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public VariableModifiers remove(VariableModifiers val) throws Throwable {
+    public final VariableModifiers remove(VariableModifiers val) throws Throwable {
         return new VariableModifiers(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(VariableModifiers val) throws Throwable {
+    public final boolean is(VariableModifiers val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(VariableModifiers val) throws Throwable {
+    public final boolean has(VariableModifiers val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

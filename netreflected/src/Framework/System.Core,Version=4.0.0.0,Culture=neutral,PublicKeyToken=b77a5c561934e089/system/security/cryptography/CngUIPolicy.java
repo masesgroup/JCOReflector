@@ -43,12 +43,27 @@ import system.security.cryptography.CngUIProtectionLevels;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CngUIPolicy, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngUIPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngUIPolicy</a>
  */
 public class CngUIPolicy extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.CngUIPolicy
+     */
     public static final String className = "System.Security.Cryptography.CngUIPolicy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class CngUIPolicy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CngUIPolicy}, a cast assert is made to check if types are compatible.
+     */
     public static CngUIPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CngUIPolicy(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class CngUIPolicy extends NetObject  {
 
     // Constructors section
     
+    public CngUIPolicy() throws Throwable {
+    }
 
     public CngUIPolicy(CngUIProtectionLevels protectionLevel) throws Throwable {
         try {
@@ -159,6 +178,7 @@ public class CngUIPolicy extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

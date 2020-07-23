@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.Configuration.AsyncPreloadModeFlags, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.AsyncPreloadModeFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.AsyncPreloadModeFlags</a>
  */
 public class AsyncPreloadModeFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.AsyncPreloadModeFlags
+     */
     public static final String className = "System.Web.Configuration.AsyncPreloadModeFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class AsyncPreloadModeFlags extends NetObject  {
 
     // Flags management section
 
-    public AsyncPreloadModeFlags add(AsyncPreloadModeFlags val) throws Throwable {
+    public final AsyncPreloadModeFlags add(AsyncPreloadModeFlags val) throws Throwable {
         return new AsyncPreloadModeFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AsyncPreloadModeFlags remove(AsyncPreloadModeFlags val) throws Throwable {
+    public final AsyncPreloadModeFlags remove(AsyncPreloadModeFlags val) throws Throwable {
         return new AsyncPreloadModeFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AsyncPreloadModeFlags val) throws Throwable {
+    public final boolean is(AsyncPreloadModeFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AsyncPreloadModeFlags val) throws Throwable {
+    public final boolean has(AsyncPreloadModeFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

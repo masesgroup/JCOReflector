@@ -44,12 +44,27 @@ import system.security.accesscontrol.GenericAce;
 
 /**
  * The base .NET class managing System.Security.AccessControl.GenericAcl, System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.GenericAcl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.GenericAcl</a>
  */
 public class GenericAcl extends NetObject implements Iterable<GenericAce> {
+    /**
+     * Fully assembly qualified name: System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.AccessControl
+     */
     public static final String assemblyShortName = "System.Security.AccessControl";
+    /**
+     * Qualified class name: System.Security.AccessControl.GenericAcl
+     */
     public static final String className = "System.Security.AccessControl.GenericAcl";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GenericAcl}, a cast assert is made to check if types are compatible.
+     */
     public static GenericAcl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GenericAcl(from.getJCOInstance());
@@ -110,16 +127,18 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
 
     // Constructors section
     
+    public GenericAcl() throws Throwable {
+    }
 
     
     // Methods section
     
-    public AceEnumerator GetEnumerator() throws Throwable {
+    public final AceEnumerator GetEnumerator() throws Throwable {
         return new AceEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<GenericAce> iterator() {
+	public final java.util.Iterator<GenericAce> iterator() {
 		return new AceEnumerator(classInstance);
 	}
 
@@ -138,6 +157,16 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", binaryForm, offset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetBinaryForm(JCRefOut dupParam0, int dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBinaryForm", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

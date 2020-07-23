@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.net.WebHeaderCollection;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link HttpContinueDelegate}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpContinueDelegate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpContinueDelegate</a>
+ */
 public interface IHttpContinueDelegate {
     public void Invoke(int StatusCode, WebHeaderCollection httpHeaders);
 }

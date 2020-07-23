@@ -43,12 +43,27 @@ import system.security.cryptography.pkcs.SubjectIdentifierOrKeyType;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.SubjectIdentifierOrKey, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.SubjectIdentifierOrKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.SubjectIdentifierOrKey</a>
  */
 public class SubjectIdentifierOrKey extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.SubjectIdentifierOrKey
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.SubjectIdentifierOrKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SubjectIdentifierOrKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SubjectIdentifierOrKey}, a cast assert is made to check if types are compatible.
+     */
     public static SubjectIdentifierOrKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SubjectIdentifierOrKey(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class SubjectIdentifierOrKey extends NetObject  {
 
     // Constructors section
     
+    public SubjectIdentifierOrKey() throws Throwable {
+    }
+
+
 
     
     // Methods section

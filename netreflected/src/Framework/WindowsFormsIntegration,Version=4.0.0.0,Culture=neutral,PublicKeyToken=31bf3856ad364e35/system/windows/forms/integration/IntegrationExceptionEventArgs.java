@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.Integration.IntegrationExceptionEventArgs, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.IntegrationExceptionEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.IntegrationExceptionEventArgs</a>
  */
-public class IntegrationExceptionEventArgs extends NetObject  {
+public class IntegrationExceptionEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsFormsIntegration
+     */
     public static final String assemblyShortName = "WindowsFormsIntegration";
+    /**
+     * Qualified class name: System.Windows.Forms.Integration.IntegrationExceptionEventArgs
+     */
     public static final String className = "System.Windows.Forms.Integration.IntegrationExceptionEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class IntegrationExceptionEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IntegrationExceptionEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static IntegrationExceptionEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IntegrationExceptionEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class IntegrationExceptionEventArgs extends NetObject  {
 
     // Constructors section
     
+    public IntegrationExceptionEventArgs() throws Throwable {
+    }
 
     public IntegrationExceptionEventArgs(boolean throwException, NetException exception) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         try {
@@ -118,6 +138,7 @@ public class IntegrationExceptionEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

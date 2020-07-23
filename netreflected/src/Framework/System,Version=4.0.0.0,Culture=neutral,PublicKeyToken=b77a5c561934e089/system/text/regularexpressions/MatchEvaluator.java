@@ -43,12 +43,27 @@ import system.text.regularexpressions.IMatchEvaluator;
 
 /**
  * The base .NET class managing System.Text.RegularExpressions.MatchEvaluator, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator</a>
  */
 public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Text.RegularExpressions.MatchEvaluator
+     */
     public static final String className = "System.Text.RegularExpressions.MatchEvaluator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IMatchEvaluator callerInstance = null;
@@ -154,7 +169,7 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final java.lang.String DynamicInvoke(Match match) throws Throwable {
+    public java.lang.String METHOD_JAVA_NAME(Match match) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -164,7 +179,9 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public java.lang.String Invoke(Match match) {
         return "";
     }

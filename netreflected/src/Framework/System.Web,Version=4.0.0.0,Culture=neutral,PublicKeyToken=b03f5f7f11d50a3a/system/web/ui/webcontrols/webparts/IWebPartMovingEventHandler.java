@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.webparts.WebPartMovingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WebPartMovingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventHandler</a>
+ */
 public interface IWebPartMovingEventHandler {
     public void Invoke(NetObject sender, WebPartMovingEventArgs e);
 }

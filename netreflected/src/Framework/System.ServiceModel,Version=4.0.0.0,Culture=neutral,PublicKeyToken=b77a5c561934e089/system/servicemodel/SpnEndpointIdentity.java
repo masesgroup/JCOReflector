@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.EndpointIdentity;
 import system.identitymodel.claims.Claim;
 import system.TimeSpan;
 
 
 /**
  * The base .NET class managing System.ServiceModel.SpnEndpointIdentity, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.SpnEndpointIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.SpnEndpointIdentity</a>
  */
-public class SpnEndpointIdentity extends NetObject  {
+public class SpnEndpointIdentity extends EndpointIdentity  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.SpnEndpointIdentity
+     */
     public static final String className = "System.ServiceModel.SpnEndpointIdentity";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SpnEndpointIdentity extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SpnEndpointIdentity}, a cast assert is made to check if types are compatible.
+     */
     public static SpnEndpointIdentity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SpnEndpointIdentity(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class SpnEndpointIdentity extends NetObject  {
 
     // Constructors section
     
+    public SpnEndpointIdentity() throws Throwable {
+    }
 
     public SpnEndpointIdentity(Claim identity) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException {
         try {
@@ -132,6 +152,7 @@ public class SpnEndpointIdentity extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -139,33 +160,22 @@ public class SpnEndpointIdentity extends NetObject  {
     
     // Properties section
     
-    public Claim getIdentityClaim() throws Throwable {
+    public TimeSpan getSpnLookupTime() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityClaim");
-            return new Claim(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static TimeSpan getSpnLookupTime() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("SpnLookupTime");
+            JCObject val = (JCObject)classInstance.Get("SpnLookupTime");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setSpnLookupTime(TimeSpan SpnLookupTime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setSpnLookupTime(TimeSpan SpnLookupTime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("SpnLookupTime", SpnLookupTime == null ? null : SpnLookupTime.getJCOInstance());
+            classInstance.Set("SpnLookupTime", SpnLookupTime == null ? null : SpnLookupTime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

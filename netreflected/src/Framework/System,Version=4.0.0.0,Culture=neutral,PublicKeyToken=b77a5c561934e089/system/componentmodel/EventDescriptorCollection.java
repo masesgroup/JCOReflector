@@ -46,12 +46,27 @@ import system.collections.IComparerImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.EventDescriptorCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.EventDescriptorCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.EventDescriptorCollection</a>
  */
 public class EventDescriptorCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.EventDescriptorCollection
+     */
     public static final String className = "System.ComponentModel.EventDescriptorCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class EventDescriptorCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventDescriptorCollection}, a cast assert is made to check if types are compatible.
+     */
     public static EventDescriptorCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventDescriptorCollection(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class EventDescriptorCollection extends NetObject  {
 
     // Constructors section
     
+    public EventDescriptorCollection() throws Throwable {
+    }
 
     public EventDescriptorCollection(EventDescriptor[] events) throws Throwable {
         try {
@@ -132,6 +151,7 @@ public class EventDescriptorCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -211,11 +231,33 @@ public class EventDescriptorCollection extends NetObject  {
         }
     }
 
+    public EventDescriptorCollection Sort(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (Object)dupParam0);
+            return new EventDescriptorCollection(objSort);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EventDescriptorCollection Sort(java.lang.String[] names, IComparer comparer) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSort = (JCObject)classInstance.Invoke("Sort", names, comparer == null ? null : comparer.getJCOInstance());
+            return new EventDescriptorCollection(objSort);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventDescriptorCollection Sort(JCRefOut dupParam0, IComparer dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new EventDescriptorCollection(objSort);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

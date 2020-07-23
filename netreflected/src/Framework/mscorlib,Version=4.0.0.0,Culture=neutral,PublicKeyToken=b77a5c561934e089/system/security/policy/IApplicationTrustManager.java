@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.security.ISecurityEncodable;
+import system.security.ISecurityEncodableImplementation;
 import system.security.policy.ApplicationTrust;
 import system.ActivationContext;
 import system.security.policy.TrustManagerContext;
@@ -45,12 +47,29 @@ import system.security.SecurityElement;
 
 /**
  * The base .NET class managing System.Security.Policy.IApplicationTrustManager, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IApplicationTrustManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IApplicationTrustManager</a>
  */
-public interface IApplicationTrustManager extends IJCOBridgeReflected {
-
+public interface IApplicationTrustManager extends IJCOBridgeReflected, ISecurityEncodable {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.IApplicationTrustManager
+     */
+    public static final String className = "System.Security.Policy.IApplicationTrustManager";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IApplicationTrustManager}, a cast assert is made to check if types are compatible.
+     */
     public static IApplicationTrustManager ToIApplicationTrustManager(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Security.Policy.IApplicationTrustManager, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IApplicationTrustManagerImplementation(from.getJCOInstance());
     }
@@ -95,9 +114,7 @@ public interface IApplicationTrustManager extends IJCOBridgeReflected {
     
     public ApplicationTrust DetermineApplicationTrust(ActivationContext activationContext, TrustManagerContext context) throws Throwable;
 
-    public SecurityElement ToXml() throws Throwable;
 
-    public void FromXml(SecurityElement e) throws Throwable;
 
 
     

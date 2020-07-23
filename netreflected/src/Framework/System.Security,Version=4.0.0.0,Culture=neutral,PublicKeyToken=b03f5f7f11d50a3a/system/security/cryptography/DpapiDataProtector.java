@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.DataProtector;
 import system.security.cryptography.DataProtectionScope;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.DpapiDataProtector, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DpapiDataProtector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DpapiDataProtector</a>
  */
-public class DpapiDataProtector extends NetObject  {
+public class DpapiDataProtector extends DataProtector  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.DpapiDataProtector
+     */
     public static final String className = "System.Security.Cryptography.DpapiDataProtector";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DpapiDataProtector extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DpapiDataProtector}, a cast assert is made to check if types are compatible.
+     */
     public static DpapiDataProtector cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DpapiDataProtector(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class DpapiDataProtector extends NetObject  {
 
     // Constructors section
     
+    public DpapiDataProtector() throws Throwable {
+    }
 
     public DpapiDataProtector(java.lang.String appName, java.lang.String primaryPurpose, java.lang.String... specificPurpose) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -119,6 +139,7 @@ public class DpapiDataProtector extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -134,39 +155,11 @@ public class DpapiDataProtector extends NetObject  {
         }
     }
 
-    public byte[] Protect(byte[] userData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public boolean IsReprotectRequired(JCRefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Protect", (Object)userData);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexProtect = 0; indexProtect < resultingArrayList.size(); indexProtect++ ) {
-				resultingArray[indexProtect] = (byte)resultingArrayList.get(indexProtect);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] Unprotect(byte[] encryptedData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.threading.AbandonedMutexException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Unprotect", (Object)encryptedData);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexUnprotect = 0; indexUnprotect < resultingArrayList.size(); indexUnprotect++ ) {
-				resultingArray[indexUnprotect] = (byte)resultingArrayList.get(indexUnprotect);
-            }
-            return resultingArray;
+            return (boolean)classInstance.Invoke("IsReprotectRequired", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

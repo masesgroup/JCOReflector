@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.IcmpV4Statistics, System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics</a>
  */
 public class IcmpV4Statistics extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.NetworkInformation
+     */
     public static final String assemblyShortName = "System.Net.NetworkInformation";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.IcmpV4Statistics
+     */
     public static final String className = "System.Net.NetworkInformation.IcmpV4Statistics";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class IcmpV4Statistics extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IcmpV4Statistics}, a cast assert is made to check if types are compatible.
+     */
     public static IcmpV4Statistics cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IcmpV4Statistics(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class IcmpV4Statistics extends NetObject  {
 
     // Constructors section
     
+    public IcmpV4Statistics() throws Throwable {
+    }
 
     
     // Methods section

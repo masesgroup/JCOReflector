@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.design.DesignerDataSourceView;
 import system.web.ui.design.webcontrols.ObjectDataSourceDesigner;
-import system.web.ui.design.IDataSourceDesigner;
-import system.web.ui.design.IDataSourceDesignerImplementation;
 import system.web.ui.design.IDataSourceViewSchema;
 import system.web.ui.design.IDataSourceViewSchemaImplementation;
 
 
 /**
  * The base .NET class managing System.Web.UI.Design.WebControls.ObjectDesignerDataSourceView, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.ObjectDesignerDataSourceView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.ObjectDesignerDataSourceView</a>
  */
-public class ObjectDesignerDataSourceView extends NetObject  {
+public class ObjectDesignerDataSourceView extends DesignerDataSourceView  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.WebControls.ObjectDesignerDataSourceView
+     */
     public static final String className = "System.Web.UI.Design.WebControls.ObjectDesignerDataSourceView";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class ObjectDesignerDataSourceView extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectDesignerDataSourceView}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectDesignerDataSourceView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectDesignerDataSourceView(from.getJCOInstance());
@@ -113,6 +129,8 @@ public class ObjectDesignerDataSourceView extends NetObject  {
 
     // Constructors section
     
+    public ObjectDesignerDataSourceView() throws Throwable {
+    }
 
     public ObjectDesignerDataSourceView(ObjectDataSourceDesigner owner, java.lang.String viewName) throws Throwable, system.ArgumentNullException {
         try {
@@ -125,6 +143,7 @@ public class ObjectDesignerDataSourceView extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -132,98 +151,6 @@ public class ObjectDesignerDataSourceView extends NetObject  {
     
     // Properties section
     
-    public boolean getCanDelete() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanDelete");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanInsert() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanInsert");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanPage() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanPage");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanRetrieveTotalRowCount() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanRetrieveTotalRowCount");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanSort() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanSort");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getCanUpdate() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanUpdate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDataSourceDesigner getDataSourceDesigner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceDesigner");
-            return new IDataSourceDesignerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDataSourceViewSchema getSchema() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.data.DataException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Schema");
-            return new IDataSourceViewSchemaImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

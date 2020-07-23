@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.componentmodel.ActivityChangeAction;
 import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.CompositeActivity;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.RemovedActivityAction, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.RemovedActivityAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.RemovedActivityAction</a>
  */
-public class RemovedActivityAction extends NetObject  {
+public class RemovedActivityAction extends ActivityChangeAction  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.RemovedActivityAction
+     */
     public static final String className = "System.Workflow.ComponentModel.RemovedActivityAction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class RemovedActivityAction extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RemovedActivityAction}, a cast assert is made to check if types are compatible.
+     */
     public static RemovedActivityAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RemovedActivityAction(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class RemovedActivityAction extends NetObject  {
 
     // Constructors section
     
-
     public RemovedActivityAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -154,26 +171,6 @@ public class RemovedActivityAction extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemovedActivityIndex", RemovedActivityIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getOwnerActivityDottedPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("OwnerActivityDottedPath");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOwnerActivityDottedPath(java.lang.String OwnerActivityDottedPath) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("OwnerActivityDottedPath", OwnerActivityDottedPath);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -43,12 +43,27 @@ import system.UInt32;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices._PropertyBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._PropertyBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._PropertyBuilder</a>
  */
 public class _PropertyBuilderImplementation extends NetObject implements _PropertyBuilder {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices._PropertyBuilder
+     */
     public static final String className = "System.Runtime.InteropServices._PropertyBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class _PropertyBuilderImplementation extends NetObject implements _Proper
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _PropertyBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static _PropertyBuilder To_PropertyBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new _PropertyBuilderImplementation(from.getJCOInstance());

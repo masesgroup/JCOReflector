@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.Configuration.ProfileGuidedOptimizationsFlags, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.ProfileGuidedOptimizationsFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.ProfileGuidedOptimizationsFlags</a>
  */
 public class ProfileGuidedOptimizationsFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.ProfileGuidedOptimizationsFlags
+     */
     public static final String className = "System.Web.Configuration.ProfileGuidedOptimizationsFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class ProfileGuidedOptimizationsFlags extends NetObject  {
 
     // Flags management section
 
-    public ProfileGuidedOptimizationsFlags add(ProfileGuidedOptimizationsFlags val) throws Throwable {
+    public final ProfileGuidedOptimizationsFlags add(ProfileGuidedOptimizationsFlags val) throws Throwable {
         return new ProfileGuidedOptimizationsFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ProfileGuidedOptimizationsFlags remove(ProfileGuidedOptimizationsFlags val) throws Throwable {
+    public final ProfileGuidedOptimizationsFlags remove(ProfileGuidedOptimizationsFlags val) throws Throwable {
         return new ProfileGuidedOptimizationsFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ProfileGuidedOptimizationsFlags val) throws Throwable {
+    public final boolean is(ProfileGuidedOptimizationsFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ProfileGuidedOptimizationsFlags val) throws Throwable {
+    public final boolean has(ProfileGuidedOptimizationsFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -44,12 +44,27 @@ import system.windows.forms.SelectionRange;
 
 /**
  * The base .NET class managing System.Windows.Forms.SelectionRange, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SelectionRange" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SelectionRange</a>
  */
 public class SelectionRange extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.SelectionRange
+     */
     public static final String className = "System.Windows.Forms.SelectionRange";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class SelectionRange extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SelectionRange}, a cast assert is made to check if types are compatible.
+     */
     public static SelectionRange cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SelectionRange(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class SelectionRange extends NetObject  {
 
     // Constructors section
     
-
     public SelectionRange() throws Throwable {
         try {
             // add reference to assemblyName.dll file

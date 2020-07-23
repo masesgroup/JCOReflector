@@ -42,12 +42,27 @@ import system.data.DataTableNewRowEventArgs;
 import system.data.IDataTableNewRowEventHandler;
 /**
  * The base .NET class managing System.Data.DataTableNewRowEventHandler, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableNewRowEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableNewRowEventHandler</a>
  */
 public class DataTableNewRowEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.DataTableNewRowEventHandler
+     */
     public static final String className = "System.Data.DataTableNewRowEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDataTableNewRowEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DataTableNewRowEventHandler extends JCVoidDelegate implements IJCVo
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DataTableNewRowEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DataTableNewRowEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DataTableNewRowEventHandler extends JCVoidDelegate implements IJCVo
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DataTableNewRowEventArgs e) {
     }
 }

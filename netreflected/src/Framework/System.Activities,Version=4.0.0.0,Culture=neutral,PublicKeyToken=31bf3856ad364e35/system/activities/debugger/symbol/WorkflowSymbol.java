@@ -43,12 +43,27 @@ import system.activities.debugger.symbol.WorkflowSymbol;
 
 /**
  * The base .NET class managing System.Activities.Debugger.Symbol.WorkflowSymbol, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.Symbol.WorkflowSymbol" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.Symbol.WorkflowSymbol</a>
  */
 public class WorkflowSymbol extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Debugger.Symbol.WorkflowSymbol
+     */
     public static final String className = "System.Activities.Debugger.Symbol.WorkflowSymbol";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class WorkflowSymbol extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowSymbol}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowSymbol cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowSymbol(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class WorkflowSymbol extends NetObject  {
 
     // Constructors section
     
-
     public WorkflowSymbol() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -42,12 +42,27 @@ import system.windows.forms.design.behavior.BehaviorDragDropEventArgs;
 import system.windows.forms.design.behavior.IBehaviorDragDropEventHandler;
 /**
  * The base .NET class managing System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler</a>
  */
 public class BehaviorDragDropEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler
+     */
     public static final String className = "System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IBehaviorDragDropEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class BehaviorDragDropEventHandler extends JCVoidDelegate implements IJCV
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, BehaviorDragDropEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, BehaviorDragDropEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class BehaviorDragDropEventHandler extends JCVoidDelegate implements IJCV
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, BehaviorDragDropEventArgs e) {
     }
 }

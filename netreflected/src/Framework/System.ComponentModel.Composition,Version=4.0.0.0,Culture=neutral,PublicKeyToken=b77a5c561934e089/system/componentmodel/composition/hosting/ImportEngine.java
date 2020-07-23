@@ -46,12 +46,27 @@ import system.componentmodel.composition.hosting.AtomicComposition;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.ImportEngine, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ImportEngine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ImportEngine</a>
  */
 public class ImportEngine extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.ImportEngine
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.ImportEngine";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class ImportEngine extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImportEngine}, a cast assert is made to check if types are compatible.
+     */
     public static ImportEngine cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ImportEngine(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class ImportEngine extends NetObject  {
 
     // Constructors section
     
+    public ImportEngine() throws Throwable {
+    }
 
     public ImportEngine(ExportProvider sourceProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
         try {
@@ -142,6 +161,7 @@ public class ImportEngine extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

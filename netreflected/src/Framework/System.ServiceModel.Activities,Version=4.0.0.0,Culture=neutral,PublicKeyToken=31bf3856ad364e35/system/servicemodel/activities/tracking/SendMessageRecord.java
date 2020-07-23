@@ -38,20 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.tracking.ActivityInfo;
-import system.DateTime;
-import system.diagnostics.TraceLevel;
+import system.activities.tracking.CustomTrackingRecord;
 import system.Guid;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.Tracking.SendMessageRecord, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.SendMessageRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.SendMessageRecord</a>
  */
-public class SendMessageRecord extends NetObject  {
+public class SendMessageRecord extends CustomTrackingRecord  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.Tracking.SendMessageRecord
+     */
     public static final String className = "System.ServiceModel.Activities.Tracking.SendMessageRecord";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +117,9 @@ public class SendMessageRecord extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SendMessageRecord}, a cast assert is made to check if types are compatible.
+     */
     public static SendMessageRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SendMessageRecord(from.getJCOInstance());
@@ -112,6 +127,8 @@ public class SendMessageRecord extends NetObject  {
 
     // Constructors section
     
+    public SendMessageRecord() throws Throwable {
+    }
 
     public SendMessageRecord(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         try {
@@ -124,6 +141,7 @@ public class SendMessageRecord extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -131,79 +149,6 @@ public class SendMessageRecord extends NetObject  {
     
     // Properties section
     
-    public long getRecordNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("RecordNumber");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRecordNumber(long RecordNumber) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RecordNumber", RecordNumber);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ActivityInfo getActivity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Activity");
-            return new ActivityInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setActivity(ActivityInfo Activity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Activity", Activity == null ? null : Activity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getEventTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventTime");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TraceLevel getLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Level");
-            return new TraceLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLevel(TraceLevel Level) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Level", Level == null ? null : Level.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Guid getE2EActivityId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -220,37 +165,6 @@ public class SendMessageRecord extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("E2EActivityId", E2EActivityId == null ? null : E2EActivityId.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getInstanceId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInstanceId(Guid InstanceId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InstanceId", InstanceId == null ? null : InstanceId.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

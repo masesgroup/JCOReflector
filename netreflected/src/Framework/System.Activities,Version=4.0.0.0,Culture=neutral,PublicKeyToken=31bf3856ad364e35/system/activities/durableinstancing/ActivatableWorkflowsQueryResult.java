@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.durableinstancing.InstanceStoreQueryResult;
 
 
 /**
  * The base .NET class managing System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult</a>
  */
-public class ActivatableWorkflowsQueryResult extends NetObject  {
+public class ActivatableWorkflowsQueryResult extends InstanceStoreQueryResult  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult
+     */
     public static final String className = "System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ActivatableWorkflowsQueryResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivatableWorkflowsQueryResult}, a cast assert is made to check if types are compatible.
+     */
     public static ActivatableWorkflowsQueryResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivatableWorkflowsQueryResult(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class ActivatableWorkflowsQueryResult extends NetObject  {
 
     // Constructors section
     
-
     public ActivatableWorkflowsQueryResult() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

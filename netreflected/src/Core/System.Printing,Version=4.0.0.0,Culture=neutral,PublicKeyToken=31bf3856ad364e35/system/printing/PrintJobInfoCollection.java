@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.printing.PrintSystemObjects;
 import system.printing.PrintQueue;
 import system.printing.PrintSystemJobInfo;
 
 
 /**
  * The base .NET class managing System.Printing.PrintJobInfoCollection, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintJobInfoCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintJobInfoCollection</a>
  */
-public class PrintJobInfoCollection extends NetObject  {
+public class PrintJobInfoCollection extends PrintSystemObjects  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Printing.PrintJobInfoCollection
+     */
     public static final String className = "System.Printing.PrintJobInfoCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class PrintJobInfoCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintJobInfoCollection}, a cast assert is made to check if types are compatible.
+     */
     public static PrintJobInfoCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrintJobInfoCollection(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class PrintJobInfoCollection extends NetObject  {
 
     // Constructors section
     
+    public PrintJobInfoCollection() throws Throwable {
+    }
 
     public PrintJobInfoCollection(PrintQueue printQueue, java.lang.String[] propertyFilter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         try {
@@ -120,6 +140,7 @@ public class PrintJobInfoCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -141,16 +162,6 @@ public class PrintJobInfoCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", printObject == null ? null : printObject.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

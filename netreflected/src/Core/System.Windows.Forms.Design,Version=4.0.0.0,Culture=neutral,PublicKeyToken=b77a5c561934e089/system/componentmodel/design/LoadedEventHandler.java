@@ -42,12 +42,27 @@ import system.componentmodel.design.LoadedEventArgs;
 import system.componentmodel.design.ILoadedEventHandler;
 /**
  * The base .NET class managing System.ComponentModel.Design.LoadedEventHandler, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.LoadedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.LoadedEventHandler</a>
  */
 public class LoadedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.LoadedEventHandler
+     */
     public static final String className = "System.ComponentModel.Design.LoadedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ILoadedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class LoadedEventHandler extends JCVoidDelegate implements IJCVoidEventEm
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, LoadedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, LoadedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class LoadedEventHandler extends JCVoidDelegate implements IJCVoidEventEm
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, LoadedEventArgs e) {
     }
 }

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.build.framework.ILogger;
+import microsoft.build.framework.ILoggerImplementation;
 import microsoft.build.framework.IEventSource;
 import microsoft.build.framework.IEventSourceImplementation;
 import microsoft.build.framework.LoggerVerbosity;
@@ -44,12 +46,29 @@ import microsoft.build.framework.LoggerVerbosity;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.INodeLogger, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.INodeLogger" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.INodeLogger</a>
  */
-public interface INodeLogger extends IJCOBridgeReflected {
-
+public interface INodeLogger extends IJCOBridgeReflected, ILogger {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.INodeLogger
+     */
+    public static final String className = "Microsoft.Build.Framework.INodeLogger";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INodeLogger}, a cast assert is made to check if types are compatible.
+     */
     public static INodeLogger ToINodeLogger(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Framework.INodeLogger, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Framework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INodeLoggerImplementation(from.getJCOInstance());
     }
@@ -92,24 +111,14 @@ public interface INodeLogger extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Initialize(IEventSource eventSource) throws Throwable;
 
     public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable;
 
-    public void Shutdown() throws Throwable;
 
 
     
     // Properties section
     
-    public LoggerVerbosity getVerbosity() throws Throwable;
-
-    public void setVerbosity(LoggerVerbosity Verbosity) throws Throwable;
-
-    public java.lang.String getParameters() throws Throwable;
-
-    public void setParameters(java.lang.String Parameters) throws Throwable;
-
 
 
     // Instance Events section

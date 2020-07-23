@@ -44,12 +44,27 @@ import system.windows.markup.XmlnsDictionary;
 
 /**
  * The base .NET class managing System.Windows.Markup.XmlAttributeProperties, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XmlAttributeProperties" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XmlAttributeProperties</a>
  */
 public class XmlAttributeProperties extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Markup.XmlAttributeProperties
+     */
     public static final String className = "System.Windows.Markup.XmlAttributeProperties";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class XmlAttributeProperties extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlAttributeProperties}, a cast assert is made to check if types are compatible.
+     */
     public static XmlAttributeProperties cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlAttributeProperties(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class XmlAttributeProperties extends NetObject  {
 
     // Constructors section
     
+    public XmlAttributeProperties() throws Throwable {
+    }
+
+
 
     
     // Methods section

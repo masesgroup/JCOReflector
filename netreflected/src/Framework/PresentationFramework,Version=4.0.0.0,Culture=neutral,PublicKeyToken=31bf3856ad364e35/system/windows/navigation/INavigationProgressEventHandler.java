@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.navigation.NavigationProgressEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link NavigationProgressEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationProgressEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationProgressEventHandler</a>
+ */
 public interface INavigationProgressEventHandler {
     public void Invoke(NetObject sender, NavigationProgressEventArgs e);
 }

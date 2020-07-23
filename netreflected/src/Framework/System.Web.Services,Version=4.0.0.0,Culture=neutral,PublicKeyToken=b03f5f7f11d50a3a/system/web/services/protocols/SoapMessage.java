@@ -48,12 +48,27 @@ import system.web.services.protocols.SoapProtocolVersion;
 
 /**
  * The base .NET class managing System.Web.Services.Protocols.SoapMessage, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.SoapMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.SoapMessage</a>
  */
 public class SoapMessage extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Protocols.SoapMessage
+     */
     public static final String className = "System.Web.Services.Protocols.SoapMessage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class SoapMessage extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapMessage}, a cast assert is made to check if types are compatible.
+     */
     public static SoapMessage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapMessage(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class SoapMessage extends NetObject  {
 
     // Constructors section
     
+    public SoapMessage() throws Throwable {
+    }
 
     
     // Methods section

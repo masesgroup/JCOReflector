@@ -42,12 +42,27 @@ import system.runtime.compilerservices.CallSite;
 import microsoft.visualbasic.compilerservices.ISiteDelegate0;
 /**
  * The base .NET class managing Microsoft.VisualBasic.CompilerServices.SiteDelegate0, Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.CompilerServices.SiteDelegate0" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.CompilerServices.SiteDelegate0</a>
  */
 public class SiteDelegate0 extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic.Core
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic.Core";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.CompilerServices.SiteDelegate0
+     */
     public static final String className = "Microsoft.VisualBasic.CompilerServices.SiteDelegate0";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISiteDelegate0 callerInstance = null;
@@ -155,7 +170,7 @@ public class SiteDelegate0 extends JCDelegate implements IJCEventEmit, IJCOBridg
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke(CallSite site, NetObject instance) throws Throwable {
+    public NetObject METHOD_JAVA_NAME(CallSite site, NetObject instance) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -166,7 +181,9 @@ public class SiteDelegate0 extends JCDelegate implements IJCEventEmit, IJCOBridg
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke(CallSite site, NetObject instance) {
         return null;
     }

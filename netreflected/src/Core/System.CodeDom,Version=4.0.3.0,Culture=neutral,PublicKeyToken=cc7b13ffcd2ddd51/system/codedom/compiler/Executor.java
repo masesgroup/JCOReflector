@@ -43,12 +43,27 @@ import system.codedom.compiler.TempFileCollection;
 
 /**
  * The base .NET class managing System.CodeDom.Compiler.Executor, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.Executor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.Executor</a>
  */
 public class Executor extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.Compiler.Executor
+     */
     public static final String className = "System.CodeDom.Compiler.Executor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Executor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Executor}, a cast assert is made to check if types are compatible.
+     */
     public static Executor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Executor(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class Executor extends NetObject  {
 
     // Constructors section
     
+    public Executor() throws Throwable {
+    }
 
     
     // Methods section

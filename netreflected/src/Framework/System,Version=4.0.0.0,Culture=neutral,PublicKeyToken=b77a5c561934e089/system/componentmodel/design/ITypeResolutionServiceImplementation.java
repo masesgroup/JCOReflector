@@ -44,12 +44,27 @@ import system.reflection.AssemblyName;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ITypeResolutionService, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ITypeResolutionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ITypeResolutionService</a>
  */
 public class ITypeResolutionServiceImplementation extends NetObject implements ITypeResolutionService {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ITypeResolutionService
+     */
     public static final String className = "System.ComponentModel.Design.ITypeResolutionService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeResolutionService}, a cast assert is made to check if types are compatible.
+     */
     public static ITypeResolutionService ToITypeResolutionService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITypeResolutionServiceImplementation(from.getJCOInstance());

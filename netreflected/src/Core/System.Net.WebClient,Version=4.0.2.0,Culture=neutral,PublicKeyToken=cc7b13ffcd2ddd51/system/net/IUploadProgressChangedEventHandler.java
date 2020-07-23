@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.net.UploadProgressChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link UploadProgressChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadProgressChangedEventHandler</a>
+ */
 public interface IUploadProgressChangedEventHandler {
     public void Invoke(NetObject sender, UploadProgressChangedEventArgs e);
 }

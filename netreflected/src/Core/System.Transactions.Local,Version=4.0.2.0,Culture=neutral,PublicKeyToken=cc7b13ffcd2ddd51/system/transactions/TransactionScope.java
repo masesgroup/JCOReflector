@@ -48,12 +48,27 @@ import system.transactions.TransactionOptions;
 
 /**
  * The base .NET class managing System.Transactions.TransactionScope, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope</a>
  */
 public class TransactionScope extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.TransactionScope
+     */
     public static final String className = "System.Transactions.TransactionScope";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class TransactionScope extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionScope}, a cast assert is made to check if types are compatible.
+     */
     public static TransactionScope cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TransactionScope(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class TransactionScope extends NetObject  {
 
     // Constructors section
     
-
     public TransactionScope() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
         try {
             // add reference to assemblyName.dll file

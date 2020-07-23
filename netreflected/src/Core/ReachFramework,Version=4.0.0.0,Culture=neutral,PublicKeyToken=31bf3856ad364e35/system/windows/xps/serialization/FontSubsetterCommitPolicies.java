@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Xps.Serialization.FontSubsetterCommitPolicies, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.FontSubsetterCommitPolicies" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.FontSubsetterCommitPolicies</a>
  */
 public class FontSubsetterCommitPolicies extends NetObject  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Serialization.FontSubsetterCommitPolicies
+     */
     public static final String className = "System.Windows.Xps.Serialization.FontSubsetterCommitPolicies";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class FontSubsetterCommitPolicies extends NetObject  {
 
     // Flags management section
 
-    public FontSubsetterCommitPolicies add(FontSubsetterCommitPolicies val) throws Throwable {
+    public final FontSubsetterCommitPolicies add(FontSubsetterCommitPolicies val) throws Throwable {
         return new FontSubsetterCommitPolicies(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public FontSubsetterCommitPolicies remove(FontSubsetterCommitPolicies val) throws Throwable {
+    public final FontSubsetterCommitPolicies remove(FontSubsetterCommitPolicies val) throws Throwable {
         return new FontSubsetterCommitPolicies(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(FontSubsetterCommitPolicies val) throws Throwable {
+    public final boolean is(FontSubsetterCommitPolicies val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(FontSubsetterCommitPolicies val) throws Throwable {
+    public final boolean has(FontSubsetterCommitPolicies val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

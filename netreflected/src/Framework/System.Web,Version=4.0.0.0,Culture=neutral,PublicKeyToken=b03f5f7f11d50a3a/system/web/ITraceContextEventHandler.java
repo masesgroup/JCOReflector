@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.TraceContextEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TraceContextEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.TraceContextEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.TraceContextEventHandler</a>
+ */
 public interface ITraceContextEventHandler {
     public void Invoke(NetObject sender, TraceContextEventArgs e);
 }

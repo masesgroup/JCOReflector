@@ -38,18 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.metadata.edm.TypeUsage;
-import system.xml.XmlReader;
+import system.data.common.DbProviderManifest;
 
 
 /**
  * The base .NET class managing System.Data.Common.DbXmlEnabledProviderManifest, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbXmlEnabledProviderManifest" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbXmlEnabledProviderManifest</a>
  */
-public class DbXmlEnabledProviderManifest extends NetObject  {
+public class DbXmlEnabledProviderManifest extends DbProviderManifest  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.DbXmlEnabledProviderManifest
+     */
     public static final String className = "System.Data.Common.DbXmlEnabledProviderManifest";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +116,9 @@ public class DbXmlEnabledProviderManifest extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbXmlEnabledProviderManifest}, a cast assert is made to check if types are compatible.
+     */
     public static DbXmlEnabledProviderManifest cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbXmlEnabledProviderManifest(from.getJCOInstance());
@@ -110,67 +126,16 @@ public class DbXmlEnabledProviderManifest extends NetObject  {
 
     // Constructors section
     
+    public DbXmlEnabledProviderManifest() throws Throwable {
+    }
 
     
     // Methods section
     
-    public TypeUsage GetEdmType(TypeUsage storeType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEdmType = (JCObject)classInstance.Invoke("GetEdmType", storeType == null ? null : storeType.getJCOInstance());
-            return new TypeUsage(objGetEdmType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeUsage GetStoreType(TypeUsage edmType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetStoreType = (JCObject)classInstance.Invoke("GetStoreType", edmType == null ? null : edmType.getJCOInstance());
-            return new TypeUsage(objGetStoreType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String EscapeLikeArgument(java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("EscapeLikeArgument", argument);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlReader GetInformation(java.lang.String informationType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException, system.NotSupportedException, system.xml.XmlException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetInformation = (JCObject)classInstance.Invoke("GetInformation", informationType);
-            return new XmlReader(objGetInformation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getNamespaceName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("NamespaceName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

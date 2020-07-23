@@ -42,12 +42,27 @@ import system.management.ProgressEventArgs;
 import system.management.IProgressEventHandler;
 /**
  * The base .NET class managing System.Management.ProgressEventHandler, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ProgressEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ProgressEventHandler</a>
  */
 public class ProgressEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Management
+     */
     public static final String assemblyShortName = "System.Management";
+    /**
+     * Qualified class name: System.Management.ProgressEventHandler
+     */
     public static final String className = "System.Management.ProgressEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IProgressEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ProgressEventHandler extends JCVoidDelegate implements IJCVoidEvent
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ProgressEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ProgressEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ProgressEventHandler extends JCVoidDelegate implements IJCVoidEvent
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ProgressEventArgs e) {
     }
 }

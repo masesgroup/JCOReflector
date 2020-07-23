@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.servicemodel.channels.ISession;
+import system.servicemodel.channels.ISessionImplementation;
 import system.servicemodel.EndpointIdentity;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.ISecuritySession, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.ISecuritySession" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.ISecuritySession</a>
  */
-public interface ISecuritySession extends IJCOBridgeReflected {
-
+public interface ISecuritySession extends IJCOBridgeReflected, ISession {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
+    public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.ISecuritySession
+     */
+    public static final String className = "System.ServiceModel.Security.ISecuritySession";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISecuritySession}, a cast assert is made to check if types are compatible.
+     */
     public static ISecuritySession ToISecuritySession(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ServiceModel.Security.ISecuritySession, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ServiceModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISecuritySessionImplementation(from.getJCOInstance());
     }
@@ -95,8 +114,6 @@ public interface ISecuritySession extends IJCOBridgeReflected {
     // Properties section
     
     public EndpointIdentity getRemoteIdentity() throws Throwable;
-
-    public java.lang.String getId() throws Throwable;
 
 
 

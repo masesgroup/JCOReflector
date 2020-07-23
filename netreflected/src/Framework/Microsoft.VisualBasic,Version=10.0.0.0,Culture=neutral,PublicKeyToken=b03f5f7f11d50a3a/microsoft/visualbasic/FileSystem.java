@@ -53,12 +53,27 @@ import system.ValueType;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.FileSystem, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.FileSystem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.FileSystem</a>
  */
 public class FileSystem extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.FileSystem
+     */
     public static final String className = "Microsoft.VisualBasic.FileSystem";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +126,9 @@ public class FileSystem extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileSystem}, a cast assert is made to check if types are compatible.
+     */
     public static FileSystem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileSystem(from.getJCOInstance());
@@ -119,6 +136,10 @@ public class FileSystem extends NetObject  {
 
     // Constructors section
     
+    public FileSystem() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -344,6 +365,16 @@ public class FileSystem extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FileClose", (Object)FileNumbers);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileClose(JCRefOut dupParam0) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileClose", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

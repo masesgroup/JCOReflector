@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.ParameterAttributes, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ParameterAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ParameterAttributes</a>
  */
 public class ParameterAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.ParameterAttributes
+     */
     public static final String className = "System.Reflection.ParameterAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -147,19 +162,19 @@ public class ParameterAttributes extends NetObject  {
 
     // Flags management section
 
-    public ParameterAttributes add(ParameterAttributes val) throws Throwable {
+    public final ParameterAttributes add(ParameterAttributes val) throws Throwable {
         return new ParameterAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ParameterAttributes remove(ParameterAttributes val) throws Throwable {
+    public final ParameterAttributes remove(ParameterAttributes val) throws Throwable {
         return new ParameterAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ParameterAttributes val) throws Throwable {
+    public final boolean is(ParameterAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ParameterAttributes val) throws Throwable {
+    public final boolean has(ParameterAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

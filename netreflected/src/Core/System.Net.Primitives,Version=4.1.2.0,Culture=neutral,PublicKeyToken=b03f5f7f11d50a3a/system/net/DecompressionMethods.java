@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.DecompressionMethods, System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DecompressionMethods" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DecompressionMethods</a>
  */
 public class DecompressionMethods extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Primitives
+     */
     public static final String assemblyShortName = "System.Net.Primitives";
+    /**
+     * Qualified class name: System.Net.DecompressionMethods
+     */
     public static final String className = "System.Net.DecompressionMethods";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class DecompressionMethods extends NetObject  {
 
     // Flags management section
 
-    public DecompressionMethods add(DecompressionMethods val) throws Throwable {
+    public final DecompressionMethods add(DecompressionMethods val) throws Throwable {
         return new DecompressionMethods(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public DecompressionMethods remove(DecompressionMethods val) throws Throwable {
+    public final DecompressionMethods remove(DecompressionMethods val) throws Throwable {
         return new DecompressionMethods(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(DecompressionMethods val) throws Throwable {
+    public final boolean is(DecompressionMethods val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(DecompressionMethods val) throws Throwable {
+    public final boolean has(DecompressionMethods val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

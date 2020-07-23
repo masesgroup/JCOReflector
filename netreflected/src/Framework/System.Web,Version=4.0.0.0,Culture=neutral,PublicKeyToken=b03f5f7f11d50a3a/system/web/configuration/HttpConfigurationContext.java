@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Web.Configuration.HttpConfigurationContext, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.HttpConfigurationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.HttpConfigurationContext</a>
  */
 public class HttpConfigurationContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.HttpConfigurationContext
+     */
     public static final String className = "System.Web.Configuration.HttpConfigurationContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class HttpConfigurationContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpConfigurationContext}, a cast assert is made to check if types are compatible.
+     */
     public static HttpConfigurationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpConfigurationContext(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class HttpConfigurationContext extends NetObject  {
 
     // Constructors section
     
+    public HttpConfigurationContext() throws Throwable {
+    }
+
+
 
     
     // Methods section

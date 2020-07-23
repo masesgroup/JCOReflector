@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.WebBrowserNavigatingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WebBrowserNavigatingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserNavigatingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserNavigatingEventHandler</a>
+ */
 public interface IWebBrowserNavigatingEventHandler {
     public void Invoke(NetObject sender, WebBrowserNavigatingEventArgs e);
 }

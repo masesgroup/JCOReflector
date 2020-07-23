@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Net.Sockets.SocketReceiveFromResult, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketReceiveFromResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketReceiveFromResult</a>
  */
-public class SocketReceiveFromResult extends NetObject  {
+public class SocketReceiveFromResult extends ValueType  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.Sockets.SocketReceiveFromResult
+     */
     public static final String className = "System.Net.Sockets.SocketReceiveFromResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SocketReceiveFromResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SocketReceiveFromResult}, a cast assert is made to check if types are compatible.
+     */
     public static SocketReceiveFromResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SocketReceiveFromResult(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class SocketReceiveFromResult extends NetObject  {
 
     // Constructors section
     
+    public SocketReceiveFromResult() throws Throwable {
+    }
+
+
 
     
     // Methods section

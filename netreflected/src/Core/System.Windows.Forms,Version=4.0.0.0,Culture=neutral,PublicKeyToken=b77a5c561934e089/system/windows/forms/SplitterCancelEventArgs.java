@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.CancelEventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.SplitterCancelEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs</a>
  */
-public class SplitterCancelEventArgs extends NetObject  {
+public class SplitterCancelEventArgs extends CancelEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.SplitterCancelEventArgs
+     */
     public static final String className = "System.Windows.Forms.SplitterCancelEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SplitterCancelEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SplitterCancelEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SplitterCancelEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SplitterCancelEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class SplitterCancelEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SplitterCancelEventArgs() throws Throwable {
+    }
 
     public SplitterCancelEventArgs(int mouseCursorX, int mouseCursorY, int splitX, int splitY) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class SplitterCancelEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -127,26 +148,6 @@ public class SplitterCancelEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getMouseCursorX() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

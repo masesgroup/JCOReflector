@@ -38,16 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.INameScope;
+import system.windows.markup.INameScopeImplementation;
 
 
 /**
  * The base .NET class managing System.Windows.Markup.INameScopeDictionary, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.INameScopeDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.INameScopeDictionary</a>
  */
-public class INameScopeDictionaryImplementation extends NetObject implements INameScopeDictionary {
+public class INameScopeDictionaryImplementation extends IEnumerableImplementation implements INameScopeDictionary {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Windows.Markup.INameScopeDictionary
+     */
     public static final String className = "System.Windows.Markup.INameScopeDictionary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +112,9 @@ public class INameScopeDictionaryImplementation extends NetObject implements INa
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INameScopeDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static INameScopeDictionary ToINameScopeDictionary(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new INameScopeDictionaryImplementation(from.getJCOInstance());
@@ -103,52 +122,12 @@ public class INameScopeDictionaryImplementation extends NetObject implements INa
 
     // Methods section
     
-    public boolean ContainsKey(java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ContainsKey", key);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Remove(java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Remove", key);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject FindName(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objFindName = (JCObject)classInstance.Invoke("FindName", name);
             return new NetObject(objFindName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(java.lang.String key, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,26 +157,6 @@ public class INameScopeDictionaryImplementation extends NetObject implements INa
     
     // Properties section
     
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

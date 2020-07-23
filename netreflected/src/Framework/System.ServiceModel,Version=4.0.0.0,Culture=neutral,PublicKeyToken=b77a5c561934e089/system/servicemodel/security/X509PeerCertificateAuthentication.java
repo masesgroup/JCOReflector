@@ -46,12 +46,27 @@ import system.servicemodel.security.X509CertificateValidationMode;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.X509PeerCertificateAuthentication, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.X509PeerCertificateAuthentication" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.X509PeerCertificateAuthentication</a>
  */
 public class X509PeerCertificateAuthentication extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.X509PeerCertificateAuthentication
+     */
     public static final String className = "System.ServiceModel.Security.X509PeerCertificateAuthentication";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class X509PeerCertificateAuthentication extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509PeerCertificateAuthentication}, a cast assert is made to check if types are compatible.
+     */
     public static X509PeerCertificateAuthentication cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509PeerCertificateAuthentication(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class X509PeerCertificateAuthentication extends NetObject  {
 
     // Constructors section
     
+    public X509PeerCertificateAuthentication() throws Throwable {
+    }
+
+
 
     
     // Methods section

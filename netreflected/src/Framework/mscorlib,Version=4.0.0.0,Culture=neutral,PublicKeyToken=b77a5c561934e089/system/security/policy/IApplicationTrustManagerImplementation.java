@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.ISecurityEncodable;
+import system.security.ISecurityEncodableImplementation;
 import system.security.policy.ApplicationTrust;
 import system.ActivationContext;
 import system.security.policy.TrustManagerContext;
@@ -46,12 +48,27 @@ import system.security.SecurityElement;
 
 /**
  * The base .NET class managing System.Security.Policy.IApplicationTrustManager, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IApplicationTrustManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IApplicationTrustManager</a>
  */
 public class IApplicationTrustManagerImplementation extends NetObject implements IApplicationTrustManager {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.IApplicationTrustManager
+     */
     public static final String className = "System.Security.Policy.IApplicationTrustManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +116,9 @@ public class IApplicationTrustManagerImplementation extends NetObject implements
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IApplicationTrustManager}, a cast assert is made to check if types are compatible.
+     */
     public static IApplicationTrustManager ToIApplicationTrustManager(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IApplicationTrustManagerImplementation(from.getJCOInstance());

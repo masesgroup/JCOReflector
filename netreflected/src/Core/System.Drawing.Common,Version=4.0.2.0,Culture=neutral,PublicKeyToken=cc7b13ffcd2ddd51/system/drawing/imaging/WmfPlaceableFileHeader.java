@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Drawing.Imaging.WmfPlaceableFileHeader, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader</a>
  */
 public class WmfPlaceableFileHeader extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Imaging.WmfPlaceableFileHeader
+     */
     public static final String className = "System.Drawing.Imaging.WmfPlaceableFileHeader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class WmfPlaceableFileHeader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WmfPlaceableFileHeader}, a cast assert is made to check if types are compatible.
+     */
     public static WmfPlaceableFileHeader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WmfPlaceableFileHeader(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     // Constructors section
     
-
     public WmfPlaceableFileHeader() throws Throwable {
         try {
             // add reference to assemblyName.dll file

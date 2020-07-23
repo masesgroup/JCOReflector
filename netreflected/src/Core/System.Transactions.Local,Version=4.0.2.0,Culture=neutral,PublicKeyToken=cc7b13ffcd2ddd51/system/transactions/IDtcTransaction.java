@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Transactions.IDtcTransaction, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IDtcTransaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IDtcTransaction</a>
  */
 public interface IDtcTransaction extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
+    public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.IDtcTransaction
+     */
+    public static final String className = "System.Transactions.IDtcTransaction";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDtcTransaction}, a cast assert is made to check if types are compatible.
+     */
     public static IDtcTransaction ToIDtcTransaction(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Transactions.IDtcTransaction, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Transactions.Local"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDtcTransactionImplementation(from.getJCOInstance());
     }

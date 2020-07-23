@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.xml.schema.IXmlValueGetter;
 /**
  * The base .NET class managing System.Xml.Schema.XmlValueGetter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlValueGetter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlValueGetter</a>
  */
 public class XmlValueGetter extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.XmlValueGetter
+     */
     public static final String className = "System.Xml.Schema.XmlValueGetter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IXmlValueGetter callerInstance = null;
@@ -150,7 +165,7 @@ public class XmlValueGetter extends JCDelegate implements IJCEventEmit, IJCOBrid
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke() throws Throwable {
+    public NetObject METHOD_JAVA_NAME() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -161,7 +176,9 @@ public class XmlValueGetter extends JCDelegate implements IJCEventEmit, IJCOBrid
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke() {
         return null;
     }

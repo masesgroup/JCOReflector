@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.pkcs.Pkcs9AttributeObject;
 import system.security.cryptography.AsnEncodedData;
-import system.security.cryptography.Oid;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.Pkcs9MessageDigest, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9MessageDigest" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9MessageDigest</a>
  */
-public class Pkcs9MessageDigest extends NetObject  {
+public class Pkcs9MessageDigest extends Pkcs9AttributeObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.Pkcs9MessageDigest
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.Pkcs9MessageDigest";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Pkcs9MessageDigest extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs9MessageDigest}, a cast assert is made to check if types are compatible.
+     */
     public static Pkcs9MessageDigest cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Pkcs9MessageDigest(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class Pkcs9MessageDigest extends NetObject  {
 
     // Constructors section
     
-
     public Pkcs9MessageDigest() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
@@ -125,16 +141,6 @@ public class Pkcs9MessageDigest extends NetObject  {
     
     // Methods section
     
-    public java.lang.String Format(boolean multiLine) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("Format", multiLine);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -163,46 +169,6 @@ public class Pkcs9MessageDigest extends NetObject  {
 				resultingArray[indexMessageDigest] = (byte)resultingArrayList.get(indexMessageDigest);
 			}
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] getRawData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("RawData");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexRawData = 0; indexRawData < resultingArrayList.size(); indexRawData++ ) {
-				resultingArray[indexRawData] = (byte)resultingArrayList.get(indexRawData);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRawData(byte[] RawData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RawData", RawData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Oid getOid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Oid");
-            return new Oid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

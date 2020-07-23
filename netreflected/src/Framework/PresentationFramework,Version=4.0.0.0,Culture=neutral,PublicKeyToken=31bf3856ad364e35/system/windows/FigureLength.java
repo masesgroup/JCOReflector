@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.FigureUnitType;
 import system.windows.FigureLength;
 
 
 /**
  * The base .NET class managing System.Windows.FigureLength, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FigureLength" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FigureLength</a>
  */
-public class FigureLength extends NetObject  {
+public class FigureLength extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.FigureLength
+     */
     public static final String className = "System.Windows.FigureLength";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class FigureLength extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FigureLength}, a cast assert is made to check if types are compatible.
+     */
     public static FigureLength cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FigureLength(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class FigureLength extends NetObject  {
 
     // Constructors section
     
+    public FigureLength() throws Throwable {
+    }
 
     public FigureLength(double pixels) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
@@ -130,6 +150,7 @@ public class FigureLength extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

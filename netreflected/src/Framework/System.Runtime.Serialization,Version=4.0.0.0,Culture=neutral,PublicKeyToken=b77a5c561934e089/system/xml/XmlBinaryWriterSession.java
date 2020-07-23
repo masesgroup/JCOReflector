@@ -43,12 +43,27 @@ import system.xml.XmlDictionaryString;
 
 /**
  * The base .NET class managing System.Xml.XmlBinaryWriterSession, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlBinaryWriterSession" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlBinaryWriterSession</a>
  */
 public class XmlBinaryWriterSession extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
     public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Xml.XmlBinaryWriterSession
+     */
     public static final String className = "System.Xml.XmlBinaryWriterSession";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class XmlBinaryWriterSession extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlBinaryWriterSession}, a cast assert is made to check if types are compatible.
+     */
     public static XmlBinaryWriterSession cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlBinaryWriterSession(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class XmlBinaryWriterSession extends NetObject  {
 
     // Constructors section
     
-
     public XmlBinaryWriterSession() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -124,6 +140,16 @@ public class XmlBinaryWriterSession extends NetObject  {
     
     // Methods section
     
+    public void Reset() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

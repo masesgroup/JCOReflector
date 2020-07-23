@@ -50,12 +50,27 @@ import system.xml.linq.XDocument;
 
 /**
  * The base .NET class managing System.Xml.Schema.Extensions, System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.Extensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.Extensions</a>
  */
 public class Extensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Schema.Extensions
+     */
     public static final String className = "System.Xml.Schema.Extensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class Extensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Extensions}, a cast assert is made to check if types are compatible.
+     */
     public static Extensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Extensions(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class Extensions extends NetObject  {
 
     // Constructors section
     
+    public Extensions() throws Throwable {
+    }
 
     
     // Methods section

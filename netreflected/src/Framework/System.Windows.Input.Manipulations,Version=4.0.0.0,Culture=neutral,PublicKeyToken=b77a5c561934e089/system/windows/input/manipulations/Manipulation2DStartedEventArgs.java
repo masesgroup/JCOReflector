@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.Single;
 
 
 /**
  * The base .NET class managing System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs, System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs</a>
  */
-public class Manipulation2DStartedEventArgs extends NetObject  {
+public class Manipulation2DStartedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Input.Manipulations
+     */
     public static final String assemblyShortName = "System.Windows.Input.Manipulations";
+    /**
+     * Qualified class name: System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs
+     */
     public static final String className = "System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class Manipulation2DStartedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Manipulation2DStartedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static Manipulation2DStartedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Manipulation2DStartedEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class Manipulation2DStartedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public Manipulation2DStartedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

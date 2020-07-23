@@ -45,12 +45,27 @@ import system.messaging.Message;
 
 /**
  * The base .NET class managing System.Messaging.BinaryMessageFormatter, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.BinaryMessageFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.BinaryMessageFormatter</a>
  */
 public class BinaryMessageFormatter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.BinaryMessageFormatter
+     */
     public static final String className = "System.Messaging.BinaryMessageFormatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class BinaryMessageFormatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BinaryMessageFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static BinaryMessageFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BinaryMessageFormatter(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class BinaryMessageFormatter extends NetObject  {
 
     // Constructors section
     
-
     public BinaryMessageFormatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file

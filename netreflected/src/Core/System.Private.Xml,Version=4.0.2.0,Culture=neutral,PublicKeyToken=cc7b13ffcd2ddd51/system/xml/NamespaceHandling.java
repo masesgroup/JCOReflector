@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.NamespaceHandling, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.NamespaceHandling" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.NamespaceHandling</a>
  */
 public class NamespaceHandling extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.NamespaceHandling
+     */
     public static final String className = "System.Xml.NamespaceHandling";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class NamespaceHandling extends NetObject  {
 
     // Flags management section
 
-    public NamespaceHandling add(NamespaceHandling val) throws Throwable {
+    public final NamespaceHandling add(NamespaceHandling val) throws Throwable {
         return new NamespaceHandling(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public NamespaceHandling remove(NamespaceHandling val) throws Throwable {
+    public final NamespaceHandling remove(NamespaceHandling val) throws Throwable {
         return new NamespaceHandling(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(NamespaceHandling val) throws Throwable {
+    public final boolean is(NamespaceHandling val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(NamespaceHandling val) throws Throwable {
+    public final boolean has(NamespaceHandling val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

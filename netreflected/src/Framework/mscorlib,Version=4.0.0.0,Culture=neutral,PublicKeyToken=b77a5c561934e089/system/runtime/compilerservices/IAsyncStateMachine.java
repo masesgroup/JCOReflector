@@ -43,12 +43,29 @@ import system.runtime.compilerservices.IAsyncStateMachineImplementation;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.IAsyncStateMachine, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IAsyncStateMachine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IAsyncStateMachine</a>
  */
 public interface IAsyncStateMachine extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.IAsyncStateMachine
+     */
+    public static final String className = "System.Runtime.CompilerServices.IAsyncStateMachine";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAsyncStateMachine}, a cast assert is made to check if types are compatible.
+     */
     public static IAsyncStateMachine ToIAsyncStateMachine(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.CompilerServices.IAsyncStateMachine, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IAsyncStateMachineImplementation(from.getJCOInstance());
     }

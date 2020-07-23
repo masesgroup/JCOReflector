@@ -43,12 +43,27 @@ import system.management.ManagementPath;
 
 /**
  * The base .NET class managing System.Management.ManagementPath, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementPath" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementPath</a>
  */
 public class ManagementPath extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Management
+     */
     public static final String assemblyShortName = "System.Management";
+    /**
+     * Qualified class name: System.Management.ManagementPath
+     */
     public static final String className = "System.Management.ManagementPath";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ManagementPath extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManagementPath}, a cast assert is made to check if types are compatible.
+     */
     public static ManagementPath cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ManagementPath(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class ManagementPath extends NetObject  {
 
     // Constructors section
     
-
     public ManagementPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.management.ManagementException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -199,22 +215,22 @@ public class ManagementPath extends NetObject  {
         }
     }
 
-    public static ManagementPath getDefaultPath() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ManagementPath getDefaultPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultPath");
+            JCObject val = (JCObject)classInstance.Get("DefaultPath");
             return new ManagementPath(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultPath(ManagementPath DefaultPath) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultPath(ManagementPath DefaultPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultPath", DefaultPath == null ? null : DefaultPath.getJCOInstance());
+            classInstance.Set("DefaultPath", DefaultPath == null ? null : DefaultPath.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,12 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.SamlSubjectStatement;
 import system.identitymodel.tokens.SamlSubject;
 import system.DateTime;
-import system.identitymodel.policy.IAuthorizationPolicy;
-import system.identitymodel.policy.IAuthorizationPolicyImplementation;
-import system.identitymodel.claims.ClaimSet;
-import system.identitymodel.selectors.SamlSecurityTokenAuthenticator;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
@@ -53,12 +50,27 @@ import system.xml.XmlDictionaryWriter;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.SamlAuthenticationStatement, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationStatement</a>
  */
-public class SamlAuthenticationStatement extends NetObject  {
+public class SamlAuthenticationStatement extends SamlSubjectStatement  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.SamlAuthenticationStatement
+     */
     public static final String className = "System.IdentityModel.Tokens.SamlAuthenticationStatement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +123,9 @@ public class SamlAuthenticationStatement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SamlAuthenticationStatement}, a cast assert is made to check if types are compatible.
+     */
     public static SamlAuthenticationStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SamlAuthenticationStatement(from.getJCOInstance());
@@ -119,7 +133,6 @@ public class SamlAuthenticationStatement extends NetObject  {
 
     // Constructors section
     
-
     public SamlAuthenticationStatement() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -134,17 +147,6 @@ public class SamlAuthenticationStatement extends NetObject  {
     
     // Methods section
     
-    public IAuthorizationPolicy CreatePolicy(ClaimSet issuer, SamlSecurityTokenAuthenticator samlAuthenticator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreatePolicy = (JCObject)classInstance.Invoke("CreatePolicy", issuer == null ? null : issuer.getJCOInstance(), samlAuthenticator == null ? null : samlAuthenticator.getJCOInstance());
-            return new IAuthorizationPolicyImplementation(objCreatePolicy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -179,16 +181,6 @@ public class SamlAuthenticationStatement extends NetObject  {
     
     // Properties section
     
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DateTime getAuthenticationInstant() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -205,27 +197,6 @@ public class SamlAuthenticationStatement extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationInstant", AuthenticationInstant == null ? null : AuthenticationInstant.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SamlSubject getSamlSubject() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SamlSubject");
-            return new SamlSubject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSamlSubject(SamlSubject SamlSubject) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SamlSubject", SamlSubject == null ? null : SamlSubject.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,11 +222,11 @@ public class SamlAuthenticationStatement extends NetObject  {
         }
     }
 
-    public static java.lang.String getClaimType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getClaimType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("ClaimType");
+            return (java.lang.String)classInstance.Get("ClaimType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

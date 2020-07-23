@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.ISupportInitialize, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ISupportInitialize" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ISupportInitialize</a>
  */
 public class ISupportInitializeImplementation extends NetObject implements ISupportInitialize {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.ISupportInitialize
+     */
     public static final String className = "System.ComponentModel.ISupportInitialize";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class ISupportInitializeImplementation extends NetObject implements ISupp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISupportInitialize}, a cast assert is made to check if types are compatible.
+     */
     public static ISupportInitialize ToISupportInitialize(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISupportInitializeImplementation(from.getJCOInstance());

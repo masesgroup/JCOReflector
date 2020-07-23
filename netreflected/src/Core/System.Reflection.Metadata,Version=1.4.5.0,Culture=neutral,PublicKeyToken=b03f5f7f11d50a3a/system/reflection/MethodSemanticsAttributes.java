@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.MethodSemanticsAttributes, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MethodSemanticsAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MethodSemanticsAttributes</a>
  */
 public class MethodSemanticsAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.MethodSemanticsAttributes
+     */
     public static final String className = "System.Reflection.MethodSemanticsAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class MethodSemanticsAttributes extends NetObject  {
 
     // Flags management section
 
-    public MethodSemanticsAttributes add(MethodSemanticsAttributes val) throws Throwable {
+    public final MethodSemanticsAttributes add(MethodSemanticsAttributes val) throws Throwable {
         return new MethodSemanticsAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MethodSemanticsAttributes remove(MethodSemanticsAttributes val) throws Throwable {
+    public final MethodSemanticsAttributes remove(MethodSemanticsAttributes val) throws Throwable {
         return new MethodSemanticsAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MethodSemanticsAttributes val) throws Throwable {
+    public final boolean is(MethodSemanticsAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MethodSemanticsAttributes val) throws Throwable {
+    public final boolean has(MethodSemanticsAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

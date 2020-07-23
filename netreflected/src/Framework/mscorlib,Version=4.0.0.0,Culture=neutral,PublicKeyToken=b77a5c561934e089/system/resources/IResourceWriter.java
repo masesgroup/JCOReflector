@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
  * The base .NET class managing System.Resources.IResourceWriter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceWriter</a>
  */
-public interface IResourceWriter extends IJCOBridgeReflected {
-
+public interface IResourceWriter extends IJCOBridgeReflected, IDisposable {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Resources.IResourceWriter
+     */
+    public static final String className = "System.Resources.IResourceWriter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IResourceWriter}, a cast assert is made to check if types are compatible.
+     */
     public static IResourceWriter ToIResourceWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Resources.IResourceWriter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IResourceWriterImplementation(from.getJCOInstance());
     }
@@ -91,13 +110,14 @@ public interface IResourceWriter extends IJCOBridgeReflected {
     
     public void AddResource(java.lang.String name, byte[] value) throws Throwable;
 
+    public void AddResource(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable;
+
     public void AddResource(java.lang.String name, NetObject value) throws Throwable;
 
     public void AddResource(java.lang.String name, java.lang.String value) throws Throwable;
 
     public void Close() throws Throwable;
 
-    public void Dispose() throws Throwable;
 
     public void Generate() throws Throwable;
 

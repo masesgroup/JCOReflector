@@ -46,12 +46,27 @@ import system.UriTemplateMatch;
 
 /**
  * The base .NET class managing System.UriTemplate, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.UriTemplate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.UriTemplate</a>
  */
 public class UriTemplate extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.UriTemplate
+     */
     public static final String className = "System.UriTemplate";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class UriTemplate extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UriTemplate}, a cast assert is made to check if types are compatible.
+     */
     public static UriTemplate cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UriTemplate(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class UriTemplate extends NetObject  {
 
     // Constructors section
     
+    public UriTemplate() throws Throwable {
+    }
 
     public UriTemplate(java.lang.String template) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         try {
@@ -132,6 +151,7 @@ public class UriTemplate extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -174,6 +194,17 @@ public class UriTemplate extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBindByPosition = (JCObject)classInstance.Invoke("BindByPosition", baseAddress == null ? null : baseAddress.getJCOInstance(), values);
+            return new Uri(objBindByPosition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri BindByPosition(Uri dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBindByPosition = (JCObject)classInstance.Invoke("BindByPosition", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
             return new Uri(objBindByPosition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

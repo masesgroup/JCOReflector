@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Cryptography.X509Certificates.X509VerificationFlags, System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509VerificationFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509VerificationFlags</a>
  */
 public class X509VerificationFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.X509Certificates
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.X509Certificates";
+    /**
+     * Qualified class name: System.Security.Cryptography.X509Certificates.X509VerificationFlags
+     */
     public static final String className = "System.Security.Cryptography.X509Certificates.X509VerificationFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -150,19 +165,19 @@ public class X509VerificationFlags extends NetObject  {
 
     // Flags management section
 
-    public X509VerificationFlags add(X509VerificationFlags val) throws Throwable {
+    public final X509VerificationFlags add(X509VerificationFlags val) throws Throwable {
         return new X509VerificationFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public X509VerificationFlags remove(X509VerificationFlags val) throws Throwable {
+    public final X509VerificationFlags remove(X509VerificationFlags val) throws Throwable {
         return new X509VerificationFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(X509VerificationFlags val) throws Throwable {
+    public final boolean is(X509VerificationFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(X509VerificationFlags val) throws Throwable {
+    public final boolean has(X509VerificationFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

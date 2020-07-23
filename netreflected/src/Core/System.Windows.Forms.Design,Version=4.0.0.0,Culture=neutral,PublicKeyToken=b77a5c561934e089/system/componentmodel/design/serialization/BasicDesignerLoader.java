@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.serialization.DesignerLoader;
 import system.componentmodel.design.serialization.IDesignerLoaderHost;
 import system.componentmodel.design.serialization.IDesignerLoaderHostImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.BasicDesignerLoader, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.BasicDesignerLoader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.BasicDesignerLoader</a>
  */
-public class BasicDesignerLoader extends NetObject  {
+public class BasicDesignerLoader extends DesignerLoader  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.BasicDesignerLoader
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.BasicDesignerLoader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class BasicDesignerLoader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BasicDesignerLoader}, a cast assert is made to check if types are compatible.
+     */
     public static BasicDesignerLoader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BasicDesignerLoader(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class BasicDesignerLoader extends NetObject  {
 
     // Constructors section
     
+    public BasicDesignerLoader() throws Throwable {
+    }
 
     
     // Methods section
@@ -148,16 +168,6 @@ public class BasicDesignerLoader extends NetObject  {
     
     // Properties section
     
-    public boolean getLoading() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Loading");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

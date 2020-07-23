@@ -44,12 +44,27 @@ import system.security.cryptography.pkcs.Pkcs12IntegrityMode;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.Pkcs12Info, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12Info" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12Info</a>
  */
 public class Pkcs12Info extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.Pkcs12Info
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.Pkcs12Info";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Pkcs12Info extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs12Info}, a cast assert is made to check if types are compatible.
+     */
     public static Pkcs12Info cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Pkcs12Info(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class Pkcs12Info extends NetObject  {
 
     // Constructors section
     
+    public Pkcs12Info() throws Throwable {
+    }
+
+
 
     
     // Methods section

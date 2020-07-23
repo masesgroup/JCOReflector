@@ -44,12 +44,27 @@ import system.security.cryptography.AsnEncodedDataCollection;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CryptographicAttributeObject, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptographicAttributeObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptographicAttributeObject</a>
  */
 public class CryptographicAttributeObject extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.CryptographicAttributeObject
+     */
     public static final String className = "System.Security.Cryptography.CryptographicAttributeObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CryptographicAttributeObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CryptographicAttributeObject}, a cast assert is made to check if types are compatible.
+     */
     public static CryptographicAttributeObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CryptographicAttributeObject(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class CryptographicAttributeObject extends NetObject  {
 
     // Constructors section
     
+    public CryptographicAttributeObject() throws Throwable {
+    }
 
     public CryptographicAttributeObject(Oid oid) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         try {
@@ -130,6 +149,7 @@ public class CryptographicAttributeObject extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

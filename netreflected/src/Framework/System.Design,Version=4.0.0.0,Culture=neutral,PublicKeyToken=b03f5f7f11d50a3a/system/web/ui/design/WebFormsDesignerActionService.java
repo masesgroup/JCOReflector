@@ -38,24 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.DesignerActionService;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
-import system.componentmodel.IComponent;
-import system.componentmodel.IComponentImplementation;
-import system.componentmodel.design.DesignerActionListCollection;
-import system.componentmodel.design.ComponentActionsType;
-import system.componentmodel.design.DesignerActionList;
-import system.componentmodel.design.DesignerActionListsChangedEventHandler;
 
 
 /**
  * The base .NET class managing System.Web.UI.Design.WebFormsDesignerActionService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebFormsDesignerActionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebFormsDesignerActionService</a>
  */
-public class WebFormsDesignerActionService extends NetObject  {
+public class WebFormsDesignerActionService extends DesignerActionService  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.WebFormsDesignerActionService
+     */
     public static final String className = "System.Web.UI.Design.WebFormsDesignerActionService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +118,9 @@ public class WebFormsDesignerActionService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebFormsDesignerActionService}, a cast assert is made to check if types are compatible.
+     */
     public static WebFormsDesignerActionService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebFormsDesignerActionService(from.getJCOInstance());
@@ -116,6 +128,8 @@ public class WebFormsDesignerActionService extends NetObject  {
 
     // Constructors section
     
+    public WebFormsDesignerActionService() throws Throwable {
+    }
 
     public WebFormsDesignerActionService(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException {
         try {
@@ -128,111 +142,10 @@ public class WebFormsDesignerActionService extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean Contains(IComponent comp) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Contains", comp == null ? null : comp.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DesignerActionListCollection GetComponentActions(IComponent component) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetComponentActions = (JCObject)classInstance.Invoke("GetComponentActions", component == null ? null : component.getJCOInstance());
-            return new DesignerActionListCollection(objGetComponentActions);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DesignerActionListCollection GetComponentActions(IComponent component, ComponentActionsType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetComponentActions = (JCObject)classInstance.Invoke("GetComponentActions", component == null ? null : component.getJCOInstance(), type == null ? null : type.getJCOInstance());
-            return new DesignerActionListCollection(objGetComponentActions);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(IComponent comp, DesignerActionList actionList) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", comp == null ? null : comp.getJCOInstance(), actionList == null ? null : actionList.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(IComponent comp, DesignerActionListCollection designerActionListCollection) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.MulticastNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", comp == null ? null : comp.getJCOInstance(), designerActionListCollection == null ? null : designerActionListCollection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(DesignerActionList actionList) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", actionList == null ? null : actionList.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(IComponent comp) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", comp == null ? null : comp.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(IComponent comp, DesignerActionList actionList) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", comp == null ? null : comp.getJCOInstance(), actionList == null ? null : actionList.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -241,26 +154,6 @@ public class WebFormsDesignerActionService extends NetObject  {
 
     // Instance Events section
     
-
-    public void addDesignerActionListsChanged(DesignerActionListsChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("DesignerActionListsChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDesignerActionListsChanged(DesignerActionListsChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("DesignerActionListsChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
 }

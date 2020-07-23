@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PropertyTranslator}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.PropertyTranslator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.PropertyTranslator</a>
+ */
 public interface IPropertyTranslator {
     public void Invoke(NetObject host, java.lang.String propertyName, NetObject value);
 }

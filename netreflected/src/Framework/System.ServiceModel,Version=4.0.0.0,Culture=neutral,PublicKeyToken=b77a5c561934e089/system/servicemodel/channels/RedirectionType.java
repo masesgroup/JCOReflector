@@ -43,12 +43,27 @@ import system.servicemodel.channels.RedirectionType;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.RedirectionType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.RedirectionType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.RedirectionType</a>
  */
 public class RedirectionType extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.RedirectionType
+     */
     public static final String className = "System.ServiceModel.Channels.RedirectionType";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RedirectionType extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RedirectionType}, a cast assert is made to check if types are compatible.
+     */
     public static RedirectionType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RedirectionType(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class RedirectionType extends NetObject  {
 
     // Constructors section
     
+    public RedirectionType() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -128,33 +149,33 @@ public class RedirectionType extends NetObject  {
     
     // Properties section
     
-    public static RedirectionType getCache() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RedirectionType getCache() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Cache");
+            JCObject val = (JCObject)classInstance.Get("Cache");
             return new RedirectionType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RedirectionType getResource() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RedirectionType getResource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Resource");
+            JCObject val = (JCObject)classInstance.Get("Resource");
             return new RedirectionType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RedirectionType getUseIntermediary() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RedirectionType getUseIntermediary() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UseIntermediary");
+            JCObject val = (JCObject)classInstance.Get("UseIntermediary");
             return new RedirectionType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

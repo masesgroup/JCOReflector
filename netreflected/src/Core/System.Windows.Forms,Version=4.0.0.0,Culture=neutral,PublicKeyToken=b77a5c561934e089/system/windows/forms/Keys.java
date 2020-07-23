@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.Keys, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Keys" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Keys</a>
  */
 public class Keys extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.Keys
+     */
     public static final String className = "System.Windows.Forms.Keys";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -330,19 +345,19 @@ public class Keys extends NetObject  {
 
     // Flags management section
 
-    public Keys add(Keys val) throws Throwable {
+    public final Keys add(Keys val) throws Throwable {
         return new Keys(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public Keys remove(Keys val) throws Throwable {
+    public final Keys remove(Keys val) throws Throwable {
         return new Keys(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(Keys val) throws Throwable {
+    public final boolean is(Keys val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(Keys val) throws Throwable {
+    public final boolean has(Keys val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

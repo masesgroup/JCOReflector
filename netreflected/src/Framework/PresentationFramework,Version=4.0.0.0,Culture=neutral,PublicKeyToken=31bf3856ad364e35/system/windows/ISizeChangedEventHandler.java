@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.SizeChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SizeChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SizeChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SizeChangedEventHandler</a>
+ */
 public interface ISizeChangedEventHandler {
     public void Invoke(NetObject sender, SizeChangedEventArgs e);
 }

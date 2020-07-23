@@ -47,12 +47,27 @@ import system.windows.media.LanguageSpecificStringDictionary;
 
 /**
  * The base .NET class managing System.Windows.Media.Typeface, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Typeface" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Typeface</a>
  */
 public class Typeface extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Typeface
+     */
     public static final String className = "System.Windows.Media.Typeface";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class Typeface extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Typeface}, a cast assert is made to check if types are compatible.
+     */
     public static Typeface cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Typeface(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class Typeface extends NetObject  {
 
     // Constructors section
     
+    public Typeface() throws Throwable {
+    }
 
     public Typeface(java.lang.String typefaceName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -143,6 +162,7 @@ public class Typeface extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

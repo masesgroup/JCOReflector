@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Drawing.CharacterRange, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.CharacterRange" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.CharacterRange</a>
  */
-public class CharacterRange extends NetObject  {
+public class CharacterRange extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.CharacterRange
+     */
     public static final String className = "System.Drawing.CharacterRange";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class CharacterRange extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CharacterRange}, a cast assert is made to check if types are compatible.
+     */
     public static CharacterRange cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CharacterRange(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class CharacterRange extends NetObject  {
 
     // Constructors section
     
+    public CharacterRange() throws Throwable {
+    }
 
     public CharacterRange(int First, int Length) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class CharacterRange extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

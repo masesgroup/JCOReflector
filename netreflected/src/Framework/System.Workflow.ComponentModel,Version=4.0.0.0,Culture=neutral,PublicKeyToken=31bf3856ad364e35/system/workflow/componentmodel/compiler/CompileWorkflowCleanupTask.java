@@ -38,29 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.IBuildEngine;
-import microsoft.build.framework.IBuildEngineImplementation;
-import microsoft.build.framework.IBuildEngine2;
-import microsoft.build.framework.IBuildEngine2Implementation;
-import microsoft.build.framework.IBuildEngine3;
-import microsoft.build.framework.IBuildEngine3Implementation;
-import microsoft.build.framework.IBuildEngine4;
-import microsoft.build.framework.IBuildEngine4Implementation;
-import microsoft.build.framework.ITaskHost;
-import microsoft.build.framework.ITaskHostImplementation;
+import microsoft.build.utilities.Task;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
-import microsoft.build.utilities.TaskLoggingHelper;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Compiler.CompileWorkflowCleanupTask, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowCleanupTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowCleanupTask</a>
  */
-public class CompileWorkflowCleanupTask extends NetObject  {
+public class CompileWorkflowCleanupTask extends Task  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Compiler.CompileWorkflowCleanupTask
+     */
     public static final String className = "System.Workflow.ComponentModel.Compiler.CompileWorkflowCleanupTask";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -113,7 +118,9 @@ public class CompileWorkflowCleanupTask extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompileWorkflowCleanupTask}, a cast assert is made to check if types are compatible.
+     */
     public static CompileWorkflowCleanupTask cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompileWorkflowCleanupTask(from.getJCOInstance());
@@ -121,7 +128,6 @@ public class CompileWorkflowCleanupTask extends NetObject  {
 
     // Constructors section
     
-
     public CompileWorkflowCleanupTask() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -150,82 +156,7 @@ public class CompileWorkflowCleanupTask extends NetObject  {
     
     // Properties section
     
-    public IBuildEngine getBuildEngine() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine");
-            return new IBuildEngineImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BuildEngine", BuildEngine == null ? null : BuildEngine.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine2 getBuildEngine2() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine2");
-            return new IBuildEngine2Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine3 getBuildEngine3() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine3");
-            return new IBuildEngine3Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine4 getBuildEngine4() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine4");
-            return new IBuildEngine4Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITaskHost getHostObject() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("HostObject");
-            return new ITaskHostImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHostObject(ITaskHost HostObject) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HostObject", HostObject == null ? null : HostObject.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITaskItem[] getTemporaryFiles() throws Throwable {
+    public final ITaskItem[] getTemporaryFiles() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -247,17 +178,6 @@ public class CompileWorkflowCleanupTask extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TemporaryFiles", toObjectFromArray(TemporaryFiles));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TaskLoggingHelper getLog() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Log");
-            return new TaskLoggingHelper(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

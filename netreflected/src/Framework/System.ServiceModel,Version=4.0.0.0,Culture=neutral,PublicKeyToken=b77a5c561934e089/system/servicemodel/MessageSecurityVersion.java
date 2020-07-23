@@ -49,12 +49,27 @@ import system.servicemodel.security.TrustVersion;
 
 /**
  * The base .NET class managing System.ServiceModel.MessageSecurityVersion, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.MessageSecurityVersion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.MessageSecurityVersion</a>
  */
 public class MessageSecurityVersion extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.MessageSecurityVersion
+     */
     public static final String className = "System.ServiceModel.MessageSecurityVersion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class MessageSecurityVersion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageSecurityVersion}, a cast assert is made to check if types are compatible.
+     */
     public static MessageSecurityVersion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MessageSecurityVersion(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class MessageSecurityVersion extends NetObject  {
 
     // Constructors section
     
+    public MessageSecurityVersion() throws Throwable {
+    }
 
     
     // Methods section
@@ -134,77 +153,77 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
-    public static MessageSecurityVersion getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MessageSecurityVersion getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new MessageSecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageSecurityVersion getWSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MessageSecurityVersion getWSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10");
+            JCObject val = (JCObject)classInstance.Get("WSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10");
             return new MessageSecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageSecurityVersion getWSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MessageSecurityVersion getWSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10");
+            JCObject val = (JCObject)classInstance.Get("WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10");
             return new MessageSecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageSecurityVersion getWSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MessageSecurityVersion getWSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12");
+            JCObject val = (JCObject)classInstance.Get("WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12");
             return new MessageSecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageSecurityVersion getWSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MessageSecurityVersion getWSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10");
+            JCObject val = (JCObject)classInstance.Get("WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10");
             return new MessageSecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageSecurityVersion getWSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MessageSecurityVersion getWSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11");
+            JCObject val = (JCObject)classInstance.Get("WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11");
             return new MessageSecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MessageSecurityVersion getWSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MessageSecurityVersion getWSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10");
+            JCObject val = (JCObject)classInstance.Get("WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10");
             return new MessageSecurityVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

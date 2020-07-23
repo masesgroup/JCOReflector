@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.GridViewDeletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link GridViewDeletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewDeletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewDeletedEventHandler</a>
+ */
 public interface IGridViewDeletedEventHandler {
     public void Invoke(NetObject sender, GridViewDeletedEventArgs e);
 }

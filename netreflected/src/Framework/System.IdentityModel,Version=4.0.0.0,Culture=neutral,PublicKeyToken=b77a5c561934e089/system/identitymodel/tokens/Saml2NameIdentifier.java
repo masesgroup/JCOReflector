@@ -44,12 +44,27 @@ import system.identitymodel.tokens.EncryptingCredentials;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.Saml2NameIdentifier, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.Saml2NameIdentifier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.Saml2NameIdentifier</a>
  */
 public class Saml2NameIdentifier extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.Saml2NameIdentifier
+     */
     public static final String className = "System.IdentityModel.Tokens.Saml2NameIdentifier";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Saml2NameIdentifier extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Saml2NameIdentifier}, a cast assert is made to check if types are compatible.
+     */
     public static Saml2NameIdentifier cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Saml2NameIdentifier(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class Saml2NameIdentifier extends NetObject  {
 
     // Constructors section
     
+    public Saml2NameIdentifier() throws Throwable {
+    }
 
     public Saml2NameIdentifier(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -130,6 +149,7 @@ public class Saml2NameIdentifier extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

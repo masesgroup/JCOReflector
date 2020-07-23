@@ -45,12 +45,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Windows.Controls.UIElementCollection, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.UIElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.UIElementCollection</a>
  */
 public class UIElementCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.UIElementCollection
+     */
     public static final String className = "System.Windows.Controls.UIElementCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class UIElementCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UIElementCollection}, a cast assert is made to check if types are compatible.
+     */
     public static UIElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UIElementCollection(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class UIElementCollection extends NetObject  {
 
     // Constructors section
     
+    public UIElementCollection() throws Throwable {
+    }
 
     public UIElementCollection(UIElement visualParent, FrameworkElement logicalParent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         try {
@@ -121,6 +140,7 @@ public class UIElementCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

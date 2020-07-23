@@ -45,12 +45,27 @@ import system.windows.forms.design.behavior.SnapLine;
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.Behavior.SnapLine, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine</a>
  */
 public class SnapLine extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.Behavior.SnapLine
+     */
     public static final String className = "System.Windows.Forms.Design.Behavior.SnapLine";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class SnapLine extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SnapLine}, a cast assert is made to check if types are compatible.
+     */
     public static SnapLine cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SnapLine(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class SnapLine extends NetObject  {
 
     // Constructors section
     
+    public SnapLine() throws Throwable {
+    }
 
     public SnapLine(SnapLineType type, int offset) throws Throwable {
         try {
@@ -151,6 +170,7 @@ public class SnapLine extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -43,12 +43,27 @@ import system.workflow.runtime.tracking.ComparisonOperator;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Tracking.TrackingCondition, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.TrackingCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.TrackingCondition</a>
  */
 public class TrackingCondition extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.Tracking.TrackingCondition
+     */
     public static final String className = "System.Workflow.Runtime.Tracking.TrackingCondition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class TrackingCondition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TrackingCondition}, a cast assert is made to check if types are compatible.
+     */
     public static TrackingCondition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TrackingCondition(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class TrackingCondition extends NetObject  {
 
     // Constructors section
     
+    public TrackingCondition() throws Throwable {
+    }
 
     
     // Methods section

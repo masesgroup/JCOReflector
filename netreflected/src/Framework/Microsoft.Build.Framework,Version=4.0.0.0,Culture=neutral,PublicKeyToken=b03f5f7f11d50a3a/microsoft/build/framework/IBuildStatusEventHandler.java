@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.build.framework.BuildStatusEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BuildStatusEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildStatusEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildStatusEventHandler</a>
+ */
 public interface IBuildStatusEventHandler {
     public void Invoke(NetObject sender, BuildStatusEventArgs e);
 }

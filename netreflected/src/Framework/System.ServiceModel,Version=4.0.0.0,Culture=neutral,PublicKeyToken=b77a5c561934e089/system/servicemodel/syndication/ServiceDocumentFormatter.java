@@ -45,12 +45,27 @@ import system.servicemodel.syndication.ServiceDocument;
 
 /**
  * The base .NET class managing System.ServiceModel.Syndication.ServiceDocumentFormatter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.ServiceDocumentFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.ServiceDocumentFormatter</a>
  */
 public class ServiceDocumentFormatter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Syndication.ServiceDocumentFormatter
+     */
     public static final String className = "System.ServiceModel.Syndication.ServiceDocumentFormatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ServiceDocumentFormatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceDocumentFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceDocumentFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceDocumentFormatter(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ServiceDocumentFormatter extends NetObject  {
 
     // Constructors section
     
+    public ServiceDocumentFormatter() throws Throwable {
+    }
 
     
     // Methods section

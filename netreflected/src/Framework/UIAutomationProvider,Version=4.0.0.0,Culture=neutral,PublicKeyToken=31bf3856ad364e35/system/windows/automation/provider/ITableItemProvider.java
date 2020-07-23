@@ -37,18 +37,37 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.automation.provider.IGridItemProvider;
+import system.windows.automation.provider.IGridItemProviderImplementation;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.ITableItemProvider, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ITableItemProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ITableItemProvider</a>
  */
-public interface ITableItemProvider extends IJCOBridgeReflected {
-
+public interface ITableItemProvider extends IJCOBridgeReflected, IGridItemProvider {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
+    public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.ITableItemProvider
+     */
+    public static final String className = "System.Windows.Automation.Provider.ITableItemProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITableItemProvider}, a cast assert is made to check if types are compatible.
+     */
     public static ITableItemProvider ToITableItemProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Automation.Provider.ITableItemProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "UIAutomationProvider"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITableItemProviderImplementation(from.getJCOInstance());
     }
@@ -99,16 +118,6 @@ public interface ITableItemProvider extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getColumn() throws Throwable;
-
-    public int getColumnSpan() throws Throwable;
-
-    public int getRow() throws Throwable;
-
-    public int getRowSpan() throws Throwable;
-
-    public IRawElementProviderSimple getContainingGrid() throws Throwable;
-
 
 
     // Instance Events section

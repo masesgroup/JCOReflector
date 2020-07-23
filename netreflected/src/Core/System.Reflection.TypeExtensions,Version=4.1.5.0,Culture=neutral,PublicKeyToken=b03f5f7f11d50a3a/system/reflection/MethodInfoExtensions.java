@@ -43,12 +43,27 @@ import system.reflection.MethodInfo;
 
 /**
  * The base .NET class managing System.Reflection.MethodInfoExtensions, System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MethodInfoExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MethodInfoExtensions</a>
  */
 public class MethodInfoExtensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.TypeExtensions
+     */
     public static final String assemblyShortName = "System.Reflection.TypeExtensions";
+    /**
+     * Qualified class name: System.Reflection.MethodInfoExtensions
+     */
     public static final String className = "System.Reflection.MethodInfoExtensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class MethodInfoExtensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodInfoExtensions}, a cast assert is made to check if types are compatible.
+     */
     public static MethodInfoExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MethodInfoExtensions(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class MethodInfoExtensions extends NetObject  {
 
     // Constructors section
     
+    public MethodInfoExtensions() throws Throwable {
+    }
 
     
     // Methods section

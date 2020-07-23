@@ -45,12 +45,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Windows.Media.ColorContext, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.ColorContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.ColorContext</a>
  */
 public class ColorContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.ColorContext
+     */
     public static final String className = "System.Windows.Media.ColorContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ColorContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ColorContext}, a cast assert is made to check if types are compatible.
+     */
     public static ColorContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ColorContext(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ColorContext extends NetObject  {
 
     // Constructors section
     
+    public ColorContext() throws Throwable {
+    }
 
     public ColorContext(Uri profileUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
         try {
@@ -131,6 +150,7 @@ public class ColorContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -42,12 +42,27 @@ import system.data.oracleclient.OracleRowUpdatingEventArgs;
 import system.data.oracleclient.IOracleRowUpdatingEventHandler;
 /**
  * The base .NET class managing System.Data.OracleClient.OracleRowUpdatingEventHandler, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleRowUpdatingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleRowUpdatingEventHandler</a>
  */
 public class OracleRowUpdatingEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.OracleClient
+     */
     public static final String assemblyShortName = "System.Data.OracleClient";
+    /**
+     * Qualified class name: System.Data.OracleClient.OracleRowUpdatingEventHandler
+     */
     public static final String className = "System.Data.OracleClient.OracleRowUpdatingEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IOracleRowUpdatingEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class OracleRowUpdatingEventHandler extends JCVoidDelegate implements IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, OracleRowUpdatingEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, OracleRowUpdatingEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class OracleRowUpdatingEventHandler extends JCVoidDelegate implements IJC
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, OracleRowUpdatingEventArgs e) {
     }
 }

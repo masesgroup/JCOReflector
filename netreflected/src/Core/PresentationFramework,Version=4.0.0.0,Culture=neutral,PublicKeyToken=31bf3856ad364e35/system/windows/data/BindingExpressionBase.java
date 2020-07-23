@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.Expression;
 import system.windows.controls.ValidationError;
 import system.windows.data.BindingBase;
 import system.windows.data.BindingGroup;
@@ -48,12 +49,27 @@ import system.windows.DependencyProperty;
 
 /**
  * The base .NET class managing System.Windows.Data.BindingExpressionBase, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.BindingExpressionBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.BindingExpressionBase</a>
  */
-public class BindingExpressionBase extends NetObject  {
+public class BindingExpressionBase extends Expression  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Data.BindingExpressionBase
+     */
     public static final String className = "System.Windows.Data.BindingExpressionBase";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class BindingExpressionBase extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindingExpressionBase}, a cast assert is made to check if types are compatible.
+     */
     public static BindingExpressionBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BindingExpressionBase(from.getJCOInstance());
@@ -114,6 +132,8 @@ public class BindingExpressionBase extends NetObject  {
 
     // Constructors section
     
+    public BindingExpressionBase() throws Throwable {
+    }
 
     
     // Methods section

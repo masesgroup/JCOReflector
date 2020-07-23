@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.Cryptography.DeriveBytes, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DeriveBytes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DeriveBytes</a>
  */
 public class DeriveBytes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.DeriveBytes
+     */
     public static final String className = "System.Security.Cryptography.DeriveBytes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class DeriveBytes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DeriveBytes}, a cast assert is made to check if types are compatible.
+     */
     public static DeriveBytes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DeriveBytes(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class DeriveBytes extends NetObject  {
 
     // Constructors section
     
+    public DeriveBytes() throws Throwable {
+    }
 
     
     // Methods section

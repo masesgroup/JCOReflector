@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.diagnostics.contracts.ContractFailureKind;
 
 
 /**
  * The base .NET class managing System.Diagnostics.Contracts.ContractFailedEventArgs, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs</a>
  */
-public class ContractFailedEventArgs extends NetObject  {
+public class ContractFailedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.Contracts.ContractFailedEventArgs
+     */
     public static final String className = "System.Diagnostics.Contracts.ContractFailedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ContractFailedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContractFailedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ContractFailedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ContractFailedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ContractFailedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ContractFailedEventArgs() throws Throwable {
+    }
 
     public ContractFailedEventArgs(ContractFailureKind failureKind, java.lang.String message, java.lang.String condition, NetException originalException) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class ContractFailedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

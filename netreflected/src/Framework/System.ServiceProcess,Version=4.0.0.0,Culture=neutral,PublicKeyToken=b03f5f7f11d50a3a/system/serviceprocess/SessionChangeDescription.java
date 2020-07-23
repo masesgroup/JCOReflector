@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.serviceprocess.SessionChangeDescription;
 import system.serviceprocess.SessionChangeReason;
 
 
 /**
  * The base .NET class managing System.ServiceProcess.SessionChangeDescription, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.SessionChangeDescription" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.SessionChangeDescription</a>
  */
-public class SessionChangeDescription extends NetObject  {
+public class SessionChangeDescription extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ServiceProcess
+     */
     public static final String assemblyShortName = "System.ServiceProcess";
+    /**
+     * Qualified class name: System.ServiceProcess.SessionChangeDescription
+     */
     public static final String className = "System.ServiceProcess.SessionChangeDescription";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SessionChangeDescription extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionChangeDescription}, a cast assert is made to check if types are compatible.
+     */
     public static SessionChangeDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionChangeDescription(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class SessionChangeDescription extends NetObject  {
 
     // Constructors section
     
+    public SessionChangeDescription() throws Throwable {
+    }
+
+
 
     
     // Methods section

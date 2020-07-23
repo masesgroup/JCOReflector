@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.transactions.Enlistment;
 
 
 /**
  * The base .NET class managing System.Transactions.PreparingEnlistment, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.PreparingEnlistment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.PreparingEnlistment</a>
  */
-public class PreparingEnlistment extends NetObject  {
+public class PreparingEnlistment extends Enlistment  {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.PreparingEnlistment
+     */
     public static final String className = "System.Transactions.PreparingEnlistment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class PreparingEnlistment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PreparingEnlistment}, a cast assert is made to check if types are compatible.
+     */
     public static PreparingEnlistment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PreparingEnlistment(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class PreparingEnlistment extends NetObject  {
 
     // Constructors section
     
+    public PreparingEnlistment() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -126,16 +148,6 @@ public class PreparingEnlistment extends NetObject  {
 				resultingArray[indexRecoveryInformation] = (byte)resultingArrayList.get(indexRecoveryInformation);
             }
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Done() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OverflowException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Done");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

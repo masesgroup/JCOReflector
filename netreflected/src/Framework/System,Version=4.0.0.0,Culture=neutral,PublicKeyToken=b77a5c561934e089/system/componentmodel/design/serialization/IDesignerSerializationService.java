@@ -43,12 +43,29 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.IDesignerSerializationService, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationService</a>
  */
 public interface IDesignerSerializationService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.IDesignerSerializationService
+     */
+    public static final String className = "System.ComponentModel.Design.Serialization.IDesignerSerializationService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerSerializationService}, a cast assert is made to check if types are compatible.
+     */
     public static IDesignerSerializationService ToIDesignerSerializationService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.Serialization.IDesignerSerializationService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDesignerSerializationServiceImplementation(from.getJCOInstance());
     }

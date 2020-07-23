@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.http.HttpMessageInvoker;
 import system.net.http.HttpMessageHandler;
 import system.net.http.headers.HttpRequestHeaders;
 import system.net.IWebProxy;
@@ -49,12 +50,27 @@ import system.Version;
 
 /**
  * The base .NET class managing System.Net.Http.HttpClient, System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpClient</a>
  */
-public class HttpClient extends NetObject  {
+public class HttpClient extends HttpMessageInvoker  {
+    /**
+     * Fully assembly qualified name: System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Http
+     */
     public static final String assemblyShortName = "System.Net.Http";
+    /**
+     * Qualified class name: System.Net.Http.HttpClient
+     */
     public static final String className = "System.Net.Http.HttpClient";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class HttpClient extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpClient}, a cast assert is made to check if types are compatible.
+     */
     public static HttpClient cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpClient(from.getJCOInstance());
@@ -115,7 +133,6 @@ public class HttpClient extends NetObject  {
 
     // Constructors section
     
-
     public HttpClient() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -150,6 +167,16 @@ public class HttpClient extends NetObject  {
     
     // Methods section
     
+    public void CancelPendingRequests() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.AggregateException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CancelPendingRequests");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -185,22 +212,22 @@ public class HttpClient extends NetObject  {
         }
     }
 
-    public static IWebProxy getDefaultProxy() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IWebProxy getDefaultProxy() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultProxy");
+            JCObject val = (JCObject)classInstance.Get("DefaultProxy");
             return new IWebProxyImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultProxy(IWebProxy DefaultProxy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultProxy(IWebProxy DefaultProxy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultProxy", DefaultProxy == null ? null : DefaultProxy.getJCOInstance());
+            classInstance.Set("DefaultProxy", DefaultProxy == null ? null : DefaultProxy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,12 +42,29 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Xml.IFragmentCapableXmlDictionaryWriter, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IFragmentCapableXmlDictionaryWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IFragmentCapableXmlDictionaryWriter</a>
  */
 public interface IFragmentCapableXmlDictionaryWriter extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
+    public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Xml.IFragmentCapableXmlDictionaryWriter
+     */
+    public static final String className = "System.Xml.IFragmentCapableXmlDictionaryWriter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFragmentCapableXmlDictionaryWriter}, a cast assert is made to check if types are compatible.
+     */
     public static IFragmentCapableXmlDictionaryWriter ToIFragmentCapableXmlDictionaryWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Xml.IFragmentCapableXmlDictionaryWriter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Private.DataContractSerialization"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IFragmentCapableXmlDictionaryWriterImplementation(from.getJCOInstance());
     }
@@ -95,6 +112,8 @@ public interface IFragmentCapableXmlDictionaryWriter extends IJCOBridgeReflected
     public void StartFragment(Stream stream, boolean generateSelfContainedTextFragment) throws Throwable;
 
     public void WriteFragment(byte[] buffer, int offset, int count) throws Throwable;
+
+    public void WriteFragment(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable;
 
 
     

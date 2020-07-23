@@ -42,12 +42,27 @@ import system.web.ui.webcontrols.DataListCommandEventArgs;
 import system.web.ui.webcontrols.IDataListCommandEventHandler;
 /**
  * The base .NET class managing System.Web.UI.WebControls.DataListCommandEventHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataListCommandEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataListCommandEventHandler</a>
  */
 public class DataListCommandEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.DataListCommandEventHandler
+     */
     public static final String className = "System.Web.UI.WebControls.DataListCommandEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDataListCommandEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DataListCommandEventHandler extends JCVoidDelegate implements IJCVo
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject source, DataListCommandEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject source, DataListCommandEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DataListCommandEventHandler extends JCVoidDelegate implements IJCVo
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject source, DataListCommandEventArgs e) {
     }
 }

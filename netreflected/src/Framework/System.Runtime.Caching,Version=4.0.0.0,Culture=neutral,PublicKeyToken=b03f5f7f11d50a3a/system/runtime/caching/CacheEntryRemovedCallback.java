@@ -42,12 +42,27 @@ import system.runtime.caching.CacheEntryRemovedArguments;
 import system.runtime.caching.ICacheEntryRemovedCallback;
 /**
  * The base .NET class managing System.Runtime.Caching.CacheEntryRemovedCallback, System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.CacheEntryRemovedCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.CacheEntryRemovedCallback</a>
  */
 public class CacheEntryRemovedCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Caching
+     */
     public static final String assemblyShortName = "System.Runtime.Caching";
+    /**
+     * Qualified class name: System.Runtime.Caching.CacheEntryRemovedCallback
+     */
     public static final String className = "System.Runtime.Caching.CacheEntryRemovedCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ICacheEntryRemovedCallback callerInstance = null;
@@ -147,7 +162,7 @@ public class CacheEntryRemovedCallback extends JCVoidDelegate implements IJCVoid
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(CacheEntryRemovedArguments arguments) throws Throwable {
+    public void METHOD_JAVA_NAME(CacheEntryRemovedArguments arguments) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -157,7 +172,9 @@ public class CacheEntryRemovedCallback extends JCVoidDelegate implements IJCVoid
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(CacheEntryRemovedArguments arguments) {
     }
 }

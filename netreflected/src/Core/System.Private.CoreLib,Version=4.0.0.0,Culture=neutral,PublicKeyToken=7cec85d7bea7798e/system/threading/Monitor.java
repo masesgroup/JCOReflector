@@ -43,12 +43,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.Threading.Monitor, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Monitor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Monitor</a>
  */
 public class Monitor extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.Monitor
+     */
     public static final String className = "System.Threading.Monitor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Monitor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Monitor}, a cast assert is made to check if types are compatible.
+     */
     public static Monitor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Monitor(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class Monitor extends NetObject  {
 
     // Constructors section
     
+    public Monitor() throws Throwable {
+    }
 
     
     // Methods section
@@ -247,11 +266,11 @@ public class Monitor extends NetObject  {
     
     // Properties section
     
-    public static long getLockContentionCount() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public long getLockContentionCount() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classType.Get("LockContentionCount");
+            return (long)classInstance.Get("LockContentionCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

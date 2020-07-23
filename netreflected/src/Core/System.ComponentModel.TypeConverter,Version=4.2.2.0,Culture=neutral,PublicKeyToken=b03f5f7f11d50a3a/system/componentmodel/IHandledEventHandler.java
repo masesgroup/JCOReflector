@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.HandledEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link HandledEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.HandledEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.HandledEventHandler</a>
+ */
 public interface IHandledEventHandler {
     public void Invoke(NetObject sender, HandledEventArgs e);
 }

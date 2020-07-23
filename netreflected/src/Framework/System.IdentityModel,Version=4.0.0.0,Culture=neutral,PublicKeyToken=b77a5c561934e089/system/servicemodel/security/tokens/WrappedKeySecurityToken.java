@@ -41,18 +41,32 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
-import system.identitymodel.tokens.SecurityKey;
 import system.DateTime;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.Tokens.WrappedKeySecurityToken, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken</a>
  */
-public class WrappedKeySecurityToken extends NetObject  {
+public class WrappedKeySecurityToken extends SecurityToken  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.Tokens.WrappedKeySecurityToken
+     */
     public static final String className = "System.ServiceModel.Security.Tokens.WrappedKeySecurityToken";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class WrappedKeySecurityToken extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WrappedKeySecurityToken}, a cast assert is made to check if types are compatible.
+     */
     public static WrappedKeySecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WrappedKeySecurityToken(from.getJCOInstance());
@@ -113,6 +129,8 @@ public class WrappedKeySecurityToken extends NetObject  {
 
     // Constructors section
     
+    public WrappedKeySecurityToken() throws Throwable {
+    }
 
     public WrappedKeySecurityToken(java.lang.String id, byte[] keyToWrap, java.lang.String wrappingAlgorithm, SecurityToken wrappingToken, SecurityKeyIdentifier wrappingTokenReference) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         try {
@@ -123,6 +141,7 @@ public class WrappedKeySecurityToken extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -157,43 +176,10 @@ public class WrappedKeySecurityToken extends NetObject  {
         }
     }
 
-    public SecurityKey ResolveKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveKeyIdentifierClause = (JCObject)classInstance.Invoke("ResolveKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
-            return new SecurityKey(objResolveKeyIdentifierClause);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public DateTime getValidFrom() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidFrom");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getValidTo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidTo");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityKeyIdentifier getWrappingTokenReference() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -211,16 +197,6 @@ public class WrappedKeySecurityToken extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("WrappingToken");
             return new SecurityToken(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

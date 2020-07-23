@@ -44,12 +44,27 @@ import system.web.security.RoleManagerEventHandler;
 
 /**
  * The base .NET class managing System.Web.Security.RoleManagerModule, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.RoleManagerModule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.RoleManagerModule</a>
  */
 public class RoleManagerModule extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Security.RoleManagerModule
+     */
     public static final String className = "System.Web.Security.RoleManagerModule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class RoleManagerModule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RoleManagerModule}, a cast assert is made to check if types are compatible.
+     */
     public static RoleManagerModule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RoleManagerModule(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class RoleManagerModule extends NetObject  {
 
     // Constructors section
     
-
     public RoleManagerModule() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -44,12 +44,27 @@ import system.servicemodel.ServiceHostBase;
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior</a>
  */
 public class WorkflowInstanceManagementBehavior extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior
+     */
     public static final String className = "System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowInstanceManagementBehavior}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowInstanceManagementBehavior cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowInstanceManagementBehavior(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
 
     // Constructors section
     
-
     public WorkflowInstanceManagementBehavior() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.SystemException {
         try {
             // add reference to assemblyName.dll file
@@ -149,22 +165,22 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
     
     // Properties section
     
-    public static system.servicemodel.channels.Binding getHttpControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public system.servicemodel.channels.Binding getHttpControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("HttpControlEndpointBinding");
+            JCObject val = (JCObject)classInstance.Get("HttpControlEndpointBinding");
             return new system.servicemodel.channels.Binding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static system.servicemodel.channels.Binding getNamedPipeControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public system.servicemodel.channels.Binding getNamedPipeControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("NamedPipeControlEndpointBinding");
+            JCObject val = (JCObject)classInstance.Get("NamedPipeControlEndpointBinding");
             return new system.servicemodel.channels.Binding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.IdentityModel.Claims.Rights, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.Rights" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.Rights</a>
  */
 public class Rights extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Claims.Rights
+     */
     public static final String className = "System.IdentityModel.Claims.Rights";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class Rights extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rights}, a cast assert is made to check if types are compatible.
+     */
     public static Rights cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Rights(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class Rights extends NetObject  {
 
     // Constructors section
     
+    public Rights() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,21 +135,21 @@ public class Rights extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getIdentity() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getIdentity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Identity");
+            return (java.lang.String)classInstance.Get("Identity");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPossessProperty() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPossessProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PossessProperty");
+            return (java.lang.String)classInstance.Get("PossessProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

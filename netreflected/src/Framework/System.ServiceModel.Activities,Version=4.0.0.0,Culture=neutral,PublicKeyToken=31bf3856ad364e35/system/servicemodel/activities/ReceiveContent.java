@@ -45,12 +45,27 @@ import system.servicemodel.activities.ReceiveParametersContent;
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.ReceiveContent, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.ReceiveContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.ReceiveContent</a>
  */
 public class ReceiveContent extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.ReceiveContent
+     */
     public static final String className = "System.ServiceModel.Activities.ReceiveContent";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ReceiveContent extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReceiveContent}, a cast assert is made to check if types are compatible.
+     */
     public static ReceiveContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ReceiveContent(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ReceiveContent extends NetObject  {
 
     // Constructors section
     
+    public ReceiveContent() throws Throwable {
+    }
 
     
     // Methods section

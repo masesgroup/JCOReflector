@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.UIPropertyMetadata;
 import system.windows.FrameworkPropertyMetadataOptions;
 import system.windows.PropertyChangedCallback;
 import system.windows.CoerceValueCallback;
@@ -46,12 +47,27 @@ import system.windows.data.UpdateSourceTrigger;
 
 /**
  * The base .NET class managing System.Windows.FrameworkPropertyMetadata, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkPropertyMetadata" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkPropertyMetadata</a>
  */
-public class FrameworkPropertyMetadata extends NetObject  {
+public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.FrameworkPropertyMetadata
+     */
     public static final String className = "System.Windows.FrameworkPropertyMetadata";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class FrameworkPropertyMetadata extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FrameworkPropertyMetadata}, a cast assert is made to check if types are compatible.
+     */
     public static FrameworkPropertyMetadata cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FrameworkPropertyMetadata(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class FrameworkPropertyMetadata extends NetObject  {
 
     // Constructors section
     
-
     public FrameworkPropertyMetadata() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -371,26 +388,6 @@ public class FrameworkPropertyMetadata extends NetObject  {
         }
     }
 
-    public boolean getIsAnimationProhibited() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsAnimationProhibited");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIsAnimationProhibited(boolean IsAnimationProhibited) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IsAnimationProhibited", IsAnimationProhibited);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsDataBindingAllowed() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -481,47 +478,6 @@ public class FrameworkPropertyMetadata extends NetObject  {
         }
     }
 
-    public NetObject getDefaultValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDefaultValue(NetObject DefaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("DefaultValue", DefaultValue == null ? null : DefaultValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CoerceValueCallback getCoerceValueCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (CoerceValueCallback)classInstance.Get("CoerceValueCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCoerceValueCallback(CoerceValueCallback CoerceValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CoerceValueCallback", CoerceValueCallback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UpdateSourceTrigger getDefaultUpdateSourceTrigger() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -538,26 +494,6 @@ public class FrameworkPropertyMetadata extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultUpdateSourceTrigger", DefaultUpdateSourceTrigger == null ? null : DefaultUpdateSourceTrigger.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyChangedCallback getPropertyChangedCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (PropertyChangedCallback)classInstance.Get("PropertyChangedCallback");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPropertyChangedCallback(PropertyChangedCallback PropertyChangedCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PropertyChangedCallback", PropertyChangedCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

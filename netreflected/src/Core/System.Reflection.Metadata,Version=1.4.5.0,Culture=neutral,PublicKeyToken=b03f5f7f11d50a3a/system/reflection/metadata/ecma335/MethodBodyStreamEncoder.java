@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
 import system.reflection.metadata.ecma335.InstructionEncoder;
 import system.reflection.metadata.StandaloneSignatureHandle;
@@ -46,12 +47,27 @@ import system.reflection.metadata.ecma335.MethodBodyAttributes;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.Ecma335.MethodBodyStreamEncoder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.MethodBodyStreamEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.MethodBodyStreamEncoder</a>
  */
-public class MethodBodyStreamEncoder extends NetObject  {
+public class MethodBodyStreamEncoder extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.Ecma335.MethodBodyStreamEncoder
+     */
     public static final String className = "System.Reflection.Metadata.Ecma335.MethodBodyStreamEncoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class MethodBodyStreamEncoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodBodyStreamEncoder}, a cast assert is made to check if types are compatible.
+     */
     public static MethodBodyStreamEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MethodBodyStreamEncoder(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class MethodBodyStreamEncoder extends NetObject  {
 
     // Constructors section
     
+    public MethodBodyStreamEncoder() throws Throwable {
+    }
 
     public MethodBodyStreamEncoder(BlobBuilder builder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -122,6 +142,7 @@ public class MethodBodyStreamEncoder extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

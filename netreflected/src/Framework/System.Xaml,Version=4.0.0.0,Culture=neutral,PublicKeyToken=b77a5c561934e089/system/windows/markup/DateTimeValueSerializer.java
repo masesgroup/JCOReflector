@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.ValueSerializer;
 import system.windows.markup.IValueSerializerContext;
 import system.windows.markup.IValueSerializerContextImplementation;
 
 
 /**
  * The base .NET class managing System.Windows.Markup.DateTimeValueSerializer, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.DateTimeValueSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.DateTimeValueSerializer</a>
  */
-public class DateTimeValueSerializer extends NetObject  {
+public class DateTimeValueSerializer extends ValueSerializer  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Windows.Markup.DateTimeValueSerializer
+     */
     public static final String className = "System.Windows.Markup.DateTimeValueSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DateTimeValueSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DateTimeValueSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static DateTimeValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DateTimeValueSerializer(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class DateTimeValueSerializer extends NetObject  {
 
     // Constructors section
     
-
     public DateTimeValueSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file

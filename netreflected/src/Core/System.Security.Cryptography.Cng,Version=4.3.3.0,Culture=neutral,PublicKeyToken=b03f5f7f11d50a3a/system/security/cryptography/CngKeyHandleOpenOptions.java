@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CngKeyHandleOpenOptions, System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKeyHandleOpenOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKeyHandleOpenOptions</a>
  */
 public class CngKeyHandleOpenOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Cng
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Cng";
+    /**
+     * Qualified class name: System.Security.Cryptography.CngKeyHandleOpenOptions
+     */
     public static final String className = "System.Security.Cryptography.CngKeyHandleOpenOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class CngKeyHandleOpenOptions extends NetObject  {
 
     // Flags management section
 
-    public CngKeyHandleOpenOptions add(CngKeyHandleOpenOptions val) throws Throwable {
+    public final CngKeyHandleOpenOptions add(CngKeyHandleOpenOptions val) throws Throwable {
         return new CngKeyHandleOpenOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CngKeyHandleOpenOptions remove(CngKeyHandleOpenOptions val) throws Throwable {
+    public final CngKeyHandleOpenOptions remove(CngKeyHandleOpenOptions val) throws Throwable {
         return new CngKeyHandleOpenOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CngKeyHandleOpenOptions val) throws Throwable {
+    public final boolean is(CngKeyHandleOpenOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CngKeyHandleOpenOptions val) throws Throwable {
+    public final boolean has(CngKeyHandleOpenOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

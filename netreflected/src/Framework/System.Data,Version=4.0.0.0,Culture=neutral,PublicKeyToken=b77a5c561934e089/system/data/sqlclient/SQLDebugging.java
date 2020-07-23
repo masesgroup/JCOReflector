@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Data.SqlClient.SQLDebugging, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SQLDebugging" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SQLDebugging</a>
  */
 public class SQLDebugging extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SQLDebugging
+     */
     public static final String className = "System.Data.SqlClient.SQLDebugging";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SQLDebugging extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SQLDebugging}, a cast assert is made to check if types are compatible.
+     */
     public static SQLDebugging cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SQLDebugging(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class SQLDebugging extends NetObject  {
 
     // Constructors section
     
-
     public SQLDebugging() throws Throwable {
         try {
             // add reference to assemblyName.dll file

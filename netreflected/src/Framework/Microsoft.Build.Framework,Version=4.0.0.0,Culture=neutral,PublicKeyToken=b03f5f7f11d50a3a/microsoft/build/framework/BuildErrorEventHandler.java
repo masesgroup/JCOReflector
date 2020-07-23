@@ -42,12 +42,27 @@ import microsoft.build.framework.BuildErrorEventArgs;
 import microsoft.build.framework.IBuildErrorEventHandler;
 /**
  * The base .NET class managing Microsoft.Build.Framework.BuildErrorEventHandler, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildErrorEventHandler</a>
  */
 public class BuildErrorEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.BuildErrorEventHandler
+     */
     public static final String className = "Microsoft.Build.Framework.BuildErrorEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IBuildErrorEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class BuildErrorEventHandler extends JCVoidDelegate implements IJCVoidEve
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, BuildErrorEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, BuildErrorEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class BuildErrorEventHandler extends JCVoidDelegate implements IJCVoidEve
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, BuildErrorEventArgs e) {
     }
 }

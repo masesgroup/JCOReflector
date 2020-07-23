@@ -48,12 +48,27 @@ import system.xml.serialization.SoapTypeAttribute;
 
 /**
  * The base .NET class managing System.Xml.Serialization.SoapAttributes, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapAttributes</a>
  */
 public class SoapAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.SoapAttributes
+     */
     public static final String className = "System.Xml.Serialization.SoapAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class SoapAttributes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapAttributes}, a cast assert is made to check if types are compatible.
+     */
     public static SoapAttributes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapAttributes(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class SoapAttributes extends NetObject  {
 
     // Constructors section
     
-
     public SoapAttributes() throws Throwable {
         try {
             // add reference to assemblyName.dll file

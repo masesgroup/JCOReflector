@@ -46,12 +46,27 @@ import system.security.cryptography.x509certificates.X509Certificate2;
 
 /**
  * The base .NET class managing System.IdentityModel.Selectors.X509CertificateValidator, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator</a>
  */
 public class X509CertificateValidator extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Selectors.X509CertificateValidator
+     */
     public static final String className = "System.IdentityModel.Selectors.X509CertificateValidator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class X509CertificateValidator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509CertificateValidator}, a cast assert is made to check if types are compatible.
+     */
     public static X509CertificateValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509CertificateValidator(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class X509CertificateValidator extends NetObject  {
 
     // Constructors section
     
+    public X509CertificateValidator() throws Throwable {
+    }
 
     
     // Methods section
@@ -162,44 +181,44 @@ public class X509CertificateValidator extends NetObject  {
     
     // Properties section
     
-    public static X509CertificateValidator getChainTrust() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public X509CertificateValidator getChainTrust() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ChainTrust");
+            JCObject val = (JCObject)classInstance.Get("ChainTrust");
             return new X509CertificateValidator(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static X509CertificateValidator getNone() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public X509CertificateValidator getNone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            JCObject val = (JCObject)classInstance.Get("None");
             return new X509CertificateValidator(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static X509CertificateValidator getPeerOrChainTrust() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public X509CertificateValidator getPeerOrChainTrust() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PeerOrChainTrust");
+            JCObject val = (JCObject)classInstance.Get("PeerOrChainTrust");
             return new X509CertificateValidator(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static X509CertificateValidator getPeerTrust() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public X509CertificateValidator getPeerTrust() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PeerTrust");
+            JCObject val = (JCObject)classInstance.Get("PeerTrust");
             return new X509CertificateValidator(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.input.TouchFrameEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TouchFrameEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TouchFrameEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TouchFrameEventHandler</a>
+ */
 public interface ITouchFrameEventHandler {
     public void Invoke(NetObject sender, TouchFrameEventArgs e);
 }

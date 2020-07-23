@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.FormViewDeletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link FormViewDeletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewDeletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewDeletedEventHandler</a>
+ */
 public interface IFormViewDeletedEventHandler {
     public void Invoke(NetObject sender, FormViewDeletedEventArgs e);
 }

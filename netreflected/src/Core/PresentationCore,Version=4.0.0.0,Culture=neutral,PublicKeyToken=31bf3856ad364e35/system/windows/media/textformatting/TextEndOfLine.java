@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.media.textformatting.TextRun;
 import system.windows.media.textformatting.TextRunProperties;
 import system.windows.media.textformatting.CharacterBufferReference;
 
 
 /**
  * The base .NET class managing System.Windows.Media.TextFormatting.TextEndOfLine, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextEndOfLine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextEndOfLine</a>
  */
-public class TextEndOfLine extends NetObject  {
+public class TextEndOfLine extends TextRun  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.TextFormatting.TextEndOfLine
+     */
     public static final String className = "System.Windows.Media.TextFormatting.TextEndOfLine";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class TextEndOfLine extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextEndOfLine}, a cast assert is made to check if types are compatible.
+     */
     public static TextEndOfLine cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TextEndOfLine(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class TextEndOfLine extends NetObject  {
 
     // Constructors section
     
+    public TextEndOfLine() throws Throwable {
+    }
 
     public TextEndOfLine(int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         try {
@@ -132,6 +152,7 @@ public class TextEndOfLine extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -139,38 +160,6 @@ public class TextEndOfLine extends NetObject  {
     
     // Properties section
     
-    public int getLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Length");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CharacterBufferReference getCharacterBufferReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CharacterBufferReference");
-            return new CharacterBufferReference(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TextRunProperties getProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new TextRunProperties(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

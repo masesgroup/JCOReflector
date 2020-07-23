@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.ink.StylusPointsReplacedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StylusPointsReplacedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StylusPointsReplacedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StylusPointsReplacedEventHandler</a>
+ */
 public interface IStylusPointsReplacedEventHandler {
     public void Invoke(NetObject sender, StylusPointsReplacedEventArgs e);
 }

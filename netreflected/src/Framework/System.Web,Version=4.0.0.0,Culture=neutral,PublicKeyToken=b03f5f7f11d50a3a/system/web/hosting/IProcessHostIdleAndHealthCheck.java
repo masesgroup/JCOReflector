@@ -43,12 +43,29 @@ import system.web.hosting.IProcessPingCallbackImplementation;
 
 /**
  * The base .NET class managing System.Web.Hosting.IProcessHostIdleAndHealthCheck, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.IProcessHostIdleAndHealthCheck" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.IProcessHostIdleAndHealthCheck</a>
  */
 public interface IProcessHostIdleAndHealthCheck extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
+    public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Hosting.IProcessHostIdleAndHealthCheck
+     */
+    public static final String className = "System.Web.Hosting.IProcessHostIdleAndHealthCheck";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProcessHostIdleAndHealthCheck}, a cast assert is made to check if types are compatible.
+     */
     public static IProcessHostIdleAndHealthCheck ToIProcessHostIdleAndHealthCheck(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.Hosting.IProcessHostIdleAndHealthCheck, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Web"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IProcessHostIdleAndHealthCheckImplementation(from.getJCOInstance());
     }

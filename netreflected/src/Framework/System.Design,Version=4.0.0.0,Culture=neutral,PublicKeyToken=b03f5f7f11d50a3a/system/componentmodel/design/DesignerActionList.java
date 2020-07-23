@@ -45,12 +45,27 @@ import system.componentmodel.design.DesignerActionItemCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignerActionList, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionList</a>
  */
 public class DesignerActionList extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignerActionList
+     */
     public static final String className = "System.ComponentModel.Design.DesignerActionList";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class DesignerActionList extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerActionList}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerActionList cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerActionList(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class DesignerActionList extends NetObject  {
 
     // Constructors section
     
+    public DesignerActionList() throws Throwable {
+    }
 
     public DesignerActionList(IComponent component) throws Throwable {
         try {
@@ -121,6 +140,7 @@ public class DesignerActionList extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

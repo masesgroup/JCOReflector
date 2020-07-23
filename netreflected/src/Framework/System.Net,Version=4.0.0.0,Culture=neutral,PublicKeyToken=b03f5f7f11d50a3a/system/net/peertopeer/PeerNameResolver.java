@@ -45,12 +45,27 @@ import system.net.peertopeer.Cloud;
 
 /**
  * The base .NET class managing System.Net.PeerToPeer.PeerNameResolver, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.PeerNameResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.PeerNameResolver</a>
  */
 public class PeerNameResolver extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.PeerToPeer.PeerNameResolver
+     */
     public static final String className = "System.Net.PeerToPeer.PeerNameResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class PeerNameResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeerNameResolver}, a cast assert is made to check if types are compatible.
+     */
     public static PeerNameResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PeerNameResolver(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class PeerNameResolver extends NetObject  {
 
     // Constructors section
     
-
     public PeerNameResolver() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

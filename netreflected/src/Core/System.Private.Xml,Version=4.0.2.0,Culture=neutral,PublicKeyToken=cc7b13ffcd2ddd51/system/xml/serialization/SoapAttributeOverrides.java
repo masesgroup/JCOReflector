@@ -43,12 +43,27 @@ import system.xml.serialization.SoapAttributes;
 
 /**
  * The base .NET class managing System.Xml.Serialization.SoapAttributeOverrides, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapAttributeOverrides" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapAttributeOverrides</a>
  */
 public class SoapAttributeOverrides extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.SoapAttributeOverrides
+     */
     public static final String className = "System.Xml.Serialization.SoapAttributeOverrides";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SoapAttributeOverrides extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapAttributeOverrides}, a cast assert is made to check if types are compatible.
+     */
     public static SoapAttributeOverrides cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapAttributeOverrides(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SoapAttributeOverrides extends NetObject  {
 
     // Constructors section
     
-
     public SoapAttributeOverrides() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file

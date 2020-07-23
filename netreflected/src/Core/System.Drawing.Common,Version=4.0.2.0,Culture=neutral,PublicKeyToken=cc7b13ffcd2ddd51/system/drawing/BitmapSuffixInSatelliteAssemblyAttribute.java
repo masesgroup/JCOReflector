@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute</a>
  */
-public class BitmapSuffixInSatelliteAssemblyAttribute extends NetObject  {
+public class BitmapSuffixInSatelliteAssemblyAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute
+     */
     public static final String className = "System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class BitmapSuffixInSatelliteAssemblyAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BitmapSuffixInSatelliteAssemblyAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static BitmapSuffixInSatelliteAssemblyAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BitmapSuffixInSatelliteAssemblyAttribute(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class BitmapSuffixInSatelliteAssemblyAttribute extends NetObject  {
 
     // Constructors section
     
-
     public BitmapSuffixInSatelliteAssemblyAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -123,41 +140,10 @@ public class BitmapSuffixInSatelliteAssemblyAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

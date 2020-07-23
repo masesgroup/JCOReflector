@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.SecurityProtocolType, System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.SecurityProtocolType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.SecurityProtocolType</a>
  */
 public class SecurityProtocolType extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.ServicePoint
+     */
     public static final String assemblyShortName = "System.Net.ServicePoint";
+    /**
+     * Qualified class name: System.Net.SecurityProtocolType
+     */
     public static final String className = "System.Net.SecurityProtocolType";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class SecurityProtocolType extends NetObject  {
 
     // Flags management section
 
-    public SecurityProtocolType add(SecurityProtocolType val) throws Throwable {
+    public final SecurityProtocolType add(SecurityProtocolType val) throws Throwable {
         return new SecurityProtocolType(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SecurityProtocolType remove(SecurityProtocolType val) throws Throwable {
+    public final SecurityProtocolType remove(SecurityProtocolType val) throws Throwable {
         return new SecurityProtocolType(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SecurityProtocolType val) throws Throwable {
+    public final boolean is(SecurityProtocolType val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SecurityProtocolType val) throws Throwable {
+    public final boolean has(SecurityProtocolType val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

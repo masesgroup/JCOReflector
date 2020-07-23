@@ -54,12 +54,27 @@ import system.threading.tasks.TaskStatus;
 
 /**
  * The base .NET class managing System.Threading.Tasks.Task, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task</a>
  */
 public class Task extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Threading.Tasks.Task
+     */
     public static final String className = "System.Threading.Tasks.Task";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class Task extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Task}, a cast assert is made to check if types are compatible.
+     */
     public static Task cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Task(from.getJCOInstance());
@@ -120,6 +137,8 @@ public class Task extends NetObject  {
 
     // Constructors section
     
+    public Task() throws Throwable {
+    }
 
     public Task(Action action) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
         try {
@@ -160,6 +179,7 @@ public class Task extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -407,6 +427,26 @@ public class Task extends NetObject  {
         }
     }
 
+    public void Dispose() throws Throwable, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RunSynchronously() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.ArgumentException, system.OperationCanceledException, system.NullReferenceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RunSynchronously");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void RunSynchronously(TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.ArgumentException, system.OperationCanceledException, system.NullReferenceException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -543,11 +583,11 @@ public class Task extends NetObject  {
         }
     }
 
-    public static Task getCompletedTask() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Task getCompletedTask() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CompletedTask");
+            JCObject val = (JCObject)classInstance.Get("CompletedTask");
             return new Task(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -565,11 +605,11 @@ public class Task extends NetObject  {
         }
     }
 
-    public static TaskFactory getFactory() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TaskFactory getFactory() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Factory");
+            JCObject val = (JCObject)classInstance.Get("Factory");
             return new TaskFactory(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -43,12 +43,29 @@ import system.componentmodel.ICollectionViewImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.ICollectionViewFactory, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICollectionViewFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICollectionViewFactory</a>
  */
 public interface ICollectionViewFactory extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
+    public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.ICollectionViewFactory
+     */
+    public static final String className = "System.ComponentModel.ICollectionViewFactory";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollectionViewFactory}, a cast assert is made to check if types are compatible.
+     */
     public static ICollectionViewFactory ToICollectionViewFactory(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.ComponentModel.ICollectionViewFactory, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "WindowsBase"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICollectionViewFactoryImplementation(from.getJCOInstance());
     }

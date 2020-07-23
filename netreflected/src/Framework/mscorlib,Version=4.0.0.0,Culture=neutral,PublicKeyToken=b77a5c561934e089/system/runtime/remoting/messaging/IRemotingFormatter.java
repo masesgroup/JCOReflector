@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.serialization.IFormatter;
+import system.runtime.serialization.IFormatterImplementation;
 import system.io.Stream;
 import system.runtime.remoting.messaging.HeaderHandler;
 import system.runtime.remoting.messaging.Header;
@@ -48,12 +50,29 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.IRemotingFormatter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter</a>
  */
-public interface IRemotingFormatter extends IJCOBridgeReflected {
-
+public interface IRemotingFormatter extends IJCOBridgeReflected, IFormatter {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.IRemotingFormatter
+     */
+    public static final String className = "System.Runtime.Remoting.Messaging.IRemotingFormatter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRemotingFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static IRemotingFormatter ToIRemotingFormatter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Messaging.IRemotingFormatter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRemotingFormatterImplementation(from.getJCOInstance());
     }
@@ -96,11 +115,9 @@ public interface IRemotingFormatter extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject Deserialize(Stream serializationStream) throws Throwable;
 
     public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable;
 
-    public void Serialize(Stream serializationStream, NetObject graph) throws Throwable;
 
     public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable;
 
@@ -108,18 +125,6 @@ public interface IRemotingFormatter extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ISurrogateSelector getSurrogateSelector() throws Throwable;
-
-    public void setSurrogateSelector(ISurrogateSelector SurrogateSelector) throws Throwable;
-
-    public SerializationBinder getBinder() throws Throwable;
-
-    public void setBinder(SerializationBinder Binder) throws Throwable;
-
-    public StreamingContext getContext() throws Throwable;
-
-    public void setContext(StreamingContext Context) throws Throwable;
-
 
 
     // Instance Events section

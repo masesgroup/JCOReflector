@@ -45,12 +45,27 @@ import system.directoryservices.activedirectory.ReplicationOperationCollection;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation, System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation</a>
  */
 public class ReplicationOperationInformation extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ReplicationOperationInformation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReplicationOperationInformation}, a cast assert is made to check if types are compatible.
+     */
     public static ReplicationOperationInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ReplicationOperationInformation(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class ReplicationOperationInformation extends NetObject  {
 
     // Constructors section
     
-
     public ReplicationOperationInformation() throws Throwable {
         try {
             // add reference to assemblyName.dll file

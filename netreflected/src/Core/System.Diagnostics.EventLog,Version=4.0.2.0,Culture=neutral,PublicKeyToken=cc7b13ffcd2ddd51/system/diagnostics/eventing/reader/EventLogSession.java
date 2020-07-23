@@ -48,12 +48,27 @@ import system.diagnostics.eventing.reader.EventLogSession;
 
 /**
  * The base .NET class managing System.Diagnostics.Eventing.Reader.EventLogSession, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogSession" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogSession</a>
  */
 public class EventLogSession extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.EventLog
+     */
     public static final String assemblyShortName = "System.Diagnostics.EventLog";
+    /**
+     * Qualified class name: System.Diagnostics.Eventing.Reader.EventLogSession
+     */
     public static final String className = "System.Diagnostics.Eventing.Reader.EventLogSession";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class EventLogSession extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLogSession}, a cast assert is made to check if types are compatible.
+     */
     public static EventLogSession cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventLogSession(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class EventLogSession extends NetObject  {
 
     // Constructors section
     
-
     public EventLogSession() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -244,11 +260,11 @@ public class EventLogSession extends NetObject  {
     
     // Properties section
     
-    public static EventLogSession getGlobalSession() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public EventLogSession getGlobalSession() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("GlobalSession");
+            JCObject val = (JCObject)classInstance.Get("GlobalSession");
             return new EventLogSession(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.windows.DependencyObject;
 import system.windows.DependencyPropertyChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PropertyChangedCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.PropertyChangedCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.PropertyChangedCallback</a>
+ */
 public interface IPropertyChangedCallback {
     public void Invoke(DependencyObject d, DependencyPropertyChangedEventArgs e);
 }

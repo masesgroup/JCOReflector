@@ -50,12 +50,27 @@ import system.RuntimeFieldHandle;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices._FieldInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._FieldInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._FieldInfo</a>
  */
 public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices._FieldInfo
+     */
     public static final String className = "System.Runtime.InteropServices._FieldInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _FieldInfo}, a cast assert is made to check if types are compatible.
+     */
     public static _FieldInfo To_FieldInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new _FieldInfoImplementation(from.getJCOInstance());

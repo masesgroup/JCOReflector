@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Automation.AsyncContentLoadedState, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AsyncContentLoadedState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AsyncContentLoadedState</a>
  */
 public class AsyncContentLoadedState extends NetObject  {
+    /**
+     * Fully assembly qualified name: UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationTypes
+     */
     public static final String assemblyShortName = "UIAutomationTypes";
+    /**
+     * Qualified class name: System.Windows.Automation.AsyncContentLoadedState
+     */
     public static final String className = "System.Windows.Automation.AsyncContentLoadedState";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

@@ -46,12 +46,27 @@ import system.activities.presentation.hosting.ImportedNamespaceContextItem;
 
 /**
  * The base .NET class managing System.Activities.Presentation.View.IExpressionEditorService, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService</a>
  */
 public class IExpressionEditorServiceImplementation extends NetObject implements IExpressionEditorService {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.View.IExpressionEditorService
+     */
     public static final String className = "System.Activities.Presentation.View.IExpressionEditorService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExpressionEditorService}, a cast assert is made to check if types are compatible.
+     */
     public static IExpressionEditorService ToIExpressionEditorService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IExpressionEditorServiceImplementation(from.getJCOInstance());
@@ -107,6 +124,16 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
 
     // Methods section
     
+    public void CloseExpressionEditors() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CloseExpressionEditors");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void UpdateContext(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

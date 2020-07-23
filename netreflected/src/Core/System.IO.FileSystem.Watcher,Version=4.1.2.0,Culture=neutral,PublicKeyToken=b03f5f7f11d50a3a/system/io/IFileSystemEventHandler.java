@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.io.FileSystemEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link FileSystemEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileSystemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileSystemEventHandler</a>
+ */
 public interface IFileSystemEventHandler {
     public void Invoke(NetObject sender, FileSystemEventArgs e);
 }

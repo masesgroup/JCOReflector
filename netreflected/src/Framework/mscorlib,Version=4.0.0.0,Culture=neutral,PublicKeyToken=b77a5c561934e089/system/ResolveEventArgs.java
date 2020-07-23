@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.reflection.Assembly;
 
 
 /**
  * The base .NET class managing System.ResolveEventArgs, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ResolveEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ResolveEventArgs</a>
  */
-public class ResolveEventArgs extends NetObject  {
+public class ResolveEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.ResolveEventArgs
+     */
     public static final String className = "System.ResolveEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ResolveEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResolveEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ResolveEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResolveEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ResolveEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ResolveEventArgs() throws Throwable {
+    }
 
     public ResolveEventArgs(java.lang.String name) throws Throwable {
         try {
@@ -129,6 +149,7 @@ public class ResolveEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

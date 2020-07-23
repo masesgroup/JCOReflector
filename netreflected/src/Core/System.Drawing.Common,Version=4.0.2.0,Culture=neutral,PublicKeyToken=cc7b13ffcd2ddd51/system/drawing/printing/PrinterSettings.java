@@ -48,12 +48,27 @@ import system.drawing.printing.PrintRange;
 
 /**
  * The base .NET class managing System.Drawing.Printing.PrinterSettings, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterSettings</a>
  */
 public class PrinterSettings extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Printing.PrinterSettings
+     */
     public static final String className = "System.Drawing.Printing.PrinterSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class PrinterSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrinterSettings}, a cast assert is made to check if types are compatible.
+     */
     public static PrinterSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrinterSettings(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class PrinterSettings extends NetObject  {
 
     // Constructors section
     
-
     public PrinterSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file

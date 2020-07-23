@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.collections.specialized.StringCollection;
 
 
 /**
  * The base .NET class managing System.Printing.PrintSystemObjectPropertiesChangedEventArgs, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintSystemObjectPropertiesChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintSystemObjectPropertiesChangedEventArgs</a>
  */
-public class PrintSystemObjectPropertiesChangedEventArgs extends NetObject  {
+public class PrintSystemObjectPropertiesChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Printing.PrintSystemObjectPropertiesChangedEventArgs
+     */
     public static final String className = "System.Printing.PrintSystemObjectPropertiesChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class PrintSystemObjectPropertiesChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintSystemObjectPropertiesChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static PrintSystemObjectPropertiesChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrintSystemObjectPropertiesChangedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class PrintSystemObjectPropertiesChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public PrintSystemObjectPropertiesChangedEventArgs() throws Throwable {
+    }
 
     public PrintSystemObjectPropertiesChangedEventArgs(StringCollection events) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class PrintSystemObjectPropertiesChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

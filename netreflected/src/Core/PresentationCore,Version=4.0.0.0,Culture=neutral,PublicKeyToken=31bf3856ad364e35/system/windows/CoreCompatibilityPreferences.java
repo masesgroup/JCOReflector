@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Windows.CoreCompatibilityPreferences, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoreCompatibilityPreferences" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoreCompatibilityPreferences</a>
  */
 public class CoreCompatibilityPreferences extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.CoreCompatibilityPreferences
+     */
     public static final String className = "System.Windows.CoreCompatibilityPreferences";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class CoreCompatibilityPreferences extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CoreCompatibilityPreferences}, a cast assert is made to check if types are compatible.
+     */
     public static CoreCompatibilityPreferences cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CoreCompatibilityPreferences(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class CoreCompatibilityPreferences extends NetObject  {
 
     // Constructors section
     
+    public CoreCompatibilityPreferences() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,21 +135,21 @@ public class CoreCompatibilityPreferences extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsAltKeyRequiredInAccessKeyDefaultScope() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsAltKeyRequiredInAccessKeyDefaultScope() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsAltKeyRequiredInAccessKeyDefaultScope");
+            return (boolean)classInstance.Get("IsAltKeyRequiredInAccessKeyDefaultScope");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setIsAltKeyRequiredInAccessKeyDefaultScope(boolean IsAltKeyRequiredInAccessKeyDefaultScope) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setIsAltKeyRequiredInAccessKeyDefaultScope(boolean IsAltKeyRequiredInAccessKeyDefaultScope) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("IsAltKeyRequiredInAccessKeyDefaultScope", IsAltKeyRequiredInAccessKeyDefaultScope);
+            classInstance.Set("IsAltKeyRequiredInAccessKeyDefaultScope", IsAltKeyRequiredInAccessKeyDefaultScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

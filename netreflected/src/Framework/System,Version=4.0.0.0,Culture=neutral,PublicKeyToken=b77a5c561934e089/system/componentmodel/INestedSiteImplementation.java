@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.ISite;
+import system.componentmodel.ISiteImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.IContainer;
@@ -46,12 +50,27 @@ import system.componentmodel.IContainerImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.INestedSite, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INestedSite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INestedSite</a>
  */
 public class INestedSiteImplementation extends NetObject implements INestedSite {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.INestedSite
+     */
     public static final String className = "System.ComponentModel.INestedSite";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +118,9 @@ public class INestedSiteImplementation extends NetObject implements INestedSite 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INestedSite}, a cast assert is made to check if types are compatible.
+     */
     public static INestedSite ToINestedSite(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new INestedSiteImplementation(from.getJCOInstance());

@@ -43,12 +43,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Windows.Forms.FileDialogCustomPlace, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FileDialogCustomPlace" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FileDialogCustomPlace</a>
  */
 public class FileDialogCustomPlace extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.FileDialogCustomPlace
+     */
     public static final String className = "System.Windows.Forms.FileDialogCustomPlace";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FileDialogCustomPlace extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileDialogCustomPlace}, a cast assert is made to check if types are compatible.
+     */
     public static FileDialogCustomPlace cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileDialogCustomPlace(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class FileDialogCustomPlace extends NetObject  {
 
     // Constructors section
     
+    public FileDialogCustomPlace() throws Throwable {
+    }
 
     public FileDialogCustomPlace(Guid knownFolderGuid) throws Throwable {
         try {
@@ -129,6 +148,7 @@ public class FileDialogCustomPlace extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

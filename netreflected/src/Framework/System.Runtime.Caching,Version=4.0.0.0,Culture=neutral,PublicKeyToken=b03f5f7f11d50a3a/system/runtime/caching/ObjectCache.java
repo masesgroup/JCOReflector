@@ -49,12 +49,27 @@ import system.runtime.caching.DefaultCacheCapabilities;
 
 /**
  * The base .NET class managing System.Runtime.Caching.ObjectCache, System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.ObjectCache" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.ObjectCache</a>
  */
 public class ObjectCache extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Caching
+     */
     public static final String assemblyShortName = "System.Runtime.Caching";
+    /**
+     * Qualified class name: System.Runtime.Caching.ObjectCache
+     */
     public static final String className = "System.Runtime.Caching.ObjectCache";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class ObjectCache extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectCache}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectCache cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectCache(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class ObjectCache extends NetObject  {
 
     // Constructors section
     
+    public ObjectCache() throws Throwable {
+    }
 
     
     // Methods section
@@ -269,22 +288,22 @@ public class ObjectCache extends NetObject  {
     
     // Properties section
     
-    public static IServiceProvider getHost() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IServiceProvider getHost() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Host");
+            JCObject val = (JCObject)classInstance.Get("Host");
             return new IServiceProviderImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setHost(IServiceProvider Host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setHost(IServiceProvider Host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("Host", Host == null ? null : Host.getJCOInstance());
+            classInstance.Set("Host", Host == null ? null : Host.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

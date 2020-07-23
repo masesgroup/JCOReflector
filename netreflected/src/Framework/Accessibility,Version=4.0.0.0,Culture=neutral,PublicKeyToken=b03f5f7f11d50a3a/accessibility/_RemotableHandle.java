@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing Accessibility._RemotableHandle, Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Accessibility._RemotableHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Accessibility._RemotableHandle</a>
  */
-public class _RemotableHandle extends NetObject  {
+public class _RemotableHandle extends ValueType  {
+    /**
+     * Fully assembly qualified name: Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Accessibility
+     */
     public static final String assemblyShortName = "Accessibility";
+    /**
+     * Qualified class name: Accessibility._RemotableHandle
+     */
     public static final String className = "Accessibility._RemotableHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class _RemotableHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _RemotableHandle}, a cast assert is made to check if types are compatible.
+     */
     public static _RemotableHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new _RemotableHandle(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class _RemotableHandle extends NetObject  {
 
     // Constructors section
     
+    public _RemotableHandle() throws Throwable {
+    }
+
+
 
     
     // Methods section

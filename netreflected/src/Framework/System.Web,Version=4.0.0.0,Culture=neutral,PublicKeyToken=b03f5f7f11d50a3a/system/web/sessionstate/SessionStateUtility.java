@@ -49,12 +49,27 @@ import system.runtime.serialization.ISurrogateSelectorImplementation;
 
 /**
  * The base .NET class managing System.Web.SessionState.SessionStateUtility, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateUtility" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateUtility</a>
  */
 public class SessionStateUtility extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.SessionState.SessionStateUtility
+     */
     public static final String className = "System.Web.SessionState.SessionStateUtility";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class SessionStateUtility extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionStateUtility}, a cast assert is made to check if types are compatible.
+     */
     public static SessionStateUtility cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionStateUtility(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class SessionStateUtility extends NetObject  {
 
     // Constructors section
     
+    public SessionStateUtility() throws Throwable {
+    }
 
     
     // Methods section
@@ -195,22 +214,22 @@ public class SessionStateUtility extends NetObject  {
     
     // Properties section
     
-    public static ISurrogateSelector getSerializationSurrogateSelector() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ISurrogateSelector getSerializationSurrogateSelector() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SerializationSurrogateSelector");
+            JCObject val = (JCObject)classInstance.Get("SerializationSurrogateSelector");
             return new ISurrogateSelectorImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setSerializationSurrogateSelector(ISurrogateSelector SerializationSurrogateSelector) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setSerializationSurrogateSelector(ISurrogateSelector SerializationSurrogateSelector) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("SerializationSurrogateSelector", SerializationSurrogateSelector == null ? null : SerializationSurrogateSelector.getJCOInstance());
+            classInstance.Set("SerializationSurrogateSelector", SerializationSurrogateSelector == null ? null : SerializationSurrogateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

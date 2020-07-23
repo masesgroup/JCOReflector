@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.data.oracleclient.OracleTimeSpan;
 import system.TimeSpan;
 import system.data.oracleclient.OracleBoolean;
@@ -45,12 +46,27 @@ import system.data.oracleclient.OracleBoolean;
 
 /**
  * The base .NET class managing System.Data.OracleClient.OracleTimeSpan, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleTimeSpan" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleTimeSpan</a>
  */
-public class OracleTimeSpan extends NetObject  {
+public class OracleTimeSpan extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.OracleClient
+     */
     public static final String assemblyShortName = "System.Data.OracleClient";
+    /**
+     * Qualified class name: System.Data.OracleClient.OracleTimeSpan
+     */
     public static final String className = "System.Data.OracleClient.OracleTimeSpan";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class OracleTimeSpan extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OracleTimeSpan}, a cast assert is made to check if types are compatible.
+     */
     public static OracleTimeSpan cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OracleTimeSpan(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class OracleTimeSpan extends NetObject  {
 
     // Constructors section
     
+    public OracleTimeSpan() throws Throwable {
+    }
 
     public OracleTimeSpan(int hours, int minutes, int seconds) throws Throwable {
         try {
@@ -171,6 +191,7 @@ public class OracleTimeSpan extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -44,12 +44,27 @@ import system.reflection.metadata.MetadataStringDecoder;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.MetadataStringDecoder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.MetadataStringDecoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.MetadataStringDecoder</a>
  */
 public class MetadataStringDecoder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.MetadataStringDecoder
+     */
     public static final String className = "System.Reflection.Metadata.MetadataStringDecoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class MetadataStringDecoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataStringDecoder}, a cast assert is made to check if types are compatible.
+     */
     public static MetadataStringDecoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MetadataStringDecoder(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class MetadataStringDecoder extends NetObject  {
 
     // Constructors section
     
+    public MetadataStringDecoder() throws Throwable {
+    }
 
     public MetadataStringDecoder(Encoding encoding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -122,6 +141,7 @@ public class MetadataStringDecoder extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -129,11 +149,11 @@ public class MetadataStringDecoder extends NetObject  {
     
     // Properties section
     
-    public static MetadataStringDecoder getDefaultUTF8() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MetadataStringDecoder getDefaultUTF8() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultUTF8");
+            JCObject val = (JCObject)classInstance.Get("DefaultUTF8");
             return new MetadataStringDecoder(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

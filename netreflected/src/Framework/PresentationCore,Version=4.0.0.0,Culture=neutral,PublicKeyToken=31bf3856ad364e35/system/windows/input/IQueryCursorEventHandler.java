@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.input.QueryCursorEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link QueryCursorEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.QueryCursorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.QueryCursorEventHandler</a>
+ */
 public interface IQueryCursorEventHandler {
     public void Invoke(NetObject sender, QueryCursorEventArgs e);
 }

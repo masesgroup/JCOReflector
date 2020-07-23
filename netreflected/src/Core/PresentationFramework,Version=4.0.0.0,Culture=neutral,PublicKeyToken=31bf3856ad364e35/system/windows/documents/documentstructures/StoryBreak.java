@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.documents.documentstructures.BlockElement;
 
 
 /**
  * The base .NET class managing System.Windows.Documents.DocumentStructures.StoryBreak, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentStructures.StoryBreak" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentStructures.StoryBreak</a>
  */
-public class StoryBreak extends NetObject  {
+public class StoryBreak extends BlockElement  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Documents.DocumentStructures.StoryBreak
+     */
     public static final String className = "System.Windows.Documents.DocumentStructures.StoryBreak";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class StoryBreak extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StoryBreak}, a cast assert is made to check if types are compatible.
+     */
     public static StoryBreak cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StoryBreak(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class StoryBreak extends NetObject  {
 
     // Constructors section
     
-
     public StoryBreak() throws Throwable {
         try {
             // add reference to assemblyName.dll file

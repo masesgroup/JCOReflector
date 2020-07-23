@@ -44,12 +44,27 @@ import system.collections.Hashtable;
 
 /**
  * The base .NET class managing System.Security.SecurityElement, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityElement</a>
  */
 public class SecurityElement extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Security.SecurityElement
+     */
     public static final String className = "System.Security.SecurityElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class SecurityElement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityElement}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityElement(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class SecurityElement extends NetObject  {
 
     // Constructors section
     
+    public SecurityElement() throws Throwable {
+    }
 
     public SecurityElement(java.lang.String tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -130,6 +149,7 @@ public class SecurityElement extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

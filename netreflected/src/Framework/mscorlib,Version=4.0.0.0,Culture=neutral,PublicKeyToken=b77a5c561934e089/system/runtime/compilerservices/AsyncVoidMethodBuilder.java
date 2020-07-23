@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.runtime.compilerservices.AsyncVoidMethodBuilder;
 import system.runtime.compilerservices.IAsyncStateMachine;
 import system.runtime.compilerservices.IAsyncStateMachineImplementation;
@@ -45,12 +46,27 @@ import system.runtime.compilerservices.IAsyncStateMachineImplementation;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.AsyncVoidMethodBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.AsyncVoidMethodBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.AsyncVoidMethodBuilder</a>
  */
-public class AsyncVoidMethodBuilder extends NetObject  {
+public class AsyncVoidMethodBuilder extends ValueType  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.AsyncVoidMethodBuilder
+     */
     public static final String className = "System.Runtime.CompilerServices.AsyncVoidMethodBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class AsyncVoidMethodBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncVoidMethodBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static AsyncVoidMethodBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsyncVoidMethodBuilder(from.getJCOInstance());
@@ -111,6 +129,10 @@ public class AsyncVoidMethodBuilder extends NetObject  {
 
     // Constructors section
     
+    public AsyncVoidMethodBuilder() throws Throwable {
+    }
+
+
 
     
     // Methods section

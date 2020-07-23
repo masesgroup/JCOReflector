@@ -38,13 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.IOutputChannel;
+import system.servicemodel.channels.IOutputChannelImplementation;
+import system.servicemodel.channels.IChannel;
+import system.servicemodel.channels.IChannelImplementation;
+import system.servicemodel.ICommunicationObject;
+import system.servicemodel.ICommunicationObjectImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.TimeSpan;
 import system.servicemodel.channels.Message;
-import system.servicemodel.channels.IOutputSession;
-import system.servicemodel.channels.IOutputSessionImplementation;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.Uri;
@@ -53,12 +57,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.IOutputSessionChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IOutputSessionChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IOutputSessionChannel</a>
  */
 public class IOutputSessionChannelImplementation extends NetObject implements IOutputSessionChannel {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.IOutputSessionChannel
+     */
     public static final String className = "System.ServiceModel.Channels.IOutputSessionChannel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +125,9 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IOutputSessionChannel}, a cast assert is made to check if types are compatible.
+     */
     public static IOutputSessionChannel ToIOutputSessionChannel(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IOutputSessionChannelImplementation(from.getJCOInstance());
@@ -284,17 +305,6 @@ public class IOutputSessionChannelImplementation extends NetObject implements IO
     
     // Properties section
     
-    public IOutputSession getSession() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Session");
-            return new IOutputSessionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

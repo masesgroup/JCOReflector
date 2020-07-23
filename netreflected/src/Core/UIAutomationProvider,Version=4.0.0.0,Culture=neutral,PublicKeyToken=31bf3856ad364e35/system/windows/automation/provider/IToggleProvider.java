@@ -42,12 +42,29 @@ import system.windows.automation.ToggleState;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.IToggleProvider, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IToggleProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IToggleProvider</a>
  */
 public interface IToggleProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
+    public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.IToggleProvider
+     */
+    public static final String className = "System.Windows.Automation.Provider.IToggleProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IToggleProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IToggleProvider ToIToggleProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Automation.Provider.IToggleProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "UIAutomationProvider"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IToggleProviderImplementation(from.getJCOInstance());
     }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.MessageBoxOptions, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.MessageBoxOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.MessageBoxOptions</a>
  */
 public class MessageBoxOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.MessageBoxOptions
+     */
     public static final String className = "System.Windows.MessageBoxOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class MessageBoxOptions extends NetObject  {
 
     // Flags management section
 
-    public MessageBoxOptions add(MessageBoxOptions val) throws Throwable {
+    public final MessageBoxOptions add(MessageBoxOptions val) throws Throwable {
         return new MessageBoxOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MessageBoxOptions remove(MessageBoxOptions val) throws Throwable {
+    public final MessageBoxOptions remove(MessageBoxOptions val) throws Throwable {
         return new MessageBoxOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MessageBoxOptions val) throws Throwable {
+    public final boolean is(MessageBoxOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MessageBoxOptions val) throws Throwable {
+    public final boolean has(MessageBoxOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Action;
 
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.ValueTaskAwaiter, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ValueTaskAwaiter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ValueTaskAwaiter</a>
  */
-public class ValueTaskAwaiter extends NetObject  {
+public class ValueTaskAwaiter extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.ValueTaskAwaiter
+     */
     public static final String className = "System.Runtime.CompilerServices.ValueTaskAwaiter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ValueTaskAwaiter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValueTaskAwaiter}, a cast assert is made to check if types are compatible.
+     */
     public static ValueTaskAwaiter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValueTaskAwaiter(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class ValueTaskAwaiter extends NetObject  {
 
     // Constructors section
     
+    public ValueTaskAwaiter() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -51,12 +51,27 @@ import system.deployment.application.DownloadFileGroupCompletedEventHandler;
 
 /**
  * The base .NET class managing System.Deployment.Application.ApplicationDeployment, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.ApplicationDeployment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.ApplicationDeployment</a>
  */
 public class ApplicationDeployment extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Deployment
+     */
     public static final String assemblyShortName = "System.Deployment";
+    /**
+     * Qualified class name: System.Deployment.Application.ApplicationDeployment
+     */
     public static final String className = "System.Deployment.Application.ApplicationDeployment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class ApplicationDeployment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationDeployment}, a cast assert is made to check if types are compatible.
+     */
     public static ApplicationDeployment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ApplicationDeployment(from.getJCOInstance());
@@ -117,6 +134,10 @@ public class ApplicationDeployment extends NetObject  {
 
     // Constructors section
     
+    public ApplicationDeployment() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -277,11 +298,11 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
-    public static boolean getIsNetworkDeployed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.UriFormatException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsNetworkDeployed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.UriFormatException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsNetworkDeployed");
+            return (boolean)classInstance.Get("IsNetworkDeployed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,11 +319,11 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
-    public static ApplicationDeployment getCurrentDeployment() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.UriFormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ApplicationDeployment getCurrentDeployment() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.UriFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentDeployment");
+            JCObject val = (JCObject)classInstance.Get("CurrentDeployment");
             return new ApplicationDeployment(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

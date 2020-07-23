@@ -43,12 +43,27 @@ import system.xaml.AttachableMemberIdentifier;
 
 /**
  * The base .NET class managing System.Xaml.AttachableMemberIdentifier, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.AttachableMemberIdentifier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.AttachableMemberIdentifier</a>
  */
 public class AttachableMemberIdentifier extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.AttachableMemberIdentifier
+     */
     public static final String className = "System.Xaml.AttachableMemberIdentifier";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class AttachableMemberIdentifier extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AttachableMemberIdentifier}, a cast assert is made to check if types are compatible.
+     */
     public static AttachableMemberIdentifier cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AttachableMemberIdentifier(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class AttachableMemberIdentifier extends NetObject  {
 
     // Constructors section
     
+    public AttachableMemberIdentifier() throws Throwable {
+    }
 
     public AttachableMemberIdentifier(NetType declaringType, java.lang.String memberName) throws Throwable {
         try {
@@ -119,6 +138,7 @@ public class AttachableMemberIdentifier extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

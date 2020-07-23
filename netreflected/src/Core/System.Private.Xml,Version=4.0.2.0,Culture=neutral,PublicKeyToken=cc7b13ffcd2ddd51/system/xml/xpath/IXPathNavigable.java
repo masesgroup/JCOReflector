@@ -42,12 +42,29 @@ import system.xml.xpath.XPathNavigator;
 
 /**
  * The base .NET class managing System.Xml.XPath.IXPathNavigable, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XPath.IXPathNavigable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XPath.IXPathNavigable</a>
  */
 public interface IXPathNavigable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
+    public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.XPath.IXPathNavigable
+     */
+    public static final String className = "System.Xml.XPath.IXPathNavigable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXPathNavigable}, a cast assert is made to check if types are compatible.
+     */
     public static IXPathNavigable ToIXPathNavigable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Xml.XPath.IXPathNavigable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Private.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXPathNavigableImplementation(from.getJCOInstance());
     }

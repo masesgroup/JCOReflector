@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.drawing.printing.QueryPageSettingsEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link QueryPageSettingsEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.QueryPageSettingsEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.QueryPageSettingsEventHandler</a>
+ */
 public interface IQueryPageSettingsEventHandler {
     public void Invoke(NetObject sender, QueryPageSettingsEventArgs e);
 }

@@ -37,11 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 import system.windows.automation.provider.IRawElementProviderFragment;
 import system.windows.automation.provider.IRawElementProviderFragmentImplementation;
 import system.windows.automation.provider.NavigateDirection;
-import system.windows.automation.provider.IRawElementProviderSimple;
-import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 import system.windows.automation.provider.IRawElementProviderFragmentRoot;
 import system.windows.automation.provider.IRawElementProviderFragmentRootImplementation;
 import system.windows.automation.provider.ProviderOptions;
@@ -50,12 +50,29 @@ import system.windows.Rect;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderFragment, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragment</a>
  */
-public interface IRawElementProviderFragment extends IJCOBridgeReflected {
-
+public interface IRawElementProviderFragment extends IJCOBridgeReflected, IRawElementProviderSimple {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
+    public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.IRawElementProviderFragment
+     */
+    public static final String className = "System.Windows.Automation.Provider.IRawElementProviderFragment";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRawElementProviderFragment}, a cast assert is made to check if types are compatible.
+     */
     public static IRawElementProviderFragment ToIRawElementProviderFragment(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Automation.Provider.IRawElementProviderFragment, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "UIAutomationProvider"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRawElementProviderFragmentImplementation(from.getJCOInstance());
     }
@@ -100,9 +117,7 @@ public interface IRawElementProviderFragment extends IJCOBridgeReflected {
     
     public int[] GetRuntimeId() throws Throwable;
 
-    public NetObject GetPatternProvider(int patternId) throws Throwable;
 
-    public NetObject GetPropertyValue(int propertyId) throws Throwable;
 
     public IRawElementProviderFragment Navigate(NavigateDirection direction) throws Throwable;
 
@@ -115,10 +130,6 @@ public interface IRawElementProviderFragment extends IJCOBridgeReflected {
     // Properties section
     
     public IRawElementProviderFragmentRoot getFragmentRoot() throws Throwable;
-
-    public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
-
-    public ProviderOptions getProviderOptions() throws Throwable;
 
     public Rect getBoundingRectangle() throws Throwable;
 

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.CodeAccessPermission;
 import system.security.permissions.PermissionState;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
@@ -46,12 +47,27 @@ import system.security.SecurityElement;
 
 /**
  * The base .NET class managing System.Net.PeerToPeer.Collaboration.PeerCollaborationPermission, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerCollaborationPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerCollaborationPermission</a>
  */
-public class PeerCollaborationPermission extends NetObject  {
+public class PeerCollaborationPermission extends CodeAccessPermission  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Net.PeerToPeer.Collaboration.PeerCollaborationPermission
+     */
     public static final String className = "System.Net.PeerToPeer.Collaboration.PeerCollaborationPermission";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class PeerCollaborationPermission extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeerCollaborationPermission}, a cast assert is made to check if types are compatible.
+     */
     public static PeerCollaborationPermission cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PeerCollaborationPermission(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class PeerCollaborationPermission extends NetObject  {
 
     // Constructors section
     
+    public PeerCollaborationPermission() throws Throwable {
+    }
 
     public PeerCollaborationPermission(PermissionState state) throws Throwable {
         try {
@@ -122,6 +142,7 @@ public class PeerCollaborationPermission extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -191,51 +212,11 @@ public class PeerCollaborationPermission extends NetObject  {
         }
     }
 
-    public void Assert() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Assert");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Demand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Demand");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Deny() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Deny");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PermitOnly() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PermitOnly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

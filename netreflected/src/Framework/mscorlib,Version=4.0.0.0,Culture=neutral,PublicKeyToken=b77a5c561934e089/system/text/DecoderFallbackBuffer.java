@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Text.DecoderFallbackBuffer, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderFallbackBuffer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderFallbackBuffer</a>
  */
 public class DecoderFallbackBuffer extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Text.DecoderFallbackBuffer
+     */
     public static final String className = "System.Text.DecoderFallbackBuffer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class DecoderFallbackBuffer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DecoderFallbackBuffer}, a cast assert is made to check if types are compatible.
+     */
     public static DecoderFallbackBuffer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DecoderFallbackBuffer(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class DecoderFallbackBuffer extends NetObject  {
 
     // Constructors section
     
+    public DecoderFallbackBuffer() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,6 +136,16 @@ public class DecoderFallbackBuffer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Fallback", bytesUnknown, index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Fallback(JCRefOut dupParam0, int dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Fallback", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

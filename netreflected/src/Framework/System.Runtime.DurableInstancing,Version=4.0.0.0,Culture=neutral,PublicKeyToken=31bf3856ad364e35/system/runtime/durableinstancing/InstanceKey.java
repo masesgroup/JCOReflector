@@ -44,12 +44,27 @@ import system.runtime.durableinstancing.InstanceKey;
 
 /**
  * The base .NET class managing System.Runtime.DurableInstancing.InstanceKey, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceKey</a>
  */
 public class InstanceKey extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Runtime.DurableInstancing
+     */
     public static final String assemblyShortName = "System.Runtime.DurableInstancing";
+    /**
+     * Qualified class name: System.Runtime.DurableInstancing.InstanceKey
+     */
     public static final String className = "System.Runtime.DurableInstancing.InstanceKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class InstanceKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceKey}, a cast assert is made to check if types are compatible.
+     */
     public static InstanceKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InstanceKey(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class InstanceKey extends NetObject  {
 
     // Constructors section
     
+    public InstanceKey() throws Throwable {
+    }
 
     public InstanceKey(Guid value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         try {
@@ -120,6 +139,7 @@ public class InstanceKey extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -160,11 +180,11 @@ public class InstanceKey extends NetObject  {
         }
     }
 
-    public static InstanceKey getInvalidKey() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public InstanceKey getInvalidKey() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("InvalidKey");
+            JCObject val = (JCObject)classInstance.Get("InvalidKey");
             return new InstanceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -42,12 +42,27 @@ import system.threading.ThreadExceptionEventArgs;
 import system.threading.IThreadExceptionEventHandler;
 /**
  * The base .NET class managing System.Threading.ThreadExceptionEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventHandler</a>
  */
 public class ThreadExceptionEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Threading.ThreadExceptionEventHandler
+     */
     public static final String className = "System.Threading.ThreadExceptionEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IThreadExceptionEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ThreadExceptionEventHandler extends JCVoidDelegate implements IJCVo
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ThreadExceptionEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ThreadExceptionEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ThreadExceptionEventHandler extends JCVoidDelegate implements IJCVo
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ThreadExceptionEventArgs e) {
     }
 }

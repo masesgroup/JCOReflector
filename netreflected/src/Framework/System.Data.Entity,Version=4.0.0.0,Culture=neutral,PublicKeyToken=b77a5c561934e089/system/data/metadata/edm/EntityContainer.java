@@ -38,20 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.metadata.edm.GlobalItem;
 import system.data.metadata.edm.EntitySet;
 import system.data.metadata.edm.RelationshipSet;
 import system.data.metadata.edm.BuiltInTypeKind;
-import system.data.metadata.edm.Documentation;
 
 
 /**
  * The base .NET class managing System.Data.Metadata.Edm.EntityContainer, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.EntityContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.EntityContainer</a>
  */
-public class EntityContainer extends NetObject  {
+public class EntityContainer extends GlobalItem  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Metadata.Edm.EntityContainer
+     */
     public static final String className = "System.Data.Metadata.Edm.EntityContainer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class EntityContainer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityContainer}, a cast assert is made to check if types are compatible.
+     */
     public static EntityContainer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EntityContainer(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class EntityContainer extends NetObject  {
 
     // Constructors section
     
+    public EntityContainer() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -142,38 +163,6 @@ public class EntityContainer extends NetObject  {
     
     // Properties section
     
-    public BuiltInTypeKind getBuiltInTypeKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuiltInTypeKind");
-            return new BuiltInTypeKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Documentation getDocumentation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Documentation");
-            return new Documentation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setDocumentation(Documentation Documentation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

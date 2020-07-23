@@ -43,12 +43,27 @@ import microsoft.build.tasks.deployment.bootstrapper.ProductBuilder;
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilderCollection, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilderCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilderCollection</a>
  */
 public class IProductBuilderCollectionImplementation extends NetObject implements IProductBuilderCollection {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilderCollection
+     */
     public static final String className = "Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilderCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IProductBuilderCollectionImplementation extends NetObject implement
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProductBuilderCollection}, a cast assert is made to check if types are compatible.
+     */
     public static IProductBuilderCollection ToIProductBuilderCollection(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IProductBuilderCollectionImplementation(from.getJCOInstance());

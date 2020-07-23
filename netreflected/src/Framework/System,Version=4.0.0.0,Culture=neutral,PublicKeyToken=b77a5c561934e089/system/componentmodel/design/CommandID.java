@@ -43,12 +43,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.CommandID, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.CommandID" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.CommandID</a>
  */
 public class CommandID extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.CommandID
+     */
     public static final String className = "System.ComponentModel.Design.CommandID";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class CommandID extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommandID}, a cast assert is made to check if types are compatible.
+     */
     public static CommandID cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CommandID(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class CommandID extends NetObject  {
 
     // Constructors section
     
+    public CommandID() throws Throwable {
+    }
 
     public CommandID(Guid menuGroup, int commandID) throws Throwable {
         try {
@@ -119,6 +138,7 @@ public class CommandID extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

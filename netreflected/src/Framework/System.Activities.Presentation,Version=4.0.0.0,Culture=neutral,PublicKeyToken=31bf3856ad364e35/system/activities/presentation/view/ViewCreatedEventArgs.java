@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.activities.presentation.WorkflowViewElement;
 
 
 /**
  * The base .NET class managing System.Activities.Presentation.View.ViewCreatedEventArgs, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.ViewCreatedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.ViewCreatedEventArgs</a>
  */
-public class ViewCreatedEventArgs extends NetObject  {
+public class ViewCreatedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.View.ViewCreatedEventArgs
+     */
     public static final String className = "System.Activities.Presentation.View.ViewCreatedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ViewCreatedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ViewCreatedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ViewCreatedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ViewCreatedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ViewCreatedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ViewCreatedEventArgs() throws Throwable {
+    }
 
     public ViewCreatedEventArgs(WorkflowViewElement view) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -119,6 +139,7 @@ public class ViewCreatedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

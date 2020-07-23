@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.transactions.ITransactionPromoter;
+import system.transactions.ITransactionPromoterImplementation;
 
 
 /**
  * The base .NET class managing System.Transactions.ISimpleTransactionSuperior, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.ISimpleTransactionSuperior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.ISimpleTransactionSuperior</a>
  */
-public interface ISimpleTransactionSuperior extends IJCOBridgeReflected {
-
+public interface ISimpleTransactionSuperior extends IJCOBridgeReflected, ITransactionPromoter {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
+    public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.ISimpleTransactionSuperior
+     */
+    public static final String className = "System.Transactions.ISimpleTransactionSuperior";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISimpleTransactionSuperior}, a cast assert is made to check if types are compatible.
+     */
     public static ISimpleTransactionSuperior ToISimpleTransactionSuperior(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Transactions.ISimpleTransactionSuperior, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Transactions.Local"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISimpleTransactionSuperiorImplementation(from.getJCOInstance());
     }
@@ -89,7 +108,6 @@ public interface ISimpleTransactionSuperior extends IJCOBridgeReflected {
 
     // Methods section
     
-    public byte[] Promote() throws Throwable;
 
     public void Rollback() throws Throwable;
 

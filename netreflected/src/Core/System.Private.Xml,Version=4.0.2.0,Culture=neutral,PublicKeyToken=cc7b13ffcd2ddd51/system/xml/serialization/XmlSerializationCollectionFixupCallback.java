@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.xml.serialization.IXmlSerializationCollectionFixupCallback;
 /**
  * The base .NET class managing System.Xml.Serialization.XmlSerializationCollectionFixupCallback, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationCollectionFixupCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationCollectionFixupCallback</a>
  */
 public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.XmlSerializationCollectionFixupCallback
+     */
     public static final String className = "System.Xml.Serialization.XmlSerializationCollectionFixupCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IXmlSerializationCollectionFixupCallback callerInstance = null;
@@ -148,7 +163,7 @@ public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate impl
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject collection, NetObject collectionItems) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject collection, NetObject collectionItems) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -158,7 +173,9 @@ public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate impl
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject collection, NetObject collectionItems) {
     }
 }

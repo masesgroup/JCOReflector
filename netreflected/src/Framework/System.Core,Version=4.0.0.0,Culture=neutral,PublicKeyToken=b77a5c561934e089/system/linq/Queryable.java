@@ -46,12 +46,27 @@ import system.linq.IQueryableImplementation;
 
 /**
  * The base .NET class managing System.Linq.Queryable, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Queryable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Queryable</a>
  */
 public class Queryable extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Linq.Queryable
+     */
     public static final String className = "System.Linq.Queryable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class Queryable extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Queryable}, a cast assert is made to check if types are compatible.
+     */
     public static Queryable cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Queryable(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class Queryable extends NetObject  {
 
     // Constructors section
     
+    public Queryable() throws Throwable {
+    }
 
     
     // Methods section

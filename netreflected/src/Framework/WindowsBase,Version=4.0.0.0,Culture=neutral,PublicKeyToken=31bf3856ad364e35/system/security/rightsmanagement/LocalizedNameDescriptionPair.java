@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.RightsManagement.LocalizedNameDescriptionPair, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.LocalizedNameDescriptionPair" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.LocalizedNameDescriptionPair</a>
  */
 public class LocalizedNameDescriptionPair extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Security.RightsManagement.LocalizedNameDescriptionPair
+     */
     public static final String className = "System.Security.RightsManagement.LocalizedNameDescriptionPair";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class LocalizedNameDescriptionPair extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LocalizedNameDescriptionPair}, a cast assert is made to check if types are compatible.
+     */
     public static LocalizedNameDescriptionPair cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LocalizedNameDescriptionPair(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class LocalizedNameDescriptionPair extends NetObject  {
 
     // Constructors section
     
+    public LocalizedNameDescriptionPair() throws Throwable {
+    }
 
     public LocalizedNameDescriptionPair(java.lang.String name, java.lang.String description) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         try {
@@ -118,6 +137,7 @@ public class LocalizedNameDescriptionPair extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

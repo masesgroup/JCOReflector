@@ -44,12 +44,29 @@ import system.reflection.MemberInfo;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.IDataContractSurrogate, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.IDataContractSurrogate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.IDataContractSurrogate</a>
  */
 public interface IDataContractSurrogate extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
+    public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Runtime.Serialization.IDataContractSurrogate
+     */
+    public static final String className = "System.Runtime.Serialization.IDataContractSurrogate";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataContractSurrogate}, a cast assert is made to check if types are compatible.
+     */
     public static IDataContractSurrogate ToIDataContractSurrogate(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Serialization.IDataContractSurrogate, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Runtime.Serialization"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDataContractSurrogateImplementation(from.getJCOInstance());
     }

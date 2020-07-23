@@ -45,12 +45,29 @@ import system.diagnostics.symbolstore.ISymbolVariableImplementation;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolNamespace, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolNamespace" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolNamespace</a>
  */
 public interface ISymbolNamespace extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolNamespace
+     */
+    public static final String className = "System.Diagnostics.SymbolStore.ISymbolNamespace";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolNamespace}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolNamespace ToISymbolNamespace(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Diagnostics.SymbolStore.ISymbolNamespace, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISymbolNamespaceImplementation(from.getJCOInstance());
     }

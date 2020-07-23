@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.diagnostics.ActivitySpanId;
 
 
 /**
  * The base .NET class managing System.Diagnostics.ActivitySpanId, System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ActivitySpanId" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ActivitySpanId</a>
  */
-public class ActivitySpanId extends NetObject  {
+public class ActivitySpanId extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.DiagnosticSource
+     */
     public static final String assemblyShortName = "System.Diagnostics.DiagnosticSource";
+    /**
+     * Qualified class name: System.Diagnostics.ActivitySpanId
+     */
     public static final String className = "System.Diagnostics.ActivitySpanId";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ActivitySpanId extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivitySpanId}, a cast assert is made to check if types are compatible.
+     */
     public static ActivitySpanId cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivitySpanId(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class ActivitySpanId extends NetObject  {
 
     // Constructors section
     
+    public ActivitySpanId() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -43,12 +43,27 @@ import system.DateTime;
 
 /**
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.Lifetime, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.Lifetime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.Lifetime</a>
  */
 public class Lifetime extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Protocols.WSTrust.Lifetime
+     */
     public static final String className = "System.IdentityModel.Protocols.WSTrust.Lifetime";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Lifetime extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Lifetime}, a cast assert is made to check if types are compatible.
+     */
     public static Lifetime cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Lifetime(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class Lifetime extends NetObject  {
 
     // Constructors section
     
+    public Lifetime() throws Throwable {
+    }
 
     public Lifetime(DateTime created, DateTime expires) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
@@ -119,6 +138,7 @@ public class Lifetime extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

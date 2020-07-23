@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.WebBrowserProgressChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WebBrowserProgressChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserProgressChangedEventHandler</a>
+ */
 public interface IWebBrowserProgressChangedEventHandler {
     public void Invoke(NetObject sender, WebBrowserProgressChangedEventArgs e);
 }

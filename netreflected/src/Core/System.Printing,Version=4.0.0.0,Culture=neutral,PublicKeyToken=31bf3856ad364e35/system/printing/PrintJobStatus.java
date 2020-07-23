@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Printing.PrintJobStatus, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintJobStatus" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintJobStatus</a>
  */
 public class PrintJobStatus extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Printing.PrintJobStatus
+     */
     public static final String className = "System.Printing.PrintJobStatus";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -151,19 +166,19 @@ public class PrintJobStatus extends NetObject  {
 
     // Flags management section
 
-    public PrintJobStatus add(PrintJobStatus val) throws Throwable {
+    public final PrintJobStatus add(PrintJobStatus val) throws Throwable {
         return new PrintJobStatus(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PrintJobStatus remove(PrintJobStatus val) throws Throwable {
+    public final PrintJobStatus remove(PrintJobStatus val) throws Throwable {
         return new PrintJobStatus(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PrintJobStatus val) throws Throwable {
+    public final boolean is(PrintJobStatus val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PrintJobStatus val) throws Throwable {
+    public final boolean has(PrintJobStatus val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -44,12 +44,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.Text.RegularExpressions.RegexCompilationInfo, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.RegexCompilationInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.RegexCompilationInfo</a>
  */
 public class RegexCompilationInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Text.RegularExpressions.RegexCompilationInfo
+     */
     public static final String className = "System.Text.RegularExpressions.RegexCompilationInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class RegexCompilationInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegexCompilationInfo}, a cast assert is made to check if types are compatible.
+     */
     public static RegexCompilationInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RegexCompilationInfo(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class RegexCompilationInfo extends NetObject  {
 
     // Constructors section
     
+    public RegexCompilationInfo() throws Throwable {
+    }
 
     public RegexCompilationInfo(java.lang.String pattern, RegexOptions options, java.lang.String name, java.lang.String fullnamespace, boolean ispublic) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
@@ -130,6 +149,7 @@ public class RegexCompilationInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

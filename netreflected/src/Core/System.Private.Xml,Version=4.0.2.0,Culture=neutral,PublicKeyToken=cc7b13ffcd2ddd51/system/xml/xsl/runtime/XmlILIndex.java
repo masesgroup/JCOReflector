@@ -44,12 +44,27 @@ import system.xml.xpath.XPathNavigator;
 
 /**
  * The base .NET class managing System.Xml.Xsl.Runtime.XmlILIndex, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlILIndex" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlILIndex</a>
  */
 public class XmlILIndex extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.Runtime.XmlILIndex
+     */
     public static final String className = "System.Xml.Xsl.Runtime.XmlILIndex";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class XmlILIndex extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlILIndex}, a cast assert is made to check if types are compatible.
+     */
     public static XmlILIndex cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlILIndex(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class XmlILIndex extends NetObject  {
 
     // Constructors section
     
+    public XmlILIndex() throws Throwable {
+    }
+
+
 
     
     // Methods section

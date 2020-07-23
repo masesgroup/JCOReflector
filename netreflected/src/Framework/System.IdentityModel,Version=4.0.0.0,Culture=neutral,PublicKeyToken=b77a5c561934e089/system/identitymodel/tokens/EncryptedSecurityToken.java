@@ -47,12 +47,27 @@ import system.DateTime;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.EncryptedSecurityToken, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.EncryptedSecurityToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.EncryptedSecurityToken</a>
  */
-public class EncryptedSecurityToken extends NetObject  {
+public class EncryptedSecurityToken extends SecurityToken  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.EncryptedSecurityToken
+     */
     public static final String className = "System.IdentityModel.Tokens.EncryptedSecurityToken";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class EncryptedSecurityToken extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncryptedSecurityToken}, a cast assert is made to check if types are compatible.
+     */
     public static EncryptedSecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EncryptedSecurityToken(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class EncryptedSecurityToken extends NetObject  {
 
     // Constructors section
     
+    public EncryptedSecurityToken() throws Throwable {
+    }
 
     public EncryptedSecurityToken(SecurityToken token, EncryptingCredentials encryptingCredentials) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -123,6 +142,7 @@ public class EncryptedSecurityToken extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -153,28 +173,6 @@ public class EncryptedSecurityToken extends NetObject  {
     
     // Properties section
     
-    public DateTime getValidFrom() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidFrom");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getValidTo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidTo");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EncryptingCredentials getEncryptingCredentials() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -192,16 +190,6 @@ public class EncryptedSecurityToken extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Token");
             return new SecurityToken(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Id");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

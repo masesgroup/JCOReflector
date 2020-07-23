@@ -45,12 +45,27 @@ import system.web.compilation.ExpressionBuilderContext;
 
 /**
  * The base .NET class managing System.Web.Compilation.ExpressionBuilder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.ExpressionBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.ExpressionBuilder</a>
  */
 public class ExpressionBuilder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Compilation.ExpressionBuilder
+     */
     public static final String className = "System.Web.Compilation.ExpressionBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ExpressionBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExpressionBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static ExpressionBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExpressionBuilder(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ExpressionBuilder extends NetObject  {
 
     // Constructors section
     
+    public ExpressionBuilder() throws Throwable {
+    }
 
     
     // Methods section

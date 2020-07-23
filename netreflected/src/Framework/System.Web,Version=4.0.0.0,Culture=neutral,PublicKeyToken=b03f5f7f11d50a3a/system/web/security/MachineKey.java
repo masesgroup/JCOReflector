@@ -43,12 +43,27 @@ import system.web.security.MachineKeyProtection;
 
 /**
  * The base .NET class managing System.Web.Security.MachineKey, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MachineKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MachineKey</a>
  */
 public class MachineKey extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Security.MachineKey
+     */
     public static final String className = "System.Web.Security.MachineKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class MachineKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MachineKey}, a cast assert is made to check if types are compatible.
+     */
     public static MachineKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MachineKey(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class MachineKey extends NetObject  {
 
     // Constructors section
     
+    public MachineKey() throws Throwable {
+    }
 
     
     // Methods section
@@ -151,6 +170,25 @@ public class MachineKey extends NetObject  {
         }
     }
 
+    public static byte[] Protect(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Protect", dupParam0, dupParam1);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexProtect = 0; indexProtect < resultingArrayList.size(); indexProtect++ ) {
+				resultingArray[indexProtect] = (byte)resultingArrayList.get(indexProtect);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static byte[] Unprotect(byte[] protectedData, java.lang.String... purposes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -170,11 +208,40 @@ public class MachineKey extends NetObject  {
         }
     }
 
+    public static byte[] Unprotect(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", dupParam0, dupParam1);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexUnprotect = 0; indexUnprotect < resultingArrayList.size(); indexUnprotect++ ) {
+				resultingArray[indexUnprotect] = (byte)resultingArrayList.get(indexUnprotect);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String Encode(byte[] data, MachineKeyProtection protectionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Invoke("Encode", data, protectionOption == null ? null : protectionOption.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String Encode(JCRefOut dupParam0, MachineKeyProtection dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("Encode", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

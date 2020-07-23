@@ -44,12 +44,27 @@ import system.servicemodel.security.MessagePartSpecification;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.MessagePartSpecification, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.MessagePartSpecification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.MessagePartSpecification</a>
  */
 public class MessagePartSpecification extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.MessagePartSpecification
+     */
     public static final String className = "System.ServiceModel.Security.MessagePartSpecification";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class MessagePartSpecification extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessagePartSpecification}, a cast assert is made to check if types are compatible.
+     */
     public static MessagePartSpecification cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MessagePartSpecification(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class MessagePartSpecification extends NetObject  {
 
     // Constructors section
     
-
     public MessagePartSpecification() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -219,11 +235,11 @@ public class MessagePartSpecification extends NetObject  {
         }
     }
 
-    public static MessagePartSpecification getNoParts() throws Throwable, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public MessagePartSpecification getNoParts() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("NoParts");
+            JCObject val = (JCObject)classInstance.Get("NoParts");
             return new MessagePartSpecification(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

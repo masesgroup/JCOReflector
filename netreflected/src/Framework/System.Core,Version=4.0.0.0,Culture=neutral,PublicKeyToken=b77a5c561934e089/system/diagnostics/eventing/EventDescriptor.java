@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Diagnostics.Eventing.EventDescriptor, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.EventDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.EventDescriptor</a>
  */
-public class EventDescriptor extends NetObject  {
+public class EventDescriptor extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Diagnostics.Eventing.EventDescriptor
+     */
     public static final String className = "System.Diagnostics.Eventing.EventDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class EventDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static EventDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventDescriptor(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class EventDescriptor extends NetObject  {
 
     // Constructors section
     
+    public EventDescriptor() throws Throwable {
+    }
 
     public EventDescriptor(int id, byte version, byte channel, byte level, byte opcode, int task, long keywords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
@@ -118,6 +138,7 @@ public class EventDescriptor extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

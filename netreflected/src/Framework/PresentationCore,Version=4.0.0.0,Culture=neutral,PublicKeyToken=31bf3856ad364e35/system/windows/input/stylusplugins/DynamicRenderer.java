@@ -38,22 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.input.stylusplugins.StylusPlugIn;
 import system.windows.input.StylusDevice;
 import system.windows.input.StylusPointCollection;
 import system.windows.ink.DrawingAttributes;
 import system.windows.media.Visual;
-import system.windows.Rect;
-import system.windows.UIElement;
 
 
 /**
  * The base .NET class managing System.Windows.Input.StylusPlugIns.DynamicRenderer, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusPlugIns.DynamicRenderer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusPlugIns.DynamicRenderer</a>
  */
-public class DynamicRenderer extends NetObject  {
+public class DynamicRenderer extends StylusPlugIn  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.StylusPlugIns.DynamicRenderer
+     */
     public static final String className = "System.Windows.Input.StylusPlugIns.DynamicRenderer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +120,9 @@ public class DynamicRenderer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicRenderer}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicRenderer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicRenderer(from.getJCOInstance());
@@ -114,7 +130,6 @@ public class DynamicRenderer extends NetObject  {
 
     // Constructors section
     
-
     public DynamicRenderer() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -143,36 +158,6 @@ public class DynamicRenderer extends NetObject  {
     
     // Properties section
     
-    public boolean getEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Enabled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Enabled", Enabled);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsActiveForInput() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsActiveForInput");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DrawingAttributes getDrawingAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -200,28 +185,6 @@ public class DynamicRenderer extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("RootVisual");
             return new Visual(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Rect getElementBounds() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ElementBounds");
-            return new Rect(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UIElement getElement() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Element");
-            return new UIElement(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

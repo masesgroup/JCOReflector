@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.design.ExpressionEditorSheet;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 
 
 /**
  * The base .NET class managing System.Web.UI.Design.RouteUrlExpressionEditorSheet, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.RouteUrlExpressionEditorSheet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.RouteUrlExpressionEditorSheet</a>
  */
-public class RouteUrlExpressionEditorSheet extends NetObject  {
+public class RouteUrlExpressionEditorSheet extends ExpressionEditorSheet  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.RouteUrlExpressionEditorSheet
+     */
     public static final String className = "System.Web.UI.Design.RouteUrlExpressionEditorSheet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class RouteUrlExpressionEditorSheet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RouteUrlExpressionEditorSheet}, a cast assert is made to check if types are compatible.
+     */
     public static RouteUrlExpressionEditorSheet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RouteUrlExpressionEditorSheet(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class RouteUrlExpressionEditorSheet extends NetObject  {
 
     // Constructors section
     
+    public RouteUrlExpressionEditorSheet() throws Throwable {
+    }
 
     public RouteUrlExpressionEditorSheet(java.lang.String expression, IServiceProvider serviceProvider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         try {
@@ -120,6 +140,7 @@ public class RouteUrlExpressionEditorSheet extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -139,27 +160,6 @@ public class RouteUrlExpressionEditorSheet extends NetObject  {
     
     // Properties section
     
-    public boolean getIsValid() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsValid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IServiceProvider getServiceProvider() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ServiceProvider");
-            return new IServiceProviderImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getRouteName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -57,12 +57,27 @@ import system.transactions.TransactionCompletedEventHandler;
 
 /**
  * The base .NET class managing System.Transactions.Transaction, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.Transaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.Transaction</a>
  */
 public class Transaction extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.Transaction
+     */
     public static final String className = "System.Transactions.Transaction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -115,7 +130,9 @@ public class Transaction extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Transaction}, a cast assert is made to check if types are compatible.
+     */
     public static Transaction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Transaction(from.getJCOInstance());
@@ -123,6 +140,10 @@ public class Transaction extends NetObject  {
 
     // Constructors section
     
+    public Transaction() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -309,22 +330,22 @@ public class Transaction extends NetObject  {
         }
     }
 
-    public static Transaction getCurrent() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Transaction getCurrent() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            JCObject val = (JCObject)classInstance.Get("Current");
             return new Transaction(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCurrent(Transaction Current) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCurrent(Transaction Current) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("Current", Current == null ? null : Current.getJCOInstance());
+            classInstance.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

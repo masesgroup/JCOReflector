@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Array;
+import system.collections.DictionaryBase;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
 
 /**
  * The base .NET class managing System.Web.Services.Discovery.DiscoveryExceptionDictionary, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Discovery.DiscoveryExceptionDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Discovery.DiscoveryExceptionDictionary</a>
  */
-public class DiscoveryExceptionDictionary extends NetObject  {
+public class DiscoveryExceptionDictionary extends DictionaryBase  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Discovery.DiscoveryExceptionDictionary
+     */
     public static final String className = "System.Web.Services.Discovery.DiscoveryExceptionDictionary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class DiscoveryExceptionDictionary extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiscoveryExceptionDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static DiscoveryExceptionDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DiscoveryExceptionDictionary(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class DiscoveryExceptionDictionary extends NetObject  {
 
     // Constructors section
     
-
     public DiscoveryExceptionDictionary() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -146,26 +162,6 @@ public class DiscoveryExceptionDictionary extends NetObject  {
         }
     }
 
-    public void Clear() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(Array array, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Remove(java.lang.String url) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -180,16 +176,6 @@ public class DiscoveryExceptionDictionary extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICollection getKeys() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

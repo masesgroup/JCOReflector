@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.IPStatus, System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPStatus" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPStatus</a>
  */
 public class IPStatus extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Ping
+     */
     public static final String assemblyShortName = "System.Net.Ping";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.IPStatus
+     */
     public static final String className = "System.Net.NetworkInformation.IPStatus";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

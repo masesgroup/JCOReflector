@@ -56,12 +56,27 @@ import system.windows.threading.DispatcherUnhandledExceptionFilterEventHandler;
 
 /**
  * The base .NET class managing System.Windows.Threading.Dispatcher, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.Dispatcher" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.Dispatcher</a>
  */
 public class Dispatcher extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Threading.Dispatcher
+     */
     public static final String className = "System.Windows.Threading.Dispatcher";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +129,9 @@ public class Dispatcher extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Dispatcher}, a cast assert is made to check if types are compatible.
+     */
     public static Dispatcher cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Dispatcher(from.getJCOInstance());
@@ -122,6 +139,10 @@ public class Dispatcher extends NetObject  {
 
     // Constructors section
     
+    public Dispatcher() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -358,11 +379,11 @@ public class Dispatcher extends NetObject  {
         }
     }
 
-    public static Dispatcher getCurrentDispatcher() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Dispatcher getCurrentDispatcher() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentDispatcher");
+            JCObject val = (JCObject)classInstance.Get("CurrentDispatcher");
             return new Dispatcher(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -47,12 +47,27 @@ import system.resources.ResourceSet;
 
 /**
  * The base .NET class managing System.Resources.ResourceManager, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceManager</a>
  */
 public class ResourceManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Resources.ResourceManager
+     */
     public static final String className = "System.Resources.ResourceManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ResourceManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceManager}, a cast assert is made to check if types are compatible.
+     */
     public static ResourceManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResourceManager(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ResourceManager extends NetObject  {
 
     // Constructors section
     
+    public ResourceManager() throws Throwable {
+    }
 
     public ResourceManager(java.lang.String baseName, Assembly assembly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -143,6 +162,7 @@ public class ResourceManager extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.management.ManagementEventArgs;
 import system.management.ManagementPath;
 
 
 /**
  * The base .NET class managing System.Management.ObjectPutEventArgs, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectPutEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectPutEventArgs</a>
  */
-public class ObjectPutEventArgs extends NetObject  {
+public class ObjectPutEventArgs extends ManagementEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Management
+     */
     public static final String assemblyShortName = "System.Management";
+    /**
+     * Qualified class name: System.Management.ObjectPutEventArgs
+     */
     public static final String className = "System.Management.ObjectPutEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ObjectPutEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectPutEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectPutEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectPutEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class ObjectPutEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ObjectPutEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -123,17 +145,6 @@ public class ObjectPutEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Path");
             return new ManagementPath(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Context");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -46,12 +46,27 @@ import system.threading.WaitHandle;
 
 /**
  * The base .NET class managing System.Threading.SemaphoreSlim, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SemaphoreSlim" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SemaphoreSlim</a>
  */
 public class SemaphoreSlim extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.SemaphoreSlim
+     */
     public static final String className = "System.Threading.SemaphoreSlim";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class SemaphoreSlim extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SemaphoreSlim}, a cast assert is made to check if types are compatible.
+     */
     public static SemaphoreSlim cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SemaphoreSlim(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class SemaphoreSlim extends NetObject  {
 
     // Constructors section
     
+    public SemaphoreSlim() throws Throwable {
+    }
 
     public SemaphoreSlim(int initialCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -132,6 +151,7 @@ public class SemaphoreSlim extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -214,6 +234,26 @@ public class SemaphoreSlim extends NetObject  {
         try {
             JCObject objWaitAsync = (JCObject)classInstance.Invoke("WaitAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
             return new Task(objWaitAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Wait() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Wait");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

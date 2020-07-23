@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.ProofDescriptor;
 import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.security.cryptography.RSA;
 import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
@@ -45,12 +46,27 @@ import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.AsymmetricProofDescriptor, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.AsymmetricProofDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.AsymmetricProofDescriptor</a>
  */
-public class AsymmetricProofDescriptor extends NetObject  {
+public class AsymmetricProofDescriptor extends ProofDescriptor  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.AsymmetricProofDescriptor
+     */
     public static final String className = "System.IdentityModel.Tokens.AsymmetricProofDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class AsymmetricProofDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricProofDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static AsymmetricProofDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsymmetricProofDescriptor(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class AsymmetricProofDescriptor extends NetObject  {
 
     // Constructors section
     
-
     public AsymmetricProofDescriptor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,17 +177,6 @@ public class AsymmetricProofDescriptor extends NetObject  {
     
     // Properties section
     
-    public SecurityKeyIdentifier getKeyIdentifier() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("KeyIdentifier");
-            return new SecurityKeyIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

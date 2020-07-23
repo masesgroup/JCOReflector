@@ -47,12 +47,27 @@ import system.globalization.CalendarAlgorithmType;
 
 /**
  * The base .NET class managing System.Globalization.Calendar, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.Calendar" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.Calendar</a>
  */
 public class Calendar extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Globalization.Calendar
+     */
     public static final String className = "System.Globalization.Calendar";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class Calendar extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Calendar}, a cast assert is made to check if types are compatible.
+     */
     public static Calendar cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Calendar(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class Calendar extends NetObject  {
 
     // Constructors section
     
+    public Calendar() throws Throwable {
+    }
 
     
     // Methods section

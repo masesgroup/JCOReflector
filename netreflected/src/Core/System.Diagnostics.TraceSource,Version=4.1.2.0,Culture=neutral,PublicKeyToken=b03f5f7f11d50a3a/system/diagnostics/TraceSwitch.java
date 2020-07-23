@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.specialized.StringDictionary;
+import system.diagnostics.Switch;
 import system.diagnostics.TraceLevel;
 
 
 /**
  * The base .NET class managing System.Diagnostics.TraceSwitch, System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.TraceSwitch" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.TraceSwitch</a>
  */
-public class TraceSwitch extends NetObject  {
+public class TraceSwitch extends Switch  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.TraceSource
+     */
     public static final String assemblyShortName = "System.Diagnostics.TraceSource";
+    /**
+     * Qualified class name: System.Diagnostics.TraceSwitch
+     */
     public static final String className = "System.Diagnostics.TraceSwitch";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class TraceSwitch extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TraceSwitch}, a cast assert is made to check if types are compatible.
+     */
     public static TraceSwitch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TraceSwitch(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class TraceSwitch extends NetObject  {
 
     // Constructors section
     
+    public TraceSwitch() throws Throwable {
+    }
 
     public TraceSwitch(java.lang.String displayName, java.lang.String description) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         try {
@@ -130,6 +149,7 @@ public class TraceSwitch extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -179,17 +199,6 @@ public class TraceSwitch extends NetObject  {
         }
     }
 
-    public StringDictionary getAttributes() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new StringDictionary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TraceLevel getLevel() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -206,26 +215,6 @@ public class TraceSwitch extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Level", Level == null ? null : Level.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDisplayName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DisplayName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

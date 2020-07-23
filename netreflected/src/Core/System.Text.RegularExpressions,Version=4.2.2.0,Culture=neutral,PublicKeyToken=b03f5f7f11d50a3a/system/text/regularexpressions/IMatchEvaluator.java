@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.text.regularexpressions.Match;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MatchEvaluator}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator</a>
+ */
 public interface IMatchEvaluator {
     public java.lang.String Invoke(Match match);
 }

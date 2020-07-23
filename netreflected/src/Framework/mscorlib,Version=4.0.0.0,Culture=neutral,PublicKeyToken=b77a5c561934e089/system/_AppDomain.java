@@ -61,12 +61,29 @@ import system.UnhandledExceptionEventHandler;
 
 /**
  * The base .NET class managing System._AppDomain, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System._AppDomain" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System._AppDomain</a>
  */
 public interface _AppDomain extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System._AppDomain
+     */
+    public static final String className = "System._AppDomain";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _AppDomain}, a cast assert is made to check if types are compatible.
+     */
     public static _AppDomain To_AppDomain(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System._AppDomain, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new _AppDomainImplementation(from.getJCOInstance());
     }
@@ -115,6 +132,8 @@ public interface _AppDomain extends IJCOBridgeReflected {
 
     public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity, java.lang.String[] args) throws Throwable;
 
+    public int ExecuteAssembly(java.lang.String dupParam0, Evidence dupParam1, JCRefOut dupParam2) throws Throwable;
+
     public NetObject GetData(java.lang.String name) throws Throwable;
 
     public NetObject GetLifetimeService() throws Throwable;
@@ -123,9 +142,15 @@ public interface _AppDomain extends IJCOBridgeReflected {
 
     public Assembly Load(byte[] rawAssembly) throws Throwable;
 
+    public Assembly Load(JCRefOut dupParam0) throws Throwable;
+
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable;
 
+    public Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable;
+
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, Evidence securityEvidence) throws Throwable;
+
+    public Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1, Evidence dupParam2) throws Throwable;
 
     public Assembly Load(AssemblyName assemblyRef) throws Throwable;
 

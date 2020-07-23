@@ -45,12 +45,29 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Xml.IXmlTextReaderInitializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlTextReaderInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlTextReaderInitializer</a>
  */
 public interface IXmlTextReaderInitializer extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
+    public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Xml.IXmlTextReaderInitializer
+     */
+    public static final String className = "System.Xml.IXmlTextReaderInitializer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlTextReaderInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlTextReaderInitializer ToIXmlTextReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xml.IXmlTextReaderInitializer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Runtime.Serialization"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlTextReaderInitializerImplementation(from.getJCOInstance());
     }
@@ -94,6 +111,8 @@ public interface IXmlTextReaderInitializer extends IJCOBridgeReflected {
     // Methods section
     
     public void SetInput(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable;
+
+    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable;
 
     public void SetInput(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable;
 

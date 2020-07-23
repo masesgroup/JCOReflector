@@ -44,10 +44,22 @@ import system.web.services.description.BasicProfileViolation;
 
 /**
  * The base .NET class managing System.Web.Services.Description.BasicProfileViolationEnumerator, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.BasicProfileViolationEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.BasicProfileViolationEnumerator</a>
  */
 public class BasicProfileViolationEnumerator extends NetObject implements Iterator<BasicProfileViolation> {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Description.BasicProfileViolationEnumerator
+     */
     public static final String className = "System.Web.Services.Description.BasicProfileViolationEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class BasicProfileViolationEnumerator extends NetObject implements Iterat
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public BasicProfileViolation next() {
+	public final BasicProfileViolation next() {
 		try {
 			return new BasicProfileViolation(classInstance.next());
 		} catch (Throwable jce) {

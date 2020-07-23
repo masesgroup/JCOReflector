@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.constrainedexecution.CriticalFinalizerObject;
 
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.CriticalHandle, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.CriticalHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.CriticalHandle</a>
  */
-public class CriticalHandle extends NetObject  {
+public class CriticalHandle extends CriticalFinalizerObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.CriticalHandle
+     */
     public static final String className = "System.Runtime.InteropServices.CriticalHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class CriticalHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CriticalHandle}, a cast assert is made to check if types are compatible.
+     */
     public static CriticalHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CriticalHandle(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class CriticalHandle extends NetObject  {
 
     // Constructors section
     
+    public CriticalHandle() throws Throwable {
+    }
 
     
     // Methods section

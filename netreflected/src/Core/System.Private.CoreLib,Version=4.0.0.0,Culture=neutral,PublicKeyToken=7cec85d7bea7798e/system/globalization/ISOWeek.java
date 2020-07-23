@@ -44,12 +44,27 @@ import system.DayOfWeek;
 
 /**
  * The base .NET class managing System.Globalization.ISOWeek, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.ISOWeek" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.ISOWeek</a>
  */
 public class ISOWeek extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Globalization.ISOWeek
+     */
     public static final String className = "System.Globalization.ISOWeek";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ISOWeek extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISOWeek}, a cast assert is made to check if types are compatible.
+     */
     public static ISOWeek cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISOWeek(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class ISOWeek extends NetObject  {
 
     // Constructors section
     
+    public ISOWeek() throws Throwable {
+    }
 
     
     // Methods section

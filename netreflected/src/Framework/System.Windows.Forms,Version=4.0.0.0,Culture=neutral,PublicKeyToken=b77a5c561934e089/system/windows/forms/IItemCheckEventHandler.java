@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ItemCheckEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ItemCheckEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ItemCheckEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ItemCheckEventHandler</a>
+ */
 public interface IItemCheckEventHandler {
     public void Invoke(NetObject sender, ItemCheckEventArgs e);
 }

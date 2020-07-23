@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.input.InputGesture;
 import system.windows.input.MouseAction;
 import system.windows.input.ModifierKeys;
 import system.windows.input.InputEventArgs;
@@ -45,12 +46,27 @@ import system.windows.input.InputEventArgs;
 
 /**
  * The base .NET class managing System.Windows.Input.MouseGesture, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.MouseGesture" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.MouseGesture</a>
  */
-public class MouseGesture extends NetObject  {
+public class MouseGesture extends InputGesture  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.MouseGesture
+     */
     public static final String className = "System.Windows.Input.MouseGesture";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class MouseGesture extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MouseGesture}, a cast assert is made to check if types are compatible.
+     */
     public static MouseGesture cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MouseGesture(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class MouseGesture extends NetObject  {
 
     // Constructors section
     
-
     public MouseGesture() throws Throwable {
         try {
             // add reference to assemblyName.dll file

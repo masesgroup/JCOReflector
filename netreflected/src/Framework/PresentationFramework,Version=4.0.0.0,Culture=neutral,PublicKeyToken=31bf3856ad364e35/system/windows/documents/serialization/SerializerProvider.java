@@ -45,12 +45,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Windows.Documents.Serialization.SerializerProvider, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.SerializerProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.SerializerProvider</a>
  */
 public class SerializerProvider extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Documents.Serialization.SerializerProvider
+     */
     public static final String className = "System.Windows.Documents.Serialization.SerializerProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class SerializerProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SerializerProvider}, a cast assert is made to check if types are compatible.
+     */
     public static SerializerProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SerializerProvider(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class SerializerProvider extends NetObject  {
 
     // Constructors section
     
-
     public SerializerProvider() throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.MemberAccessException, system.UriFormatException, system.OverflowException, system.NotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file

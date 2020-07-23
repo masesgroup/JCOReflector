@@ -44,12 +44,27 @@ import system.reflection.FieldInfo;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.Formatters.InternalST, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.InternalST" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.InternalST</a>
  */
 public class InternalST extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.Formatters.InternalST
+     */
     public static final String className = "System.Runtime.Serialization.Formatters.InternalST";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class InternalST extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InternalST}, a cast assert is made to check if types are compatible.
+     */
     public static InternalST cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InternalST(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class InternalST extends NetObject  {
 
     // Constructors section
     
+    public InternalST() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -47,12 +47,27 @@ import microsoft.build.framework.TaskPropertyInfo;
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.XamlTaskFactory, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory</a>
  */
 public class XamlTaskFactory extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.XamlTaskFactory
+     */
     public static final String className = "Microsoft.Build.Tasks.XamlTaskFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class XamlTaskFactory extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlTaskFactory}, a cast assert is made to check if types are compatible.
+     */
     public static XamlTaskFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlTaskFactory(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class XamlTaskFactory extends NetObject  {
 
     // Constructors section
     
-
     public XamlTaskFactory() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -46,12 +46,27 @@ import system.workflow.activities.rules.RuleChainingBehavior;
 
 /**
  * The base .NET class managing System.Workflow.Activities.Rules.RuleSet, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleSet</a>
  */
 public class RuleSet extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.Rules.RuleSet
+     */
     public static final String className = "System.Workflow.Activities.Rules.RuleSet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class RuleSet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuleSet}, a cast assert is made to check if types are compatible.
+     */
     public static RuleSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RuleSet(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class RuleSet extends NetObject  {
 
     // Constructors section
     
-
     public RuleSet() throws Throwable {
         try {
             // add reference to assemblyName.dll file

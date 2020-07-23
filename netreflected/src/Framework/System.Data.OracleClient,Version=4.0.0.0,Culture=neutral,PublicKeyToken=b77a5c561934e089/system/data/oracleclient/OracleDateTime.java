@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.globalization.Calendar;
 import system.data.oracleclient.OracleDateTime;
 import system.DateTime;
@@ -46,12 +47,27 @@ import system.data.oracleclient.OracleBoolean;
 
 /**
  * The base .NET class managing System.Data.OracleClient.OracleDateTime, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleDateTime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleDateTime</a>
  */
-public class OracleDateTime extends NetObject  {
+public class OracleDateTime extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.OracleClient
+     */
     public static final String assemblyShortName = "System.Data.OracleClient";
+    /**
+     * Qualified class name: System.Data.OracleClient.OracleDateTime
+     */
     public static final String className = "System.Data.OracleClient.OracleDateTime";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class OracleDateTime extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OracleDateTime}, a cast assert is made to check if types are compatible.
+     */
     public static OracleDateTime cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OracleDateTime(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class OracleDateTime extends NetObject  {
 
     // Constructors section
     
+    public OracleDateTime() throws Throwable {
+    }
 
     public OracleDateTime(int year, int month, int day) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
@@ -202,6 +222,7 @@ public class OracleDateTime extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -54,12 +54,27 @@ import system.activities.ActivityDelegate;
 
 /**
  * The base .NET class managing System.Activities.DynamicUpdate.NativeActivityUpdateContext, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext</a>
  */
 public class NativeActivityUpdateContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.DynamicUpdate.NativeActivityUpdateContext
+     */
     public static final String className = "System.Activities.DynamicUpdate.NativeActivityUpdateContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class NativeActivityUpdateContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NativeActivityUpdateContext}, a cast assert is made to check if types are compatible.
+     */
     public static NativeActivityUpdateContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NativeActivityUpdateContext(from.getJCOInstance());
@@ -120,6 +137,10 @@ public class NativeActivityUpdateContext extends NetObject  {
 
     // Constructors section
     
+    public NativeActivityUpdateContext() throws Throwable {
+    }
+
+
 
     
     // Methods section

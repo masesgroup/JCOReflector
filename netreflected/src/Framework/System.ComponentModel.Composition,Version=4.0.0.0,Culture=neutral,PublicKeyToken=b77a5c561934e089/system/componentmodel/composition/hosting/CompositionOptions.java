@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.CompositionOptions, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionOptions</a>
  */
 public class CompositionOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.CompositionOptions
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.CompositionOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class CompositionOptions extends NetObject  {
 
     // Flags management section
 
-    public CompositionOptions add(CompositionOptions val) throws Throwable {
+    public final CompositionOptions add(CompositionOptions val) throws Throwable {
         return new CompositionOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CompositionOptions remove(CompositionOptions val) throws Throwable {
+    public final CompositionOptions remove(CompositionOptions val) throws Throwable {
         return new CompositionOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CompositionOptions val) throws Throwable {
+    public final boolean is(CompositionOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CompositionOptions val) throws Throwable {
+    public final boolean has(CompositionOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

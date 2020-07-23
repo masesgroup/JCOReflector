@@ -42,12 +42,27 @@ import system.workflow.componentmodel.design.ConnectorEventArgs;
 import system.workflow.componentmodel.design.IConnectorEventHandler;
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.ConnectorEventHandler, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ConnectorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ConnectorEventHandler</a>
  */
 public class ConnectorEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.ConnectorEventHandler
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.ConnectorEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IConnectorEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ConnectorEventHandler extends JCVoidDelegate implements IJCVoidEven
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ConnectorEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ConnectorEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ConnectorEventHandler extends JCVoidDelegate implements IJCVoidEven
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ConnectorEventArgs e) {
     }
 }

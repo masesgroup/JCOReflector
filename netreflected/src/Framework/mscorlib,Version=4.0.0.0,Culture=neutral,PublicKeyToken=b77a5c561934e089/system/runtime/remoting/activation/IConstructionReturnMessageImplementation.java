@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.messaging.IMethodReturnMessage;
+import system.runtime.remoting.messaging.IMethodReturnMessageImplementation;
+import system.runtime.remoting.messaging.IMethodMessage;
+import system.runtime.remoting.messaging.IMethodMessageImplementation;
+import system.runtime.remoting.messaging.IMessage;
+import system.runtime.remoting.messaging.IMessageImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.reflection.MethodBase;
@@ -46,12 +52,27 @@ import system.runtime.remoting.messaging.LogicalCallContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Activation.IConstructionReturnMessage, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage</a>
  */
 public class IConstructionReturnMessageImplementation extends NetObject implements IConstructionReturnMessage {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Activation.IConstructionReturnMessage
+     */
     public static final String className = "System.Runtime.Remoting.Activation.IConstructionReturnMessage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +120,9 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IConstructionReturnMessage}, a cast assert is made to check if types are compatible.
+     */
     public static IConstructionReturnMessage ToIConstructionReturnMessage(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IConstructionReturnMessageImplementation(from.getJCOInstance());
@@ -227,7 +250,7 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
-    public NetObject[] getArgs() throws Throwable {
+    public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -244,7 +267,7 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
-    public NetObject[] getOutArgs() throws Throwable {
+    public final NetObject[] getOutArgs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

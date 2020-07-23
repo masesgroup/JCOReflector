@@ -63,12 +63,27 @@ import system.windows.forms.TextFormatFlags;
 
 /**
  * The base .NET class managing System.Windows.Forms.ControlPaint, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ControlPaint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ControlPaint</a>
  */
 public class ControlPaint extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ControlPaint
+     */
     public static final String className = "System.Windows.Forms.ControlPaint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -121,7 +136,9 @@ public class ControlPaint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ControlPaint}, a cast assert is made to check if types are compatible.
+     */
     public static ControlPaint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ControlPaint(from.getJCOInstance());
@@ -129,6 +146,10 @@ public class ControlPaint extends NetObject  {
 
     // Constructors section
     
+    public ControlPaint() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -623,11 +644,11 @@ public class ControlPaint extends NetObject  {
     
     // Properties section
     
-    public static Color getContrastControlDark() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Color getContrastControlDark() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContrastControlDark");
+            JCObject val = (JCObject)classInstance.Get("ContrastControlDark");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

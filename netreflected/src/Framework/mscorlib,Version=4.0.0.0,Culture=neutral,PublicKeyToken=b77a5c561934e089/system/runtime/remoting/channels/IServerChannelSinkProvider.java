@@ -49,12 +49,29 @@ import system.runtime.remoting.channels.IServerChannelSinkProviderImplementation
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IServerChannelSinkProvider, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkProvider</a>
  */
 public interface IServerChannelSinkProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IServerChannelSinkProvider
+     */
+    public static final String className = "System.Runtime.Remoting.Channels.IServerChannelSinkProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IServerChannelSinkProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IServerChannelSinkProvider ToIServerChannelSinkProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Channels.IServerChannelSinkProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IServerChannelSinkProviderImplementation(from.getJCOInstance());
     }

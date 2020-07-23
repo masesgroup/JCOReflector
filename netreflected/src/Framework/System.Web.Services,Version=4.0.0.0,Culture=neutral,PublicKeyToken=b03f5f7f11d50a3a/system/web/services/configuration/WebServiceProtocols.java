@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.Services.Configuration.WebServiceProtocols, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Configuration.WebServiceProtocols" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Configuration.WebServiceProtocols</a>
  */
 public class WebServiceProtocols extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Configuration.WebServiceProtocols
+     */
     public static final String className = "System.Web.Services.Configuration.WebServiceProtocols";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class WebServiceProtocols extends NetObject  {
 
     // Flags management section
 
-    public WebServiceProtocols add(WebServiceProtocols val) throws Throwable {
+    public final WebServiceProtocols add(WebServiceProtocols val) throws Throwable {
         return new WebServiceProtocols(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public WebServiceProtocols remove(WebServiceProtocols val) throws Throwable {
+    public final WebServiceProtocols remove(WebServiceProtocols val) throws Throwable {
         return new WebServiceProtocols(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(WebServiceProtocols val) throws Throwable {
+    public final boolean is(WebServiceProtocols val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(WebServiceProtocols val) throws Throwable {
+    public final boolean has(WebServiceProtocols val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

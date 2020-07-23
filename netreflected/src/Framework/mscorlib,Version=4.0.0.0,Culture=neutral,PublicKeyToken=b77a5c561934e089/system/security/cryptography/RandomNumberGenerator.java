@@ -43,12 +43,27 @@ import system.security.cryptography.RandomNumberGenerator;
 
 /**
  * The base .NET class managing System.Security.Cryptography.RandomNumberGenerator, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RandomNumberGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RandomNumberGenerator</a>
  */
 public class RandomNumberGenerator extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.RandomNumberGenerator
+     */
     public static final String className = "System.Security.Cryptography.RandomNumberGenerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RandomNumberGenerator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RandomNumberGenerator}, a cast assert is made to check if types are compatible.
+     */
     public static RandomNumberGenerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RandomNumberGenerator(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class RandomNumberGenerator extends NetObject  {
 
     // Constructors section
     
+    public RandomNumberGenerator() throws Throwable {
+    }
 
     
     // Methods section
@@ -155,6 +174,16 @@ public class RandomNumberGenerator extends NetObject  {
         }
     }
 
+    public void GetBytes(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBytes", (Object)dupParam0);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void GetBytes(byte[] data, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -165,11 +194,31 @@ public class RandomNumberGenerator extends NetObject  {
         }
     }
 
+    public void GetBytes(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void GetNonZeroBytes(byte[] data) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetNonZeroBytes", (Object)data);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetNonZeroBytes(JCRefOut dupParam0) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetNonZeroBytes", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

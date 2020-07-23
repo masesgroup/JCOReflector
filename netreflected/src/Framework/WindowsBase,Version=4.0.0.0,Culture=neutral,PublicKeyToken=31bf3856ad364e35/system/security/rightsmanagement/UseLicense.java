@@ -46,12 +46,27 @@ import system.security.rightsmanagement.ContentUser;
 
 /**
  * The base .NET class managing System.Security.RightsManagement.UseLicense, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.UseLicense" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.UseLicense</a>
  */
 public class UseLicense extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Security.RightsManagement.UseLicense
+     */
     public static final String className = "System.Security.RightsManagement.UseLicense";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class UseLicense extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UseLicense}, a cast assert is made to check if types are compatible.
+     */
     public static UseLicense cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UseLicense(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class UseLicense extends NetObject  {
 
     // Constructors section
     
+    public UseLicense() throws Throwable {
+    }
 
     public UseLicense(java.lang.String useLicense) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.FormatException, system.globalization.CultureNotFoundException {
         try {
@@ -122,6 +141,7 @@ public class UseLicense extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

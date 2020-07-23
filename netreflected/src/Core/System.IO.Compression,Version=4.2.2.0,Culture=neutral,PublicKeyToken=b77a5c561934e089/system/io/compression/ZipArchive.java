@@ -47,12 +47,27 @@ import system.io.compression.CompressionLevel;
 
 /**
  * The base .NET class managing System.IO.Compression.ZipArchive, System.IO.Compression, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive</a>
  */
 public class ZipArchive extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IO.Compression, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IO.Compression, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IO.Compression
+     */
     public static final String assemblyShortName = "System.IO.Compression";
+    /**
+     * Qualified class name: System.IO.Compression.ZipArchive
+     */
     public static final String className = "System.IO.Compression.ZipArchive";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ZipArchive extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ZipArchive}, a cast assert is made to check if types are compatible.
+     */
     public static ZipArchive cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ZipArchive(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ZipArchive extends NetObject  {
 
     // Constructors section
     
+    public ZipArchive() throws Throwable {
+    }
 
     public ZipArchive(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException {
         try {
@@ -153,6 +172,7 @@ public class ZipArchive extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

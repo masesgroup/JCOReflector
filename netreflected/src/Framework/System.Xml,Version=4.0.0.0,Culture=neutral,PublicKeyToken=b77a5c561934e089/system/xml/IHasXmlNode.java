@@ -42,12 +42,29 @@ import system.xml.XmlNode;
 
 /**
  * The base .NET class managing System.Xml.IHasXmlNode, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IHasXmlNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IHasXmlNode</a>
  */
 public interface IHasXmlNode extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
+    public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.IHasXmlNode
+     */
+    public static final String className = "System.Xml.IHasXmlNode";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHasXmlNode}, a cast assert is made to check if types are compatible.
+     */
     public static IHasXmlNode ToIHasXmlNode(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xml.IHasXmlNode, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IHasXmlNodeImplementation(from.getJCOInstance());
     }

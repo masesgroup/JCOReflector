@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.IList;
+import system.collections.IListImplementation;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.data.ITableMapping;
 import system.data.ITableMappingImplementation;
 import system.Array;
@@ -44,12 +48,29 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Data.ITableMappingCollection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.ITableMappingCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.ITableMappingCollection</a>
  */
-public interface ITableMappingCollection extends IJCOBridgeReflected {
-
+public interface ITableMappingCollection extends IJCOBridgeReflected, IList, ICollection, IEnumerable {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
+    public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.ITableMappingCollection
+     */
+    public static final String className = "System.Data.ITableMappingCollection";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITableMappingCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ITableMappingCollection ToITableMappingCollection(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Data.ITableMappingCollection, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Data"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITableMappingCollectionImplementation(from.getJCOInstance());
     }
@@ -92,13 +113,10 @@ public interface ITableMappingCollection extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Contains(NetObject value) throws Throwable;
 
     public boolean Contains(java.lang.String sourceTableName) throws Throwable;
 
-    public int Add(NetObject value) throws Throwable;
 
-    public int IndexOf(NetObject value) throws Throwable;
 
     public int IndexOf(java.lang.String sourceTableName) throws Throwable;
 
@@ -106,15 +124,10 @@ public interface ITableMappingCollection extends IJCOBridgeReflected {
 
     public ITableMapping GetByDataSetTable(java.lang.String dataSetTableName) throws Throwable;
 
-    public void Clear() throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
 
-    public void Insert(int index, NetObject value) throws Throwable;
 
-    public void Remove(NetObject value) throws Throwable;
 
-    public void RemoveAt(int index) throws Throwable;
 
     public void RemoveAt(java.lang.String sourceTableName) throws Throwable;
 
@@ -122,16 +135,6 @@ public interface ITableMappingCollection extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getIsFixedSize() throws Throwable;
-
-    public boolean getIsReadOnly() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
-
-    public int getCount() throws Throwable;
-
-    public NetObject getSyncRoot() throws Throwable;
-
 
 
     // Instance Events section

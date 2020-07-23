@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Single;
 import system.drawing.PointF;
 import system.drawing.SizeF;
@@ -46,12 +47,27 @@ import system.drawing.Size;
 
 /**
  * The base .NET class managing System.Drawing.SizeF, System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.SizeF" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.SizeF</a>
  */
-public class SizeF extends NetObject  {
+public class SizeF extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing.Primitives
+     */
     public static final String assemblyShortName = "System.Drawing.Primitives";
+    /**
+     * Qualified class name: System.Drawing.SizeF
+     */
     public static final String className = "System.Drawing.SizeF";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class SizeF extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SizeF}, a cast assert is made to check if types are compatible.
+     */
     public static SizeF cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SizeF(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class SizeF extends NetObject  {
 
     // Constructors section
     
+    public SizeF() throws Throwable {
+    }
 
     public SizeF(Single width, Single height) throws Throwable {
         try {
@@ -142,6 +162,7 @@ public class SizeF extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

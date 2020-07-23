@@ -45,12 +45,27 @@ import system.DateTimeOffset;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.Rfc3161TimestampTokenInfo, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampTokenInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampTokenInfo</a>
  */
 public class Rfc3161TimestampTokenInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.Rfc3161TimestampTokenInfo
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.Rfc3161TimestampTokenInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rfc3161TimestampTokenInfo}, a cast assert is made to check if types are compatible.
+     */
     public static Rfc3161TimestampTokenInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Rfc3161TimestampTokenInfo(from.getJCOInstance());
@@ -111,6 +128,9 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
 
     // Constructors section
     
+    public Rfc3161TimestampTokenInfo() throws Throwable {
+    }
+
 
 
     

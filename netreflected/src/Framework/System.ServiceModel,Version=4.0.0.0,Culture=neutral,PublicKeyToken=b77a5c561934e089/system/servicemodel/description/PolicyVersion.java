@@ -43,12 +43,27 @@ import system.servicemodel.description.PolicyVersion;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.PolicyVersion, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.PolicyVersion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.PolicyVersion</a>
  */
 public class PolicyVersion extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.PolicyVersion
+     */
     public static final String className = "System.ServiceModel.Description.PolicyVersion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class PolicyVersion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PolicyVersion}, a cast assert is made to check if types are compatible.
+     */
     public static PolicyVersion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PolicyVersion(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class PolicyVersion extends NetObject  {
 
     // Constructors section
     
+    public PolicyVersion() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -117,33 +138,33 @@ public class PolicyVersion extends NetObject  {
     
     // Properties section
     
-    public static PolicyVersion getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public PolicyVersion getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new PolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static PolicyVersion getPolicy12() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public PolicyVersion getPolicy12() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Policy12");
+            JCObject val = (JCObject)classInstance.Get("Policy12");
             return new PolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static PolicyVersion getPolicy15() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public PolicyVersion getPolicy15() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Policy15");
+            JCObject val = (JCObject)classInstance.Get("Policy15");
             return new PolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

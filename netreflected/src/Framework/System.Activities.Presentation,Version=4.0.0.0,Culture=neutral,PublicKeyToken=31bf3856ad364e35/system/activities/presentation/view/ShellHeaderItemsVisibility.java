@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Activities.Presentation.View.ShellHeaderItemsVisibility, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.ShellHeaderItemsVisibility" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.ShellHeaderItemsVisibility</a>
  */
 public class ShellHeaderItemsVisibility extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.View.ShellHeaderItemsVisibility
+     */
     public static final String className = "System.Activities.Presentation.View.ShellHeaderItemsVisibility";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class ShellHeaderItemsVisibility extends NetObject  {
 
     // Flags management section
 
-    public ShellHeaderItemsVisibility add(ShellHeaderItemsVisibility val) throws Throwable {
+    public final ShellHeaderItemsVisibility add(ShellHeaderItemsVisibility val) throws Throwable {
         return new ShellHeaderItemsVisibility(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ShellHeaderItemsVisibility remove(ShellHeaderItemsVisibility val) throws Throwable {
+    public final ShellHeaderItemsVisibility remove(ShellHeaderItemsVisibility val) throws Throwable {
         return new ShellHeaderItemsVisibility(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ShellHeaderItemsVisibility val) throws Throwable {
+    public final boolean is(ShellHeaderItemsVisibility val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ShellHeaderItemsVisibility val) throws Throwable {
+    public final boolean has(ShellHeaderItemsVisibility val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

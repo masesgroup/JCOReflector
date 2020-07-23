@@ -38,24 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.drawing.design.UITypeEditor;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
-import system.drawing.design.UITypeEditorEditStyle;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 import system.drawing.design.PaintValueEventArgs;
-import system.drawing.Graphics;
-import system.drawing.Rectangle;
 
 
 /**
  * The base .NET class managing System.Drawing.Design.FontNameEditor, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.FontNameEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.FontNameEditor</a>
  */
-public class FontNameEditor extends NetObject  {
+public class FontNameEditor extends UITypeEditor  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing.Design
+     */
     public static final String assemblyShortName = "System.Drawing.Design";
+    /**
+     * Qualified class name: System.Drawing.Design.FontNameEditor
+     */
     public static final String className = "System.Drawing.Design.FontNameEditor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +119,9 @@ public class FontNameEditor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontNameEditor}, a cast assert is made to check if types are compatible.
+     */
     public static FontNameEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FontNameEditor(from.getJCOInstance());
@@ -116,7 +129,6 @@ public class FontNameEditor extends NetObject  {
 
     // Constructors section
     
-
     public FontNameEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -131,65 +143,11 @@ public class FontNameEditor extends NetObject  {
     
     // Methods section
     
-    public boolean GetPaintValueSupported() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean GetPaintValueSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("GetPaintValueSupported", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UITypeEditorEditStyle GetEditStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle");
-            return new UITypeEditorEditStyle(objGetEditStyle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle", context == null ? null : context.getJCOInstance());
-            return new UITypeEditorEditStyle(objGetEditStyle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject EditValue(ITypeDescriptorContext context, IServiceProvider provider, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", context == null ? null : context.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new NetObject(objEditValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject EditValue(IServiceProvider provider, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new NetObject(objEditValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,30 +163,10 @@ public class FontNameEditor extends NetObject  {
         }
     }
 
-    public void PaintValue(NetObject value, Graphics canvas, Rectangle rectangle) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PaintValue", value == null ? null : value.getJCOInstance(), canvas == null ? null : canvas.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getIsDropDownResizable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDropDownResizable");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

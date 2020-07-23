@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.text.json.JsonReaderOptions;
 
 
 /**
  * The base .NET class managing System.Text.Json.JsonReaderState, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonReaderState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonReaderState</a>
  */
-public class JsonReaderState extends NetObject  {
+public class JsonReaderState extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Text.Json
+     */
     public static final String assemblyShortName = "System.Text.Json";
+    /**
+     * Qualified class name: System.Text.Json.JsonReaderState
+     */
     public static final String className = "System.Text.Json.JsonReaderState";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class JsonReaderState extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonReaderState}, a cast assert is made to check if types are compatible.
+     */
     public static JsonReaderState cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new JsonReaderState(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class JsonReaderState extends NetObject  {
 
     // Constructors section
     
+    public JsonReaderState() throws Throwable {
+    }
 
     public JsonReaderState(JsonReaderOptions options) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class JsonReaderState extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

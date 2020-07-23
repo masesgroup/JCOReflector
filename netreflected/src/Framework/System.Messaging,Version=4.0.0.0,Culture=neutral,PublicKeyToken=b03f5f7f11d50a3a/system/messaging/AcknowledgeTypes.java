@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Messaging.AcknowledgeTypes, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.AcknowledgeTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.AcknowledgeTypes</a>
  */
 public class AcknowledgeTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.AcknowledgeTypes
+     */
     public static final String className = "System.Messaging.AcknowledgeTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class AcknowledgeTypes extends NetObject  {
 
     // Flags management section
 
-    public AcknowledgeTypes add(AcknowledgeTypes val) throws Throwable {
+    public final AcknowledgeTypes add(AcknowledgeTypes val) throws Throwable {
         return new AcknowledgeTypes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AcknowledgeTypes remove(AcknowledgeTypes val) throws Throwable {
+    public final AcknowledgeTypes remove(AcknowledgeTypes val) throws Throwable {
         return new AcknowledgeTypes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AcknowledgeTypes val) throws Throwable {
+    public final boolean is(AcknowledgeTypes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AcknowledgeTypes val) throws Throwable {
+    public final boolean has(AcknowledgeTypes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

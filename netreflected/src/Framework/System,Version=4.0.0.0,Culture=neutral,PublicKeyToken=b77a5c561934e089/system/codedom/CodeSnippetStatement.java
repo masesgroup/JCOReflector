@@ -38,20 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeDirectiveCollection;
-import system.codedom.CodeLinePragma;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
+import system.codedom.CodeStatement;
 
 
 /**
  * The base .NET class managing System.CodeDom.CodeSnippetStatement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeSnippetStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeSnippetStatement</a>
  */
-public class CodeSnippetStatement extends NetObject  {
+public class CodeSnippetStatement extends CodeStatement  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.CodeDom.CodeSnippetStatement
+     */
     public static final String className = "System.CodeDom.CodeSnippetStatement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +116,9 @@ public class CodeSnippetStatement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeSnippetStatement}, a cast assert is made to check if types are compatible.
+     */
     public static CodeSnippetStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeSnippetStatement(from.getJCOInstance());
@@ -112,7 +126,6 @@ public class CodeSnippetStatement extends NetObject  {
 
     // Constructors section
     
-
     public CodeSnippetStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -141,60 +154,6 @@ public class CodeSnippetStatement extends NetObject  {
     
     // Properties section
     
-    public CodeDirectiveCollection getEndDirectives() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
-            return new CodeDirectiveCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeDirectiveCollection getStartDirectives() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
-            return new CodeDirectiveCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeLinePragma getLinePragma() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LinePragma");
-            return new CodeLinePragma(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLinePragma(CodeLinePragma LinePragma) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LinePragma", LinePragma == null ? null : LinePragma.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

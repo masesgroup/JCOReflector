@@ -44,10 +44,22 @@ import system.security.cryptography.AsnEncodedData;
 
 /**
  * The base .NET class managing System.Security.Cryptography.AsnEncodedDataEnumerator, System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsnEncodedDataEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsnEncodedDataEnumerator</a>
  */
 public class AsnEncodedDataEnumerator extends NetObject implements Iterator<AsnEncodedData> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Encoding
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Encoding";
+    /**
+     * Qualified class name: System.Security.Cryptography.AsnEncodedDataEnumerator
+     */
     public static final String className = "System.Security.Cryptography.AsnEncodedDataEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class AsnEncodedDataEnumerator extends NetObject implements Iterator<AsnE
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public AsnEncodedData next() {
+	public final AsnEncodedData next() {
 		try {
 			return new AsnEncodedData(classInstance.next());
 		} catch (Throwable jce) {

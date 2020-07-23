@@ -45,12 +45,27 @@ import system.security.policy.Evidence;
 
 /**
  * The base .NET class managing System.Security.Policy.IIdentityPermissionFactory, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IIdentityPermissionFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IIdentityPermissionFactory</a>
  */
 public class IIdentityPermissionFactoryImplementation extends NetObject implements IIdentityPermissionFactory {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Policy.IIdentityPermissionFactory
+     */
     public static final String className = "System.Security.Policy.IIdentityPermissionFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class IIdentityPermissionFactoryImplementation extends NetObject implemen
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IIdentityPermissionFactory}, a cast assert is made to check if types are compatible.
+     */
     public static IIdentityPermissionFactory ToIIdentityPermissionFactory(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IIdentityPermissionFactoryImplementation(from.getJCOInstance());

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CngUIProtectionLevels, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngUIProtectionLevels" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngUIProtectionLevels</a>
  */
 public class CngUIProtectionLevels extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.CngUIProtectionLevels
+     */
     public static final String className = "System.Security.Cryptography.CngUIProtectionLevels";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class CngUIProtectionLevels extends NetObject  {
 
     // Flags management section
 
-    public CngUIProtectionLevels add(CngUIProtectionLevels val) throws Throwable {
+    public final CngUIProtectionLevels add(CngUIProtectionLevels val) throws Throwable {
         return new CngUIProtectionLevels(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CngUIProtectionLevels remove(CngUIProtectionLevels val) throws Throwable {
+    public final CngUIProtectionLevels remove(CngUIProtectionLevels val) throws Throwable {
         return new CngUIProtectionLevels(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CngUIProtectionLevels val) throws Throwable {
+    public final boolean is(CngUIProtectionLevels val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CngUIProtectionLevels val) throws Throwable {
+    public final boolean has(CngUIProtectionLevels val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

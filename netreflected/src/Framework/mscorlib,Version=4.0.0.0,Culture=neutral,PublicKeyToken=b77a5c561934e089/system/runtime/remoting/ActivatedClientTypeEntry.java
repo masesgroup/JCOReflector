@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.TypeEntry;
 import system.runtime.remoting.contexts.IContextAttribute;
 import system.runtime.remoting.contexts.IContextAttributeImplementation;
 
 
 /**
  * The base .NET class managing System.Runtime.Remoting.ActivatedClientTypeEntry, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.ActivatedClientTypeEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.ActivatedClientTypeEntry</a>
  */
-public class ActivatedClientTypeEntry extends NetObject  {
+public class ActivatedClientTypeEntry extends TypeEntry  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.ActivatedClientTypeEntry
+     */
     public static final String className = "System.Runtime.Remoting.ActivatedClientTypeEntry";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ActivatedClientTypeEntry extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivatedClientTypeEntry}, a cast assert is made to check if types are compatible.
+     */
     public static ActivatedClientTypeEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivatedClientTypeEntry(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class ActivatedClientTypeEntry extends NetObject  {
 
     // Constructors section
     
+    public ActivatedClientTypeEntry() throws Throwable {
+    }
 
     public ActivatedClientTypeEntry(java.lang.String typeName, java.lang.String assemblyName, java.lang.String appUrl) throws Throwable, system.ArgumentNullException {
         try {
@@ -132,6 +152,7 @@ public class ActivatedClientTypeEntry extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -139,7 +160,7 @@ public class ActivatedClientTypeEntry extends NetObject  {
     
     // Properties section
     
-    public IContextAttribute[] getContextAttributes() throws Throwable {
+    public final IContextAttribute[] getContextAttributes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -171,46 +192,6 @@ public class ActivatedClientTypeEntry extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("ApplicationUrl");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getAssemblyName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AssemblyName", AssemblyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getTypeName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("TypeName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTypeName(java.lang.String TypeName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("TypeName", TypeName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

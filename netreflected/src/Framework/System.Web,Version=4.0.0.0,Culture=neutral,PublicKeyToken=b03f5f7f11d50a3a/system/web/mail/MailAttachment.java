@@ -43,12 +43,27 @@ import system.web.mail.MailEncoding;
 
 /**
  * The base .NET class managing System.Web.Mail.MailAttachment, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Mail.MailAttachment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Mail.MailAttachment</a>
  */
 public class MailAttachment extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Mail.MailAttachment
+     */
     public static final String className = "System.Web.Mail.MailAttachment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class MailAttachment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MailAttachment}, a cast assert is made to check if types are compatible.
+     */
     public static MailAttachment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MailAttachment(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class MailAttachment extends NetObject  {
 
     // Constructors section
     
+    public MailAttachment() throws Throwable {
+    }
 
     public MailAttachment(java.lang.String filename) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
         try {
@@ -129,6 +148,7 @@ public class MailAttachment extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

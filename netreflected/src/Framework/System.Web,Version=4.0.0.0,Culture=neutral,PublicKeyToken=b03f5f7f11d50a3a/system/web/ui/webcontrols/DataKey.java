@@ -45,12 +45,27 @@ import system.web.ui.webcontrols.DataKey;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.DataKey, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataKey</a>
  */
 public class DataKey extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.DataKey
+     */
     public static final String className = "System.Web.UI.WebControls.DataKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class DataKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataKey}, a cast assert is made to check if types are compatible.
+     */
     public static DataKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataKey(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class DataKey extends NetObject  {
 
     // Constructors section
     
+    public DataKey() throws Throwable {
+    }
 
     public DataKey(IOrderedDictionary keyTable) throws Throwable {
         try {
@@ -131,6 +150,7 @@ public class DataKey extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

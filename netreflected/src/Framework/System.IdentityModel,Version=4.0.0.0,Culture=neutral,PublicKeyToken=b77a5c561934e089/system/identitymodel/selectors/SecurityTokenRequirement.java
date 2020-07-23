@@ -44,12 +44,27 @@ import system.identitymodel.tokens.SecurityKeyUsage;
 
 /**
  * The base .NET class managing System.IdentityModel.Selectors.SecurityTokenRequirement, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.SecurityTokenRequirement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.SecurityTokenRequirement</a>
  */
 public class SecurityTokenRequirement extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Selectors.SecurityTokenRequirement
+     */
     public static final String className = "System.IdentityModel.Selectors.SecurityTokenRequirement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class SecurityTokenRequirement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityTokenRequirement}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityTokenRequirement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityTokenRequirement(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class SecurityTokenRequirement extends NetObject  {
 
     // Constructors section
     
-
     public SecurityTokenRequirement() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -211,61 +227,61 @@ public class SecurityTokenRequirement extends NetObject  {
         }
     }
 
-    public static java.lang.String getIsOptionalTokenProperty() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getIsOptionalTokenProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("IsOptionalTokenProperty");
+            return (java.lang.String)classInstance.Get("IsOptionalTokenProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getKeySizeProperty() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getKeySizeProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("KeySizeProperty");
+            return (java.lang.String)classInstance.Get("KeySizeProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getKeyTypeProperty() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getKeyTypeProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("KeyTypeProperty");
+            return (java.lang.String)classInstance.Get("KeyTypeProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getKeyUsageProperty() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getKeyUsageProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("KeyUsageProperty");
+            return (java.lang.String)classInstance.Get("KeyUsageProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPeerAuthenticationMode() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPeerAuthenticationMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PeerAuthenticationMode");
+            return (java.lang.String)classInstance.Get("PeerAuthenticationMode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getRequireCryptographicTokenProperty() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getRequireCryptographicTokenProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("RequireCryptographicTokenProperty");
+            return (java.lang.String)classInstance.Get("RequireCryptographicTokenProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,11 +307,11 @@ public class SecurityTokenRequirement extends NetObject  {
         }
     }
 
-    public static java.lang.String getTokenTypeProperty() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getTokenTypeProperty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("TokenTypeProperty");
+            return (java.lang.String)classInstance.Get("TokenTypeProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

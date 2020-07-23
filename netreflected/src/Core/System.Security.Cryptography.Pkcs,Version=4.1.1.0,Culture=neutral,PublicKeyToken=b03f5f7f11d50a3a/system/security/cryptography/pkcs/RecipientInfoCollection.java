@@ -45,12 +45,27 @@ import system.security.cryptography.pkcs.RecipientInfo;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.RecipientInfoCollection, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.RecipientInfoCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.RecipientInfoCollection</a>
  */
 public class RecipientInfoCollection extends NetObject implements Iterable<RecipientInfo> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.RecipientInfoCollection
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.RecipientInfoCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class RecipientInfoCollection extends NetObject implements Iterable<Recip
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RecipientInfoCollection}, a cast assert is made to check if types are compatible.
+     */
     public static RecipientInfoCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RecipientInfoCollection(from.getJCOInstance());
@@ -111,16 +128,20 @@ public class RecipientInfoCollection extends NetObject implements Iterable<Recip
 
     // Constructors section
     
+    public RecipientInfoCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public RecipientInfoEnumerator GetEnumerator() throws Throwable {
+    public final RecipientInfoEnumerator GetEnumerator() throws Throwable {
         return new RecipientInfoEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<RecipientInfo> iterator() {
+	public final java.util.Iterator<RecipientInfo> iterator() {
 		return new RecipientInfoEnumerator(classInstance);
 	}
 

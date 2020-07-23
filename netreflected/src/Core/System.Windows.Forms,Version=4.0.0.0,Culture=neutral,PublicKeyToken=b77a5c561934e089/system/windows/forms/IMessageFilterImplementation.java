@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Windows.Forms.IMessageFilter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IMessageFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IMessageFilter</a>
  */
 public class IMessageFilterImplementation extends NetObject implements IMessageFilter {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.IMessageFilter
+     */
     public static final String className = "System.Windows.Forms.IMessageFilter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IMessageFilterImplementation extends NetObject implements IMessageF
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMessageFilter}, a cast assert is made to check if types are compatible.
+     */
     public static IMessageFilter ToIMessageFilter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IMessageFilterImplementation(from.getJCOInstance());

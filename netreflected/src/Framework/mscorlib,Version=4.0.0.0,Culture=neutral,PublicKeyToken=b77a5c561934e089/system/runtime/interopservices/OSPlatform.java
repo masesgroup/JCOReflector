@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.runtime.interopservices.OSPlatform;
 
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.OSPlatform, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.OSPlatform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.OSPlatform</a>
  */
-public class OSPlatform extends NetObject  {
+public class OSPlatform extends ValueType  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.OSPlatform
+     */
     public static final String className = "System.Runtime.InteropServices.OSPlatform";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class OSPlatform extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OSPlatform}, a cast assert is made to check if types are compatible.
+     */
     public static OSPlatform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OSPlatform(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class OSPlatform extends NetObject  {
 
     // Constructors section
     
+    public OSPlatform() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -138,33 +160,33 @@ public class OSPlatform extends NetObject  {
     
     // Properties section
     
-    public static OSPlatform getLinux() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public OSPlatform getLinux() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Linux");
+            JCObject val = (JCObject)classInstance.Get("Linux");
             return new OSPlatform(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static OSPlatform getOSX() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public OSPlatform getOSX() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OSX");
+            JCObject val = (JCObject)classInstance.Get("OSX");
             return new OSPlatform(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static OSPlatform getWindows() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public OSPlatform getWindows() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Windows");
+            JCObject val = (JCObject)classInstance.Get("Windows");
             return new OSPlatform(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -42,12 +42,27 @@ import system.web.ui.webcontrols.GridViewCancelEditEventArgs;
 import system.web.ui.webcontrols.IGridViewCancelEditEventHandler;
 /**
  * The base .NET class managing System.Web.UI.WebControls.GridViewCancelEditEventHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewCancelEditEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewCancelEditEventHandler</a>
  */
 public class GridViewCancelEditEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.GridViewCancelEditEventHandler
+     */
     public static final String className = "System.Web.UI.WebControls.GridViewCancelEditEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IGridViewCancelEditEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class GridViewCancelEditEventHandler extends JCVoidDelegate implements IJ
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, GridViewCancelEditEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, GridViewCancelEditEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class GridViewCancelEditEventHandler extends JCVoidDelegate implements IJ
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, GridViewCancelEditEventArgs e) {
     }
 }

@@ -38,23 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.design.behavior.Glyph;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.windows.forms.design.behavior.Behavior;
 import system.windows.forms.Cursor;
 import system.drawing.Point;
 import system.windows.forms.PaintEventArgs;
-import system.drawing.Rectangle;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.Behavior.ComponentGlyph, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.ComponentGlyph" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.ComponentGlyph</a>
  */
-public class ComponentGlyph extends NetObject  {
+public class ComponentGlyph extends Glyph  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.Behavior.ComponentGlyph
+     */
     public static final String className = "System.Windows.Forms.Design.Behavior.ComponentGlyph";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class ComponentGlyph extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComponentGlyph}, a cast assert is made to check if types are compatible.
+     */
     public static ComponentGlyph cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ComponentGlyph(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class ComponentGlyph extends NetObject  {
 
     // Constructors section
     
+    public ComponentGlyph() throws Throwable {
+    }
 
     public ComponentGlyph(IComponent relatedComponent) throws Throwable {
         try {
@@ -135,6 +154,7 @@ public class ComponentGlyph extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -171,28 +191,6 @@ public class ComponentGlyph extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("RelatedComponent");
             return new IComponentImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Rectangle getBounds() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
-            return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Behavior getBehavior() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Behavior");
-            return new Behavior(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

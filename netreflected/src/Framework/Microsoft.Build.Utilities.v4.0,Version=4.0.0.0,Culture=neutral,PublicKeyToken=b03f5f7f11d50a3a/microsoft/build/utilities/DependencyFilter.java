@@ -42,12 +42,27 @@ import microsoft.build.utilities.IDependencyFilter;
 
 /**
  * The base .NET class managing Microsoft.Build.Utilities.DependencyFilter, Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.DependencyFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.DependencyFilter</a>
  */
 public class DependencyFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Utilities.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Utilities.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Utilities.DependencyFilter
+     */
     public static final String className = "Microsoft.Build.Utilities.DependencyFilter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDependencyFilter callerInstance = null;
@@ -153,7 +168,7 @@ public class DependencyFilter extends JCDelegate implements IJCEventEmit, IJCOBr
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final boolean DynamicInvoke(java.lang.String fullPath) throws Throwable {
+    public boolean METHOD_JAVA_NAME(java.lang.String fullPath) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -163,7 +178,9 @@ public class DependencyFilter extends JCDelegate implements IJCEventEmit, IJCOBr
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public boolean Invoke(java.lang.String fullPath) {
         return false;
     }

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.jscript.GlobalObject;
 
 
 /**
  * The base .NET class managing Microsoft.JScript.LenientGlobalObject, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.LenientGlobalObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.LenientGlobalObject</a>
  */
-public class LenientGlobalObject extends NetObject  {
+public class LenientGlobalObject extends GlobalObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.LenientGlobalObject
+     */
     public static final String className = "Microsoft.JScript.LenientGlobalObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class LenientGlobalObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LenientGlobalObject}, a cast assert is made to check if types are compatible.
+     */
     public static LenientGlobalObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LenientGlobalObject(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class LenientGlobalObject extends NetObject  {
 
     // Constructors section
     
+    public LenientGlobalObject() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -116,7 +138,7 @@ public class LenientGlobalObject extends NetObject  {
     
     // Properties section
     
-    public NetObject getActiveXObject() throws Throwable {
+    public NetObject getActiveXObjectNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -137,7 +159,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getArray() throws Throwable {
+    public NetObject getArrayNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -158,7 +180,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getBoolean() throws Throwable {
+    public NetObject getBooleanNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -179,7 +201,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getDate() throws Throwable {
+    public NetObject getDateNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -200,7 +222,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getEnumerator() throws Throwable {
+    public NetObject getEnumeratorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -221,7 +243,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getError() throws Throwable {
+    public NetObject getErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -242,7 +264,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getEvalError() throws Throwable {
+    public NetObject getEvalErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -263,7 +285,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getFunction() throws Throwable {
+    public NetObject getFunctionNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -284,7 +306,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getMath() throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public NetObject getMathNewLenientGlobalObject() throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -305,7 +327,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getNumber() throws Throwable {
+    public NetObject getNumberNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -326,7 +348,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getObject() throws Throwable {
+    public NetObject getObjectNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -347,7 +369,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getRangeError() throws Throwable {
+    public NetObject getRangeErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -368,7 +390,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getReferenceError() throws Throwable {
+    public NetObject getReferenceErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -389,7 +411,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getRegExp() throws Throwable {
+    public NetObject getRegExpNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -410,7 +432,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getString() throws Throwable {
+    public NetObject getStringNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -431,7 +453,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getSyntaxError() throws Throwable {
+    public NetObject getSyntaxErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -452,7 +474,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getTypeError() throws Throwable {
+    public NetObject getTypeErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -473,7 +495,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getURIError() throws Throwable {
+    public NetObject getURIErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -494,7 +516,7 @@ public class LenientGlobalObject extends NetObject  {
         }
     }
 
-    public NetObject getVBArray() throws Throwable {
+    public NetObject getVBArrayNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

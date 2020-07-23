@@ -37,18 +37,37 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.identitymodel.policy.IAuthorizationComponent;
+import system.identitymodel.policy.IAuthorizationComponentImplementation;
 import system.identitymodel.policy.EvaluationContext;
 import system.identitymodel.claims.ClaimSet;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Policy.IAuthorizationPolicy, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Policy.IAuthorizationPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Policy.IAuthorizationPolicy</a>
  */
-public interface IAuthorizationPolicy extends IJCOBridgeReflected {
-
+public interface IAuthorizationPolicy extends IJCOBridgeReflected, IAuthorizationComponent {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
+    public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Policy.IAuthorizationPolicy
+     */
+    public static final String className = "System.IdentityModel.Policy.IAuthorizationPolicy";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAuthorizationPolicy}, a cast assert is made to check if types are compatible.
+     */
     public static IAuthorizationPolicy ToIAuthorizationPolicy(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.IdentityModel.Policy.IAuthorizationPolicy, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.IdentityModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IAuthorizationPolicyImplementation(from.getJCOInstance());
     }
@@ -96,8 +115,6 @@ public interface IAuthorizationPolicy extends IJCOBridgeReflected {
     // Properties section
     
     public ClaimSet getIssuer() throws Throwable;
-
-    public java.lang.String getId() throws Throwable;
 
 
 

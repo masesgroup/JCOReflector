@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.AccessibleStates, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.AccessibleStates" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.AccessibleStates</a>
  */
 public class AccessibleStates extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.AccessibleStates
+     */
     public static final String className = "System.Windows.Forms.AccessibleStates";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -170,19 +185,19 @@ public class AccessibleStates extends NetObject  {
 
     // Flags management section
 
-    public AccessibleStates add(AccessibleStates val) throws Throwable {
+    public final AccessibleStates add(AccessibleStates val) throws Throwable {
         return new AccessibleStates(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AccessibleStates remove(AccessibleStates val) throws Throwable {
+    public final AccessibleStates remove(AccessibleStates val) throws Throwable {
         return new AccessibleStates(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AccessibleStates val) throws Throwable {
+    public final boolean is(AccessibleStates val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AccessibleStates val) throws Throwable {
+    public final boolean has(AccessibleStates val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xaml.Schema.AllowedMemberLocations, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Schema.AllowedMemberLocations" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Schema.AllowedMemberLocations</a>
  */
 public class AllowedMemberLocations extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.Schema.AllowedMemberLocations
+     */
     public static final String className = "System.Xaml.Schema.AllowedMemberLocations";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class AllowedMemberLocations extends NetObject  {
 
     // Flags management section
 
-    public AllowedMemberLocations add(AllowedMemberLocations val) throws Throwable {
+    public final AllowedMemberLocations add(AllowedMemberLocations val) throws Throwable {
         return new AllowedMemberLocations(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AllowedMemberLocations remove(AllowedMemberLocations val) throws Throwable {
+    public final AllowedMemberLocations remove(AllowedMemberLocations val) throws Throwable {
         return new AllowedMemberLocations(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AllowedMemberLocations val) throws Throwable {
+    public final boolean is(AllowedMemberLocations val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AllowedMemberLocations val) throws Throwable {
+    public final boolean has(AllowedMemberLocations val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

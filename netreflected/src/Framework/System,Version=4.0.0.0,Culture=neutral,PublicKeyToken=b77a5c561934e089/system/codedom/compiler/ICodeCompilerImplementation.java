@@ -45,12 +45,27 @@ import system.codedom.CodeCompileUnit;
 
 /**
  * The base .NET class managing System.CodeDom.Compiler.ICodeCompiler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.ICodeCompiler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.ICodeCompiler</a>
  */
 public class ICodeCompilerImplementation extends NetObject implements ICodeCompiler {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.CodeDom.Compiler.ICodeCompiler
+     */
     public static final String className = "System.CodeDom.Compiler.ICodeCompiler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICodeCompiler}, a cast assert is made to check if types are compatible.
+     */
     public static ICodeCompiler ToICodeCompiler(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICodeCompilerImplementation(from.getJCOInstance());
@@ -150,6 +167,17 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
+    public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCompileAssemblyFromFileBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromFileBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            return new CompilerResults(objCompileAssemblyFromFileBatch);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +194,17 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCompileAssemblyFromSourceBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromSourceBatch", options == null ? null : options.getJCOInstance(), sources);
+            return new CompilerResults(objCompileAssemblyFromSourceBatch);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCompileAssemblyFromSourceBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromSourceBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
             return new CompilerResults(objCompileAssemblyFromSourceBatch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.DataGridSortingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridSortingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridSortingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridSortingEventHandler</a>
+ */
 public interface IDataGridSortingEventHandler {
     public void Invoke(NetObject sender, DataGridSortingEventArgs e);
 }

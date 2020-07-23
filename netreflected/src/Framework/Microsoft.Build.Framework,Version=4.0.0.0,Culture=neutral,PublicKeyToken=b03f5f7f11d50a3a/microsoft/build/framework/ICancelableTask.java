@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.build.framework.ITask;
+import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
 import microsoft.build.framework.ITaskHost;
@@ -45,12 +47,29 @@ import microsoft.build.framework.ITaskHostImplementation;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.ICancelableTask, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ICancelableTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ICancelableTask</a>
  */
-public interface ICancelableTask extends IJCOBridgeReflected {
-
+public interface ICancelableTask extends IJCOBridgeReflected, ITask {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.ICancelableTask
+     */
+    public static final String className = "Microsoft.Build.Framework.ICancelableTask";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICancelableTask}, a cast assert is made to check if types are compatible.
+     */
     public static ICancelableTask ToICancelableTask(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Framework.ICancelableTask, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Framework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICancelableTaskImplementation(from.getJCOInstance());
     }
@@ -93,7 +112,6 @@ public interface ICancelableTask extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Execute() throws Throwable;
 
     public void Cancel() throws Throwable;
 
@@ -101,14 +119,6 @@ public interface ICancelableTask extends IJCOBridgeReflected {
     
     // Properties section
     
-    public IBuildEngine getBuildEngine() throws Throwable;
-
-    public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable;
-
-    public ITaskHost getHostObject() throws Throwable;
-
-    public void setHostObject(ITaskHost HostObject) throws Throwable;
-
 
 
     // Instance Events section

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.AsyncCompletedEventArgs;
 
 
 /**
  * The base .NET class managing System.Net.UploadDataCompletedEventArgs, System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadDataCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadDataCompletedEventArgs</a>
  */
-public class UploadDataCompletedEventArgs extends NetObject  {
+public class UploadDataCompletedEventArgs extends AsyncCompletedEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.WebClient
+     */
     public static final String assemblyShortName = "System.Net.WebClient";
+    /**
+     * Qualified class name: System.Net.UploadDataCompletedEventArgs
+     */
     public static final String className = "System.Net.UploadDataCompletedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class UploadDataCompletedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UploadDataCompletedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static UploadDataCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UploadDataCompletedEventArgs(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class UploadDataCompletedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public UploadDataCompletedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -116,16 +138,6 @@ public class UploadDataCompletedEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancelled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancelled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public byte[] getResult() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -140,28 +152,6 @@ public class UploadDataCompletedEventArgs extends NetObject  {
 				resultingArray[indexResult] = (byte)resultingArrayList.get(indexResult);
 			}
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getError() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Error");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getUserState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserState");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -43,12 +43,27 @@ import system.text.Encoding;
 
 /**
  * The base .NET class managing System.Net.Mail.MailAddress, System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.MailAddress" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.MailAddress</a>
  */
 public class MailAddress extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.Mail
+     */
     public static final String assemblyShortName = "System.Net.Mail";
+    /**
+     * Qualified class name: System.Net.Mail.MailAddress
+     */
     public static final String className = "System.Net.Mail.MailAddress";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class MailAddress extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MailAddress}, a cast assert is made to check if types are compatible.
+     */
     public static MailAddress cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MailAddress(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class MailAddress extends NetObject  {
 
     // Constructors section
     
+    public MailAddress() throws Throwable {
+    }
 
     public MailAddress(java.lang.String address) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         try {
@@ -139,6 +158,7 @@ public class MailAddress extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

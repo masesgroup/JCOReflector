@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.policy.EvidenceBase;
 import system.ActivationContext;
 import system.ApplicationIdentity;
-import system.security.policy.EvidenceBase;
 
 
 /**
  * The base .NET class managing System.Runtime.Hosting.ActivationArguments, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Hosting.ActivationArguments" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Hosting.ActivationArguments</a>
  */
-public class ActivationArguments extends NetObject  {
+public class ActivationArguments extends EvidenceBase  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Hosting.ActivationArguments
+     */
     public static final String className = "System.Runtime.Hosting.ActivationArguments";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ActivationArguments extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivationArguments}, a cast assert is made to check if types are compatible.
+     */
     public static ActivationArguments cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivationArguments(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ActivationArguments extends NetObject  {
 
     // Constructors section
     
+    public ActivationArguments() throws Throwable {
+    }
 
     public ActivationArguments(ActivationContext activationData) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         try {
@@ -151,6 +170,7 @@ public class ActivationArguments extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

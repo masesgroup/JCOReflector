@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.UriParser;
 import system.GenericUriParserOptions;
 
 
 /**
  * The base .NET class managing System.GenericUriParser, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.GenericUriParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.GenericUriParser</a>
  */
-public class GenericUriParser extends NetObject  {
+public class GenericUriParser extends UriParser  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.GenericUriParser
+     */
     public static final String className = "System.GenericUriParser";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class GenericUriParser extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GenericUriParser}, a cast assert is made to check if types are compatible.
+     */
     public static GenericUriParser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GenericUriParser(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class GenericUriParser extends NetObject  {
 
     // Constructors section
     
+    public GenericUriParser() throws Throwable {
+    }
 
     public GenericUriParser(GenericUriParserOptions options) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class GenericUriParser extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

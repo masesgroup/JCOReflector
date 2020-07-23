@@ -44,12 +44,27 @@ import system.runtime.interopservices.comtypes.IStreamImplementation;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.IStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IStream</a>
  */
 public class IStreamImplementation extends NetObject implements IStream {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.IStream
+     */
     public static final String className = "System.Runtime.InteropServices.ComTypes.IStream";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IStreamImplementation extends NetObject implements IStream {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStream}, a cast assert is made to check if types are compatible.
+     */
     public static IStream ToIStream(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IStreamImplementation(from.getJCOInstance());
@@ -120,6 +137,16 @@ public class IStreamImplementation extends NetObject implements IStream {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LockRegion", libOffset, cb, dwLockType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Revert() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Revert");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

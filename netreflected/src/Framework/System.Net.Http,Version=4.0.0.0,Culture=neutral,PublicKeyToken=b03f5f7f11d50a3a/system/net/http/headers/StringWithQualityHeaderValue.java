@@ -43,12 +43,27 @@ import system.net.http.headers.StringWithQualityHeaderValue;
 
 /**
  * The base .NET class managing System.Net.Http.Headers.StringWithQualityHeaderValue, System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.StringWithQualityHeaderValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.StringWithQualityHeaderValue</a>
  */
 public class StringWithQualityHeaderValue extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Http
+     */
     public static final String assemblyShortName = "System.Net.Http";
+    /**
+     * Qualified class name: System.Net.Http.Headers.StringWithQualityHeaderValue
+     */
     public static final String className = "System.Net.Http.Headers.StringWithQualityHeaderValue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class StringWithQualityHeaderValue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringWithQualityHeaderValue}, a cast assert is made to check if types are compatible.
+     */
     public static StringWithQualityHeaderValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StringWithQualityHeaderValue(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class StringWithQualityHeaderValue extends NetObject  {
 
     // Constructors section
     
+    public StringWithQualityHeaderValue() throws Throwable {
+    }
 
     public StringWithQualityHeaderValue(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
@@ -129,6 +148,7 @@ public class StringWithQualityHeaderValue extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

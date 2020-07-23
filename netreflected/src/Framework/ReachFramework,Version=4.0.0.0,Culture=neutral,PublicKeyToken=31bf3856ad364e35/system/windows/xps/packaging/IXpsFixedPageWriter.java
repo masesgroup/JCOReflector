@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.xps.packaging.IStoryFragmentProvider;
+import system.windows.xps.packaging.IStoryFragmentProviderImplementation;
 import system.windows.xps.packaging.XpsColorContext;
 import system.windows.xps.packaging.XpsFont;
 import system.windows.xps.packaging.XpsImage;
@@ -52,12 +54,29 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.Windows.Xps.Packaging.IXpsFixedPageWriter, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter</a>
  */
-public interface IXpsFixedPageWriter extends IJCOBridgeReflected {
-
+public interface IXpsFixedPageWriter extends IJCOBridgeReflected, IStoryFragmentProvider {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
+    public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Packaging.IXpsFixedPageWriter
+     */
+    public static final String className = "System.Windows.Xps.Packaging.IXpsFixedPageWriter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXpsFixedPageWriter}, a cast assert is made to check if types are compatible.
+     */
     public static IXpsFixedPageWriter ToIXpsFixedPageWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Xps.Packaging.IXpsFixedPageWriter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "ReachFramework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXpsFixedPageWriterImplementation(from.getJCOInstance());
     }
@@ -116,7 +135,6 @@ public interface IXpsFixedPageWriter extends IJCOBridgeReflected {
 
     public XpsResourceDictionary AddResourceDictionary() throws Throwable;
 
-    public XpsStructure AddStoryFragment() throws Throwable;
 
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable;
 

@@ -52,12 +52,27 @@ import system.RuntimeMethodHandle;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices._ConstructorInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._ConstructorInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._ConstructorInfo</a>
  */
 public class _ConstructorInfoImplementation extends NetObject implements _ConstructorInfo {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices._ConstructorInfo
+     */
     public static final String className = "System.Runtime.InteropServices._ConstructorInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class _ConstructorInfoImplementation extends NetObject implements _Constr
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _ConstructorInfo}, a cast assert is made to check if types are compatible.
+     */
     public static _ConstructorInfo To_ConstructorInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new _ConstructorInfoImplementation(from.getJCOInstance());

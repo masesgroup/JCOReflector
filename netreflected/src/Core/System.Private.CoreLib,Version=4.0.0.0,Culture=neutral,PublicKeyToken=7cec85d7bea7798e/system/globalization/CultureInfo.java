@@ -49,12 +49,27 @@ import system.globalization.TextInfo;
 
 /**
  * The base .NET class managing System.Globalization.CultureInfo, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CultureInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CultureInfo</a>
  */
 public class CultureInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Globalization.CultureInfo
+     */
     public static final String className = "System.Globalization.CultureInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class CultureInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CultureInfo}, a cast assert is made to check if types are compatible.
+     */
     public static CultureInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CultureInfo(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class CultureInfo extends NetObject  {
 
     // Constructors section
     
+    public CultureInfo() throws Throwable {
+    }
 
     public CultureInfo(int culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
@@ -155,6 +174,7 @@ public class CultureInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -351,7 +371,7 @@ public class CultureInfo extends NetObject  {
         }
     }
 
-    public Calendar[] getOptionalCalendars() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public final Calendar[] getOptionalCalendars() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -379,106 +399,106 @@ public class CultureInfo extends NetObject  {
         }
     }
 
-    public static CultureInfo getCurrentCulture() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CultureInfo getCurrentCulture() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentCulture");
+            JCObject val = (JCObject)classInstance.Get("CurrentCulture");
             return new CultureInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCurrentCulture(CultureInfo CurrentCulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCurrentCulture(CultureInfo CurrentCulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CurrentCulture", CurrentCulture == null ? null : CurrentCulture.getJCOInstance());
+            classInstance.Set("CurrentCulture", CurrentCulture == null ? null : CurrentCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static CultureInfo getCurrentUICulture() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CultureInfo getCurrentUICulture() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentUICulture");
+            JCObject val = (JCObject)classInstance.Get("CurrentUICulture");
             return new CultureInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCurrentUICulture(CultureInfo CurrentUICulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCurrentUICulture(CultureInfo CurrentUICulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CurrentUICulture", CurrentUICulture == null ? null : CurrentUICulture.getJCOInstance());
+            classInstance.Set("CurrentUICulture", CurrentUICulture == null ? null : CurrentUICulture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static CultureInfo getDefaultThreadCurrentCulture() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CultureInfo getDefaultThreadCurrentCulture() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultThreadCurrentCulture");
+            JCObject val = (JCObject)classInstance.Get("DefaultThreadCurrentCulture");
             return new CultureInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultThreadCurrentCulture(CultureInfo DefaultThreadCurrentCulture) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultThreadCurrentCulture(CultureInfo DefaultThreadCurrentCulture) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultThreadCurrentCulture", DefaultThreadCurrentCulture == null ? null : DefaultThreadCurrentCulture.getJCOInstance());
+            classInstance.Set("DefaultThreadCurrentCulture", DefaultThreadCurrentCulture == null ? null : DefaultThreadCurrentCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static CultureInfo getDefaultThreadCurrentUICulture() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CultureInfo getDefaultThreadCurrentUICulture() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultThreadCurrentUICulture");
+            JCObject val = (JCObject)classInstance.Get("DefaultThreadCurrentUICulture");
             return new CultureInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultThreadCurrentUICulture(CultureInfo DefaultThreadCurrentUICulture) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultThreadCurrentUICulture(CultureInfo DefaultThreadCurrentUICulture) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultThreadCurrentUICulture", DefaultThreadCurrentUICulture == null ? null : DefaultThreadCurrentUICulture.getJCOInstance());
+            classInstance.Set("DefaultThreadCurrentUICulture", DefaultThreadCurrentUICulture == null ? null : DefaultThreadCurrentUICulture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static CultureInfo getInstalledUICulture() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CultureInfo getInstalledUICulture() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("InstalledUICulture");
+            JCObject val = (JCObject)classInstance.Get("InstalledUICulture");
             return new CultureInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static CultureInfo getInvariantCulture() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CultureInfo getInvariantCulture() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("InvariantCulture");
+            JCObject val = (JCObject)classInstance.Get("InvariantCulture");
             return new CultureInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

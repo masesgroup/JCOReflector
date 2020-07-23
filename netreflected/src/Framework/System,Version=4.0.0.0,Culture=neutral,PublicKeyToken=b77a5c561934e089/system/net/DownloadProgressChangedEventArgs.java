@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.ProgressChangedEventArgs;
 
 
 /**
  * The base .NET class managing System.Net.DownloadProgressChangedEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadProgressChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadProgressChangedEventArgs</a>
  */
-public class DownloadProgressChangedEventArgs extends NetObject  {
+public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.DownloadProgressChangedEventArgs
+     */
     public static final String className = "System.Net.DownloadProgressChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class DownloadProgressChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DownloadProgressChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DownloadProgressChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DownloadProgressChangedEventArgs(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class DownloadProgressChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DownloadProgressChangedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -116,16 +138,6 @@ public class DownloadProgressChangedEventArgs extends NetObject  {
     
     // Properties section
     
-    public int getProgressPercentage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ProgressPercentage");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public long getBytesReceived() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -141,17 +153,6 @@ public class DownloadProgressChangedEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Get("TotalBytesToReceive");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getUserState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserState");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

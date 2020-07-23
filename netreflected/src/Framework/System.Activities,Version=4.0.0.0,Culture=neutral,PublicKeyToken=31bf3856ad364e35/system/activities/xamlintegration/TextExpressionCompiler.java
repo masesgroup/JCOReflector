@@ -45,12 +45,27 @@ import system.activities.xamlintegration.TextExpressionCompilerResults;
 
 /**
  * The base .NET class managing System.Activities.XamlIntegration.TextExpressionCompiler, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompiler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompiler</a>
  */
 public class TextExpressionCompiler extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.XamlIntegration.TextExpressionCompiler
+     */
     public static final String className = "System.Activities.XamlIntegration.TextExpressionCompiler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class TextExpressionCompiler extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextExpressionCompiler}, a cast assert is made to check if types are compatible.
+     */
     public static TextExpressionCompiler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TextExpressionCompiler(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class TextExpressionCompiler extends NetObject  {
 
     // Constructors section
     
+    public TextExpressionCompiler() throws Throwable {
+    }
 
     public TextExpressionCompiler(TextExpressionCompilerSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         try {
@@ -121,6 +140,7 @@ public class TextExpressionCompiler extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

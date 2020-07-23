@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.collections.specialized.NotifyCollectionChangedAction;
 import system.collections.IList;
 import system.collections.IListImplementation;
@@ -45,12 +46,27 @@ import system.collections.IListImplementation;
 
 /**
  * The base .NET class managing System.Collections.Specialized.NotifyCollectionChangedEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.NotifyCollectionChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.NotifyCollectionChangedEventArgs</a>
  */
-public class NotifyCollectionChangedEventArgs extends NetObject  {
+public class NotifyCollectionChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Collections.Specialized.NotifyCollectionChangedEventArgs
+     */
     public static final String className = "System.Collections.Specialized.NotifyCollectionChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class NotifyCollectionChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NotifyCollectionChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static NotifyCollectionChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NotifyCollectionChangedEventArgs(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class NotifyCollectionChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public NotifyCollectionChangedEventArgs() throws Throwable {
+    }
 
     public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
@@ -221,6 +241,7 @@ public class NotifyCollectionChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

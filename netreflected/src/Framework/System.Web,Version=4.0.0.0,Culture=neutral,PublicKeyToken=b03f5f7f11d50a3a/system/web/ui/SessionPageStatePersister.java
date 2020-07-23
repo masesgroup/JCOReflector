@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.PageStatePersister;
 import system.web.ui.Page;
 
 
 /**
  * The base .NET class managing System.Web.UI.SessionPageStatePersister, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.SessionPageStatePersister" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.SessionPageStatePersister</a>
  */
-public class SessionPageStatePersister extends NetObject  {
+public class SessionPageStatePersister extends PageStatePersister  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.SessionPageStatePersister
+     */
     public static final String className = "System.Web.UI.SessionPageStatePersister";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SessionPageStatePersister extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionPageStatePersister}, a cast assert is made to check if types are compatible.
+     */
     public static SessionPageStatePersister cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionPageStatePersister(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SessionPageStatePersister extends NetObject  {
 
     // Constructors section
     
+    public SessionPageStatePersister() throws Throwable {
+    }
 
     public SessionPageStatePersister(Page page) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         try {
@@ -119,6 +139,7 @@ public class SessionPageStatePersister extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -148,48 +169,6 @@ public class SessionPageStatePersister extends NetObject  {
     
     // Properties section
     
-    public NetObject getControlState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ControlState");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setControlState(NetObject ControlState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ControlState", ControlState == null ? null : ControlState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getViewState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ViewState");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setViewState(NetObject ViewState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ViewState", ViewState == null ? null : ViewState.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

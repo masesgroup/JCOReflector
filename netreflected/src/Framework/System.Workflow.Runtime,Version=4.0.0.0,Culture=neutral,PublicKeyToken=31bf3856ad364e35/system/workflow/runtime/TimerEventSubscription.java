@@ -46,12 +46,27 @@ import system.IComparableImplementation;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.TimerEventSubscription, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.TimerEventSubscription" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.TimerEventSubscription</a>
  */
 public class TimerEventSubscription extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.TimerEventSubscription
+     */
     public static final String className = "System.Workflow.Runtime.TimerEventSubscription";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class TimerEventSubscription extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TimerEventSubscription}, a cast assert is made to check if types are compatible.
+     */
     public static TimerEventSubscription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TimerEventSubscription(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class TimerEventSubscription extends NetObject  {
 
     // Constructors section
     
+    public TimerEventSubscription() throws Throwable {
+    }
 
     public TimerEventSubscription(Guid workflowInstanceId, DateTime expiresAt) throws Throwable {
         try {
@@ -132,6 +151,7 @@ public class TimerEventSubscription extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

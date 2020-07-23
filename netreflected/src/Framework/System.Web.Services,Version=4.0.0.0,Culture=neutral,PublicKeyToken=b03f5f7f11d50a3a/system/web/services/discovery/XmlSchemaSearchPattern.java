@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.services.discovery.DiscoverySearchPattern;
 import system.web.services.discovery.DiscoveryReference;
 
 
 /**
  * The base .NET class managing System.Web.Services.Discovery.XmlSchemaSearchPattern, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Discovery.XmlSchemaSearchPattern" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Discovery.XmlSchemaSearchPattern</a>
  */
-public class XmlSchemaSearchPattern extends NetObject  {
+public class XmlSchemaSearchPattern extends DiscoverySearchPattern  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Discovery.XmlSchemaSearchPattern
+     */
     public static final String className = "System.Web.Services.Discovery.XmlSchemaSearchPattern";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class XmlSchemaSearchPattern extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaSearchPattern}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSchemaSearchPattern cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSchemaSearchPattern(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class XmlSchemaSearchPattern extends NetObject  {
 
     // Constructors section
     
-
     public XmlSchemaSearchPattern() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -139,16 +156,6 @@ public class XmlSchemaSearchPattern extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPattern() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Pattern");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

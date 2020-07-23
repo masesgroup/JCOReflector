@@ -44,12 +44,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.RuntimeEnvironment, System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.RuntimeEnvironment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.RuntimeEnvironment</a>
  */
 public class RuntimeEnvironment extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.InteropServices
+     */
     public static final String assemblyShortName = "System.Runtime.InteropServices";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.RuntimeEnvironment
+     */
     public static final String className = "System.Runtime.InteropServices.RuntimeEnvironment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class RuntimeEnvironment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuntimeEnvironment}, a cast assert is made to check if types are compatible.
+     */
     public static RuntimeEnvironment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RuntimeEnvironment(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class RuntimeEnvironment extends NetObject  {
 
     // Constructors section
     
+    public RuntimeEnvironment() throws Throwable {
+    }
 
     
     // Methods section
@@ -159,11 +178,11 @@ public class RuntimeEnvironment extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getSystemConfigurationFile() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getSystemConfigurationFile() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("SystemConfigurationFile");
+            return (java.lang.String)classInstance.Get("SystemConfigurationFile");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

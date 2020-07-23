@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.design.ComponentRenameEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ComponentRenameEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentRenameEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentRenameEventHandler</a>
+ */
 public interface IComponentRenameEventHandler {
     public void Invoke(NetObject sender, ComponentRenameEventArgs e);
 }

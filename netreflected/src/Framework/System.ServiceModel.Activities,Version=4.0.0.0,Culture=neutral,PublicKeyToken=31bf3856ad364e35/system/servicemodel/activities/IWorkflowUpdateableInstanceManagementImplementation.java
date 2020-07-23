@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.activities.IWorkflowInstanceManagement;
+import system.servicemodel.activities.IWorkflowInstanceManagementImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.Guid;
@@ -47,12 +49,27 @@ import system.activities.WorkflowIdentity;
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.IWorkflowUpdateableInstanceManagement, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.IWorkflowUpdateableInstanceManagement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.IWorkflowUpdateableInstanceManagement</a>
  */
 public class IWorkflowUpdateableInstanceManagementImplementation extends NetObject implements IWorkflowUpdateableInstanceManagement {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.IWorkflowUpdateableInstanceManagement
+     */
     public static final String className = "System.ServiceModel.Activities.IWorkflowUpdateableInstanceManagement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +117,9 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWorkflowUpdateableInstanceManagement}, a cast assert is made to check if types are compatible.
+     */
     public static IWorkflowUpdateableInstanceManagement ToIWorkflowUpdateableInstanceManagement(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWorkflowUpdateableInstanceManagementImplementation(from.getJCOInstance());

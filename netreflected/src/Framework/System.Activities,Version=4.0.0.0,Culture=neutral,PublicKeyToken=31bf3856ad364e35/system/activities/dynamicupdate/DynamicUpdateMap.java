@@ -45,12 +45,27 @@ import system.activities.Activity;
 
 /**
  * The base .NET class managing System.Activities.DynamicUpdate.DynamicUpdateMap, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap</a>
  */
 public class DynamicUpdateMap extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.DynamicUpdate.DynamicUpdateMap
+     */
     public static final String className = "System.Activities.DynamicUpdate.DynamicUpdateMap";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class DynamicUpdateMap extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicUpdateMap}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicUpdateMap cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicUpdateMap(from.getJCOInstance());
@@ -111,6 +128,10 @@ public class DynamicUpdateMap extends NetObject  {
 
     // Constructors section
     
+    public DynamicUpdateMap() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -141,11 +162,11 @@ public class DynamicUpdateMap extends NetObject  {
     
     // Properties section
     
-    public static DynamicUpdateMap getNoChanges() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DynamicUpdateMap getNoChanges() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("NoChanges");
+            JCObject val = (JCObject)classInstance.Get("NoChanges");
             return new DynamicUpdateMap(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

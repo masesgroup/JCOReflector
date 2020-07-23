@@ -42,12 +42,27 @@ import system.diagnostics.EntryWrittenEventArgs;
 import system.diagnostics.IEntryWrittenEventHandler;
 /**
  * The base .NET class managing System.Diagnostics.EntryWrittenEventHandler, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EntryWrittenEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EntryWrittenEventHandler</a>
  */
 public class EntryWrittenEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.EventLog
+     */
     public static final String assemblyShortName = "System.Diagnostics.EventLog";
+    /**
+     * Qualified class name: System.Diagnostics.EntryWrittenEventHandler
+     */
     public static final String className = "System.Diagnostics.EntryWrittenEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IEntryWrittenEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class EntryWrittenEventHandler extends JCVoidDelegate implements IJCVoidE
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, EntryWrittenEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, EntryWrittenEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class EntryWrittenEventHandler extends JCVoidDelegate implements IJCVoidE
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, EntryWrittenEventArgs e) {
     }
 }

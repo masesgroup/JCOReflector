@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Windows.Forms.IWindowTarget, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IWindowTarget" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IWindowTarget</a>
  */
 public class IWindowTargetImplementation extends NetObject implements IWindowTarget {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.IWindowTarget
+     */
     public static final String className = "System.Windows.Forms.IWindowTarget";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IWindowTargetImplementation extends NetObject implements IWindowTar
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWindowTarget}, a cast assert is made to check if types are compatible.
+     */
     public static IWindowTarget ToIWindowTarget(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWindowTargetImplementation(from.getJCOInstance());

@@ -48,12 +48,27 @@ import system.globalization.CalendarWeekRule;
 
 /**
  * The base .NET class managing System.Globalization.DateTimeFormatInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.DateTimeFormatInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.DateTimeFormatInfo</a>
  */
 public class DateTimeFormatInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Globalization.DateTimeFormatInfo
+     */
     public static final String className = "System.Globalization.DateTimeFormatInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class DateTimeFormatInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DateTimeFormatInfo}, a cast assert is made to check if types are compatible.
+     */
     public static DateTimeFormatInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DateTimeFormatInfo(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class DateTimeFormatInfo extends NetObject  {
 
     // Constructors section
     
-
     public DateTimeFormatInfo() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -301,6 +317,16 @@ public class DateTimeFormatInfo extends NetObject  {
         }
     }
 
+    public void SetAllDateTimePatterns(JCRefOut dupParam0, char dupParam1) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetAllDateTimePatterns", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -378,22 +404,22 @@ public class DateTimeFormatInfo extends NetObject  {
         }
     }
 
-    public static DateTimeFormatInfo getCurrentInfo() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DateTimeFormatInfo getCurrentInfo() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentInfo");
+            JCObject val = (JCObject)classInstance.Get("CurrentInfo");
             return new DateTimeFormatInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DateTimeFormatInfo getInvariantInfo() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public DateTimeFormatInfo getInvariantInfo() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("InvariantInfo");
+            JCObject val = (JCObject)classInstance.Get("InvariantInfo");
             return new DateTimeFormatInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

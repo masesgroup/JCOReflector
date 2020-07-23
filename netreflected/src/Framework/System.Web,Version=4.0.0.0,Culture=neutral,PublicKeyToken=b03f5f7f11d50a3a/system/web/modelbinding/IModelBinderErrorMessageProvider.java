@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.web.modelbinding.ModelBindingExecutionContext;
 import system.web.modelbinding.ModelMetadata;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ModelBinderErrorMessageProvider}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.ModelBinderErrorMessageProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.ModelBinderErrorMessageProvider</a>
+ */
 public interface IModelBinderErrorMessageProvider {
     public java.lang.String Invoke(ModelBindingExecutionContext modelBindingExecutionContext, ModelMetadata modelMetadata, NetObject incomingValue);
 }

@@ -46,12 +46,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Activities.ActivityContext, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityContext</a>
  */
 public class ActivityContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.ActivityContext
+     */
     public static final String className = "System.Activities.ActivityContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class ActivityContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityContext}, a cast assert is made to check if types are compatible.
+     */
     public static ActivityContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivityContext(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class ActivityContext extends NetObject  {
 
     // Constructors section
     
+    public ActivityContext() throws Throwable {
+    }
+
+
 
     
     // Methods section

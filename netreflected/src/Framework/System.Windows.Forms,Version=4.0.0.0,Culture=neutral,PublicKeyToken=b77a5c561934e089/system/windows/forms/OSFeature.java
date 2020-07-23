@@ -38,19 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Version;
+import system.windows.forms.FeatureSupport;
 import system.windows.forms.SystemParameter;
+import system.Version;
 import system.windows.forms.OSFeature;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.OSFeature, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.OSFeature" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.OSFeature</a>
  */
-public class OSFeature extends NetObject  {
+public class OSFeature extends FeatureSupport  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.OSFeature
+     */
     public static final String className = "System.Windows.Forms.OSFeature";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class OSFeature extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OSFeature}, a cast assert is made to check if types are compatible.
+     */
     public static OSFeature cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OSFeature(from.getJCOInstance());
@@ -111,30 +129,14 @@ public class OSFeature extends NetObject  {
 
     // Constructors section
     
+    public OSFeature() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public boolean IsPresent(NetObject feature) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsPresent", feature == null ? null : feature.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsPresent(NetObject feature, Version minimumVersion) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsPresent", feature == null ? null : feature.getJCOInstance(), minimumVersion == null ? null : minimumVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsPresent(SystemParameter enumVal) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -160,11 +162,11 @@ public class OSFeature extends NetObject  {
     
     // Properties section
     
-    public static OSFeature getFeature() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public OSFeature getFeature() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Feature");
+            JCObject val = (JCObject)classInstance.Get("Feature");
             return new OSFeature(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

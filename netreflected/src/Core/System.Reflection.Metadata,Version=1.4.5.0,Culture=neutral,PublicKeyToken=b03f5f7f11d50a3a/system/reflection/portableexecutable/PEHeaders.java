@@ -47,12 +47,27 @@ import system.reflection.portableexecutable.PEHeader;
 
 /**
  * The base .NET class managing System.Reflection.PortableExecutable.PEHeaders, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.PEHeaders" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.PEHeaders</a>
  */
 public class PEHeaders extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.PortableExecutable.PEHeaders
+     */
     public static final String className = "System.Reflection.PortableExecutable.PEHeaders";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class PEHeaders extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PEHeaders}, a cast assert is made to check if types are compatible.
+     */
     public static PEHeaders cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PEHeaders(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class PEHeaders extends NetObject  {
 
     // Constructors section
     
+    public PEHeaders() throws Throwable {
+    }
 
     public PEHeaders(Stream peStream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException {
         try {
@@ -143,6 +162,7 @@ public class PEHeaders extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

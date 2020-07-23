@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.FormViewCommandEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link FormViewCommandEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewCommandEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewCommandEventHandler</a>
+ */
 public interface IFormViewCommandEventHandler {
     public void Invoke(NetObject sender, FormViewCommandEventArgs e);
 }

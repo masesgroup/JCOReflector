@@ -43,12 +43,27 @@ import system.web.ui.webcontrols.webparts.WebPartEventHandler;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.WebParts.WebPartVerb, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartVerb" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartVerb</a>
  */
 public class WebPartVerb extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.WebParts.WebPartVerb
+     */
     public static final String className = "System.Web.UI.WebControls.WebParts.WebPartVerb";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class WebPartVerb extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebPartVerb}, a cast assert is made to check if types are compatible.
+     */
     public static WebPartVerb cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebPartVerb(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class WebPartVerb extends NetObject  {
 
     // Constructors section
     
+    public WebPartVerb() throws Throwable {
+    }
 
     public WebPartVerb(java.lang.String id, java.lang.String clientClickHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
@@ -139,6 +158,7 @@ public class WebPartVerb extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

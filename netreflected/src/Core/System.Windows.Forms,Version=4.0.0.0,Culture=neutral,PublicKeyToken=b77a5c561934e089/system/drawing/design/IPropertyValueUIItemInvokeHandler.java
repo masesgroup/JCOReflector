@@ -42,7 +42,12 @@ import system.componentmodel.ITypeDescriptorContextImplementation;
 import system.componentmodel.PropertyDescriptor;
 import system.drawing.design.PropertyValueUIItem;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PropertyValueUIItemInvokeHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.PropertyValueUIItemInvokeHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.PropertyValueUIItemInvokeHandler</a>
+ */
 public interface IPropertyValueUIItemInvokeHandler {
     public void Invoke(ITypeDescriptorContext context, PropertyDescriptor descriptor, PropertyValueUIItem invokedItem);
 }

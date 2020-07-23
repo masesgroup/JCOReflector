@@ -43,12 +43,27 @@ import system.xml.XmlNode;
 
 /**
  * The base .NET class managing System.Configuration.IConfigurationSectionHandler, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IConfigurationSectionHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IConfigurationSectionHandler</a>
  */
 public class IConfigurationSectionHandlerImplementation extends NetObject implements IConfigurationSectionHandler {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.IConfigurationSectionHandler
+     */
     public static final String className = "System.Configuration.IConfigurationSectionHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IConfigurationSectionHandlerImplementation extends NetObject implem
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IConfigurationSectionHandler}, a cast assert is made to check if types are compatible.
+     */
     public static IConfigurationSectionHandler ToIConfigurationSectionHandler(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IConfigurationSectionHandlerImplementation(from.getJCOInstance());

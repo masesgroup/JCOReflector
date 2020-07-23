@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.durableinstancing.InstancePersistenceCommand;
 import system.Guid;
-import system.xml.linq.XName;
 
 
 /**
  * The base .NET class managing System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand</a>
  */
-public class LoadWorkflowByInstanceKeyCommand extends NetObject  {
+public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand
+     */
     public static final String className = "System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class LoadWorkflowByInstanceKeyCommand extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LoadWorkflowByInstanceKeyCommand}, a cast assert is made to check if types are compatible.
+     */
     public static LoadWorkflowByInstanceKeyCommand cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LoadWorkflowByInstanceKeyCommand(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class LoadWorkflowByInstanceKeyCommand extends NetObject  {
 
     // Constructors section
     
-
     public LoadWorkflowByInstanceKeyCommand() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -186,17 +202,6 @@ public class LoadWorkflowByInstanceKeyCommand extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LookupInstanceKey", LookupInstanceKey == null ? null : LookupInstanceKey.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XName getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Name");
-            return new XName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

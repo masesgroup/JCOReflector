@@ -56,12 +56,29 @@ import system.reflection.ModuleResolveEventHandler;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices._Assembly, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._Assembly" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._Assembly</a>
  */
 public interface _Assembly extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices._Assembly
+     */
+    public static final String className = "System.Runtime.InteropServices._Assembly";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _Assembly}, a cast assert is made to check if types are compatible.
+     */
     public static _Assembly To_Assembly(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices._Assembly, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new _AssemblyImplementation(from.getJCOInstance());
     }
@@ -142,7 +159,11 @@ public interface _Assembly extends IJCOBridgeReflected {
 
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable;
 
+    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable;
+
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable;
+
+    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable;
 
     public Module[] GetLoadedModules() throws Throwable;
 

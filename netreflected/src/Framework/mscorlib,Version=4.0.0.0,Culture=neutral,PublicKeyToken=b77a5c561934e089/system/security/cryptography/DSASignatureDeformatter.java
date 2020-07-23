@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.AsymmetricSignatureDeformatter;
 import system.security.cryptography.AsymmetricAlgorithm;
-import system.security.cryptography.HashAlgorithm;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.DSASignatureDeformatter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DSASignatureDeformatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DSASignatureDeformatter</a>
  */
-public class DSASignatureDeformatter extends NetObject  {
+public class DSASignatureDeformatter extends AsymmetricSignatureDeformatter  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.DSASignatureDeformatter
+     */
     public static final String className = "System.Security.Cryptography.DSASignatureDeformatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DSASignatureDeformatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DSASignatureDeformatter}, a cast assert is made to check if types are compatible.
+     */
     public static DSASignatureDeformatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DSASignatureDeformatter(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class DSASignatureDeformatter extends NetObject  {
 
     // Constructors section
     
-
     public DSASignatureDeformatter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -145,11 +161,11 @@ public class DSASignatureDeformatter extends NetObject  {
         }
     }
 
-    public boolean VerifySignature(HashAlgorithm hash, byte[] rgbSignature) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public boolean VerifySignature(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", hash == null ? null : hash.getJCOInstance(), rgbSignature);
+            return (boolean)classInstance.Invoke("VerifySignature", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

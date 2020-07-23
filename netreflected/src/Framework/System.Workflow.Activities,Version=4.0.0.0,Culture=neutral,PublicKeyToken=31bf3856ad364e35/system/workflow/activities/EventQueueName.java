@@ -44,12 +44,27 @@ import system.workflow.runtime.CorrelationProperty;
 
 /**
  * The base .NET class managing System.Workflow.Activities.EventQueueName, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.EventQueueName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.EventQueueName</a>
  */
 public class EventQueueName extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.EventQueueName
+     */
     public static final String className = "System.Workflow.Activities.EventQueueName";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class EventQueueName extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventQueueName}, a cast assert is made to check if types are compatible.
+     */
     public static EventQueueName cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventQueueName(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class EventQueueName extends NetObject  {
 
     // Constructors section
     
+    public EventQueueName() throws Throwable {
+    }
 
     public EventQueueName(NetType interfaceType, java.lang.String operation) throws Throwable, system.ArgumentNullException {
         try {
@@ -120,6 +139,7 @@ public class EventQueueName extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

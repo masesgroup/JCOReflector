@@ -48,12 +48,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Web.UI.Design.IFolderProjectItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IFolderProjectItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IFolderProjectItem</a>
  */
 public class IFolderProjectItemImplementation extends NetObject implements IFolderProjectItem {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.IFolderProjectItem
+     */
     public static final String className = "System.Web.UI.Design.IFolderProjectItem";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFolderProjectItem}, a cast assert is made to check if types are compatible.
+     */
     public static IFolderProjectItem ToIFolderProjectItem(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IFolderProjectItemImplementation(from.getJCOInstance());
@@ -114,6 +131,17 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAddDocument = (JCObject)classInstance.Invoke("AddDocument", name, content);
+            return new IDocumentProjectItemImplementation(objAddDocument);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddDocument = (JCObject)classInstance.Invoke("AddDocument", dupParam0, dupParam1);
             return new IDocumentProjectItemImplementation(objAddDocument);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.threading.DispatcherUnhandledExceptionFilterEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DispatcherUnhandledExceptionFilterEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler</a>
+ */
 public interface IDispatcherUnhandledExceptionFilterEventHandler {
     public void Invoke(NetObject sender, DispatcherUnhandledExceptionFilterEventArgs e);
 }

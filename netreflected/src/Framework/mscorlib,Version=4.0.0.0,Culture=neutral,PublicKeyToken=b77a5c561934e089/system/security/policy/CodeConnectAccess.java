@@ -43,12 +43,27 @@ import system.security.policy.CodeConnectAccess;
 
 /**
  * The base .NET class managing System.Security.Policy.CodeConnectAccess, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeConnectAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeConnectAccess</a>
  */
 public class CodeConnectAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.CodeConnectAccess
+     */
     public static final String className = "System.Security.Policy.CodeConnectAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class CodeConnectAccess extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeConnectAccess}, a cast assert is made to check if types are compatible.
+     */
     public static CodeConnectAccess cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeConnectAccess(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class CodeConnectAccess extends NetObject  {
 
     // Constructors section
     
+    public CodeConnectAccess() throws Throwable {
+    }
 
     public CodeConnectAccess(java.lang.String allowScheme, int allowPort) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException {
         try {
@@ -119,6 +138,7 @@ public class CodeConnectAccess extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

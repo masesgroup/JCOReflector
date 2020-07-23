@@ -43,12 +43,27 @@ import system.windows.TextDecorationCollection;
 
 /**
  * The base .NET class managing System.Windows.TextDecorations, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TextDecorations" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TextDecorations</a>
  */
 public class TextDecorations extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.TextDecorations
+     */
     public static final String className = "System.Windows.TextDecorations";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class TextDecorations extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextDecorations}, a cast assert is made to check if types are compatible.
+     */
     public static TextDecorations cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TextDecorations(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class TextDecorations extends NetObject  {
 
     // Constructors section
     
+    public TextDecorations() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,44 +136,44 @@ public class TextDecorations extends NetObject  {
     
     // Properties section
     
-    public static TextDecorationCollection getBaseline() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TextDecorationCollection getBaseline() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Baseline");
+            JCObject val = (JCObject)classInstance.Get("Baseline");
             return new TextDecorationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TextDecorationCollection getOverLine() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TextDecorationCollection getOverLine() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OverLine");
+            JCObject val = (JCObject)classInstance.Get("OverLine");
             return new TextDecorationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TextDecorationCollection getStrikethrough() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TextDecorationCollection getStrikethrough() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Strikethrough");
+            JCObject val = (JCObject)classInstance.Get("Strikethrough");
             return new TextDecorationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TextDecorationCollection getUnderline() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TextDecorationCollection getUnderline() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Underline");
+            JCObject val = (JCObject)classInstance.Get("Underline");
             return new TextDecorationCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.CollectionBase;
 import system.xml.schema.XmlSchemaObject;
 import system.xml.schema.XmlSchemaObjectEnumerator;
 
 
 /**
  * The base .NET class managing System.Xml.Schema.XmlSchemaObjectCollection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectCollection</a>
  */
-public class XmlSchemaObjectCollection extends NetObject implements Iterable<XmlSchemaObject> {
+public class XmlSchemaObjectCollection extends CollectionBase implements Iterable<XmlSchemaObject> {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.XmlSchemaObjectCollection
+     */
     public static final String className = "System.Xml.Schema.XmlSchemaObjectCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class XmlSchemaObjectCollection extends NetObject implements Iterable<Xml
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaObjectCollection}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSchemaObjectCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSchemaObjectCollection(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class XmlSchemaObjectCollection extends NetObject implements Iterable<Xml
 
     // Constructors section
     
-
     public XmlSchemaObjectCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,24 +182,14 @@ public class XmlSchemaObjectCollection extends NetObject implements Iterable<Xml
         }
     }
 
-    public XmlSchemaObjectEnumerator GetEnumerator() throws Throwable {
+    public final XmlSchemaObjectEnumerator GetEnumerator() throws Throwable {
         return new XmlSchemaObjectEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<XmlSchemaObject> iterator() {
+	public final java.util.Iterator<XmlSchemaObject> iterator() {
 		return new XmlSchemaObjectEnumerator(classInstance);
 	}
-
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
     public void CopyTo(XmlSchemaObject[] array, int index) throws Throwable {
         if (classInstance == null)
@@ -214,50 +221,10 @@ public class XmlSchemaObjectCollection extends NetObject implements Iterable<Xml
         }
     }
 
-    public void RemoveAt(int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getCapacity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Capacity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Capacity", Capacity);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

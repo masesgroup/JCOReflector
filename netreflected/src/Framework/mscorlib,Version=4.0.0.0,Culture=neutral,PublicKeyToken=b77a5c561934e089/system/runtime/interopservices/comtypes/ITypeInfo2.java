@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.comtypes.ITypeInfo;
+import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
 import system.runtime.interopservices.comtypes.INVOKEKIND;
 
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.ITypeInfo2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2</a>
  */
-public interface ITypeInfo2 extends IJCOBridgeReflected {
-
+public interface ITypeInfo2 extends IJCOBridgeReflected, ITypeInfo {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.ITypeInfo2
+     */
+    public static final String className = "System.Runtime.InteropServices.ComTypes.ITypeInfo2";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeInfo2}, a cast assert is made to check if types are compatible.
+     */
     public static ITypeInfo2 ToITypeInfo2(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices.ComTypes.ITypeInfo2, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITypeInfo2Implementation(from.getJCOInstance());
     }

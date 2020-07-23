@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.data.IDbCommand;
 import system.data.IDbCommandImplementation;
 import system.data.IDbTransaction;
@@ -48,12 +50,27 @@ import system.data.ConnectionState;
 
 /**
  * The base .NET class managing System.Data.IDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbConnection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbConnection</a>
  */
 public class IDbConnectionImplementation extends NetObject implements IDbConnection {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.IDbConnection
+     */
     public static final String className = "System.Data.IDbConnection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +118,9 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDbConnection}, a cast assert is made to check if types are compatible.
+     */
     public static IDbConnection ToIDbConnection(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDbConnectionImplementation(from.getJCOInstance());

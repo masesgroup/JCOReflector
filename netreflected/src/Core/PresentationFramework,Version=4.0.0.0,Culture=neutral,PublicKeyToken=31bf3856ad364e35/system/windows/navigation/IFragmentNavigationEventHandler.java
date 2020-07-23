@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.navigation.FragmentNavigationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link FragmentNavigationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.FragmentNavigationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.FragmentNavigationEventHandler</a>
+ */
 public interface IFragmentNavigationEventHandler {
     public void Invoke(NetObject sender, FragmentNavigationEventArgs e);
 }

@@ -43,12 +43,27 @@ import system.codedom.CodeNamespaceImport;
 
 /**
  * The base .NET class managing System.CodeDom.CodeNamespaceImportCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeNamespaceImportCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeNamespaceImportCollection</a>
  */
 public class CodeNamespaceImportCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.CodeDom.CodeNamespaceImportCollection
+     */
     public static final String className = "System.CodeDom.CodeNamespaceImportCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class CodeNamespaceImportCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeNamespaceImportCollection}, a cast assert is made to check if types are compatible.
+     */
     public static CodeNamespaceImportCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeNamespaceImportCollection(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class CodeNamespaceImportCollection extends NetObject  {
 
     // Constructors section
     
-
     public CodeNamespaceImportCollection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         try {
             // add reference to assemblyName.dll file

@@ -43,12 +43,27 @@ import system.servicemodel.FaultCode;
 
 /**
  * The base .NET class managing System.ServiceModel.FaultCode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.FaultCode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.FaultCode</a>
  */
 public class FaultCode extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.FaultCode
+     */
     public static final String className = "System.ServiceModel.FaultCode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FaultCode extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FaultCode}, a cast assert is made to check if types are compatible.
+     */
     public static FaultCode cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FaultCode(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class FaultCode extends NetObject  {
 
     // Constructors section
     
+    public FaultCode() throws Throwable {
+    }
 
     public FaultCode(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
         try {
@@ -149,6 +168,7 @@ public class FaultCode extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

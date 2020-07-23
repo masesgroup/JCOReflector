@@ -49,12 +49,27 @@ import system.componentmodel.design.MenuCommandsChangedEventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.MenuCommandService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.MenuCommandService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.MenuCommandService</a>
  */
 public class MenuCommandService extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.MenuCommandService
+     */
     public static final String className = "System.ComponentModel.Design.MenuCommandService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class MenuCommandService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MenuCommandService}, a cast assert is made to check if types are compatible.
+     */
     public static MenuCommandService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MenuCommandService(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class MenuCommandService extends NetObject  {
 
     // Constructors section
     
+    public MenuCommandService() throws Throwable {
+    }
 
     public MenuCommandService(IServiceProvider serviceProvider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         try {
@@ -125,6 +144,7 @@ public class MenuCommandService extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

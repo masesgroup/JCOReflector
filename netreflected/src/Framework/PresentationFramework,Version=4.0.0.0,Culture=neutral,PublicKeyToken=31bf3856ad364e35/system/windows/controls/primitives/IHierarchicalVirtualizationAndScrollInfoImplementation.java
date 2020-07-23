@@ -46,12 +46,27 @@ import system.windows.controls.Panel;
 
 /**
  * The base .NET class managing System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo</a>
  */
 public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetObject implements IHierarchicalVirtualizationAndScrollInfo {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo
+     */
     public static final String className = "System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHierarchicalVirtualizationAndScrollInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IHierarchicalVirtualizationAndScrollInfo ToIHierarchicalVirtualizationAndScrollInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IHierarchicalVirtualizationAndScrollInfoImplementation(from.getJCOInstance());

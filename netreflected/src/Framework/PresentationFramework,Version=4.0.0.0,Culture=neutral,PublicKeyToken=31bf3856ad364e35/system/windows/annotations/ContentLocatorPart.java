@@ -43,12 +43,27 @@ import system.xml.XmlQualifiedName;
 
 /**
  * The base .NET class managing System.Windows.Annotations.ContentLocatorPart, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.ContentLocatorPart" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.ContentLocatorPart</a>
  */
 public class ContentLocatorPart extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.ContentLocatorPart
+     */
     public static final String className = "System.Windows.Annotations.ContentLocatorPart";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ContentLocatorPart extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContentLocatorPart}, a cast assert is made to check if types are compatible.
+     */
     public static ContentLocatorPart cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ContentLocatorPart(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ContentLocatorPart extends NetObject  {
 
     // Constructors section
     
+    public ContentLocatorPart() throws Throwable {
+    }
 
     public ContentLocatorPart(XmlQualifiedName partType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         try {
@@ -119,6 +138,7 @@ public class ContentLocatorPart extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

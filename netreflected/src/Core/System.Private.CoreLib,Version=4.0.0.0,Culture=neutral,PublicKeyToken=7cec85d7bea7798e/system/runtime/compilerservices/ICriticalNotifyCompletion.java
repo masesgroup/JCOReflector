@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.compilerservices.INotifyCompletion;
+import system.runtime.compilerservices.INotifyCompletionImplementation;
 import system.Action;
 
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.ICriticalNotifyCompletion, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ICriticalNotifyCompletion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ICriticalNotifyCompletion</a>
  */
-public interface ICriticalNotifyCompletion extends IJCOBridgeReflected {
-
+public interface ICriticalNotifyCompletion extends IJCOBridgeReflected, INotifyCompletion {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.ICriticalNotifyCompletion
+     */
+    public static final String className = "System.Runtime.CompilerServices.ICriticalNotifyCompletion";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICriticalNotifyCompletion}, a cast assert is made to check if types are compatible.
+     */
     public static ICriticalNotifyCompletion ToICriticalNotifyCompletion(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Runtime.CompilerServices.ICriticalNotifyCompletion, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICriticalNotifyCompletionImplementation(from.getJCOInstance());
     }
@@ -90,7 +109,6 @@ public interface ICriticalNotifyCompletion extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void OnCompleted(Action continuation) throws Throwable;
 
     public void UnsafeOnCompleted(Action continuation) throws Throwable;
 

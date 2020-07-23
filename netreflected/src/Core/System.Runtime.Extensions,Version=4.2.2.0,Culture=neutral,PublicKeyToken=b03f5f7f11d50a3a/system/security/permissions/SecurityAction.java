@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Permissions.SecurityAction, System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.SecurityAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.SecurityAction</a>
  */
 public class SecurityAction extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Extensions
+     */
     public static final String assemblyShortName = "System.Runtime.Extensions";
+    /**
+     * Qualified class name: System.Security.Permissions.SecurityAction
+     */
     public static final String className = "System.Security.Permissions.SecurityAction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

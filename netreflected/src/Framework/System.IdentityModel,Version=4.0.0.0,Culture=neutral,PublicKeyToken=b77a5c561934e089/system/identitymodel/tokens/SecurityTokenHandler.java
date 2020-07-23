@@ -51,12 +51,27 @@ import system.identitymodel.tokens.SecurityTokenHandlerConfiguration;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.SecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandler</a>
  */
 public class SecurityTokenHandler extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.SecurityTokenHandler
+     */
     public static final String className = "System.IdentityModel.Tokens.SecurityTokenHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class SecurityTokenHandler extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityTokenHandler}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityTokenHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityTokenHandler(from.getJCOInstance());
@@ -117,6 +134,8 @@ public class SecurityTokenHandler extends NetObject  {
 
     // Constructors section
     
+    public SecurityTokenHandler() throws Throwable {
+    }
 
     
     // Methods section

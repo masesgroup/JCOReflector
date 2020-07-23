@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PublishServiceCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PublishServiceCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PublishServiceCallback</a>
+ */
 public interface IPublishServiceCallback {
     public NetObject Invoke(NetType serviceType);
 }

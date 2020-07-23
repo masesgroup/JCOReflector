@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing Microsoft.JScript.JSFunctionAttributeEnum, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSFunctionAttributeEnum" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSFunctionAttributeEnum</a>
  */
 public class JSFunctionAttributeEnum extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.JSFunctionAttributeEnum
+     */
     public static final String className = "Microsoft.JScript.JSFunctionAttributeEnum";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -148,19 +163,19 @@ public class JSFunctionAttributeEnum extends NetObject  {
 
     // Flags management section
 
-    public JSFunctionAttributeEnum add(JSFunctionAttributeEnum val) throws Throwable {
+    public final JSFunctionAttributeEnum add(JSFunctionAttributeEnum val) throws Throwable {
         return new JSFunctionAttributeEnum(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public JSFunctionAttributeEnum remove(JSFunctionAttributeEnum val) throws Throwable {
+    public final JSFunctionAttributeEnum remove(JSFunctionAttributeEnum val) throws Throwable {
         return new JSFunctionAttributeEnum(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(JSFunctionAttributeEnum val) throws Throwable {
+    public final boolean is(JSFunctionAttributeEnum val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(JSFunctionAttributeEnum val) throws Throwable {
+    public final boolean has(JSFunctionAttributeEnum val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

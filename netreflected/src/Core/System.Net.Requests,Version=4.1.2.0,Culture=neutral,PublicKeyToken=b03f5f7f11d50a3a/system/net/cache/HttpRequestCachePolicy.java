@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.cache.RequestCachePolicy;
 import system.DateTime;
 import system.net.cache.HttpCacheAgeControl;
 import system.TimeSpan;
@@ -46,12 +47,27 @@ import system.net.cache.HttpRequestCacheLevel;
 
 /**
  * The base .NET class managing System.Net.Cache.HttpRequestCachePolicy, System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Cache.HttpRequestCachePolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Cache.HttpRequestCachePolicy</a>
  */
-public class HttpRequestCachePolicy extends NetObject  {
+public class HttpRequestCachePolicy extends RequestCachePolicy  {
+    /**
+     * Fully assembly qualified name: System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Requests
+     */
     public static final String assemblyShortName = "System.Net.Requests";
+    /**
+     * Qualified class name: System.Net.Cache.HttpRequestCachePolicy
+     */
     public static final String className = "System.Net.Cache.HttpRequestCachePolicy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class HttpRequestCachePolicy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpRequestCachePolicy}, a cast assert is made to check if types are compatible.
+     */
     public static HttpRequestCachePolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpRequestCachePolicy(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class HttpRequestCachePolicy extends NetObject  {
 
     // Constructors section
     
-
     public HttpRequestCachePolicy() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -192,7 +209,7 @@ public class HttpRequestCachePolicy extends NetObject  {
         }
     }
 
-    public HttpRequestCacheLevel getLevel() throws Throwable {
+    public HttpRequestCacheLevel getLevelNewHttpRequestCachePolicy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

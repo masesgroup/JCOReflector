@@ -44,12 +44,27 @@ import system.activities.ExecutionProperties;
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.IReceiveMessageCallback, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.IReceiveMessageCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.IReceiveMessageCallback</a>
  */
 public class IReceiveMessageCallbackImplementation extends NetObject implements IReceiveMessageCallback {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.IReceiveMessageCallback
+     */
     public static final String className = "System.ServiceModel.Activities.IReceiveMessageCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IReceiveMessageCallbackImplementation extends NetObject implements 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReceiveMessageCallback}, a cast assert is made to check if types are compatible.
+     */
     public static IReceiveMessageCallback ToIReceiveMessageCallback(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IReceiveMessageCallbackImplementation(from.getJCOInstance());

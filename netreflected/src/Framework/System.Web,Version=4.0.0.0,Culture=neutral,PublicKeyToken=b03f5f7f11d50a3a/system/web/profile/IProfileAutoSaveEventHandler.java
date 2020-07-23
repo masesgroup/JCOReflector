@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.profile.ProfileAutoSaveEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ProfileAutoSaveEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Profile.ProfileAutoSaveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Profile.ProfileAutoSaveEventHandler</a>
+ */
 public interface IProfileAutoSaveEventHandler {
     public void Invoke(NetObject sender, ProfileAutoSaveEventArgs e);
 }

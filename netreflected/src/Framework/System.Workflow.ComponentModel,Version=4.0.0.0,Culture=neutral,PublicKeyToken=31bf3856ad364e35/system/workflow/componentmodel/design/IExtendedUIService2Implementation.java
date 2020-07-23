@@ -44,12 +44,27 @@ import system.reflection.AssemblyName;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.IExtendedUIService2, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService2</a>
  */
 public class IExtendedUIService2Implementation extends NetObject implements IExtendedUIService2 {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.IExtendedUIService2
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.IExtendedUIService2";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExtendedUIService2}, a cast assert is made to check if types are compatible.
+     */
     public static IExtendedUIService2 ToIExtendedUIService2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IExtendedUIService2Implementation(from.getJCOInstance());

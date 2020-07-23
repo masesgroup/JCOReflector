@@ -47,12 +47,27 @@ import system.windows.forms.TextFormatFlags;
 
 /**
  * The base .NET class managing System.Windows.Forms.ComboBoxRenderer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComboBoxRenderer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComboBoxRenderer</a>
  */
 public class ComboBoxRenderer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ComboBoxRenderer
+     */
     public static final String className = "System.Windows.Forms.ComboBoxRenderer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ComboBoxRenderer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComboBoxRenderer}, a cast assert is made to check if types are compatible.
+     */
     public static ComboBoxRenderer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ComboBoxRenderer(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class ComboBoxRenderer extends NetObject  {
 
     // Constructors section
     
+    public ComboBoxRenderer() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -181,11 +202,11 @@ public class ComboBoxRenderer extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsSupported() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsSupported() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsSupported");
+            return (boolean)classInstance.Get("IsSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

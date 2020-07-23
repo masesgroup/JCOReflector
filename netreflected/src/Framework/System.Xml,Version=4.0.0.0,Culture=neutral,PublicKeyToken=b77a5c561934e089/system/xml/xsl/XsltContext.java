@@ -38,23 +38,38 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.XmlNamespaceManager;
 import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.IXsltContextFunction;
 import system.xml.xsl.IXsltContextFunctionImplementation;
 import system.xml.xpath.XPathResultType;
 import system.xml.xsl.IXsltContextVariable;
 import system.xml.xsl.IXsltContextVariableImplementation;
-import system.xml.XmlNameTable;
 
 
 /**
  * The base .NET class managing System.Xml.Xsl.XsltContext, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltContext</a>
  */
-public class XsltContext extends NetObject  {
+public class XsltContext extends XmlNamespaceManager  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.XsltContext
+     */
     public static final String className = "System.Xml.Xsl.XsltContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class XsltContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XsltContext}, a cast assert is made to check if types are compatible.
+     */
     public static XsltContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XsltContext(from.getJCOInstance());
@@ -115,30 +132,12 @@ public class XsltContext extends NetObject  {
 
     // Constructors section
     
+    public XsltContext() throws Throwable {
+    }
 
     
     // Methods section
     
-    public boolean HasNamespace(java.lang.String prefix) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("HasNamespace", prefix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean PopScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("PopScope");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean PreserveWhitespace(XPathNavigator node) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,26 +153,6 @@ public class XsltContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("CompareDocument", baseUri, nextbaseUri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("LookupNamespace", prefix);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String LookupPrefix(java.lang.String uri) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("LookupPrefix", uri);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,36 +180,6 @@ public class XsltContext extends NetObject  {
         }
     }
 
-    public void AddNamespace(java.lang.String prefix, java.lang.String uri) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddNamespace", prefix, uri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PushScope() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PushScope");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveNamespace(java.lang.String prefix, java.lang.String uri) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveNamespace", prefix, uri);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -240,27 +189,6 @@ public class XsltContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("Whitespace");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultNamespace() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultNamespace");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNameTable getNameTable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NameTable");
-            return new XmlNameTable(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

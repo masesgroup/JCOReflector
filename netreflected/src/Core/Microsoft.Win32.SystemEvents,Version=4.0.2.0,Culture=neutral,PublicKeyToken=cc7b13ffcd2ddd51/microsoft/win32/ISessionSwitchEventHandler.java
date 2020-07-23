@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.win32.SessionSwitchEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SessionSwitchEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionSwitchEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionSwitchEventHandler</a>
+ */
 public interface ISessionSwitchEventHandler {
     public void Invoke(NetObject sender, SessionSwitchEventArgs e);
 }

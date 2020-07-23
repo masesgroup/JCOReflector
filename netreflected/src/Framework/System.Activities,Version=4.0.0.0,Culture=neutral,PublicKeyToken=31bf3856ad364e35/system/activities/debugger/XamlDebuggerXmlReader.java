@@ -48,12 +48,27 @@ import system.xaml.XamlType;
 
 /**
  * The base .NET class managing System.Activities.Debugger.XamlDebuggerXmlReader, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.XamlDebuggerXmlReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.XamlDebuggerXmlReader</a>
  */
 public class XamlDebuggerXmlReader extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Debugger.XamlDebuggerXmlReader
+     */
     public static final String className = "System.Activities.Debugger.XamlDebuggerXmlReader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class XamlDebuggerXmlReader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlDebuggerXmlReader}, a cast assert is made to check if types are compatible.
+     */
     public static XamlDebuggerXmlReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlDebuggerXmlReader(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     // Constructors section
     
+    public XamlDebuggerXmlReader() throws Throwable {
+    }
 
     public XamlDebuggerXmlReader(TextReader underlyingTextReader) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.xml.XmlException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException {
         try {
@@ -134,6 +153,7 @@ public class XamlDebuggerXmlReader extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -264,16 +284,6 @@ public class XamlDebuggerXmlReader extends NetObject  {
         }
     }
 
-    public void Skip() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Skip");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -308,16 +318,6 @@ public class XamlDebuggerXmlReader extends NetObject  {
         }
     }
 
-    public boolean getIsEof() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsEof");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -333,72 +333,6 @@ public class XamlDebuggerXmlReader extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("LinePosition");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NamespaceDeclaration getNamespace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Namespace");
-            return new NamespaceDeclaration(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XamlMember getMember() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Member");
-            return new XamlMember(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XamlNodeType getNodeType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new XamlNodeType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XamlSchemaContext getSchemaContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SchemaContext");
-            return new XamlSchemaContext(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XamlType getType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Type");
-            return new XamlType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

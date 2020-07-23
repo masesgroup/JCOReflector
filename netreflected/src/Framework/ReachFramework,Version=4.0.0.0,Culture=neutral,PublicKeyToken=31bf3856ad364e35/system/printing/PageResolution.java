@@ -43,12 +43,27 @@ import system.printing.PageQualitativeResolution;
 
 /**
  * The base .NET class managing System.Printing.PageResolution, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PageResolution" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PageResolution</a>
  */
 public class PageResolution extends NetObject  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Printing.PageResolution
+     */
     public static final String className = "System.Printing.PageResolution";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class PageResolution extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageResolution}, a cast assert is made to check if types are compatible.
+     */
     public static PageResolution cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PageResolution(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class PageResolution extends NetObject  {
 
     // Constructors section
     
+    public PageResolution() throws Throwable {
+    }
 
     public PageResolution(int resolutionX, int resolutionY) throws Throwable {
         try {
@@ -139,6 +158,7 @@ public class PageResolution extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

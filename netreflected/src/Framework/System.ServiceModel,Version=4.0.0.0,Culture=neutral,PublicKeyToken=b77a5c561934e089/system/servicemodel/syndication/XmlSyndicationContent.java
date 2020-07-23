@@ -38,23 +38,37 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.syndication.SyndicationContent;
 import system.runtime.serialization.XmlObjectSerializer;
 import system.xml.serialization.XmlSerializer;
 import system.servicemodel.syndication.SyndicationElementExtension;
 import system.xml.XmlReader;
-import system.servicemodel.syndication.SyndicationContent;
 import system.xml.XmlDictionaryReader;
-import system.xml.XmlWriter;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Syndication.XmlSyndicationContent, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.XmlSyndicationContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.XmlSyndicationContent</a>
  */
-public class XmlSyndicationContent extends NetObject  {
+public class XmlSyndicationContent extends SyndicationContent  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Syndication.XmlSyndicationContent
+     */
     public static final String className = "System.ServiceModel.Syndication.XmlSyndicationContent";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +121,9 @@ public class XmlSyndicationContent extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSyndicationContent}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSyndicationContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSyndicationContent(from.getJCOInstance());
@@ -115,6 +131,8 @@ public class XmlSyndicationContent extends NetObject  {
 
     // Constructors section
     
+    public XmlSyndicationContent() throws Throwable {
+    }
 
     public XmlSyndicationContent(java.lang.String type, NetObject dataContractExtension, XmlObjectSerializer dataContractSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
@@ -157,6 +175,7 @@ public class XmlSyndicationContent extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -182,16 +201,6 @@ public class XmlSyndicationContent extends NetObject  {
         }
     }
 
-    public void WriteTo(XmlWriter writer, java.lang.String outerElementName, java.lang.String outerElementNamespace) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance(), outerElementName, outerElementNamespace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -202,16 +211,6 @@ public class XmlSyndicationContent extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Extension");
             return new SyndicationElementExtension(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Type");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

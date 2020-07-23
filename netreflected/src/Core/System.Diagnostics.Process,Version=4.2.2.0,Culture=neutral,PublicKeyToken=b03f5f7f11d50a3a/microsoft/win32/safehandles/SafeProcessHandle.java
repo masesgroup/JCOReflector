@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.SafeHandles.SafeProcessHandle, System.Diagnostics.Process, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeProcessHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeProcessHandle</a>
  */
-public class SafeProcessHandle extends NetObject  {
+public class SafeProcessHandle extends SafeHandleZeroOrMinusOneIsInvalid  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.Process, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.Process, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.Process
+     */
     public static final String assemblyShortName = "System.Diagnostics.Process";
+    /**
+     * Qualified class name: Microsoft.Win32.SafeHandles.SafeProcessHandle
+     */
     public static final String className = "Microsoft.Win32.SafeHandles.SafeProcessHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SafeProcessHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SafeProcessHandle}, a cast assert is made to check if types are compatible.
+     */
     public static SafeProcessHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SafeProcessHandle(from.getJCOInstance());
@@ -108,6 +126,9 @@ public class SafeProcessHandle extends NetObject  {
 
     // Constructors section
     
+    public SafeProcessHandle() throws Throwable {
+    }
+
 
 
     
@@ -117,26 +138,6 @@ public class SafeProcessHandle extends NetObject  {
     
     // Properties section
     
-    public boolean getIsClosed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsClosed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInvalid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInvalid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

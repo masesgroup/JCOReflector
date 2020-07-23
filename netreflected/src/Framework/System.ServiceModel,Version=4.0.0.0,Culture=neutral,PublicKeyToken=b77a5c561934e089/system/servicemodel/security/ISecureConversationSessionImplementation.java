@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.security.ISecuritySession;
+import system.servicemodel.security.ISecuritySessionImplementation;
+import system.servicemodel.channels.ISession;
+import system.servicemodel.channels.ISessionImplementation;
 import system.xml.XmlReader;
 import system.xml.XmlDictionaryWriter;
 import system.servicemodel.EndpointIdentity;
@@ -45,12 +49,27 @@ import system.servicemodel.EndpointIdentity;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.ISecureConversationSession, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.ISecureConversationSession" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.ISecureConversationSession</a>
  */
 public class ISecureConversationSessionImplementation extends NetObject implements ISecureConversationSession {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.ISecureConversationSession
+     */
     public static final String className = "System.ServiceModel.Security.ISecureConversationSession";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +117,9 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISecureConversationSession}, a cast assert is made to check if types are compatible.
+     */
     public static ISecureConversationSession ToISecureConversationSession(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISecureConversationSessionImplementation(from.getJCOInstance());

@@ -43,12 +43,27 @@ import system.identitymodel.tokens.EncryptingCredentials;
 
 /**
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.ProtectedKey, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.ProtectedKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.ProtectedKey</a>
  */
 public class ProtectedKey extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Protocols.WSTrust.ProtectedKey
+     */
     public static final String className = "System.IdentityModel.Protocols.WSTrust.ProtectedKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ProtectedKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProtectedKey}, a cast assert is made to check if types are compatible.
+     */
     public static ProtectedKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ProtectedKey(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ProtectedKey extends NetObject  {
 
     // Constructors section
     
+    public ProtectedKey() throws Throwable {
+    }
 
     public ProtectedKey(byte[] secret) throws Throwable {
         try {
@@ -129,6 +148,7 @@ public class ProtectedKey extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

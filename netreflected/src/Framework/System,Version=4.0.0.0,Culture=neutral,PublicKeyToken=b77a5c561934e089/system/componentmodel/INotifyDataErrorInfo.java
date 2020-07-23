@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ComponentModel.INotifyDataErrorInfo, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INotifyDataErrorInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INotifyDataErrorInfo</a>
  */
 public interface INotifyDataErrorInfo extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.INotifyDataErrorInfo
+     */
+    public static final String className = "System.ComponentModel.INotifyDataErrorInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyDataErrorInfo}, a cast assert is made to check if types are compatible.
+     */
     public static INotifyDataErrorInfo ToINotifyDataErrorInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.INotifyDataErrorInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INotifyDataErrorInfoImplementation(from.getJCOInstance());
     }

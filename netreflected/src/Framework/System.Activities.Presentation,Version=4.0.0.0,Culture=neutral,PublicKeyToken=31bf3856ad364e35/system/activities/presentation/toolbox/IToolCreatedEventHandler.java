@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.activities.presentation.toolbox.ToolCreatedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ToolCreatedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Toolbox.ToolCreatedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Toolbox.ToolCreatedEventHandler</a>
+ */
 public interface IToolCreatedEventHandler {
     public void Invoke(NetObject sender, ToolCreatedEventArgs e);
 }

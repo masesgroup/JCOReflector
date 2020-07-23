@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.IInputElement;
+import system.windows.IInputElementImplementation;
 import system.windows.RoutedEvent;
 import system.windows.RoutedEventArgs;
 import system.windows.input.KeyboardFocusChangedEventHandler;
@@ -54,12 +56,27 @@ import system.windows.input.TextCompositionEventHandler;
 
 /**
  * The base .NET class managing System.Windows.IFrameworkInputElement, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.IFrameworkInputElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.IFrameworkInputElement</a>
  */
 public class IFrameworkInputElementImplementation extends NetObject implements IFrameworkInputElement {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.IFrameworkInputElement
+     */
     public static final String className = "System.Windows.IFrameworkInputElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +124,9 @@ public class IFrameworkInputElementImplementation extends NetObject implements I
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFrameworkInputElement}, a cast assert is made to check if types are compatible.
+     */
     public static IFrameworkInputElement ToIFrameworkInputElement(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IFrameworkInputElementImplementation(from.getJCOInstance());

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.DecoderFallback;
 import system.text.DecoderFallbackBuffer;
 
 
 /**
  * The base .NET class managing System.Text.DecoderReplacementFallback, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderReplacementFallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderReplacementFallback</a>
  */
-public class DecoderReplacementFallback extends NetObject  {
+public class DecoderReplacementFallback extends DecoderFallback  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Text.DecoderReplacementFallback
+     */
     public static final String className = "System.Text.DecoderReplacementFallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DecoderReplacementFallback extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DecoderReplacementFallback}, a cast assert is made to check if types are compatible.
+     */
     public static DecoderReplacementFallback cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DecoderReplacementFallback(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class DecoderReplacementFallback extends NetObject  {
 
     // Constructors section
     
-
     public DecoderReplacementFallback() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -149,16 +166,6 @@ public class DecoderReplacementFallback extends NetObject  {
     
     // Properties section
     
-    public int getMaxCharCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("MaxCharCount");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDefaultString() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

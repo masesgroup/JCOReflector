@@ -44,12 +44,27 @@ import system.security.principal.SecurityIdentifier;
 
 /**
  * The base .NET class managing System.Diagnostics.Eventing.Reader.EventRecord, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord</a>
  */
 public class EventRecord extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Diagnostics.Eventing.Reader.EventRecord
+     */
     public static final String className = "System.Diagnostics.Eventing.Reader.EventRecord";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class EventRecord extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventRecord}, a cast assert is made to check if types are compatible.
+     */
     public static EventRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventRecord(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class EventRecord extends NetObject  {
 
     // Constructors section
     
+    public EventRecord() throws Throwable {
+    }
 
     
     // Methods section

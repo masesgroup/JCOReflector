@@ -43,12 +43,27 @@ import system.xml.XmlNameTable;
 
 /**
  * The base .NET class managing System.Xml.XmlNamespaceManager, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamespaceManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamespaceManager</a>
  */
 public class XmlNamespaceManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlNamespaceManager
+     */
     public static final String className = "System.Xml.XmlNamespaceManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class XmlNamespaceManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlNamespaceManager}, a cast assert is made to check if types are compatible.
+     */
     public static XmlNamespaceManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlNamespaceManager(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class XmlNamespaceManager extends NetObject  {
 
     // Constructors section
     
+    public XmlNamespaceManager() throws Throwable {
+    }
 
     public XmlNamespaceManager(XmlNameTable nameTable) throws Throwable {
         try {
@@ -119,6 +138,7 @@ public class XmlNamespaceManager extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

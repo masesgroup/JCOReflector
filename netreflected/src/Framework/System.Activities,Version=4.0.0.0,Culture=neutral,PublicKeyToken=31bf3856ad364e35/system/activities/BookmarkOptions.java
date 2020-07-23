@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Activities.BookmarkOptions, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.BookmarkOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.BookmarkOptions</a>
  */
 public class BookmarkOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.BookmarkOptions
+     */
     public static final String className = "System.Activities.BookmarkOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class BookmarkOptions extends NetObject  {
 
     // Flags management section
 
-    public BookmarkOptions add(BookmarkOptions val) throws Throwable {
+    public final BookmarkOptions add(BookmarkOptions val) throws Throwable {
         return new BookmarkOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public BookmarkOptions remove(BookmarkOptions val) throws Throwable {
+    public final BookmarkOptions remove(BookmarkOptions val) throws Throwable {
         return new BookmarkOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(BookmarkOptions val) throws Throwable {
+    public final boolean is(BookmarkOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(BookmarkOptions val) throws Throwable {
+    public final boolean has(BookmarkOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Reflection.PortableExecutable.ResourceSectionBuilder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.ResourceSectionBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.ResourceSectionBuilder</a>
  */
 public class ResourceSectionBuilder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.PortableExecutable.ResourceSectionBuilder
+     */
     public static final String className = "System.Reflection.PortableExecutable.ResourceSectionBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ResourceSectionBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceSectionBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static ResourceSectionBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResourceSectionBuilder(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ResourceSectionBuilder extends NetObject  {
 
     // Constructors section
     
+    public ResourceSectionBuilder() throws Throwable {
+    }
 
     
     // Methods section

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.EventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ShutdownEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ShutdownEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ShutdownEventHandler</a>
+ */
 public interface IShutdownEventHandler {
     public void Invoke(NetObject sender, EventArgs e);
 }

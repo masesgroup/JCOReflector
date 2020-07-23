@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.Ecma335.MethodBodyAttributes, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.MethodBodyAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.MethodBodyAttributes</a>
  */
 public class MethodBodyAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.Ecma335.MethodBodyAttributes
+     */
     public static final String className = "System.Reflection.Metadata.Ecma335.MethodBodyAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class MethodBodyAttributes extends NetObject  {
 
     // Flags management section
 
-    public MethodBodyAttributes add(MethodBodyAttributes val) throws Throwable {
+    public final MethodBodyAttributes add(MethodBodyAttributes val) throws Throwable {
         return new MethodBodyAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MethodBodyAttributes remove(MethodBodyAttributes val) throws Throwable {
+    public final MethodBodyAttributes remove(MethodBodyAttributes val) throws Throwable {
         return new MethodBodyAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MethodBodyAttributes val) throws Throwable {
+    public final boolean is(MethodBodyAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MethodBodyAttributes val) throws Throwable {
+    public final boolean has(MethodBodyAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

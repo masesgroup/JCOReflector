@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.accesscontrol.AccessRule;
 import system.security.principal.IdentityReference;
 import system.security.accesscontrol.CryptoKeyRights;
 import system.security.accesscontrol.AccessControlType;
-import system.security.accesscontrol.InheritanceFlags;
-import system.security.accesscontrol.PropagationFlags;
 
 
 /**
  * The base .NET class managing System.Security.AccessControl.CryptoKeyAccessRule, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.CryptoKeyAccessRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.CryptoKeyAccessRule</a>
  */
-public class CryptoKeyAccessRule extends NetObject  {
+public class CryptoKeyAccessRule extends AccessRule  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.CryptoKeyAccessRule
+     */
     public static final String className = "System.Security.AccessControl.CryptoKeyAccessRule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class CryptoKeyAccessRule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CryptoKeyAccessRule}, a cast assert is made to check if types are compatible.
+     */
     public static CryptoKeyAccessRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CryptoKeyAccessRule(from.getJCOInstance());
@@ -113,6 +129,8 @@ public class CryptoKeyAccessRule extends NetObject  {
 
     // Constructors section
     
+    public CryptoKeyAccessRule() throws Throwable {
+    }
 
     public CryptoKeyAccessRule(IdentityReference identity, CryptoKeyRights cryptoKeyRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         try {
@@ -135,6 +153,7 @@ public class CryptoKeyAccessRule extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -142,66 +161,12 @@ public class CryptoKeyAccessRule extends NetObject  {
     
     // Properties section
     
-    public boolean getIsInherited() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInherited");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AccessControlType getAccessControlType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AccessControlType");
-            return new AccessControlType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CryptoKeyRights getCryptoKeyRights() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("CryptoKeyRights");
             return new CryptoKeyRights(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InheritanceFlags getInheritanceFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InheritanceFlags");
-            return new InheritanceFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropagationFlags getPropagationFlags() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropagationFlags");
-            return new PropagationFlags(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IdentityReference getIdentityReference() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IdentityReference");
-            return new IdentityReference(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

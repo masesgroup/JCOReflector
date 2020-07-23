@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.activities.NativeActivityFaultContext;
 import system.activities.ActivityInstance;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link FaultCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.FaultCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.FaultCallback</a>
+ */
 public interface IFaultCallback {
     public void Invoke(NativeActivityFaultContext faultContext, NetException propagatedException, ActivityInstance propagatedFrom);
 }

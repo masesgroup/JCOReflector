@@ -43,12 +43,29 @@ import system.windows.forms.IWin32WindowImplementation;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.CompilerServices.IVbHost, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.CompilerServices.IVbHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.CompilerServices.IVbHost</a>
  */
 public interface IVbHost extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
+    public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.CompilerServices.IVbHost
+     */
+    public static final String className = "Microsoft.VisualBasic.CompilerServices.IVbHost";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVbHost}, a cast assert is made to check if types are compatible.
+     */
     public static IVbHost ToIVbHost(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.VisualBasic.CompilerServices.IVbHost, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.VisualBasic"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IVbHostImplementation(from.getJCOInstance());
     }

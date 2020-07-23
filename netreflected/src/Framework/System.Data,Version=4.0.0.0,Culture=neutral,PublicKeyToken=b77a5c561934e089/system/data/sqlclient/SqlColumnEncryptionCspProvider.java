@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.sqlclient.SqlColumnEncryptionKeyStoreProvider;
 
 
 /**
  * The base .NET class managing System.Data.SqlClient.SqlColumnEncryptionCspProvider, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionCspProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionCspProvider</a>
  */
-public class SqlColumnEncryptionCspProvider extends NetObject  {
+public class SqlColumnEncryptionCspProvider extends SqlColumnEncryptionKeyStoreProvider  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlColumnEncryptionCspProvider
+     */
     public static final String className = "System.Data.SqlClient.SqlColumnEncryptionCspProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SqlColumnEncryptionCspProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlColumnEncryptionCspProvider}, a cast assert is made to check if types are compatible.
+     */
     public static SqlColumnEncryptionCspProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlColumnEncryptionCspProvider(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class SqlColumnEncryptionCspProvider extends NetObject  {
 
     // Constructors section
     
-
     public SqlColumnEncryptionCspProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -133,6 +150,16 @@ public class SqlColumnEncryptionCspProvider extends NetObject  {
         }
     }
 
+    public boolean VerifyColumnMasterKeyMetadata(java.lang.String dupParam0, boolean dupParam1, JCRefOut dupParam2) throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("VerifyColumnMasterKeyMetadata", dupParam0, dupParam1, dupParam2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] DecryptColumnEncryptionKey(java.lang.String masterKeyPath, java.lang.String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException, system.RankException, system.OutOfMemoryException, system.security.accesscontrol.PrivilegeNotHeldException, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ApplicationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -152,12 +179,50 @@ public class SqlColumnEncryptionCspProvider extends NetObject  {
         }
     }
 
+    public byte[] DecryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException, system.RankException, system.OutOfMemoryException, system.security.accesscontrol.PrivilegeNotHeldException, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ApplicationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexDecryptColumnEncryptionKey = 0; indexDecryptColumnEncryptionKey < resultingArrayList.size(); indexDecryptColumnEncryptionKey++ ) {
+				resultingArray[indexDecryptColumnEncryptionKey] = (byte)resultingArrayList.get(indexDecryptColumnEncryptionKey);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] EncryptColumnEncryptionKey(java.lang.String masterKeyPath, java.lang.String encryptionAlgorithm, byte[] columnEncryptionKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException, system.RankException, system.OutOfMemoryException, system.security.accesscontrol.PrivilegeNotHeldException, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ApplicationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptColumnEncryptionKey", masterKeyPath, encryptionAlgorithm, columnEncryptionKey);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexEncryptColumnEncryptionKey = 0; indexEncryptColumnEncryptionKey < resultingArrayList.size(); indexEncryptColumnEncryptionKey++ ) {
+				resultingArray[indexEncryptColumnEncryptionKey] = (byte)resultingArrayList.get(indexEncryptColumnEncryptionKey);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] EncryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException, system.RankException, system.OutOfMemoryException, system.security.accesscontrol.PrivilegeNotHeldException, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ApplicationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

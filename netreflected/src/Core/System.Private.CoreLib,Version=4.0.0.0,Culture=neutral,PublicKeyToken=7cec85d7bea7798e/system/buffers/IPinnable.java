@@ -42,12 +42,29 @@ import system.buffers.MemoryHandle;
 
 /**
  * The base .NET class managing System.Buffers.IPinnable, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.IPinnable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.IPinnable</a>
  */
 public interface IPinnable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Buffers.IPinnable
+     */
+    public static final String className = "System.Buffers.IPinnable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPinnable}, a cast assert is made to check if types are compatible.
+     */
     public static IPinnable ToIPinnable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Buffers.IPinnable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPinnableImplementation(from.getJCOInstance());
     }

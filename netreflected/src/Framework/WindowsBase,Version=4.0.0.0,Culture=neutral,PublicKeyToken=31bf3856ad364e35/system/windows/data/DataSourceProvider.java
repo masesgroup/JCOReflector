@@ -45,12 +45,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Windows.Data.DataSourceProvider, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.DataSourceProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.DataSourceProvider</a>
  */
 public class DataSourceProvider extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Data.DataSourceProvider
+     */
     public static final String className = "System.Windows.Data.DataSourceProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class DataSourceProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataSourceProvider}, a cast assert is made to check if types are compatible.
+     */
     public static DataSourceProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataSourceProvider(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class DataSourceProvider extends NetObject  {
 
     // Constructors section
     
+    public DataSourceProvider() throws Throwable {
+    }
 
     
     // Methods section

@@ -43,12 +43,27 @@ import system.xaml.AttachableMemberIdentifier;
 
 /**
  * The base .NET class managing System.Xaml.IAttachedPropertyStore, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IAttachedPropertyStore" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IAttachedPropertyStore</a>
  */
 public class IAttachedPropertyStoreImplementation extends NetObject implements IAttachedPropertyStore {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.IAttachedPropertyStore
+     */
     public static final String className = "System.Xaml.IAttachedPropertyStore";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAttachedPropertyStore}, a cast assert is made to check if types are compatible.
+     */
     public static IAttachedPropertyStore ToIAttachedPropertyStore(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IAttachedPropertyStoreImplementation(from.getJCOInstance());

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Diagnostics.TraceOptions, System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.TraceOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.TraceOptions</a>
  */
 public class TraceOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.TraceSource
+     */
     public static final String assemblyShortName = "System.Diagnostics.TraceSource";
+    /**
+     * Qualified class name: System.Diagnostics.TraceOptions
+     */
     public static final String className = "System.Diagnostics.TraceOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class TraceOptions extends NetObject  {
 
     // Flags management section
 
-    public TraceOptions add(TraceOptions val) throws Throwable {
+    public final TraceOptions add(TraceOptions val) throws Throwable {
         return new TraceOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public TraceOptions remove(TraceOptions val) throws Throwable {
+    public final TraceOptions remove(TraceOptions val) throws Throwable {
         return new TraceOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(TraceOptions val) throws Throwable {
+    public final boolean is(TraceOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(TraceOptions val) throws Throwable {
+    public final boolean has(TraceOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewRowStateChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewRowStateChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowStateChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowStateChangedEventHandler</a>
+ */
 public interface IDataGridViewRowStateChangedEventHandler {
     public void Invoke(NetObject sender, DataGridViewRowStateChangedEventArgs e);
 }

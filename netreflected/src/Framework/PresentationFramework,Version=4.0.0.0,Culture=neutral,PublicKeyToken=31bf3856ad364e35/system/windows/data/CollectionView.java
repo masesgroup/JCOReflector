@@ -38,25 +38,40 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.threading.DispatcherObject;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
 import system.componentmodel.SortDescriptionCollection;
 import system.globalization.CultureInfo;
-import system.windows.threading.Dispatcher;
 import system.componentmodel.CurrentChangingEventHandler;
 import system.EventHandler;
 
 
 /**
  * The base .NET class managing System.Windows.Data.CollectionView, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CollectionView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CollectionView</a>
  */
-public class CollectionView extends NetObject  {
+public class CollectionView extends DispatcherObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Data.CollectionView
+     */
     public static final String className = "System.Windows.Data.CollectionView";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class CollectionView extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CollectionView}, a cast assert is made to check if types are compatible.
+     */
     public static CollectionView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CollectionView(from.getJCOInstance());
@@ -117,6 +134,8 @@ public class CollectionView extends NetObject  {
 
     // Constructors section
     
+    public CollectionView() throws Throwable {
+    }
 
     public CollectionView(IEnumerable collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException {
         try {
@@ -129,19 +148,10 @@ public class CollectionView extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Contains(NetObject item) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -269,16 +279,6 @@ public class CollectionView extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void VerifyAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("VerifyAccess");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,23 +453,12 @@ public class CollectionView extends NetObject  {
         }
     }
 
-    public static NetObject getNewItemPlaceholder() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("NewItemPlaceholder");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Dispatcher getDispatcher() throws Throwable {
+    public NetObject getNewItemPlaceholder() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
-            return new Dispatcher(val);
+            JCObject val = (JCObject)classInstance.Get("NewItemPlaceholder");
+            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

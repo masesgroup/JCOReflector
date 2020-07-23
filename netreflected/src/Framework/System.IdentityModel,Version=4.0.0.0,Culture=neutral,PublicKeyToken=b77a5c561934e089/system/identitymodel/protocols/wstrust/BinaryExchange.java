@@ -43,12 +43,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.BinaryExchange, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.BinaryExchange" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.BinaryExchange</a>
  */
 public class BinaryExchange extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Protocols.WSTrust.BinaryExchange
+     */
     public static final String className = "System.IdentityModel.Protocols.WSTrust.BinaryExchange";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class BinaryExchange extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BinaryExchange}, a cast assert is made to check if types are compatible.
+     */
     public static BinaryExchange cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BinaryExchange(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class BinaryExchange extends NetObject  {
 
     // Constructors section
     
+    public BinaryExchange() throws Throwable {
+    }
 
     public BinaryExchange(byte[] binaryData, Uri valueType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         try {
@@ -129,6 +148,7 @@ public class BinaryExchange extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

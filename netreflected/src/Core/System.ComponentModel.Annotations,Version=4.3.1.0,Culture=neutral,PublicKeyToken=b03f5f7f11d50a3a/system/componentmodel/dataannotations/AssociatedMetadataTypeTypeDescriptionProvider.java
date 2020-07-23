@@ -38,22 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
+import system.componentmodel.TypeDescriptionProvider;
 import system.componentmodel.ICustomTypeDescriptor;
 import system.componentmodel.ICustomTypeDescriptorImplementation;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider, System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider</a>
  */
-public class AssociatedMetadataTypeTypeDescriptionProvider extends NetObject  {
+public class AssociatedMetadataTypeTypeDescriptionProvider extends TypeDescriptionProvider  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.Annotations
+     */
     public static final String assemblyShortName = "System.ComponentModel.Annotations";
+    /**
+     * Qualified class name: System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider
+     */
     public static final String className = "System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +118,9 @@ public class AssociatedMetadataTypeTypeDescriptionProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssociatedMetadataTypeTypeDescriptionProvider}, a cast assert is made to check if types are compatible.
+     */
     public static AssociatedMetadataTypeTypeDescriptionProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AssociatedMetadataTypeTypeDescriptionProvider(from.getJCOInstance());
@@ -114,6 +128,8 @@ public class AssociatedMetadataTypeTypeDescriptionProvider extends NetObject  {
 
     // Constructors section
     
+    public AssociatedMetadataTypeTypeDescriptionProvider() throws Throwable {
+    }
 
     public AssociatedMetadataTypeTypeDescriptionProvider(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
@@ -136,134 +152,16 @@ public class AssociatedMetadataTypeTypeDescriptionProvider extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsSupportedType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSupportedType", type == null ? null : type.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary GetCache(NetObject instance) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCache = (JCObject)classInstance.Invoke("GetCache", instance == null ? null : instance.getJCOInstance());
-            return new IDictionaryImplementation(objGetCache);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ICustomTypeDescriptor GetExtendedTypeDescriptor(NetObject instance) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetExtendedTypeDescriptor = (JCObject)classInstance.Invoke("GetExtendedTypeDescriptor", instance == null ? null : instance.getJCOInstance());
-            return new ICustomTypeDescriptorImplementation(objGetExtendedTypeDescriptor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ICustomTypeDescriptor GetTypeDescriptor(NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", instance == null ? null : instance.getJCOInstance());
-            return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance());
-            return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
             return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject CreateInstance(IServiceProvider provider, NetType objectType, NetType[] argTypes, NetObject[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", provider == null ? null : provider.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), toObjectFromArray(argTypes), toObjectFromArray(args));
-            return new NetObject(objCreateInstance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetFullComponentName(NetObject component) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetFullComponentName", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetReflectionType(NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", instance == null ? null : instance.getJCOInstance());
-            return new NetType(objGetReflectionType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetReflectionType(NetType objectType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance());
-            return new NetType(objGetReflectionType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetReflectionType(NetType objectType, NetObject instance) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
-            return new NetType(objGetReflectionType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType GetRuntimeType(NetType reflectionType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRuntimeType = (JCObject)classInstance.Invoke("GetRuntimeType", reflectionType == null ? null : reflectionType.getJCOInstance());
-            return new NetType(objGetRuntimeType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

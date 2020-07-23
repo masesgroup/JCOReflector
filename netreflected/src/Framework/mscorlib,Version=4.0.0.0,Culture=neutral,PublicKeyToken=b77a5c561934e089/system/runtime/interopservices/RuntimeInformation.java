@@ -44,12 +44,27 @@ import system.runtime.interopservices.Architecture;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.RuntimeInformation, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.RuntimeInformation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.RuntimeInformation</a>
  */
 public class RuntimeInformation extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.RuntimeInformation
+     */
     public static final String className = "System.Runtime.InteropServices.RuntimeInformation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class RuntimeInformation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuntimeInformation}, a cast assert is made to check if types are compatible.
+     */
     public static RuntimeInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RuntimeInformation(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class RuntimeInformation extends NetObject  {
 
     // Constructors section
     
+    public RuntimeInformation() throws Throwable {
+    }
 
     
     // Methods section
@@ -128,43 +147,43 @@ public class RuntimeInformation extends NetObject  {
     
     // Properties section
     
-    public static Architecture getOSArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Architecture getOSArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OSArchitecture");
+            JCObject val = (JCObject)classInstance.Get("OSArchitecture");
             return new Architecture(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Architecture getProcessArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Architecture getProcessArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ProcessArchitecture");
+            JCObject val = (JCObject)classInstance.Get("ProcessArchitecture");
             return new Architecture(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getFrameworkDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getFrameworkDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("FrameworkDescription");
+            return (java.lang.String)classInstance.Get("FrameworkDescription");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getOSDescription() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getOSDescription() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("OSDescription");
+            return (java.lang.String)classInstance.Get("OSDescription");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

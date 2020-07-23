@@ -50,12 +50,27 @@ import system.reflection.emit.CustomAttributeBuilder;
 
 /**
  * The base .NET class managing System.Text.RegularExpressions.Regex, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.Regex" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.Regex</a>
  */
 public class Regex extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Text.RegularExpressions.Regex
+     */
     public static final String className = "System.Text.RegularExpressions.Regex";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class Regex extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Regex}, a cast assert is made to check if types are compatible.
+     */
     public static Regex cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Regex(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class Regex extends NetObject  {
 
     // Constructors section
     
+    public Regex() throws Throwable {
+    }
 
     public Regex(java.lang.String pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.RankException, system.security.SecurityException {
         try {
@@ -146,6 +165,7 @@ public class Regex extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -678,21 +698,21 @@ public class Regex extends NetObject  {
         }
     }
 
-    public static int getCacheSize() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getCacheSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("CacheSize");
+            return (int)classInstance.Get("CacheSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCacheSize(int CacheSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCacheSize(int CacheSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CacheSize", CacheSize);
+            classInstance.Set("CacheSize", CacheSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

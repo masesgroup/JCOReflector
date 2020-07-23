@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Decimal;
 import system.data.sqltypes.SqlDecimal;
 import system.data.sqltypes.SqlBoolean;
@@ -55,12 +56,27 @@ import system.xml.schema.XmlSchemaSet;
 
 /**
  * The base .NET class managing System.Data.SqlTypes.SqlDecimal, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlDecimal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlDecimal</a>
  */
-public class SqlDecimal extends NetObject  {
+public class SqlDecimal extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.SqlTypes.SqlDecimal
+     */
     public static final String className = "System.Data.SqlTypes.SqlDecimal";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -113,7 +129,9 @@ public class SqlDecimal extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlDecimal}, a cast assert is made to check if types are compatible.
+     */
     public static SqlDecimal cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlDecimal(from.getJCOInstance());
@@ -121,6 +139,8 @@ public class SqlDecimal extends NetObject  {
 
     // Constructors section
     
+    public SqlDecimal() throws Throwable {
+    }
 
     public SqlDecimal(byte bPrecision, byte bScale, boolean fPositive, int data1, int data2, int data3, int data4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException, system.OverflowException {
         try {
@@ -181,6 +201,7 @@ public class SqlDecimal extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

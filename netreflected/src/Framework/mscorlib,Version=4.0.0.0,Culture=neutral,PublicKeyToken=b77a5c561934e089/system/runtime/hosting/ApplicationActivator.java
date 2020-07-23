@@ -44,12 +44,27 @@ import system.ActivationContext;
 
 /**
  * The base .NET class managing System.Runtime.Hosting.ApplicationActivator, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Hosting.ApplicationActivator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Hosting.ApplicationActivator</a>
  */
 public class ApplicationActivator extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Hosting.ApplicationActivator
+     */
     public static final String className = "System.Runtime.Hosting.ApplicationActivator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ApplicationActivator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationActivator}, a cast assert is made to check if types are compatible.
+     */
     public static ApplicationActivator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ApplicationActivator(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class ApplicationActivator extends NetObject  {
 
     // Constructors section
     
-
     public ApplicationActivator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -141,6 +157,17 @@ public class ApplicationActivator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", activationContext == null ? null : activationContext.getJCOInstance(), activationCustomData);
+            return new ObjectHandle(objCreateInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObjectHandle CreateInstance(ActivationContext dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.OutOfMemoryException, system.MemberAccessException, system.io.IOException, system.security.policy.PolicyException, system.RankException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.runtime.remoting.RemotingException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
             return new ObjectHandle(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.IContainsThemedScrollbarWindows, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.IContainsThemedScrollbarWindows" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.IContainsThemedScrollbarWindows</a>
  */
 public class IContainsThemedScrollbarWindowsImplementation extends NetObject implements IContainsThemedScrollbarWindows {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.IContainsThemedScrollbarWindows
+     */
     public static final String className = "System.Windows.Forms.Design.IContainsThemedScrollbarWindows";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IContainsThemedScrollbarWindowsImplementation extends NetObject imp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContainsThemedScrollbarWindows}, a cast assert is made to check if types are compatible.
+     */
     public static IContainsThemedScrollbarWindows ToIContainsThemedScrollbarWindows(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IContainsThemedScrollbarWindowsImplementation(from.getJCOInstance());

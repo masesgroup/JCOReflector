@@ -44,12 +44,27 @@ import system.windows.markup.XamlTypeMapper;
 
 /**
  * The base .NET class managing System.Windows.Markup.XamlTypeMapper, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlTypeMapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlTypeMapper</a>
  */
 public class XamlTypeMapper extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Markup.XamlTypeMapper
+     */
     public static final String className = "System.Windows.Markup.XamlTypeMapper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class XamlTypeMapper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlTypeMapper}, a cast assert is made to check if types are compatible.
+     */
     public static XamlTypeMapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlTypeMapper(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class XamlTypeMapper extends NetObject  {
 
     // Constructors section
     
+    public XamlTypeMapper() throws Throwable {
+    }
 
     public XamlTypeMapper(java.lang.String[] assemblyNames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -130,6 +149,7 @@ public class XamlTypeMapper extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -170,11 +190,11 @@ public class XamlTypeMapper extends NetObject  {
     
     // Properties section
     
-    public static XamlTypeMapper getDefaultMapper() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public XamlTypeMapper getDefaultMapper() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultMapper");
+            JCObject val = (JCObject)classInstance.Get("DefaultMapper");
             return new XamlTypeMapper(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

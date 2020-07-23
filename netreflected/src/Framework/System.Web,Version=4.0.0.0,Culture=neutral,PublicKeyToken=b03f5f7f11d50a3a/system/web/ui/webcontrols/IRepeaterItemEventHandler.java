@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.RepeaterItemEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link RepeaterItemEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.RepeaterItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.RepeaterItemEventHandler</a>
+ */
 public interface IRepeaterItemEventHandler {
     public void Invoke(NetObject sender, RepeaterItemEventArgs e);
 }

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.runtime.hosting.WorkflowCommitWorkBatchService;
 import system.collections.specialized.NameValueCollection;
 
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService</a>
  */
-public class DefaultWorkflowCommitWorkBatchService extends NetObject  {
+public class DefaultWorkflowCommitWorkBatchService extends WorkflowCommitWorkBatchService  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService
+     */
     public static final String className = "System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DefaultWorkflowCommitWorkBatchService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultWorkflowCommitWorkBatchService}, a cast assert is made to check if types are compatible.
+     */
     public static DefaultWorkflowCommitWorkBatchService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DefaultWorkflowCommitWorkBatchService(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class DefaultWorkflowCommitWorkBatchService extends NetObject  {
 
     // Constructors section
     
-
     public DefaultWorkflowCommitWorkBatchService() throws Throwable {
         try {
             // add reference to assemblyName.dll file

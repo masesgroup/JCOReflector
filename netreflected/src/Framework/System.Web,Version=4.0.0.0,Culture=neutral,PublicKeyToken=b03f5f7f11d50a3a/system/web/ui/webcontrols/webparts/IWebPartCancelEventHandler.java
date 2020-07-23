@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.webparts.WebPartCancelEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WebPartCancelEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartCancelEventHandler</a>
+ */
 public interface IWebPartCancelEventHandler {
     public void Invoke(NetObject sender, WebPartCancelEventArgs e);
 }

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.security.SecurityCredentialsManager;
 import system.identitymodel.selectors.SecurityTokenManager;
 import system.servicemodel.description.ServiceCredentials;
 import system.identitymodel.configuration.IdentityConfiguration;
@@ -53,12 +54,27 @@ import system.servicemodel.security.X509CertificateRecipientServiceCredential;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.ServiceCredentials, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceCredentials" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceCredentials</a>
  */
-public class ServiceCredentials extends NetObject  {
+public class ServiceCredentials extends SecurityCredentialsManager  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.ServiceCredentials
+     */
     public static final String className = "System.ServiceModel.Description.ServiceCredentials";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +127,9 @@ public class ServiceCredentials extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceCredentials}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceCredentials cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceCredentials(from.getJCOInstance());
@@ -119,7 +137,6 @@ public class ServiceCredentials extends NetObject  {
 
     // Constructors section
     
-
     public ServiceCredentials() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.MissingMethodException, system.TypeLoadException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

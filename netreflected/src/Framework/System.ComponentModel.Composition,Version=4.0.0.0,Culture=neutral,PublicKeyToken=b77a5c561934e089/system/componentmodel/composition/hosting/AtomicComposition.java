@@ -44,12 +44,27 @@ import system.Action;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.AtomicComposition, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.AtomicComposition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.AtomicComposition</a>
  */
 public class AtomicComposition extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.AtomicComposition
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.AtomicComposition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class AtomicComposition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AtomicComposition}, a cast assert is made to check if types are compatible.
+     */
     public static AtomicComposition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AtomicComposition(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class AtomicComposition extends NetObject  {
 
     // Constructors section
     
-
     public AtomicComposition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file

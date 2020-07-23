@@ -44,12 +44,27 @@ import system.xml.XmlDictionaryString;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.SecureConversationVersion, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecureConversationVersion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecureConversationVersion</a>
  */
 public class SecureConversationVersion extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.SecureConversationVersion
+     */
     public static final String className = "System.ServiceModel.Security.SecureConversationVersion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class SecureConversationVersion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecureConversationVersion}, a cast assert is made to check if types are compatible.
+     */
     public static SecureConversationVersion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecureConversationVersion(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class SecureConversationVersion extends NetObject  {
 
     // Constructors section
     
+    public SecureConversationVersion() throws Throwable {
+    }
 
     
     // Methods section
@@ -118,33 +137,33 @@ public class SecureConversationVersion extends NetObject  {
     
     // Properties section
     
-    public static SecureConversationVersion getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecureConversationVersion getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new SecureConversationVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecureConversationVersion getWSSecureConversation13() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecureConversationVersion getWSSecureConversation13() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecureConversation13");
+            JCObject val = (JCObject)classInstance.Get("WSSecureConversation13");
             return new SecureConversationVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SecureConversationVersion getWSSecureConversationFeb2005() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SecureConversationVersion getWSSecureConversationFeb2005() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSSecureConversationFeb2005");
+            JCObject val = (JCObject)classInstance.Get("WSSecureConversationFeb2005");
             return new SecureConversationVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

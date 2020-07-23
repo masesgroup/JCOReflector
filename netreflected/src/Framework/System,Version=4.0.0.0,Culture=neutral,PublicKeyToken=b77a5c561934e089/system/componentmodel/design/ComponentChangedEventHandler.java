@@ -42,12 +42,27 @@ import system.componentmodel.design.ComponentChangedEventArgs;
 import system.componentmodel.design.IComponentChangedEventHandler;
 /**
  * The base .NET class managing System.ComponentModel.Design.ComponentChangedEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangedEventHandler</a>
  */
 public class ComponentChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ComponentChangedEventHandler
+     */
     public static final String className = "System.ComponentModel.Design.ComponentChangedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IComponentChangedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ComponentChangedEventHandler extends JCVoidDelegate implements IJCV
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ComponentChangedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ComponentChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ComponentChangedEventHandler extends JCVoidDelegate implements IJCV
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ComponentChangedEventArgs e) {
     }
 }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.AuthenticationSchemes, System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemes</a>
  */
 public class AuthenticationSchemes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Primitives
+     */
     public static final String assemblyShortName = "System.Net.Primitives";
+    /**
+     * Qualified class name: System.Net.AuthenticationSchemes
+     */
     public static final String className = "System.Net.AuthenticationSchemes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class AuthenticationSchemes extends NetObject  {
 
     // Flags management section
 
-    public AuthenticationSchemes add(AuthenticationSchemes val) throws Throwable {
+    public final AuthenticationSchemes add(AuthenticationSchemes val) throws Throwable {
         return new AuthenticationSchemes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AuthenticationSchemes remove(AuthenticationSchemes val) throws Throwable {
+    public final AuthenticationSchemes remove(AuthenticationSchemes val) throws Throwable {
         return new AuthenticationSchemes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AuthenticationSchemes val) throws Throwable {
+    public final boolean is(AuthenticationSchemes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AuthenticationSchemes val) throws Throwable {
+    public final boolean has(AuthenticationSchemes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

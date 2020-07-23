@@ -42,12 +42,29 @@ import system.Action;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.INotifyCompletion, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.INotifyCompletion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.INotifyCompletion</a>
  */
 public interface INotifyCompletion extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.INotifyCompletion
+     */
+    public static final String className = "System.Runtime.CompilerServices.INotifyCompletion";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyCompletion}, a cast assert is made to check if types are compatible.
+     */
     public static INotifyCompletion ToINotifyCompletion(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Runtime.CompilerServices.INotifyCompletion, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INotifyCompletionImplementation(from.getJCOInstance());
     }

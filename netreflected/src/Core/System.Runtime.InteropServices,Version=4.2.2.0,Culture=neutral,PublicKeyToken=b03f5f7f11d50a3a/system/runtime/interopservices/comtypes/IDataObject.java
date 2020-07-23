@@ -44,12 +44,29 @@ import system.runtime.interopservices.comtypes.DATADIR;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.IDataObject, System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject</a>
  */
 public interface IDataObject extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.InteropServices
+     */
+    public static final String assemblyShortName = "System.Runtime.InteropServices";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.IDataObject
+     */
+    public static final String className = "System.Runtime.InteropServices.ComTypes.IDataObject";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataObject}, a cast assert is made to check if types are compatible.
+     */
     public static IDataObject ToIDataObject(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices.ComTypes.IDataObject, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Runtime.InteropServices"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDataObjectImplementation(from.getJCOInstance());
     }

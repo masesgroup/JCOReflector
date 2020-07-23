@@ -46,12 +46,27 @@ import system.componentmodel.ISynchronizeInvokeImplementation;
 
 /**
  * The base .NET class managing System.Net.PeerToPeer.Collaboration.PeerEndPoint, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerEndPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerEndPoint</a>
  */
 public class PeerEndPoint extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.PeerToPeer.Collaboration.PeerEndPoint
+     */
     public static final String className = "System.Net.PeerToPeer.Collaboration.PeerEndPoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class PeerEndPoint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeerEndPoint}, a cast assert is made to check if types are compatible.
+     */
     public static PeerEndPoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PeerEndPoint(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class PeerEndPoint extends NetObject  {
 
     // Constructors section
     
-
     public PeerEndPoint() throws Throwable {
         try {
             // add reference to assemblyName.dll file

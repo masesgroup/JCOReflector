@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.jscript.UnaryOp;
 
 
 /**
  * The base .NET class managing Microsoft.JScript.Typeof, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Typeof" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Typeof</a>
  */
-public class Typeof extends NetObject  {
+public class Typeof extends UnaryOp  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.Typeof
+     */
     public static final String className = "Microsoft.JScript.Typeof";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class Typeof extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Typeof}, a cast assert is made to check if types are compatible.
+     */
     public static Typeof cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Typeof(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class Typeof extends NetObject  {
 
     // Constructors section
     
+    public Typeof() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.AccessControl.AccessControlActions, System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AccessControlActions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AccessControlActions</a>
  */
 public class AccessControlActions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.AccessControl
+     */
     public static final String assemblyShortName = "System.Security.AccessControl";
+    /**
+     * Qualified class name: System.Security.AccessControl.AccessControlActions
+     */
     public static final String className = "System.Security.AccessControl.AccessControlActions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class AccessControlActions extends NetObject  {
 
     // Flags management section
 
-    public AccessControlActions add(AccessControlActions val) throws Throwable {
+    public final AccessControlActions add(AccessControlActions val) throws Throwable {
         return new AccessControlActions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AccessControlActions remove(AccessControlActions val) throws Throwable {
+    public final AccessControlActions remove(AccessControlActions val) throws Throwable {
         return new AccessControlActions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AccessControlActions val) throws Throwable {
+    public final boolean is(AccessControlActions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AccessControlActions val) throws Throwable {
+    public final boolean has(AccessControlActions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

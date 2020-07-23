@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.documents.serialization.WritingCancelledEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WritingCancelledEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingCancelledEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingCancelledEventHandler</a>
+ */
 public interface IWritingCancelledEventHandler {
     public void Invoke(NetObject sender, WritingCancelledEventArgs e);
 }

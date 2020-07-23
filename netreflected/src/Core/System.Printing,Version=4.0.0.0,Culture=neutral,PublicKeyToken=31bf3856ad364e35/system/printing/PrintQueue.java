@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.printing.PrintSystemObject;
 import system.printing.PrintServer;
 import system.printing.PrintSystemDesiredAccess;
 import system.printing.PrintQueueIndexedProperty;
@@ -50,24 +51,37 @@ import system.printing.ValidationResult;
 import system.printing.PrintTicketScope;
 import system.windows.xps.XpsDocumentWriter;
 import system.printing.PrintQueue;
-import system.printing.indexedproperties.PrintPropertyDictionary;
 import system.printing.PrintDriver;
 import system.printing.PrintJobSettings;
 import system.printing.PrintPort;
 import system.printing.PrintProcessor;
 import system.printing.PrintQueueAttributes;
 import system.printing.PrintQueueStatus;
-import system.printing.PrintSystemObject;
 
 
 /**
  * The base .NET class managing System.Printing.PrintQueue, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueue</a>
  */
-public class PrintQueue extends NetObject  {
+public class PrintQueue extends PrintSystemObject  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Printing.PrintQueue
+     */
     public static final String className = "System.Printing.PrintQueue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -120,7 +134,9 @@ public class PrintQueue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintQueue}, a cast assert is made to check if types are compatible.
+     */
     public static PrintQueue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrintQueue(from.getJCOInstance());
@@ -128,6 +144,8 @@ public class PrintQueue extends NetObject  {
 
     // Constructors section
     
+    public PrintQueue() throws Throwable {
+    }
 
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
@@ -208,6 +226,7 @@ public class PrintQueue extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -362,6 +381,56 @@ public class PrintQueue extends NetObject  {
         try {
             JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", printQueue == null ? null : printQueue.getJCOInstance());
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Commit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.printing.PrintCommitAttributesException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Commit");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Pause() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Pause");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Purge() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Purge");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Refresh() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.reflection.AmbiguousMatchException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Refresh");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Resume() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Resume");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -821,11 +890,11 @@ public class PrintQueue extends NetObject  {
         }
     }
 
-    public static int getMaxPrintSchemaVersion() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getMaxPrintSchemaVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("MaxPrintSchemaVersion");
+            return (int)classInstance.Get("MaxPrintSchemaVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -906,27 +975,6 @@ public class PrintQueue extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UntilTimeOfDay", UntilTimeOfDay);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PrintPropertyDictionary getPropertiesCollection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropertiesCollection");
-            return new PrintPropertyDictionary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPropertiesCollection(PrintPropertyDictionary PropertiesCollection) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PropertiesCollection", PropertiesCollection == null ? null : PropertiesCollection.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1049,17 +1097,6 @@ public class PrintQueue extends NetObject  {
         }
     }
 
-    public PrintSystemObject getParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new PrintSystemObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PrintTicket getDefaultPrintTicket() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -1167,26 +1204,6 @@ public class PrintQueue extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -43,12 +43,27 @@ import system.activities.LocationReferenceEnvironment;
 
 /**
  * The base .NET class managing System.Activities.Hosting.SymbolResolver, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Hosting.SymbolResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Hosting.SymbolResolver</a>
  */
 public class SymbolResolver extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Hosting.SymbolResolver
+     */
     public static final String className = "System.Activities.Hosting.SymbolResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SymbolResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SymbolResolver}, a cast assert is made to check if types are compatible.
+     */
     public static SymbolResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SymbolResolver(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SymbolResolver extends NetObject  {
 
     // Constructors section
     
-
     public SymbolResolver() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.automation.AutomationIdentifier;
 import system.windows.automation.AutomationPattern;
 import system.windows.automation.AutomationProperty;
 import system.windows.automation.ControlType;
@@ -45,12 +46,27 @@ import system.windows.automation.ControlType;
 
 /**
  * The base .NET class managing System.Windows.Automation.ControlType, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.ControlType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.ControlType</a>
  */
-public class ControlType extends NetObject  {
+public class ControlType extends AutomationIdentifier  {
+    /**
+     * Fully assembly qualified name: UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationTypes
+     */
     public static final String assemblyShortName = "UIAutomationTypes";
+    /**
+     * Qualified class name: System.Windows.Automation.ControlType
+     */
     public static final String className = "System.Windows.Automation.ControlType";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class ControlType extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ControlType}, a cast assert is made to check if types are compatible.
+     */
     public static ControlType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ControlType(from.getJCOInstance());
@@ -111,20 +129,14 @@ public class ControlType extends NetObject  {
 
     // Constructors section
     
+    public ControlType() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public int CompareTo(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AutomationPattern[] GetNeverSupportedPatterns() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -174,31 +186,11 @@ public class ControlType extends NetObject  {
     
     // Properties section
     
-    public int getId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Id");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getLocalizedControlType() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.reflection.AmbiguousMatchException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("LocalizedControlType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getProgrammaticName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ProgrammaticName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

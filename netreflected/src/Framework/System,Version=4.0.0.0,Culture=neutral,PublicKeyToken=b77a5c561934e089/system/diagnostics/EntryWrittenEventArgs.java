@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.diagnostics.EventLogEntry;
 
 
 /**
  * The base .NET class managing System.Diagnostics.EntryWrittenEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EntryWrittenEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EntryWrittenEventArgs</a>
  */
-public class EntryWrittenEventArgs extends NetObject  {
+public class EntryWrittenEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Diagnostics.EntryWrittenEventArgs
+     */
     public static final String className = "System.Diagnostics.EntryWrittenEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class EntryWrittenEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntryWrittenEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static EntryWrittenEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EntryWrittenEventArgs(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class EntryWrittenEventArgs extends NetObject  {
 
     // Constructors section
     
-
     public EntryWrittenEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file

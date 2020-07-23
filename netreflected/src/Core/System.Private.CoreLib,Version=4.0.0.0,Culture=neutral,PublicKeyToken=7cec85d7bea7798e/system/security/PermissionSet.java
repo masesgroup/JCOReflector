@@ -48,12 +48,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Security.PermissionSet, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.PermissionSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.PermissionSet</a>
  */
 public class PermissionSet extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Security.PermissionSet
+     */
     public static final String className = "System.Security.PermissionSet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class PermissionSet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PermissionSet}, a cast assert is made to check if types are compatible.
+     */
     public static PermissionSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PermissionSet(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class PermissionSet extends NetObject  {
 
     // Constructors section
     
+    public PermissionSet() throws Throwable {
+    }
 
     public PermissionSet(PermissionState state) throws Throwable {
         try {
@@ -134,6 +153,7 @@ public class PermissionSet extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -185,6 +205,25 @@ public class PermissionSet extends NetObject  {
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("ConvertPermissionSet", inFormat, inData, outFormat);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexConvertPermissionSet = 0; indexConvertPermissionSet < resultingArrayList.size(); indexConvertPermissionSet++ ) {
+				resultingArray[indexConvertPermissionSet] = (byte)resultingArrayList.get(indexConvertPermissionSet);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte[] ConvertPermissionSet(java.lang.String dupParam0, JCRefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("ConvertPermissionSet", dupParam0, dupParam1, dupParam2);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.Size;
 import system.windows.controls.HierarchicalVirtualizationHeaderDesiredSizes;
 
 
 /**
  * The base .NET class managing System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes</a>
  */
-public class HierarchicalVirtualizationHeaderDesiredSizes extends NetObject  {
+public class HierarchicalVirtualizationHeaderDesiredSizes extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes
+     */
     public static final String className = "System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HierarchicalVirtualizationHeaderDesiredSizes}, a cast assert is made to check if types are compatible.
+     */
     public static HierarchicalVirtualizationHeaderDesiredSizes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HierarchicalVirtualizationHeaderDesiredSizes(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends NetObject  {
 
     // Constructors section
     
+    public HierarchicalVirtualizationHeaderDesiredSizes() throws Throwable {
+    }
 
     public HierarchicalVirtualizationHeaderDesiredSizes(Size logicalSize, Size pixelSize) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

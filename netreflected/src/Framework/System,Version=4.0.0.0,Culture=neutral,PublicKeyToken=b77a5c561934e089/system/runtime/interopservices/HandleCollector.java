@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.HandleCollector, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.HandleCollector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.HandleCollector</a>
  */
 public class HandleCollector extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.HandleCollector
+     */
     public static final String className = "System.Runtime.InteropServices.HandleCollector";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class HandleCollector extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HandleCollector}, a cast assert is made to check if types are compatible.
+     */
     public static HandleCollector cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HandleCollector(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class HandleCollector extends NetObject  {
 
     // Constructors section
     
+    public HandleCollector() throws Throwable {
+    }
 
     public HandleCollector(java.lang.String name, int initialThreshold) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -128,6 +147,7 @@ public class HandleCollector extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

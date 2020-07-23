@@ -38,29 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.IBuildEngine;
-import microsoft.build.framework.IBuildEngineImplementation;
-import microsoft.build.framework.IBuildEngine2;
-import microsoft.build.framework.IBuildEngine2Implementation;
-import microsoft.build.framework.IBuildEngine3;
-import microsoft.build.framework.IBuildEngine3Implementation;
-import microsoft.build.framework.IBuildEngine4;
-import microsoft.build.framework.IBuildEngine4Implementation;
-import microsoft.build.framework.ITaskHost;
-import microsoft.build.framework.ITaskHostImplementation;
+import microsoft.build.tasks.TaskExtension;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
-import microsoft.build.utilities.TaskLoggingHelper;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.ConvertToAbsolutePath, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.ConvertToAbsolutePath" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.ConvertToAbsolutePath</a>
  */
-public class ConvertToAbsolutePath extends NetObject  {
+public class ConvertToAbsolutePath extends TaskExtension  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.ConvertToAbsolutePath
+     */
     public static final String className = "Microsoft.Build.Tasks.ConvertToAbsolutePath";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -113,7 +118,9 @@ public class ConvertToAbsolutePath extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConvertToAbsolutePath}, a cast assert is made to check if types are compatible.
+     */
     public static ConvertToAbsolutePath cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ConvertToAbsolutePath(from.getJCOInstance());
@@ -121,7 +128,6 @@ public class ConvertToAbsolutePath extends NetObject  {
 
     // Constructors section
     
-
     public ConvertToAbsolutePath() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -150,82 +156,7 @@ public class ConvertToAbsolutePath extends NetObject  {
     
     // Properties section
     
-    public IBuildEngine getBuildEngine() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine");
-            return new IBuildEngineImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BuildEngine", BuildEngine == null ? null : BuildEngine.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine2 getBuildEngine2() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine2");
-            return new IBuildEngine2Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine3 getBuildEngine3() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine3");
-            return new IBuildEngine3Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IBuildEngine4 getBuildEngine4() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BuildEngine4");
-            return new IBuildEngine4Implementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITaskHost getHostObject() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("HostObject");
-            return new ITaskHostImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHostObject(ITaskHost HostObject) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("HostObject", HostObject == null ? null : HostObject.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ITaskItem[] getAbsolutePaths() throws Throwable {
+    public final ITaskItem[] getAbsolutePaths() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -252,7 +183,7 @@ public class ConvertToAbsolutePath extends NetObject  {
         }
     }
 
-    public ITaskItem[] getPaths() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public final ITaskItem[] getPaths() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -274,17 +205,6 @@ public class ConvertToAbsolutePath extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Paths", toObjectFromArray(Paths));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TaskLoggingHelper getLog() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Log");
-            return new TaskLoggingHelper(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

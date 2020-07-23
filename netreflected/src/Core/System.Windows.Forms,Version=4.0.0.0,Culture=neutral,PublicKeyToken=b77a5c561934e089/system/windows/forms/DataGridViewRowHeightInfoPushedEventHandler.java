@@ -42,12 +42,27 @@ import system.windows.forms.DataGridViewRowHeightInfoPushedEventArgs;
 import system.windows.forms.IDataGridViewRowHeightInfoPushedEventHandler;
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewRowHeightInfoPushedEventHandler, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventHandler</a>
  */
 public class DataGridViewRowHeightInfoPushedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewRowHeightInfoPushedEventHandler
+     */
     public static final String className = "System.Windows.Forms.DataGridViewRowHeightInfoPushedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDataGridViewRowHeightInfoPushedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DataGridViewRowHeightInfoPushedEventHandler extends JCVoidDelegate 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DataGridViewRowHeightInfoPushedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DataGridViewRowHeightInfoPushedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DataGridViewRowHeightInfoPushedEventHandler extends JCVoidDelegate 
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DataGridViewRowHeightInfoPushedEventArgs e) {
     }
 }

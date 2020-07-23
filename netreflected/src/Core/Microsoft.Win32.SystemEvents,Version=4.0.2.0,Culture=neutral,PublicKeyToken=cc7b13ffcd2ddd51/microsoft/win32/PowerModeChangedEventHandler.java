@@ -42,12 +42,27 @@ import microsoft.win32.PowerModeChangedEventArgs;
 import microsoft.win32.IPowerModeChangedEventHandler;
 /**
  * The base .NET class managing Microsoft.Win32.PowerModeChangedEventHandler, Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.PowerModeChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.PowerModeChangedEventHandler</a>
  */
 public class PowerModeChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: Microsoft.Win32.SystemEvents
+     */
     public static final String assemblyShortName = "Microsoft.Win32.SystemEvents";
+    /**
+     * Qualified class name: Microsoft.Win32.PowerModeChangedEventHandler
+     */
     public static final String className = "Microsoft.Win32.PowerModeChangedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IPowerModeChangedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class PowerModeChangedEventHandler extends JCVoidDelegate implements IJCV
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, PowerModeChangedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, PowerModeChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class PowerModeChangedEventHandler extends JCVoidDelegate implements IJCV
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, PowerModeChangedEventArgs e) {
     }
 }

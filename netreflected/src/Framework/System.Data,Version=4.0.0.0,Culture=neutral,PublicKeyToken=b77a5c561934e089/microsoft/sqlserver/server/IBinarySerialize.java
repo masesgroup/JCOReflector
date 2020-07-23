@@ -43,12 +43,29 @@ import system.io.BinaryWriter;
 
 /**
  * The base .NET class managing Microsoft.SqlServer.Server.IBinarySerialize, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.IBinarySerialize" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.IBinarySerialize</a>
  */
 public interface IBinarySerialize extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
+    public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: Microsoft.SqlServer.Server.IBinarySerialize
+     */
+    public static final String className = "Microsoft.SqlServer.Server.IBinarySerialize";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBinarySerialize}, a cast assert is made to check if types are compatible.
+     */
     public static IBinarySerialize ToIBinarySerialize(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("Microsoft.SqlServer.Server.IBinarySerialize, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Data"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IBinarySerializeImplementation(from.getJCOInstance());
     }

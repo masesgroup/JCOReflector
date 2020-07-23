@@ -45,12 +45,27 @@ import system.componentmodel.ComponentCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.Container, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Container" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Container</a>
  */
 public class Container extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Container
+     */
     public static final String className = "System.ComponentModel.Container";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class Container extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Container}, a cast assert is made to check if types are compatible.
+     */
     public static Container cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Container(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class Container extends NetObject  {
 
     // Constructors section
     
-
     public Container() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.drawing.Graphics;
 import system.drawing.Font;
 import system.drawing.Rectangle;
@@ -47,12 +48,27 @@ import system.drawing.Color;
 
 /**
  * The base .NET class managing System.Windows.Forms.DrawItemEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawItemEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawItemEventArgs</a>
  */
-public class DrawItemEventArgs extends NetObject  {
+public class DrawItemEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DrawItemEventArgs
+     */
     public static final String className = "System.Windows.Forms.DrawItemEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class DrawItemEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DrawItemEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DrawItemEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DrawItemEventArgs(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class DrawItemEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DrawItemEventArgs() throws Throwable {
+    }
 
     public DrawItemEventArgs(Graphics graphics, Font font, Rectangle rect, int index, DrawItemState state) throws Throwable {
         try {
@@ -133,6 +153,7 @@ public class DrawItemEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

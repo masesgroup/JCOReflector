@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DispatcherOperationCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherOperationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherOperationCallback</a>
+ */
 public interface IDispatcherOperationCallback {
     public NetObject Invoke(NetObject arg);
 }

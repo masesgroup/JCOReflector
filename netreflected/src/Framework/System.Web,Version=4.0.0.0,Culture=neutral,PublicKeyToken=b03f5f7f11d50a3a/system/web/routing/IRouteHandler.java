@@ -44,12 +44,29 @@ import system.web.routing.RequestContext;
 
 /**
  * The base .NET class managing System.Web.Routing.IRouteHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.IRouteHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.IRouteHandler</a>
  */
 public interface IRouteHandler extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
+    public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Routing.IRouteHandler
+     */
+    public static final String className = "System.Web.Routing.IRouteHandler";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRouteHandler}, a cast assert is made to check if types are compatible.
+     */
     public static IRouteHandler ToIRouteHandler(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.Routing.IRouteHandler, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Web"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRouteHandlerImplementation(from.getJCOInstance());
     }

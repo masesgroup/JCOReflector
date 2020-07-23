@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.forms.visualstyles.TextMetricsCharacterSet;
 import system.windows.forms.visualstyles.TextMetricsPitchAndFamilyValues;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.VisualStyles.TextMetrics, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics</a>
  */
-public class TextMetrics extends NetObject  {
+public class TextMetrics extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.VisualStyles.TextMetrics
+     */
     public static final String className = "System.Windows.Forms.VisualStyles.TextMetrics";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class TextMetrics extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextMetrics}, a cast assert is made to check if types are compatible.
+     */
     public static TextMetrics cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TextMetrics(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class TextMetrics extends NetObject  {
 
     // Constructors section
     
+    public TextMetrics() throws Throwable {
+    }
+
+
 
     
     // Methods section

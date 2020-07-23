@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.CodeDom.Compiler.LanguageOptions, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.LanguageOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.LanguageOptions</a>
  */
 public class LanguageOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.CodeDom.Compiler.LanguageOptions
+     */
     public static final String className = "System.CodeDom.Compiler.LanguageOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class LanguageOptions extends NetObject  {
 
     // Flags management section
 
-    public LanguageOptions add(LanguageOptions val) throws Throwable {
+    public final LanguageOptions add(LanguageOptions val) throws Throwable {
         return new LanguageOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public LanguageOptions remove(LanguageOptions val) throws Throwable {
+    public final LanguageOptions remove(LanguageOptions val) throws Throwable {
         return new LanguageOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(LanguageOptions val) throws Throwable {
+    public final boolean is(LanguageOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(LanguageOptions val) throws Throwable {
+    public final boolean has(LanguageOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

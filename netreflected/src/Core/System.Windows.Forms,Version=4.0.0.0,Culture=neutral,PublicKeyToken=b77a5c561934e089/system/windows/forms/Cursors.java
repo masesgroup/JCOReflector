@@ -43,12 +43,27 @@ import system.windows.forms.Cursor;
 
 /**
  * The base .NET class managing System.Windows.Forms.Cursors, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Cursors" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Cursors</a>
  */
 public class Cursors extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.Cursors
+     */
     public static final String className = "System.Windows.Forms.Cursors";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Cursors extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Cursors}, a cast assert is made to check if types are compatible.
+     */
     public static Cursors cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Cursors(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class Cursors extends NetObject  {
 
     // Constructors section
     
+    public Cursors() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,308 +136,308 @@ public class Cursors extends NetObject  {
     
     // Properties section
     
-    public static Cursor getAppStarting() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getAppStarting() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("AppStarting");
+            JCObject val = (JCObject)classInstance.Get("AppStarting");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getArrow() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getArrow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Arrow");
+            JCObject val = (JCObject)classInstance.Get("Arrow");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getCross() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getCross() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Cross");
+            JCObject val = (JCObject)classInstance.Get("Cross");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getHand() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getHand() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Hand");
+            JCObject val = (JCObject)classInstance.Get("Hand");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getHelp() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getHelp() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Help");
+            JCObject val = (JCObject)classInstance.Get("Help");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getHSplit() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getHSplit() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("HSplit");
+            JCObject val = (JCObject)classInstance.Get("HSplit");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getIBeam() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getIBeam() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("IBeam");
+            JCObject val = (JCObject)classInstance.Get("IBeam");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getNo() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getNo() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("No");
+            JCObject val = (JCObject)classInstance.Get("No");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getNoMove2D() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getNoMove2D() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("NoMove2D");
+            JCObject val = (JCObject)classInstance.Get("NoMove2D");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getNoMoveHoriz() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getNoMoveHoriz() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("NoMoveHoriz");
+            JCObject val = (JCObject)classInstance.Get("NoMoveHoriz");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getNoMoveVert() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getNoMoveVert() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("NoMoveVert");
+            JCObject val = (JCObject)classInstance.Get("NoMoveVert");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getPanEast() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getPanEast() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PanEast");
+            JCObject val = (JCObject)classInstance.Get("PanEast");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getPanNE() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getPanNE() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PanNE");
+            JCObject val = (JCObject)classInstance.Get("PanNE");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getPanNorth() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getPanNorth() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PanNorth");
+            JCObject val = (JCObject)classInstance.Get("PanNorth");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getPanNW() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getPanNW() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PanNW");
+            JCObject val = (JCObject)classInstance.Get("PanNW");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getPanSE() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getPanSE() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PanSE");
+            JCObject val = (JCObject)classInstance.Get("PanSE");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getPanSouth() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getPanSouth() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PanSouth");
+            JCObject val = (JCObject)classInstance.Get("PanSouth");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getPanSW() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getPanSW() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PanSW");
+            JCObject val = (JCObject)classInstance.Get("PanSW");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getPanWest() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getPanWest() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PanWest");
+            JCObject val = (JCObject)classInstance.Get("PanWest");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getSizeAll() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getSizeAll() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SizeAll");
+            JCObject val = (JCObject)classInstance.Get("SizeAll");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getSizeNESW() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getSizeNESW() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SizeNESW");
+            JCObject val = (JCObject)classInstance.Get("SizeNESW");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getSizeNS() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getSizeNS() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SizeNS");
+            JCObject val = (JCObject)classInstance.Get("SizeNS");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getSizeNWSE() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getSizeNWSE() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SizeNWSE");
+            JCObject val = (JCObject)classInstance.Get("SizeNWSE");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getSizeWE() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getSizeWE() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SizeWE");
+            JCObject val = (JCObject)classInstance.Get("SizeWE");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getUpArrow() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getUpArrow() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UpArrow");
+            JCObject val = (JCObject)classInstance.Get("UpArrow");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getVSplit() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getVSplit() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("VSplit");
+            JCObject val = (JCObject)classInstance.Get("VSplit");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Cursor getWaitCursor() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Cursor getWaitCursor() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WaitCursor");
+            JCObject val = (JCObject)classInstance.Get("WaitCursor");
             return new Cursor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

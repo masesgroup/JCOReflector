@@ -43,12 +43,27 @@ import system.windows.diagnostics.XamlSourceInfo;
 
 /**
  * The base .NET class managing System.Windows.Diagnostics.VisualDiagnostics, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Diagnostics.VisualDiagnostics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Diagnostics.VisualDiagnostics</a>
  */
 public class VisualDiagnostics extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Diagnostics.VisualDiagnostics
+     */
     public static final String className = "System.Windows.Diagnostics.VisualDiagnostics";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class VisualDiagnostics extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link VisualDiagnostics}, a cast assert is made to check if types are compatible.
+     */
     public static VisualDiagnostics cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new VisualDiagnostics(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class VisualDiagnostics extends NetObject  {
 
     // Constructors section
     
+    public VisualDiagnostics() throws Throwable {
+    }
 
     
     // Methods section

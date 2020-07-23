@@ -44,10 +44,22 @@ import system.windows.LocalValueEntry;
 
 /**
  * The base .NET class managing System.Windows.LocalValueEnumerator, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.LocalValueEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.LocalValueEnumerator</a>
  */
 public class LocalValueEnumerator extends NetObject implements Iterator<LocalValueEntry> {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.LocalValueEnumerator
+     */
     public static final String className = "System.Windows.LocalValueEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class LocalValueEnumerator extends NetObject implements Iterator<LocalVal
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public LocalValueEntry next() {
+	public final LocalValueEntry next() {
 		try {
 			return new LocalValueEntry(classInstance.next());
 		} catch (Throwable jce) {

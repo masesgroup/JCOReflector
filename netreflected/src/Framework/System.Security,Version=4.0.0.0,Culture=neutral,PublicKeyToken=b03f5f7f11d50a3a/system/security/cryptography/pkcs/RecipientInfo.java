@@ -45,12 +45,27 @@ import system.security.cryptography.pkcs.SubjectIdentifier;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.RecipientInfo, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.RecipientInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.RecipientInfo</a>
  */
 public class RecipientInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.RecipientInfo
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.RecipientInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class RecipientInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RecipientInfo}, a cast assert is made to check if types are compatible.
+     */
     public static RecipientInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RecipientInfo(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class RecipientInfo extends NetObject  {
 
     // Constructors section
     
+    public RecipientInfo() throws Throwable {
+    }
 
     
     // Methods section

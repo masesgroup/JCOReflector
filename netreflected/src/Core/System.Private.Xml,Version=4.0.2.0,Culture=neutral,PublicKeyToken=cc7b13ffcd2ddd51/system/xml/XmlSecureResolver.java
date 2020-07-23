@@ -46,12 +46,27 @@ import system.net.ICredentialsImplementation;
 
 /**
  * The base .NET class managing System.Xml.XmlSecureResolver, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlSecureResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlSecureResolver</a>
  */
-public class XmlSecureResolver extends NetObject  {
+public class XmlSecureResolver extends XmlResolver  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlSecureResolver
+     */
     public static final String className = "System.Xml.XmlSecureResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class XmlSecureResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSecureResolver}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSecureResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSecureResolver(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class XmlSecureResolver extends NetObject  {
 
     // Constructors section
     
+    public XmlSecureResolver() throws Throwable {
+    }
 
     public XmlSecureResolver(XmlResolver resolver, java.lang.String securityUrl) throws Throwable {
         try {
@@ -124,19 +143,10 @@ public class XmlSecureResolver extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean SupportsType(Uri absoluteUri, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("SupportsType", absoluteUri == null ? null : absoluteUri.getJCOInstance(), type == null ? null : type.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject GetEntity(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -163,16 +173,6 @@ public class XmlSecureResolver extends NetObject  {
     
     // Properties section
     
-    public void setCredentials(ICredentials Credentials) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

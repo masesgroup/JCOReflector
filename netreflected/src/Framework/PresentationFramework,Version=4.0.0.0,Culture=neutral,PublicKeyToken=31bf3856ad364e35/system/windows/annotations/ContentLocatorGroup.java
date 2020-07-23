@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.annotations.ContentLocatorBase;
 import system.xml.schema.XmlSchema;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
@@ -45,12 +46,27 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.Windows.Annotations.ContentLocatorGroup, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.ContentLocatorGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.ContentLocatorGroup</a>
  */
-public class ContentLocatorGroup extends NetObject  {
+public class ContentLocatorGroup extends ContentLocatorBase  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.ContentLocatorGroup
+     */
     public static final String className = "System.Windows.Annotations.ContentLocatorGroup";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class ContentLocatorGroup extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContentLocatorGroup}, a cast assert is made to check if types are compatible.
+     */
     public static ContentLocatorGroup cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ContentLocatorGroup(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class ContentLocatorGroup extends NetObject  {
 
     // Constructors section
     
-
     public ContentLocatorGroup() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file

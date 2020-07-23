@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.ConfigurationValidatorBase;
 import system.TimeSpan;
 
 
 /**
  * The base .NET class managing System.Configuration.TimeSpanValidator, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.TimeSpanValidator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.TimeSpanValidator</a>
  */
-public class TimeSpanValidator extends NetObject  {
+public class TimeSpanValidator extends ConfigurationValidatorBase  {
+    /**
+     * Fully assembly qualified name: System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Configuration
+     */
     public static final String assemblyShortName = "System.Configuration";
+    /**
+     * Qualified class name: System.Configuration.TimeSpanValidator
+     */
     public static final String className = "System.Configuration.TimeSpanValidator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class TimeSpanValidator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TimeSpanValidator}, a cast assert is made to check if types are compatible.
+     */
     public static TimeSpanValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TimeSpanValidator(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class TimeSpanValidator extends NetObject  {
 
     // Constructors section
     
+    public TimeSpanValidator() throws Throwable {
+    }
 
     public TimeSpanValidator(TimeSpan minValue, TimeSpan maxValue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -139,6 +159,7 @@ public class TimeSpanValidator extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

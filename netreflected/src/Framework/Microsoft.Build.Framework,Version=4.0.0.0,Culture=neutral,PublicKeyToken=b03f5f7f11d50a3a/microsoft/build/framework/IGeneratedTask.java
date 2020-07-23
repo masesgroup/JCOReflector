@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.build.framework.ITask;
+import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.TaskPropertyInfo;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
@@ -46,12 +48,29 @@ import microsoft.build.framework.ITaskHostImplementation;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.IGeneratedTask, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IGeneratedTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IGeneratedTask</a>
  */
-public interface IGeneratedTask extends IJCOBridgeReflected {
-
+public interface IGeneratedTask extends IJCOBridgeReflected, ITask {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.IGeneratedTask
+     */
+    public static final String className = "Microsoft.Build.Framework.IGeneratedTask";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IGeneratedTask}, a cast assert is made to check if types are compatible.
+     */
     public static IGeneratedTask ToIGeneratedTask(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Framework.IGeneratedTask, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Framework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IGeneratedTaskImplementation(from.getJCOInstance());
     }
@@ -94,7 +113,6 @@ public interface IGeneratedTask extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Execute() throws Throwable;
 
     public NetObject GetPropertyValue(TaskPropertyInfo property) throws Throwable;
 
@@ -104,14 +122,6 @@ public interface IGeneratedTask extends IJCOBridgeReflected {
     
     // Properties section
     
-    public IBuildEngine getBuildEngine() throws Throwable;
-
-    public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable;
-
-    public ITaskHost getHostObject() throws Throwable;
-
-    public void setHostObject(ITaskHost HostObject) throws Throwable;
-
 
 
     // Instance Events section

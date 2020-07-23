@@ -42,12 +42,27 @@ import system.windows.input.InputEventArgs;
 import system.windows.input.IInputEventHandler;
 /**
  * The base .NET class managing System.Windows.Input.InputEventHandler, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputEventHandler</a>
  */
 public class InputEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.InputEventHandler
+     */
     public static final String className = "System.Windows.Input.InputEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IInputEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class InputEventHandler extends JCVoidDelegate implements IJCVoidEventEmi
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, InputEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, InputEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class InputEventHandler extends JCVoidDelegate implements IJCVoidEventEmi
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, InputEventArgs e) {
     }
 }

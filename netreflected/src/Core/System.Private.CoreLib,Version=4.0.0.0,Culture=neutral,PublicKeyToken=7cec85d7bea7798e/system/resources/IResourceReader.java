@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
  * The base .NET class managing System.Resources.IResourceReader, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceReader</a>
  */
-public interface IResourceReader extends IJCOBridgeReflected {
-
+public interface IResourceReader extends IJCOBridgeReflected, IEnumerable, IDisposable {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Resources.IResourceReader
+     */
+    public static final String className = "System.Resources.IResourceReader";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IResourceReader}, a cast assert is made to check if types are compatible.
+     */
     public static IResourceReader ToIResourceReader(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Resources.IResourceReader, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IResourceReaderImplementation(from.getJCOInstance());
     }
@@ -91,7 +110,6 @@ public interface IResourceReader extends IJCOBridgeReflected {
     
     public void Close() throws Throwable;
 
-    public void Dispose() throws Throwable;
 
 
     

@@ -45,12 +45,27 @@ import system.security.cryptography.xml.KeyInfo;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Xml.IRelDecryptor, System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor</a>
  */
 public class IRelDecryptorImplementation extends NetObject implements IRelDecryptor {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Cryptography.Xml
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Xml";
+    /**
+     * Qualified class name: System.Security.Cryptography.Xml.IRelDecryptor
+     */
     public static final String className = "System.Security.Cryptography.Xml.IRelDecryptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class IRelDecryptorImplementation extends NetObject implements IRelDecryp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRelDecryptor}, a cast assert is made to check if types are compatible.
+     */
     public static IRelDecryptor ToIRelDecryptor(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRelDecryptorImplementation(from.getJCOInstance());

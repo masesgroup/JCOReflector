@@ -43,12 +43,27 @@ import system.data.DataTable;
 
 /**
  * The base .NET class managing System.Data.Common.DbDataSourceEnumerator, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbDataSourceEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbDataSourceEnumerator</a>
  */
 public class DbDataSourceEnumerator extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.Common.DbDataSourceEnumerator
+     */
     public static final String className = "System.Data.Common.DbDataSourceEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class DbDataSourceEnumerator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbDataSourceEnumerator}, a cast assert is made to check if types are compatible.
+     */
     public static DbDataSourceEnumerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbDataSourceEnumerator(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class DbDataSourceEnumerator extends NetObject  {
 
     // Constructors section
     
+    public DbDataSourceEnumerator() throws Throwable {
+    }
 
     
     // Methods section

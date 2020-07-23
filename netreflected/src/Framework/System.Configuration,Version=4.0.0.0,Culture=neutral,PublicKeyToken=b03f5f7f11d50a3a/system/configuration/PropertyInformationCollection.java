@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.specialized.NameObjectCollectionBase;
 import system.configuration.PropertyInformation;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
@@ -45,12 +46,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.Configuration.PropertyInformationCollection, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.PropertyInformationCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.PropertyInformationCollection</a>
  */
-public class PropertyInformationCollection extends NetObject  {
+public class PropertyInformationCollection extends NameObjectCollectionBase  {
+    /**
+     * Fully assembly qualified name: System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Configuration
+     */
     public static final String assemblyShortName = "System.Configuration";
+    /**
+     * Qualified class name: System.Configuration.PropertyInformationCollection
+     */
     public static final String className = "System.Configuration.PropertyInformationCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class PropertyInformationCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyInformationCollection}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyInformationCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyInformationCollection(from.getJCOInstance());
@@ -111,6 +129,10 @@ public class PropertyInformationCollection extends NetObject  {
 
     // Constructors section
     
+    public PropertyInformationCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -135,30 +157,10 @@ public class PropertyInformationCollection extends NetObject  {
         }
     }
 
-    public void OnDeserialization(NetObject sender) throws Throwable, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnDeserialization", sender == null ? null : sender.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

@@ -53,12 +53,27 @@ import microsoft.visualbasic.VbStrConv;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.Strings, Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Strings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Strings</a>
  */
 public class Strings extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic.Core
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic.Core";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.Strings
+     */
     public static final String className = "Microsoft.VisualBasic.Strings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +126,9 @@ public class Strings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Strings}, a cast assert is made to check if types are compatible.
+     */
     public static Strings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Strings(from.getJCOInstance());
@@ -119,6 +136,10 @@ public class Strings extends NetObject  {
 
     // Constructors section
     
+    public Strings() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -494,6 +515,16 @@ public class Strings extends NetObject  {
         }
     }
 
+    public static java.lang.String Join(JCRefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("Join", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String LCase(java.lang.String Value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -689,6 +720,25 @@ public class Strings extends NetObject  {
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Filter", Source, Match, Include, Compare == null ? null : Compare.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexFilter = 0; indexFilter < resultingArrayList.size(); indexFilter++ ) {
+				resultingArray[indexFilter] = (java.lang.String)resultingArrayList.get(indexFilter);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String[] Filter(JCRefOut dupParam0, java.lang.String dupParam1, boolean dupParam2, CompareMethod dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Filter", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

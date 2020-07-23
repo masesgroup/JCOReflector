@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.activities.NativeActivityContext;
 import system.activities.Bookmark;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BookmarkCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.BookmarkCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.BookmarkCallback</a>
+ */
 public interface IBookmarkCallback {
     public void Invoke(NativeActivityContext context, Bookmark bookmark, NetObject value);
 }

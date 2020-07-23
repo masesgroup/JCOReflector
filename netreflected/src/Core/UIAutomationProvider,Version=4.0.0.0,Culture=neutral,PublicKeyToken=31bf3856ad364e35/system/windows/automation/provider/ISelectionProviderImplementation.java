@@ -44,12 +44,27 @@ import system.windows.automation.provider.IRawElementProviderSimpleImplementatio
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.ISelectionProvider, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ISelectionProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ISelectionProvider</a>
  */
 public class ISelectionProviderImplementation extends NetObject implements ISelectionProvider {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
     public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.ISelectionProvider
+     */
     public static final String className = "System.Windows.Automation.Provider.ISelectionProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class ISelectionProviderImplementation extends NetObject implements ISele
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISelectionProvider}, a cast assert is made to check if types are compatible.
+     */
     public static ISelectionProvider ToISelectionProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISelectionProviderImplementation(from.getJCOInstance());

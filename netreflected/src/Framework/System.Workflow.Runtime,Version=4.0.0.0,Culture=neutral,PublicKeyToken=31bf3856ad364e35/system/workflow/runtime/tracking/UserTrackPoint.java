@@ -45,12 +45,27 @@ import system.workflow.runtime.tracking.UserTrackingLocationCollection;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Tracking.UserTrackPoint, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPoint</a>
  */
 public class UserTrackPoint extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.Tracking.UserTrackPoint
+     */
     public static final String className = "System.Workflow.Runtime.Tracking.UserTrackPoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class UserTrackPoint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UserTrackPoint}, a cast assert is made to check if types are compatible.
+     */
     public static UserTrackPoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UserTrackPoint(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class UserTrackPoint extends NetObject  {
 
     // Constructors section
     
-
     public UserTrackPoint() throws Throwable {
         try {
             // add reference to assemblyName.dll file

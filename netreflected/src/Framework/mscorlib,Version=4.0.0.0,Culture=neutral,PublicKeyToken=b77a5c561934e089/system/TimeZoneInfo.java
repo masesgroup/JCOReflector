@@ -46,12 +46,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.TimeZoneInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.TimeZoneInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.TimeZoneInfo</a>
  */
 public class TimeZoneInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.TimeZoneInfo
+     */
     public static final String className = "System.TimeZoneInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class TimeZoneInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TimeZoneInfo}, a cast assert is made to check if types are compatible.
+     */
     public static TimeZoneInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TimeZoneInfo(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class TimeZoneInfo extends NetObject  {
 
     // Constructors section
     
+    public TimeZoneInfo() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -459,22 +480,22 @@ public class TimeZoneInfo extends NetObject  {
         }
     }
 
-    public static TimeZoneInfo getLocal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeZoneInfo getLocal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Local");
+            JCObject val = (JCObject)classInstance.Get("Local");
             return new TimeZoneInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TimeZoneInfo getUtc() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeZoneInfo getUtc() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Utc");
+            JCObject val = (JCObject)classInstance.Get("Utc");
             return new TimeZoneInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

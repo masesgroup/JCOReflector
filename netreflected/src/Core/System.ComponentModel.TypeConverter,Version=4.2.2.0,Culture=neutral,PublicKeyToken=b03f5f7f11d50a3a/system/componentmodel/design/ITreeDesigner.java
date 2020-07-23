@@ -37,23 +37,42 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.design.IDesigner;
+import system.componentmodel.design.IDesignerImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.componentmodel.design.DesignerVerbCollection;
-import system.componentmodel.design.IDesigner;
-import system.componentmodel.design.IDesignerImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ITreeDesigner, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ITreeDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ITreeDesigner</a>
  */
-public interface ITreeDesigner extends IJCOBridgeReflected {
-
+public interface ITreeDesigner extends IJCOBridgeReflected, IDesigner, IDisposable {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
+    public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ITreeDesigner
+     */
+    public static final String className = "System.ComponentModel.Design.ITreeDesigner";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITreeDesigner}, a cast assert is made to check if types are compatible.
+     */
     public static ITreeDesigner ToITreeDesigner(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.ITreeDesigner, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ComponentModel.TypeConverter"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITreeDesignerImplementation(from.getJCOInstance());
     }
@@ -96,11 +115,8 @@ public interface ITreeDesigner extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Dispose() throws Throwable;
 
-    public void DoDefaultAction() throws Throwable;
 
-    public void Initialize(IComponent component) throws Throwable;
 
 
     
@@ -108,11 +124,7 @@ public interface ITreeDesigner extends IJCOBridgeReflected {
     
     public ICollection getChildren() throws Throwable;
 
-    public DesignerVerbCollection getVerbs() throws Throwable;
-
     public IDesigner getParent() throws Throwable;
-
-    public IComponent getComponent() throws Throwable;
 
 
 

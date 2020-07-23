@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.ScrollChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ScrollChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ScrollChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ScrollChangedEventHandler</a>
+ */
 public interface IScrollChangedEventHandler {
     public void Invoke(NetObject sender, ScrollChangedEventArgs e);
 }

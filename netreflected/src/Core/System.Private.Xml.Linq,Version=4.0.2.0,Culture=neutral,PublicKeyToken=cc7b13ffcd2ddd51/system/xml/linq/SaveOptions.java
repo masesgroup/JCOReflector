@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.Linq.SaveOptions, System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.SaveOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.SaveOptions</a>
  */
 public class SaveOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Private.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Linq.SaveOptions
+     */
     public static final String className = "System.Xml.Linq.SaveOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class SaveOptions extends NetObject  {
 
     // Flags management section
 
-    public SaveOptions add(SaveOptions val) throws Throwable {
+    public final SaveOptions add(SaveOptions val) throws Throwable {
         return new SaveOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SaveOptions remove(SaveOptions val) throws Throwable {
+    public final SaveOptions remove(SaveOptions val) throws Throwable {
         return new SaveOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SaveOptions val) throws Throwable {
+    public final boolean is(SaveOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SaveOptions val) throws Throwable {
+    public final boolean has(SaveOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

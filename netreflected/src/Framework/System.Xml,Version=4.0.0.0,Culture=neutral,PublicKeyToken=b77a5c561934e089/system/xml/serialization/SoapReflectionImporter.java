@@ -49,12 +49,27 @@ import system.reflection.ICustomAttributeProviderImplementation;
 
 /**
  * The base .NET class managing System.Xml.Serialization.SoapReflectionImporter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapReflectionImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapReflectionImporter</a>
  */
 public class SoapReflectionImporter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.SoapReflectionImporter
+     */
     public static final String className = "System.Xml.Serialization.SoapReflectionImporter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class SoapReflectionImporter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapReflectionImporter}, a cast assert is made to check if types are compatible.
+     */
     public static SoapReflectionImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapReflectionImporter(from.getJCOInstance());
@@ -115,7 +132,6 @@ public class SoapReflectionImporter extends NetObject  {
 
     // Constructors section
     
-
     public SoapReflectionImporter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

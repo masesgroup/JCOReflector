@@ -38,24 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.AttributeCollection;
-import system.componentmodel.EventDescriptor;
-import system.componentmodel.EventDescriptorCollection;
-import system.Attribute;
-import system.componentmodel.PropertyDescriptor;
+import system.componentmodel.CustomTypeDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
-import system.componentmodel.TypeConverter;
 import system.componentmodel.PropertyChangedEventHandler;
 
 
 /**
  * The base .NET class managing System.Activities.WorkflowDataContext, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.WorkflowDataContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.WorkflowDataContext</a>
  */
-public class WorkflowDataContext extends NetObject  {
+public class WorkflowDataContext extends CustomTypeDescriptor  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.WorkflowDataContext
+     */
     public static final String className = "System.Activities.WorkflowDataContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +118,9 @@ public class WorkflowDataContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowDataContext}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowDataContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowDataContext(from.getJCOInstance());
@@ -116,135 +128,20 @@ public class WorkflowDataContext extends NetObject  {
 
     // Constructors section
     
+    public WorkflowDataContext() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public AttributeCollection GetAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetAttributes = (JCObject)classInstance.Invoke("GetAttributes");
-            return new AttributeCollection(objGetAttributes);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventDescriptor GetDefaultEvent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDefaultEvent = (JCObject)classInstance.Invoke("GetDefaultEvent");
-            return new EventDescriptor(objGetDefaultEvent);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventDescriptorCollection GetEvents() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents");
-            return new EventDescriptorCollection(objGetEvents);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", (Object)toObjectFromArray(attributes));
-            return new EventDescriptorCollection(objGetEvents);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDescriptor GetDefaultProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty");
-            return new PropertyDescriptor(objGetDefaultProperty);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyDescriptorCollection GetProperties() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties");
             return new PropertyDescriptorCollection(objGetProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", (Object)toObjectFromArray(attributes));
-            return new PropertyDescriptorCollection(objGetProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeConverter GetConverter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetConverter = (JCObject)classInstance.Invoke("GetConverter");
-            return new TypeConverter(objGetConverter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetEditor(NetType editorBaseType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditor = (JCObject)classInstance.Invoke("GetEditor", editorBaseType == null ? null : editorBaseType.getJCOInstance());
-            return new NetObject(objGetEditor);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetPropertyOwner = (JCObject)classInstance.Invoke("GetPropertyOwner", pd == null ? null : pd.getJCOInstance());
-            return new NetObject(objGetPropertyOwner);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetClassName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetClassName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetComponentName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetComponentName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

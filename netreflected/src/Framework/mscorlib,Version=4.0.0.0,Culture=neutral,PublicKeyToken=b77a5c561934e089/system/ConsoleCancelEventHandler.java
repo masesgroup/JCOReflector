@@ -42,12 +42,27 @@ import system.ConsoleCancelEventArgs;
 import system.IConsoleCancelEventHandler;
 /**
  * The base .NET class managing System.ConsoleCancelEventHandler, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleCancelEventHandler</a>
  */
 public class ConsoleCancelEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.ConsoleCancelEventHandler
+     */
     public static final String className = "System.ConsoleCancelEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IConsoleCancelEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ConsoleCancelEventHandler extends JCVoidDelegate implements IJCVoid
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ConsoleCancelEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ConsoleCancelEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ConsoleCancelEventHandler extends JCVoidDelegate implements IJCVoid
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ConsoleCancelEventArgs e) {
     }
 }

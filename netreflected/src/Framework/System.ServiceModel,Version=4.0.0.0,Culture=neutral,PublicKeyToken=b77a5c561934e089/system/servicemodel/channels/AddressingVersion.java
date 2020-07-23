@@ -43,12 +43,27 @@ import system.servicemodel.channels.AddressingVersion;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.AddressingVersion, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.AddressingVersion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.AddressingVersion</a>
  */
 public class AddressingVersion extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.AddressingVersion
+     */
     public static final String className = "System.ServiceModel.Channels.AddressingVersion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class AddressingVersion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AddressingVersion}, a cast assert is made to check if types are compatible.
+     */
     public static AddressingVersion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AddressingVersion(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class AddressingVersion extends NetObject  {
 
     // Constructors section
     
+    public AddressingVersion() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -117,33 +138,33 @@ public class AddressingVersion extends NetObject  {
     
     // Properties section
     
-    public static AddressingVersion getNone() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public AddressingVersion getNone() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            JCObject val = (JCObject)classInstance.Get("None");
             return new AddressingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static AddressingVersion getWSAddressing10() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public AddressingVersion getWSAddressing10() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSAddressing10");
+            JCObject val = (JCObject)classInstance.Get("WSAddressing10");
             return new AddressingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static AddressingVersion getWSAddressingAugust2004() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public AddressingVersion getWSAddressingAugust2004() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSAddressingAugust2004");
+            JCObject val = (JCObject)classInstance.Get("WSAddressingAugust2004");
             return new AddressingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

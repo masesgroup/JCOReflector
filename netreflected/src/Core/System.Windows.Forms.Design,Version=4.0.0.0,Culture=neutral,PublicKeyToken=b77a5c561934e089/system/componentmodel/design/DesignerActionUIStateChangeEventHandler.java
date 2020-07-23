@@ -42,12 +42,27 @@ import system.componentmodel.design.DesignerActionUIStateChangeEventArgs;
 import system.componentmodel.design.IDesignerActionUIStateChangeEventHandler;
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler</a>
  */
 public class DesignerActionUIStateChangeEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler
+     */
     public static final String className = "System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDesignerActionUIStateChangeEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DesignerActionUIStateChangeEventHandler extends JCVoidDelegate impl
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DesignerActionUIStateChangeEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DesignerActionUIStateChangeEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DesignerActionUIStateChangeEventHandler extends JCVoidDelegate impl
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DesignerActionUIStateChangeEventArgs e) {
     }
 }

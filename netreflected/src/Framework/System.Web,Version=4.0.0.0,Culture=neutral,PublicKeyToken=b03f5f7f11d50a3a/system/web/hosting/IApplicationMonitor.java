@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
  * The base .NET class managing System.Web.Hosting.IApplicationMonitor, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.IApplicationMonitor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.IApplicationMonitor</a>
  */
-public interface IApplicationMonitor extends IJCOBridgeReflected {
-
+public interface IApplicationMonitor extends IJCOBridgeReflected, IDisposable {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
+    public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Hosting.IApplicationMonitor
+     */
+    public static final String className = "System.Web.Hosting.IApplicationMonitor";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IApplicationMonitor}, a cast assert is made to check if types are compatible.
+     */
     public static IApplicationMonitor ToIApplicationMonitor(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.Hosting.IApplicationMonitor, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Web"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IApplicationMonitorImplementation(from.getJCOInstance());
     }
@@ -89,7 +108,6 @@ public interface IApplicationMonitor extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Dispose() throws Throwable;
 
     public void Start() throws Throwable;
 

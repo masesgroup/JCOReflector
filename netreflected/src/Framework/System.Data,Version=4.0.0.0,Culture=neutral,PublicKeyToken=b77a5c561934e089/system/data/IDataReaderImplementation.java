@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
+import system.data.IDataRecord;
+import system.data.IDataRecordImplementation;
 import system.Single;
 import system.data.DataTable;
 import system.data.IDataReader;
@@ -49,12 +53,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Data.IDataReader, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataReader</a>
  */
 public class IDataReaderImplementation extends NetObject implements IDataReader {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.IDataReader
+     */
     public static final String className = "System.Data.IDataReader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +121,9 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataReader}, a cast assert is made to check if types are compatible.
+     */
     public static IDataReader ToIDataReader(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDataReaderImplementation(from.getJCOInstance());
@@ -230,11 +251,31 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    public long GetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Invoke("GetChars", i, fieldoffset, buffer, bufferoffset, length);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

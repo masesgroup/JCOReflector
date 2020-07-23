@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ComponentModel.ISupportInitialize, System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ISupportInitialize" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ISupportInitialize</a>
  */
 public interface ISupportInitialize extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.Primitives
+     */
+    public static final String assemblyShortName = "System.ComponentModel.Primitives";
+    /**
+     * Qualified class name: System.ComponentModel.ISupportInitialize
+     */
+    public static final String className = "System.ComponentModel.ISupportInitialize";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISupportInitialize}, a cast assert is made to check if types are compatible.
+     */
     public static ISupportInitialize ToISupportInitialize(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.ISupportInitialize, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ComponentModel.Primitives"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISupportInitializeImplementation(from.getJCOInstance());
     }

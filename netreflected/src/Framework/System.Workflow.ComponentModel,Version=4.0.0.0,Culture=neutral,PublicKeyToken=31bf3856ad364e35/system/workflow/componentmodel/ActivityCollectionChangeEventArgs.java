@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.ActivityCollectionChangeAction;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs</a>
  */
-public class ActivityCollectionChangeEventArgs extends NetObject  {
+public class ActivityCollectionChangeEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs
+     */
     public static final String className = "System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ActivityCollectionChangeEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityCollectionChangeEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ActivityCollectionChangeEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivityCollectionChangeEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class ActivityCollectionChangeEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ActivityCollectionChangeEventArgs() throws Throwable {
+    }
 
     public ActivityCollectionChangeEventArgs(int index, Activity removedActivity, Activity addedActivity, NetObject owner, ActivityCollectionChangeAction action) throws Throwable, system.ArgumentOutOfRangeException {
         try {
@@ -120,6 +140,7 @@ public class ActivityCollectionChangeEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

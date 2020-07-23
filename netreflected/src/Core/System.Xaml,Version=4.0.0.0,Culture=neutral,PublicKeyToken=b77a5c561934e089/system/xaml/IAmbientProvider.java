@@ -43,12 +43,29 @@ import system.xaml.AmbientPropertyValue;
 
 /**
  * The base .NET class managing System.Xaml.IAmbientProvider, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IAmbientProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IAmbientProvider</a>
  */
 public interface IAmbientProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
+    public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.IAmbientProvider
+     */
+    public static final String className = "System.Xaml.IAmbientProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAmbientProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IAmbientProvider ToIAmbientProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xaml.IAmbientProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xaml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IAmbientProviderImplementation(from.getJCOInstance());
     }

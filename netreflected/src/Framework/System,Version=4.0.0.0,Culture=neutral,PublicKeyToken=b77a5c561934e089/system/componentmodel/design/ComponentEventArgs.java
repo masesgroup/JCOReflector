@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ComponentEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentEventArgs</a>
  */
-public class ComponentEventArgs extends NetObject  {
+public class ComponentEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ComponentEventArgs
+     */
     public static final String className = "System.ComponentModel.Design.ComponentEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ComponentEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComponentEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ComponentEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ComponentEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class ComponentEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ComponentEventArgs() throws Throwable {
+    }
 
     public ComponentEventArgs(IComponent component) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class ComponentEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

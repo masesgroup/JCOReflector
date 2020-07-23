@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.jscript.AST;
 import microsoft.jscript.Context;
 import microsoft.jscript.ASTList;
 
 
 /**
  * The base .NET class managing Microsoft.JScript.ArrayLiteral, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ArrayLiteral" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ArrayLiteral</a>
  */
-public class ArrayLiteral extends NetObject  {
+public class ArrayLiteral extends AST  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.ArrayLiteral
+     */
     public static final String className = "Microsoft.JScript.ArrayLiteral";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ArrayLiteral extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ArrayLiteral}, a cast assert is made to check if types are compatible.
+     */
     public static ArrayLiteral cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ArrayLiteral(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class ArrayLiteral extends NetObject  {
 
     // Constructors section
     
+    public ArrayLiteral() throws Throwable {
+    }
 
     public ArrayLiteral(Context context, ASTList elements) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class ArrayLiteral extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

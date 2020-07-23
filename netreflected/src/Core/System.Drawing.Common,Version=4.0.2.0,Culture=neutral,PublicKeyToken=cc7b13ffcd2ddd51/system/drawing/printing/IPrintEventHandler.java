@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.drawing.printing.PrintEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PrintEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintEventHandler</a>
+ */
 public interface IPrintEventHandler {
     public void Invoke(NetObject sender, PrintEventArgs e);
 }

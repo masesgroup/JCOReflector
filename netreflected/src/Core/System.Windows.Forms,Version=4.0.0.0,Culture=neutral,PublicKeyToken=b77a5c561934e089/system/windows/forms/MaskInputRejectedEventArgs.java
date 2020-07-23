@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.MaskedTextResultHint;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.MaskInputRejectedEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.MaskInputRejectedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.MaskInputRejectedEventArgs</a>
  */
-public class MaskInputRejectedEventArgs extends NetObject  {
+public class MaskInputRejectedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.MaskInputRejectedEventArgs
+     */
     public static final String className = "System.Windows.Forms.MaskInputRejectedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class MaskInputRejectedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MaskInputRejectedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static MaskInputRejectedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MaskInputRejectedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class MaskInputRejectedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public MaskInputRejectedEventArgs() throws Throwable {
+    }
 
     public MaskInputRejectedEventArgs(int position, MaskedTextResultHint rejectionHint) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class MaskInputRejectedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

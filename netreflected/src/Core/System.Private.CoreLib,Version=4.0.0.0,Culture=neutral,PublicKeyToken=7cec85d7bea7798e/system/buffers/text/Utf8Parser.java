@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Buffers.Text.Utf8Parser, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.Text.Utf8Parser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.Text.Utf8Parser</a>
  */
 public class Utf8Parser extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Buffers.Text.Utf8Parser
+     */
     public static final String className = "System.Buffers.Text.Utf8Parser";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class Utf8Parser extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Utf8Parser}, a cast assert is made to check if types are compatible.
+     */
     public static Utf8Parser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Utf8Parser(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class Utf8Parser extends NetObject  {
 
     // Constructors section
     
+    public Utf8Parser() throws Throwable {
+    }
 
     
     // Methods section

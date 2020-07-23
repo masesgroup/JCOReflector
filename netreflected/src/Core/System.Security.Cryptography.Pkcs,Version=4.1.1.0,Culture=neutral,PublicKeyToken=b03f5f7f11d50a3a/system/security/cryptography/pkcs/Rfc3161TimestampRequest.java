@@ -48,12 +48,27 @@ import system.security.cryptography.x509certificates.X509ExtensionCollection;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest</a>
  */
 public class Rfc3161TimestampRequest extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class Rfc3161TimestampRequest extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rfc3161TimestampRequest}, a cast assert is made to check if types are compatible.
+     */
     public static Rfc3161TimestampRequest cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Rfc3161TimestampRequest(from.getJCOInstance());
@@ -114,6 +131,10 @@ public class Rfc3161TimestampRequest extends NetObject  {
 
     // Constructors section
     
+    public Rfc3161TimestampRequest() throws Throwable {
+    }
+
+
 
     
     // Methods section

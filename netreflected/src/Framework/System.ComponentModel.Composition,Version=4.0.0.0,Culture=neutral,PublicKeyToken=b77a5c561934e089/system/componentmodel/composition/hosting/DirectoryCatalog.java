@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.composition.primitives.ComposablePartCatalog;
 import system.componentmodel.composition.primitives.ICompositionElement;
 import system.componentmodel.composition.primitives.ICompositionElementImplementation;
 import system.reflection.ReflectionContext;
@@ -45,12 +46,27 @@ import system.reflection.ReflectionContext;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.DirectoryCatalog, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.DirectoryCatalog" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.DirectoryCatalog</a>
  */
-public class DirectoryCatalog extends NetObject  {
+public class DirectoryCatalog extends ComposablePartCatalog  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.DirectoryCatalog
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.DirectoryCatalog";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class DirectoryCatalog extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryCatalog}, a cast assert is made to check if types are compatible.
+     */
     public static DirectoryCatalog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DirectoryCatalog(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class DirectoryCatalog extends NetObject  {
 
     // Constructors section
     
+    public DirectoryCatalog() throws Throwable {
+    }
 
     public DirectoryCatalog(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MemberAccessException, system.io.PathTooLongException, system.NotSupportedException, system.threading.ThreadAbortException, system.threading.LockRecursionException {
         try {
@@ -193,9 +213,20 @@ public class DirectoryCatalog extends NetObject  {
     }
 
 
+
     
     // Methods section
     
+    public void Refresh() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NotImplementedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Refresh");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

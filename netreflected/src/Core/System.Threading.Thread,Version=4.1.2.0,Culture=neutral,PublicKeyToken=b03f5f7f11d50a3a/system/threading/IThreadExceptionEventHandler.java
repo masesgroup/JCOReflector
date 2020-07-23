@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.threading.ThreadExceptionEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ThreadExceptionEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventHandler</a>
+ */
 public interface IThreadExceptionEventHandler {
     public void Invoke(NetObject sender, ThreadExceptionEventArgs e);
 }

@@ -43,12 +43,27 @@ import system.reflection.portableexecutable.DirectoryEntry;
 
 /**
  * The base .NET class managing System.Reflection.PortableExecutable.PEDirectoriesBuilder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder</a>
  */
 public class PEDirectoriesBuilder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.PortableExecutable.PEDirectoriesBuilder
+     */
     public static final String className = "System.Reflection.PortableExecutable.PEDirectoriesBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class PEDirectoriesBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PEDirectoriesBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static PEDirectoriesBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PEDirectoriesBuilder(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class PEDirectoriesBuilder extends NetObject  {
 
     // Constructors section
     
-
     public PEDirectoriesBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file

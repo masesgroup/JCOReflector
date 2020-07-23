@@ -44,12 +44,27 @@ import system.security.cryptography.KeySizes;
 
 /**
  * The base .NET class managing System.Security.Cryptography.AsymmetricAlgorithm, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsymmetricAlgorithm" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsymmetricAlgorithm</a>
  */
 public class AsymmetricAlgorithm extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.AsymmetricAlgorithm
+     */
     public static final String className = "System.Security.Cryptography.AsymmetricAlgorithm";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class AsymmetricAlgorithm extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricAlgorithm}, a cast assert is made to check if types are compatible.
+     */
     public static AsymmetricAlgorithm cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsymmetricAlgorithm(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class AsymmetricAlgorithm extends NetObject  {
 
     // Constructors section
     
+    public AsymmetricAlgorithm() throws Throwable {
+    }
 
     
     // Methods section
@@ -200,7 +219,7 @@ public class AsymmetricAlgorithm extends NetObject  {
         }
     }
 
-    public KeySizes[] getLegalKeySizes() throws Throwable {
+    public final KeySizes[] getLegalKeySizes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

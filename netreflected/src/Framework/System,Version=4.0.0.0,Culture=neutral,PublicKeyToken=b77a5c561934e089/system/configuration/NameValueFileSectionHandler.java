@@ -43,12 +43,27 @@ import system.xml.XmlNode;
 
 /**
  * The base .NET class managing System.Configuration.NameValueFileSectionHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.NameValueFileSectionHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.NameValueFileSectionHandler</a>
  */
 public class NameValueFileSectionHandler extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Configuration.NameValueFileSectionHandler
+     */
     public static final String className = "System.Configuration.NameValueFileSectionHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class NameValueFileSectionHandler extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NameValueFileSectionHandler}, a cast assert is made to check if types are compatible.
+     */
     public static NameValueFileSectionHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NameValueFileSectionHandler(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class NameValueFileSectionHandler extends NetObject  {
 
     // Constructors section
     
-
     public NameValueFileSectionHandler() throws Throwable {
         try {
             // add reference to assemblyName.dll file

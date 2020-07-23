@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.LayoutSettings;
 import system.windows.forms.TableLayoutPanelCellPosition;
 import system.windows.forms.layout.LayoutEngine;
 import system.windows.forms.TableLayoutColumnStyleCollection;
@@ -47,12 +48,27 @@ import system.windows.forms.TableLayoutRowStyleCollection;
 
 /**
  * The base .NET class managing System.Windows.Forms.TableLayoutSettings, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutSettings</a>
  */
-public class TableLayoutSettings extends NetObject  {
+public class TableLayoutSettings extends LayoutSettings  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.TableLayoutSettings
+     */
     public static final String className = "System.Windows.Forms.TableLayoutSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class TableLayoutSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableLayoutSettings}, a cast assert is made to check if types are compatible.
+     */
     public static TableLayoutSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TableLayoutSettings(from.getJCOInstance());
@@ -113,6 +131,10 @@ public class TableLayoutSettings extends NetObject  {
 
     // Constructors section
     
+    public TableLayoutSettings() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -257,17 +279,6 @@ public class TableLayoutSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowCount", RowCount);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public LayoutEngine getLayoutEngine() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LayoutEngine");
-            return new LayoutEngine(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -50,12 +50,27 @@ import system.web.configuration.HttpCapabilitiesProvider;
 
 /**
  * The base .NET class managing System.Web.Configuration.HttpCapabilitiesBase, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.HttpCapabilitiesBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.HttpCapabilitiesBase</a>
  */
 public class HttpCapabilitiesBase extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.HttpCapabilitiesBase
+     */
     public static final String className = "System.Web.Configuration.HttpCapabilitiesBase";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class HttpCapabilitiesBase extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpCapabilitiesBase}, a cast assert is made to check if types are compatible.
+     */
     public static HttpCapabilitiesBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpCapabilitiesBase(from.getJCOInstance());
@@ -116,7 +133,6 @@ public class HttpCapabilitiesBase extends NetObject  {
 
     // Constructors section
     
-
     public HttpCapabilitiesBase() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -1363,22 +1379,22 @@ public class HttpCapabilitiesBase extends NetObject  {
         }
     }
 
-    public static HttpCapabilitiesProvider getBrowserCapabilitiesProvider() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HttpCapabilitiesProvider getBrowserCapabilitiesProvider() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("BrowserCapabilitiesProvider");
+            JCObject val = (JCObject)classInstance.Get("BrowserCapabilitiesProvider");
             return new HttpCapabilitiesProvider(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setBrowserCapabilitiesProvider(HttpCapabilitiesProvider BrowserCapabilitiesProvider) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setBrowserCapabilitiesProvider(HttpCapabilitiesProvider BrowserCapabilitiesProvider) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("BrowserCapabilitiesProvider", BrowserCapabilitiesProvider == null ? null : BrowserCapabilitiesProvider.getJCOInstance());
+            classInstance.Set("BrowserCapabilitiesProvider", BrowserCapabilitiesProvider == null ? null : BrowserCapabilitiesProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

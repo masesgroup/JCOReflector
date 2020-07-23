@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.dynamicupdate.UpdateMapMetadata;
 import system.activities.Activity;
-import system.activities.Variable;
 
 
 /**
  * The base .NET class managing System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata</a>
  */
-public class NativeActivityUpdateMapMetadata extends NetObject  {
+public class NativeActivityUpdateMapMetadata extends UpdateMapMetadata  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata
+     */
     public static final String className = "System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class NativeActivityUpdateMapMetadata extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NativeActivityUpdateMapMetadata}, a cast assert is made to check if types are compatible.
+     */
     public static NativeActivityUpdateMapMetadata cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NativeActivityUpdateMapMetadata(from.getJCOInstance());
@@ -110,82 +127,14 @@ public class NativeActivityUpdateMapMetadata extends NetObject  {
 
     // Constructors section
     
+    public NativeActivityUpdateMapMetadata() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public boolean IsReferenceToImportedChild(Activity childActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsReferenceToImportedChild", childActivity == null ? null : childActivity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Activity GetMatch(Activity updatedChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMatch = (JCObject)classInstance.Invoke("GetMatch", updatedChild == null ? null : updatedChild.getJCOInstance());
-            return new Activity(objGetMatch);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Variable GetMatch(Variable updatedVariable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMatch = (JCObject)classInstance.Invoke("GetMatch", updatedVariable == null ? null : updatedVariable.getJCOInstance());
-            return new Variable(objGetMatch);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddMatch(Activity updatedChild, Activity originalChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddMatch", updatedChild == null ? null : updatedChild.getJCOInstance(), originalChild == null ? null : originalChild.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddMatch(Variable updatedVariable, Variable originalVariable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddMatch", updatedVariable == null ? null : updatedVariable.getJCOInstance(), originalVariable == null ? null : originalVariable.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AllowUpdateInsideThisActivity() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AllowUpdateInsideThisActivity");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DisallowUpdateInsideThisActivity(java.lang.String reason) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DisallowUpdateInsideThisActivity", reason);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SaveOriginalValue(Activity updatedChildActivity, NetObject originalValue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

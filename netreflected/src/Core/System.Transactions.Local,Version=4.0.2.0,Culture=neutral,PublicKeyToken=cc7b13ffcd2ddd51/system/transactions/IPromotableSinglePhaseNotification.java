@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.transactions.ITransactionPromoter;
+import system.transactions.ITransactionPromoterImplementation;
 import system.transactions.SinglePhaseEnlistment;
 
 
 /**
  * The base .NET class managing System.Transactions.IPromotableSinglePhaseNotification, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification</a>
  */
-public interface IPromotableSinglePhaseNotification extends IJCOBridgeReflected {
-
+public interface IPromotableSinglePhaseNotification extends IJCOBridgeReflected, ITransactionPromoter {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
+    public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.IPromotableSinglePhaseNotification
+     */
+    public static final String className = "System.Transactions.IPromotableSinglePhaseNotification";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPromotableSinglePhaseNotification}, a cast assert is made to check if types are compatible.
+     */
     public static IPromotableSinglePhaseNotification ToIPromotableSinglePhaseNotification(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Transactions.IPromotableSinglePhaseNotification, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Transactions.Local"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPromotableSinglePhaseNotificationImplementation(from.getJCOInstance());
     }
@@ -90,7 +109,6 @@ public interface IPromotableSinglePhaseNotification extends IJCOBridgeReflected 
 
     // Methods section
     
-    public byte[] Promote() throws Throwable;
 
     public void Initialize() throws Throwable;
 

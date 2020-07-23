@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.MethodSpecificationHandle;
 
 
 /**
  * The base .NET class managing System.Reflection.Metadata.MethodSpecificationHandle, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.MethodSpecificationHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.MethodSpecificationHandle</a>
  */
-public class MethodSpecificationHandle extends NetObject  {
+public class MethodSpecificationHandle extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.MethodSpecificationHandle
+     */
     public static final String className = "System.Reflection.Metadata.MethodSpecificationHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class MethodSpecificationHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodSpecificationHandle}, a cast assert is made to check if types are compatible.
+     */
     public static MethodSpecificationHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MethodSpecificationHandle(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class MethodSpecificationHandle extends NetObject  {
 
     // Constructors section
     
+    public MethodSpecificationHandle() throws Throwable {
+    }
+
+
 
     
     // Methods section

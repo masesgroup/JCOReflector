@@ -48,12 +48,27 @@ import system.windows.interop.RenderMode;
 
 /**
  * The base .NET class managing System.Windows.Media.RenderOptions, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.RenderOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.RenderOptions</a>
  */
 public class RenderOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.RenderOptions
+     */
     public static final String className = "System.Windows.Media.RenderOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class RenderOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RenderOptions}, a cast assert is made to check if types are compatible.
+     */
     public static RenderOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RenderOptions(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class RenderOptions extends NetObject  {
 
     // Constructors section
     
+    public RenderOptions() throws Throwable {
+    }
 
     
     // Methods section
@@ -246,22 +265,22 @@ public class RenderOptions extends NetObject  {
     
     // Properties section
     
-    public static RenderMode getProcessRenderMode() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RenderMode getProcessRenderMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ProcessRenderMode");
+            JCObject val = (JCObject)classInstance.Get("ProcessRenderMode");
             return new RenderMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setProcessRenderMode(RenderMode ProcessRenderMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setProcessRenderMode(RenderMode ProcessRenderMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("ProcessRenderMode", ProcessRenderMode == null ? null : ProcessRenderMode.getJCOInstance());
+            classInstance.Set("ProcessRenderMode", ProcessRenderMode == null ? null : ProcessRenderMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

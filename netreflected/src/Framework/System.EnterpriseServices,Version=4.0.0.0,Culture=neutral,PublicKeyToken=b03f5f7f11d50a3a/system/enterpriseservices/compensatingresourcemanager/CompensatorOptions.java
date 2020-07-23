@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.EnterpriseServices.CompensatingResourceManager.CompensatorOptions, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.CompensatorOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.CompensatorOptions</a>
  */
 public class CompensatorOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.CompensatingResourceManager.CompensatorOptions
+     */
     public static final String className = "System.EnterpriseServices.CompensatingResourceManager.CompensatorOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class CompensatorOptions extends NetObject  {
 
     // Flags management section
 
-    public CompensatorOptions add(CompensatorOptions val) throws Throwable {
+    public final CompensatorOptions add(CompensatorOptions val) throws Throwable {
         return new CompensatorOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CompensatorOptions remove(CompensatorOptions val) throws Throwable {
+    public final CompensatorOptions remove(CompensatorOptions val) throws Throwable {
         return new CompensatorOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CompensatorOptions val) throws Throwable {
+    public final boolean is(CompensatorOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CompensatorOptions val) throws Throwable {
+    public final boolean has(CompensatorOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

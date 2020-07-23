@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.reflection.IReflect;
+import system.reflection.IReflectImplementation;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.reflection.ParameterModifier;
@@ -49,12 +51,29 @@ import system.reflection.PropertyInfo;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.Expando.IExpando, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.Expando.IExpando" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.Expando.IExpando</a>
  */
-public interface IExpando extends IJCOBridgeReflected {
-
+public interface IExpando extends IJCOBridgeReflected, IReflect {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.Expando.IExpando
+     */
+    public static final String className = "System.Runtime.InteropServices.Expando.IExpando";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExpando}, a cast assert is made to check if types are compatible.
+     */
     public static IExpando ToIExpando(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices.Expando.IExpando, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IExpandoImplementation(from.getJCOInstance());
     }
@@ -97,31 +116,20 @@ public interface IExpando extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable;
 
     public FieldInfo AddField(java.lang.String name) throws Throwable;
 
-    public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 
-    public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable;
 
-    public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 
-    public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable;
 
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
 
-    public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable;
 
     public PropertyInfo AddProperty(java.lang.String name) throws Throwable;
 
-    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 
-    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
 
-    public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable;
 
     public void RemoveMember(MemberInfo m) throws Throwable;
 
@@ -129,8 +137,6 @@ public interface IExpando extends IJCOBridgeReflected {
     
     // Properties section
     
-    public NetType getUnderlyingSystemType() throws Throwable;
-
 
 
     // Instance Events section

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.dispatcher.ClientRuntimeCompatBase;
 import system.servicemodel.dispatcher.ClientOperation;
 import system.servicemodel.dispatcher.DispatchRuntime;
 import system.servicemodel.dispatcher.IClientOperationSelector;
@@ -47,12 +48,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.ServiceModel.Dispatcher.ClientRuntime, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime</a>
  */
-public class ClientRuntime extends NetObject  {
+public class ClientRuntime extends ClientRuntimeCompatBase  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Dispatcher.ClientRuntime
+     */
     public static final String className = "System.ServiceModel.Dispatcher.ClientRuntime";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class ClientRuntime extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClientRuntime}, a cast assert is made to check if types are compatible.
+     */
     public static ClientRuntime cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ClientRuntime(from.getJCOInstance());
@@ -113,6 +131,10 @@ public class ClientRuntime extends NetObject  {
 
     // Constructors section
     
+    public ClientRuntime() throws Throwable {
+    }
+
+
 
     
     // Methods section

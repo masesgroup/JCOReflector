@@ -44,12 +44,27 @@ import system.security.cryptography.AsymmetricAlgorithm;
 
 /**
  * The base .NET class managing System.Security.Cryptography.AsymmetricSignatureFormatter, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsymmetricSignatureFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsymmetricSignatureFormatter</a>
  */
 public class AsymmetricSignatureFormatter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.AsymmetricSignatureFormatter
+     */
     public static final String className = "System.Security.Cryptography.AsymmetricSignatureFormatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class AsymmetricSignatureFormatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricSignatureFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static AsymmetricSignatureFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsymmetricSignatureFormatter(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class AsymmetricSignatureFormatter extends NetObject  {
 
     // Constructors section
     
+    public AsymmetricSignatureFormatter() throws Throwable {
+    }
 
     
     // Methods section
@@ -120,6 +139,25 @@ public class AsymmetricSignatureFormatter extends NetObject  {
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)rgbHash);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexCreateSignature = 0; indexCreateSignature < resultingArrayList.size(); indexCreateSignature++ ) {
+				resultingArray[indexCreateSignature] = (byte)resultingArrayList.get(indexCreateSignature);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] CreateSignature(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)dupParam0);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

@@ -37,18 +37,37 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.jscript.vsa.IJSVsaItem;
+import microsoft.jscript.vsa.IJSVsaItemImplementation;
 import microsoft.jscript.vsa.JSVsaItemType;
 import system.codedom.CodeObject;
 
 
 /**
  * The base .NET class managing Microsoft.JScript.Vsa.IJSVsaCodeItem, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem</a>
  */
-public interface IJSVsaCodeItem extends IJCOBridgeReflected {
-
+public interface IJSVsaCodeItem extends IJCOBridgeReflected, IJSVsaItem {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
+    public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.Vsa.IJSVsaCodeItem
+     */
+    public static final String className = "Microsoft.JScript.Vsa.IJSVsaCodeItem";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IJSVsaCodeItem}, a cast assert is made to check if types are compatible.
+     */
     public static IJSVsaCodeItem ToIJSVsaCodeItem(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.JScript.Vsa.IJSVsaCodeItem, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.JScript"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IJSVsaCodeItemImplementation(from.getJCOInstance());
     }
@@ -91,7 +110,6 @@ public interface IJSVsaCodeItem extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetOption(java.lang.String name) throws Throwable;
 
     public void AddEventSource(java.lang.String eventSourceName, java.lang.String eventSourceType) throws Throwable;
 
@@ -99,21 +117,12 @@ public interface IJSVsaCodeItem extends IJCOBridgeReflected {
 
     public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable;
 
-    public void SetOption(java.lang.String name, NetObject value) throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getIsDirty() throws Throwable;
-
-    public JSVsaItemType getItemType() throws Throwable;
-
     public CodeObject getCodeDOM() throws Throwable;
-
-    public java.lang.String getName() throws Throwable;
-
-    public void setName(java.lang.String Name) throws Throwable;
 
     public java.lang.String getSourceText() throws Throwable;
 

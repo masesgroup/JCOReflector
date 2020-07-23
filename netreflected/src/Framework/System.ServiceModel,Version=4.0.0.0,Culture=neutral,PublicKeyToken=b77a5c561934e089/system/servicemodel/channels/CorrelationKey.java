@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
+import system.runtime.durableinstancing.InstanceKey;
 import system.xml.linq.XName;
 import system.xml.linq.XNamespace;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.CorrelationKey, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.CorrelationKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.CorrelationKey</a>
  */
-public class CorrelationKey extends NetObject  {
+public class CorrelationKey extends InstanceKey  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.CorrelationKey
+     */
     public static final String className = "System.ServiceModel.Channels.CorrelationKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CorrelationKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CorrelationKey}, a cast assert is made to check if types are compatible.
+     */
     public static CorrelationKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CorrelationKey(from.getJCOInstance());
@@ -111,6 +128,9 @@ public class CorrelationKey extends NetObject  {
 
     // Constructors section
     
+    public CorrelationKey() throws Throwable {
+    }
+
 
 
     
@@ -120,27 +140,6 @@ public class CorrelationKey extends NetObject  {
     
     // Properties section
     
-    public boolean getIsValid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsValid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getKeyString() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

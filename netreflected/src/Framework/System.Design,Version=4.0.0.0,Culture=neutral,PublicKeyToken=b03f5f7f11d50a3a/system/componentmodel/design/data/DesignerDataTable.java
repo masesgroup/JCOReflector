@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.data.DesignerDataTableBase;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Data.DesignerDataTable, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Data.DesignerDataTable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Data.DesignerDataTable</a>
  */
-public class DesignerDataTable extends NetObject  {
+public class DesignerDataTable extends DesignerDataTableBase  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Data.DesignerDataTable
+     */
     public static final String className = "System.ComponentModel.Design.Data.DesignerDataTable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DesignerDataTable extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerDataTable}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerDataTable cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerDataTable(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class DesignerDataTable extends NetObject  {
 
     // Constructors section
     
+    public DesignerDataTable() throws Throwable {
+    }
 
     
     // Methods section
@@ -118,43 +138,12 @@ public class DesignerDataTable extends NetObject  {
     
     // Properties section
     
-    public ICollection getColumns() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Columns");
-            return new ICollectionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICollection getRelationships() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Relationships");
             return new ICollectionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getOwner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Owner");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

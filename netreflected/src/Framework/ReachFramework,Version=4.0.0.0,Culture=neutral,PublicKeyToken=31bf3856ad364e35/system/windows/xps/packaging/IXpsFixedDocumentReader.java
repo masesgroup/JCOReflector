@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.xps.packaging.IDocumentStructureProvider;
+import system.windows.xps.packaging.IDocumentStructureProviderImplementation;
 import system.windows.xps.packaging.IXpsFixedPageReader;
 import system.windows.xps.packaging.IXpsFixedPageReaderImplementation;
 import system.Uri;
@@ -48,12 +50,29 @@ import system.windows.xps.packaging.XpsThumbnail;
 
 /**
  * The base .NET class managing System.Windows.Xps.Packaging.IXpsFixedDocumentReader, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentReader</a>
  */
-public interface IXpsFixedDocumentReader extends IJCOBridgeReflected {
-
+public interface IXpsFixedDocumentReader extends IJCOBridgeReflected, IDocumentStructureProvider {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
+    public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Packaging.IXpsFixedDocumentReader
+     */
+    public static final String className = "System.Windows.Xps.Packaging.IXpsFixedDocumentReader";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXpsFixedDocumentReader}, a cast assert is made to check if types are compatible.
+     */
     public static IXpsFixedDocumentReader ToIXpsFixedDocumentReader(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Xps.Packaging.IXpsFixedDocumentReader, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "ReachFramework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXpsFixedDocumentReaderImplementation(from.getJCOInstance());
     }
@@ -98,7 +117,6 @@ public interface IXpsFixedDocumentReader extends IJCOBridgeReflected {
     
     public IXpsFixedPageReader GetFixedPage(Uri pageSource) throws Throwable;
 
-    public XpsStructure AddDocumentStructure() throws Throwable;
 
     public void AddSignatureDefinition(XpsSignatureDefinition signatureDefinition) throws Throwable;
 

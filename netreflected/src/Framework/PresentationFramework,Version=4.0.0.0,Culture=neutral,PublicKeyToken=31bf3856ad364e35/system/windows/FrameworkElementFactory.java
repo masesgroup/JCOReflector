@@ -46,12 +46,27 @@ import system.windows.data.BindingBase;
 
 /**
  * The base .NET class managing System.Windows.FrameworkElementFactory, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkElementFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkElementFactory</a>
  */
 public class FrameworkElementFactory extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.FrameworkElementFactory
+     */
     public static final String className = "System.Windows.FrameworkElementFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class FrameworkElementFactory extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FrameworkElementFactory}, a cast assert is made to check if types are compatible.
+     */
     public static FrameworkElementFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FrameworkElementFactory(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class FrameworkElementFactory extends NetObject  {
 
     // Constructors section
     
-
     public FrameworkElementFactory() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ApplicationException, system.componentmodel.Win32Exception {
         try {
             // add reference to assemblyName.dll file

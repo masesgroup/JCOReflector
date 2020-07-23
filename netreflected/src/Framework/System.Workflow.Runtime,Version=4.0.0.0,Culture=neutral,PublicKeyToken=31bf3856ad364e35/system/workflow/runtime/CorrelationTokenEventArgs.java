@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.workflow.runtime.CorrelationToken;
 
 
 /**
  * The base .NET class managing System.Workflow.Runtime.CorrelationTokenEventArgs, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.CorrelationTokenEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.CorrelationTokenEventArgs</a>
  */
-public class CorrelationTokenEventArgs extends NetObject  {
+public class CorrelationTokenEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.CorrelationTokenEventArgs
+     */
     public static final String className = "System.Workflow.Runtime.CorrelationTokenEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class CorrelationTokenEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CorrelationTokenEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static CorrelationTokenEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CorrelationTokenEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class CorrelationTokenEventArgs extends NetObject  {
 
     // Constructors section
     
+    public CorrelationTokenEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

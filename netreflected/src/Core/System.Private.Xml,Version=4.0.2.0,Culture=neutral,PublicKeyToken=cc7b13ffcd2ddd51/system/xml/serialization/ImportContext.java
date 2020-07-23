@@ -44,12 +44,27 @@ import system.collections.specialized.StringCollection;
 
 /**
  * The base .NET class managing System.Xml.Serialization.ImportContext, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.ImportContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.ImportContext</a>
  */
 public class ImportContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.ImportContext
+     */
     public static final String className = "System.Xml.Serialization.ImportContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ImportContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImportContext}, a cast assert is made to check if types are compatible.
+     */
     public static ImportContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ImportContext(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class ImportContext extends NetObject  {
 
     // Constructors section
     
+    public ImportContext() throws Throwable {
+    }
 
     public ImportContext(CodeIdentifiers identifiers, boolean shareTypes) throws Throwable {
         try {
@@ -120,6 +139,7 @@ public class ImportContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

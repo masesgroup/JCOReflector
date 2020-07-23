@@ -48,12 +48,27 @@ import microsoft.build.utilities.DependencyFilter;
 
 /**
  * The base .NET class managing Microsoft.Build.Utilities.CanonicalTrackedInputFiles, Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles</a>
  */
 public class CanonicalTrackedInputFiles extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Utilities.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Utilities.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Utilities.CanonicalTrackedInputFiles
+     */
     public static final String className = "Microsoft.Build.Utilities.CanonicalTrackedInputFiles";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class CanonicalTrackedInputFiles extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CanonicalTrackedInputFiles}, a cast assert is made to check if types are compatible.
+     */
     public static CanonicalTrackedInputFiles cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CanonicalTrackedInputFiles(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class CanonicalTrackedInputFiles extends NetObject  {
 
     // Constructors section
     
+    public CanonicalTrackedInputFiles() throws Throwable {
+    }
 
     public CanonicalTrackedInputFiles(ITask ownerTask, ITaskItem[] tlogFiles, ITaskItem sourceFile, ITaskItem[] excludedInputPaths, CanonicalTrackedOutputFiles outputs, boolean useMinimalRebuildOptimization, boolean maintainCompositeRootingMarkers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
@@ -164,6 +183,7 @@ public class CanonicalTrackedInputFiles extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Diagnostics.ICollectData, System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ICollectData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ICollectData</a>
  */
 public class ICollectDataImplementation extends NetObject implements ICollectData {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.PerformanceCounter
+     */
     public static final String assemblyShortName = "System.Diagnostics.PerformanceCounter";
+    /**
+     * Qualified class name: System.Diagnostics.ICollectData
+     */
     public static final String className = "System.Diagnostics.ICollectData";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class ICollectDataImplementation extends NetObject implements ICollectDat
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollectData}, a cast assert is made to check if types are compatible.
+     */
     public static ICollectData ToICollectData(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICollectDataImplementation(from.getJCOInstance());

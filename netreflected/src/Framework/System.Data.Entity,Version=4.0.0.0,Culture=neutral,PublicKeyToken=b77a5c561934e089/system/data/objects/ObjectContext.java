@@ -56,12 +56,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Data.Objects.ObjectContext, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectContext</a>
  */
 public class ObjectContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Objects.ObjectContext
+     */
     public static final String className = "System.Data.Objects.ObjectContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +129,9 @@ public class ObjectContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectContext}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectContext(from.getJCOInstance());
@@ -122,6 +139,8 @@ public class ObjectContext extends NetObject  {
 
     // Constructors section
     
+    public ObjectContext() throws Throwable {
+    }
 
     public ObjectContext(EntityConnection connection) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         try {
@@ -142,6 +161,7 @@ public class ObjectContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -305,6 +325,16 @@ public class ObjectContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateDatabase");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeleteDatabase() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeleteDatabase");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

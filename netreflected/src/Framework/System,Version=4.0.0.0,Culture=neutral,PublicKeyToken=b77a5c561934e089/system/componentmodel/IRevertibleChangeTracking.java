@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.IChangeTracking;
+import system.componentmodel.IChangeTrackingImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.IRevertibleChangeTracking, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IRevertibleChangeTracking" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IRevertibleChangeTracking</a>
  */
-public interface IRevertibleChangeTracking extends IJCOBridgeReflected {
-
+public interface IRevertibleChangeTracking extends IJCOBridgeReflected, IChangeTracking {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.IRevertibleChangeTracking
+     */
+    public static final String className = "System.ComponentModel.IRevertibleChangeTracking";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRevertibleChangeTracking}, a cast assert is made to check if types are compatible.
+     */
     public static IRevertibleChangeTracking ToIRevertibleChangeTracking(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.IRevertibleChangeTracking, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRevertibleChangeTrackingImplementation(from.getJCOInstance());
     }
@@ -89,7 +108,6 @@ public interface IRevertibleChangeTracking extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AcceptChanges() throws Throwable;
 
     public void RejectChanges() throws Throwable;
 
@@ -97,8 +115,6 @@ public interface IRevertibleChangeTracking extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getIsChanged() throws Throwable;
-
 
 
     // Instance Events section

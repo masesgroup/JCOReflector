@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.dispatcher.MessageFilter;
 import system.servicemodel.channels.Message;
 import system.servicemodel.channels.MessageBuffer;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Dispatcher.ActionMessageFilter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.ActionMessageFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.ActionMessageFilter</a>
  */
-public class ActionMessageFilter extends NetObject  {
+public class ActionMessageFilter extends MessageFilter  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Dispatcher.ActionMessageFilter
+     */
     public static final String className = "System.ServiceModel.Dispatcher.ActionMessageFilter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ActionMessageFilter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActionMessageFilter}, a cast assert is made to check if types are compatible.
+     */
     public static ActionMessageFilter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActionMessageFilter(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class ActionMessageFilter extends NetObject  {
 
     // Constructors section
     
+    public ActionMessageFilter() throws Throwable {
+    }
 
     public ActionMessageFilter(java.lang.String... actions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -120,6 +140,7 @@ public class ActionMessageFilter extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

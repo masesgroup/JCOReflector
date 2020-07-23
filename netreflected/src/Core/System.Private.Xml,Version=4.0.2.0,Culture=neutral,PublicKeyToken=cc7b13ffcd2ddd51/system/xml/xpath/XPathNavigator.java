@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.xpath.XPathItem;
 import system.xml.schema.XmlSchemaSet;
 import system.xml.schema.ValidationEventHandler;
 import system.xml.xpath.XPathNavigator;
@@ -61,12 +62,27 @@ import system.xml.XmlNameTable;
 
 /**
  * The base .NET class managing System.Xml.XPath.XPathNavigator, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XPath.XPathNavigator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XPath.XPathNavigator</a>
  */
-public class XPathNavigator extends NetObject  {
+public class XPathNavigator extends XPathItem  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.XPath.XPathNavigator
+     */
     public static final String className = "System.Xml.XPath.XPathNavigator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -119,7 +135,9 @@ public class XPathNavigator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XPathNavigator}, a cast assert is made to check if types are compatible.
+     */
     public static XPathNavigator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XPathNavigator(from.getJCOInstance());
@@ -127,6 +145,8 @@ public class XPathNavigator extends NetObject  {
 
     // Constructors section
     
+    public XPathNavigator() throws Throwable {
+    }
 
     
     // Methods section
@@ -450,17 +470,6 @@ public class XPathNavigator extends NetObject  {
         try {
             JCObject objEvaluate = (JCObject)classInstance.Invoke("Evaluate", expr == null ? null : expr.getJCOInstance(), context == null ? null : context.getJCOInstance());
             return new NetObject(objEvaluate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject ValueAs(NetType returnType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance());
-            return new NetObject(objValueAs);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1074,84 +1083,12 @@ public class XPathNavigator extends NetObject  {
         }
     }
 
-    public boolean getIsNode() throws Throwable {
+    public IEqualityComparer getNavigatorComparer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsNode");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getValueAsBoolean() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ValueAsBoolean");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public double getValueAsDouble() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("ValueAsDouble");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getValueAsInt() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ValueAsInt");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public long getValueAsLong() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("ValueAsLong");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static IEqualityComparer getNavigatorComparer() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("NavigatorComparer");
+            JCObject val = (JCObject)classInstance.Get("NavigatorComparer");
             return new IEqualityComparerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getValueAsDateTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValueAsDateTime");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypedValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypedValue");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1258,32 +1195,11 @@ public class XPathNavigator extends NetObject  {
         }
     }
 
-    public java.lang.String getValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Value");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getXmlLang() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("XmlLang");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getValueType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValueType");
-            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1295,17 +1211,6 @@ public class XPathNavigator extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("SchemaInfo");
             return new IXmlSchemaInfoImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlSchemaType getXmlType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("XmlType");
-            return new XmlSchemaType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

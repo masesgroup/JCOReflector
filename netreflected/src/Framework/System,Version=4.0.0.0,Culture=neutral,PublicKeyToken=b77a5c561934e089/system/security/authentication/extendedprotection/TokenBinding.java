@@ -43,12 +43,27 @@ import system.security.authentication.extendedprotection.TokenBindingType;
 
 /**
  * The base .NET class managing System.Security.Authentication.ExtendedProtection.TokenBinding, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.TokenBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.TokenBinding</a>
  */
 public class TokenBinding extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Security.Authentication.ExtendedProtection.TokenBinding
+     */
     public static final String className = "System.Security.Authentication.ExtendedProtection.TokenBinding";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class TokenBinding extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TokenBinding}, a cast assert is made to check if types are compatible.
+     */
     public static TokenBinding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TokenBinding(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class TokenBinding extends NetObject  {
 
     // Constructors section
     
+    public TokenBinding() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.runtime.hosting.WorkflowRuntimeService;
 
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Hosting.WorkflowSchedulerService, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.WorkflowSchedulerService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.WorkflowSchedulerService</a>
  */
-public class WorkflowSchedulerService extends NetObject  {
+public class WorkflowSchedulerService extends WorkflowRuntimeService  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.Hosting.WorkflowSchedulerService
+     */
     public static final String className = "System.Workflow.Runtime.Hosting.WorkflowSchedulerService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class WorkflowSchedulerService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowSchedulerService}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowSchedulerService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowSchedulerService(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class WorkflowSchedulerService extends NetObject  {
 
     // Constructors section
     
+    public WorkflowSchedulerService() throws Throwable {
+    }
 
     
     // Methods section

@@ -48,12 +48,27 @@ import system.security.cryptography.x509certificates.X500DistinguishedName;
 
 /**
  * The base .NET class managing System.IdentityModel.Claims.Claim, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.Claim" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.Claim</a>
  */
 public class Claim extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Claims.Claim
+     */
     public static final String className = "System.IdentityModel.Claims.Claim";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class Claim extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Claim}, a cast assert is made to check if types are compatible.
+     */
     public static Claim cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Claim(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class Claim extends NetObject  {
 
     // Constructors section
     
+    public Claim() throws Throwable {
+    }
 
     public Claim(java.lang.String claimType, NetObject resource, java.lang.String right) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -124,6 +143,7 @@ public class Claim extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -156,6 +176,17 @@ public class Claim extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (Object)hash);
+            return new Claim(objCreateHashClaim);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Claim CreateHashClaim(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (Object)dupParam0);
             return new Claim(objCreateHashClaim);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,6 +248,17 @@ public class Claim extends NetObject  {
         }
     }
 
+    public static Claim CreateThumbprintClaim(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (Object)dupParam0);
+            return new Claim(objCreateThumbprintClaim);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Claim CreateUpnClaim(java.lang.String upn) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -265,11 +307,11 @@ public class Claim extends NetObject  {
     
     // Properties section
     
-    public static Claim getSystem() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Claim getSystem() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("System");
+            JCObject val = (JCObject)classInstance.Get("System");
             return new Claim(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

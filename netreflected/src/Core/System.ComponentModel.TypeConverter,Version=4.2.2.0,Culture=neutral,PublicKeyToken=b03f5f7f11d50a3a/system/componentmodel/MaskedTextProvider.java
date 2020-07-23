@@ -44,12 +44,27 @@ import system.componentmodel.MaskedTextResultHint;
 
 /**
  * The base .NET class managing System.ComponentModel.MaskedTextProvider, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.MaskedTextProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.MaskedTextProvider</a>
  */
 public class MaskedTextProvider extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.MaskedTextProvider
+     */
     public static final String className = "System.ComponentModel.MaskedTextProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class MaskedTextProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MaskedTextProvider}, a cast assert is made to check if types are compatible.
+     */
     public static MaskedTextProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MaskedTextProvider(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class MaskedTextProvider extends NetObject  {
 
     // Constructors section
     
+    public MaskedTextProvider() throws Throwable {
+    }
 
     public MaskedTextProvider(java.lang.String mask) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.TypeInitializationException {
         try {
@@ -180,6 +199,7 @@ public class MaskedTextProvider extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -700,11 +720,11 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public static char getDefaultPasswordChar() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public char getDefaultPasswordChar() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (char)classType.Get("DefaultPasswordChar");
+            return (char)classInstance.Get("DefaultPasswordChar");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,11 +810,11 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public static int getInvalidIndex() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getInvalidIndex() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("InvalidIndex");
+            return (int)classInstance.Get("InvalidIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

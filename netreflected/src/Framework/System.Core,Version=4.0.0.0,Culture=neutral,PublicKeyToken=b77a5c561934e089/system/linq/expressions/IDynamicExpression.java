@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.linq.expressions.IArgumentProvider;
+import system.linq.expressions.IArgumentProviderImplementation;
 import system.linq.expressions.Expression;
 
 
 /**
  * The base .NET class managing System.Linq.Expressions.IDynamicExpression, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.IDynamicExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.IDynamicExpression</a>
  */
-public interface IDynamicExpression extends IJCOBridgeReflected {
-
+public interface IDynamicExpression extends IJCOBridgeReflected, IArgumentProvider {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
+    public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Linq.Expressions.IDynamicExpression
+     */
+    public static final String className = "System.Linq.Expressions.IDynamicExpression";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDynamicExpression}, a cast assert is made to check if types are compatible.
+     */
     public static IDynamicExpression ToIDynamicExpression(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Linq.Expressions.IDynamicExpression, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Core"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDynamicExpressionImplementation(from.getJCOInstance());
     }
@@ -90,7 +109,6 @@ public interface IDynamicExpression extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Expression GetArgument(int index) throws Throwable;
 
     public Expression Rewrite(Expression[] args) throws Throwable;
 
@@ -100,8 +118,6 @@ public interface IDynamicExpression extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getArgumentCount() throws Throwable;
-
     public NetType getDelegateType() throws Throwable;
 
 

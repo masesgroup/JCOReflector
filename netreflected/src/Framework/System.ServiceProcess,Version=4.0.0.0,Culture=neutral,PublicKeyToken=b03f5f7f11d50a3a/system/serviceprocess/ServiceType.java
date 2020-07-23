@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ServiceProcess.ServiceType, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceType</a>
  */
 public class ServiceType extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ServiceProcess
+     */
     public static final String assemblyShortName = "System.ServiceProcess";
+    /**
+     * Qualified class name: System.ServiceProcess.ServiceType
+     */
     public static final String className = "System.ServiceProcess.ServiceType";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class ServiceType extends NetObject  {
 
     // Flags management section
 
-    public ServiceType add(ServiceType val) throws Throwable {
+    public final ServiceType add(ServiceType val) throws Throwable {
         return new ServiceType(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ServiceType remove(ServiceType val) throws Throwable {
+    public final ServiceType remove(ServiceType val) throws Throwable {
         return new ServiceType(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ServiceType val) throws Throwable {
+    public final boolean is(ServiceType val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ServiceType val) throws Throwable {
+    public final boolean has(ServiceType val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

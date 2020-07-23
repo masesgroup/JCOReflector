@@ -42,12 +42,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Windows.Input.ICommand, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ICommand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ICommand</a>
  */
 public interface ICommand extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Windows.Input.ICommand
+     */
+    public static final String className = "System.Windows.Input.ICommand";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICommand}, a cast assert is made to check if types are compatible.
+     */
     public static ICommand ToICommand(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Windows.Input.ICommand, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICommandImplementation(from.getJCOInstance());
     }

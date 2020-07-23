@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.IO.WatcherChangeTypes, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.WatcherChangeTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.WatcherChangeTypes</a>
  */
 public class WatcherChangeTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.IO.WatcherChangeTypes
+     */
     public static final String className = "System.IO.WatcherChangeTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class WatcherChangeTypes extends NetObject  {
 
     // Flags management section
 
-    public WatcherChangeTypes add(WatcherChangeTypes val) throws Throwable {
+    public final WatcherChangeTypes add(WatcherChangeTypes val) throws Throwable {
         return new WatcherChangeTypes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public WatcherChangeTypes remove(WatcherChangeTypes val) throws Throwable {
+    public final WatcherChangeTypes remove(WatcherChangeTypes val) throws Throwable {
         return new WatcherChangeTypes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(WatcherChangeTypes val) throws Throwable {
+    public final boolean is(WatcherChangeTypes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(WatcherChangeTypes val) throws Throwable {
+    public final boolean has(WatcherChangeTypes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

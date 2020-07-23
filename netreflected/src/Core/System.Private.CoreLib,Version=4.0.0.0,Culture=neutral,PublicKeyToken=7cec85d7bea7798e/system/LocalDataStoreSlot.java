@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.LocalDataStoreSlot, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.LocalDataStoreSlot" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.LocalDataStoreSlot</a>
  */
 public class LocalDataStoreSlot extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.LocalDataStoreSlot
+     */
     public static final String className = "System.LocalDataStoreSlot";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class LocalDataStoreSlot extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LocalDataStoreSlot}, a cast assert is made to check if types are compatible.
+     */
     public static LocalDataStoreSlot cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LocalDataStoreSlot(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class LocalDataStoreSlot extends NetObject  {
 
     // Constructors section
     
+    public LocalDataStoreSlot() throws Throwable {
+    }
+
+
 
     
     // Methods section

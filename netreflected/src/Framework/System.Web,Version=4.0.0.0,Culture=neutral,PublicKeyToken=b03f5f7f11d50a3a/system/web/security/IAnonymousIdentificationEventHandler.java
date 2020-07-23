@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.security.AnonymousIdentificationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link AnonymousIdentificationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.AnonymousIdentificationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.AnonymousIdentificationEventHandler</a>
+ */
 public interface IAnonymousIdentificationEventHandler {
     public void Invoke(NetObject sender, AnonymousIdentificationEventArgs e);
 }

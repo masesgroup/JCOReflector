@@ -47,12 +47,27 @@ import system.security.accesscontrol.CommonSecurityDescriptor;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.Ipc.IpcServerChannel, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.Ipc.IpcServerChannel</a>
  */
 public class IpcServerChannel extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Remoting
+     */
     public static final String assemblyShortName = "System.Runtime.Remoting";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.Ipc.IpcServerChannel
+     */
     public static final String className = "System.Runtime.Remoting.Channels.Ipc.IpcServerChannel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class IpcServerChannel extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IpcServerChannel}, a cast assert is made to check if types are compatible.
+     */
     public static IpcServerChannel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IpcServerChannel(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class IpcServerChannel extends NetObject  {
 
     // Constructors section
     
+    public IpcServerChannel() throws Throwable {
+    }
 
     public IpcServerChannel(IDictionary properties, IServerChannelSinkProvider sinkProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.remoting.RemotingException, system.AccessViolationException, system.OutOfMemoryException, system.SystemException, system.OverflowException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException {
         try {
@@ -163,6 +182,7 @@ public class IpcServerChannel extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

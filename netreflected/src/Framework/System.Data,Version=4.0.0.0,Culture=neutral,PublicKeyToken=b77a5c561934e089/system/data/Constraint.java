@@ -44,12 +44,27 @@ import system.data.PropertyCollection;
 
 /**
  * The base .NET class managing System.Data.Constraint, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Constraint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Constraint</a>
  */
 public class Constraint extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.Constraint
+     */
     public static final String className = "System.Data.Constraint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Constraint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Constraint}, a cast assert is made to check if types are compatible.
+     */
     public static Constraint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Constraint(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class Constraint extends NetObject  {
 
     // Constructors section
     
+    public Constraint() throws Throwable {
+    }
 
     
     // Methods section

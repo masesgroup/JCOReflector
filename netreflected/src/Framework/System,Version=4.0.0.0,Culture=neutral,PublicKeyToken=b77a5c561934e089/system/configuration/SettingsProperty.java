@@ -46,12 +46,27 @@ import system.configuration.SettingsAttributeDictionary;
 
 /**
  * The base .NET class managing System.Configuration.SettingsProperty, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingsProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingsProperty</a>
  */
 public class SettingsProperty extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Configuration.SettingsProperty
+     */
     public static final String className = "System.Configuration.SettingsProperty";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class SettingsProperty extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SettingsProperty}, a cast assert is made to check if types are compatible.
+     */
     public static SettingsProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SettingsProperty(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class SettingsProperty extends NetObject  {
 
     // Constructors section
     
+    public SettingsProperty() throws Throwable {
+    }
 
     public SettingsProperty(SettingsProperty propertyToCopy) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         try {
@@ -142,6 +161,7 @@ public class SettingsProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

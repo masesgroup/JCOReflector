@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.transactions.ITransactionPromoter;
+import system.transactions.ITransactionPromoterImplementation;
 import system.transactions.SinglePhaseEnlistment;
 
 
 /**
  * The base .NET class managing System.Transactions.IPromotableSinglePhaseNotification, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification</a>
  */
 public class IPromotableSinglePhaseNotificationImplementation extends NetObject implements IPromotableSinglePhaseNotification {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.IPromotableSinglePhaseNotification
+     */
     public static final String className = "System.Transactions.IPromotableSinglePhaseNotification";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPromotableSinglePhaseNotification}, a cast assert is made to check if types are compatible.
+     */
     public static IPromotableSinglePhaseNotification ToIPromotableSinglePhaseNotification(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IPromotableSinglePhaseNotificationImplementation(from.getJCOInstance());

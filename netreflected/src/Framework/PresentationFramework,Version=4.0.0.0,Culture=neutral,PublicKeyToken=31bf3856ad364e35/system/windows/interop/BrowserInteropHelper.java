@@ -43,12 +43,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.Windows.Interop.BrowserInteropHelper, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.BrowserInteropHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.BrowserInteropHelper</a>
  */
 public class BrowserInteropHelper extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Interop.BrowserInteropHelper
+     */
     public static final String className = "System.Windows.Interop.BrowserInteropHelper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class BrowserInteropHelper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BrowserInteropHelper}, a cast assert is made to check if types are compatible.
+     */
     public static BrowserInteropHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BrowserInteropHelper(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class BrowserInteropHelper extends NetObject  {
 
     // Constructors section
     
+    public BrowserInteropHelper() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,43 +136,43 @@ public class BrowserInteropHelper extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsBrowserHosted() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsBrowserHosted() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsBrowserHosted");
+            return (boolean)classInstance.Get("IsBrowserHosted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject getClientSite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject getClientSite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ClientSite");
+            JCObject val = (JCObject)classInstance.Get("ClientSite");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject getHostScript() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.RankException, system.OutOfMemoryException, system.reflection.TargetParameterCountException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject getHostScript() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.RankException, system.OutOfMemoryException, system.reflection.TargetParameterCountException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("HostScript");
+            JCObject val = (JCObject)classInstance.Get("HostScript");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Uri getSource() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Uri getSource() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Source");
+            JCObject val = (JCObject)classInstance.Get("Source");
             return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

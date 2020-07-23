@@ -43,12 +43,27 @@ import system.security.cryptography.DataProtectionScope;
 
 /**
  * The base .NET class managing System.Security.Cryptography.ProtectedData, System.Security.Cryptography.ProtectedData, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ProtectedData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ProtectedData</a>
  */
 public class ProtectedData extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.ProtectedData, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.ProtectedData, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.ProtectedData
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.ProtectedData";
+    /**
+     * Qualified class name: System.Security.Cryptography.ProtectedData
+     */
     public static final String className = "System.Security.Cryptography.ProtectedData";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ProtectedData extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProtectedData}, a cast assert is made to check if types are compatible.
+     */
     public static ProtectedData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ProtectedData(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ProtectedData extends NetObject  {
 
     // Constructors section
     
+    public ProtectedData() throws Throwable {
+    }
 
     
     // Methods section
@@ -132,12 +151,50 @@ public class ProtectedData extends NetObject  {
         }
     }
 
+    public static byte[] Protect(JCRefOut dupParam0, JCRefOut dupParam1, DataProtectionScope dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Protect", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexProtect = 0; indexProtect < resultingArrayList.size(); indexProtect++ ) {
+				resultingArray[indexProtect] = (byte)resultingArrayList.get(indexProtect);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static byte[] Unprotect(byte[] encryptedData, byte[] optionalEntropy, DataProtectionScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", encryptedData, optionalEntropy, scope == null ? null : scope.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexUnprotect = 0; indexUnprotect < resultingArrayList.size(); indexUnprotect++ ) {
+				resultingArray[indexUnprotect] = (byte)resultingArrayList.get(indexUnprotect);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte[] Unprotect(JCRefOut dupParam0, JCRefOut dupParam1, DataProtectionScope dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

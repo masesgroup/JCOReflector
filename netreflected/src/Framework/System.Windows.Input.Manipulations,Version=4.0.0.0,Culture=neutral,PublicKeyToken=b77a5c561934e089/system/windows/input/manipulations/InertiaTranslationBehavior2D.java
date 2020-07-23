@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.input.manipulations.InertiaParameters2D;
 import system.Single;
 
 
 /**
  * The base .NET class managing System.Windows.Input.Manipulations.InertiaTranslationBehavior2D, System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.InertiaTranslationBehavior2D" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.InertiaTranslationBehavior2D</a>
  */
-public class InertiaTranslationBehavior2D extends NetObject  {
+public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
+    /**
+     * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Input.Manipulations
+     */
     public static final String assemblyShortName = "System.Windows.Input.Manipulations";
+    /**
+     * Qualified class name: System.Windows.Input.Manipulations.InertiaTranslationBehavior2D
+     */
     public static final String className = "System.Windows.Input.Manipulations.InertiaTranslationBehavior2D";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class InertiaTranslationBehavior2D extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InertiaTranslationBehavior2D}, a cast assert is made to check if types are compatible.
+     */
     public static InertiaTranslationBehavior2D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InertiaTranslationBehavior2D(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class InertiaTranslationBehavior2D extends NetObject  {
 
     // Constructors section
     
-
     public InertiaTranslationBehavior2D() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.EventHandler;
@@ -44,12 +46,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.IComponent, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IComponent</a>
  */
-public interface IComponent extends IJCOBridgeReflected {
-
+public interface IComponent extends IJCOBridgeReflected, IDisposable {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.IComponent
+     */
+    public static final String className = "System.ComponentModel.IComponent";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IComponent}, a cast assert is made to check if types are compatible.
+     */
     public static IComponent ToIComponent(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.IComponent, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IComponentImplementation(from.getJCOInstance());
     }
@@ -92,7 +111,6 @@ public interface IComponent extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Dispose() throws Throwable;
 
 
     

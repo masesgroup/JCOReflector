@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.security.ISecurityEncodable;
+import system.security.ISecurityEncodableImplementation;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.SecurityElement;
@@ -44,12 +46,29 @@ import system.security.SecurityElement;
 
 /**
  * The base .NET class managing System.Security.IPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.IPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.IPermission</a>
  */
-public interface IPermission extends IJCOBridgeReflected {
-
+public interface IPermission extends IJCOBridgeReflected, ISecurityEncodable {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.IPermission
+     */
+    public static final String className = "System.Security.IPermission";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPermission}, a cast assert is made to check if types are compatible.
+     */
     public static IPermission ToIPermission(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Security.IPermission, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPermissionImplementation(from.getJCOInstance());
     }
@@ -100,11 +119,9 @@ public interface IPermission extends IJCOBridgeReflected {
 
     public IPermission Union(IPermission target) throws Throwable;
 
-    public SecurityElement ToXml() throws Throwable;
 
     public void Demand() throws Throwable;
 
-    public void FromXml(SecurityElement e) throws Throwable;
 
 
     

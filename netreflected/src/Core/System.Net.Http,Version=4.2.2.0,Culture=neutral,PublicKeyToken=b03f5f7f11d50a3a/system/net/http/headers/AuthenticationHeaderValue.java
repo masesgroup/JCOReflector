@@ -43,12 +43,27 @@ import system.net.http.headers.AuthenticationHeaderValue;
 
 /**
  * The base .NET class managing System.Net.Http.Headers.AuthenticationHeaderValue, System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.AuthenticationHeaderValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.AuthenticationHeaderValue</a>
  */
 public class AuthenticationHeaderValue extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Http
+     */
     public static final String assemblyShortName = "System.Net.Http";
+    /**
+     * Qualified class name: System.Net.Http.Headers.AuthenticationHeaderValue
+     */
     public static final String className = "System.Net.Http.Headers.AuthenticationHeaderValue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class AuthenticationHeaderValue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AuthenticationHeaderValue}, a cast assert is made to check if types are compatible.
+     */
     public static AuthenticationHeaderValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AuthenticationHeaderValue(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class AuthenticationHeaderValue extends NetObject  {
 
     // Constructors section
     
+    public AuthenticationHeaderValue() throws Throwable {
+    }
 
     public AuthenticationHeaderValue(java.lang.String scheme) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         try {
@@ -129,6 +148,7 @@ public class AuthenticationHeaderValue extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

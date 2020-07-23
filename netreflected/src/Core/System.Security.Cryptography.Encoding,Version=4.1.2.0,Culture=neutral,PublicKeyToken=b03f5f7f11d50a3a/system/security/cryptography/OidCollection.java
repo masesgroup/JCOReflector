@@ -44,12 +44,27 @@ import system.security.cryptography.OidEnumerator;
 
 /**
  * The base .NET class managing System.Security.Cryptography.OidCollection, System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.OidCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.OidCollection</a>
  */
 public class OidCollection extends NetObject implements Iterable<Oid> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Encoding
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Encoding";
+    /**
+     * Qualified class name: System.Security.Cryptography.OidCollection
+     */
     public static final String className = "System.Security.Cryptography.OidCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class OidCollection extends NetObject implements Iterable<Oid> {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OidCollection}, a cast assert is made to check if types are compatible.
+     */
     public static OidCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OidCollection(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class OidCollection extends NetObject implements Iterable<Oid> {
 
     // Constructors section
     
-
     public OidCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -135,12 +151,12 @@ public class OidCollection extends NetObject implements Iterable<Oid> {
         }
     }
 
-    public OidEnumerator GetEnumerator() throws Throwable {
+    public final OidEnumerator GetEnumerator() throws Throwable {
         return new OidEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<Oid> iterator() {
+	public final java.util.Iterator<Oid> iterator() {
 		return new OidEnumerator(classInstance);
 	}
 

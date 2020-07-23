@@ -49,12 +49,27 @@ import system.xml.XmlQualifiedName;
 
 /**
  * The base .NET class managing System.Xml.Xsl.Runtime.XmlILStorageConverter, System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter</a>
  */
 public class XmlILStorageConverter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.SqlXml
+     */
     public static final String assemblyShortName = "System.Data.SqlXml";
+    /**
+     * Qualified class name: System.Xml.Xsl.Runtime.XmlILStorageConverter
+     */
     public static final String className = "System.Xml.Xsl.Runtime.XmlILStorageConverter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class XmlILStorageConverter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlILStorageConverter}, a cast assert is made to check if types are compatible.
+     */
     public static XmlILStorageConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlILStorageConverter(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class XmlILStorageConverter extends NetObject  {
 
     // Constructors section
     
+    public XmlILStorageConverter() throws Throwable {
+    }
 
     
     // Methods section
@@ -135,6 +154,17 @@ public class XmlILStorageConverter extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objBytesToAtomicValue = (JCObject)classType.Invoke("BytesToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            return new XmlAtomicValue(objBytesToAtomicValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlAtomicValue BytesToAtomicValue(JCRefOut dupParam0, int dupParam1, XmlQueryRuntime dupParam2) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objBytesToAtomicValue = (JCObject)classType.Invoke("BytesToAtomicValue", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new XmlAtomicValue(objBytesToAtomicValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

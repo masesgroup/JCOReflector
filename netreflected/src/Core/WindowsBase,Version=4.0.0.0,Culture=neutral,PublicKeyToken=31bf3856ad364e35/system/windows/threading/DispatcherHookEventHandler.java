@@ -42,12 +42,27 @@ import system.windows.threading.DispatcherHookEventArgs;
 import system.windows.threading.IDispatcherHookEventHandler;
 /**
  * The base .NET class managing System.Windows.Threading.DispatcherHookEventHandler, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherHookEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherHookEventHandler</a>
  */
 public class DispatcherHookEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Threading.DispatcherHookEventHandler
+     */
     public static final String className = "System.Windows.Threading.DispatcherHookEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDispatcherHookEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DispatcherHookEventHandler extends JCVoidDelegate implements IJCVoi
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DispatcherHookEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DispatcherHookEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DispatcherHookEventHandler extends JCVoidDelegate implements IJCVoi
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DispatcherHookEventArgs e) {
     }
 }

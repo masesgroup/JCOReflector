@@ -45,12 +45,27 @@ import system.threading.CancellationToken;
 
 /**
  * The base .NET class managing System.Threading.CancellationTokenSource, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenSource</a>
  */
 public class CancellationTokenSource extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Threading.CancellationTokenSource
+     */
     public static final String className = "System.Threading.CancellationTokenSource";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CancellationTokenSource extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CancellationTokenSource}, a cast assert is made to check if types are compatible.
+     */
     public static CancellationTokenSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CancellationTokenSource(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class CancellationTokenSource extends NetObject  {
 
     // Constructors section
     
-
     public CancellationTokenSource() throws Throwable {
         try {
             // add reference to assemblyName.dll file

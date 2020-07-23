@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.DependencyObject;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CoerceValueCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoerceValueCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoerceValueCallback</a>
+ */
 public interface ICoerceValueCallback {
     public NetObject Invoke(DependencyObject d, NetObject baseValue);
 }

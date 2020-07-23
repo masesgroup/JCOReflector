@@ -42,12 +42,29 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Linq.Expressions.IArgumentProvider, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.IArgumentProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.IArgumentProvider</a>
  */
 public interface IArgumentProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
+    public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Linq.Expressions.IArgumentProvider
+     */
+    public static final String className = "System.Linq.Expressions.IArgumentProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IArgumentProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IArgumentProvider ToIArgumentProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Linq.Expressions.IArgumentProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Core"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IArgumentProviderImplementation(from.getJCOInstance());
     }

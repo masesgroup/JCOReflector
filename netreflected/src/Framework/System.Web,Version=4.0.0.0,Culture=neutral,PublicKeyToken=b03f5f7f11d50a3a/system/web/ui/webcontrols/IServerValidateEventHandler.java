@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.ServerValidateEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ServerValidateEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ServerValidateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ServerValidateEventHandler</a>
+ */
 public interface IServerValidateEventHandler {
     public void Invoke(NetObject source, ServerValidateEventArgs args);
 }

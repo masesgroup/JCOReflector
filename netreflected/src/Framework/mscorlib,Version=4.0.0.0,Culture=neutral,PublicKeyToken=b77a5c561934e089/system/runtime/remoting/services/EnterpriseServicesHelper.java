@@ -48,12 +48,27 @@ import system.runtime.remoting.proxies.RealProxy;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Services.EnterpriseServicesHelper, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper</a>
  */
 public class EnterpriseServicesHelper extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Services.EnterpriseServicesHelper
+     */
     public static final String className = "System.Runtime.Remoting.Services.EnterpriseServicesHelper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class EnterpriseServicesHelper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EnterpriseServicesHelper}, a cast assert is made to check if types are compatible.
+     */
     public static EnterpriseServicesHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EnterpriseServicesHelper(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class EnterpriseServicesHelper extends NetObject  {
 
     // Constructors section
     
-
     public EnterpriseServicesHelper() throws Throwable {
         try {
             // add reference to assemblyName.dll file

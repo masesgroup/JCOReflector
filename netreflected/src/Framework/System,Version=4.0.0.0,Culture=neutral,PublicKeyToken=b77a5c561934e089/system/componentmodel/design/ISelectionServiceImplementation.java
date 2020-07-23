@@ -46,12 +46,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ISelectionService, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ISelectionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ISelectionService</a>
  */
 public class ISelectionServiceImplementation extends NetObject implements ISelectionService {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ISelectionService
+     */
     public static final String className = "System.ComponentModel.Design.ISelectionService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISelectionService}, a cast assert is made to check if types are compatible.
+     */
     public static ISelectionService ToISelectionService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISelectionServiceImplementation(from.getJCOInstance());

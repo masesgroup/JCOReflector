@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.IAppDomainInitializer;
 /**
  * The base .NET class managing System.AppDomainInitializer, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.AppDomainInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.AppDomainInitializer</a>
  */
 public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.AppDomainInitializer
+     */
     public static final String className = "System.AppDomainInitializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IAppDomainInitializer callerInstance = null;
@@ -170,7 +185,7 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(java.lang.String[] args) throws Throwable {
+    public void METHOD_JAVA_NAME(java.lang.String[] args) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -180,7 +195,9 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(java.lang.String[] args) {
     }
 }

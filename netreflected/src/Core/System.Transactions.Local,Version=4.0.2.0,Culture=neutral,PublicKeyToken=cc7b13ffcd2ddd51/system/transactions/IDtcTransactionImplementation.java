@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Transactions.IDtcTransaction, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IDtcTransaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IDtcTransaction</a>
  */
 public class IDtcTransactionImplementation extends NetObject implements IDtcTransaction {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.IDtcTransaction
+     */
     public static final String className = "System.Transactions.IDtcTransaction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IDtcTransactionImplementation extends NetObject implements IDtcTran
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDtcTransaction}, a cast assert is made to check if types are compatible.
+     */
     public static IDtcTransaction ToIDtcTransaction(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDtcTransactionImplementation(from.getJCOInstance());

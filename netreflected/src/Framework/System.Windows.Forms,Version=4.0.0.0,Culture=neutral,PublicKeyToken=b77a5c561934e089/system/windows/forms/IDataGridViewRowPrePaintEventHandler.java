@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewRowPrePaintEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewRowPrePaintEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowPrePaintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowPrePaintEventHandler</a>
+ */
 public interface IDataGridViewRowPrePaintEventHandler {
     public void Invoke(NetObject sender, DataGridViewRowPrePaintEventArgs e);
 }

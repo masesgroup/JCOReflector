@@ -44,12 +44,27 @@ import system.xml.xpath.XPathNavigator;
 
 /**
  * The base .NET class managing System.Xml.Xsl.Runtime.XsltLibrary, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XsltLibrary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XsltLibrary</a>
  */
 public class XsltLibrary extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.Runtime.XsltLibrary
+     */
     public static final String className = "System.Xml.Xsl.Runtime.XsltLibrary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class XsltLibrary extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XsltLibrary}, a cast assert is made to check if types are compatible.
+     */
     public static XsltLibrary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XsltLibrary(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class XsltLibrary extends NetObject  {
 
     // Constructors section
     
+    public XsltLibrary() throws Throwable {
+    }
+
+
 
     
     // Methods section

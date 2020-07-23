@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.AsyncCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link AsyncCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AsyncCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AsyncCompletedEventHandler</a>
+ */
 public interface IAsyncCompletedEventHandler {
     public void Invoke(NetObject sender, AsyncCompletedEventArgs e);
 }

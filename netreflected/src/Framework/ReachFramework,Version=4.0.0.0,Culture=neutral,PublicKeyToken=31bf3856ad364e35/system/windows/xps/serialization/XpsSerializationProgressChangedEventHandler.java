@@ -42,12 +42,27 @@ import system.windows.xps.serialization.XpsSerializationProgressChangedEventArgs
 import system.windows.xps.serialization.IXpsSerializationProgressChangedEventHandler;
 /**
  * The base .NET class managing System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler</a>
  */
 public class XpsSerializationProgressChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler
+     */
     public static final String className = "System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IXpsSerializationProgressChangedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class XpsSerializationProgressChangedEventHandler extends JCVoidDelegate 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, XpsSerializationProgressChangedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, XpsSerializationProgressChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class XpsSerializationProgressChangedEventHandler extends JCVoidDelegate 
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, XpsSerializationProgressChangedEventArgs e) {
     }
 }

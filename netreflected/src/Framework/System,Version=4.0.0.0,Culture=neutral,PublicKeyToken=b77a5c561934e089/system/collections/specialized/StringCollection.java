@@ -43,12 +43,27 @@ import system.collections.specialized.StringEnumerator;
 
 /**
  * The base .NET class managing System.Collections.Specialized.StringCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.StringCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.StringCollection</a>
  */
 public class StringCollection extends NetObject implements Iterable<java.lang.String> {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Collections.Specialized.StringCollection
+     */
     public static final String className = "System.Collections.Specialized.StringCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class StringCollection extends NetObject implements Iterable<java.lang.St
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringCollection}, a cast assert is made to check if types are compatible.
+     */
     public static StringCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StringCollection(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class StringCollection extends NetObject implements Iterable<java.lang.St
 
     // Constructors section
     
-
     public StringCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -154,12 +170,12 @@ public class StringCollection extends NetObject implements Iterable<java.lang.St
         }
     }
 
-    public StringEnumerator GetEnumerator() throws Throwable {
+    public final StringEnumerator GetEnumerator() throws Throwable {
         return new StringEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<java.lang.String> iterator() {
+	public final java.util.Iterator<java.lang.String> iterator() {
 		return new StringEnumerator(classInstance);
 	}
 
@@ -168,6 +184,16 @@ public class StringCollection extends NetObject implements Iterable<java.lang.St
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (Object)value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddRange(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddRange", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,6 +214,16 @@ public class StringCollection extends NetObject implements Iterable<java.lang.St
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array, index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CopyTo(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CopyTo", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

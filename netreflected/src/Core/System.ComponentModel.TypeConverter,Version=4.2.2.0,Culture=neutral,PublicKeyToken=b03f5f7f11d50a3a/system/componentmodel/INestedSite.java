@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.ISite;
+import system.componentmodel.ISiteImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.IContainer;
@@ -45,12 +49,29 @@ import system.componentmodel.IContainerImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.INestedSite, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INestedSite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INestedSite</a>
  */
-public interface INestedSite extends IJCOBridgeReflected {
-
+public interface INestedSite extends IJCOBridgeReflected, ISite, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
+    public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.INestedSite
+     */
+    public static final String className = "System.ComponentModel.INestedSite";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INestedSite}, a cast assert is made to check if types are compatible.
+     */
     public static INestedSite ToINestedSite(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.INestedSite, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ComponentModel.TypeConverter"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INestedSiteImplementation(from.getJCOInstance());
     }
@@ -93,23 +114,12 @@ public interface INestedSite extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getDesignMode() throws Throwable;
-
-    public IComponent getComponent() throws Throwable;
-
-    public IContainer getContainer() throws Throwable;
-
     public java.lang.String getFullName() throws Throwable;
-
-    public java.lang.String getName() throws Throwable;
-
-    public void setName(java.lang.String Name) throws Throwable;
 
 
 

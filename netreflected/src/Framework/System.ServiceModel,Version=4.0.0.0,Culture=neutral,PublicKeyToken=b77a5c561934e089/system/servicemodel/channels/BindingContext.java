@@ -48,12 +48,27 @@ import system.servicemodel.channels.BindingElementCollection;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.BindingContext, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.BindingContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.BindingContext</a>
  */
 public class BindingContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.BindingContext
+     */
     public static final String className = "System.ServiceModel.Channels.BindingContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class BindingContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindingContext}, a cast assert is made to check if types are compatible.
+     */
     public static BindingContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BindingContext(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class BindingContext extends NetObject  {
 
     // Constructors section
     
+    public BindingContext() throws Throwable {
+    }
 
     public BindingContext(CustomBinding binding, BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
@@ -134,6 +153,7 @@ public class BindingContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

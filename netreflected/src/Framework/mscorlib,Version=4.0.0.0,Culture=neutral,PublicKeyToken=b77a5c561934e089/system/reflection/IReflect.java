@@ -49,12 +49,29 @@ import system.reflection.PropertyInfo;
 
 /**
  * The base .NET class managing System.Reflection.IReflect, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IReflect" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IReflect</a>
  */
 public interface IReflect extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.IReflect
+     */
+    public static final String className = "System.Reflection.IReflect";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReflect}, a cast assert is made to check if types are compatible.
+     */
     public static IReflect ToIReflect(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Reflection.IReflect, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IReflectImplementation(from.getJCOInstance());
     }
@@ -98,6 +115,8 @@ public interface IReflect extends IJCOBridgeReflected {
     // Methods section
     
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable;
+
+    public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCRefOut dupParam7) throws Throwable;
 
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
 

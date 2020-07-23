@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.collections.specialized.BitVector32;
 
 
 /**
  * The base .NET class managing System.Collections.Specialized.BitVector32, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.BitVector32" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.BitVector32</a>
  */
-public class BitVector32 extends NetObject  {
+public class BitVector32 extends ValueType  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Collections.Specialized.BitVector32
+     */
     public static final String className = "System.Collections.Specialized.BitVector32";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class BitVector32 extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BitVector32}, a cast assert is made to check if types are compatible.
+     */
     public static BitVector32 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BitVector32(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class BitVector32 extends NetObject  {
 
     // Constructors section
     
+    public BitVector32() throws Throwable {
+    }
 
     public BitVector32(int data) throws Throwable {
         try {
@@ -129,6 +149,7 @@ public class BitVector32 extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

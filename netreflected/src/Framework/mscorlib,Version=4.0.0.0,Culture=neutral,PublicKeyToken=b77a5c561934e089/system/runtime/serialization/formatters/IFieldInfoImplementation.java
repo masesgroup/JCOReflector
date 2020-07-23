@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.Formatters.IFieldInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.IFieldInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.IFieldInfo</a>
  */
 public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.Formatters.IFieldInfo
+     */
     public static final String className = "System.Runtime.Serialization.Formatters.IFieldInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFieldInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IFieldInfo ToIFieldInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IFieldInfoImplementation(from.getJCOInstance());
@@ -136,7 +153,7 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
         }
     }
 
-    public NetType[] getFieldTypes() throws Throwable {
+    public final NetType[] getFieldTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

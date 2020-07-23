@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.LocalVariableAttributes, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.LocalVariableAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.LocalVariableAttributes</a>
  */
 public class LocalVariableAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.LocalVariableAttributes
+     */
     public static final String className = "System.Reflection.Metadata.LocalVariableAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class LocalVariableAttributes extends NetObject  {
 
     // Flags management section
 
-    public LocalVariableAttributes add(LocalVariableAttributes val) throws Throwable {
+    public final LocalVariableAttributes add(LocalVariableAttributes val) throws Throwable {
         return new LocalVariableAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public LocalVariableAttributes remove(LocalVariableAttributes val) throws Throwable {
+    public final LocalVariableAttributes remove(LocalVariableAttributes val) throws Throwable {
         return new LocalVariableAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(LocalVariableAttributes val) throws Throwable {
+    public final boolean is(LocalVariableAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(LocalVariableAttributes val) throws Throwable {
+    public final boolean has(LocalVariableAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

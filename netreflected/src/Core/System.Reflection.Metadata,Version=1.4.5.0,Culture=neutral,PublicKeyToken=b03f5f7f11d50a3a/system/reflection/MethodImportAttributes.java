@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.MethodImportAttributes, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MethodImportAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MethodImportAttributes</a>
  */
 public class MethodImportAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.MethodImportAttributes
+     */
     public static final String className = "System.Reflection.MethodImportAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -155,19 +170,19 @@ public class MethodImportAttributes extends NetObject  {
 
     // Flags management section
 
-    public MethodImportAttributes add(MethodImportAttributes val) throws Throwable {
+    public final MethodImportAttributes add(MethodImportAttributes val) throws Throwable {
         return new MethodImportAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MethodImportAttributes remove(MethodImportAttributes val) throws Throwable {
+    public final MethodImportAttributes remove(MethodImportAttributes val) throws Throwable {
         return new MethodImportAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MethodImportAttributes val) throws Throwable {
+    public final boolean is(MethodImportAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MethodImportAttributes val) throws Throwable {
+    public final boolean has(MethodImportAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

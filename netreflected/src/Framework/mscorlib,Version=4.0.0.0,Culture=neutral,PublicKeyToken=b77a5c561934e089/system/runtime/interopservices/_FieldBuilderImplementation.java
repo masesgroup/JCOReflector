@@ -43,12 +43,27 @@ import system.UInt32;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices._FieldBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._FieldBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._FieldBuilder</a>
  */
 public class _FieldBuilderImplementation extends NetObject implements _FieldBuilder {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices._FieldBuilder
+     */
     public static final String className = "System.Runtime.InteropServices._FieldBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class _FieldBuilderImplementation extends NetObject implements _FieldBuil
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _FieldBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static _FieldBuilder To_FieldBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new _FieldBuilderImplementation(from.getJCOInstance());

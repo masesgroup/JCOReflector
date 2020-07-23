@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.IDLFLAG, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IDLFLAG" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IDLFLAG</a>
  */
 public class IDLFLAG extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.IDLFLAG
+     */
     public static final String className = "System.Runtime.InteropServices.ComTypes.IDLFLAG";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class IDLFLAG extends NetObject  {
 
     // Flags management section
 
-    public IDLFLAG add(IDLFLAG val) throws Throwable {
+    public final IDLFLAG add(IDLFLAG val) throws Throwable {
         return new IDLFLAG(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public IDLFLAG remove(IDLFLAG val) throws Throwable {
+    public final IDLFLAG remove(IDLFLAG val) throws Throwable {
         return new IDLFLAG(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(IDLFLAG val) throws Throwable {
+    public final boolean is(IDLFLAG val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(IDLFLAG val) throws Throwable {
+    public final boolean has(IDLFLAG val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

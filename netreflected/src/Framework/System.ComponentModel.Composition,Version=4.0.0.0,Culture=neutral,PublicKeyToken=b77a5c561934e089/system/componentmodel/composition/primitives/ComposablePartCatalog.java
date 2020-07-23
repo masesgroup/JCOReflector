@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Primitives.ComposablePartCatalog, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePartCatalog" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePartCatalog</a>
  */
 public class ComposablePartCatalog extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Primitives.ComposablePartCatalog
+     */
     public static final String className = "System.ComponentModel.Composition.Primitives.ComposablePartCatalog";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ComposablePartCatalog extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComposablePartCatalog}, a cast assert is made to check if types are compatible.
+     */
     public static ComposablePartCatalog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ComposablePartCatalog(from.getJCOInstance());
@@ -108,10 +125,22 @@ public class ComposablePartCatalog extends NetObject  {
 
     // Constructors section
     
+    public ComposablePartCatalog() throws Throwable {
+    }
 
     
     // Methods section
     
+    public void Dispose() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

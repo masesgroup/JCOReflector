@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.framework.ILogger;
+import microsoft.build.framework.ILoggerImplementation;
 import microsoft.build.framework.IEventSource;
 import microsoft.build.framework.IEventSourceImplementation;
 import microsoft.build.framework.LoggerVerbosity;
@@ -45,12 +47,27 @@ import microsoft.build.framework.LoggerVerbosity;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.INodeLogger, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.INodeLogger" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.INodeLogger</a>
  */
 public class INodeLoggerImplementation extends NetObject implements INodeLogger {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.INodeLogger
+     */
     public static final String className = "Microsoft.Build.Framework.INodeLogger";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +115,9 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INodeLogger}, a cast assert is made to check if types are compatible.
+     */
     public static INodeLogger ToINodeLogger(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new INodeLoggerImplementation(from.getJCOInstance());

@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
+import system.activities.WorkflowApplicationEventArgs;
 
 
 /**
  * The base .NET class managing System.Activities.WorkflowApplicationAbortedEventArgs, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.WorkflowApplicationAbortedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.WorkflowApplicationAbortedEventArgs</a>
  */
-public class WorkflowApplicationAbortedEventArgs extends NetObject  {
+public class WorkflowApplicationAbortedEventArgs extends WorkflowApplicationEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.WorkflowApplicationAbortedEventArgs
+     */
     public static final String className = "System.Activities.WorkflowApplicationAbortedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class WorkflowApplicationAbortedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowApplicationAbortedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowApplicationAbortedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowApplicationAbortedEventArgs(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class WorkflowApplicationAbortedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public WorkflowApplicationAbortedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -133,17 +154,6 @@ public class WorkflowApplicationAbortedEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Reason", Reason == null ? null : Reason.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getInstanceId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
-            return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

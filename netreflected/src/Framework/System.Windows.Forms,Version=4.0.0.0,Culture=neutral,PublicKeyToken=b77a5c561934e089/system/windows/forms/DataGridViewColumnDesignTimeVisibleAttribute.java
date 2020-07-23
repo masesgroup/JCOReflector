@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute</a>
  */
-public class DataGridViewColumnDesignTimeVisibleAttribute extends NetObject  {
+public class DataGridViewColumnDesignTimeVisibleAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute
+     */
     public static final String className = "System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewColumnDesignTimeVisibleAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewColumnDesignTimeVisibleAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewColumnDesignTimeVisibleAttribute(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends NetObject  {
 
     // Constructors section
     
-
     public DataGridViewColumnDesignTimeVisibleAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -143,16 +160,6 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends NetObject  {
         }
     }
 
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -162,17 +169,6 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("Visible");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

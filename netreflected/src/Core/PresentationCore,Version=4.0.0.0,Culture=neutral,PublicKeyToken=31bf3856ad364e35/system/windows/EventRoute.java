@@ -43,12 +43,27 @@ import system.windows.RoutedEvent;
 
 /**
  * The base .NET class managing System.Windows.EventRoute, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.EventRoute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.EventRoute</a>
  */
 public class EventRoute extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.EventRoute
+     */
     public static final String className = "System.Windows.EventRoute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class EventRoute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventRoute}, a cast assert is made to check if types are compatible.
+     */
     public static EventRoute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventRoute(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class EventRoute extends NetObject  {
 
     // Constructors section
     
+    public EventRoute() throws Throwable {
+    }
 
     public EventRoute(RoutedEvent routedEvent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -119,6 +138,7 @@ public class EventRoute extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

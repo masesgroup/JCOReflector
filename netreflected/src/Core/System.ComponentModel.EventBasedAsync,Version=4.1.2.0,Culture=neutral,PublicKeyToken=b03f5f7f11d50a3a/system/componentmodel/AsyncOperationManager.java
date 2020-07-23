@@ -44,12 +44,27 @@ import system.threading.SynchronizationContext;
 
 /**
  * The base .NET class managing System.ComponentModel.AsyncOperationManager, System.ComponentModel.EventBasedAsync, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AsyncOperationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AsyncOperationManager</a>
  */
 public class AsyncOperationManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.EventBasedAsync, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.EventBasedAsync, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.EventBasedAsync
+     */
     public static final String assemblyShortName = "System.ComponentModel.EventBasedAsync";
+    /**
+     * Qualified class name: System.ComponentModel.AsyncOperationManager
+     */
     public static final String className = "System.ComponentModel.AsyncOperationManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class AsyncOperationManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncOperationManager}, a cast assert is made to check if types are compatible.
+     */
     public static AsyncOperationManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsyncOperationManager(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class AsyncOperationManager extends NetObject  {
 
     // Constructors section
     
+    public AsyncOperationManager() throws Throwable {
+    }
 
     
     // Methods section
@@ -129,22 +148,22 @@ public class AsyncOperationManager extends NetObject  {
     
     // Properties section
     
-    public static SynchronizationContext getSynchronizationContext() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SynchronizationContext getSynchronizationContext() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SynchronizationContext");
+            JCObject val = (JCObject)classInstance.Get("SynchronizationContext");
             return new SynchronizationContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setSynchronizationContext(SynchronizationContext SynchronizationContext) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setSynchronizationContext(SynchronizationContext SynchronizationContext) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("SynchronizationContext", SynchronizationContext == null ? null : SynchronizationContext.getJCOInstance());
+            classInstance.Set("SynchronizationContext", SynchronizationContext == null ? null : SynchronizationContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

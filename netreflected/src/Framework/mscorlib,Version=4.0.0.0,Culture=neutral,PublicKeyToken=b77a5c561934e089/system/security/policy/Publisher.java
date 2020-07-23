@@ -38,21 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.policy.EvidenceBase;
 import system.security.cryptography.x509certificates.X509Certificate;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.policy.Evidence;
-import system.security.policy.EvidenceBase;
 
 
 /**
  * The base .NET class managing System.Security.Policy.Publisher, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Publisher" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Publisher</a>
  */
-public class Publisher extends NetObject  {
+public class Publisher extends EvidenceBase  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.Publisher
+     */
     public static final String className = "System.Security.Policy.Publisher";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class Publisher extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Publisher}, a cast assert is made to check if types are compatible.
+     */
     public static Publisher cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Publisher(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class Publisher extends NetObject  {
 
     // Constructors section
     
+    public Publisher() throws Throwable {
+    }
 
     public Publisher(X509Certificate cert) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
         try {
@@ -123,6 +142,7 @@ public class Publisher extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

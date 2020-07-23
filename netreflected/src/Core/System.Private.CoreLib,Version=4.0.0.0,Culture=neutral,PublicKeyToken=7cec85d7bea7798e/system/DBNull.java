@@ -47,12 +47,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.DBNull, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DBNull" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DBNull</a>
  */
 public class DBNull extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.DBNull
+     */
     public static final String className = "System.DBNull";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class DBNull extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DBNull}, a cast assert is made to check if types are compatible.
+     */
     public static DBNull cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DBNull(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class DBNull extends NetObject  {
 
     // Constructors section
     
+    public DBNull() throws Throwable {
+    }
+
+
 
     
     // Methods section

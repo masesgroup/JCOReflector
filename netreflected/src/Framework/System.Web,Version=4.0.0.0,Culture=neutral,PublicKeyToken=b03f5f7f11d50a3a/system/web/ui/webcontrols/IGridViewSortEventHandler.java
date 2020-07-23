@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.GridViewSortEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link GridViewSortEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewSortEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewSortEventHandler</a>
+ */
 public interface IGridViewSortEventHandler {
     public void Invoke(NetObject sender, GridViewSortEventArgs e);
 }

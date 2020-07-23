@@ -38,21 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.ECDiffieHellmanPublicKey;
 import system.security.cryptography.CngKey;
 import system.security.cryptography.ECDiffieHellmanCngPublicKey;
-import system.security.cryptography.ECDiffieHellmanPublicKey;
 import system.security.cryptography.CngKeyBlobFormat;
 import system.security.cryptography.ECParameters;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.ECDiffieHellmanCngPublicKey, System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCngPublicKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCngPublicKey</a>
  */
-public class ECDiffieHellmanCngPublicKey extends NetObject  {
+public class ECDiffieHellmanCngPublicKey extends ECDiffieHellmanPublicKey  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Cng
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Cng";
+    /**
+     * Qualified class name: System.Security.Cryptography.ECDiffieHellmanCngPublicKey
+     */
     public static final String className = "System.Security.Cryptography.ECDiffieHellmanCngPublicKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ECDiffieHellmanCngPublicKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ECDiffieHellmanCngPublicKey}, a cast assert is made to check if types are compatible.
+     */
     public static ECDiffieHellmanCngPublicKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ECDiffieHellmanCngPublicKey(from.getJCOInstance());
@@ -113,29 +130,14 @@ public class ECDiffieHellmanCngPublicKey extends NetObject  {
 
     // Constructors section
     
+    public ECDiffieHellmanCngPublicKey() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public byte[] ToByteArray() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToByteArray");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexToByteArray = 0; indexToByteArray < resultingArrayList.size(); indexToByteArray++ ) {
-				resultingArray[indexToByteArray] = (byte)resultingArrayList.get(indexToByteArray);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CngKey Import() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -169,6 +171,17 @@ public class ECDiffieHellmanCngPublicKey extends NetObject  {
         }
     }
 
+    public static ECDiffieHellmanPublicKey FromByteArray(JCRefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromByteArray = (JCObject)classType.Invoke("FromByteArray", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return new ECDiffieHellmanPublicKey(objFromByteArray);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ECParameters ExportExplicitParameters() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -196,16 +209,6 @@ public class ECDiffieHellmanCngPublicKey extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("ToXmlString");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

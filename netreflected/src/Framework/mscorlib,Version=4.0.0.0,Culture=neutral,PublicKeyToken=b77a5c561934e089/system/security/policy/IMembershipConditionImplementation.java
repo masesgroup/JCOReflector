@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.ISecurityEncodable;
+import system.security.ISecurityEncodableImplementation;
+import system.security.ISecurityPolicyEncodable;
+import system.security.ISecurityPolicyEncodableImplementation;
 import system.security.policy.Evidence;
 import system.security.policy.IMembershipCondition;
 import system.security.policy.IMembershipConditionImplementation;
@@ -47,12 +51,27 @@ import system.security.policy.PolicyLevel;
 
 /**
  * The base .NET class managing System.Security.Policy.IMembershipCondition, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IMembershipCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IMembershipCondition</a>
  */
 public class IMembershipConditionImplementation extends NetObject implements IMembershipCondition {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.IMembershipCondition
+     */
     public static final String className = "System.Security.Policy.IMembershipCondition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +119,9 @@ public class IMembershipConditionImplementation extends NetObject implements IMe
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMembershipCondition}, a cast assert is made to check if types are compatible.
+     */
     public static IMembershipCondition ToIMembershipCondition(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IMembershipConditionImplementation(from.getJCOInstance());

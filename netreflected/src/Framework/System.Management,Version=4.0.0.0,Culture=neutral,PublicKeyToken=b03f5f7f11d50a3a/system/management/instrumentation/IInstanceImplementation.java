@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Management.Instrumentation.IInstance, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.Instrumentation.IInstance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.Instrumentation.IInstance</a>
  */
 public class IInstanceImplementation extends NetObject implements IInstance {
+    /**
+     * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Management
+     */
     public static final String assemblyShortName = "System.Management";
+    /**
+     * Qualified class name: System.Management.Instrumentation.IInstance
+     */
     public static final String className = "System.Management.Instrumentation.IInstance";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IInstanceImplementation extends NetObject implements IInstance {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInstance}, a cast assert is made to check if types are compatible.
+     */
     public static IInstance ToIInstance(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IInstanceImplementation(from.getJCOInstance());

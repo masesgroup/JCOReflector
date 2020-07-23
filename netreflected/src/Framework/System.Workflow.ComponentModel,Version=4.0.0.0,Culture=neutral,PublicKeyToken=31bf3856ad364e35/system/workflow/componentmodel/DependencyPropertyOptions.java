@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.DependencyPropertyOptions, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyPropertyOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyPropertyOptions</a>
  */
 public class DependencyPropertyOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.DependencyPropertyOptions
+     */
     public static final String className = "System.Workflow.ComponentModel.DependencyPropertyOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class DependencyPropertyOptions extends NetObject  {
 
     // Flags management section
 
-    public DependencyPropertyOptions add(DependencyPropertyOptions val) throws Throwable {
+    public final DependencyPropertyOptions add(DependencyPropertyOptions val) throws Throwable {
         return new DependencyPropertyOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public DependencyPropertyOptions remove(DependencyPropertyOptions val) throws Throwable {
+    public final DependencyPropertyOptions remove(DependencyPropertyOptions val) throws Throwable {
         return new DependencyPropertyOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(DependencyPropertyOptions val) throws Throwable {
+    public final boolean is(DependencyPropertyOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(DependencyPropertyOptions val) throws Throwable {
+    public final boolean has(DependencyPropertyOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

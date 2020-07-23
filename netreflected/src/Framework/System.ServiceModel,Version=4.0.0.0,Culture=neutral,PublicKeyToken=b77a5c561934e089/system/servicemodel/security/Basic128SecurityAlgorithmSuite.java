@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.security.SecurityAlgorithmSuite;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.Basic128SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Basic128SecurityAlgorithmSuite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Basic128SecurityAlgorithmSuite</a>
  */
-public class Basic128SecurityAlgorithmSuite extends NetObject  {
+public class Basic128SecurityAlgorithmSuite extends SecurityAlgorithmSuite  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.Basic128SecurityAlgorithmSuite
+     */
     public static final String className = "System.ServiceModel.Security.Basic128SecurityAlgorithmSuite";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class Basic128SecurityAlgorithmSuite extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Basic128SecurityAlgorithmSuite}, a cast assert is made to check if types are compatible.
+     */
     public static Basic128SecurityAlgorithmSuite cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Basic128SecurityAlgorithmSuite(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class Basic128SecurityAlgorithmSuite extends NetObject  {
 
     // Constructors section
     
-
     public Basic128SecurityAlgorithmSuite() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -133,76 +150,6 @@ public class Basic128SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
-    public boolean IsAsymmetricKeyWrapAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsAsymmetricKeyWrapAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsAsymmetricSignatureAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsAsymmetricSignatureAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsCanonicalizationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsCanonicalizationAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsDigestAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDigestAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsEncryptionAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsEncryptionAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsEncryptionKeyDerivationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsEncryptionKeyDerivationAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsSignatureKeyDerivationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSignatureKeyDerivationAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsSymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -213,130 +160,10 @@ public class Basic128SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
-    public boolean IsSymmetricKeyWrapAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSymmetricKeyWrapAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsSymmetricSignatureAlgorithmSupported(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSymmetricSignatureAlgorithmSupported", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getDefaultEncryptionKeyDerivationLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DefaultEncryptionKeyDerivationLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDefaultSignatureKeyDerivationLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DefaultSignatureKeyDerivationLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getDefaultSymmetricKeyLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("DefaultSymmetricKeyLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultAsymmetricKeyWrapAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultAsymmetricKeyWrapAlgorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultAsymmetricSignatureAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultAsymmetricSignatureAlgorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultCanonicalizationAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultCanonicalizationAlgorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultDigestAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultDigestAlgorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultEncryptionAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultEncryptionAlgorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultSymmetricKeyWrapAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultSymmetricKeyWrapAlgorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDefaultSymmetricSignatureAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DefaultSymmetricSignatureAlgorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

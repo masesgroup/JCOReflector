@@ -43,12 +43,27 @@ import system.text.json.JsonNamingPolicy;
 
 /**
  * The base .NET class managing System.Text.Json.JsonNamingPolicy, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonNamingPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonNamingPolicy</a>
  */
 public class JsonNamingPolicy extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Text.Json
+     */
     public static final String assemblyShortName = "System.Text.Json";
+    /**
+     * Qualified class name: System.Text.Json.JsonNamingPolicy
+     */
     public static final String className = "System.Text.Json.JsonNamingPolicy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class JsonNamingPolicy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonNamingPolicy}, a cast assert is made to check if types are compatible.
+     */
     public static JsonNamingPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new JsonNamingPolicy(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class JsonNamingPolicy extends NetObject  {
 
     // Constructors section
     
+    public JsonNamingPolicy() throws Throwable {
+    }
 
     
     // Methods section
@@ -127,11 +146,11 @@ public class JsonNamingPolicy extends NetObject  {
     
     // Properties section
     
-    public static JsonNamingPolicy getCamelCase() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public JsonNamingPolicy getCamelCase() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CamelCase");
+            JCObject val = (JCObject)classInstance.Get("CamelCase");
             return new JsonNamingPolicy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

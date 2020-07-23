@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.framework.ITask;
+import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
 import microsoft.build.framework.ITaskHost;
@@ -46,12 +48,27 @@ import microsoft.build.framework.ITaskHostImplementation;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.ICancelableTask, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ICancelableTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ICancelableTask</a>
  */
 public class ICancelableTaskImplementation extends NetObject implements ICancelableTask {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.ICancelableTask
+     */
     public static final String className = "Microsoft.Build.Framework.ICancelableTask";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +116,9 @@ public class ICancelableTaskImplementation extends NetObject implements ICancela
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICancelableTask}, a cast assert is made to check if types are compatible.
+     */
     public static ICancelableTask ToICancelableTask(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICancelableTaskImplementation(from.getJCOInstance());

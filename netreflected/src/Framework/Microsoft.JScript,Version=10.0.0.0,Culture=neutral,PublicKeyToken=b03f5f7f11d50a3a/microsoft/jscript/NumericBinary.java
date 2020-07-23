@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.jscript.BinaryOp;
 import microsoft.jscript.JSToken;
 
 
 /**
  * The base .NET class managing Microsoft.JScript.NumericBinary, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.NumericBinary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.NumericBinary</a>
  */
-public class NumericBinary extends NetObject  {
+public class NumericBinary extends BinaryOp  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.NumericBinary
+     */
     public static final String className = "Microsoft.JScript.NumericBinary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class NumericBinary extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NumericBinary}, a cast assert is made to check if types are compatible.
+     */
     public static NumericBinary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NumericBinary(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class NumericBinary extends NetObject  {
 
     // Constructors section
     
+    public NumericBinary() throws Throwable {
+    }
 
     public NumericBinary(int operatorTok) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class NumericBinary extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -49,12 +49,27 @@ import system.servicemodel.description.ServiceEndpointCollection;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.MetadataResolver, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MetadataResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MetadataResolver</a>
  */
 public class MetadataResolver extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.MetadataResolver
+     */
     public static final String className = "System.ServiceModel.Description.MetadataResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class MetadataResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataResolver}, a cast assert is made to check if types are compatible.
+     */
     public static MetadataResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MetadataResolver(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class MetadataResolver extends NetObject  {
 
     // Constructors section
     
+    public MetadataResolver() throws Throwable {
+    }
 
     
     // Methods section

@@ -42,12 +42,29 @@ import system.componentmodel.PropertyChangingEventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.INotifyPropertyChanging, System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INotifyPropertyChanging" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INotifyPropertyChanging</a>
  */
 public interface INotifyPropertyChanging extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ObjectModel
+     */
+    public static final String assemblyShortName = "System.ObjectModel";
+    /**
+     * Qualified class name: System.ComponentModel.INotifyPropertyChanging
+     */
+    public static final String className = "System.ComponentModel.INotifyPropertyChanging";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyPropertyChanging}, a cast assert is made to check if types are compatible.
+     */
     public static INotifyPropertyChanging ToINotifyPropertyChanging(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.INotifyPropertyChanging, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ObjectModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INotifyPropertyChangingImplementation(from.getJCOInstance());
     }

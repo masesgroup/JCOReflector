@@ -47,12 +47,27 @@ import system.xml.schema.XmlSchemaValidity;
 
 /**
  * The base .NET class managing System.Xml.Schema.IXmlSchemaInfo, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.IXmlSchemaInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.IXmlSchemaInfo</a>
  */
 public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchemaInfo {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.IXmlSchemaInfo
+     */
     public static final String className = "System.Xml.Schema.IXmlSchemaInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlSchemaInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlSchemaInfo ToIXmlSchemaInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXmlSchemaInfoImplementation(from.getJCOInstance());

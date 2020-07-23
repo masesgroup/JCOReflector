@@ -37,22 +37,39 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
+import system.collections.IDictionary;
+import system.collections.IDictionaryImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.ITaskItem2, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ITaskItem2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ITaskItem2</a>
  */
-public interface ITaskItem2 extends IJCOBridgeReflected {
-
+public interface ITaskItem2 extends IJCOBridgeReflected, ITaskItem {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.ITaskItem2
+     */
+    public static final String className = "Microsoft.Build.Framework.ITaskItem2";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITaskItem2}, a cast assert is made to check if types are compatible.
+     */
     public static ITaskItem2 ToITaskItem2(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Framework.ITaskItem2, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Framework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITaskItem2Implementation(from.getJCOInstance());
     }
@@ -95,19 +112,14 @@ public interface ITaskItem2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IDictionary CloneCustomMetadata() throws Throwable;
 
     public IDictionary CloneCustomMetadataEscaped() throws Throwable;
 
-    public java.lang.String GetMetadata(java.lang.String metadataName) throws Throwable;
 
     public java.lang.String GetMetadataValueEscaped(java.lang.String metadataName) throws Throwable;
 
-    public void CopyMetadataTo(ITaskItem destinationItem) throws Throwable;
 
-    public void RemoveMetadata(java.lang.String metadataName) throws Throwable;
 
-    public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable;
 
     public void SetMetadataValueLiteral(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable;
 
@@ -115,17 +127,9 @@ public interface ITaskItem2 extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getMetadataCount() throws Throwable;
-
-    public ICollection getMetadataNames() throws Throwable;
-
     public java.lang.String getEvaluatedIncludeEscaped() throws Throwable;
 
     public void setEvaluatedIncludeEscaped(java.lang.String EvaluatedIncludeEscaped) throws Throwable;
-
-    public java.lang.String getItemSpec() throws Throwable;
-
-    public void setItemSpec(java.lang.String ItemSpec) throws Throwable;
 
 
 

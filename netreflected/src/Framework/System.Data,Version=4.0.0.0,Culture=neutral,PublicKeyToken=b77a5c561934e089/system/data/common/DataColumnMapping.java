@@ -38,20 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.MarshalByRefObject;
 import system.data.DataColumn;
 import system.data.DataTable;
 import system.data.MissingSchemaAction;
-import system.runtime.remoting.ObjRef;
 
 
 /**
  * The base .NET class managing System.Data.Common.DataColumnMapping, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DataColumnMapping" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DataColumnMapping</a>
  */
-public class DataColumnMapping extends NetObject  {
+public class DataColumnMapping extends MarshalByRefObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.Common.DataColumnMapping
+     */
     public static final String className = "System.Data.Common.DataColumnMapping";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class DataColumnMapping extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataColumnMapping}, a cast assert is made to check if types are compatible.
+     */
     public static DataColumnMapping cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataColumnMapping(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class DataColumnMapping extends NetObject  {
 
     // Constructors section
     
-
     public DataColumnMapping() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -137,7 +153,7 @@ public class DataColumnMapping extends NetObject  {
     
     // Methods section
     
-    public DataColumn GetDataColumnBySchemaAction(DataTable dataTable, NetType dataType, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.data.DataException {
+    public DataColumn GetDataColumnBySchemaAction(DataTable dataTable, NetType dataType, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.data.DataException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -148,45 +164,12 @@ public class DataColumnMapping extends NetObject  {
         }
     }
 
-    public static DataColumn GetDataColumnBySchemaAction(java.lang.String sourceColumn, java.lang.String dataSetColumn, DataTable dataTable, NetType dataType, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.DataException, system.OverflowException, system.FormatException, system.InvalidCastException {
+    public static DataColumn GetDataColumnBySchemaAction(java.lang.String sourceColumn, java.lang.String dataSetColumn, DataTable dataTable, NetType dataType, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetDataColumnBySchemaAction = (JCObject)classType.Invoke("GetDataColumnBySchemaAction", sourceColumn, dataSetColumn, dataTable == null ? null : dataTable.getJCOInstance(), dataType == null ? null : dataType.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
             return new DataColumn(objGetDataColumnBySchemaAction);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

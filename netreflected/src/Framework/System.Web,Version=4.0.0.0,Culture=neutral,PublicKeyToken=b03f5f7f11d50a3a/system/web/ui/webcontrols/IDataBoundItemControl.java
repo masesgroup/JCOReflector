@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.web.ui.webcontrols.IDataBoundControl;
+import system.web.ui.webcontrols.IDataBoundControlImplementation;
 import system.web.ui.IDataSource;
 import system.web.ui.IDataSourceImplementation;
 import system.web.ui.webcontrols.DataBoundControlMode;
@@ -45,12 +47,29 @@ import system.web.ui.webcontrols.DataKey;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.IDataBoundItemControl, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.IDataBoundItemControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.IDataBoundItemControl</a>
  */
-public interface IDataBoundItemControl extends IJCOBridgeReflected {
-
+public interface IDataBoundItemControl extends IJCOBridgeReflected, IDataBoundControl {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
+    public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.IDataBoundItemControl
+     */
+    public static final String className = "System.Web.UI.WebControls.IDataBoundItemControl";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataBoundItemControl}, a cast assert is made to check if types are compatible.
+     */
     public static IDataBoundItemControl ToIDataBoundItemControl(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.UI.WebControls.IDataBoundItemControl, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Web"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDataBoundItemControlImplementation(from.getJCOInstance());
     }
@@ -97,24 +116,6 @@ public interface IDataBoundItemControl extends IJCOBridgeReflected {
     
     // Properties section
     
-    public NetObject getDataSource() throws Throwable;
-
-    public void setDataSource(NetObject DataSource) throws Throwable;
-
-    public java.lang.String getDataMember() throws Throwable;
-
-    public void setDataMember(java.lang.String DataMember) throws Throwable;
-
-    public java.lang.String getDataSourceID() throws Throwable;
-
-    public void setDataSourceID(java.lang.String DataSourceID) throws Throwable;
-
-    public java.lang.String[] getDataKeyNames() throws Throwable;
-
-    public void setDataKeyNames(java.lang.String[] DataKeyNames) throws Throwable;
-
-    public IDataSource getDataSourceObject() throws Throwable;
-
     public DataBoundControlMode getMode() throws Throwable;
 
     public DataKey getDataKey() throws Throwable;

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.media.animation.KeyTime;
 import system.TimeSpan;
 import system.windows.media.animation.KeyTimeType;
@@ -45,12 +46,27 @@ import system.windows.media.animation.KeyTimeType;
 
 /**
  * The base .NET class managing System.Windows.Media.Animation.KeyTime, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.KeyTime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.KeyTime</a>
  */
-public class KeyTime extends NetObject  {
+public class KeyTime extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Animation.KeyTime
+     */
     public static final String className = "System.Windows.Media.Animation.KeyTime";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class KeyTime extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyTime}, a cast assert is made to check if types are compatible.
+     */
     public static KeyTime cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new KeyTime(from.getJCOInstance());
@@ -111,6 +129,10 @@ public class KeyTime extends NetObject  {
 
     // Constructors section
     
+    public KeyTime() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -182,22 +204,22 @@ public class KeyTime extends NetObject  {
         }
     }
 
-    public static KeyTime getPaced() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public KeyTime getPaced() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Paced");
+            JCObject val = (JCObject)classInstance.Get("Paced");
             return new KeyTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static KeyTime getUniform() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public KeyTime getUniform() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Uniform");
+            JCObject val = (JCObject)classInstance.Get("Uniform");
             return new KeyTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

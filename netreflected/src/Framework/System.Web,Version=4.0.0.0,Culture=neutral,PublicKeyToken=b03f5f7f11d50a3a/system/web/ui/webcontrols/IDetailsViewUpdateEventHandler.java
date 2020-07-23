@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.DetailsViewUpdateEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DetailsViewUpdateEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewUpdateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewUpdateEventHandler</a>
+ */
 public interface IDetailsViewUpdateEventHandler {
     public void Invoke(NetObject sender, DetailsViewUpdateEventArgs e);
 }

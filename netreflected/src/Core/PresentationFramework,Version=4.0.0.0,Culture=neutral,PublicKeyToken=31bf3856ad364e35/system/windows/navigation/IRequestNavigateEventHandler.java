@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.navigation.RequestNavigateEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link RequestNavigateEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.RequestNavigateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.RequestNavigateEventHandler</a>
+ */
 public interface IRequestNavigateEventHandler {
     public void Invoke(NetObject sender, RequestNavigateEventArgs e);
 }

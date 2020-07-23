@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.runtime.remoting.contexts.ICrossContextDelegate;
 /**
  * The base .NET class managing System.Runtime.Remoting.Contexts.CrossContextDelegate, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Contexts.CrossContextDelegate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Contexts.CrossContextDelegate</a>
  */
 public class CrossContextDelegate extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Contexts.CrossContextDelegate
+     */
     public static final String className = "System.Runtime.Remoting.Contexts.CrossContextDelegate";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ICrossContextDelegate callerInstance = null;
@@ -144,7 +159,7 @@ public class CrossContextDelegate extends JCVoidDelegate implements IJCVoidEvent
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke() throws Throwable {
+    public void METHOD_JAVA_NAME() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -154,7 +169,9 @@ public class CrossContextDelegate extends JCVoidDelegate implements IJCVoidEvent
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke() {
     }
 }

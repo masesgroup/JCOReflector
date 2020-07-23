@@ -48,12 +48,27 @@ import system.data.metadata.edm.TypeUsage;
 
 /**
  * The base .NET class managing System.Data.Common.CommandTrees.DbExpression, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbExpression</a>
  */
 public class DbExpression extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.CommandTrees.DbExpression
+     */
     public static final String className = "System.Data.Common.CommandTrees.DbExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class DbExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbExpression}, a cast assert is made to check if types are compatible.
+     */
     public static DbExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbExpression(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class DbExpression extends NetObject  {
 
     // Constructors section
     
+    public DbExpression() throws Throwable {
+    }
 
     
     // Methods section
@@ -123,6 +142,17 @@ public class DbExpression extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)value);
+            return new DbExpression(objFromBinary);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromBinary(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)dupParam0);
             return new DbExpression(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

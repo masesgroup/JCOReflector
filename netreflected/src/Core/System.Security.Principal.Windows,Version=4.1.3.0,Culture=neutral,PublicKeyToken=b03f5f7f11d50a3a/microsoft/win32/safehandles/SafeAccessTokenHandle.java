@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.SafeHandle;
 import microsoft.win32.safehandles.SafeAccessTokenHandle;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.SafeHandles.SafeAccessTokenHandle, System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle</a>
  */
-public class SafeAccessTokenHandle extends NetObject  {
+public class SafeAccessTokenHandle extends SafeHandle  {
+    /**
+     * Fully assembly qualified name: System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Principal.Windows
+     */
     public static final String assemblyShortName = "System.Security.Principal.Windows";
+    /**
+     * Qualified class name: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+     */
     public static final String className = "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SafeAccessTokenHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SafeAccessTokenHandle}, a cast assert is made to check if types are compatible.
+     */
     public static SafeAccessTokenHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SafeAccessTokenHandle(from.getJCOInstance());
@@ -109,6 +127,9 @@ public class SafeAccessTokenHandle extends NetObject  {
 
     // Constructors section
     
+    public SafeAccessTokenHandle() throws Throwable {
+    }
+
 
 
     
@@ -118,31 +139,11 @@ public class SafeAccessTokenHandle extends NetObject  {
     
     // Properties section
     
-    public boolean getIsClosed() throws Throwable {
+    public SafeAccessTokenHandle getInvalidHandle() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsClosed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInvalid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInvalid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SafeAccessTokenHandle getInvalidHandle() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("InvalidHandle");
+            JCObject val = (JCObject)classInstance.Get("InvalidHandle");
             return new SafeAccessTokenHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -38,20 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.DateTime;
+import system.identitymodel.metadata.RoleDescriptor;
 import system.identitymodel.metadata.IndexedProtocolEndpointDictionary;
-import system.identitymodel.metadata.Organization;
-import system.Uri;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Metadata.SingleSignOnDescriptor, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.SingleSignOnDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.SingleSignOnDescriptor</a>
  */
-public class SingleSignOnDescriptor extends NetObject  {
+public class SingleSignOnDescriptor extends RoleDescriptor  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Metadata.SingleSignOnDescriptor
+     */
     public static final String className = "System.IdentityModel.Metadata.SingleSignOnDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +117,9 @@ public class SingleSignOnDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SingleSignOnDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static SingleSignOnDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SingleSignOnDescriptor(from.getJCOInstance());
@@ -112,7 +127,6 @@ public class SingleSignOnDescriptor extends NetObject  {
 
     // Constructors section
     
-
     public SingleSignOnDescriptor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -131,75 +145,12 @@ public class SingleSignOnDescriptor extends NetObject  {
     
     // Properties section
     
-    public DateTime getValidUntil() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidUntil");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValidUntil(DateTime ValidUntil) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValidUntil", ValidUntil == null ? null : ValidUntil.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IndexedProtocolEndpointDictionary getArtifactResolutionServices() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("ArtifactResolutionServices");
             return new IndexedProtocolEndpointDictionary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Organization getOrganization() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Organization");
-            return new Organization(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOrganization(Organization Organization) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Organization", Organization == null ? null : Organization.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getErrorUrl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ErrorUrl");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setErrorUrl(Uri ErrorUrl) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ErrorUrl", ErrorUrl == null ? null : ErrorUrl.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

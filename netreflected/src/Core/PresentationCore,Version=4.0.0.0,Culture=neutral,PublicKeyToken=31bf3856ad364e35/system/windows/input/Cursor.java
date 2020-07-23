@@ -43,12 +43,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Windows.Input.Cursor, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Cursor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Cursor</a>
  */
 public class Cursor extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.Cursor
+     */
     public static final String className = "System.Windows.Input.Cursor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Cursor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Cursor}, a cast assert is made to check if types are compatible.
+     */
     public static Cursor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Cursor(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class Cursor extends NetObject  {
 
     // Constructors section
     
+    public Cursor() throws Throwable {
+    }
 
     public Cursor(Stream cursorStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.io.IOException, system.OutOfMemoryException {
         try {
@@ -149,6 +168,7 @@ public class Cursor extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

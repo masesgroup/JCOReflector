@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.media.textformatting.TextCollapsingProperties;
 import system.windows.media.textformatting.TextRunProperties;
 import system.windows.media.textformatting.TextCollapsingStyle;
 import system.windows.media.textformatting.TextRun;
@@ -45,12 +46,27 @@ import system.windows.media.textformatting.TextRun;
 
 /**
  * The base .NET class managing System.Windows.Media.TextFormatting.TextTrailingCharacterEllipsis, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextTrailingCharacterEllipsis" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextTrailingCharacterEllipsis</a>
  */
-public class TextTrailingCharacterEllipsis extends NetObject  {
+public class TextTrailingCharacterEllipsis extends TextCollapsingProperties  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.TextFormatting.TextTrailingCharacterEllipsis
+     */
     public static final String className = "System.Windows.Media.TextFormatting.TextTrailingCharacterEllipsis";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class TextTrailingCharacterEllipsis extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextTrailingCharacterEllipsis}, a cast assert is made to check if types are compatible.
+     */
     public static TextTrailingCharacterEllipsis cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TextTrailingCharacterEllipsis(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class TextTrailingCharacterEllipsis extends NetObject  {
 
     // Constructors section
     
+    public TextTrailingCharacterEllipsis() throws Throwable {
+    }
 
     public TextTrailingCharacterEllipsis(double width, TextRunProperties textRunProperties) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
@@ -123,6 +143,7 @@ public class TextTrailingCharacterEllipsis extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -130,38 +151,6 @@ public class TextTrailingCharacterEllipsis extends NetObject  {
     
     // Properties section
     
-    public double getWidth() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("Width");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TextCollapsingStyle getStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Style");
-            return new TextCollapsingStyle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TextRun getSymbol() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Symbol");
-            return new TextRun(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.channels.IClientResponseChannelSinkStack;
+import system.runtime.remoting.channels.IClientResponseChannelSinkStackImplementation;
 import system.runtime.remoting.channels.IClientChannelSink;
 import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 import system.runtime.remoting.channels.ITransportHeaders;
@@ -49,12 +51,27 @@ import system.runtime.remoting.messaging.IMessageImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IClientChannelSinkStack, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkStack" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkStack</a>
  */
 public class IClientChannelSinkStackImplementation extends NetObject implements IClientChannelSinkStack {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IClientChannelSinkStack
+     */
     public static final String className = "System.Runtime.Remoting.Channels.IClientChannelSinkStack";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +119,9 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IClientChannelSinkStack}, a cast assert is made to check if types are compatible.
+     */
     public static IClientChannelSinkStack ToIClientChannelSinkStack(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IClientChannelSinkStackImplementation(from.getJCOInstance());

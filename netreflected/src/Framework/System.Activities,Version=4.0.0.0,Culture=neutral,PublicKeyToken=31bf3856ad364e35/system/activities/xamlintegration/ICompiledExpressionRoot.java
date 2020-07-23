@@ -42,12 +42,29 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Activities.XamlIntegration.ICompiledExpressionRoot, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot</a>
  */
 public interface ICompiledExpressionRoot extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
+    public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.XamlIntegration.ICompiledExpressionRoot
+     */
+    public static final String className = "System.Activities.XamlIntegration.ICompiledExpressionRoot";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICompiledExpressionRoot}, a cast assert is made to check if types are compatible.
+     */
     public static ICompiledExpressionRoot ToICompiledExpressionRoot(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Activities.XamlIntegration.ICompiledExpressionRoot, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Activities"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICompiledExpressionRootImplementation(from.getJCOInstance());
     }

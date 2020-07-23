@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.activities.presentation.model.ModelItem;
 import system.activities.presentation.model.ModelProperty;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PropertyValueMorphHelper}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.PropertyValueMorphHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.PropertyValueMorphHelper</a>
+ */
 public interface IPropertyValueMorphHelper {
     public NetObject Invoke(ModelItem originalValue, ModelProperty newModelProperty);
 }

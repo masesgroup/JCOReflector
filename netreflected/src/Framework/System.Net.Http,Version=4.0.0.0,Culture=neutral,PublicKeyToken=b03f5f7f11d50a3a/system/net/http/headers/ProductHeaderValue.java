@@ -43,12 +43,27 @@ import system.net.http.headers.ProductHeaderValue;
 
 /**
  * The base .NET class managing System.Net.Http.Headers.ProductHeaderValue, System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.ProductHeaderValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.ProductHeaderValue</a>
  */
 public class ProductHeaderValue extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Http
+     */
     public static final String assemblyShortName = "System.Net.Http";
+    /**
+     * Qualified class name: System.Net.Http.Headers.ProductHeaderValue
+     */
     public static final String className = "System.Net.Http.Headers.ProductHeaderValue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ProductHeaderValue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProductHeaderValue}, a cast assert is made to check if types are compatible.
+     */
     public static ProductHeaderValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ProductHeaderValue(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ProductHeaderValue extends NetObject  {
 
     // Constructors section
     
+    public ProductHeaderValue() throws Throwable {
+    }
 
     public ProductHeaderValue(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
@@ -129,6 +148,7 @@ public class ProductHeaderValue extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

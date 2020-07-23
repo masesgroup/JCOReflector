@@ -44,12 +44,27 @@ import system.security.cryptography.SignatureVerificationResult;
 
 /**
  * The base .NET class managing System.Security.Cryptography.StrongNameSignatureInformation, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.StrongNameSignatureInformation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.StrongNameSignatureInformation</a>
  */
 public class StrongNameSignatureInformation extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.StrongNameSignatureInformation
+     */
     public static final String className = "System.Security.Cryptography.StrongNameSignatureInformation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class StrongNameSignatureInformation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StrongNameSignatureInformation}, a cast assert is made to check if types are compatible.
+     */
     public static StrongNameSignatureInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StrongNameSignatureInformation(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class StrongNameSignatureInformation extends NetObject  {
 
     // Constructors section
     
+    public StrongNameSignatureInformation() throws Throwable {
+    }
+
+
 
     
     // Methods section

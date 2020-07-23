@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.design.behavior.BehaviorDragDropEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BehaviorDragDropEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler</a>
+ */
 public interface IBehaviorDragDropEventHandler {
     public void Invoke(NetObject sender, BehaviorDragDropEventArgs e);
 }

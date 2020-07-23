@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.CancelEventArgs;
 import system.collections.specialized.IOrderedDictionary;
 import system.collections.specialized.IOrderedDictionaryImplementation;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.DetailsViewUpdateEventArgs, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewUpdateEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewUpdateEventArgs</a>
  */
-public class DetailsViewUpdateEventArgs extends NetObject  {
+public class DetailsViewUpdateEventArgs extends CancelEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.DetailsViewUpdateEventArgs
+     */
     public static final String className = "System.Web.UI.WebControls.DetailsViewUpdateEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DetailsViewUpdateEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DetailsViewUpdateEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DetailsViewUpdateEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DetailsViewUpdateEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class DetailsViewUpdateEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DetailsViewUpdateEventArgs() throws Throwable {
+    }
 
     public DetailsViewUpdateEventArgs(NetObject commandArgument) throws Throwable {
         try {
@@ -122,6 +142,7 @@ public class DetailsViewUpdateEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -129,26 +150,6 @@ public class DetailsViewUpdateEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public IOrderedDictionary getKeys() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

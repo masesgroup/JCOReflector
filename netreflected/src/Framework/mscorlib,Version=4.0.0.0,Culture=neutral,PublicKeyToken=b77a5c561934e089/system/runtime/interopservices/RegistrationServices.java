@@ -47,12 +47,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.RegistrationServices, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.RegistrationServices" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.RegistrationServices</a>
  */
 public class RegistrationServices extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.RegistrationServices
+     */
     public static final String className = "System.Runtime.InteropServices.RegistrationServices";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class RegistrationServices extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegistrationServices}, a cast assert is made to check if types are compatible.
+     */
     public static RegistrationServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RegistrationServices(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class RegistrationServices extends NetObject  {
 
     // Constructors section
     
-
     public RegistrationServices() throws Throwable {
         try {
             // add reference to assemblyName.dll file

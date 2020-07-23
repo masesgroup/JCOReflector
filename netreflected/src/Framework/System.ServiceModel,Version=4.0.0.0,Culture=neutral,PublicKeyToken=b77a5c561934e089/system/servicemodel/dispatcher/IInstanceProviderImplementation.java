@@ -44,12 +44,27 @@ import system.servicemodel.channels.Message;
 
 /**
  * The base .NET class managing System.ServiceModel.Dispatcher.IInstanceProvider, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.IInstanceProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.IInstanceProvider</a>
  */
 public class IInstanceProviderImplementation extends NetObject implements IInstanceProvider {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Dispatcher.IInstanceProvider
+     */
     public static final String className = "System.ServiceModel.Dispatcher.IInstanceProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IInstanceProviderImplementation extends NetObject implements IInsta
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInstanceProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IInstanceProvider ToIInstanceProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IInstanceProviderImplementation(from.getJCOInstance());

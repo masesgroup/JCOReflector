@@ -38,20 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.ToolStripItemRenderEventArgs;
 import system.drawing.Graphics;
 import system.windows.forms.ToolStripSeparator;
-import system.windows.forms.ToolStrip;
-import system.windows.forms.ToolStripItem;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.ToolStripSeparatorRenderEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripSeparatorRenderEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripSeparatorRenderEventArgs</a>
  */
-public class ToolStripSeparatorRenderEventArgs extends NetObject  {
+public class ToolStripSeparatorRenderEventArgs extends ToolStripItemRenderEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ToolStripSeparatorRenderEventArgs
+     */
     public static final String className = "System.Windows.Forms.ToolStripSeparatorRenderEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +118,9 @@ public class ToolStripSeparatorRenderEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripSeparatorRenderEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ToolStripSeparatorRenderEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolStripSeparatorRenderEventArgs(from.getJCOInstance());
@@ -112,6 +128,8 @@ public class ToolStripSeparatorRenderEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ToolStripSeparatorRenderEventArgs() throws Throwable {
+    }
 
     public ToolStripSeparatorRenderEventArgs(Graphics g, ToolStripSeparator separator, boolean vertical) throws Throwable {
         try {
@@ -122,6 +140,7 @@ public class ToolStripSeparatorRenderEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -136,39 +155,6 @@ public class ToolStripSeparatorRenderEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("Vertical");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Graphics getGraphics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ToolStrip getToolStrip() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ToolStrip");
-            return new ToolStrip(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ToolStripItem getItem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new ToolStripItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

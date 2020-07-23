@@ -62,12 +62,27 @@ import system.UnhandledExceptionEventHandler;
 
 /**
  * The base .NET class managing System._AppDomain, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System._AppDomain" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System._AppDomain</a>
  */
 public class _AppDomainImplementation extends NetObject implements _AppDomain {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System._AppDomain
+     */
     public static final String className = "System._AppDomain";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -115,7 +130,9 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _AppDomain}, a cast assert is made to check if types are compatible.
+     */
     public static _AppDomain To_AppDomain(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new _AppDomainImplementation(from.getJCOInstance());
@@ -148,6 +165,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, assemblySecurity == null ? null : assemblySecurity.getJCOInstance(), args);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ExecuteAssembly(java.lang.String dupParam0, Evidence dupParam1, JCRefOut dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,6 +224,17 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    public Assembly Load(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (Object)dupParam0);
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -208,11 +246,33 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    public Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", dupParam0, dupParam1);
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, Evidence securityEvidence) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objLoad = (JCObject)classInstance.Invoke("Load", rawAssembly, rawSymbolStore, securityEvidence == null ? null : securityEvidence.getJCOInstance());
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1, Evidence dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

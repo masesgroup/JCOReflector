@@ -52,12 +52,27 @@ import system.net.peertopeer.collaboration.PeerEndPointCollection;
 
 /**
  * The base .NET class managing System.Net.PeerToPeer.Collaboration.Peer, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.Peer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.Peer</a>
  */
 public class Peer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.PeerToPeer.Collaboration.Peer
+     */
     public static final String className = "System.Net.PeerToPeer.Collaboration.Peer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class Peer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Peer}, a cast assert is made to check if types are compatible.
+     */
     public static Peer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Peer(from.getJCOInstance());
@@ -118,6 +135,8 @@ public class Peer extends NetObject  {
 
     // Constructors section
     
+    public Peer() throws Throwable {
+    }
 
     
     // Methods section
@@ -148,6 +167,17 @@ public class Peer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objInvite = (JCObject)classInstance.Invoke("Invite", applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData);
+            return new PeerInvitationResponse(objInvite);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PeerInvitationResponse Invite(PeerApplication dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
             return new PeerInvitationResponse(objInvite);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,6 +232,16 @@ public class Peer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InviteAsync", applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData, userToken == null ? null : userToken.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InviteAsync(PeerApplication dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, NetObject dupParam3) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

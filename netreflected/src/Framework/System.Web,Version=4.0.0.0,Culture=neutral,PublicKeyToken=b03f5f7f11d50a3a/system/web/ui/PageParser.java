@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.TemplateControlParser;
 import system.web.IHttpHandler;
 import system.web.IHttpHandlerImplementation;
 import system.web.HttpContext;
@@ -45,12 +46,27 @@ import system.web.HttpContext;
 
 /**
  * The base .NET class managing System.Web.UI.PageParser, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.PageParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.PageParser</a>
  */
-public class PageParser extends NetObject  {
+public class PageParser extends TemplateControlParser  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.PageParser
+     */
     public static final String className = "System.Web.UI.PageParser";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class PageParser extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageParser}, a cast assert is made to check if types are compatible.
+     */
     public static PageParser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PageParser(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class PageParser extends NetObject  {
 
     // Constructors section
     
-
     public PageParser() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -141,125 +158,105 @@ public class PageParser extends NetObject  {
     
     // Properties section
     
-    public static boolean getEnableLongStringsAsResources() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Get("EnableLongStringsAsResources");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void setEnableLongStringsAsResources(boolean EnableLongStringsAsResources) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Set("EnableLongStringsAsResources", EnableLongStringsAsResources);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getText() throws Throwable {
+    public boolean getEnableLongStringsAsResources() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            return (boolean)classInstance.Get("EnableLongStringsAsResources");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setText(java.lang.String Text) throws Throwable {
+    public void setEnableLongStringsAsResources(boolean EnableLongStringsAsResources) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Text", Text);
+            classInstance.Set("EnableLongStringsAsResources", EnableLongStringsAsResources);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetType getDefaultApplicationBaseType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetType getDefaultApplicationBaseType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultApplicationBaseType");
+            JCObject val = (JCObject)classInstance.Get("DefaultApplicationBaseType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultApplicationBaseType(NetType DefaultApplicationBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultApplicationBaseType(NetType DefaultApplicationBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultApplicationBaseType", DefaultApplicationBaseType == null ? null : DefaultApplicationBaseType.getJCOInstance());
+            classInstance.Set("DefaultApplicationBaseType", DefaultApplicationBaseType == null ? null : DefaultApplicationBaseType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetType getDefaultPageBaseType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetType getDefaultPageBaseType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultPageBaseType");
+            JCObject val = (JCObject)classInstance.Get("DefaultPageBaseType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultPageBaseType(NetType DefaultPageBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultPageBaseType(NetType DefaultPageBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultPageBaseType", DefaultPageBaseType == null ? null : DefaultPageBaseType.getJCOInstance());
+            classInstance.Set("DefaultPageBaseType", DefaultPageBaseType == null ? null : DefaultPageBaseType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetType getDefaultPageParserFilterType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetType getDefaultPageParserFilterType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultPageParserFilterType");
+            JCObject val = (JCObject)classInstance.Get("DefaultPageParserFilterType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultPageParserFilterType(NetType DefaultPageParserFilterType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultPageParserFilterType(NetType DefaultPageParserFilterType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultPageParserFilterType", DefaultPageParserFilterType == null ? null : DefaultPageParserFilterType.getJCOInstance());
+            classInstance.Set("DefaultPageParserFilterType", DefaultPageParserFilterType == null ? null : DefaultPageParserFilterType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetType getDefaultUserControlBaseType() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetType getDefaultUserControlBaseType() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultUserControlBaseType");
+            JCObject val = (JCObject)classInstance.Get("DefaultUserControlBaseType");
             return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultUserControlBaseType(NetType DefaultUserControlBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultUserControlBaseType(NetType DefaultUserControlBaseType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultUserControlBaseType", DefaultUserControlBaseType == null ? null : DefaultUserControlBaseType.getJCOInstance());
+            classInstance.Set("DefaultUserControlBaseType", DefaultUserControlBaseType == null ? null : DefaultUserControlBaseType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

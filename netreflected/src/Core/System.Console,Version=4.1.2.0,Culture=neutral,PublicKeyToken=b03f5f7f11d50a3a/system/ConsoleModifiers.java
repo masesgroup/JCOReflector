@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ConsoleModifiers, System.Console, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleModifiers" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleModifiers</a>
  */
 public class ConsoleModifiers extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Console, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Console, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Console
+     */
     public static final String assemblyShortName = "System.Console";
+    /**
+     * Qualified class name: System.ConsoleModifiers
+     */
     public static final String className = "System.ConsoleModifiers";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class ConsoleModifiers extends NetObject  {
 
     // Flags management section
 
-    public ConsoleModifiers add(ConsoleModifiers val) throws Throwable {
+    public final ConsoleModifiers add(ConsoleModifiers val) throws Throwable {
         return new ConsoleModifiers(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ConsoleModifiers remove(ConsoleModifiers val) throws Throwable {
+    public final ConsoleModifiers remove(ConsoleModifiers val) throws Throwable {
         return new ConsoleModifiers(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ConsoleModifiers val) throws Throwable {
+    public final boolean is(ConsoleModifiers val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ConsoleModifiers val) throws Throwable {
+    public final boolean has(ConsoleModifiers val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -45,12 +45,27 @@ import system.web.ui.Control;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.AutoFieldsGenerator, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.AutoFieldsGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.AutoFieldsGenerator</a>
  */
 public class AutoFieldsGenerator extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.AutoFieldsGenerator
+     */
     public static final String className = "System.Web.UI.WebControls.AutoFieldsGenerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class AutoFieldsGenerator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AutoFieldsGenerator}, a cast assert is made to check if types are compatible.
+     */
     public static AutoFieldsGenerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AutoFieldsGenerator(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class AutoFieldsGenerator extends NetObject  {
 
     // Constructors section
     
+    public AutoFieldsGenerator() throws Throwable {
+    }
 
     
     // Methods section

@@ -43,12 +43,27 @@ import system.servicemodel.channels.Message;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.IWSTrust13SyncContract, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract</a>
  */
 public class IWSTrust13SyncContractImplementation extends NetObject implements IWSTrust13SyncContract {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.IWSTrust13SyncContract
+     */
     public static final String className = "System.ServiceModel.Security.IWSTrust13SyncContract";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWSTrust13SyncContract}, a cast assert is made to check if types are compatible.
+     */
     public static IWSTrust13SyncContract ToIWSTrust13SyncContract(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWSTrust13SyncContractImplementation(from.getJCOInstance());

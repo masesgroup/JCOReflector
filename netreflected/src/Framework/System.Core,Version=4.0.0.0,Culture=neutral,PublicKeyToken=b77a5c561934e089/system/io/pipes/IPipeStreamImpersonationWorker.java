@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PipeStreamImpersonationWorker}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipeStreamImpersonationWorker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipeStreamImpersonationWorker</a>
+ */
 public interface IPipeStreamImpersonationWorker {
     public void Invoke();
 }

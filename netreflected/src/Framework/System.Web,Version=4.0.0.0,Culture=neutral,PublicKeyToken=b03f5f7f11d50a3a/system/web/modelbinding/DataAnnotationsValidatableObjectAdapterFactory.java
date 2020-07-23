@@ -44,12 +44,27 @@ import system.web.modelbinding.ModelBindingExecutionContext;
 import system.web.modelbinding.IDataAnnotationsValidatableObjectAdapterFactory;
 /**
  * The base .NET class managing System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory</a>
  */
 public class DataAnnotationsValidatableObjectAdapterFactory extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory
+     */
     public static final String className = "System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDataAnnotationsValidatableObjectAdapterFactory callerInstance = null;
@@ -157,7 +172,7 @@ public class DataAnnotationsValidatableObjectAdapterFactory extends JCDelegate i
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final ModelValidator DynamicInvoke(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
+    public ModelValidator METHOD_JAVA_NAME(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -168,7 +183,9 @@ public class DataAnnotationsValidatableObjectAdapterFactory extends JCDelegate i
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public ModelValidator Invoke(ModelMetadata metadata, ModelBindingExecutionContext context) {
         return null;
     }

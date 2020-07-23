@@ -48,12 +48,27 @@ import system.xml.schema.XmlSchemaObject;
 
 /**
  * The base .NET class managing System.Xml.Schema.XmlSchemaObjectTable, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectTable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectTable</a>
  */
 public class XmlSchemaObjectTable extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.XmlSchemaObjectTable
+     */
     public static final String className = "System.Xml.Schema.XmlSchemaObjectTable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class XmlSchemaObjectTable extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaObjectTable}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSchemaObjectTable cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSchemaObjectTable(from.getJCOInstance());
@@ -114,6 +131,10 @@ public class XmlSchemaObjectTable extends NetObject  {
 
     // Constructors section
     
+    public XmlSchemaObjectTable() throws Throwable {
+    }
+
+
 
     
     // Methods section

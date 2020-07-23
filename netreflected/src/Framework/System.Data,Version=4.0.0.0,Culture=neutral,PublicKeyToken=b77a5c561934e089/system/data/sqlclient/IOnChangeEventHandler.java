@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.sqlclient.SqlNotificationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link OnChangeEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.OnChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.OnChangeEventHandler</a>
+ */
 public interface IOnChangeEventHandler {
     public void Invoke(NetObject sender, SqlNotificationEventArgs e);
 }

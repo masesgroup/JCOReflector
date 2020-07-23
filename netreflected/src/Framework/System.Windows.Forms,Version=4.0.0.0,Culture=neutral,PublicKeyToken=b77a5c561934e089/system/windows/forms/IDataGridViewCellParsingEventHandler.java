@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewCellParsingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewCellParsingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventHandler</a>
+ */
 public interface IDataGridViewCellParsingEventHandler {
     public void Invoke(NetObject sender, DataGridViewCellParsingEventArgs e);
 }

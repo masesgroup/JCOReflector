@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.ICollectionViewLiveShaping, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping</a>
  */
 public class ICollectionViewLiveShapingImplementation extends NetObject implements ICollectionViewLiveShaping {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.ICollectionViewLiveShaping
+     */
     public static final String className = "System.ComponentModel.ICollectionViewLiveShaping";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollectionViewLiveShaping}, a cast assert is made to check if types are compatible.
+     */
     public static ICollectionViewLiveShaping ToICollectionViewLiveShaping(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICollectionViewLiveShapingImplementation(from.getJCOInstance());

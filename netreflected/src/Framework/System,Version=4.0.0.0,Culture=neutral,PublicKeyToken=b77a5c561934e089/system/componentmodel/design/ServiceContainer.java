@@ -45,12 +45,27 @@ import system.componentmodel.design.ServiceCreatorCallback;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ServiceContainer, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceContainer</a>
  */
 public class ServiceContainer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ServiceContainer
+     */
     public static final String className = "System.ComponentModel.Design.ServiceContainer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ServiceContainer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceContainer}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceContainer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceContainer(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class ServiceContainer extends NetObject  {
 
     // Constructors section
     
-
     public ServiceContainer() throws Throwable {
         try {
             // add reference to assemblyName.dll file

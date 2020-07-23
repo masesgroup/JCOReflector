@@ -43,12 +43,27 @@ import system.runtime.versioning.ResourceScope;
 
 /**
  * The base .NET class managing System.Runtime.Versioning.VersioningHelper, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.VersioningHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.VersioningHelper</a>
  */
 public class VersioningHelper extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Versioning.VersioningHelper
+     */
     public static final String className = "System.Runtime.Versioning.VersioningHelper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class VersioningHelper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link VersioningHelper}, a cast assert is made to check if types are compatible.
+     */
     public static VersioningHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new VersioningHelper(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class VersioningHelper extends NetObject  {
 
     // Constructors section
     
+    public VersioningHelper() throws Throwable {
+    }
 
     
     // Methods section

@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.messaging.IMessageSink;
+import system.runtime.remoting.messaging.IMessageSinkImplementation;
+import system.runtime.remoting.channels.IClientChannelSink;
+import system.runtime.remoting.channels.IClientChannelSinkImplementation;
+import system.runtime.remoting.channels.IChannelSinkBase;
+import system.runtime.remoting.channels.IChannelSinkBaseImplementation;
 import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
@@ -45,26 +51,37 @@ import system.runtime.remoting.channels.ITransportHeaders;
 import system.runtime.remoting.channels.ITransportHeadersImplementation;
 import system.runtime.remoting.messaging.IMessageCtrl;
 import system.runtime.remoting.messaging.IMessageCtrlImplementation;
-import system.runtime.remoting.messaging.IMessageSink;
-import system.runtime.remoting.messaging.IMessageSinkImplementation;
 import system.runtime.remoting.channels.IClientChannelSinkStack;
 import system.runtime.remoting.channels.IClientChannelSinkStackImplementation;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStack;
 import system.runtime.remoting.channels.IClientResponseChannelSinkStackImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
-import system.runtime.remoting.channels.IClientChannelSink;
-import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IClientFormatterSink, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientFormatterSink" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientFormatterSink</a>
  */
 public class IClientFormatterSinkImplementation extends NetObject implements IClientFormatterSink {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IClientFormatterSink
+     */
     public static final String className = "System.Runtime.Remoting.Channels.IClientFormatterSink";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +129,9 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IClientFormatterSink}, a cast assert is made to check if types are compatible.
+     */
     public static IClientFormatterSink ToIClientFormatterSink(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IClientFormatterSinkImplementation(from.getJCOInstance());

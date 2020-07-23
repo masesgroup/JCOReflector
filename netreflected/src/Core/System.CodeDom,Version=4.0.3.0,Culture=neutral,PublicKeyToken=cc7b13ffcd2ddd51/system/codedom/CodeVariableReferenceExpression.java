@@ -38,18 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
+import system.codedom.CodeExpression;
 
 
 /**
  * The base .NET class managing System.CodeDom.CodeVariableReferenceExpression, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeVariableReferenceExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeVariableReferenceExpression</a>
  */
-public class CodeVariableReferenceExpression extends NetObject  {
+public class CodeVariableReferenceExpression extends CodeExpression  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.CodeVariableReferenceExpression
+     */
     public static final String className = "System.CodeDom.CodeVariableReferenceExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +116,9 @@ public class CodeVariableReferenceExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeVariableReferenceExpression}, a cast assert is made to check if types are compatible.
+     */
     public static CodeVariableReferenceExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeVariableReferenceExpression(from.getJCOInstance());
@@ -110,7 +126,6 @@ public class CodeVariableReferenceExpression extends NetObject  {
 
     // Constructors section
     
-
     public CodeVariableReferenceExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -139,17 +154,6 @@ public class CodeVariableReferenceExpression extends NetObject  {
     
     // Properties section
     
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getVariableName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

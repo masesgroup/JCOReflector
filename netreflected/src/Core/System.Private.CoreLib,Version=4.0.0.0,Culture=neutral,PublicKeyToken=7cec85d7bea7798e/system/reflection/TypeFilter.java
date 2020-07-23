@@ -42,12 +42,27 @@ import system.reflection.ITypeFilter;
 
 /**
  * The base .NET class managing System.Reflection.TypeFilter, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter</a>
  */
 public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.TypeFilter
+     */
     public static final String className = "System.Reflection.TypeFilter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ITypeFilter callerInstance = null;
@@ -155,7 +170,7 @@ public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeRe
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final boolean DynamicInvoke(NetType m, NetObject filterCriteria) throws Throwable {
+    public boolean METHOD_JAVA_NAME(NetType m, NetObject filterCriteria) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -165,7 +180,9 @@ public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeRe
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public boolean Invoke(NetType m, NetObject filterCriteria) {
         return false;
     }

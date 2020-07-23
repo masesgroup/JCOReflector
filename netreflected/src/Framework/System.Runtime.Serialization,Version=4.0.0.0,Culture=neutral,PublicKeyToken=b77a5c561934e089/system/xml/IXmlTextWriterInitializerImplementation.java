@@ -44,12 +44,27 @@ import system.text.Encoding;
 
 /**
  * The base .NET class managing System.Xml.IXmlTextWriterInitializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlTextWriterInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlTextWriterInitializer</a>
  */
 public class IXmlTextWriterInitializerImplementation extends NetObject implements IXmlTextWriterInitializer {
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
     public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Xml.IXmlTextWriterInitializer
+     */
     public static final String className = "System.Xml.IXmlTextWriterInitializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IXmlTextWriterInitializerImplementation extends NetObject implement
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlTextWriterInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlTextWriterInitializer ToIXmlTextWriterInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXmlTextWriterInitializerImplementation(from.getJCOInstance());

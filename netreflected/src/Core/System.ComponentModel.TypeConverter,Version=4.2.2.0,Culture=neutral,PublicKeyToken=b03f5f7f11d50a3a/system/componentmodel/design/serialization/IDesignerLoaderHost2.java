@@ -37,6 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.design.serialization.IDesignerLoaderHost;
+import system.componentmodel.design.serialization.IDesignerLoaderHostImplementation;
+import system.componentmodel.design.IDesignerHost;
+import system.componentmodel.design.IDesignerHostImplementation;
+import system.componentmodel.design.IServiceContainer;
+import system.componentmodel.design.IServiceContainerImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.design.DesignerTransaction;
 import system.componentmodel.design.IDesigner;
 import system.componentmodel.design.IDesignerImplementation;
@@ -53,12 +61,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.IDesignerLoaderHost2, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderHost2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderHost2</a>
  */
-public interface IDesignerLoaderHost2 extends IJCOBridgeReflected {
-
+public interface IDesignerLoaderHost2 extends IJCOBridgeReflected, IDesignerLoaderHost, IDesignerHost, IServiceContainer, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
+    public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.IDesignerLoaderHost2
+     */
+    public static final String className = "System.ComponentModel.Design.Serialization.IDesignerLoaderHost2";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerLoaderHost2}, a cast assert is made to check if types are compatible.
+     */
     public static IDesignerLoaderHost2 ToIDesignerLoaderHost2(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.Serialization.IDesignerLoaderHost2, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ComponentModel.TypeConverter"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDesignerLoaderHost2Implementation(from.getJCOInstance());
     }
@@ -101,39 +126,22 @@ public interface IDesignerLoaderHost2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public DesignerTransaction CreateTransaction() throws Throwable;
 
-    public DesignerTransaction CreateTransaction(java.lang.String description) throws Throwable;
 
-    public IDesigner GetDesigner(IComponent component) throws Throwable;
 
-    public IComponent CreateComponent(NetType componentClass) throws Throwable;
 
-    public IComponent CreateComponent(NetType componentClass, java.lang.String name) throws Throwable;
 
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
-    public NetType GetType(java.lang.String typeName) throws Throwable;
 
-    public void Activate() throws Throwable;
 
-    public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable;
 
-    public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable;
 
-    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable;
 
-    public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable;
 
-    public void DestroyComponent(IComponent component) throws Throwable;
 
-    public void EndLoad(java.lang.String baseClassName, boolean successful, ICollection errorCollection) throws Throwable;
 
-    public void Reload() throws Throwable;
 
-    public void RemoveService(NetType serviceType) throws Throwable;
 
-    public void RemoveService(NetType serviceType, boolean promote) throws Throwable;
 
 
     
@@ -147,49 +155,9 @@ public interface IDesignerLoaderHost2 extends IJCOBridgeReflected {
 
     public void setIgnoreErrorsDuringReload(boolean IgnoreErrorsDuringReload) throws Throwable;
 
-    public boolean getInTransaction() throws Throwable;
-
-    public boolean getLoading() throws Throwable;
-
-    public IComponent getRootComponent() throws Throwable;
-
-    public IContainer getContainer() throws Throwable;
-
-    public java.lang.String getRootComponentClassName() throws Throwable;
-
-    public java.lang.String getTransactionDescription() throws Throwable;
-
 
 
     // Instance Events section
     
-    public void addTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable;
-
-    public void removeTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable;
-
-    public void addTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable;
-
-    public void removeTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable;
-
-    public void addActivated(EventHandler handler) throws Throwable;
-
-    public void removeActivated(EventHandler handler) throws Throwable;
-
-    public void addDeactivated(EventHandler handler) throws Throwable;
-
-    public void removeDeactivated(EventHandler handler) throws Throwable;
-
-    public void addLoadComplete(EventHandler handler) throws Throwable;
-
-    public void removeLoadComplete(EventHandler handler) throws Throwable;
-
-    public void addTransactionOpened(EventHandler handler) throws Throwable;
-
-    public void removeTransactionOpened(EventHandler handler) throws Throwable;
-
-    public void addTransactionOpening(EventHandler handler) throws Throwable;
-
-    public void removeTransactionOpening(EventHandler handler) throws Throwable;
-
 
 }

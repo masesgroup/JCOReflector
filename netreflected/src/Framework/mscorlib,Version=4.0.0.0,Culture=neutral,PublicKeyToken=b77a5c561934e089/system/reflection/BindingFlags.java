@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.BindingFlags, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.BindingFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.BindingFlags</a>
  */
 public class BindingFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.BindingFlags
+     */
     public static final String className = "System.Reflection.BindingFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -156,19 +171,19 @@ public class BindingFlags extends NetObject  {
 
     // Flags management section
 
-    public BindingFlags add(BindingFlags val) throws Throwable {
+    public final BindingFlags add(BindingFlags val) throws Throwable {
         return new BindingFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public BindingFlags remove(BindingFlags val) throws Throwable {
+    public final BindingFlags remove(BindingFlags val) throws Throwable {
         return new BindingFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(BindingFlags val) throws Throwable {
+    public final boolean is(BindingFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(BindingFlags val) throws Throwable {
+    public final boolean has(BindingFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

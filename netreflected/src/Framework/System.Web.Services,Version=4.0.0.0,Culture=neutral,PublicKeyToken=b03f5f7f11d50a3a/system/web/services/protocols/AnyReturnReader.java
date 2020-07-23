@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.services.protocols.MimeReturnReader;
 import system.web.services.protocols.LogicalMethodInfo;
 import system.net.WebResponse;
 import system.io.Stream;
@@ -45,12 +46,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Web.Services.Protocols.AnyReturnReader, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.AnyReturnReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.AnyReturnReader</a>
  */
-public class AnyReturnReader extends NetObject  {
+public class AnyReturnReader extends MimeReturnReader  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Protocols.AnyReturnReader
+     */
     public static final String className = "System.Web.Services.Protocols.AnyReturnReader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class AnyReturnReader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnyReturnReader}, a cast assert is made to check if types are compatible.
+     */
     public static AnyReturnReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AnyReturnReader(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class AnyReturnReader extends NetObject  {
 
     // Constructors section
     
-
     public AnyReturnReader() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -143,23 +160,6 @@ public class AnyReturnReader extends NetObject  {
         try {
             JCObject objRead = (JCObject)classInstance.Invoke("Read", response == null ? null : response.getJCOInstance(), responseStream == null ? null : responseStream.getJCOInstance());
             return new NetObject(objRead);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject[] GetInitializers(LogicalMethodInfo[] methodInfos) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (Object)toObjectFromArray(methodInfos));
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetObject(resultingObject));
-            }
-            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

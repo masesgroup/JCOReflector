@@ -46,12 +46,27 @@ import system.security.rightsmanagement.UserActivationMode;
 
 /**
  * The base .NET class managing System.Security.RightsManagement.SecureEnvironment, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.SecureEnvironment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.SecureEnvironment</a>
  */
 public class SecureEnvironment extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Security.RightsManagement.SecureEnvironment
+     */
     public static final String className = "System.Security.RightsManagement.SecureEnvironment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class SecureEnvironment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecureEnvironment}, a cast assert is made to check if types are compatible.
+     */
     public static SecureEnvironment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecureEnvironment(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class SecureEnvironment extends NetObject  {
 
     // Constructors section
     
+    public SecureEnvironment() throws Throwable {
+    }
+
+
 
     
     // Methods section

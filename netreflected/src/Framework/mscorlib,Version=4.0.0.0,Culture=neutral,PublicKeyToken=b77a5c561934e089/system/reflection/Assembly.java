@@ -61,12 +61,27 @@ import system.reflection.ModuleResolveEventHandler;
 
 /**
  * The base .NET class managing System.Reflection.Assembly, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Assembly" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Assembly</a>
  */
 public class Assembly extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.Assembly
+     */
     public static final String className = "System.Reflection.Assembly";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -119,7 +134,9 @@ public class Assembly extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Assembly}, a cast assert is made to check if types are compatible.
+     */
     public static Assembly cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Assembly(from.getJCOInstance());
@@ -127,6 +144,8 @@ public class Assembly extends NetObject  {
 
     // Constructors section
     
+    public Assembly() throws Throwable {
+    }
 
     
     // Methods section
@@ -352,11 +371,33 @@ public class Assembly extends NetObject  {
         }
     }
 
+    public static Assembly Load(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoad = (JCObject)classType.Invoke("Load", (Object)dupParam0);
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objLoad = (JCObject)classType.Invoke("Load", rawAssembly, rawSymbolStore);
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoad = (JCObject)classType.Invoke("Load", dupParam0, dupParam1);
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -374,11 +415,33 @@ public class Assembly extends NetObject  {
         }
     }
 
+    public static Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1, Evidence dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoad = (JCObject)classType.Invoke("Load", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, SecurityContextSource securityContextSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objLoad = (JCObject)classType.Invoke("Load", rawAssembly, rawSymbolStore, securityContextSource == null ? null : securityContextSource.getJCOInstance());
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1, SecurityContextSource dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoad = (JCObject)classType.Invoke("Load", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -473,6 +536,17 @@ public class Assembly extends NetObject  {
         }
     }
 
+    public static Assembly LoadFrom(java.lang.String dupParam0, JCRefOut dupParam1, AssemblyHashAlgorithm dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoadFrom = (JCObject)classType.Invoke("LoadFrom", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return new Assembly(objLoadFrom);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Assembly LoadFrom(java.lang.String assemblyFile, Evidence securityEvidence) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -489,6 +563,17 @@ public class Assembly extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objLoadFrom = (JCObject)classType.Invoke("LoadFrom", assemblyFile, securityEvidence == null ? null : securityEvidence.getJCOInstance(), hashValue, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            return new Assembly(objLoadFrom);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Assembly LoadFrom(java.lang.String dupParam0, Evidence dupParam1, JCRefOut dupParam2, AssemblyHashAlgorithm dupParam3) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLoadFrom = (JCObject)classType.Invoke("LoadFrom", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new Assembly(objLoadFrom);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -522,6 +607,17 @@ public class Assembly extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objReflectionOnlyLoad = (JCObject)classType.Invoke("ReflectionOnlyLoad", (Object)rawAssembly);
+            return new Assembly(objReflectionOnlyLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Assembly ReflectionOnlyLoad(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objReflectionOnlyLoad = (JCObject)classType.Invoke("ReflectionOnlyLoad", (Object)dupParam0);
             return new Assembly(objReflectionOnlyLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -633,11 +729,33 @@ public class Assembly extends NetObject  {
         }
     }
 
+    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", dupParam0, dupParam1);
+            return new Module(objLoadModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", moduleName, rawModule, rawSymbolStore);
+            return new Module(objLoadModule);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", dupParam0, dupParam1, dupParam2);
             return new Module(objLoadModule);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

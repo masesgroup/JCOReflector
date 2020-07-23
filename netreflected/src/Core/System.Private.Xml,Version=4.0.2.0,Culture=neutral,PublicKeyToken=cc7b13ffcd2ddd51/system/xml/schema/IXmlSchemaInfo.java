@@ -46,12 +46,29 @@ import system.xml.schema.XmlSchemaValidity;
 
 /**
  * The base .NET class managing System.Xml.Schema.IXmlSchemaInfo, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.IXmlSchemaInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.IXmlSchemaInfo</a>
  */
 public interface IXmlSchemaInfo extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
+    public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.IXmlSchemaInfo
+     */
+    public static final String className = "System.Xml.Schema.IXmlSchemaInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlSchemaInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlSchemaInfo ToIXmlSchemaInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Xml.Schema.IXmlSchemaInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Private.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlSchemaInfoImplementation(from.getJCOInstance());
     }

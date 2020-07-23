@@ -45,12 +45,27 @@ import system.reflection.Module;
 
 /**
  * The base .NET class managing System.Reflection.MemberInfo, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MemberInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MemberInfo</a>
  */
 public class MemberInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.MemberInfo
+     */
     public static final String className = "System.Reflection.MemberInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class MemberInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemberInfo}, a cast assert is made to check if types are compatible.
+     */
     public static MemberInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MemberInfo(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class MemberInfo extends NetObject  {
 
     // Constructors section
     
+    public MemberInfo() throws Throwable {
+    }
 
     
     // Methods section

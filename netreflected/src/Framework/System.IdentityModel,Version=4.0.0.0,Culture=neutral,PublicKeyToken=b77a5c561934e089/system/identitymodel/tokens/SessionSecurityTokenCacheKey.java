@@ -43,12 +43,27 @@ import system.xml.UniqueId;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.SessionSecurityTokenCacheKey, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SessionSecurityTokenCacheKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SessionSecurityTokenCacheKey</a>
  */
 public class SessionSecurityTokenCacheKey extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.SessionSecurityTokenCacheKey
+     */
     public static final String className = "System.IdentityModel.Tokens.SessionSecurityTokenCacheKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SessionSecurityTokenCacheKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionSecurityTokenCacheKey}, a cast assert is made to check if types are compatible.
+     */
     public static SessionSecurityTokenCacheKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionSecurityTokenCacheKey(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class SessionSecurityTokenCacheKey extends NetObject  {
 
     // Constructors section
     
+    public SessionSecurityTokenCacheKey() throws Throwable {
+    }
 
     public SessionSecurityTokenCacheKey(java.lang.String endpointId, UniqueId contextId, UniqueId keyGeneration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -119,6 +138,7 @@ public class SessionSecurityTokenCacheKey extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

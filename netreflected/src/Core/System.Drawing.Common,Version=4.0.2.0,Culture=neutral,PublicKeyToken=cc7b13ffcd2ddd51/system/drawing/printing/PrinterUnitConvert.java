@@ -47,12 +47,27 @@ import system.drawing.Size;
 
 /**
  * The base .NET class managing System.Drawing.Printing.PrinterUnitConvert, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterUnitConvert" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterUnitConvert</a>
  */
 public class PrinterUnitConvert extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Printing.PrinterUnitConvert
+     */
     public static final String className = "System.Drawing.Printing.PrinterUnitConvert";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class PrinterUnitConvert extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrinterUnitConvert}, a cast assert is made to check if types are compatible.
+     */
     public static PrinterUnitConvert cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrinterUnitConvert(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class PrinterUnitConvert extends NetObject  {
 
     // Constructors section
     
+    public PrinterUnitConvert() throws Throwable {
+    }
+
+
 
     
     // Methods section

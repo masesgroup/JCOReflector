@@ -42,12 +42,27 @@ import system.transactions.TransactionEventArgs;
 import system.transactions.ITransactionCompletedEventHandler;
 /**
  * The base .NET class managing System.Transactions.TransactionCompletedEventHandler, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionCompletedEventHandler</a>
  */
 public class TransactionCompletedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.TransactionCompletedEventHandler
+     */
     public static final String className = "System.Transactions.TransactionCompletedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ITransactionCompletedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class TransactionCompletedEventHandler extends JCVoidDelegate implements 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, TransactionEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, TransactionEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class TransactionCompletedEventHandler extends JCVoidDelegate implements 
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, TransactionEventArgs e) {
     }
 }

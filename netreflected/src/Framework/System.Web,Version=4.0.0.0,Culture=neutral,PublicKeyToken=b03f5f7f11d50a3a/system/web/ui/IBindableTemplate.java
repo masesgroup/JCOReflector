@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.web.ui.ITemplate;
+import system.web.ui.ITemplateImplementation;
 import system.collections.specialized.IOrderedDictionary;
 import system.collections.specialized.IOrderedDictionaryImplementation;
 import system.web.ui.Control;
@@ -44,12 +46,29 @@ import system.web.ui.Control;
 
 /**
  * The base .NET class managing System.Web.UI.IBindableTemplate, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.IBindableTemplate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.IBindableTemplate</a>
  */
-public interface IBindableTemplate extends IJCOBridgeReflected {
-
+public interface IBindableTemplate extends IJCOBridgeReflected, ITemplate {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
+    public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.IBindableTemplate
+     */
+    public static final String className = "System.Web.UI.IBindableTemplate";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindableTemplate}, a cast assert is made to check if types are compatible.
+     */
     public static IBindableTemplate ToIBindableTemplate(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.UI.IBindableTemplate, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Web"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IBindableTemplateImplementation(from.getJCOInstance());
     }
@@ -94,7 +113,6 @@ public interface IBindableTemplate extends IJCOBridgeReflected {
     
     public IOrderedDictionary ExtractValues(Control container) throws Throwable;
 
-    public void InstantiateIn(Control container) throws Throwable;
 
 
     

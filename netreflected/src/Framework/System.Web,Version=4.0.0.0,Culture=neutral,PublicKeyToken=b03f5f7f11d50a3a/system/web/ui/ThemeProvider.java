@@ -50,12 +50,27 @@ import system.web.ui.Control;
 
 /**
  * The base .NET class managing System.Web.UI.ThemeProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.ThemeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.ThemeProvider</a>
  */
 public class ThemeProvider extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.ThemeProvider
+     */
     public static final String className = "System.Web.UI.ThemeProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class ThemeProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ThemeProvider}, a cast assert is made to check if types are compatible.
+     */
     public static ThemeProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ThemeProvider(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class ThemeProvider extends NetObject  {
 
     // Constructors section
     
+    public ThemeProvider() throws Throwable {
+    }
 
     public ThemeProvider(IDesignerHost host, java.lang.String name, java.lang.String themeDefinition, java.lang.String[] cssFiles, java.lang.String themePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpParseException, system.FormatException {
         try {
@@ -126,6 +145,7 @@ public class ThemeProvider extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

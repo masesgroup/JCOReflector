@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.provider.ProviderBase;
 import system.configuration.ConfigurationSection;
 import system.xml.XmlNode;
-import system.collections.specialized.NameValueCollection;
 
 
 /**
  * The base .NET class managing System.Configuration.ConfigurationBuilder, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationBuilder</a>
  */
-public class ConfigurationBuilder extends NetObject  {
+public class ConfigurationBuilder extends ProviderBase  {
+    /**
+     * Fully assembly qualified name: System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Configuration
+     */
     public static final String assemblyShortName = "System.Configuration";
+    /**
+     * Qualified class name: System.Configuration.ConfigurationBuilder
+     */
     public static final String className = "System.Configuration.ConfigurationBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ConfigurationBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static ConfigurationBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ConfigurationBuilder(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ConfigurationBuilder extends NetObject  {
 
     // Constructors section
     
+    public ConfigurationBuilder() throws Throwable {
+    }
 
     
     // Methods section
@@ -137,40 +156,10 @@ public class ConfigurationBuilder extends NetObject  {
         }
     }
 
-    public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

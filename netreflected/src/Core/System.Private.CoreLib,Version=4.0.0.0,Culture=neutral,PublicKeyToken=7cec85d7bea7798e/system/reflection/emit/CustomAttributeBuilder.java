@@ -45,12 +45,27 @@ import system.reflection.PropertyInfo;
 
 /**
  * The base .NET class managing System.Reflection.Emit.CustomAttributeBuilder, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder</a>
  */
 public class CustomAttributeBuilder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.Emit.CustomAttributeBuilder
+     */
     public static final String className = "System.Reflection.Emit.CustomAttributeBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class CustomAttributeBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CustomAttributeBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static CustomAttributeBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CustomAttributeBuilder(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class CustomAttributeBuilder extends NetObject  {
 
     // Constructors section
     
+    public CustomAttributeBuilder() throws Throwable {
+    }
 
     public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         try {
@@ -151,6 +170,7 @@ public class CustomAttributeBuilder extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.StandardToolWindows, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.StandardToolWindows" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.StandardToolWindows</a>
  */
 public class StandardToolWindows extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.StandardToolWindows
+     */
     public static final String className = "System.ComponentModel.Design.StandardToolWindows";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class StandardToolWindows extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StandardToolWindows}, a cast assert is made to check if types are compatible.
+     */
     public static StandardToolWindows cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StandardToolWindows(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class StandardToolWindows extends NetObject  {
 
     // Constructors section
     
-
     public StandardToolWindows() throws Throwable {
         try {
             // add reference to assemblyName.dll file

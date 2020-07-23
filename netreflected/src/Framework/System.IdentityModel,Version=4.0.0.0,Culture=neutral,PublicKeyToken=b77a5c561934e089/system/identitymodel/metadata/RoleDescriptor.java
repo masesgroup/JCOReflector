@@ -45,12 +45,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.IdentityModel.Metadata.RoleDescriptor, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor</a>
  */
 public class RoleDescriptor extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Metadata.RoleDescriptor
+     */
     public static final String className = "System.IdentityModel.Metadata.RoleDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class RoleDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RoleDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static RoleDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RoleDescriptor(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class RoleDescriptor extends NetObject  {
 
     // Constructors section
     
+    public RoleDescriptor() throws Throwable {
+    }
 
     
     // Methods section

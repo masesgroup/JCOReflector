@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Net.Http.Headers.RangeItemHeaderValue, System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.RangeItemHeaderValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.RangeItemHeaderValue</a>
  */
 public class RangeItemHeaderValue extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Http
+     */
     public static final String assemblyShortName = "System.Net.Http";
+    /**
+     * Qualified class name: System.Net.Http.Headers.RangeItemHeaderValue
+     */
     public static final String className = "System.Net.Http.Headers.RangeItemHeaderValue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class RangeItemHeaderValue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RangeItemHeaderValue}, a cast assert is made to check if types are compatible.
+     */
     public static RangeItemHeaderValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RangeItemHeaderValue(from.getJCOInstance());
@@ -108,6 +125,9 @@ public class RangeItemHeaderValue extends NetObject  {
 
     // Constructors section
     
+    public RangeItemHeaderValue() throws Throwable {
+    }
+
 
 
     

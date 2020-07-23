@@ -44,12 +44,27 @@ import system.web.EndEventHandler;
 
 /**
  * The base .NET class managing System.Web.UI.PageAsyncTask, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.PageAsyncTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.PageAsyncTask</a>
  */
 public class PageAsyncTask extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.PageAsyncTask
+     */
     public static final String className = "System.Web.UI.PageAsyncTask";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class PageAsyncTask extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageAsyncTask}, a cast assert is made to check if types are compatible.
+     */
     public static PageAsyncTask cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PageAsyncTask(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class PageAsyncTask extends NetObject  {
 
     // Constructors section
     
+    public PageAsyncTask() throws Throwable {
+    }
 
     public PageAsyncTask(BeginEventHandler beginHandler, EndEventHandler endHandler, EndEventHandler timeoutHandler, NetObject state) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
@@ -130,6 +149,7 @@ public class PageAsyncTask extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

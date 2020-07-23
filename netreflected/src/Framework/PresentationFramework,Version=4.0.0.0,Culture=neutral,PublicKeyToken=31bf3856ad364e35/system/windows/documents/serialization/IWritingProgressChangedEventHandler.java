@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.documents.serialization.WritingProgressChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WritingProgressChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingProgressChangedEventHandler</a>
+ */
 public interface IWritingProgressChangedEventHandler {
     public void Invoke(NetObject sender, WritingProgressChangedEventArgs e);
 }

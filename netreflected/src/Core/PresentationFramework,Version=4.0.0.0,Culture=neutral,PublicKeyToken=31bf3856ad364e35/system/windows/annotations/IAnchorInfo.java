@@ -43,12 +43,29 @@ import system.windows.annotations.AnnotationResource;
 
 /**
  * The base .NET class managing System.Windows.Annotations.IAnchorInfo, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.IAnchorInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.IAnchorInfo</a>
  */
 public interface IAnchorInfo extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
+    public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.IAnchorInfo
+     */
+    public static final String className = "System.Windows.Annotations.IAnchorInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAnchorInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IAnchorInfo ToIAnchorInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Annotations.IAnchorInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "PresentationFramework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IAnchorInfoImplementation(from.getJCOInstance());
     }

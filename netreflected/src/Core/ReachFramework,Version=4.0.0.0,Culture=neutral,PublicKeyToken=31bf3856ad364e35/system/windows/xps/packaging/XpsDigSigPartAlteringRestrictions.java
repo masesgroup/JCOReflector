@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions</a>
  */
 public class XpsDigSigPartAlteringRestrictions extends NetObject  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions
+     */
     public static final String className = "System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class XpsDigSigPartAlteringRestrictions extends NetObject  {
 
     // Flags management section
 
-    public XpsDigSigPartAlteringRestrictions add(XpsDigSigPartAlteringRestrictions val) throws Throwable {
+    public final XpsDigSigPartAlteringRestrictions add(XpsDigSigPartAlteringRestrictions val) throws Throwable {
         return new XpsDigSigPartAlteringRestrictions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public XpsDigSigPartAlteringRestrictions remove(XpsDigSigPartAlteringRestrictions val) throws Throwable {
+    public final XpsDigSigPartAlteringRestrictions remove(XpsDigSigPartAlteringRestrictions val) throws Throwable {
         return new XpsDigSigPartAlteringRestrictions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(XpsDigSigPartAlteringRestrictions val) throws Throwable {
+    public final boolean is(XpsDigSigPartAlteringRestrictions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(XpsDigSigPartAlteringRestrictions val) throws Throwable {
+    public final boolean has(XpsDigSigPartAlteringRestrictions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

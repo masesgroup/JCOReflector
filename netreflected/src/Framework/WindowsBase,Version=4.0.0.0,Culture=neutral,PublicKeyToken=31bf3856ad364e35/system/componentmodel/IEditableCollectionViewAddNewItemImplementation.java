@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.IEditableCollectionView;
+import system.componentmodel.IEditableCollectionViewImplementation;
 import system.componentmodel.NewItemPlaceholderPosition;
 
 
 /**
  * The base .NET class managing System.ComponentModel.IEditableCollectionViewAddNewItem, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem</a>
  */
 public class IEditableCollectionViewAddNewItemImplementation extends NetObject implements IEditableCollectionViewAddNewItem {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.IEditableCollectionViewAddNewItem
+     */
     public static final String className = "System.ComponentModel.IEditableCollectionViewAddNewItem";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEditableCollectionViewAddNewItem}, a cast assert is made to check if types are compatible.
+     */
     public static IEditableCollectionViewAddNewItem ToIEditableCollectionViewAddNewItem(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IEditableCollectionViewAddNewItemImplementation(from.getJCOInstance());

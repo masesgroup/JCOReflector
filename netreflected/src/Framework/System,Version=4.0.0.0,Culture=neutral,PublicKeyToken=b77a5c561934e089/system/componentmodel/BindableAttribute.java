@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 import system.componentmodel.BindingDirection;
 import system.componentmodel.BindableSupport;
 
 
 /**
  * The base .NET class managing System.ComponentModel.BindableAttribute, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.BindableAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.BindableAttribute</a>
  */
-public class BindableAttribute extends NetObject  {
+public class BindableAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.BindableAttribute
+     */
     public static final String className = "System.ComponentModel.BindableAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class BindableAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindableAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static BindableAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BindableAttribute(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class BindableAttribute extends NetObject  {
 
     // Constructors section
     
+    public BindableAttribute() throws Throwable {
+    }
 
     public BindableAttribute(boolean bindable) throws Throwable {
         try {
@@ -152,6 +172,7 @@ public class BindableAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -160,16 +181,6 @@ public class BindableAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,17 +206,6 @@ public class BindableAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Direction");
             return new BindingDirection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

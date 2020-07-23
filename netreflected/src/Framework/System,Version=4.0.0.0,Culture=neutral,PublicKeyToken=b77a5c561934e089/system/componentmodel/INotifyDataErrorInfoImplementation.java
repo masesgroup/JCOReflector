@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.INotifyDataErrorInfo, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INotifyDataErrorInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INotifyDataErrorInfo</a>
  */
 public class INotifyDataErrorInfoImplementation extends NetObject implements INotifyDataErrorInfo {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.INotifyDataErrorInfo
+     */
     public static final String className = "System.ComponentModel.INotifyDataErrorInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyDataErrorInfo}, a cast assert is made to check if types are compatible.
+     */
     public static INotifyDataErrorInfo ToINotifyDataErrorInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new INotifyDataErrorInfoImplementation(from.getJCOInstance());

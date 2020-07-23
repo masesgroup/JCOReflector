@@ -44,12 +44,27 @@ import system.security.cryptography.Oid;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.Pkcs9AttributeObject, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9AttributeObject</a>
  */
-public class Pkcs9AttributeObject extends NetObject  {
+public class Pkcs9AttributeObject extends AsnEncodedData  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.Pkcs9AttributeObject
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.Pkcs9AttributeObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Pkcs9AttributeObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs9AttributeObject}, a cast assert is made to check if types are compatible.
+     */
     public static Pkcs9AttributeObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Pkcs9AttributeObject(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class Pkcs9AttributeObject extends NetObject  {
 
     // Constructors section
     
-
     public Pkcs9AttributeObject() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,16 +171,6 @@ public class Pkcs9AttributeObject extends NetObject  {
     
     // Methods section
     
-    public java.lang.String Format(boolean multiLine) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("Format", multiLine);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -179,35 +185,6 @@ public class Pkcs9AttributeObject extends NetObject  {
     
     // Properties section
     
-    public byte[] getRawData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("RawData");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-			for(int indexRawData = 0; indexRawData < resultingArrayList.size(); indexRawData++ ) {
-				resultingArray[indexRawData] = (byte)resultingArrayList.get(indexRawData);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRawData(byte[] RawData) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RawData", RawData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Oid getOid() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

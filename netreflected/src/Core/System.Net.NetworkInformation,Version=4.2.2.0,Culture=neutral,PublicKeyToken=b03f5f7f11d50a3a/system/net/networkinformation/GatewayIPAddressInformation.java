@@ -43,12 +43,27 @@ import system.net.IPAddress;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.GatewayIPAddressInformation, System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.GatewayIPAddressInformation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.GatewayIPAddressInformation</a>
  */
 public class GatewayIPAddressInformation extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.NetworkInformation
+     */
     public static final String assemblyShortName = "System.Net.NetworkInformation";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.GatewayIPAddressInformation
+     */
     public static final String className = "System.Net.NetworkInformation.GatewayIPAddressInformation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class GatewayIPAddressInformation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GatewayIPAddressInformation}, a cast assert is made to check if types are compatible.
+     */
     public static GatewayIPAddressInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GatewayIPAddressInformation(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class GatewayIPAddressInformation extends NetObject  {
 
     // Constructors section
     
+    public GatewayIPAddressInformation() throws Throwable {
+    }
 
     
     // Methods section

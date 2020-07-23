@@ -42,12 +42,29 @@ import system.reflection.TypeInfo;
 
 /**
  * The base .NET class managing System.Reflection.IReflectableType, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IReflectableType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IReflectableType</a>
  */
 public interface IReflectableType extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.IReflectableType
+     */
+    public static final String className = "System.Reflection.IReflectableType";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReflectableType}, a cast assert is made to check if types are compatible.
+     */
     public static IReflectableType ToIReflectableType(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Reflection.IReflectableType, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IReflectableTypeImplementation(from.getJCOInstance());
     }

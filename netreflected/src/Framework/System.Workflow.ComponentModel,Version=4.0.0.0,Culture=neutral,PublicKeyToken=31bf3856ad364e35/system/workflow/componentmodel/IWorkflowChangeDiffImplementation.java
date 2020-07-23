@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.IWorkflowChangeDiff, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.IWorkflowChangeDiff" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.IWorkflowChangeDiff</a>
  */
 public class IWorkflowChangeDiffImplementation extends NetObject implements IWorkflowChangeDiff {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.IWorkflowChangeDiff
+     */
     public static final String className = "System.Workflow.ComponentModel.IWorkflowChangeDiff";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IWorkflowChangeDiffImplementation extends NetObject implements IWor
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWorkflowChangeDiff}, a cast assert is made to check if types are compatible.
+     */
     public static IWorkflowChangeDiff ToIWorkflowChangeDiff(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWorkflowChangeDiffImplementation(from.getJCOInstance());

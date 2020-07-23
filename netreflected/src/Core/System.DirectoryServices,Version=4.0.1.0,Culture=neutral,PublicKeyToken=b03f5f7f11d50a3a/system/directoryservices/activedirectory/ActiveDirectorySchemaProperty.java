@@ -47,12 +47,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty</a>
  */
 public class ActiveDirectorySchemaProperty extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ActiveDirectorySchemaProperty extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectorySchemaProperty}, a cast assert is made to check if types are compatible.
+     */
     public static ActiveDirectorySchemaProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActiveDirectorySchemaProperty(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ActiveDirectorySchemaProperty extends NetObject  {
 
     // Constructors section
     
+    public ActiveDirectorySchemaProperty() throws Throwable {
+    }
 
     public ActiveDirectorySchemaProperty(DirectoryContext context, java.lang.String ldapDisplayName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         try {
@@ -123,6 +142,7 @@ public class ActiveDirectorySchemaProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

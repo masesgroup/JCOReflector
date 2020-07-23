@@ -47,12 +47,27 @@ import system.security.policy.ApplicationTrustEnumerator;
 
 /**
  * The base .NET class managing System.Security.Policy.ApplicationTrustCollection, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ApplicationTrustCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ApplicationTrustCollection</a>
  */
 public class ApplicationTrustCollection extends NetObject implements Iterable<ApplicationTrust> {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.ApplicationTrustCollection
+     */
     public static final String className = "System.Security.Policy.ApplicationTrustCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationTrustCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ApplicationTrustCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ApplicationTrustCollection(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
 
     // Constructors section
     
+    public ApplicationTrustCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -138,12 +159,12 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
         }
     }
 
-    public ApplicationTrustEnumerator GetEnumerator() throws Throwable {
+    public final ApplicationTrustEnumerator GetEnumerator() throws Throwable {
         return new ApplicationTrustEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<ApplicationTrust> iterator() {
+	public final java.util.Iterator<ApplicationTrust> iterator() {
 		return new ApplicationTrustEnumerator(classInstance);
 	}
 

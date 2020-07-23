@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.Versioning.ResourceScope, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.ResourceScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.ResourceScope</a>
  */
 public class ResourceScope extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Versioning.ResourceScope
+     */
     public static final String className = "System.Runtime.Versioning.ResourceScope";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class ResourceScope extends NetObject  {
 
     // Flags management section
 
-    public ResourceScope add(ResourceScope val) throws Throwable {
+    public final ResourceScope add(ResourceScope val) throws Throwable {
         return new ResourceScope(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ResourceScope remove(ResourceScope val) throws Throwable {
+    public final ResourceScope remove(ResourceScope val) throws Throwable {
         return new ResourceScope(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ResourceScope val) throws Throwable {
+    public final boolean is(ResourceScope val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ResourceScope val) throws Throwable {
+    public final boolean has(ResourceScope val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

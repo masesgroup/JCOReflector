@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.VbStrConv, Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.VbStrConv" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.VbStrConv</a>
  */
 public class VbStrConv extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic.Core
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic.Core";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.VbStrConv
+     */
     public static final String className = "Microsoft.VisualBasic.VbStrConv";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -147,19 +162,19 @@ public class VbStrConv extends NetObject  {
 
     // Flags management section
 
-    public VbStrConv add(VbStrConv val) throws Throwable {
+    public final VbStrConv add(VbStrConv val) throws Throwable {
         return new VbStrConv(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public VbStrConv remove(VbStrConv val) throws Throwable {
+    public final VbStrConv remove(VbStrConv val) throws Throwable {
         return new VbStrConv(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(VbStrConv val) throws Throwable {
+    public final boolean is(VbStrConv val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(VbStrConv val) throws Throwable {
+    public final boolean has(VbStrConv val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.IQueryable;
+import system.linq.IQueryableImplementation;
 import system.linq.expressions.Expression;
 import system.linq.IQueryProvider;
 import system.linq.IQueryProviderImplementation;
@@ -45,12 +47,27 @@ import system.linq.IQueryProviderImplementation;
 
 /**
  * The base .NET class managing System.Linq.IOrderedQueryable, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IOrderedQueryable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IOrderedQueryable</a>
  */
-public class IOrderedQueryableImplementation extends NetObject implements IOrderedQueryable {
+public class IOrderedQueryableImplementation extends IEnumerableImplementation implements IOrderedQueryable {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Linq.IOrderedQueryable
+     */
     public static final String className = "System.Linq.IOrderedQueryable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +115,9 @@ public class IOrderedQueryableImplementation extends NetObject implements IOrder
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IOrderedQueryable}, a cast assert is made to check if types are compatible.
+     */
     public static IOrderedQueryable ToIOrderedQueryable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IOrderedQueryableImplementation(from.getJCOInstance());

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.ConvertEventArgs;
 import system.windows.forms.DataGridViewCellStyle;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewCellParsingEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs</a>
  */
-public class DataGridViewCellParsingEventArgs extends NetObject  {
+public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewCellParsingEventArgs
+     */
     public static final String className = "System.Windows.Forms.DataGridViewCellParsingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DataGridViewCellParsingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewCellParsingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewCellParsingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewCellParsingEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class DataGridViewCellParsingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewCellParsingEventArgs() throws Throwable {
+    }
 
     public DataGridViewCellParsingEventArgs(int rowIndex, int columnIndex, NetObject value, NetType desiredType, DataGridViewCellStyle inheritedCellStyle) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class DataGridViewCellParsingEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -163,38 +184,6 @@ public class DataGridViewCellParsingEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("RowIndex");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValue(NetObject Value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getDesiredType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DesiredType");
-            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

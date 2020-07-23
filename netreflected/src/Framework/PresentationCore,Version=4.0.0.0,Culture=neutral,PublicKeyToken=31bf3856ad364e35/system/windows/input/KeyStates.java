@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Input.KeyStates, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyStates" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyStates</a>
  */
 public class KeyStates extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.KeyStates
+     */
     public static final String className = "System.Windows.Input.KeyStates";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class KeyStates extends NetObject  {
 
     // Flags management section
 
-    public KeyStates add(KeyStates val) throws Throwable {
+    public final KeyStates add(KeyStates val) throws Throwable {
         return new KeyStates(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public KeyStates remove(KeyStates val) throws Throwable {
+    public final KeyStates remove(KeyStates val) throws Throwable {
         return new KeyStates(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(KeyStates val) throws Throwable {
+    public final boolean is(KeyStates val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(KeyStates val) throws Throwable {
+    public final boolean has(KeyStates val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

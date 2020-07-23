@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.directoryservices.protocols.LdapConnection;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DereferenceConnectionCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback</a>
+ */
 public interface IDereferenceConnectionCallback {
     public void Invoke(LdapConnection primaryConnection, LdapConnection connectionToDereference);
 }

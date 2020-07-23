@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.OneWayBindingElementImporter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.OneWayBindingElementImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.OneWayBindingElementImporter</a>
  */
 public class OneWayBindingElementImporter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.OneWayBindingElementImporter
+     */
     public static final String className = "System.ServiceModel.Channels.OneWayBindingElementImporter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class OneWayBindingElementImporter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OneWayBindingElementImporter}, a cast assert is made to check if types are compatible.
+     */
     public static OneWayBindingElementImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OneWayBindingElementImporter(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class OneWayBindingElementImporter extends NetObject  {
 
     // Constructors section
     
-
     public OneWayBindingElementImporter() throws Throwable {
         try {
             // add reference to assemblyName.dll file

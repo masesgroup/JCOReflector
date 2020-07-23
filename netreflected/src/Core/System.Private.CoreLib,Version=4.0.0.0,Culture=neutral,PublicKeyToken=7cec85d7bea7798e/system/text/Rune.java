@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.UInt32;
 import system.text.Rune;
 import system.buffers.OperationStatus;
@@ -47,12 +48,27 @@ import system.globalization.CultureInfo;
 
 /**
  * The base .NET class managing System.Text.Rune, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Rune" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Rune</a>
  */
-public class Rune extends NetObject  {
+public class Rune extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Text.Rune
+     */
     public static final String className = "System.Text.Rune";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class Rune extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rune}, a cast assert is made to check if types are compatible.
+     */
     public static Rune cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Rune(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class Rune extends NetObject  {
 
     // Constructors section
     
+    public Rune() throws Throwable {
+    }
 
     public Rune(char ch) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -153,6 +173,7 @@ public class Rune extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -448,11 +469,11 @@ public class Rune extends NetObject  {
         }
     }
 
-    public static Rune getReplacementChar() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Rune getReplacementChar() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ReplacementChar");
+            JCObject val = (JCObject)classInstance.Get("ReplacementChar");
             return new Rune(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -44,12 +44,27 @@ import system.componentmodel.composition.primitives.ImportCardinality;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Primitives.ImportDefinition, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Primitives.ImportDefinition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Primitives.ImportDefinition</a>
  */
 public class ImportDefinition extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Primitives.ImportDefinition
+     */
     public static final String className = "System.ComponentModel.Composition.Primitives.ImportDefinition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ImportDefinition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImportDefinition}, a cast assert is made to check if types are compatible.
+     */
     public static ImportDefinition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ImportDefinition(from.getJCOInstance());
@@ -110,6 +127,9 @@ public class ImportDefinition extends NetObject  {
 
     // Constructors section
     
+    public ImportDefinition() throws Throwable {
+    }
+
 
 
     

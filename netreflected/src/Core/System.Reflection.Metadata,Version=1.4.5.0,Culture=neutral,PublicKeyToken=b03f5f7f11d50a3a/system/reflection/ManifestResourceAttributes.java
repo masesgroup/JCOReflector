@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.ManifestResourceAttributes, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ManifestResourceAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ManifestResourceAttributes</a>
  */
 public class ManifestResourceAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.ManifestResourceAttributes
+     */
     public static final String className = "System.Reflection.ManifestResourceAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class ManifestResourceAttributes extends NetObject  {
 
     // Flags management section
 
-    public ManifestResourceAttributes add(ManifestResourceAttributes val) throws Throwable {
+    public final ManifestResourceAttributes add(ManifestResourceAttributes val) throws Throwable {
         return new ManifestResourceAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ManifestResourceAttributes remove(ManifestResourceAttributes val) throws Throwable {
+    public final ManifestResourceAttributes remove(ManifestResourceAttributes val) throws Throwable {
         return new ManifestResourceAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ManifestResourceAttributes val) throws Throwable {
+    public final boolean is(ManifestResourceAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ManifestResourceAttributes val) throws Throwable {
+    public final boolean has(ManifestResourceAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

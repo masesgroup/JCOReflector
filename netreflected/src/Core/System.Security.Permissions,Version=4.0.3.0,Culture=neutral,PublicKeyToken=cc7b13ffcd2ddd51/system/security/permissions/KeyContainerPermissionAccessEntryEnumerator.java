@@ -44,10 +44,22 @@ import system.security.permissions.KeyContainerPermissionAccessEntry;
 
 /**
  * The base .NET class managing System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator</a>
  */
 public class KeyContainerPermissionAccessEntryEnumerator extends NetObject implements Iterator<KeyContainerPermissionAccessEntry> {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator
+     */
     public static final String className = "System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class KeyContainerPermissionAccessEntryEnumerator extends NetObject imple
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public KeyContainerPermissionAccessEntry next() {
+	public final KeyContainerPermissionAccessEntry next() {
 		try {
 			return new KeyContainerPermissionAccessEntry(classInstance.next());
 		} catch (Throwable jce) {

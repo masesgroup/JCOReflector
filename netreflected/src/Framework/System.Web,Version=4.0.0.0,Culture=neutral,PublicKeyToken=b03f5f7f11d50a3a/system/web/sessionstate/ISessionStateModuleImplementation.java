@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.IHttpModule;
+import system.web.IHttpModuleImplementation;
 import system.threading.tasks.Task;
 import system.web.HttpContext;
 import system.web.HttpApplication;
@@ -45,12 +47,27 @@ import system.web.HttpApplication;
 
 /**
  * The base .NET class managing System.Web.SessionState.ISessionStateModule, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.ISessionStateModule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.ISessionStateModule</a>
  */
 public class ISessionStateModuleImplementation extends NetObject implements ISessionStateModule {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.SessionState.ISessionStateModule
+     */
     public static final String className = "System.Web.SessionState.ISessionStateModule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +115,9 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISessionStateModule}, a cast assert is made to check if types are compatible.
+     */
     public static ISessionStateModule ToISessionStateModule(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISessionStateModuleImplementation(from.getJCOInstance());

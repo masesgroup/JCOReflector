@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.EncoderFallbackBuffer;
 
 
 /**
  * The base .NET class managing System.Text.EncoderExceptionFallbackBuffer, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.EncoderExceptionFallbackBuffer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.EncoderExceptionFallbackBuffer</a>
  */
-public class EncoderExceptionFallbackBuffer extends NetObject  {
+public class EncoderExceptionFallbackBuffer extends EncoderFallbackBuffer  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Text.EncoderExceptionFallbackBuffer
+     */
     public static final String className = "System.Text.EncoderExceptionFallbackBuffer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class EncoderExceptionFallbackBuffer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncoderExceptionFallbackBuffer}, a cast assert is made to check if types are compatible.
+     */
     public static EncoderExceptionFallbackBuffer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EncoderExceptionFallbackBuffer(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class EncoderExceptionFallbackBuffer extends NetObject  {
 
     // Constructors section
     
-
     public EncoderExceptionFallbackBuffer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,30 +180,10 @@ public class EncoderExceptionFallbackBuffer extends NetObject  {
         }
     }
 
-    public void Reset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Reset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getRemaining() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Remaining");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

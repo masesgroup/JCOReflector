@@ -45,12 +45,27 @@ import system.servicemodel.activities.description.WorkflowUnhandledExceptionActi
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior</a>
  */
 public class WorkflowUnhandledExceptionBehavior extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior
+     */
     public static final String className = "System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class WorkflowUnhandledExceptionBehavior extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowUnhandledExceptionBehavior}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowUnhandledExceptionBehavior cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowUnhandledExceptionBehavior(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class WorkflowUnhandledExceptionBehavior extends NetObject  {
 
     // Constructors section
     
-
     public WorkflowUnhandledExceptionBehavior() throws Throwable {
         try {
             // add reference to assemblyName.dll file

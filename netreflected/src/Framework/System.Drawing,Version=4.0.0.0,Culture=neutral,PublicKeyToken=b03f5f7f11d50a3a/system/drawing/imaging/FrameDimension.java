@@ -44,12 +44,27 @@ import system.drawing.imaging.FrameDimension;
 
 /**
  * The base .NET class managing System.Drawing.Imaging.FrameDimension, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.FrameDimension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.FrameDimension</a>
  */
 public class FrameDimension extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Imaging.FrameDimension
+     */
     public static final String className = "System.Drawing.Imaging.FrameDimension";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class FrameDimension extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FrameDimension}, a cast assert is made to check if types are compatible.
+     */
     public static FrameDimension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FrameDimension(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class FrameDimension extends NetObject  {
 
     // Constructors section
     
+    public FrameDimension() throws Throwable {
+    }
 
     public FrameDimension(Guid guid) throws Throwable {
         try {
@@ -122,6 +141,7 @@ public class FrameDimension extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -129,33 +149,33 @@ public class FrameDimension extends NetObject  {
     
     // Properties section
     
-    public static FrameDimension getPage() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FrameDimension getPage() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Page");
+            JCObject val = (JCObject)classInstance.Get("Page");
             return new FrameDimension(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FrameDimension getResolution() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FrameDimension getResolution() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Resolution");
+            JCObject val = (JCObject)classInstance.Get("Resolution");
             return new FrameDimension(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FrameDimension getTime() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FrameDimension getTime() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Time");
+            JCObject val = (JCObject)classInstance.Get("Time");
             return new FrameDimension(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -43,12 +43,29 @@ import system.workflow.componentmodel.design.ActivityDesigner;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.IDesignerGlyphProvider, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.IDesignerGlyphProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.IDesignerGlyphProvider</a>
  */
 public interface IDesignerGlyphProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
+    public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.IDesignerGlyphProvider
+     */
+    public static final String className = "System.Workflow.ComponentModel.Design.IDesignerGlyphProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerGlyphProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IDesignerGlyphProvider ToIDesignerGlyphProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Workflow.ComponentModel.Design.IDesignerGlyphProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Workflow.ComponentModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDesignerGlyphProviderImplementation(from.getJCOInstance());
     }

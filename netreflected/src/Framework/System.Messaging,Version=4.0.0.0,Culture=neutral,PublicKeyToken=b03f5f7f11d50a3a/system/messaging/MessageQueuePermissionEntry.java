@@ -43,12 +43,27 @@ import system.messaging.MessageQueuePermissionAccess;
 
 /**
  * The base .NET class managing System.Messaging.MessageQueuePermissionEntry, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueuePermissionEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueuePermissionEntry</a>
  */
 public class MessageQueuePermissionEntry extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.MessageQueuePermissionEntry
+     */
     public static final String className = "System.Messaging.MessageQueuePermissionEntry";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class MessageQueuePermissionEntry extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageQueuePermissionEntry}, a cast assert is made to check if types are compatible.
+     */
     public static MessageQueuePermissionEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MessageQueuePermissionEntry(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class MessageQueuePermissionEntry extends NetObject  {
 
     // Constructors section
     
+    public MessageQueuePermissionEntry() throws Throwable {
+    }
 
     public MessageQueuePermissionEntry(MessageQueuePermissionAccess permissionAccess, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
@@ -129,6 +148,7 @@ public class MessageQueuePermissionEntry extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

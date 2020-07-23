@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.interop.HwndSourceParameters;
 import system.windows.input.RestoreFocusMode;
 
 
 /**
  * The base .NET class managing System.Windows.Interop.HwndSourceParameters, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.HwndSourceParameters" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.HwndSourceParameters</a>
  */
-public class HwndSourceParameters extends NetObject  {
+public class HwndSourceParameters extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Interop.HwndSourceParameters
+     */
     public static final String className = "System.Windows.Interop.HwndSourceParameters";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class HwndSourceParameters extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HwndSourceParameters}, a cast assert is made to check if types are compatible.
+     */
     public static HwndSourceParameters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HwndSourceParameters(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class HwndSourceParameters extends NetObject  {
 
     // Constructors section
     
+    public HwndSourceParameters() throws Throwable {
+    }
 
     public HwndSourceParameters(java.lang.String name) throws Throwable {
         try {
@@ -130,6 +150,7 @@ public class HwndSourceParameters extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

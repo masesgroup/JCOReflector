@@ -44,12 +44,27 @@ import system.transactions.PreparingEnlistment;
 
 /**
  * The base .NET class managing System.Transactions.IEnlistmentNotification, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IEnlistmentNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IEnlistmentNotification</a>
  */
 public class IEnlistmentNotificationImplementation extends NetObject implements IEnlistmentNotification {
+    /**
+     * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Transactions
+     */
     public static final String assemblyShortName = "System.Transactions";
+    /**
+     * Qualified class name: System.Transactions.IEnlistmentNotification
+     */
     public static final String className = "System.Transactions.IEnlistmentNotification";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IEnlistmentNotificationImplementation extends NetObject implements 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEnlistmentNotification}, a cast assert is made to check if types are compatible.
+     */
     public static IEnlistmentNotification ToIEnlistmentNotification(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IEnlistmentNotificationImplementation(from.getJCOInstance());

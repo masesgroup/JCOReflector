@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.ReadOnlyCollectionBase;
 import system.drawing.design.CategoryNameCollection;
 
 
 /**
  * The base .NET class managing System.Drawing.Design.CategoryNameCollection, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.CategoryNameCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.CategoryNameCollection</a>
  */
-public class CategoryNameCollection extends NetObject  {
+public class CategoryNameCollection extends ReadOnlyCollectionBase  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Design.CategoryNameCollection
+     */
     public static final String className = "System.Drawing.Design.CategoryNameCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class CategoryNameCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CategoryNameCollection}, a cast assert is made to check if types are compatible.
+     */
     public static CategoryNameCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CategoryNameCollection(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class CategoryNameCollection extends NetObject  {
 
     // Constructors section
     
+    public CategoryNameCollection() throws Throwable {
+    }
 
     public CategoryNameCollection(CategoryNameCollection value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -129,6 +149,7 @@ public class CategoryNameCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -164,20 +185,20 @@ public class CategoryNameCollection extends NetObject  {
         }
     }
 
-
-    
-    // Properties section
-    
-    public int getCount() throws Throwable {
+    public void CopyTo(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Get("Count");
+            classInstance.Invoke("CopyTo", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Properties section
+    
 
 
     // Instance Events section

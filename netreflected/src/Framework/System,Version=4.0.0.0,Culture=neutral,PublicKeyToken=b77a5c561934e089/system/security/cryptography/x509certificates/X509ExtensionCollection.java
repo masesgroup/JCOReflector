@@ -44,12 +44,27 @@ import system.security.cryptography.x509certificates.X509ExtensionEnumerator;
 
 /**
  * The base .NET class managing System.Security.Cryptography.X509Certificates.X509ExtensionCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ExtensionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ExtensionCollection</a>
  */
 public class X509ExtensionCollection extends NetObject implements Iterable<X509Extension> {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Security.Cryptography.X509Certificates.X509ExtensionCollection
+     */
     public static final String className = "System.Security.Cryptography.X509Certificates.X509ExtensionCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class X509ExtensionCollection extends NetObject implements Iterable<X509E
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509ExtensionCollection}, a cast assert is made to check if types are compatible.
+     */
     public static X509ExtensionCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509ExtensionCollection(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class X509ExtensionCollection extends NetObject implements Iterable<X509E
 
     // Constructors section
     
-
     public X509ExtensionCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -135,12 +151,12 @@ public class X509ExtensionCollection extends NetObject implements Iterable<X509E
         }
     }
 
-    public X509ExtensionEnumerator GetEnumerator() throws Throwable {
+    public final X509ExtensionEnumerator GetEnumerator() throws Throwable {
         return new X509ExtensionEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<X509Extension> iterator() {
+	public final java.util.Iterator<X509Extension> iterator() {
 		return new X509ExtensionEnumerator(classInstance);
 	}
 

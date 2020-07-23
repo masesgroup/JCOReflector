@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.DateTime;
+import system.web.caching.OutputCacheProvider;
 import system.threading.tasks.Task;
-import system.collections.specialized.NameValueCollection;
+import system.DateTime;
 
 
 /**
  * The base .NET class managing System.Web.Caching.OutputCacheProviderAsync, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.OutputCacheProviderAsync" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.OutputCacheProviderAsync</a>
  */
-public class OutputCacheProviderAsync extends NetObject  {
+public class OutputCacheProviderAsync extends OutputCacheProvider  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Caching.OutputCacheProviderAsync
+     */
     public static final String className = "System.Web.Caching.OutputCacheProviderAsync";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class OutputCacheProviderAsync extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OutputCacheProviderAsync}, a cast assert is made to check if types are compatible.
+     */
     public static OutputCacheProviderAsync cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OutputCacheProviderAsync(from.getJCOInstance());
@@ -111,32 +128,12 @@ public class OutputCacheProviderAsync extends NetObject  {
 
     // Constructors section
     
+    public OutputCacheProviderAsync() throws Throwable {
+    }
 
     
     // Methods section
     
-    public NetObject Add(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
-            return new NetObject(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject Get(java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", key);
-            return new NetObject(objGet);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Task RemoveAsync(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,60 +156,10 @@ public class OutputCacheProviderAsync extends NetObject  {
         }
     }
 
-    public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Remove(java.lang.String key) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Remove", key);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Set(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Set", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

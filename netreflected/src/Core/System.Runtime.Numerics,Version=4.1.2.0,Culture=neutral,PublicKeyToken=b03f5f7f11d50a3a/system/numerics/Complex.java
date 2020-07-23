@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.numerics.Complex;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
@@ -45,12 +46,27 @@ import system.IFormatProviderImplementation;
 
 /**
  * The base .NET class managing System.Numerics.Complex, System.Runtime.Numerics, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Complex" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Complex</a>
  */
-public class Complex extends NetObject  {
+public class Complex extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Numerics, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Numerics, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Numerics
+     */
     public static final String assemblyShortName = "System.Runtime.Numerics";
+    /**
+     * Qualified class name: System.Numerics.Complex
+     */
     public static final String className = "System.Numerics.Complex";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class Complex extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Complex}, a cast assert is made to check if types are compatible.
+     */
     public static Complex cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Complex(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class Complex extends NetObject  {
 
     // Constructors section
     
+    public Complex() throws Throwable {
+    }
 
     public Complex(double real, double imaginary) throws Throwable {
         try {
@@ -121,6 +141,7 @@ public class Complex extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -45,12 +45,27 @@ import system.xaml.schema.XamlTypeInvoker;
 
 /**
  * The base .NET class managing System.Xaml.Schema.XamlTypeInvoker, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Schema.XamlTypeInvoker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Schema.XamlTypeInvoker</a>
  */
 public class XamlTypeInvoker extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.Schema.XamlTypeInvoker
+     */
     public static final String className = "System.Xaml.Schema.XamlTypeInvoker";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class XamlTypeInvoker extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlTypeInvoker}, a cast assert is made to check if types are compatible.
+     */
     public static XamlTypeInvoker cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlTypeInvoker(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class XamlTypeInvoker extends NetObject  {
 
     // Constructors section
     
+    public XamlTypeInvoker() throws Throwable {
+    }
 
     public XamlTypeInvoker(XamlType type) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         try {
@@ -121,6 +140,7 @@ public class XamlTypeInvoker extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -194,11 +214,11 @@ public class XamlTypeInvoker extends NetObject  {
     
     // Properties section
     
-    public static XamlTypeInvoker getUnknownInvoker() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public XamlTypeInvoker getUnknownInvoker() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnknownInvoker");
+            JCObject val = (JCObject)classInstance.Get("UnknownInvoker");
             return new XamlTypeInvoker(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

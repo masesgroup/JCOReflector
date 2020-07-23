@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ComponentModel.PropertyFilterOptions, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyFilterOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyFilterOptions</a>
  */
 public class PropertyFilterOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.PropertyFilterOptions
+     */
     public static final String className = "System.ComponentModel.PropertyFilterOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class PropertyFilterOptions extends NetObject  {
 
     // Flags management section
 
-    public PropertyFilterOptions add(PropertyFilterOptions val) throws Throwable {
+    public final PropertyFilterOptions add(PropertyFilterOptions val) throws Throwable {
         return new PropertyFilterOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PropertyFilterOptions remove(PropertyFilterOptions val) throws Throwable {
+    public final PropertyFilterOptions remove(PropertyFilterOptions val) throws Throwable {
         return new PropertyFilterOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PropertyFilterOptions val) throws Throwable {
+    public final boolean is(PropertyFilterOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PropertyFilterOptions val) throws Throwable {
+    public final boolean has(PropertyFilterOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

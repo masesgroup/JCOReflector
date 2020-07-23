@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.emit.SignatureToken;
 
 
 /**
  * The base .NET class managing System.Reflection.Emit.SignatureToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.SignatureToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.SignatureToken</a>
  */
-public class SignatureToken extends NetObject  {
+public class SignatureToken extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.Emit.SignatureToken
+     */
     public static final String className = "System.Reflection.Emit.SignatureToken";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SignatureToken extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SignatureToken}, a cast assert is made to check if types are compatible.
+     */
     public static SignatureToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SignatureToken(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class SignatureToken extends NetObject  {
 
     // Constructors section
     
+    public SignatureToken() throws Throwable {
+    }
+
+
 
     
     // Methods section

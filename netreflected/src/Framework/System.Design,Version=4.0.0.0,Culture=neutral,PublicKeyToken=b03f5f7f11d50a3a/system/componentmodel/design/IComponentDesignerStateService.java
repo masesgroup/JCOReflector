@@ -43,12 +43,29 @@ import system.componentmodel.IComponentImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IComponentDesignerStateService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IComponentDesignerStateService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IComponentDesignerStateService</a>
  */
 public interface IComponentDesignerStateService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
+    public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IComponentDesignerStateService
+     */
+    public static final String className = "System.ComponentModel.Design.IComponentDesignerStateService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IComponentDesignerStateService}, a cast assert is made to check if types are compatible.
+     */
     public static IComponentDesignerStateService ToIComponentDesignerStateService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.IComponentDesignerStateService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Design"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IComponentDesignerStateServiceImplementation(from.getJCOInstance());
     }

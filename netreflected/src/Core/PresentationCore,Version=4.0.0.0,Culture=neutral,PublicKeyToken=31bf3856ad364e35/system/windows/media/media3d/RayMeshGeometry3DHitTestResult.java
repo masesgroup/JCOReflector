@@ -38,20 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.DependencyObject;
+import system.windows.media.media3d.RayHitTestResult;
 import system.windows.media.media3d.MeshGeometry3D;
-import system.windows.media.media3d.Model3D;
 import system.windows.media.media3d.Point3D;
 
 
 /**
  * The base .NET class managing System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult</a>
  */
-public class RayMeshGeometry3DHitTestResult extends NetObject  {
+public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult
+     */
     public static final String className = "System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +118,9 @@ public class RayMeshGeometry3DHitTestResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RayMeshGeometry3DHitTestResult}, a cast assert is made to check if types are compatible.
+     */
     public static RayMeshGeometry3DHitTestResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RayMeshGeometry3DHitTestResult(from.getJCOInstance());
@@ -112,6 +128,10 @@ public class RayMeshGeometry3DHitTestResult extends NetObject  {
 
     // Constructors section
     
+    public RayMeshGeometry3DHitTestResult() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -120,16 +140,6 @@ public class RayMeshGeometry3DHitTestResult extends NetObject  {
     
     // Properties section
     
-    public double getDistanceToRayOrigin() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (double)classInstance.Get("DistanceToRayOrigin");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public double getVertexWeight1() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -190,45 +200,12 @@ public class RayMeshGeometry3DHitTestResult extends NetObject  {
         }
     }
 
-    public DependencyObject getVisualHit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VisualHit");
-            return new DependencyObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MeshGeometry3D getMeshHit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("MeshHit");
             return new MeshGeometry3D(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Model3D getModelHit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ModelHit");
-            return new Model3D(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Point3D getPointHit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PointHit");
-            return new Point3D(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

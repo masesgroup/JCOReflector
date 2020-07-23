@@ -44,12 +44,27 @@ import system.runtime.remoting.services.ITrackingHandlerImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Services.TrackingServices, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.TrackingServices" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.TrackingServices</a>
  */
 public class TrackingServices extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Services.TrackingServices
+     */
     public static final String className = "System.Runtime.Remoting.Services.TrackingServices";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class TrackingServices extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TrackingServices}, a cast assert is made to check if types are compatible.
+     */
     public static TrackingServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TrackingServices(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class TrackingServices extends NetObject  {
 
     // Constructors section
     
-
     public TrackingServices() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -149,12 +165,12 @@ public class TrackingServices extends NetObject  {
     
     // Properties section
     
-    public static ITrackingHandler[] getRegisteredHandlers() throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public final ITrackingHandler[] getRegisteredHandlers() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<ITrackingHandler> resultingArrayList = new ArrayList<ITrackingHandler>();
-            JCObject resultingObjects = (JCObject)classType.Get("RegisteredHandlers");
+            JCObject resultingObjects = (JCObject)classInstance.Get("RegisteredHandlers");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITrackingHandlerImplementation(resultingObject));
             }

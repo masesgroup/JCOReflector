@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Reflection.Metadata.MethodDebugInformationHandleCollection, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.MethodDebugInformationHandleCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.MethodDebugInformationHandleCollection</a>
  */
-public class MethodDebugInformationHandleCollection extends NetObject  {
+public class MethodDebugInformationHandleCollection extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.MethodDebugInformationHandleCollection
+     */
     public static final String className = "System.Reflection.Metadata.MethodDebugInformationHandleCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class MethodDebugInformationHandleCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodDebugInformationHandleCollection}, a cast assert is made to check if types are compatible.
+     */
     public static MethodDebugInformationHandleCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MethodDebugInformationHandleCollection(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class MethodDebugInformationHandleCollection extends NetObject  {
 
     // Constructors section
     
+    public MethodDebugInformationHandleCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section

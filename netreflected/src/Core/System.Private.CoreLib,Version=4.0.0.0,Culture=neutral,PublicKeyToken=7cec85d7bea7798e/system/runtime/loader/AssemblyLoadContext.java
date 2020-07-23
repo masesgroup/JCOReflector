@@ -46,12 +46,27 @@ import system.runtime.loader.AssemblyLoadContext;
 
 /**
  * The base .NET class managing System.Runtime.Loader.AssemblyLoadContext, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Loader.AssemblyLoadContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Loader.AssemblyLoadContext</a>
  */
 public class AssemblyLoadContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.Loader.AssemblyLoadContext
+     */
     public static final String className = "System.Runtime.Loader.AssemblyLoadContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class AssemblyLoadContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyLoadContext}, a cast assert is made to check if types are compatible.
+     */
     public static AssemblyLoadContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AssemblyLoadContext(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class AssemblyLoadContext extends NetObject  {
 
     // Constructors section
     
+    public AssemblyLoadContext() throws Throwable {
+    }
 
     public AssemblyLoadContext(java.lang.String name, boolean isCollectible) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -122,6 +141,7 @@ public class AssemblyLoadContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -248,22 +268,22 @@ public class AssemblyLoadContext extends NetObject  {
         }
     }
 
-    public static AssemblyLoadContext getCurrentContextualReflectionContext() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public AssemblyLoadContext getCurrentContextualReflectionContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentContextualReflectionContext");
+            JCObject val = (JCObject)classInstance.Get("CurrentContextualReflectionContext");
             return new AssemblyLoadContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static AssemblyLoadContext getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public AssemblyLoadContext getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new AssemblyLoadContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

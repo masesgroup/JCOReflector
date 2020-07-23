@@ -44,12 +44,27 @@ import system.windows.forms.MenuItem;
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.IMenuEditorService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.IMenuEditorService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.IMenuEditorService</a>
  */
 public class IMenuEditorServiceImplementation extends NetObject implements IMenuEditorService {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.IMenuEditorService
+     */
     public static final String className = "System.Windows.Forms.Design.IMenuEditorService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMenuEditorService}, a cast assert is made to check if types are compatible.
+     */
     public static IMenuEditorService ToIMenuEditorService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IMenuEditorServiceImplementation(from.getJCOInstance());

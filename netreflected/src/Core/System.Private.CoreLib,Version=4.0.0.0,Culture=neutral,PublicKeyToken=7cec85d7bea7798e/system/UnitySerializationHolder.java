@@ -44,12 +44,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.UnitySerializationHolder, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.UnitySerializationHolder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.UnitySerializationHolder</a>
  */
 public class UnitySerializationHolder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.UnitySerializationHolder
+     */
     public static final String className = "System.UnitySerializationHolder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class UnitySerializationHolder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnitySerializationHolder}, a cast assert is made to check if types are compatible.
+     */
     public static UnitySerializationHolder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UnitySerializationHolder(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class UnitySerializationHolder extends NetObject  {
 
     // Constructors section
     
+    public UnitySerializationHolder() throws Throwable {
+    }
 
     public UnitySerializationHolder(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
         try {
@@ -120,6 +139,7 @@ public class UnitySerializationHolder extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

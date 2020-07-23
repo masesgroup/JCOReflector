@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ListViewItemMouseHoverEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ListViewItemMouseHoverEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemMouseHoverEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemMouseHoverEventHandler</a>
+ */
 public interface IListViewItemMouseHoverEventHandler {
     public void Invoke(NetObject sender, ListViewItemMouseHoverEventArgs e);
 }

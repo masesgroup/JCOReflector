@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.Linq.XObjectChange, System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XObjectChange" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XObjectChange</a>
  */
 public class XObjectChange extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Linq.XObjectChange
+     */
     public static final String className = "System.Xml.Linq.XObjectChange";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

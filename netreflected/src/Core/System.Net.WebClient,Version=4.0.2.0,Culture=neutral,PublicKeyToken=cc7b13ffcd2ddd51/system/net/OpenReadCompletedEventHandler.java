@@ -42,12 +42,27 @@ import system.net.OpenReadCompletedEventArgs;
 import system.net.IOpenReadCompletedEventHandler;
 /**
  * The base .NET class managing System.Net.OpenReadCompletedEventHandler, System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.OpenReadCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.OpenReadCompletedEventHandler</a>
  */
 public class OpenReadCompletedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.WebClient
+     */
     public static final String assemblyShortName = "System.Net.WebClient";
+    /**
+     * Qualified class name: System.Net.OpenReadCompletedEventHandler
+     */
     public static final String className = "System.Net.OpenReadCompletedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IOpenReadCompletedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class OpenReadCompletedEventHandler extends JCVoidDelegate implements IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, OpenReadCompletedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, OpenReadCompletedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class OpenReadCompletedEventHandler extends JCVoidDelegate implements IJC
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, OpenReadCompletedEventArgs e) {
     }
 }

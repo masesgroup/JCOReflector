@@ -44,12 +44,29 @@ import system.runtime.remoting.activation.IConstructionCallMessageImplementation
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Contexts.IContextAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Contexts.IContextAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Contexts.IContextAttribute</a>
  */
 public interface IContextAttribute extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Contexts.IContextAttribute
+     */
+    public static final String className = "System.Runtime.Remoting.Contexts.IContextAttribute";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContextAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static IContextAttribute ToIContextAttribute(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Contexts.IContextAttribute, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IContextAttributeImplementation(from.getJCOInstance());
     }

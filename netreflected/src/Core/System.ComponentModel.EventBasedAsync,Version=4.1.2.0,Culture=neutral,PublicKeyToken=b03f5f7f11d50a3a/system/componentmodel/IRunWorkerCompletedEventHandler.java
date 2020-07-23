@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.RunWorkerCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link RunWorkerCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.RunWorkerCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.RunWorkerCompletedEventHandler</a>
+ */
 public interface IRunWorkerCompletedEventHandler {
     public void Invoke(NetObject sender, RunWorkerCompletedEventArgs e);
 }

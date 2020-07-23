@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.integration.IntegrationExceptionEventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.Integration.PropertyMappingExceptionEventArgs, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.PropertyMappingExceptionEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.PropertyMappingExceptionEventArgs</a>
  */
-public class PropertyMappingExceptionEventArgs extends NetObject  {
+public class PropertyMappingExceptionEventArgs extends IntegrationExceptionEventArgs  {
+    /**
+     * Fully assembly qualified name: WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsFormsIntegration
+     */
     public static final String assemblyShortName = "WindowsFormsIntegration";
+    /**
+     * Qualified class name: System.Windows.Forms.Integration.PropertyMappingExceptionEventArgs
+     */
     public static final String className = "System.Windows.Forms.Integration.PropertyMappingExceptionEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class PropertyMappingExceptionEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyMappingExceptionEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyMappingExceptionEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyMappingExceptionEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class PropertyMappingExceptionEventArgs extends NetObject  {
 
     // Constructors section
     
+    public PropertyMappingExceptionEventArgs() throws Throwable {
+    }
 
     public PropertyMappingExceptionEventArgs(NetException exception, java.lang.String propertyName, NetObject propertyValue) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         try {
@@ -120,6 +140,7 @@ public class PropertyMappingExceptionEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -127,37 +148,6 @@ public class PropertyMappingExceptionEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getThrowException() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ThrowException");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setThrowException(boolean ThrowException) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ThrowException", ThrowException);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetException getException() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Exception");
-            return new NetException(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getPropertyValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -47,12 +47,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.CmsRecipientCollection, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.CmsRecipientCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.CmsRecipientCollection</a>
  */
 public class CmsRecipientCollection extends NetObject implements Iterable<CmsRecipient> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.CmsRecipientCollection
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.CmsRecipientCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class CmsRecipientCollection extends NetObject implements Iterable<CmsRec
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CmsRecipientCollection}, a cast assert is made to check if types are compatible.
+     */
     public static CmsRecipientCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CmsRecipientCollection(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class CmsRecipientCollection extends NetObject implements Iterable<CmsRec
 
     // Constructors section
     
-
     public CmsRecipientCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,12 +174,12 @@ public class CmsRecipientCollection extends NetObject implements Iterable<CmsRec
         }
     }
 
-    public CmsRecipientEnumerator GetEnumerator() throws Throwable {
+    public final CmsRecipientEnumerator GetEnumerator() throws Throwable {
         return new CmsRecipientEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<CmsRecipient> iterator() {
+	public final java.util.Iterator<CmsRecipient> iterator() {
 		return new CmsRecipientEnumerator(classInstance);
 	}
 

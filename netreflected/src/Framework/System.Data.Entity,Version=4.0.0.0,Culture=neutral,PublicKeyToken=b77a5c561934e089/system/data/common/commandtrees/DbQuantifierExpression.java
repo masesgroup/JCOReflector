@@ -38,21 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.common.commandtrees.DbExpression;
+import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.common.commandtrees.DbExpressionBinding;
-import system.data.common.commandtrees.DbExpressionKind;
-import system.data.metadata.edm.TypeUsage;
 
 
 /**
  * The base .NET class managing System.Data.Common.CommandTrees.DbQuantifierExpression, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbQuantifierExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbQuantifierExpression</a>
  */
-public class DbQuantifierExpression extends NetObject  {
+public class DbQuantifierExpression extends DbExpression  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.CommandTrees.DbQuantifierExpression
+     */
     public static final String className = "System.Data.Common.CommandTrees.DbQuantifierExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +118,9 @@ public class DbQuantifierExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbQuantifierExpression}, a cast assert is made to check if types are compatible.
+     */
     public static DbQuantifierExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbQuantifierExpression(from.getJCOInstance());
@@ -113,6 +128,10 @@ public class DbQuantifierExpression extends NetObject  {
 
     // Constructors section
     
+    public DbQuantifierExpression() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -148,28 +167,6 @@ public class DbQuantifierExpression extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Input");
             return new DbExpressionBinding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbExpressionKind getExpressionKind() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ExpressionKind");
-            return new DbExpressionKind(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeUsage getResultType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ResultType");
-            return new TypeUsage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

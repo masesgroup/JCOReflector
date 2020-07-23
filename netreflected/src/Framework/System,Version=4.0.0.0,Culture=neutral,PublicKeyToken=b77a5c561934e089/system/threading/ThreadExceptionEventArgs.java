@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Threading.ThreadExceptionEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventArgs</a>
  */
-public class ThreadExceptionEventArgs extends NetObject  {
+public class ThreadExceptionEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Threading.ThreadExceptionEventArgs
+     */
     public static final String className = "System.Threading.ThreadExceptionEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ThreadExceptionEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ThreadExceptionEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ThreadExceptionEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ThreadExceptionEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class ThreadExceptionEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ThreadExceptionEventArgs() throws Throwable {
+    }
 
     public ThreadExceptionEventArgs(NetException t) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class ThreadExceptionEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

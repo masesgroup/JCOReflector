@@ -43,12 +43,27 @@ import system.net.websockets.WebSocketCloseStatus;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.IWebSocketCloseDetails, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IWebSocketCloseDetails" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IWebSocketCloseDetails</a>
  */
 public class IWebSocketCloseDetailsImplementation extends NetObject implements IWebSocketCloseDetails {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.IWebSocketCloseDetails
+     */
     public static final String className = "System.ServiceModel.Channels.IWebSocketCloseDetails";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IWebSocketCloseDetailsImplementation extends NetObject implements I
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWebSocketCloseDetails}, a cast assert is made to check if types are compatible.
+     */
     public static IWebSocketCloseDetails ToIWebSocketCloseDetails(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWebSocketCloseDetailsImplementation(from.getJCOInstance());

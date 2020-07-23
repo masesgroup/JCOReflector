@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.identitymodel.tokens.SecurityToken;
+import system.identitymodel.selectors.SecurityTokenAuthenticator;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenAuthenticator, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenAuthenticator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenAuthenticator</a>
  */
-public class SecurityContextSecurityTokenAuthenticator extends NetObject  {
+public class SecurityContextSecurityTokenAuthenticator extends SecurityTokenAuthenticator  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenAuthenticator
+     */
     public static final String className = "System.ServiceModel.Security.Tokens.SecurityContextSecurityTokenAuthenticator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SecurityContextSecurityTokenAuthenticator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityContextSecurityTokenAuthenticator}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityContextSecurityTokenAuthenticator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityContextSecurityTokenAuthenticator(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SecurityContextSecurityTokenAuthenticator extends NetObject  {
 
     // Constructors section
     
-
     public SecurityContextSecurityTokenAuthenticator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -124,16 +140,6 @@ public class SecurityContextSecurityTokenAuthenticator extends NetObject  {
     
     // Methods section
     
-    public boolean CanValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanValidateToken", token == null ? null : token.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

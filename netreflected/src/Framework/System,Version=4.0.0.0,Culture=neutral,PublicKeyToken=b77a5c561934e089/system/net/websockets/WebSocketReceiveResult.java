@@ -43,12 +43,27 @@ import system.net.websockets.WebSocketMessageType;
 
 /**
  * The base .NET class managing System.Net.WebSockets.WebSocketReceiveResult, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult</a>
  */
 public class WebSocketReceiveResult extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.WebSockets.WebSocketReceiveResult
+     */
     public static final String className = "System.Net.WebSockets.WebSocketReceiveResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class WebSocketReceiveResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebSocketReceiveResult}, a cast assert is made to check if types are compatible.
+     */
     public static WebSocketReceiveResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebSocketReceiveResult(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class WebSocketReceiveResult extends NetObject  {
 
     // Constructors section
     
+    public WebSocketReceiveResult() throws Throwable {
+    }
 
     public WebSocketReceiveResult(int count, WebSocketMessageType messageType, boolean endOfMessage) throws Throwable, system.ArgumentOutOfRangeException {
         try {
@@ -119,6 +138,7 @@ public class WebSocketReceiveResult extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

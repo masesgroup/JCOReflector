@@ -37,6 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.remoting.messaging.IMethodCallMessage;
+import system.runtime.remoting.messaging.IMethodCallMessageImplementation;
+import system.runtime.remoting.messaging.IMethodMessage;
+import system.runtime.remoting.messaging.IMethodMessageImplementation;
+import system.runtime.remoting.messaging.IMessage;
+import system.runtime.remoting.messaging.IMessageImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.collections.IList;
@@ -49,12 +55,29 @@ import system.runtime.remoting.messaging.LogicalCallContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Activation.IConstructionCallMessage, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Activation.IConstructionCallMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Activation.IConstructionCallMessage</a>
  */
-public interface IConstructionCallMessage extends IJCOBridgeReflected {
-
+public interface IConstructionCallMessage extends IJCOBridgeReflected, IMethodCallMessage, IMethodMessage, IMessage {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Activation.IConstructionCallMessage
+     */
+    public static final String className = "System.Runtime.Remoting.Activation.IConstructionCallMessage";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IConstructionCallMessage}, a cast assert is made to check if types are compatible.
+     */
     public static IConstructionCallMessage ToIConstructionCallMessage(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Activation.IConstructionCallMessage, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IConstructionCallMessageImplementation(from.getJCOInstance());
     }
@@ -97,51 +120,23 @@ public interface IConstructionCallMessage extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetArg(int argNum) throws Throwable;
 
-    public NetObject GetInArg(int argNum) throws Throwable;
 
-    public java.lang.String GetArgName(int index) throws Throwable;
 
-    public java.lang.String GetInArgName(int index) throws Throwable;
 
 
     
     // Properties section
     
-    public boolean getHasVarArgs() throws Throwable;
-
-    public int getArgCount() throws Throwable;
-
-    public int getInArgCount() throws Throwable;
-
-    public IDictionary getProperties() throws Throwable;
-
     public IList getContextProperties() throws Throwable;
 
-    public NetObject getMethodSignature() throws Throwable;
-
-    public NetObject[] getArgs() throws Throwable;
-
     public NetObject[] getCallSiteActivationAttributes() throws Throwable;
-
-    public NetObject[] getInArgs() throws Throwable;
-
-    public MethodBase getMethodBase() throws Throwable;
 
     public IActivator getActivator() throws Throwable;
 
     public void setActivator(IActivator Activator) throws Throwable;
 
-    public LogicalCallContext getLogicalCallContext() throws Throwable;
-
     public java.lang.String getActivationTypeName() throws Throwable;
-
-    public java.lang.String getMethodName() throws Throwable;
-
-    public java.lang.String getTypeName() throws Throwable;
-
-    public java.lang.String getUri() throws Throwable;
 
     public NetType getActivationType() throws Throwable;
 

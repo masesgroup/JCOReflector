@@ -43,12 +43,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.UriBuilder, System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.UriBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.UriBuilder</a>
  */
 public class UriBuilder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.Uri
+     */
     public static final String assemblyShortName = "System.Private.Uri";
+    /**
+     * Qualified class name: System.UriBuilder
+     */
     public static final String className = "System.UriBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class UriBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UriBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static UriBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UriBuilder(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class UriBuilder extends NetObject  {
 
     // Constructors section
     
-
     public UriBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file

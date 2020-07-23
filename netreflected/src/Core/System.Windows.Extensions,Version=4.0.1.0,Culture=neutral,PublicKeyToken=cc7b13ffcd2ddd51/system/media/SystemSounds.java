@@ -43,12 +43,27 @@ import system.media.SystemSound;
 
 /**
  * The base .NET class managing System.Media.SystemSounds, System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Media.SystemSounds" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Media.SystemSounds</a>
  */
 public class SystemSounds extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Windows.Extensions
+     */
     public static final String assemblyShortName = "System.Windows.Extensions";
+    /**
+     * Qualified class name: System.Media.SystemSounds
+     */
     public static final String className = "System.Media.SystemSounds";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SystemSounds extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SystemSounds}, a cast assert is made to check if types are compatible.
+     */
     public static SystemSounds cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SystemSounds(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class SystemSounds extends NetObject  {
 
     // Constructors section
     
+    public SystemSounds() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,55 +136,55 @@ public class SystemSounds extends NetObject  {
     
     // Properties section
     
-    public static SystemSound getAsterisk() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SystemSound getAsterisk() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Asterisk");
+            JCObject val = (JCObject)classInstance.Get("Asterisk");
             return new SystemSound(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SystemSound getBeep() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SystemSound getBeep() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Beep");
+            JCObject val = (JCObject)classInstance.Get("Beep");
             return new SystemSound(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SystemSound getExclamation() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SystemSound getExclamation() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Exclamation");
+            JCObject val = (JCObject)classInstance.Get("Exclamation");
             return new SystemSound(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SystemSound getHand() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SystemSound getHand() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Hand");
+            JCObject val = (JCObject)classInstance.Get("Hand");
             return new SystemSound(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SystemSound getQuestion() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SystemSound getQuestion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Question");
+            JCObject val = (JCObject)classInstance.Get("Question");
             return new SystemSound(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

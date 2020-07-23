@@ -38,21 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.composition.hosting.CompositionOptions;
-import system.componentmodel.composition.primitives.ImportDefinition;
-import system.componentmodel.composition.hosting.AtomicComposition;
-import system.componentmodel.composition.hosting.CompositionBatch;
 import system.componentmodel.composition.hosting.ExportProvider;
+import system.componentmodel.composition.hosting.CompositionOptions;
+import system.componentmodel.composition.hosting.CompositionBatch;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.ComposablePartExportProvider, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartExportProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartExportProvider</a>
  */
-public class ComposablePartExportProvider extends NetObject  {
+public class ComposablePartExportProvider extends ExportProvider  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.ComposablePartExportProvider
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.ComposablePartExportProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +118,9 @@ public class ComposablePartExportProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComposablePartExportProvider}, a cast assert is made to check if types are compatible.
+     */
     public static ComposablePartExportProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ComposablePartExportProvider(from.getJCOInstance());
@@ -113,7 +128,6 @@ public class ComposablePartExportProvider extends NetObject  {
 
     // Constructors section
     
-
     public ComposablePartExportProvider() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         try {
             // add reference to assemblyName.dll file

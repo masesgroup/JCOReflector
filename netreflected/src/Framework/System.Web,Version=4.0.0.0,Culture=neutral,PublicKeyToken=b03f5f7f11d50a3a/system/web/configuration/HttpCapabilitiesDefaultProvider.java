@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.configuration.HttpCapabilitiesProvider;
 import system.web.configuration.HttpCapabilitiesDefaultProvider;
 import system.web.HttpBrowserCapabilities;
 import system.web.HttpRequest;
@@ -46,12 +47,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.Web.Configuration.HttpCapabilitiesDefaultProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider</a>
  */
-public class HttpCapabilitiesDefaultProvider extends NetObject  {
+public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.HttpCapabilitiesDefaultProvider
+     */
     public static final String className = "System.Web.Configuration.HttpCapabilitiesDefaultProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class HttpCapabilitiesDefaultProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpCapabilitiesDefaultProvider}, a cast assert is made to check if types are compatible.
+     */
     public static HttpCapabilitiesDefaultProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpCapabilitiesDefaultProvider(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class HttpCapabilitiesDefaultProvider extends NetObject  {
 
     // Constructors section
     
-
     public HttpCapabilitiesDefaultProvider() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file

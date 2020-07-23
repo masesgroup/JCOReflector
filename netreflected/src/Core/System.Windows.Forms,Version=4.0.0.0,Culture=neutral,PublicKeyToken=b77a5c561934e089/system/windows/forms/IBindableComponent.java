@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.IComponent;
+import system.componentmodel.IComponentImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.windows.forms.BindingContext;
@@ -46,12 +50,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Windows.Forms.IBindableComponent, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IBindableComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IBindableComponent</a>
  */
-public interface IBindableComponent extends IJCOBridgeReflected {
-
+public interface IBindableComponent extends IJCOBridgeReflected, IComponent, IDisposable {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
+    public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.IBindableComponent
+     */
+    public static final String className = "System.Windows.Forms.IBindableComponent";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindableComponent}, a cast assert is made to check if types are compatible.
+     */
     public static IBindableComponent ToIBindableComponent(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Windows.Forms.IBindableComponent, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Windows.Forms"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IBindableComponentImplementation(from.getJCOInstance());
     }
@@ -94,16 +115,11 @@ public interface IBindableComponent extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Dispose() throws Throwable;
 
 
     
     // Properties section
     
-    public ISite getSite() throws Throwable;
-
-    public void setSite(ISite Site) throws Throwable;
-
     public BindingContext getBindingContext() throws Throwable;
 
     public void setBindingContext(BindingContext BindingContext) throws Throwable;
@@ -114,9 +130,5 @@ public interface IBindableComponent extends IJCOBridgeReflected {
 
     // Instance Events section
     
-    public void addDisposed(EventHandler handler) throws Throwable;
-
-    public void removeDisposed(EventHandler handler) throws Throwable;
-
 
 }

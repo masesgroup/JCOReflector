@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.TreeNodeMouseClickEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TreeNodeMouseClickEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TreeNodeMouseClickEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TreeNodeMouseClickEventHandler</a>
+ */
 public interface ITreeNodeMouseClickEventHandler {
     public void Invoke(NetObject sender, TreeNodeMouseClickEventArgs e);
 }

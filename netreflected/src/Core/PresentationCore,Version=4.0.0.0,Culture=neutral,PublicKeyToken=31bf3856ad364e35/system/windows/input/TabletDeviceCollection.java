@@ -43,12 +43,27 @@ import system.windows.input.TabletDevice;
 
 /**
  * The base .NET class managing System.Windows.Input.TabletDeviceCollection, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TabletDeviceCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TabletDeviceCollection</a>
  */
 public class TabletDeviceCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.TabletDeviceCollection
+     */
     public static final String className = "System.Windows.Input.TabletDeviceCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class TabletDeviceCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TabletDeviceCollection}, a cast assert is made to check if types are compatible.
+     */
     public static TabletDeviceCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TabletDeviceCollection(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class TabletDeviceCollection extends NetObject  {
 
     // Constructors section
     
-
     public TabletDeviceCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file

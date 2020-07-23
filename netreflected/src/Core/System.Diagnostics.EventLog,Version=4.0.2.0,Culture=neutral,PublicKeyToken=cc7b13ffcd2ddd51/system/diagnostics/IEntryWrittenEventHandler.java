@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.diagnostics.EntryWrittenEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link EntryWrittenEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EntryWrittenEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EntryWrittenEventHandler</a>
+ */
 public interface IEntryWrittenEventHandler {
     public void Invoke(NetObject sender, EntryWrittenEventArgs e);
 }

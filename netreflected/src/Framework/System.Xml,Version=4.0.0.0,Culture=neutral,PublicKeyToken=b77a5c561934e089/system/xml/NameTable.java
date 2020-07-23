@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.XmlNameTable;
 
 
 /**
  * The base .NET class managing System.Xml.NameTable, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.NameTable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.NameTable</a>
  */
-public class NameTable extends NetObject  {
+public class NameTable extends XmlNameTable  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.NameTable
+     */
     public static final String className = "System.Xml.NameTable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class NameTable extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NameTable}, a cast assert is made to check if types are compatible.
+     */
     public static NameTable cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NameTable(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class NameTable extends NetObject  {
 
     // Constructors section
     
-
     public NameTable() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -133,6 +150,16 @@ public class NameTable extends NetObject  {
         }
     }
 
+    public java.lang.String Add(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("Add", dupParam0, dupParam1, dupParam2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String Add(java.lang.String key) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,6 +175,16 @@ public class NameTable extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("Get", key, start, len);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String Get(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("Get", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -47,12 +47,27 @@ import system.security.cryptography.HashAlgorithm;
 
 /**
  * The base .NET class managing System.Security.Cryptography.SignatureDescription, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SignatureDescription" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SignatureDescription</a>
  */
 public class SignatureDescription extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.SignatureDescription
+     */
     public static final String className = "System.Security.Cryptography.SignatureDescription";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class SignatureDescription extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SignatureDescription}, a cast assert is made to check if types are compatible.
+     */
     public static SignatureDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SignatureDescription(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class SignatureDescription extends NetObject  {
 
     // Constructors section
     
-
     public SignatureDescription() throws Throwable {
         try {
             // add reference to assemblyName.dll file

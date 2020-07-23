@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MessageSurrogateFilter}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.MessageSurrogateFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.MessageSurrogateFilter</a>
+ */
 public interface IMessageSurrogateFilter {
     public boolean Invoke(java.lang.String key, NetObject value);
 }

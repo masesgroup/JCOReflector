@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.DataRecordInfo;
 import system.data.metadata.edm.EntityType;
 import system.data.EntityKey;
-import system.data.metadata.edm.TypeUsage;
 
 
 /**
  * The base .NET class managing System.Data.Common.EntityRecordInfo, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.EntityRecordInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.EntityRecordInfo</a>
  */
-public class EntityRecordInfo extends NetObject  {
+public class EntityRecordInfo extends DataRecordInfo  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Common.EntityRecordInfo
+     */
     public static final String className = "System.Data.Common.EntityRecordInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class EntityRecordInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityRecordInfo}, a cast assert is made to check if types are compatible.
+     */
     public static EntityRecordInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EntityRecordInfo(from.getJCOInstance());
@@ -111,6 +128,9 @@ public class EntityRecordInfo extends NetObject  {
 
     // Constructors section
     
+    public EntityRecordInfo() throws Throwable {
+    }
+
 
 
     
@@ -126,17 +146,6 @@ public class EntityRecordInfo extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("EntityKey");
             return new EntityKey(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeUsage getRecordType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RecordType");
-            return new TypeUsage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

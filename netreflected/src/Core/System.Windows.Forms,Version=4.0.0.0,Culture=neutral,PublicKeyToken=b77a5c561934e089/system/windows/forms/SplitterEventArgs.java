@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.SplitterEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitterEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitterEventArgs</a>
  */
-public class SplitterEventArgs extends NetObject  {
+public class SplitterEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.SplitterEventArgs
+     */
     public static final String className = "System.Windows.Forms.SplitterEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SplitterEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SplitterEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SplitterEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SplitterEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class SplitterEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SplitterEventArgs() throws Throwable {
+    }
 
     public SplitterEventArgs(int x, int y, int splitX, int splitY) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class SplitterEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

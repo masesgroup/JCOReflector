@@ -42,12 +42,27 @@ import microsoft.win32.SessionSwitchEventArgs;
 import microsoft.win32.ISessionSwitchEventHandler;
 /**
  * The base .NET class managing Microsoft.Win32.SessionSwitchEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionSwitchEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionSwitchEventHandler</a>
  */
 public class SessionSwitchEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: Microsoft.Win32.SessionSwitchEventHandler
+     */
     public static final String className = "Microsoft.Win32.SessionSwitchEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISessionSwitchEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class SessionSwitchEventHandler extends JCVoidDelegate implements IJCVoid
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, SessionSwitchEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, SessionSwitchEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class SessionSwitchEventHandler extends JCVoidDelegate implements IJCVoid
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, SessionSwitchEventArgs e) {
     }
 }

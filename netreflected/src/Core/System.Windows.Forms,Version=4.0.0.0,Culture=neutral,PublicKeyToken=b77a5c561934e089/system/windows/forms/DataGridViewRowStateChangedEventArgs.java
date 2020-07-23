@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.forms.DataGridViewRow;
 import system.windows.forms.DataGridViewElementStates;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewRowStateChangedEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowStateChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowStateChangedEventArgs</a>
  */
-public class DataGridViewRowStateChangedEventArgs extends NetObject  {
+public class DataGridViewRowStateChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewRowStateChangedEventArgs
+     */
     public static final String className = "System.Windows.Forms.DataGridViewRowStateChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DataGridViewRowStateChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewRowStateChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewRowStateChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewRowStateChangedEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class DataGridViewRowStateChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewRowStateChangedEventArgs() throws Throwable {
+    }
 
     public DataGridViewRowStateChangedEventArgs(DataGridViewRow dataGridViewRow, DataGridViewElementStates stateChanged) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class DataGridViewRowStateChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

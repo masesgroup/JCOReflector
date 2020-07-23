@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.BoundsSpecified, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BoundsSpecified" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BoundsSpecified</a>
  */
 public class BoundsSpecified extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.BoundsSpecified
+     */
     public static final String className = "System.Windows.Forms.BoundsSpecified";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class BoundsSpecified extends NetObject  {
 
     // Flags management section
 
-    public BoundsSpecified add(BoundsSpecified val) throws Throwable {
+    public final BoundsSpecified add(BoundsSpecified val) throws Throwable {
         return new BoundsSpecified(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public BoundsSpecified remove(BoundsSpecified val) throws Throwable {
+    public final BoundsSpecified remove(BoundsSpecified val) throws Throwable {
         return new BoundsSpecified(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(BoundsSpecified val) throws Throwable {
+    public final boolean is(BoundsSpecified val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(BoundsSpecified val) throws Throwable {
+    public final boolean has(BoundsSpecified val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

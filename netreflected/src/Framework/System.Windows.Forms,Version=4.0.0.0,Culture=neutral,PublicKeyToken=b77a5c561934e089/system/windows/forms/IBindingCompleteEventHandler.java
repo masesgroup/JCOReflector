@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.BindingCompleteEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BindingCompleteEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingCompleteEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingCompleteEventHandler</a>
+ */
 public interface IBindingCompleteEventHandler {
     public void Invoke(NetObject sender, BindingCompleteEventArgs e);
 }

@@ -44,12 +44,27 @@ import system.drawing.Size;
 
 /**
  * The base .NET class managing System.Drawing.Printing.PreviewPageInfo, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PreviewPageInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PreviewPageInfo</a>
  */
 public class PreviewPageInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Printing.PreviewPageInfo
+     */
     public static final String className = "System.Drawing.Printing.PreviewPageInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class PreviewPageInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PreviewPageInfo}, a cast assert is made to check if types are compatible.
+     */
     public static PreviewPageInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PreviewPageInfo(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class PreviewPageInfo extends NetObject  {
 
     // Constructors section
     
+    public PreviewPageInfo() throws Throwable {
+    }
 
     public PreviewPageInfo(Image image, Size physicalSize) throws Throwable {
         try {
@@ -120,6 +139,7 @@ public class PreviewPageInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

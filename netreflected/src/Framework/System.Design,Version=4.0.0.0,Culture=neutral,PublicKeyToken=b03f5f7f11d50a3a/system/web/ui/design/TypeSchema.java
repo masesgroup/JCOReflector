@@ -44,12 +44,27 @@ import system.web.ui.design.IDataSourceViewSchemaImplementation;
 
 /**
  * The base .NET class managing System.Web.UI.Design.TypeSchema, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TypeSchema" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TypeSchema</a>
  */
 public class TypeSchema extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.TypeSchema
+     */
     public static final String className = "System.Web.UI.Design.TypeSchema";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class TypeSchema extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeSchema}, a cast assert is made to check if types are compatible.
+     */
     public static TypeSchema cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TypeSchema(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class TypeSchema extends NetObject  {
 
     // Constructors section
     
+    public TypeSchema() throws Throwable {
+    }
 
     public TypeSchema(NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
@@ -120,6 +139,7 @@ public class TypeSchema extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

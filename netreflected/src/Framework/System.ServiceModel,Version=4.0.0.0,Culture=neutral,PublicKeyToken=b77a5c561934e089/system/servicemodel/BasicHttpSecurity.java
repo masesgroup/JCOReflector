@@ -45,12 +45,27 @@ import system.servicemodel.HttpTransportSecurity;
 
 /**
  * The base .NET class managing System.ServiceModel.BasicHttpSecurity, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.BasicHttpSecurity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.BasicHttpSecurity</a>
  */
 public class BasicHttpSecurity extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.BasicHttpSecurity
+     */
     public static final String className = "System.ServiceModel.BasicHttpSecurity";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class BasicHttpSecurity extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BasicHttpSecurity}, a cast assert is made to check if types are compatible.
+     */
     public static BasicHttpSecurity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BasicHttpSecurity(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class BasicHttpSecurity extends NetObject  {
 
     // Constructors section
     
-
     public BasicHttpSecurity() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file

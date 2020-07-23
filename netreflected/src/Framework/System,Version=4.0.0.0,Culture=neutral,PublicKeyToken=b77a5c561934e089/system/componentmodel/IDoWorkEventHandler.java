@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.DoWorkEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DoWorkEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DoWorkEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DoWorkEventHandler</a>
+ */
 public interface IDoWorkEventHandler {
     public void Invoke(NetObject sender, DoWorkEventArgs e);
 }

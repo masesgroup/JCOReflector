@@ -45,12 +45,27 @@ import system.linq.ParallelQuery;
 
 /**
  * The base .NET class managing System.Linq.ParallelEnumerable, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.ParallelEnumerable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.ParallelEnumerable</a>
  */
 public class ParallelEnumerable extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Linq.ParallelEnumerable
+     */
     public static final String className = "System.Linq.ParallelEnumerable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ParallelEnumerable extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParallelEnumerable}, a cast assert is made to check if types are compatible.
+     */
     public static ParallelEnumerable cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ParallelEnumerable(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ParallelEnumerable extends NetObject  {
 
     // Constructors section
     
+    public ParallelEnumerable() throws Throwable {
+    }
 
     
     // Methods section

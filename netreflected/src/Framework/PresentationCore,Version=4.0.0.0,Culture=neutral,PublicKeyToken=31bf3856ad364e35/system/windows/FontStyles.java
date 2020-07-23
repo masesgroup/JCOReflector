@@ -43,12 +43,27 @@ import system.windows.FontStyle;
 
 /**
  * The base .NET class managing System.Windows.FontStyles, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FontStyles" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FontStyles</a>
  */
 public class FontStyles extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.FontStyles
+     */
     public static final String className = "System.Windows.FontStyles";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FontStyles extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontStyles}, a cast assert is made to check if types are compatible.
+     */
     public static FontStyles cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FontStyles(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class FontStyles extends NetObject  {
 
     // Constructors section
     
+    public FontStyles() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,33 +136,33 @@ public class FontStyles extends NetObject  {
     
     // Properties section
     
-    public static FontStyle getItalic() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStyle getItalic() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Italic");
+            JCObject val = (JCObject)classInstance.Get("Italic");
             return new FontStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStyle getNormal() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStyle getNormal() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Normal");
+            JCObject val = (JCObject)classInstance.Get("Normal");
             return new FontStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStyle getOblique() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStyle getOblique() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Oblique");
+            JCObject val = (JCObject)classInstance.Get("Oblique");
             return new FontStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

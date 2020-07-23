@@ -43,12 +43,27 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Activities.Expressions.ITextExpression, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Expressions.ITextExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Expressions.ITextExpression</a>
  */
 public class ITextExpressionImplementation extends NetObject implements ITextExpression {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Expressions.ITextExpression
+     */
     public static final String className = "System.Activities.Expressions.ITextExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class ITextExpressionImplementation extends NetObject implements ITextExp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITextExpression}, a cast assert is made to check if types are compatible.
+     */
     public static ITextExpression ToITextExpression(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITextExpressionImplementation(from.getJCOInstance());

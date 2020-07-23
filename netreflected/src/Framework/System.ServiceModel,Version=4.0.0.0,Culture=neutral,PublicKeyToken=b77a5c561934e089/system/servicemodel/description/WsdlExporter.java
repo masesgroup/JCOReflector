@@ -38,22 +38,37 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.description.MetadataExporter;
 import system.servicemodel.description.MetadataSet;
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.description.ServiceEndpoint;
-import system.servicemodel.description.PolicyVersion;
 import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Description.WsdlExporter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.WsdlExporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.WsdlExporter</a>
  */
-public class WsdlExporter extends NetObject  {
+public class WsdlExporter extends MetadataExporter  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.WsdlExporter
+     */
     public static final String className = "System.ServiceModel.Description.WsdlExporter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class WsdlExporter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WsdlExporter}, a cast assert is made to check if types are compatible.
+     */
     public static WsdlExporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WsdlExporter(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class WsdlExporter extends NetObject  {
 
     // Constructors section
     
-
     public WsdlExporter() throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -164,27 +180,6 @@ public class WsdlExporter extends NetObject  {
     
     // Properties section
     
-    public PolicyVersion getPolicyVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PolicyVersion");
-            return new PolicyVersion(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPolicyVersion(PolicyVersion PolicyVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PolicyVersion", PolicyVersion == null ? null : PolicyVersion.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ServiceDescriptionCollection getGeneratedWsdlDocuments() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

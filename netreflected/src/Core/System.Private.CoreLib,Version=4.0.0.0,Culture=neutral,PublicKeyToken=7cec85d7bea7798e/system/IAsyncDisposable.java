@@ -42,12 +42,29 @@ import system.threading.tasks.ValueTask;
 
 /**
  * The base .NET class managing System.IAsyncDisposable, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IAsyncDisposable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IAsyncDisposable</a>
  */
 public interface IAsyncDisposable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.IAsyncDisposable
+     */
+    public static final String className = "System.IAsyncDisposable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAsyncDisposable}, a cast assert is made to check if types are compatible.
+     */
     public static IAsyncDisposable ToIAsyncDisposable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.IAsyncDisposable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IAsyncDisposableImplementation(from.getJCOInstance());
     }

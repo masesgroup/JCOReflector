@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WorkItemCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Util.WorkItemCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Util.WorkItemCallback</a>
+ */
 public interface IWorkItemCallback {
     public void Invoke();
 }

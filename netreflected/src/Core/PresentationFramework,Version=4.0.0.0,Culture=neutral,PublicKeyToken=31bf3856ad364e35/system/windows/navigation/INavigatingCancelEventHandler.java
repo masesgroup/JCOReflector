@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.navigation.NavigatingCancelEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link NavigatingCancelEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigatingCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigatingCancelEventHandler</a>
+ */
 public interface INavigatingCancelEventHandler {
     public void Invoke(NetObject sender, NavigatingCancelEventArgs e);
 }

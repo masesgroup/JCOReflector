@@ -54,12 +54,27 @@ import microsoft.visualbasic.myservices.SpecialDirectoriesProxy;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.MyServices.FileSystemProxy, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.MyServices.FileSystemProxy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.MyServices.FileSystemProxy</a>
  */
 public class FileSystemProxy extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.MyServices.FileSystemProxy
+     */
     public static final String className = "Microsoft.VisualBasic.MyServices.FileSystemProxy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class FileSystemProxy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileSystemProxy}, a cast assert is made to check if types are compatible.
+     */
     public static FileSystemProxy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileSystemProxy(from.getJCOInstance());
@@ -120,6 +137,10 @@ public class FileSystemProxy extends NetObject  {
 
     // Constructors section
     
+    public FileSystemProxy() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -179,6 +200,17 @@ public class FileSystemProxy extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objOpenTextFieldParser = (JCObject)classInstance.Invoke("OpenTextFieldParser", file, fieldWidths);
+            return new TextFieldParser(objOpenTextFieldParser);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextFieldParser OpenTextFieldParser(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objOpenTextFieldParser = (JCObject)classInstance.Invoke("OpenTextFieldParser", dupParam0, dupParam1);
             return new TextFieldParser(objOpenTextFieldParser);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -588,6 +620,16 @@ public class FileSystemProxy extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAllBytes", file, data, append);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteAllBytes(java.lang.String dupParam0, JCRefOut dupParam1, boolean dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.io.EndOfStreamException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteAllBytes", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

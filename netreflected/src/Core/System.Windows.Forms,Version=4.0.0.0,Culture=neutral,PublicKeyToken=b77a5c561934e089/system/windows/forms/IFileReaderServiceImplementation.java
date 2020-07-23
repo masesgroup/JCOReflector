@@ -43,12 +43,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Windows.Forms.IFileReaderService, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IFileReaderService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IFileReaderService</a>
  */
 public class IFileReaderServiceImplementation extends NetObject implements IFileReaderService {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.IFileReaderService
+     */
     public static final String className = "System.Windows.Forms.IFileReaderService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IFileReaderServiceImplementation extends NetObject implements IFile
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFileReaderService}, a cast assert is made to check if types are compatible.
+     */
     public static IFileReaderService ToIFileReaderService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IFileReaderServiceImplementation(from.getJCOInstance());

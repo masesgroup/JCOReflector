@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.PortableExecutable.CorFlags, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.CorFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.CorFlags</a>
  */
 public class CorFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.PortableExecutable.CorFlags
+     */
     public static final String className = "System.Reflection.PortableExecutable.CorFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class CorFlags extends NetObject  {
 
     // Flags management section
 
-    public CorFlags add(CorFlags val) throws Throwable {
+    public final CorFlags add(CorFlags val) throws Throwable {
         return new CorFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CorFlags remove(CorFlags val) throws Throwable {
+    public final CorFlags remove(CorFlags val) throws Throwable {
         return new CorFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CorFlags val) throws Throwable {
+    public final boolean is(CorFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CorFlags val) throws Throwable {
+    public final boolean has(CorFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

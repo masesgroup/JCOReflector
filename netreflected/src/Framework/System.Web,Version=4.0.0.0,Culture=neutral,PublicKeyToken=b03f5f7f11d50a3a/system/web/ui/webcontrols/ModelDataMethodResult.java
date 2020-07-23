@@ -43,12 +43,27 @@ import system.collections.specialized.OrderedDictionary;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.ModelDataMethodResult, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ModelDataMethodResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ModelDataMethodResult</a>
  */
 public class ModelDataMethodResult extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.ModelDataMethodResult
+     */
     public static final String className = "System.Web.UI.WebControls.ModelDataMethodResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ModelDataMethodResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelDataMethodResult}, a cast assert is made to check if types are compatible.
+     */
     public static ModelDataMethodResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ModelDataMethodResult(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ModelDataMethodResult extends NetObject  {
 
     // Constructors section
     
+    public ModelDataMethodResult() throws Throwable {
+    }
 
     public ModelDataMethodResult(NetObject returnValue, OrderedDictionary outputParameters) throws Throwable, system.ArgumentNullException {
         try {
@@ -119,6 +138,7 @@ public class ModelDataMethodResult extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

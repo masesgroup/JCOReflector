@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SecurityCriticalAction}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SecurityCriticalAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SecurityCriticalAction</a>
+ */
 public interface ISecurityCriticalAction {
     public void Invoke();
 }

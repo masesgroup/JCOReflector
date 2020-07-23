@@ -43,12 +43,27 @@ import system.xml.XmlNode;
 
 /**
  * The base .NET class managing System.Xml.IHasXmlNode, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IHasXmlNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IHasXmlNode</a>
  */
 public class IHasXmlNodeImplementation extends NetObject implements IHasXmlNode {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.IHasXmlNode
+     */
     public static final String className = "System.Xml.IHasXmlNode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IHasXmlNodeImplementation extends NetObject implements IHasXmlNode 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHasXmlNode}, a cast assert is made to check if types are compatible.
+     */
     public static IHasXmlNode ToIHasXmlNode(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IHasXmlNodeImplementation(from.getJCOInstance());

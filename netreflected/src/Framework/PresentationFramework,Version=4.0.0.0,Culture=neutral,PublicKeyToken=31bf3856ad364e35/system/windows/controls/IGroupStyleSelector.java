@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.windows.controls.GroupStyle;
 import system.windows.data.CollectionViewGroup;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link GroupStyleSelector}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.GroupStyleSelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.GroupStyleSelector</a>
+ */
 public interface IGroupStyleSelector {
     public GroupStyle Invoke(CollectionViewGroup group, int level);
 }

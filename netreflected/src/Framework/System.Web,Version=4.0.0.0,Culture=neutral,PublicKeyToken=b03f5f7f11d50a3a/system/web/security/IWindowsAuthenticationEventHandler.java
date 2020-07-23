@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.security.WindowsAuthenticationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WindowsAuthenticationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.WindowsAuthenticationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.WindowsAuthenticationEventHandler</a>
+ */
 public interface IWindowsAuthenticationEventHandler {
     public void Invoke(NetObject sender, WindowsAuthenticationEventArgs e);
 }

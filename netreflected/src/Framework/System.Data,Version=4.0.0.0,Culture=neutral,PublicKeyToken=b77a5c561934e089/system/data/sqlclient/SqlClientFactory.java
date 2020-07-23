@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.DbProviderFactory;
 import system.data.common.DbCommand;
 import system.data.common.DbCommandBuilder;
 import system.data.common.DbConnection;
@@ -51,12 +52,27 @@ import system.security.permissions.PermissionState;
 
 /**
  * The base .NET class managing System.Data.SqlClient.SqlClientFactory, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlClientFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlClientFactory</a>
  */
-public class SqlClientFactory extends NetObject  {
+public class SqlClientFactory extends DbProviderFactory  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlClientFactory
+     */
     public static final String className = "System.Data.SqlClient.SqlClientFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +125,9 @@ public class SqlClientFactory extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlClientFactory}, a cast assert is made to check if types are compatible.
+     */
     public static SqlClientFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlClientFactory(from.getJCOInstance());
@@ -117,6 +135,10 @@ public class SqlClientFactory extends NetObject  {
 
     // Constructors section
     
+    public SqlClientFactory() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -213,16 +235,6 @@ public class SqlClientFactory extends NetObject  {
     
     // Properties section
     
-    public boolean getCanCreateDataSourceEnumerator() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanCreateDataSourceEnumerator");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

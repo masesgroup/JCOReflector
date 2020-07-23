@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.sessionstate.SessionStateStoreData;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SessionStateItemExpireCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateItemExpireCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateItemExpireCallback</a>
+ */
 public interface ISessionStateItemExpireCallback {
     public void Invoke(java.lang.String id, SessionStateStoreData item);
 }

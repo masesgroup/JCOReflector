@@ -43,12 +43,27 @@ import system.net.networkinformation.UnicastIPAddressInformation;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.UnicastIPAddressInformationCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformationCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformationCollection</a>
  */
 public class UnicastIPAddressInformationCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.UnicastIPAddressInformationCollection
+     */
     public static final String className = "System.Net.NetworkInformation.UnicastIPAddressInformationCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class UnicastIPAddressInformationCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnicastIPAddressInformationCollection}, a cast assert is made to check if types are compatible.
+     */
     public static UnicastIPAddressInformationCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UnicastIPAddressInformationCollection(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class UnicastIPAddressInformationCollection extends NetObject  {
 
     // Constructors section
     
+    public UnicastIPAddressInformationCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section

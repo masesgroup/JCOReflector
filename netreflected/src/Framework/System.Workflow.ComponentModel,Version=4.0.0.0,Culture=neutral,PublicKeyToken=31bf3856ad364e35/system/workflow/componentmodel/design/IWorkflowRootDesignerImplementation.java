@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.IRootDesigner;
+import system.componentmodel.design.IRootDesignerImplementation;
+import system.componentmodel.design.IDesigner;
+import system.componentmodel.design.IDesignerImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.design.ViewTechnology;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
@@ -47,12 +53,27 @@ import system.workflow.componentmodel.design.CompositeActivityDesigner;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.IWorkflowRootDesigner, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.IWorkflowRootDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.IWorkflowRootDesigner</a>
  */
 public class IWorkflowRootDesignerImplementation extends NetObject implements IWorkflowRootDesigner {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.IWorkflowRootDesigner
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.IWorkflowRootDesigner";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +121,9 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWorkflowRootDesigner}, a cast assert is made to check if types are compatible.
+     */
     public static IWorkflowRootDesigner ToIWorkflowRootDesigner(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWorkflowRootDesignerImplementation(from.getJCOInstance());
@@ -184,7 +207,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
         }
     }
 
-    public ViewTechnology[] getSupportedTechnologies() throws Throwable {
+    public final ViewTechnology[] getSupportedTechnologies() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

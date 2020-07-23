@@ -43,12 +43,27 @@ import system.DateTime;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.CalendarDay, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CalendarDay" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CalendarDay</a>
  */
 public class CalendarDay extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.CalendarDay
+     */
     public static final String className = "System.Web.UI.WebControls.CalendarDay";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class CalendarDay extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CalendarDay}, a cast assert is made to check if types are compatible.
+     */
     public static CalendarDay cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CalendarDay(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class CalendarDay extends NetObject  {
 
     // Constructors section
     
+    public CalendarDay() throws Throwable {
+    }
 
     public CalendarDay(DateTime date, boolean isWeekend, boolean isToday, boolean isSelected, boolean isOtherMonth, java.lang.String dayNumberText) throws Throwable {
         try {
@@ -119,6 +138,7 @@ public class CalendarDay extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

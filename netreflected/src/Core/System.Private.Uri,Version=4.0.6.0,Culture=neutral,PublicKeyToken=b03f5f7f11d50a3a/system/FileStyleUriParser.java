@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.UriParser;
 
 
 /**
  * The base .NET class managing System.FileStyleUriParser, System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.FileStyleUriParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.FileStyleUriParser</a>
  */
-public class FileStyleUriParser extends NetObject  {
+public class FileStyleUriParser extends UriParser  {
+    /**
+     * Fully assembly qualified name: System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.Uri
+     */
     public static final String assemblyShortName = "System.Private.Uri";
+    /**
+     * Qualified class name: System.FileStyleUriParser
+     */
     public static final String className = "System.FileStyleUriParser";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class FileStyleUriParser extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileStyleUriParser}, a cast assert is made to check if types are compatible.
+     */
     public static FileStyleUriParser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileStyleUriParser(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class FileStyleUriParser extends NetObject  {
 
     // Constructors section
     
-
     public FileStyleUriParser() throws Throwable {
         try {
             // add reference to assemblyName.dll file

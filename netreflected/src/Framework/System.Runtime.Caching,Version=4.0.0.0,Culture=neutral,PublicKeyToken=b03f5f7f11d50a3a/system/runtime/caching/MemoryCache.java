@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.caching.ObjectCache;
 import system.collections.specialized.NameValueCollection;
 import system.runtime.caching.CacheItem;
 import system.runtime.caching.CacheItemPolicy;
@@ -51,12 +52,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.Runtime.Caching.MemoryCache, System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.MemoryCache" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.MemoryCache</a>
  */
-public class MemoryCache extends NetObject  {
+public class MemoryCache extends ObjectCache  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Caching
+     */
     public static final String assemblyShortName = "System.Runtime.Caching";
+    /**
+     * Qualified class name: System.Runtime.Caching.MemoryCache
+     */
     public static final String className = "System.Runtime.Caching.MemoryCache";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +125,9 @@ public class MemoryCache extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemoryCache}, a cast assert is made to check if types are compatible.
+     */
     public static MemoryCache cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MemoryCache(from.getJCOInstance());
@@ -117,6 +135,8 @@ public class MemoryCache extends NetObject  {
 
     // Constructors section
     
+    public MemoryCache() throws Throwable {
+    }
 
     public MemoryCache(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.NullReferenceException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         try {
@@ -139,6 +159,7 @@ public class MemoryCache extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -147,26 +168,6 @@ public class MemoryCache extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Add", item == null ? null : item.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Add(java.lang.String key, NetObject value, DateTimeOffset absoluteExpiration, java.lang.String regionName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), regionName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Add(java.lang.String key, NetObject value, CacheItemPolicy policy, java.lang.String regionName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Add", key, value == null ? null : value.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), regionName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,33 +354,12 @@ public class MemoryCache extends NetObject  {
         }
     }
 
-    public DefaultCacheCapabilities getDefaultCacheCapabilities() throws Throwable {
+    public MemoryCache getDefault() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultCacheCapabilities");
-            return new DefaultCacheCapabilities(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MemoryCache getDefault() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new MemoryCache(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

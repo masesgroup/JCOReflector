@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Activities.Presentation.Model.CreateOptions, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.CreateOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.CreateOptions</a>
  */
 public class CreateOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Model.CreateOptions
+     */
     public static final String className = "System.Activities.Presentation.Model.CreateOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class CreateOptions extends NetObject  {
 
     // Flags management section
 
-    public CreateOptions add(CreateOptions val) throws Throwable {
+    public final CreateOptions add(CreateOptions val) throws Throwable {
         return new CreateOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CreateOptions remove(CreateOptions val) throws Throwable {
+    public final CreateOptions remove(CreateOptions val) throws Throwable {
         return new CreateOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CreateOptions val) throws Throwable {
+    public final boolean is(CreateOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CreateOptions val) throws Throwable {
+    public final boolean has(CreateOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

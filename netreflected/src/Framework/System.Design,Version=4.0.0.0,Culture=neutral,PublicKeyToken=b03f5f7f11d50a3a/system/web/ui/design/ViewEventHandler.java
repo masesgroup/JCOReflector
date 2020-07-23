@@ -42,12 +42,27 @@ import system.web.ui.design.ViewEventArgs;
 import system.web.ui.design.IViewEventHandler;
 /**
  * The base .NET class managing System.Web.UI.Design.ViewEventHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ViewEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ViewEventHandler</a>
  */
 public class ViewEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.ViewEventHandler
+     */
     public static final String className = "System.Web.UI.Design.ViewEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IViewEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ViewEventHandler extends JCVoidDelegate implements IJCVoidEventEmit
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ViewEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ViewEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ViewEventHandler extends JCVoidDelegate implements IJCVoidEventEmit
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ViewEventArgs e) {
     }
 }

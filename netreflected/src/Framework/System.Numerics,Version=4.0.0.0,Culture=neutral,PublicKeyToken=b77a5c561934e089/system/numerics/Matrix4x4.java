@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Single;
 import system.numerics.Matrix3x2;
 import system.numerics.Matrix4x4;
@@ -48,12 +49,27 @@ import system.numerics.Plane;
 
 /**
  * The base .NET class managing System.Numerics.Matrix4x4, System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix4x4" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix4x4</a>
  */
-public class Matrix4x4 extends NetObject  {
+public class Matrix4x4 extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Numerics
+     */
     public static final String assemblyShortName = "System.Numerics";
+    /**
+     * Qualified class name: System.Numerics.Matrix4x4
+     */
     public static final String className = "System.Numerics.Matrix4x4";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class Matrix4x4 extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Matrix4x4}, a cast assert is made to check if types are compatible.
+     */
     public static Matrix4x4 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Matrix4x4(from.getJCOInstance());
@@ -114,6 +132,8 @@ public class Matrix4x4 extends NetObject  {
 
     // Constructors section
     
+    public Matrix4x4() throws Throwable {
+    }
 
     public Matrix4x4(Single m11, Single m12, Single m13, Single m14, Single m21, Single m22, Single m23, Single m24, Single m31, Single m32, Single m33, Single m34, Single m41, Single m42, Single m43, Single m44) throws Throwable {
         try {
@@ -134,6 +154,7 @@ public class Matrix4x4 extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -570,11 +591,11 @@ public class Matrix4x4 extends NetObject  {
         }
     }
 
-    public static Matrix4x4 getIdentity() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Matrix4x4 getIdentity() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Identity");
+            JCObject val = (JCObject)classInstance.Get("Identity");
             return new Matrix4x4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

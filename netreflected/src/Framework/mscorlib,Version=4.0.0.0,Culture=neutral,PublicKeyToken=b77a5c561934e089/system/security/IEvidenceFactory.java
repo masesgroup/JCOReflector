@@ -42,12 +42,29 @@ import system.security.policy.Evidence;
 
 /**
  * The base .NET class managing System.Security.IEvidenceFactory, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.IEvidenceFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.IEvidenceFactory</a>
  */
 public interface IEvidenceFactory extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.IEvidenceFactory
+     */
+    public static final String className = "System.Security.IEvidenceFactory";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEvidenceFactory}, a cast assert is made to check if types are compatible.
+     */
     public static IEvidenceFactory ToIEvidenceFactory(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Security.IEvidenceFactory, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IEvidenceFactoryImplementation(from.getJCOInstance());
     }

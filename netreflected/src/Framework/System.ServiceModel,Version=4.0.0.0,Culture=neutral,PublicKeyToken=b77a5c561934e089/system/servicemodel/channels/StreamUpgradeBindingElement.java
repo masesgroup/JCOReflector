@@ -45,12 +45,27 @@ import system.servicemodel.channels.BindingContext;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.StreamUpgradeBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.StreamUpgradeBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.StreamUpgradeBindingElement</a>
  */
-public class StreamUpgradeBindingElement extends NetObject  {
+public class StreamUpgradeBindingElement extends BindingElement  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.StreamUpgradeBindingElement
+     */
     public static final String className = "System.ServiceModel.Channels.StreamUpgradeBindingElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class StreamUpgradeBindingElement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StreamUpgradeBindingElement}, a cast assert is made to check if types are compatible.
+     */
     public static StreamUpgradeBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StreamUpgradeBindingElement(from.getJCOInstance());
@@ -111,21 +128,12 @@ public class StreamUpgradeBindingElement extends NetObject  {
 
     // Constructors section
     
+    public StreamUpgradeBindingElement() throws Throwable {
+    }
 
     
     // Methods section
     
-    public BindingElement Clone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
-            return new BindingElement(objClone);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public StreamUpgradeProvider BuildClientStreamUpgradeProvider(BindingContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

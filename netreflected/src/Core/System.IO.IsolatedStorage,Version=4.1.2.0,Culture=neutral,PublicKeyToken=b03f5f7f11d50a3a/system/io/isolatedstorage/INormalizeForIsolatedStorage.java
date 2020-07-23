@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.IO.IsolatedStorage.INormalizeForIsolatedStorage, System.IO.IsolatedStorage, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.IsolatedStorage.INormalizeForIsolatedStorage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.IsolatedStorage.INormalizeForIsolatedStorage</a>
  */
 public interface INormalizeForIsolatedStorage extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.IO.IsolatedStorage, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.IO.IsolatedStorage, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.IO.IsolatedStorage
+     */
+    public static final String assemblyShortName = "System.IO.IsolatedStorage";
+    /**
+     * Qualified class name: System.IO.IsolatedStorage.INormalizeForIsolatedStorage
+     */
+    public static final String className = "System.IO.IsolatedStorage.INormalizeForIsolatedStorage";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INormalizeForIsolatedStorage}, a cast assert is made to check if types are compatible.
+     */
     public static INormalizeForIsolatedStorage ToINormalizeForIsolatedStorage(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.IO.IsolatedStorage, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.IO.IsolatedStorage.INormalizeForIsolatedStorage, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.IO.IsolatedStorage, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.IO.IsolatedStorage"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INormalizeForIsolatedStorageImplementation(from.getJCOInstance());
     }

@@ -43,12 +43,29 @@ import system.transactions.PreparingEnlistment;
 
 /**
  * The base .NET class managing System.Transactions.IEnlistmentNotification, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IEnlistmentNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IEnlistmentNotification</a>
  */
 public interface IEnlistmentNotification extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
+    public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.IEnlistmentNotification
+     */
+    public static final String className = "System.Transactions.IEnlistmentNotification";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEnlistmentNotification}, a cast assert is made to check if types are compatible.
+     */
     public static IEnlistmentNotification ToIEnlistmentNotification(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Transactions.IEnlistmentNotification, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Transactions.Local"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IEnlistmentNotificationImplementation(from.getJCOInstance());
     }

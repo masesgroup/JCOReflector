@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CrossContextDelegate}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Contexts.CrossContextDelegate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Contexts.CrossContextDelegate</a>
+ */
 public interface ICrossContextDelegate {
     public void Invoke();
 }

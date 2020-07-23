@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.input.ExecutedRoutedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ExecutedRoutedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ExecutedRoutedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ExecutedRoutedEventHandler</a>
+ */
 public interface IExecutedRoutedEventHandler {
     public void Invoke(NetObject sender, ExecutedRoutedEventArgs e);
 }

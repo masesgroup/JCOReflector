@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.design.ExpressionEditor;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.web.ui.design.ExpressionEditorSheet;
@@ -45,12 +46,27 @@ import system.web.ui.design.ExpressionEditorSheet;
 
 /**
  * The base .NET class managing System.Web.UI.Design.RouteValueExpressionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditor</a>
  */
-public class RouteValueExpressionEditor extends NetObject  {
+public class RouteValueExpressionEditor extends ExpressionEditor  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.RouteValueExpressionEditor
+     */
     public static final String className = "System.Web.UI.Design.RouteValueExpressionEditor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class RouteValueExpressionEditor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RouteValueExpressionEditor}, a cast assert is made to check if types are compatible.
+     */
     public static RouteValueExpressionEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RouteValueExpressionEditor(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class RouteValueExpressionEditor extends NetObject  {
 
     // Constructors section
     
-
     public RouteValueExpressionEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -152,16 +169,6 @@ public class RouteValueExpressionEditor extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getExpressionPrefix() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ExpressionPrefix");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.LicenseProvider;
 import system.componentmodel.License;
 import system.componentmodel.LicenseContext;
 
 
 /**
  * The base .NET class managing System.ComponentModel.LicFileLicenseProvider, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.LicFileLicenseProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.LicFileLicenseProvider</a>
  */
-public class LicFileLicenseProvider extends NetObject  {
+public class LicFileLicenseProvider extends LicenseProvider  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.LicFileLicenseProvider
+     */
     public static final String className = "System.ComponentModel.LicFileLicenseProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class LicFileLicenseProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LicFileLicenseProvider}, a cast assert is made to check if types are compatible.
+     */
     public static LicFileLicenseProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LicFileLicenseProvider(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class LicFileLicenseProvider extends NetObject  {
 
     // Constructors section
     
-
     public LicFileLicenseProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file

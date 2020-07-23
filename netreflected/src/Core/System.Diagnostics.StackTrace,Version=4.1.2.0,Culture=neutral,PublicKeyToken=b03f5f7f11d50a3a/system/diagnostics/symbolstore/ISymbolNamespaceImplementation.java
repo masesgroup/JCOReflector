@@ -46,12 +46,27 @@ import system.diagnostics.symbolstore.ISymbolVariableImplementation;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolNamespace, System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolNamespace" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolNamespace</a>
  */
 public class ISymbolNamespaceImplementation extends NetObject implements ISymbolNamespace {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.StackTrace
+     */
     public static final String assemblyShortName = "System.Diagnostics.StackTrace";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolNamespace
+     */
     public static final String className = "System.Diagnostics.SymbolStore.ISymbolNamespace";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolNamespace}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolNamespace ToISymbolNamespace(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISymbolNamespaceImplementation(from.getJCOInstance());

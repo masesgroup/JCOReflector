@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.SamlCondition;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
@@ -47,12 +48,27 @@ import system.xml.XmlDictionaryWriter;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.SamlDoNotCacheCondition, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlDoNotCacheCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlDoNotCacheCondition</a>
  */
-public class SamlDoNotCacheCondition extends NetObject  {
+public class SamlDoNotCacheCondition extends SamlCondition  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.SamlDoNotCacheCondition
+     */
     public static final String className = "System.IdentityModel.Tokens.SamlDoNotCacheCondition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class SamlDoNotCacheCondition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SamlDoNotCacheCondition}, a cast assert is made to check if types are compatible.
+     */
     public static SamlDoNotCacheCondition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SamlDoNotCacheCondition(from.getJCOInstance());
@@ -113,7 +131,6 @@ public class SamlDoNotCacheCondition extends NetObject  {
 
     // Constructors section
     
-
     public SamlDoNotCacheCondition() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,16 +179,6 @@ public class SamlDoNotCacheCondition extends NetObject  {
     
     // Properties section
     
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

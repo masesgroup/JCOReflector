@@ -42,12 +42,27 @@ import system.net.OpenWriteCompletedEventArgs;
 import system.net.IOpenWriteCompletedEventHandler;
 /**
  * The base .NET class managing System.Net.OpenWriteCompletedEventHandler, System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.OpenWriteCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.OpenWriteCompletedEventHandler</a>
  */
 public class OpenWriteCompletedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.WebClient
+     */
     public static final String assemblyShortName = "System.Net.WebClient";
+    /**
+     * Qualified class name: System.Net.OpenWriteCompletedEventHandler
+     */
     public static final String className = "System.Net.OpenWriteCompletedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IOpenWriteCompletedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class OpenWriteCompletedEventHandler extends JCVoidDelegate implements IJ
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, OpenWriteCompletedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, OpenWriteCompletedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class OpenWriteCompletedEventHandler extends JCVoidDelegate implements IJ
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, OpenWriteCompletedEventArgs e) {
     }
 }

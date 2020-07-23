@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.MarshalByValueComponent;
 import system.data.DataRowState;
 import system.data.DataSet;
 import system.data.DataTableReader;
@@ -59,8 +60,6 @@ import system.data.MissingSchemaAction;
 import system.data.XmlWriteMode;
 import system.io.TextWriter;
 import system.xml.XmlWriter;
-import system.componentmodel.IContainer;
-import system.componentmodel.IContainerImplementation;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.data.DataRelationCollection;
@@ -76,12 +75,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataSet</a>
  */
-public class DataSet extends NetObject  {
+public class DataSet extends MarshalByValueComponent  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.DataSet
+     */
     public static final String className = "System.Data.DataSet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -134,7 +148,9 @@ public class DataSet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataSet}, a cast assert is made to check if types are compatible.
+     */
     public static DataSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataSet(from.getJCOInstance());
@@ -142,7 +158,6 @@ public class DataSet extends NetObject  {
 
     // Constructors section
     
-
     public DataSet() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -253,7 +268,7 @@ public class DataSet extends NetObject  {
         }
     }
 
-    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.OutOfMemoryException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.OutOfMemoryException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -275,7 +290,7 @@ public class DataSet extends NetObject  {
         }
     }
 
-    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.OutOfMemoryException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.OutOfMemoryException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -286,7 +301,7 @@ public class DataSet extends NetObject  {
         }
     }
 
-    public XmlReadMode ReadXml(TextReader reader, XmlReadMode mode) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.OverflowException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
+    public XmlReadMode ReadXml(TextReader reader, XmlReadMode mode) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.OverflowException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -319,7 +334,7 @@ public class DataSet extends NetObject  {
         }
     }
 
-    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.OutOfMemoryException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.xml.XmlException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.OutOfMemoryException, system.OverflowException, system.data.DataException, system.ObjectDisposedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -330,23 +345,12 @@ public class DataSet extends NetObject  {
         }
     }
 
-    public XmlReadMode ReadXml(XmlReader reader, XmlReadMode mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.OverflowException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
+    public XmlReadMode ReadXml(XmlReader reader, XmlReadMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.OverflowException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
             return new XmlReadMode(objReadXml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetService(NetType service) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", service == null ? null : service.getJCOInstance());
-            return new NetObject(objGetService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,16 +417,6 @@ public class DataSet extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void EndInit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.data.DataException, system.OverflowException, system.FormatException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -453,11 +447,31 @@ public class DataSet extends NetObject  {
         }
     }
 
+    public void InferXmlSchema(Stream dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.DataException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void InferXmlSchema(TextReader reader, java.lang.String[] nsArray) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.DataException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", reader == null ? null : reader.getJCOInstance(), nsArray);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InferXmlSchema(TextReader dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.DataException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,11 +487,31 @@ public class DataSet extends NetObject  {
         }
     }
 
+    public void InferXmlSchema(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.FormatException, system.OverflowException, system.data.DataException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InferXmlSchema", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void InferXmlSchema(XmlReader reader, java.lang.String[] nsArray) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.RankException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.OverflowException, system.data.DataException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", reader == null ? null : reader.getJCOInstance(), nsArray);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InferXmlSchema(XmlReader dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.RankException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.OverflowException, system.data.DataException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,6 +542,16 @@ public class DataSet extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", reader == null ? null : reader.getJCOInstance(), loadOption == null ? null : loadOption.getJCOInstance(), tables);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Load(IDataReader dupParam0, LoadOption dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.data.sqltypes.SqlNullValueException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -787,16 +831,6 @@ public class DataSet extends NetObject  {
         }
     }
 
-    public boolean getDesignMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("DesignMode");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getEnforceConstraints() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -832,38 +866,6 @@ public class DataSet extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsInitialized");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IContainer getContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISite getSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(ISite Site) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1056,26 +1058,6 @@ public class DataSet extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MergeFailed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

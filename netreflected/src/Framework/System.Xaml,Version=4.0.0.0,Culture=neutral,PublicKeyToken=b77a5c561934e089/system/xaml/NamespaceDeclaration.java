@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Xaml.NamespaceDeclaration, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.NamespaceDeclaration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.NamespaceDeclaration</a>
  */
 public class NamespaceDeclaration extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.NamespaceDeclaration
+     */
     public static final String className = "System.Xaml.NamespaceDeclaration";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class NamespaceDeclaration extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NamespaceDeclaration}, a cast assert is made to check if types are compatible.
+     */
     public static NamespaceDeclaration cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NamespaceDeclaration(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class NamespaceDeclaration extends NetObject  {
 
     // Constructors section
     
+    public NamespaceDeclaration() throws Throwable {
+    }
 
     public NamespaceDeclaration(java.lang.String ns, java.lang.String prefix) throws Throwable {
         try {
@@ -118,6 +137,7 @@ public class NamespaceDeclaration extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

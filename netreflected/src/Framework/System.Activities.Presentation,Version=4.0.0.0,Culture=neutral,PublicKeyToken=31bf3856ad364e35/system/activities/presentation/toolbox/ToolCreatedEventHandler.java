@@ -42,12 +42,27 @@ import system.activities.presentation.toolbox.ToolCreatedEventArgs;
 import system.activities.presentation.toolbox.IToolCreatedEventHandler;
 /**
  * The base .NET class managing System.Activities.Presentation.Toolbox.ToolCreatedEventHandler, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Toolbox.ToolCreatedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Toolbox.ToolCreatedEventHandler</a>
  */
 public class ToolCreatedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Toolbox.ToolCreatedEventHandler
+     */
     public static final String className = "System.Activities.Presentation.Toolbox.ToolCreatedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IToolCreatedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ToolCreatedEventHandler extends JCVoidDelegate implements IJCVoidEv
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ToolCreatedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ToolCreatedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ToolCreatedEventHandler extends JCVoidDelegate implements IJCVoidEv
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ToolCreatedEventArgs e) {
     }
 }

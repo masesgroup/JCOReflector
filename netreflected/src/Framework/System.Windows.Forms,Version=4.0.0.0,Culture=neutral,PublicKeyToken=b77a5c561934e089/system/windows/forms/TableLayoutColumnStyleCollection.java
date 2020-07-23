@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.TableLayoutStyleCollection;
 import system.windows.forms.ColumnStyle;
-import system.windows.forms.TableLayoutStyle;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.TableLayoutColumnStyleCollection, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutColumnStyleCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutColumnStyleCollection</a>
  */
-public class TableLayoutColumnStyleCollection extends NetObject  {
+public class TableLayoutColumnStyleCollection extends TableLayoutStyleCollection  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.TableLayoutColumnStyleCollection
+     */
     public static final String className = "System.Windows.Forms.TableLayoutColumnStyleCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class TableLayoutColumnStyleCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableLayoutColumnStyleCollection}, a cast assert is made to check if types are compatible.
+     */
     public static TableLayoutColumnStyleCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TableLayoutColumnStyleCollection(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class TableLayoutColumnStyleCollection extends NetObject  {
 
     // Constructors section
     
+    public TableLayoutColumnStyleCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -134,31 +155,11 @@ public class TableLayoutColumnStyleCollection extends NetObject  {
         }
     }
 
-    public int Add(TableLayoutStyle style) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("Add", style == null ? null : style.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int IndexOf(ColumnStyle columnStyle) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("IndexOf", columnStyle == null ? null : columnStyle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,30 +185,10 @@ public class TableLayoutColumnStyleCollection extends NetObject  {
         }
     }
 
-    public void RemoveAt(int index) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAt", index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

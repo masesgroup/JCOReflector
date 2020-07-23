@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.GridViewPageEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link GridViewPageEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewPageEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewPageEventHandler</a>
+ */
 public interface IGridViewPageEventHandler {
     public void Invoke(NetObject sender, GridViewPageEventArgs e);
 }

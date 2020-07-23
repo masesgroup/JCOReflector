@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Activities.DurableInstancing.InstanceCompletionAction, System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DurableInstancing.InstanceCompletionAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DurableInstancing.InstanceCompletionAction</a>
  */
 public class InstanceCompletionAction extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.DurableInstancing
+     */
     public static final String assemblyShortName = "System.Activities.DurableInstancing";
+    /**
+     * Qualified class name: System.Activities.DurableInstancing.InstanceCompletionAction
+     */
     public static final String className = "System.Activities.DurableInstancing.InstanceCompletionAction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

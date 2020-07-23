@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.constrainedexecution.CriticalFinalizerObject;
 import system.threading.ParameterizedThreadStart;
 import system.threading.ThreadStart;
 import system.TimeSpan;
@@ -61,12 +62,27 @@ import system.threading.ThreadState;
 
 /**
  * The base .NET class managing System.Threading.Thread, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Thread" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Thread</a>
  */
-public class Thread extends NetObject  {
+public class Thread extends CriticalFinalizerObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.Thread
+     */
     public static final String className = "System.Threading.Thread";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -119,7 +135,9 @@ public class Thread extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Thread}, a cast assert is made to check if types are compatible.
+     */
     public static Thread cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Thread(from.getJCOInstance());
@@ -127,6 +145,8 @@ public class Thread extends NetObject  {
 
     // Constructors section
     
+    public Thread() throws Throwable {
+    }
 
     public Thread(ParameterizedThreadStart start) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -167,6 +187,7 @@ public class Thread extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -304,6 +325,16 @@ public class Thread extends NetObject  {
         try {
             JCObject objGetCompressedStack = (JCObject)classInstance.Invoke("GetCompressedStack");
             return new CompressedStack(objGetCompressedStack);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Abort() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,22 +646,22 @@ public class Thread extends NetObject  {
         }
     }
 
-    public static IPrincipal getCurrentPrincipal() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IPrincipal getCurrentPrincipal() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentPrincipal");
+            JCObject val = (JCObject)classInstance.Get("CurrentPrincipal");
             return new IPrincipalImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCurrentPrincipal(IPrincipal CurrentPrincipal) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCurrentPrincipal(IPrincipal CurrentPrincipal) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CurrentPrincipal", CurrentPrincipal == null ? null : CurrentPrincipal.getJCOInstance());
+            classInstance.Set("CurrentPrincipal", CurrentPrincipal == null ? null : CurrentPrincipal.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,11 +719,11 @@ public class Thread extends NetObject  {
         }
     }
 
-    public static Thread getCurrentThread() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Thread getCurrentThread() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentThread");
+            JCObject val = (JCObject)classInstance.Get("CurrentThread");
             return new Thread(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

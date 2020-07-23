@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Windows.PropertyPath, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.PropertyPath" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.PropertyPath</a>
  */
 public class PropertyPath extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.PropertyPath
+     */
     public static final String className = "System.Windows.PropertyPath";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class PropertyPath extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyPath}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyPath cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyPath(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class PropertyPath extends NetObject  {
 
     // Constructors section
     
+    public PropertyPath() throws Throwable {
+    }
 
     public PropertyPath(NetObject parameter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         try {
@@ -128,6 +147,7 @@ public class PropertyPath extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

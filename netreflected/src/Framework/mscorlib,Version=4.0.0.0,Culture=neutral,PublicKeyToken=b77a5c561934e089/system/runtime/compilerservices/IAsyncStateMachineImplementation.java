@@ -44,12 +44,27 @@ import system.runtime.compilerservices.IAsyncStateMachineImplementation;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.IAsyncStateMachine, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IAsyncStateMachine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IAsyncStateMachine</a>
  */
 public class IAsyncStateMachineImplementation extends NetObject implements IAsyncStateMachine {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.IAsyncStateMachine
+     */
     public static final String className = "System.Runtime.CompilerServices.IAsyncStateMachine";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAsyncStateMachine}, a cast assert is made to check if types are compatible.
+     */
     public static IAsyncStateMachine ToIAsyncStateMachine(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IAsyncStateMachineImplementation(from.getJCOInstance());

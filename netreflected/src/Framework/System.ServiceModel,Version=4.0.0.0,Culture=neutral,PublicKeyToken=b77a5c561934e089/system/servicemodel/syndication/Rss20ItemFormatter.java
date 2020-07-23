@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.syndication.SyndicationItemFormatter;
 import system.servicemodel.syndication.SyndicationItem;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
@@ -45,12 +46,27 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.ServiceModel.Syndication.Rss20ItemFormatter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.Rss20ItemFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.Rss20ItemFormatter</a>
  */
-public class Rss20ItemFormatter extends NetObject  {
+public class Rss20ItemFormatter extends SyndicationItemFormatter  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Syndication.Rss20ItemFormatter
+     */
     public static final String className = "System.ServiceModel.Syndication.Rss20ItemFormatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class Rss20ItemFormatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rss20ItemFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static Rss20ItemFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Rss20ItemFormatter(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class Rss20ItemFormatter extends NetObject  {
 
     // Constructors section
     
-
     public Rss20ItemFormatter() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -245,27 +262,6 @@ public class Rss20ItemFormatter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerializeExtensionsAsAtom", SerializeExtensionsAsAtom);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SyndicationItem getItem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Item");
-            return new SyndicationItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Version");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

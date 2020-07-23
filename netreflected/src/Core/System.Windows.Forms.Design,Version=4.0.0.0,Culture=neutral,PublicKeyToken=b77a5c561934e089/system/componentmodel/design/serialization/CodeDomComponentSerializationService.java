@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.serialization.ComponentSerializationService;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.collections.ICollection;
@@ -51,12 +52,27 @@ import system.componentmodel.MemberDescriptor;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService</a>
  */
-public class CodeDomComponentSerializationService extends NetObject  {
+public class CodeDomComponentSerializationService extends ComponentSerializationService  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +125,9 @@ public class CodeDomComponentSerializationService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeDomComponentSerializationService}, a cast assert is made to check if types are compatible.
+     */
     public static CodeDomComponentSerializationService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeDomComponentSerializationService(from.getJCOInstance());
@@ -117,7 +135,6 @@ public class CodeDomComponentSerializationService extends NetObject  {
 
     // Constructors section
     
-
     public CodeDomComponentSerializationService() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,26 +198,6 @@ public class CodeDomComponentSerializationService extends NetObject  {
         try {
             JCObject objLoadStore = (JCObject)classInstance.Invoke("LoadStore", stream == null ? null : stream.getJCOInstance());
             return new SerializationStore(objLoadStore);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DeserializeTo(SerializationStore store, IContainer container) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance(), validateRecycledTypes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

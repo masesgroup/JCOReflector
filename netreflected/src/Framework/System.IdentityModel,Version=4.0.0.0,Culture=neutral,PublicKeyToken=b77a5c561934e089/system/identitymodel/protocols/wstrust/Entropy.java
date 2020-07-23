@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.identitymodel.tokens.EncryptingCredentials;
 import system.identitymodel.protocols.wstrust.ProtectedKey;
+import system.identitymodel.tokens.EncryptingCredentials;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.Entropy, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.Entropy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.Entropy</a>
  */
-public class Entropy extends NetObject  {
+public class Entropy extends ProtectedKey  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Protocols.WSTrust.Entropy
+     */
     public static final String className = "System.IdentityModel.Protocols.WSTrust.Entropy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Entropy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Entropy}, a cast assert is made to check if types are compatible.
+     */
     public static Entropy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Entropy(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class Entropy extends NetObject  {
 
     // Constructors section
     
+    public Entropy() throws Throwable {
+    }
 
     public Entropy(byte[] secret) throws Throwable {
         try {
@@ -152,43 +171,14 @@ public class Entropy extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public byte[] GetKeyBytes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetKeyBytes");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexGetKeyBytes = 0; indexGetKeyBytes < resultingArrayList.size(); indexGetKeyBytes++ ) {
-				resultingArray[indexGetKeyBytes] = (byte)resultingArrayList.get(indexGetKeyBytes);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public EncryptingCredentials getWrappingCredentials() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WrappingCredentials");
-            return new EncryptingCredentials(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

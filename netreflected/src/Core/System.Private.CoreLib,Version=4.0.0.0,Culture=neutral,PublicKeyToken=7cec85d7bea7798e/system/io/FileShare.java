@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.IO.FileShare, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileShare" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileShare</a>
  */
 public class FileShare extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.IO.FileShare
+     */
     public static final String className = "System.IO.FileShare";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class FileShare extends NetObject  {
 
     // Flags management section
 
-    public FileShare add(FileShare val) throws Throwable {
+    public final FileShare add(FileShare val) throws Throwable {
         return new FileShare(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public FileShare remove(FileShare val) throws Throwable {
+    public final FileShare remove(FileShare val) throws Throwable {
         return new FileShare(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(FileShare val) throws Throwable {
+    public final boolean is(FileShare val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(FileShare val) throws Throwable {
+    public final boolean has(FileShare val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

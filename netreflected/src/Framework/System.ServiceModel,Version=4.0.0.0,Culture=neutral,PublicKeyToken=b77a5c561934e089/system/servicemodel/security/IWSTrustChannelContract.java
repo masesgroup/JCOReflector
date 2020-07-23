@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.servicemodel.security.IWSTrustContract;
+import system.servicemodel.security.IWSTrustContractImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.identitymodel.protocols.wstrust.RequestSecurityToken;
@@ -48,12 +50,29 @@ import system.identitymodel.tokens.SecurityToken;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.IWSTrustChannelContract, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract</a>
  */
-public interface IWSTrustChannelContract extends IJCOBridgeReflected {
-
+public interface IWSTrustChannelContract extends IJCOBridgeReflected, IWSTrustContract {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
+    public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.IWSTrustChannelContract
+     */
+    public static final String className = "System.ServiceModel.Security.IWSTrustChannelContract";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWSTrustChannelContract}, a cast assert is made to check if types are compatible.
+     */
     public static IWSTrustChannelContract ToIWSTrustChannelContract(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ServiceModel.Security.IWSTrustChannelContract, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ServiceModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IWSTrustChannelContractImplementation(from.getJCOInstance());
     }
@@ -98,19 +117,15 @@ public interface IWSTrustChannelContract extends IJCOBridgeReflected {
     
     public IAsyncResult BeginCancel(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginCancel(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
     public IAsyncResult BeginIssue(RequestSecurityToken request, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
-    public IAsyncResult BeginIssue(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
     public IAsyncResult BeginRenew(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginRenew(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
     public IAsyncResult BeginValidate(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginValidate(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable;
 
     public RequestSecurityTokenResponse Cancel(RequestSecurityToken request) throws Throwable;
 
@@ -120,21 +135,13 @@ public interface IWSTrustChannelContract extends IJCOBridgeReflected {
 
     public SecurityToken Issue(RequestSecurityToken request) throws Throwable;
 
-    public Message Cancel(Message message) throws Throwable;
 
-    public Message EndCancel(IAsyncResult asyncResult) throws Throwable;
 
-    public Message EndIssue(IAsyncResult asyncResult) throws Throwable;
 
-    public Message EndRenew(IAsyncResult asyncResult) throws Throwable;
 
-    public Message EndValidate(IAsyncResult asyncResult) throws Throwable;
 
-    public Message Issue(Message message) throws Throwable;
 
-    public Message Renew(Message message) throws Throwable;
 
-    public Message Validate(Message message) throws Throwable;
 
 
     

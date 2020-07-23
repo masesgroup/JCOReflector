@@ -42,12 +42,29 @@ import system.collections.DictionaryEntry;
 
 /**
  * The base .NET class managing System.Collections.IDictionaryEnumerator, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IDictionaryEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IDictionaryEnumerator</a>
  */
-public interface IDictionaryEnumerator extends IJCOBridgeReflected {
-
+public interface IDictionaryEnumerator extends IJCOBridgeReflected, IEnumerator {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Collections.IDictionaryEnumerator
+     */
+    public static final String className = "System.Collections.IDictionaryEnumerator";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDictionaryEnumerator}, a cast assert is made to check if types are compatible.
+     */
     public static IDictionaryEnumerator ToIDictionaryEnumerator(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Collections.IDictionaryEnumerator, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDictionaryEnumeratorImplementation(from.getJCOInstance());
     }
@@ -90,17 +107,13 @@ public interface IDictionaryEnumerator extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean MoveNext() throws Throwable;
 
-    public void Reset() throws Throwable;
 
 
     
     // Properties section
     
     public DictionaryEntry getEntry() throws Throwable;
-
-    public NetObject getCurrent() throws Throwable;
 
     public NetObject getKey() throws Throwable;
 

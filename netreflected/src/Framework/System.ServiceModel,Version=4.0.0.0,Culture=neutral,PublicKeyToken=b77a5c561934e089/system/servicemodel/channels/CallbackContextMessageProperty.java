@@ -48,12 +48,27 @@ import system.servicemodel.channels.IMessagePropertyImplementation;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.CallbackContextMessageProperty, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.CallbackContextMessageProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.CallbackContextMessageProperty</a>
  */
 public class CallbackContextMessageProperty extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.CallbackContextMessageProperty
+     */
     public static final String className = "System.ServiceModel.Channels.CallbackContextMessageProperty";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class CallbackContextMessageProperty extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CallbackContextMessageProperty}, a cast assert is made to check if types are compatible.
+     */
     public static CallbackContextMessageProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CallbackContextMessageProperty(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class CallbackContextMessageProperty extends NetObject  {
 
     // Constructors section
     
+    public CallbackContextMessageProperty() throws Throwable {
+    }
 
     public CallbackContextMessageProperty(EndpointAddress callbackAddress) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -124,6 +143,7 @@ public class CallbackContextMessageProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -186,11 +206,11 @@ public class CallbackContextMessageProperty extends NetObject  {
         }
     }
 
-    public static java.lang.String getName() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Name");
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

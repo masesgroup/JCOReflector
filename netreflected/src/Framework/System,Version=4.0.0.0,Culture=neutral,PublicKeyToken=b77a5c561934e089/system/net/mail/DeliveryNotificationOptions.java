@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.Mail.DeliveryNotificationOptions, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.DeliveryNotificationOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.DeliveryNotificationOptions</a>
  */
 public class DeliveryNotificationOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.Mail.DeliveryNotificationOptions
+     */
     public static final String className = "System.Net.Mail.DeliveryNotificationOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class DeliveryNotificationOptions extends NetObject  {
 
     // Flags management section
 
-    public DeliveryNotificationOptions add(DeliveryNotificationOptions val) throws Throwable {
+    public final DeliveryNotificationOptions add(DeliveryNotificationOptions val) throws Throwable {
         return new DeliveryNotificationOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public DeliveryNotificationOptions remove(DeliveryNotificationOptions val) throws Throwable {
+    public final DeliveryNotificationOptions remove(DeliveryNotificationOptions val) throws Throwable {
         return new DeliveryNotificationOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(DeliveryNotificationOptions val) throws Throwable {
+    public final boolean is(DeliveryNotificationOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(DeliveryNotificationOptions val) throws Throwable {
+    public final boolean has(DeliveryNotificationOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

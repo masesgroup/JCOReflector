@@ -43,12 +43,27 @@ import system.net.http.headers.EntityTagHeaderValue;
 
 /**
  * The base .NET class managing System.Net.Http.Headers.EntityTagHeaderValue, System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.EntityTagHeaderValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.EntityTagHeaderValue</a>
  */
 public class EntityTagHeaderValue extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Http
+     */
     public static final String assemblyShortName = "System.Net.Http";
+    /**
+     * Qualified class name: System.Net.Http.Headers.EntityTagHeaderValue
+     */
     public static final String className = "System.Net.Http.Headers.EntityTagHeaderValue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class EntityTagHeaderValue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityTagHeaderValue}, a cast assert is made to check if types are compatible.
+     */
     public static EntityTagHeaderValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EntityTagHeaderValue(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class EntityTagHeaderValue extends NetObject  {
 
     // Constructors section
     
+    public EntityTagHeaderValue() throws Throwable {
+    }
 
     public EntityTagHeaderValue(java.lang.String tag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
@@ -129,6 +148,7 @@ public class EntityTagHeaderValue extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -159,11 +179,11 @@ public class EntityTagHeaderValue extends NetObject  {
         }
     }
 
-    public static EntityTagHeaderValue getAny() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public EntityTagHeaderValue getAny() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Any");
+            JCObject val = (JCObject)classInstance.Get("Any");
             return new EntityTagHeaderValue(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

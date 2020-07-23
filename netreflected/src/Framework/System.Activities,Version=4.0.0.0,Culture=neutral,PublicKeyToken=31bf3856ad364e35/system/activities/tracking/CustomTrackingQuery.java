@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.tracking.TrackingQuery;
 
 
 /**
  * The base .NET class managing System.Activities.Tracking.CustomTrackingQuery, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.CustomTrackingQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.CustomTrackingQuery</a>
  */
-public class CustomTrackingQuery extends NetObject  {
+public class CustomTrackingQuery extends TrackingQuery  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Tracking.CustomTrackingQuery
+     */
     public static final String className = "System.Activities.Tracking.CustomTrackingQuery";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class CustomTrackingQuery extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CustomTrackingQuery}, a cast assert is made to check if types are compatible.
+     */
     public static CustomTrackingQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CustomTrackingQuery(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class CustomTrackingQuery extends NetObject  {
 
     // Constructors section
     
-
     public CustomTrackingQuery() throws Throwable {
         try {
             // add reference to assemblyName.dll file

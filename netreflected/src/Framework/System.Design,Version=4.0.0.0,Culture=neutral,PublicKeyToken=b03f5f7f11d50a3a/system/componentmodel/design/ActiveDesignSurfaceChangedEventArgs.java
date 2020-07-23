@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.design.DesignSurface;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ActiveDesignSurfaceChangedEventArgs, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ActiveDesignSurfaceChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ActiveDesignSurfaceChangedEventArgs</a>
  */
-public class ActiveDesignSurfaceChangedEventArgs extends NetObject  {
+public class ActiveDesignSurfaceChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ActiveDesignSurfaceChangedEventArgs
+     */
     public static final String className = "System.ComponentModel.Design.ActiveDesignSurfaceChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ActiveDesignSurfaceChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDesignSurfaceChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ActiveDesignSurfaceChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActiveDesignSurfaceChangedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ActiveDesignSurfaceChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ActiveDesignSurfaceChangedEventArgs() throws Throwable {
+    }
 
     public ActiveDesignSurfaceChangedEventArgs(DesignSurface oldSurface, DesignSurface newSurface) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class ActiveDesignSurfaceChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

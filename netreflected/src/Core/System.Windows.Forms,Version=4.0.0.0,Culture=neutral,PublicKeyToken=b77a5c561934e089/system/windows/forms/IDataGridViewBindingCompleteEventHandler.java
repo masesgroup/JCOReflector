@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewBindingCompleteEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewBindingCompleteEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBindingCompleteEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBindingCompleteEventHandler</a>
+ */
 public interface IDataGridViewBindingCompleteEventHandler {
     public void Invoke(NetObject sender, DataGridViewBindingCompleteEventArgs e);
 }

@@ -38,22 +38,37 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.layout.ArrangedElementCollection;
 import system.windows.forms.ToolStrip;
 import system.windows.forms.ToolStripItem;
 import system.drawing.Image;
 import system.EventHandler;
 import system.windows.forms.ToolStripItemCollection;
-import system.Array;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.ToolStripItemCollection, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripItemCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripItemCollection</a>
  */
-public class ToolStripItemCollection extends NetObject  {
+public class ToolStripItemCollection extends ArrangedElementCollection  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ToolStripItemCollection
+     */
     public static final String className = "System.Windows.Forms.ToolStripItemCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ToolStripItemCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripItemCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ToolStripItemCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolStripItemCollection(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class ToolStripItemCollection extends NetObject  {
 
     // Constructors section
     
+    public ToolStripItemCollection() throws Throwable {
+    }
 
     public ToolStripItemCollection(ToolStrip owner, ToolStripItem[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.RankException, system.MulticastNotSupportedException {
         try {
@@ -124,6 +143,7 @@ public class ToolStripItemCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -270,16 +290,6 @@ public class ToolStripItemCollection extends NetObject  {
         }
     }
 
-    public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void CopyTo(ToolStripItem[] array, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -334,26 +344,6 @@ public class ToolStripItemCollection extends NetObject  {
     
     // Properties section
     
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

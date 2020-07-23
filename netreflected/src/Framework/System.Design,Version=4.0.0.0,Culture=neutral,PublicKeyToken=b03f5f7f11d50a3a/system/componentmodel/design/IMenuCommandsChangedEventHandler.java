@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.design.MenuCommandsChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MenuCommandsChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.MenuCommandsChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.MenuCommandsChangedEventHandler</a>
+ */
 public interface IMenuCommandsChangedEventHandler {
     public void Invoke(NetObject sender, MenuCommandsChangedEventArgs e);
 }

@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.ISession;
+import system.servicemodel.channels.ISessionImplementation;
 import system.servicemodel.EndpointIdentity;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.ISecuritySession, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.ISecuritySession" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.ISecuritySession</a>
  */
 public class ISecuritySessionImplementation extends NetObject implements ISecuritySession {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.ISecuritySession
+     */
     public static final String className = "System.ServiceModel.Security.ISecuritySession";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class ISecuritySessionImplementation extends NetObject implements ISecuri
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISecuritySession}, a cast assert is made to check if types are compatible.
+     */
     public static ISecuritySession ToISecuritySession(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISecuritySessionImplementation(from.getJCOInstance());

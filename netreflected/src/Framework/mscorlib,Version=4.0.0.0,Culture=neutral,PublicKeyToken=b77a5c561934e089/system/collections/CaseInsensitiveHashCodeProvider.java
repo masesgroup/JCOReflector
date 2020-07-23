@@ -44,12 +44,27 @@ import system.collections.CaseInsensitiveHashCodeProvider;
 
 /**
  * The base .NET class managing System.Collections.CaseInsensitiveHashCodeProvider, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.CaseInsensitiveHashCodeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.CaseInsensitiveHashCodeProvider</a>
  */
 public class CaseInsensitiveHashCodeProvider extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Collections.CaseInsensitiveHashCodeProvider
+     */
     public static final String className = "System.Collections.CaseInsensitiveHashCodeProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CaseInsensitiveHashCodeProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CaseInsensitiveHashCodeProvider}, a cast assert is made to check if types are compatible.
+     */
     public static CaseInsensitiveHashCodeProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CaseInsensitiveHashCodeProvider(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class CaseInsensitiveHashCodeProvider extends NetObject  {
 
     // Constructors section
     
-
     public CaseInsensitiveHashCodeProvider() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -149,22 +165,22 @@ public class CaseInsensitiveHashCodeProvider extends NetObject  {
     
     // Properties section
     
-    public static CaseInsensitiveHashCodeProvider getDefault() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CaseInsensitiveHashCodeProvider getDefault() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new CaseInsensitiveHashCodeProvider(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static CaseInsensitiveHashCodeProvider getDefaultInvariant() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CaseInsensitiveHashCodeProvider getDefaultInvariant() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultInvariant");
+            JCObject val = (JCObject)classInstance.Get("DefaultInvariant");
             return new CaseInsensitiveHashCodeProvider(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

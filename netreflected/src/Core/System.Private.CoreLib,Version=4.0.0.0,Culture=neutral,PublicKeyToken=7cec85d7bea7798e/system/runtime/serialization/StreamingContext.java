@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.runtime.serialization.StreamingContextStates;
 
 
 /**
  * The base .NET class managing System.Runtime.Serialization.StreamingContext, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.StreamingContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.StreamingContext</a>
  */
-public class StreamingContext extends NetObject  {
+public class StreamingContext extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.StreamingContext
+     */
     public static final String className = "System.Runtime.Serialization.StreamingContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class StreamingContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StreamingContext}, a cast assert is made to check if types are compatible.
+     */
     public static StreamingContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StreamingContext(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class StreamingContext extends NetObject  {
 
     // Constructors section
     
+    public StreamingContext() throws Throwable {
+    }
 
     public StreamingContext(StreamingContextStates state) throws Throwable {
         try {
@@ -129,6 +149,7 @@ public class StreamingContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

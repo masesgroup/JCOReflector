@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.data.sqltypes.SqlCompareOptions;
 import system.data.sqltypes.SqlString;
 import system.data.sqltypes.SqlBoolean;
@@ -60,12 +61,27 @@ import system.globalization.CultureInfo;
 
 /**
  * The base .NET class managing System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlString" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlString</a>
  */
-public class SqlString extends NetObject  {
+public class SqlString extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlTypes.SqlString
+     */
     public static final String className = "System.Data.SqlTypes.SqlString";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -118,7 +134,9 @@ public class SqlString extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlString}, a cast assert is made to check if types are compatible.
+     */
     public static SqlString cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlString(from.getJCOInstance());
@@ -126,6 +144,8 @@ public class SqlString extends NetObject  {
 
     // Constructors section
     
+    public SqlString() throws Throwable {
+    }
 
     public SqlString(int lcid, SqlCompareOptions compareOptions, byte[] data) throws Throwable, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         try {
@@ -196,6 +216,7 @@ public class SqlString extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

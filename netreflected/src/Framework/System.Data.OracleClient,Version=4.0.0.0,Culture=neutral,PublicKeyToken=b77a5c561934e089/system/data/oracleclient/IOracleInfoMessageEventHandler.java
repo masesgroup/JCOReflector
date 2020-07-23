@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.oracleclient.OracleInfoMessageEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link OracleInfoMessageEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleInfoMessageEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleInfoMessageEventHandler</a>
+ */
 public interface IOracleInfoMessageEventHandler {
     public void Invoke(NetObject sender, OracleInfoMessageEventArgs e);
 }

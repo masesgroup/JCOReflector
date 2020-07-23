@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Windows.Controls.Primitives.GeneratorPosition, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.GeneratorPosition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.GeneratorPosition</a>
  */
-public class GeneratorPosition extends NetObject  {
+public class GeneratorPosition extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.Primitives.GeneratorPosition
+     */
     public static final String className = "System.Windows.Controls.Primitives.GeneratorPosition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class GeneratorPosition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GeneratorPosition}, a cast assert is made to check if types are compatible.
+     */
     public static GeneratorPosition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GeneratorPosition(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class GeneratorPosition extends NetObject  {
 
     // Constructors section
     
+    public GeneratorPosition() throws Throwable {
+    }
 
     public GeneratorPosition(int index, int offset) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class GeneratorPosition extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

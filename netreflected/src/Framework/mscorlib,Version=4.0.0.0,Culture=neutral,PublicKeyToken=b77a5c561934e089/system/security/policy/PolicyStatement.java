@@ -47,12 +47,27 @@ import system.security.policy.PolicyLevel;
 
 /**
  * The base .NET class managing System.Security.Policy.PolicyStatement, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.PolicyStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.PolicyStatement</a>
  */
 public class PolicyStatement extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.PolicyStatement
+     */
     public static final String className = "System.Security.Policy.PolicyStatement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class PolicyStatement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PolicyStatement}, a cast assert is made to check if types are compatible.
+     */
     public static PolicyStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PolicyStatement(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class PolicyStatement extends NetObject  {
 
     // Constructors section
     
+    public PolicyStatement() throws Throwable {
+    }
 
     public PolicyStatement(PermissionSet permSet) throws Throwable, system.ArgumentException {
         try {
@@ -133,6 +152,7 @@ public class PolicyStatement extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

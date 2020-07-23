@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.drawing.Graphics;
 import system.windows.forms.ToolStrip;
 import system.drawing.Rectangle;
@@ -46,12 +47,27 @@ import system.drawing.Color;
 
 /**
  * The base .NET class managing System.Windows.Forms.ToolStripRenderEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripRenderEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripRenderEventArgs</a>
  */
-public class ToolStripRenderEventArgs extends NetObject  {
+public class ToolStripRenderEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ToolStripRenderEventArgs
+     */
     public static final String className = "System.Windows.Forms.ToolStripRenderEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class ToolStripRenderEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripRenderEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ToolStripRenderEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolStripRenderEventArgs(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class ToolStripRenderEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ToolStripRenderEventArgs() throws Throwable {
+    }
 
     public ToolStripRenderEventArgs(Graphics g, ToolStrip toolStrip) throws Throwable {
         try {
@@ -132,6 +152,7 @@ public class ToolStripRenderEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

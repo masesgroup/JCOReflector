@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.data.IDataReader;
 import system.data.IDataReaderImplementation;
 import system.data.CommandBehavior;
@@ -55,12 +57,27 @@ import system.data.UpdateRowSource;
 
 /**
  * The base .NET class managing System.Data.IDbCommand, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbCommand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbCommand</a>
  */
 public class IDbCommandImplementation extends NetObject implements IDbCommand {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.IDbCommand
+     */
     public static final String className = "System.Data.IDbCommand";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +125,9 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDbCommand}, a cast assert is made to check if types are compatible.
+     */
     public static IDbCommand ToIDbCommand(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDbCommandImplementation(from.getJCOInstance());

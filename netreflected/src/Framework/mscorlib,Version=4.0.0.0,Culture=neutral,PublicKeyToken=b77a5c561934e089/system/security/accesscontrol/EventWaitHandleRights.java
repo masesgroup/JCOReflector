@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.AccessControl.EventWaitHandleRights, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.EventWaitHandleRights" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.EventWaitHandleRights</a>
  */
 public class EventWaitHandleRights extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.EventWaitHandleRights
+     */
     public static final String className = "System.Security.AccessControl.EventWaitHandleRights";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class EventWaitHandleRights extends NetObject  {
 
     // Flags management section
 
-    public EventWaitHandleRights add(EventWaitHandleRights val) throws Throwable {
+    public final EventWaitHandleRights add(EventWaitHandleRights val) throws Throwable {
         return new EventWaitHandleRights(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public EventWaitHandleRights remove(EventWaitHandleRights val) throws Throwable {
+    public final EventWaitHandleRights remove(EventWaitHandleRights val) throws Throwable {
         return new EventWaitHandleRights(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(EventWaitHandleRights val) throws Throwable {
+    public final boolean is(EventWaitHandleRights val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(EventWaitHandleRights val) throws Throwable {
+    public final boolean has(EventWaitHandleRights val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

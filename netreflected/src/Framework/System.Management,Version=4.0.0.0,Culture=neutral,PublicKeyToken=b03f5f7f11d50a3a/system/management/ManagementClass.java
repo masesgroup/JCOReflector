@@ -38,42 +38,43 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.management.ManagementObject;
 import system.management.ManagementPath;
 import system.management.ObjectGetOptions;
 import system.management.ManagementScope;
-import system.management.ManagementBaseObject;
-import system.management.ComparisonSettings;
 import system.management.CodeLanguage;
 import system.codedom.CodeTypeDeclaration;
-import system.management.InvokeMethodOptions;
 import system.management.ManagementClass;
-import system.management.ManagementObject;
 import system.management.ManagementObjectCollection;
 import system.management.EnumerationOptions;
-import system.management.PutOptions;
-import system.runtime.remoting.ObjRef;
-import system.management.TextFormat;
 import system.management.ManagementOperationObserver;
-import system.management.DeleteOptions;
 import system.collections.specialized.StringCollection;
-import system.componentmodel.IContainer;
-import system.componentmodel.IContainerImplementation;
-import system.componentmodel.ISite;
-import system.componentmodel.ISiteImplementation;
 import system.management.MethodDataCollection;
-import system.management.PropertyDataCollection;
-import system.management.QualifierDataCollection;
-import system.EventHandler;
 
 
 /**
  * The base .NET class managing System.Management.ManagementClass, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementClass" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementClass</a>
  */
-public class ManagementClass extends NetObject  {
+public class ManagementClass extends ManagementObject  {
+    /**
+     * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Management
+     */
     public static final String assemblyShortName = "System.Management";
+    /**
+     * Qualified class name: System.Management.ManagementClass
+     */
     public static final String className = "System.Management.ManagementClass";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -126,7 +127,9 @@ public class ManagementClass extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManagementClass}, a cast assert is made to check if types are compatible.
+     */
     public static ManagementClass cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ManagementClass(from.getJCOInstance());
@@ -134,7 +137,6 @@ public class ManagementClass extends NetObject  {
 
     // Constructors section
     
-
     public ManagementClass() throws Throwable, system.management.ManagementException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -209,16 +211,6 @@ public class ManagementClass extends NetObject  {
     
     // Methods section
     
-    public boolean CompareTo(ManagementBaseObject otherObject, ComparisonSettings settings) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.management.ManagementException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CompareTo", otherObject == null ? null : otherObject.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean GetStronglyTypedClassCode(CodeLanguage lang, java.lang.String filePath, java.lang.String classNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.RankException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -235,28 +227,6 @@ public class ManagementClass extends NetObject  {
         try {
             JCObject objGetStronglyTypedClassCode = (JCObject)classInstance.Invoke("GetStronglyTypedClassCode", includeSystemClassInClassDef, systemPropertyClass);
             return new CodeTypeDeclaration(objGetStronglyTypedClassCode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementBaseObject GetMethodParameters(java.lang.String methodName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.management.ManagementException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetMethodParameters = (JCObject)classInstance.Invoke("GetMethodParameters", methodName);
-            return new ManagementBaseObject(objGetMethodParameters);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementBaseObject InvokeMethod(java.lang.String methodName, ManagementBaseObject inParameters, InvokeMethodOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInvokeMethod = (JCObject)classInstance.Invoke("InvokeMethod", methodName, inParameters == null ? null : inParameters.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            return new ManagementBaseObject(objInvokeMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,39 +271,6 @@ public class ManagementClass extends NetObject  {
         try {
             JCObject objGetInstances = (JCObject)classInstance.Invoke("GetInstances", options == null ? null : options.getJCOInstance());
             return new ManagementObjectCollection(objGetInstances);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementObjectCollection GetRelated() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRelated = (JCObject)classInstance.Invoke("GetRelated");
-            return new ManagementObjectCollection(objGetRelated);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementObjectCollection GetRelated(java.lang.String relatedClass) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRelated = (JCObject)classInstance.Invoke("GetRelated", relatedClass);
-            return new ManagementObjectCollection(objGetRelated);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementObjectCollection GetRelated(java.lang.String relatedClass, java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String relatedQualifier, java.lang.String relatedRole, java.lang.String thisRole, boolean classDefinitionsOnly, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRelated = (JCObject)classInstance.Invoke("GetRelated", relatedClass, relationshipClass, relationshipQualifier, relatedQualifier, relatedRole, thisRole, classDefinitionsOnly, options == null ? null : options.getJCOInstance());
-            return new ManagementObjectCollection(objGetRelated);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,39 +342,6 @@ public class ManagementClass extends NetObject  {
         }
     }
 
-    public ManagementObjectCollection GetRelationships() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRelationships = (JCObject)classInstance.Invoke("GetRelationships");
-            return new ManagementObjectCollection(objGetRelationships);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementObjectCollection GetRelationships(java.lang.String relationshipClass) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRelationships = (JCObject)classInstance.Invoke("GetRelationships", relationshipClass);
-            return new ManagementObjectCollection(objGetRelationships);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementObjectCollection GetRelationships(java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String thisRole, boolean classDefinitionsOnly, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetRelationships = (JCObject)classInstance.Invoke("GetRelationships", relationshipClass, relationshipQualifier, thisRole, classDefinitionsOnly, options == null ? null : options.getJCOInstance());
-            return new ManagementObjectCollection(objGetRelationships);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ManagementObjectCollection GetSubclasses() throws Throwable, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -460,275 +364,12 @@ public class ManagementClass extends NetObject  {
         }
     }
 
-    public ManagementPath CopyTo(ManagementPath path) throws Throwable, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.AccessViolationException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", path == null ? null : path.getJCOInstance());
-            return new ManagementPath(objCopyTo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementPath CopyTo(ManagementPath path, PutOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.AccessViolationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", path == null ? null : path.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            return new ManagementPath(objCopyTo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementPath CopyTo(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.AccessViolationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", path);
-            return new ManagementPath(objCopyTo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementPath CopyTo(java.lang.String path, PutOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.AccessViolationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", path, options == null ? null : options.getJCOInstance());
-            return new ManagementPath(objCopyTo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementPath Put() throws Throwable, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.AccessViolationException, system.management.ManagementException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPut = (JCObject)classInstance.Invoke("Put");
-            return new ManagementPath(objPut);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementPath Put(PutOptions options) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.management.ManagementException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPut = (JCObject)classInstance.Invoke("Put", options == null ? null : options.getJCOInstance());
-            return new ManagementPath(objPut);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Clone() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.management.ManagementException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objClone = (JCObject)classInstance.Invoke("Clone");
             return new NetObject(objClone);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetPropertyQualifierValue(java.lang.String propertyName, java.lang.String qualifierName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.management.ManagementException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetPropertyQualifierValue = (JCObject)classInstance.Invoke("GetPropertyQualifierValue", propertyName, qualifierName);
-            return new NetObject(objGetPropertyQualifierValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetPropertyValue(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.management.ManagementException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", propertyName);
-            return new NetObject(objGetPropertyValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetQualifierValue(java.lang.String qualifierName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetQualifierValue = (JCObject)classInstance.Invoke("GetQualifierValue", qualifierName);
-            return new NetObject(objGetQualifierValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InvokeMethod(java.lang.String methodName, NetObject[] args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInvokeMethod = (JCObject)classInstance.Invoke("InvokeMethod", methodName, toObjectFromArray(args));
-            return new NetObject(objInvokeMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetText(TextFormat format) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.management.ManagementException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetText", format == null ? null : format.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(ManagementOperationObserver watcher, ManagementPath path) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.FormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", watcher == null ? null : watcher.getJCOInstance(), path == null ? null : path.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(ManagementOperationObserver watcher, ManagementPath path, PutOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", watcher == null ? null : watcher.getJCOInstance(), path == null ? null : path.getJCOInstance(), options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(ManagementOperationObserver watcher, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", watcher == null ? null : watcher.getJCOInstance(), path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(ManagementOperationObserver watcher, java.lang.String path, PutOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", watcher == null ? null : watcher.getJCOInstance(), path, options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Delete() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Delete");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Delete(DeleteOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Delete", options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Delete(ManagementOperationObserver watcher) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Delete", watcher == null ? null : watcher.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Delete(ManagementOperationObserver watcher, DeleteOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Delete", watcher == null ? null : watcher.getJCOInstance(), options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Get() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Get");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Get(ManagementOperationObserver watcher) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Get", watcher == null ? null : watcher.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -749,36 +390,6 @@ public class ManagementClass extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetInstances", watcher == null ? null : watcher.getJCOInstance(), options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetRelated(ManagementOperationObserver watcher) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetRelated", watcher == null ? null : watcher.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetRelated(ManagementOperationObserver watcher, java.lang.String relatedClass) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetRelated", watcher == null ? null : watcher.getJCOInstance(), relatedClass);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetRelated(ManagementOperationObserver watcher, java.lang.String relatedClass, java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String relatedQualifier, java.lang.String relatedRole, java.lang.String thisRole, boolean classDefinitionsOnly, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetRelated", watcher == null ? null : watcher.getJCOInstance(), relatedClass, relationshipClass, relationshipQualifier, relatedQualifier, relatedRole, thisRole, classDefinitionsOnly, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -844,36 +455,6 @@ public class ManagementClass extends NetObject  {
         }
     }
 
-    public void GetRelationships(ManagementOperationObserver watcher) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetRelationships", watcher == null ? null : watcher.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetRelationships(ManagementOperationObserver watcher, java.lang.String relationshipClass) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetRelationships", watcher == null ? null : watcher.getJCOInstance(), relationshipClass);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetRelationships(ManagementOperationObserver watcher, java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String thisRole, boolean classDefinitionsOnly, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetRelationships", watcher == null ? null : watcher.getJCOInstance(), relationshipClass, relationshipQualifier, thisRole, classDefinitionsOnly, options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void GetSubclasses(ManagementOperationObserver watcher) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -894,76 +475,6 @@ public class ManagementClass extends NetObject  {
         }
     }
 
-    public void InvokeMethod(ManagementOperationObserver watcher, java.lang.String methodName, ManagementBaseObject inParameters, InvokeMethodOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InvokeMethod", watcher == null ? null : watcher.getJCOInstance(), methodName, inParameters == null ? null : inParameters.getJCOInstance(), options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InvokeMethod(ManagementOperationObserver watcher, java.lang.String methodName, NetObject[] args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InvokeMethod", watcher == null ? null : watcher.getJCOInstance(), methodName, toObjectFromArray(args));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Put(ManagementOperationObserver watcher) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.management.ManagementException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Put", watcher == null ? null : watcher.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Put(ManagementOperationObserver watcher, PutOptions options) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.management.ManagementException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Put", watcher == null ? null : watcher.getJCOInstance(), options == null ? null : options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetPropertyQualifierValue(java.lang.String propertyName, java.lang.String qualifierName, NetObject qualifierValue) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.management.ManagementException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetPropertyQualifierValue", propertyName, qualifierName, qualifierValue == null ? null : qualifierValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetPropertyValue(java.lang.String propertyName, NetObject propertyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetPropertyValue", propertyName, propertyValue == null ? null : propertyValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetQualifierValue(java.lang.String qualifierName, NetObject qualifierValue) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetQualifierValue", qualifierName, qualifierValue == null ? null : qualifierValue.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -974,91 +485,6 @@ public class ManagementClass extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Derivation");
             return new StringCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IContainer getContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISite getSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(ISite Site) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementPath getClassPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ClassPath");
-            return new ManagementPath(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementPath getPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Path");
-            return new ManagementPath(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPath(ManagementPath Path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.OverflowException, system.management.ManagementException, system.threading.WaitHandleCannotBeOpenedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Path", Path == null ? null : Path.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ManagementScope getScope() throws Throwable, system.ArgumentException, system.management.ManagementException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
-            return new ManagementScope(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setScope(ManagementScope Scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.management.ManagementException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Scope", Scope == null ? null : Scope.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1075,84 +501,10 @@ public class ManagementClass extends NetObject  {
         }
     }
 
-    public ObjectGetOptions getOptions() throws Throwable, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Options");
-            return new ObjectGetOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOptions(ObjectGetOptions Options) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDataCollection getProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new PropertyDataCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDataCollection getSystemProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SystemProperties");
-            return new PropertyDataCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public QualifierDataCollection getQualifiers() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Qualifiers");
-            return new QualifierDataCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
     
-
-    public void addDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
 }

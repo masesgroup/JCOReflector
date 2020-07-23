@@ -43,12 +43,27 @@ import microsoft.build.framework.BuildEventArgs;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.IEventRedirector, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IEventRedirector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IEventRedirector</a>
  */
 public class IEventRedirectorImplementation extends NetObject implements IEventRedirector {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.IEventRedirector
+     */
     public static final String className = "Microsoft.Build.Framework.IEventRedirector";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IEventRedirectorImplementation extends NetObject implements IEventR
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEventRedirector}, a cast assert is made to check if types are compatible.
+     */
     public static IEventRedirector ToIEventRedirector(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IEventRedirectorImplementation(from.getJCOInstance());

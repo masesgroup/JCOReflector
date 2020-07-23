@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.MarshalByRefObject;
 import system.net.IWebRequestCreate;
 import system.net.IWebRequestCreateImplementation;
 import system.IAsyncResult;
@@ -50,7 +51,6 @@ import system.net.IWebProxy;
 import system.net.IWebProxyImplementation;
 import system.net.WebRequest;
 import system.net.WebResponse;
-import system.runtime.remoting.ObjRef;
 import system.net.cache.RequestCachePolicy;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
@@ -61,12 +61,27 @@ import system.security.principal.TokenImpersonationLevel;
 
 /**
  * The base .NET class managing System.Net.WebRequest, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebRequest" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebRequest</a>
  */
-public class WebRequest extends NetObject  {
+public class WebRequest extends MarshalByRefObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.WebRequest
+     */
     public static final String className = "System.Net.WebRequest";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -119,7 +134,9 @@ public class WebRequest extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebRequest}, a cast assert is made to check if types are compatible.
+     */
     public static WebRequest cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebRequest(from.getJCOInstance());
@@ -127,6 +144,8 @@ public class WebRequest extends NetObject  {
 
     // Constructors section
     
+    public WebRequest() throws Throwable {
+    }
 
     
     // Methods section
@@ -273,34 +292,11 @@ public class WebRequest extends NetObject  {
         }
     }
 
-    public NetObject GetLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public void Abort() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetLifetimeService = (JCObject)classInstance.Invoke("GetLifetimeService");
-            return new NetObject(objGetLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
-            return new NetObject(objInitializeLifetimeService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
-            return new ObjRef(objCreateObjRef);
+            classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,22 +417,22 @@ public class WebRequest extends NetObject  {
         }
     }
 
-    public static RequestCachePolicy getDefaultCachePolicy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RequestCachePolicy getDefaultCachePolicy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultCachePolicy");
+            JCObject val = (JCObject)classInstance.Get("DefaultCachePolicy");
             return new RequestCachePolicy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
+            classInstance.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,22 +459,22 @@ public class WebRequest extends NetObject  {
         }
     }
 
-    public static IWebProxy getDefaultWebProxy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.security.SecurityException, system.OutOfMemoryException, system.TypeLoadException, system.configuration.ConfigurationErrorsException, system.InvalidCastException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IWebProxy getDefaultWebProxy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.security.SecurityException, system.OutOfMemoryException, system.TypeLoadException, system.configuration.ConfigurationErrorsException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultWebProxy");
+            JCObject val = (JCObject)classInstance.Get("DefaultWebProxy");
             return new IWebProxyImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setDefaultWebProxy(IWebProxy DefaultWebProxy) throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setDefaultWebProxy(IWebProxy DefaultWebProxy) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("DefaultWebProxy", DefaultWebProxy == null ? null : DefaultWebProxy.getJCOInstance());
+            classInstance.Set("DefaultWebProxy", DefaultWebProxy == null ? null : DefaultWebProxy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

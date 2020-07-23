@@ -38,24 +38,37 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.drawing.design.UITypeEditor;
+import system.drawing.design.UITypeEditorEditStyle;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
-import system.drawing.design.UITypeEditorEditStyle;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
-import system.drawing.design.PaintValueEventArgs;
-import system.drawing.Graphics;
-import system.drawing.Rectangle;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.BindUITypeEditor, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.BindUITypeEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.BindUITypeEditor</a>
  */
-public class BindUITypeEditor extends NetObject  {
+public class BindUITypeEditor extends UITypeEditor  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.BindUITypeEditor
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.BindUITypeEditor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +121,9 @@ public class BindUITypeEditor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindUITypeEditor}, a cast assert is made to check if types are compatible.
+     */
     public static BindUITypeEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BindUITypeEditor(from.getJCOInstance());
@@ -116,7 +131,6 @@ public class BindUITypeEditor extends NetObject  {
 
     // Constructors section
     
-
     public BindUITypeEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -131,37 +145,6 @@ public class BindUITypeEditor extends NetObject  {
     
     // Methods section
     
-    public boolean GetPaintValueSupported() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetPaintValueSupported(ITypeDescriptorContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UITypeEditorEditStyle GetEditStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle");
-            return new UITypeEditorEditStyle(objGetEditStyle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext typeDescriptorContext) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -184,51 +167,10 @@ public class BindUITypeEditor extends NetObject  {
         }
     }
 
-    public NetObject EditValue(IServiceProvider provider, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new NetObject(objEditValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PaintValue(PaintValueEventArgs e) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PaintValue", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PaintValue(NetObject value, Graphics canvas, Rectangle rectangle) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PaintValue", value == null ? null : value.getJCOInstance(), canvas == null ? null : canvas.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getIsDropDownResizable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDropDownResizable");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

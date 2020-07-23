@@ -44,10 +44,22 @@ import system.messaging.Message;
 
 /**
  * The base .NET class managing System.Messaging.MessageEnumerator, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageEnumerator</a>
  */
 public class MessageEnumerator extends NetObject implements Iterator<Message> {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.MessageEnumerator
+     */
     public static final String className = "System.Messaging.MessageEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class MessageEnumerator extends NetObject implements Iterator<Message> {
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public Message next() {
+	public final Message next() {
 		try {
 			return new Message(classInstance.next());
 		} catch (Throwable jce) {

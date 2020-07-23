@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.threading.CancellationTokenRegistration;
 import system.threading.tasks.ValueTask;
 import system.threading.CancellationToken;
@@ -45,12 +46,27 @@ import system.threading.CancellationToken;
 
 /**
  * The base .NET class managing System.Threading.CancellationTokenRegistration, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenRegistration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenRegistration</a>
  */
-public class CancellationTokenRegistration extends NetObject  {
+public class CancellationTokenRegistration extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.CancellationTokenRegistration
+     */
     public static final String className = "System.Threading.CancellationTokenRegistration";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class CancellationTokenRegistration extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CancellationTokenRegistration}, a cast assert is made to check if types are compatible.
+     */
     public static CancellationTokenRegistration cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CancellationTokenRegistration(from.getJCOInstance());
@@ -111,6 +129,10 @@ public class CancellationTokenRegistration extends NetObject  {
 
     // Constructors section
     
+    public CancellationTokenRegistration() throws Throwable {
+    }
+
+
 
     
     // Methods section

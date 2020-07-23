@@ -44,12 +44,27 @@ import system.xml.linq.XNamespace;
 
 /**
  * The base .NET class managing System.Xml.Linq.XName, System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XName</a>
  */
 public class XName extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Linq.XName
+     */
     public static final String className = "System.Xml.Linq.XName";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class XName extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XName}, a cast assert is made to check if types are compatible.
+     */
     public static XName cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XName(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class XName extends NetObject  {
 
     // Constructors section
     
+    public XName() throws Throwable {
+    }
+
+
 
     
     // Methods section

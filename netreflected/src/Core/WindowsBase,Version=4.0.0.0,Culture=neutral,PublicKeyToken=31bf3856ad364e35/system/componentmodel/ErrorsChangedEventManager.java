@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.WeakEventManager;
 import system.componentmodel.INotifyDataErrorInfo;
 import system.componentmodel.INotifyDataErrorInfoImplementation;
-import system.windows.threading.Dispatcher;
 
 
 /**
  * The base .NET class managing System.ComponentModel.ErrorsChangedEventManager, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ErrorsChangedEventManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ErrorsChangedEventManager</a>
  */
-public class ErrorsChangedEventManager extends NetObject  {
+public class ErrorsChangedEventManager extends WeakEventManager  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.ErrorsChangedEventManager
+     */
     public static final String className = "System.ComponentModel.ErrorsChangedEventManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ErrorsChangedEventManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ErrorsChangedEventManager}, a cast assert is made to check if types are compatible.
+     */
     public static ErrorsChangedEventManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ErrorsChangedEventManager(from.getJCOInstance());
@@ -111,35 +128,18 @@ public class ErrorsChangedEventManager extends NetObject  {
 
     // Constructors section
     
+    public ErrorsChangedEventManager() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public boolean CheckAccess() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CheckAccess");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public Dispatcher getDispatcher() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
-            return new Dispatcher(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

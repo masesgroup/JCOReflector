@@ -47,12 +47,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Drawing.Design.IPropertyValueUIService, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IPropertyValueUIService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IPropertyValueUIService</a>
  */
 public interface IPropertyValueUIService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
+    public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Drawing.Design.IPropertyValueUIService
+     */
+    public static final String className = "System.Drawing.Design.IPropertyValueUIService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPropertyValueUIService}, a cast assert is made to check if types are compatible.
+     */
     public static IPropertyValueUIService ToIPropertyValueUIService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Drawing.Design.IPropertyValueUIService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Windows.Forms"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPropertyValueUIServiceImplementation(from.getJCOInstance());
     }

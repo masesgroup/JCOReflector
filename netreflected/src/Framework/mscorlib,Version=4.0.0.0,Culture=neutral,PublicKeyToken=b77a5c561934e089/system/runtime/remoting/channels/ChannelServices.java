@@ -62,12 +62,27 @@ import system.MarshalByRefObject;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.ChannelServices, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.ChannelServices" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.ChannelServices</a>
  */
 public class ChannelServices extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.ChannelServices
+     */
     public static final String className = "System.Runtime.Remoting.Channels.ChannelServices";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -120,7 +135,9 @@ public class ChannelServices extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ChannelServices}, a cast assert is made to check if types are compatible.
+     */
     public static ChannelServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ChannelServices(from.getJCOInstance());
@@ -128,6 +145,10 @@ public class ChannelServices extends NetObject  {
 
     // Constructors section
     
+    public ChannelServices() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -240,12 +261,12 @@ public class ChannelServices extends NetObject  {
     
     // Properties section
     
-    public static IChannel[] getRegisteredChannels() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public final IChannel[] getRegisteredChannels() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<IChannel> resultingArrayList = new ArrayList<IChannel>();
-            JCObject resultingObjects = (JCObject)classType.Get("RegisteredChannels");
+            JCObject resultingObjects = (JCObject)classInstance.Get("RegisteredChannels");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IChannelImplementation(resultingObject));
             }

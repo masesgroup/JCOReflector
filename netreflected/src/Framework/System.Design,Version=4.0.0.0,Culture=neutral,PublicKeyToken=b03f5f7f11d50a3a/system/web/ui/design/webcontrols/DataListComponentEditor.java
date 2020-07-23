@@ -38,20 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.ITypeDescriptorContext;
-import system.componentmodel.ITypeDescriptorContextImplementation;
-import system.windows.forms.IWin32Window;
-import system.windows.forms.IWin32WindowImplementation;
+import system.web.ui.design.webcontrols.BaseDataListComponentEditor;
 
 
 /**
  * The base .NET class managing System.Web.UI.Design.WebControls.DataListComponentEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.DataListComponentEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.DataListComponentEditor</a>
  */
-public class DataListComponentEditor extends NetObject  {
+public class DataListComponentEditor extends BaseDataListComponentEditor  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.WebControls.DataListComponentEditor
+     */
     public static final String className = "System.Web.UI.Design.WebControls.DataListComponentEditor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +116,9 @@ public class DataListComponentEditor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataListComponentEditor}, a cast assert is made to check if types are compatible.
+     */
     public static DataListComponentEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataListComponentEditor(from.getJCOInstance());
@@ -112,7 +126,6 @@ public class DataListComponentEditor extends NetObject  {
 
     // Constructors section
     
-
     public DataListComponentEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -137,46 +150,6 @@ public class DataListComponentEditor extends NetObject  {
     
     // Methods section
     
-    public boolean EditComponent(ITypeDescriptorContext context, NetObject component) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean EditComponent(ITypeDescriptorContext context, NetObject obj, IWin32Window parent) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.NotImplementedException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.reflection.TargetInvocationException, system.RankException, system.MulticastNotSupportedException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), obj == null ? null : obj.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean EditComponent(NetObject component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean EditComponent(NetObject component, IWin32Window owner) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

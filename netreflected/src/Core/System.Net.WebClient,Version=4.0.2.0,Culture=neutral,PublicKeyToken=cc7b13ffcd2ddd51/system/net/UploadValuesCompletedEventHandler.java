@@ -42,12 +42,27 @@ import system.net.UploadValuesCompletedEventArgs;
 import system.net.IUploadValuesCompletedEventHandler;
 /**
  * The base .NET class managing System.Net.UploadValuesCompletedEventHandler, System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadValuesCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadValuesCompletedEventHandler</a>
  */
 public class UploadValuesCompletedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.WebClient
+     */
     public static final String assemblyShortName = "System.Net.WebClient";
+    /**
+     * Qualified class name: System.Net.UploadValuesCompletedEventHandler
+     */
     public static final String className = "System.Net.UploadValuesCompletedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IUploadValuesCompletedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class UploadValuesCompletedEventHandler extends JCVoidDelegate implements
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, UploadValuesCompletedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, UploadValuesCompletedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class UploadValuesCompletedEventHandler extends JCVoidDelegate implements
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, UploadValuesCompletedEventArgs e) {
     }
 }

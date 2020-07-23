@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.TimeSpan;
 import system.windows.media.animation.RepeatBehavior;
 import system.IFormatProvider;
@@ -46,12 +47,27 @@ import system.IFormatProviderImplementation;
 
 /**
  * The base .NET class managing System.Windows.Media.Animation.RepeatBehavior, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.RepeatBehavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.RepeatBehavior</a>
  */
-public class RepeatBehavior extends NetObject  {
+public class RepeatBehavior extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Animation.RepeatBehavior
+     */
     public static final String className = "System.Windows.Media.Animation.RepeatBehavior";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class RepeatBehavior extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RepeatBehavior}, a cast assert is made to check if types are compatible.
+     */
     public static RepeatBehavior cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RepeatBehavior(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class RepeatBehavior extends NetObject  {
 
     // Constructors section
     
+    public RepeatBehavior() throws Throwable {
+    }
 
     public RepeatBehavior(double count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
@@ -132,6 +152,7 @@ public class RepeatBehavior extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -212,11 +233,11 @@ public class RepeatBehavior extends NetObject  {
         }
     }
 
-    public static RepeatBehavior getForever() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RepeatBehavior getForever() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Forever");
+            JCObject val = (JCObject)classInstance.Get("Forever");
             return new RepeatBehavior(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

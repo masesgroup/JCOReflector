@@ -43,12 +43,27 @@ import system.runtime.caching.OnChangedCallback;
 
 /**
  * The base .NET class managing System.Runtime.Caching.Hosting.IFileChangeNotificationSystem, System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.Hosting.IFileChangeNotificationSystem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.Hosting.IFileChangeNotificationSystem</a>
  */
 public class IFileChangeNotificationSystemImplementation extends NetObject implements IFileChangeNotificationSystem {
+    /**
+     * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Caching
+     */
     public static final String assemblyShortName = "System.Runtime.Caching";
+    /**
+     * Qualified class name: System.Runtime.Caching.Hosting.IFileChangeNotificationSystem
+     */
     public static final String className = "System.Runtime.Caching.Hosting.IFileChangeNotificationSystem";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFileChangeNotificationSystem}, a cast assert is made to check if types are compatible.
+     */
     public static IFileChangeNotificationSystem ToIFileChangeNotificationSystem(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IFileChangeNotificationSystemImplementation(from.getJCOInstance());

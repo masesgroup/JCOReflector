@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.TaskPropertyInfo, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.TaskPropertyInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.TaskPropertyInfo</a>
  */
 public class TaskPropertyInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.TaskPropertyInfo
+     */
     public static final String className = "Microsoft.Build.Framework.TaskPropertyInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class TaskPropertyInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TaskPropertyInfo}, a cast assert is made to check if types are compatible.
+     */
     public static TaskPropertyInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TaskPropertyInfo(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class TaskPropertyInfo extends NetObject  {
 
     // Constructors section
     
+    public TaskPropertyInfo() throws Throwable {
+    }
 
     public TaskPropertyInfo(java.lang.String name, NetType typeOfParameter, boolean output, boolean required) throws Throwable {
         try {
@@ -118,6 +137,7 @@ public class TaskPropertyInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

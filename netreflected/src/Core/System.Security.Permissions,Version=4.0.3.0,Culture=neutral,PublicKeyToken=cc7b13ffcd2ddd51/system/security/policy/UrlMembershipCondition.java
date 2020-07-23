@@ -47,12 +47,27 @@ import system.security.policy.PolicyLevel;
 
 /**
  * The base .NET class managing System.Security.Policy.UrlMembershipCondition, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.UrlMembershipCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.UrlMembershipCondition</a>
  */
 public class UrlMembershipCondition extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Policy.UrlMembershipCondition
+     */
     public static final String className = "System.Security.Policy.UrlMembershipCondition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class UrlMembershipCondition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UrlMembershipCondition}, a cast assert is made to check if types are compatible.
+     */
     public static UrlMembershipCondition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UrlMembershipCondition(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class UrlMembershipCondition extends NetObject  {
 
     // Constructors section
     
+    public UrlMembershipCondition() throws Throwable {
+    }
 
     public UrlMembershipCondition(java.lang.String url) throws Throwable {
         try {
@@ -123,6 +142,7 @@ public class UrlMembershipCondition extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -57,12 +57,27 @@ import system.windows.TextTrimming;
 
 /**
  * The base .NET class managing System.Windows.Media.FormattedText, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.FormattedText" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.FormattedText</a>
  */
 public class FormattedText extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.FormattedText
+     */
     public static final String className = "System.Windows.Media.FormattedText";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -115,7 +130,9 @@ public class FormattedText extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FormattedText}, a cast assert is made to check if types are compatible.
+     */
     public static FormattedText cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FormattedText(from.getJCOInstance());
@@ -123,6 +140,8 @@ public class FormattedText extends NetObject  {
 
     // Constructors section
     
+    public FormattedText() throws Throwable {
+    }
 
     public FormattedText(java.lang.String textToFormat, CultureInfo culture, FlowDirection flowDirection, Typeface typeface, double emSize, Brush foreground) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         try {
@@ -183,6 +202,7 @@ public class FormattedText extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -425,6 +445,16 @@ public class FormattedText extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMaxTextWidths", (Object)maxTextWidths);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetMaxTextWidths(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetMaxTextWidths", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.diagnostics.ActivityTraceId;
 
 
 /**
  * The base .NET class managing System.Diagnostics.ActivityTraceId, System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ActivityTraceId" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ActivityTraceId</a>
  */
-public class ActivityTraceId extends NetObject  {
+public class ActivityTraceId extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.DiagnosticSource
+     */
     public static final String assemblyShortName = "System.Diagnostics.DiagnosticSource";
+    /**
+     * Qualified class name: System.Diagnostics.ActivityTraceId
+     */
     public static final String className = "System.Diagnostics.ActivityTraceId";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ActivityTraceId extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityTraceId}, a cast assert is made to check if types are compatible.
+     */
     public static ActivityTraceId cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivityTraceId(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class ActivityTraceId extends NetObject  {
 
     // Constructors section
     
+    public ActivityTraceId() throws Throwable {
+    }
+
+
 
     
     // Methods section

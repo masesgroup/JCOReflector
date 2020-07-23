@@ -43,12 +43,29 @@ import system.security.policy.PolicyLevel;
 
 /**
  * The base .NET class managing System.Security.ISecurityPolicyEncodable, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityPolicyEncodable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityPolicyEncodable</a>
  */
 public interface ISecurityPolicyEncodable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
+    public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.ISecurityPolicyEncodable
+     */
+    public static final String className = "System.Security.ISecurityPolicyEncodable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISecurityPolicyEncodable}, a cast assert is made to check if types are compatible.
+     */
     public static ISecurityPolicyEncodable ToISecurityPolicyEncodable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Security.ISecurityPolicyEncodable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Security.Permissions"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISecurityPolicyEncodableImplementation(from.getJCOInstance());
     }

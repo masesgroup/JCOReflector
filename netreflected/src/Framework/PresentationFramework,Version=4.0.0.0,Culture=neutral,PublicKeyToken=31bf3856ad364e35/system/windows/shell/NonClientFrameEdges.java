@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Shell.NonClientFrameEdges, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Shell.NonClientFrameEdges" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Shell.NonClientFrameEdges</a>
  */
 public class NonClientFrameEdges extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Shell.NonClientFrameEdges
+     */
     public static final String className = "System.Windows.Shell.NonClientFrameEdges";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class NonClientFrameEdges extends NetObject  {
 
     // Flags management section
 
-    public NonClientFrameEdges add(NonClientFrameEdges val) throws Throwable {
+    public final NonClientFrameEdges add(NonClientFrameEdges val) throws Throwable {
         return new NonClientFrameEdges(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public NonClientFrameEdges remove(NonClientFrameEdges val) throws Throwable {
+    public final NonClientFrameEdges remove(NonClientFrameEdges val) throws Throwable {
         return new NonClientFrameEdges(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(NonClientFrameEdges val) throws Throwable {
+    public final boolean is(NonClientFrameEdges val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(NonClientFrameEdges val) throws Throwable {
+    public final boolean has(NonClientFrameEdges val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.security.SecurityTokenSpecification;
 import system.identitymodel.tokens.SecurityToken;
 import system.servicemodel.security.SecurityTokenAttachmentMode;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Security.SupportingTokenSpecification, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification</a>
  */
-public class SupportingTokenSpecification extends NetObject  {
+public class SupportingTokenSpecification extends SecurityTokenSpecification  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.SupportingTokenSpecification
+     */
     public static final String className = "System.ServiceModel.Security.SupportingTokenSpecification";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SupportingTokenSpecification extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SupportingTokenSpecification}, a cast assert is made to check if types are compatible.
+     */
     public static SupportingTokenSpecification cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SupportingTokenSpecification(from.getJCOInstance());
@@ -110,6 +128,9 @@ public class SupportingTokenSpecification extends NetObject  {
 
     // Constructors section
     
+    public SupportingTokenSpecification() throws Throwable {
+    }
+
 
 
     
@@ -119,17 +140,6 @@ public class SupportingTokenSpecification extends NetObject  {
     
     // Properties section
     
-    public SecurityToken getSecurityToken() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SecurityToken");
-            return new SecurityToken(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SecurityTokenAttachmentMode getSecurityTokenAttachmentMode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

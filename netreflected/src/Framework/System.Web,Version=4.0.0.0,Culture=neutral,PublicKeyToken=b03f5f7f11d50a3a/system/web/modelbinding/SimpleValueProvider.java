@@ -43,12 +43,27 @@ import system.web.modelbinding.ValueProviderResult;
 
 /**
  * The base .NET class managing System.Web.ModelBinding.SimpleValueProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.SimpleValueProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.SimpleValueProvider</a>
  */
 public class SimpleValueProvider extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.ModelBinding.SimpleValueProvider
+     */
     public static final String className = "System.Web.ModelBinding.SimpleValueProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SimpleValueProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SimpleValueProvider}, a cast assert is made to check if types are compatible.
+     */
     public static SimpleValueProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SimpleValueProvider(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class SimpleValueProvider extends NetObject  {
 
     // Constructors section
     
+    public SimpleValueProvider() throws Throwable {
+    }
 
     
     // Methods section

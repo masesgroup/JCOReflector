@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Data.Objects.ObjectParameter, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectParameter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectParameter</a>
  */
 public class ObjectParameter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Objects.ObjectParameter
+     */
     public static final String className = "System.Data.Objects.ObjectParameter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ObjectParameter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectParameter}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectParameter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectParameter(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ObjectParameter extends NetObject  {
 
     // Constructors section
     
+    public ObjectParameter() throws Throwable {
+    }
 
     public ObjectParameter(java.lang.String name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
@@ -128,6 +147,7 @@ public class ObjectParameter extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

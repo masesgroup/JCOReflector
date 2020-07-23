@@ -47,12 +47,27 @@ import system.ModuleHandle;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.RuntimeHelpers, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers</a>
  */
 public class RuntimeHelpers extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.RuntimeHelpers
+     */
     public static final String className = "System.Runtime.CompilerServices.RuntimeHelpers";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class RuntimeHelpers extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuntimeHelpers}, a cast assert is made to check if types are compatible.
+     */
     public static RuntimeHelpers cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RuntimeHelpers(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class RuntimeHelpers extends NetObject  {
 
     // Constructors section
     
+    public RuntimeHelpers() throws Throwable {
+    }
 
     
     // Methods section
@@ -242,11 +261,11 @@ public class RuntimeHelpers extends NetObject  {
     
     // Properties section
     
-    public static int getOffsetToStringData() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getOffsetToStringData() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("OffsetToStringData");
+            return (int)classInstance.Get("OffsetToStringData");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -45,12 +45,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Security.Permissions.KeyContainerPermissionAccessEntryCollection, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection</a>
  */
 public class KeyContainerPermissionAccessEntryCollection extends NetObject implements Iterable<KeyContainerPermissionAccessEntry> {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Permissions.KeyContainerPermissionAccessEntryCollection
+     */
     public static final String className = "System.Security.Permissions.KeyContainerPermissionAccessEntryCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyContainerPermissionAccessEntryCollection}, a cast assert is made to check if types are compatible.
+     */
     public static KeyContainerPermissionAccessEntryCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new KeyContainerPermissionAccessEntryCollection(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
 
     // Constructors section
     
-
     public KeyContainerPermissionAccessEntryCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -146,12 +162,12 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
         }
     }
 
-    public KeyContainerPermissionAccessEntryEnumerator GetEnumerator() throws Throwable {
+    public final KeyContainerPermissionAccessEntryEnumerator GetEnumerator() throws Throwable {
         return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<KeyContainerPermissionAccessEntry> iterator() {
+	public final java.util.Iterator<KeyContainerPermissionAccessEntry> iterator() {
 		return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
 	}
 

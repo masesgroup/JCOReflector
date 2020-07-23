@@ -43,12 +43,27 @@ import system.Single;
 
 /**
  * The base .NET class managing System.Drawing.Drawing2D.Blend, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.Blend" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.Blend</a>
  */
 public class Blend extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Drawing2D.Blend
+     */
     public static final String className = "System.Drawing.Drawing2D.Blend";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Blend extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Blend}, a cast assert is made to check if types are compatible.
+     */
     public static Blend cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Blend(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class Blend extends NetObject  {
 
     // Constructors section
     
-
     public Blend() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -138,7 +154,7 @@ public class Blend extends NetObject  {
     
     // Properties section
     
-    public Single[] getFactors() throws Throwable {
+    public final Single[] getFactors() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -165,7 +181,7 @@ public class Blend extends NetObject  {
         }
     }
 
-    public Single[] getPositions() throws Throwable {
+    public final Single[] getPositions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

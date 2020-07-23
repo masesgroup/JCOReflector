@@ -43,12 +43,27 @@ import system.globalization.TextElementEnumerator;
 
 /**
  * The base .NET class managing System.Globalization.StringInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.StringInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.StringInfo</a>
  */
 public class StringInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Globalization.StringInfo
+     */
     public static final String className = "System.Globalization.StringInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class StringInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringInfo}, a cast assert is made to check if types are compatible.
+     */
     public static StringInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StringInfo(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class StringInfo extends NetObject  {
 
     // Constructors section
     
-
     public StringInfo() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

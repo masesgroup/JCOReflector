@@ -44,12 +44,29 @@ import system.net.WebRequest;
 
 /**
  * The base .NET class managing System.Net.ICertificatePolicy, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICertificatePolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICertificatePolicy</a>
  */
 public interface ICertificatePolicy extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.ICertificatePolicy
+     */
+    public static final String className = "System.Net.ICertificatePolicy";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICertificatePolicy}, a cast assert is made to check if types are compatible.
+     */
     public static ICertificatePolicy ToICertificatePolicy(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Net.ICertificatePolicy, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICertificatePolicyImplementation(from.getJCOInstance());
     }

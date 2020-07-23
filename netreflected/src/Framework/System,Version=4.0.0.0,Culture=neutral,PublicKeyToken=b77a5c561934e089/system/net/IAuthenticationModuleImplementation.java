@@ -46,12 +46,27 @@ import system.net.ICredentialsImplementation;
 
 /**
  * The base .NET class managing System.Net.IAuthenticationModule, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IAuthenticationModule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IAuthenticationModule</a>
  */
 public class IAuthenticationModuleImplementation extends NetObject implements IAuthenticationModule {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.IAuthenticationModule
+     */
     public static final String className = "System.Net.IAuthenticationModule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAuthenticationModule}, a cast assert is made to check if types are compatible.
+     */
     public static IAuthenticationModule ToIAuthenticationModule(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IAuthenticationModuleImplementation(from.getJCOInstance());

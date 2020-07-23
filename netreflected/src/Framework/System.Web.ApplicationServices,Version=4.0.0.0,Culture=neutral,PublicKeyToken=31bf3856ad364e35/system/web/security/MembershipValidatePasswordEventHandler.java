@@ -42,12 +42,27 @@ import system.web.security.ValidatePasswordEventArgs;
 import system.web.security.IMembershipValidatePasswordEventHandler;
 /**
  * The base .NET class managing System.Web.Security.MembershipValidatePasswordEventHandler, System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MembershipValidatePasswordEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MembershipValidatePasswordEventHandler</a>
  */
 public class MembershipValidatePasswordEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Web.ApplicationServices
+     */
     public static final String assemblyShortName = "System.Web.ApplicationServices";
+    /**
+     * Qualified class name: System.Web.Security.MembershipValidatePasswordEventHandler
+     */
     public static final String className = "System.Web.Security.MembershipValidatePasswordEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IMembershipValidatePasswordEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class MembershipValidatePasswordEventHandler extends JCVoidDelegate imple
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ValidatePasswordEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ValidatePasswordEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class MembershipValidatePasswordEventHandler extends JCVoidDelegate imple
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ValidatePasswordEventArgs e) {
     }
 }

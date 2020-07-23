@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.security.ISecurityEncodable;
+import system.security.ISecurityEncodableImplementation;
+import system.security.ISecurityPolicyEncodable;
+import system.security.ISecurityPolicyEncodableImplementation;
 import system.security.policy.Evidence;
 import system.security.policy.IMembershipCondition;
 import system.security.policy.IMembershipConditionImplementation;
@@ -46,12 +50,29 @@ import system.security.policy.PolicyLevel;
 
 /**
  * The base .NET class managing System.Security.Policy.IMembershipCondition, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IMembershipCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IMembershipCondition</a>
  */
-public interface IMembershipCondition extends IJCOBridgeReflected {
-
+public interface IMembershipCondition extends IJCOBridgeReflected, ISecurityEncodable, ISecurityPolicyEncodable {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.IMembershipCondition
+     */
+    public static final String className = "System.Security.Policy.IMembershipCondition";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMembershipCondition}, a cast assert is made to check if types are compatible.
+     */
     public static IMembershipCondition ToIMembershipCondition(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Security.Policy.IMembershipCondition, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IMembershipConditionImplementation(from.getJCOInstance());
     }
@@ -98,13 +119,9 @@ public interface IMembershipCondition extends IJCOBridgeReflected {
 
     public IMembershipCondition Copy() throws Throwable;
 
-    public SecurityElement ToXml() throws Throwable;
 
-    public SecurityElement ToXml(PolicyLevel level) throws Throwable;
 
-    public void FromXml(SecurityElement e) throws Throwable;
 
-    public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable;
 
 
     

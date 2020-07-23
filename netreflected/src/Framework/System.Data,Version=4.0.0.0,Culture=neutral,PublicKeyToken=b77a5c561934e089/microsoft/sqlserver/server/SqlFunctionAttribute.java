@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 import microsoft.sqlserver.server.DataAccessKind;
 import microsoft.sqlserver.server.SystemDataAccessKind;
 
 
 /**
  * The base .NET class managing Microsoft.SqlServer.Server.SqlFunctionAttribute, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute</a>
  */
-public class SqlFunctionAttribute extends NetObject  {
+public class SqlFunctionAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: Microsoft.SqlServer.Server.SqlFunctionAttribute
+     */
     public static final String className = "Microsoft.SqlServer.Server.SqlFunctionAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SqlFunctionAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlFunctionAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static SqlFunctionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlFunctionAttribute(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class SqlFunctionAttribute extends NetObject  {
 
     // Constructors section
     
-
     public SqlFunctionAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -125,26 +142,6 @@ public class SqlFunctionAttribute extends NetObject  {
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -226,17 +223,6 @@ public class SqlFunctionAttribute extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SystemDataAccess", SystemDataAccess == null ? null : SystemDataAccess.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

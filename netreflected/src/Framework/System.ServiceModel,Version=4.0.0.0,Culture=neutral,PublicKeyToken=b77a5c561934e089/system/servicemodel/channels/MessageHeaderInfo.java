@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.MessageHeaderInfo, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.MessageHeaderInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.MessageHeaderInfo</a>
  */
 public class MessageHeaderInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.MessageHeaderInfo
+     */
     public static final String className = "System.ServiceModel.Channels.MessageHeaderInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class MessageHeaderInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageHeaderInfo}, a cast assert is made to check if types are compatible.
+     */
     public static MessageHeaderInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MessageHeaderInfo(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class MessageHeaderInfo extends NetObject  {
 
     // Constructors section
     
+    public MessageHeaderInfo() throws Throwable {
+    }
 
     
     // Methods section

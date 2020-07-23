@@ -47,12 +47,27 @@ import system.servicemodel.peerresolvers.PeerReferralPolicy;
 
 /**
  * The base .NET class managing System.ServiceModel.PeerResolver, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.PeerResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.PeerResolver</a>
  */
 public class PeerResolver extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.PeerResolver
+     */
     public static final String className = "System.ServiceModel.PeerResolver";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class PeerResolver extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeerResolver}, a cast assert is made to check if types are compatible.
+     */
     public static PeerResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PeerResolver(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class PeerResolver extends NetObject  {
 
     // Constructors section
     
+    public PeerResolver() throws Throwable {
+    }
 
     
     // Methods section

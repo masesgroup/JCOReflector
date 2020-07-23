@@ -42,12 +42,29 @@ import system.windows.forms.Control;
 
 /**
  * The base .NET class managing System.Windows.Forms.IComponentEditorPageSite, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IComponentEditorPageSite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IComponentEditorPageSite</a>
  */
 public interface IComponentEditorPageSite extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
+    public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.IComponentEditorPageSite
+     */
+    public static final String className = "System.Windows.Forms.IComponentEditorPageSite";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IComponentEditorPageSite}, a cast assert is made to check if types are compatible.
+     */
     public static IComponentEditorPageSite ToIComponentEditorPageSite(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Windows.Forms.IComponentEditorPageSite, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Windows.Forms"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IComponentEditorPageSiteImplementation(from.getJCOInstance());
     }

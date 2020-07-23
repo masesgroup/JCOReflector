@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.net.EndPoint;
 import system.net.sockets.IPPacketInformation;
 import system.net.sockets.SendPacketsElement;
@@ -50,12 +51,27 @@ import system.net.sockets.TransmitFileOptions;
 
 /**
  * The base .NET class managing System.Net.Sockets.SocketAsyncEventArgs, System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs</a>
  */
-public class SocketAsyncEventArgs extends NetObject  {
+public class SocketAsyncEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Sockets
+     */
     public static final String assemblyShortName = "System.Net.Sockets";
+    /**
+     * Qualified class name: System.Net.Sockets.SocketAsyncEventArgs
+     */
     public static final String className = "System.Net.Sockets.SocketAsyncEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +124,9 @@ public class SocketAsyncEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SocketAsyncEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SocketAsyncEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SocketAsyncEventArgs(from.getJCOInstance());
@@ -116,7 +134,6 @@ public class SocketAsyncEventArgs extends NetObject  {
 
     // Constructors section
     
-
     public SocketAsyncEventArgs() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         try {
             // add reference to assemblyName.dll file
@@ -146,6 +163,16 @@ public class SocketAsyncEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBuffer", buffer, offset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetBuffer(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetBuffer", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +324,7 @@ public class SocketAsyncEventArgs extends NetObject  {
         }
     }
 
-    public SendPacketsElement[] getSendPacketsElements() throws Throwable {
+    public final SendPacketsElement[] getSendPacketsElements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

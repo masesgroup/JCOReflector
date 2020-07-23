@@ -44,12 +44,27 @@ import system.workflow.componentmodel.compiler.WorkflowCompilerParameters;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Compiler.WorkflowCompiler, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompiler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompiler</a>
  */
 public class WorkflowCompiler extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Compiler.WorkflowCompiler
+     */
     public static final String className = "System.Workflow.ComponentModel.Compiler.WorkflowCompiler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class WorkflowCompiler extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowCompiler}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowCompiler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowCompiler(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class WorkflowCompiler extends NetObject  {
 
     // Constructors section
     
-
     public WorkflowCompiler() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -130,6 +146,17 @@ public class WorkflowCompiler extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCompile = (JCObject)classInstance.Invoke("Compile", parameters == null ? null : parameters.getJCOInstance(), files);
+            return new WorkflowCompilerResults(objCompile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowCompilerResults Compile(WorkflowCompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.MissingMethodException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.collections.generic.KeyNotFoundException, system.componentmodel.design.serialization.CodeDomSerializerException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.text.regularexpressions.RegexMatchTimeoutException, system.io.EndOfStreamException, system.CannotUnloadAppDomainException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCompile = (JCObject)classInstance.Invoke("Compile", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
             return new WorkflowCompilerResults(objCompile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

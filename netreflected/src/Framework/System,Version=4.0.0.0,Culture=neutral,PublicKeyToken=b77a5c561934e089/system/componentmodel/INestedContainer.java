@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.IContainer;
+import system.componentmodel.IContainerImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.ComponentCollection;
@@ -44,12 +48,29 @@ import system.componentmodel.ComponentCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.INestedContainer, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INestedContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INestedContainer</a>
  */
-public interface INestedContainer extends IJCOBridgeReflected {
-
+public interface INestedContainer extends IJCOBridgeReflected, IContainer, IDisposable {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.INestedContainer
+     */
+    public static final String className = "System.ComponentModel.INestedContainer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INestedContainer}, a cast assert is made to check if types are compatible.
+     */
     public static INestedContainer ToINestedContainer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.INestedContainer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INestedContainerImplementation(from.getJCOInstance());
     }
@@ -92,20 +113,14 @@ public interface INestedContainer extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Add(IComponent component) throws Throwable;
 
-    public void Add(IComponent component, java.lang.String name) throws Throwable;
 
-    public void Dispose() throws Throwable;
 
-    public void Remove(IComponent component) throws Throwable;
 
 
     
     // Properties section
     
-    public ComponentCollection getComponents() throws Throwable;
-
     public IComponent getOwner() throws Throwable;
 
 

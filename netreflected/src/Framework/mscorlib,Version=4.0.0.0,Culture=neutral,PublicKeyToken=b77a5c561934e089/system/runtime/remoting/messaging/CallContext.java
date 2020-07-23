@@ -43,12 +43,27 @@ import system.runtime.remoting.messaging.Header;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.CallContext, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.CallContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.CallContext</a>
  */
 public class CallContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.CallContext
+     */
     public static final String className = "System.Runtime.Remoting.Messaging.CallContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class CallContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CallContext}, a cast assert is made to check if types are compatible.
+     */
     public static CallContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CallContext(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class CallContext extends NetObject  {
 
     // Constructors section
     
+    public CallContext() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -196,22 +217,22 @@ public class CallContext extends NetObject  {
     
     // Properties section
     
-    public static NetObject getHostContext() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public NetObject getHostContext() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("HostContext");
+            JCObject val = (JCObject)classInstance.Get("HostContext");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setHostContext(NetObject HostContext) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setHostContext(NetObject HostContext) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("HostContext", HostContext == null ? null : HostContext.getJCOInstance());
+            classInstance.Set("HostContext", HostContext == null ? null : HostContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

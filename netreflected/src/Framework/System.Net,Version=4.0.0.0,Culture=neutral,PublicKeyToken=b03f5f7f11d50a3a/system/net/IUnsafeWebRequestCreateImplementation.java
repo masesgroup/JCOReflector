@@ -44,12 +44,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.Net.IUnsafeWebRequestCreate, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IUnsafeWebRequestCreate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IUnsafeWebRequestCreate</a>
  */
 public class IUnsafeWebRequestCreateImplementation extends NetObject implements IUnsafeWebRequestCreate {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.IUnsafeWebRequestCreate
+     */
     public static final String className = "System.Net.IUnsafeWebRequestCreate";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IUnsafeWebRequestCreateImplementation extends NetObject implements 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IUnsafeWebRequestCreate}, a cast assert is made to check if types are compatible.
+     */
     public static IUnsafeWebRequestCreate ToIUnsafeWebRequestCreate(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IUnsafeWebRequestCreateImplementation(from.getJCOInstance());

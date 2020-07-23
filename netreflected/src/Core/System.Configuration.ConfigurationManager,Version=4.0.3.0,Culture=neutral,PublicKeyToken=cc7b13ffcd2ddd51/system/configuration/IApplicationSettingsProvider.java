@@ -45,12 +45,29 @@ import system.configuration.SettingsPropertyCollection;
 
 /**
  * The base .NET class managing System.Configuration.IApplicationSettingsProvider, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IApplicationSettingsProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IApplicationSettingsProvider</a>
  */
 public interface IApplicationSettingsProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
+    public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.IApplicationSettingsProvider
+     */
+    public static final String className = "System.Configuration.IApplicationSettingsProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IApplicationSettingsProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IApplicationSettingsProvider ToIApplicationSettingsProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Configuration.IApplicationSettingsProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Configuration.ConfigurationManager"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IApplicationSettingsProviderImplementation(from.getJCOInstance());
     }

@@ -43,12 +43,27 @@ import system.EventArgs;
 import system.web.ITaskEventHandler;
 /**
  * The base .NET class managing System.Web.TaskEventHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.TaskEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.TaskEventHandler</a>
  */
 public class TaskEventHandler extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.TaskEventHandler
+     */
     public static final String className = "System.Web.TaskEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ITaskEventHandler callerInstance = null;
@@ -156,7 +171,7 @@ public class TaskEventHandler extends JCDelegate implements IJCEventEmit, IJCOBr
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final Task DynamicInvoke(NetObject sender, EventArgs e) throws Throwable {
+    public Task METHOD_JAVA_NAME(NetObject sender, EventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -167,7 +182,9 @@ public class TaskEventHandler extends JCDelegate implements IJCEventEmit, IJCOBr
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public Task Invoke(NetObject sender, EventArgs e) {
         return null;
     }

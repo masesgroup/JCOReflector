@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.web.SiteMapNode;
 import system.web.SiteMapResolveEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SiteMapResolveEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SiteMapResolveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SiteMapResolveEventHandler</a>
+ */
 public interface ISiteMapResolveEventHandler {
     public SiteMapNode Invoke(NetObject sender, SiteMapResolveEventArgs e);
 }

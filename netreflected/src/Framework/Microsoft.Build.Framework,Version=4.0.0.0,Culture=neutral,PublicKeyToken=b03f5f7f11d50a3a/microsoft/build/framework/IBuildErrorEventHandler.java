@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.build.framework.BuildErrorEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BuildErrorEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildErrorEventHandler</a>
+ */
 public interface IBuildErrorEventHandler {
     public void Invoke(NetObject sender, BuildErrorEventArgs e);
 }

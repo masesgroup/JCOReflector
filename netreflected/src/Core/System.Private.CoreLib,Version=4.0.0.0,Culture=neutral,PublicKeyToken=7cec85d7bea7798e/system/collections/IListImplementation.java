@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.Array;
 
 
 /**
  * The base .NET class managing System.Collections.IList, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IList</a>
  */
-public class IListImplementation extends NetObject implements IList {
+public class IListImplementation extends IEnumerableImplementation implements IList {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Collections.IList
+     */
     public static final String className = "System.Collections.IList";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class IListImplementation extends NetObject implements IList {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IList}, a cast assert is made to check if types are compatible.
+     */
     public static IList ToIList(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IListImplementation(from.getJCOInstance());

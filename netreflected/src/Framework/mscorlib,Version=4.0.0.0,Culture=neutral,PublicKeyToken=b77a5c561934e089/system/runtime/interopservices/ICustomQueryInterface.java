@@ -42,12 +42,29 @@ import system.runtime.interopservices.CustomQueryInterfaceResult;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ICustomQueryInterface, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ICustomQueryInterface" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ICustomQueryInterface</a>
  */
 public interface ICustomQueryInterface extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ICustomQueryInterface
+     */
+    public static final String className = "System.Runtime.InteropServices.ICustomQueryInterface";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICustomQueryInterface}, a cast assert is made to check if types are compatible.
+     */
     public static ICustomQueryInterface ToICustomQueryInterface(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices.ICustomQueryInterface, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICustomQueryInterfaceImplementation(from.getJCOInstance());
     }

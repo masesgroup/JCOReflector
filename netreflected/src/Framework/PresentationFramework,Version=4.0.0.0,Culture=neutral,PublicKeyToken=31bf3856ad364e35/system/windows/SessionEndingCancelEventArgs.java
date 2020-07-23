@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.CancelEventArgs;
 import system.windows.ReasonSessionEnding;
 
 
 /**
  * The base .NET class managing System.Windows.SessionEndingCancelEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SessionEndingCancelEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SessionEndingCancelEventArgs</a>
  */
-public class SessionEndingCancelEventArgs extends NetObject  {
+public class SessionEndingCancelEventArgs extends CancelEventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.SessionEndingCancelEventArgs
+     */
     public static final String className = "System.Windows.SessionEndingCancelEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SessionEndingCancelEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionEndingCancelEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SessionEndingCancelEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionEndingCancelEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class SessionEndingCancelEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SessionEndingCancelEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -117,26 +139,6 @@ public class SessionEndingCancelEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ReasonSessionEnding getReasonSessionEnding() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

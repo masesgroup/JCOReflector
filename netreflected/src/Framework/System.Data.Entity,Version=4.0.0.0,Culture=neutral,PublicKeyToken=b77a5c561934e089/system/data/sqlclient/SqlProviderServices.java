@@ -38,26 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.common.DbConnection;
-import system.data.common.DbCommandDefinition;
-import system.data.common.commandtrees.DbCommandTree;
-import system.data.common.DbCommand;
-import system.data.common.DbProviderManifest;
-import system.data.spatial.DbSpatialDataReader;
-import system.data.common.DbDataReader;
-import system.data.spatial.DbSpatialServices;
-import system.data.metadata.edm.StoreItemCollection;
+import system.data.common.DbProviderServices;
 import system.data.sqlclient.SqlProviderServices;
 
 
 /**
  * The base .NET class managing System.Data.SqlClient.SqlProviderServices, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlProviderServices" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlProviderServices</a>
  */
-public class SqlProviderServices extends NetObject  {
+public class SqlProviderServices extends DbProviderServices  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlProviderServices
+     */
     public static final String className = "System.Data.SqlClient.SqlProviderServices";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +117,9 @@ public class SqlProviderServices extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlProviderServices}, a cast assert is made to check if types are compatible.
+     */
     public static SqlProviderServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlProviderServices(from.getJCOInstance());
@@ -118,105 +127,23 @@ public class SqlProviderServices extends NetObject  {
 
     // Constructors section
     
+    public SqlProviderServices() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public DbCommandDefinition CreateCommandDefinition(DbCommandTree commandTree) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException, system.data.MappingException, system.data.MetadataException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateCommandDefinition = (JCObject)classInstance.Invoke("CreateCommandDefinition", commandTree == null ? null : commandTree.getJCOInstance());
-            return new DbCommandDefinition(objCreateCommandDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbCommandDefinition CreateCommandDefinition(DbCommand prototype) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateCommandDefinition = (JCObject)classInstance.Invoke("CreateCommandDefinition", prototype == null ? null : prototype.getJCOInstance());
-            return new DbCommandDefinition(objCreateCommandDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbCommandDefinition CreateCommandDefinition(DbProviderManifest providerManifest, DbCommandTree commandTree) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateCommandDefinition = (JCObject)classInstance.Invoke("CreateCommandDefinition", providerManifest == null ? null : providerManifest.getJCOInstance(), commandTree == null ? null : commandTree.getJCOInstance());
-            return new DbCommandDefinition(objCreateCommandDefinition);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbProviderManifest GetProviderManifest(java.lang.String manifestToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetProviderManifest = (JCObject)classInstance.Invoke("GetProviderManifest", manifestToken);
-            return new DbProviderManifest(objGetProviderManifest);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbSpatialDataReader GetSpatialDataReader(DbDataReader fromReader, java.lang.String manifestToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSpatialDataReader = (JCObject)classInstance.Invoke("GetSpatialDataReader", fromReader == null ? null : fromReader.getJCOInstance(), manifestToken);
-            return new DbSpatialDataReader(objGetSpatialDataReader);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DbSpatialServices GetSpatialServices(java.lang.String manifestToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetSpatialServices = (JCObject)classInstance.Invoke("GetSpatialServices", manifestToken);
-            return new DbSpatialServices(objGetSpatialServices);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String CreateDatabaseScript(java.lang.String providerManifestToken, StoreItemCollection storeItemCollection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("CreateDatabaseScript", providerManifestToken, storeItemCollection == null ? null : storeItemCollection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetProviderManifestToken(DbConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetProviderManifestToken", connection == null ? null : connection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public static SqlProviderServices getSingletonInstance() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SqlProviderServices getSingletonInstance() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SingletonInstance");
+            JCObject val = (JCObject)classInstance.Get("SingletonInstance");
             return new SqlProviderServices(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.activities.presentation.view.ViewStateChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ViewStateChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.ViewStateChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.ViewStateChangedEventHandler</a>
+ */
 public interface IViewStateChangedEventHandler {
     public void Invoke(NetObject sender, ViewStateChangedEventArgs e);
 }

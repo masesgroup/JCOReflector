@@ -54,12 +54,27 @@ import system.xml.serialization.XmlSchemas;
 
 /**
  * The base .NET class managing System.Web.Services.Description.ServiceDescriptionImporter, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter</a>
  */
 public class ServiceDescriptionImporter extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Description.ServiceDescriptionImporter
+     */
     public static final String className = "System.Web.Services.Description.ServiceDescriptionImporter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class ServiceDescriptionImporter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceDescriptionImporter}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceDescriptionImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceDescriptionImporter(from.getJCOInstance());
@@ -120,7 +137,6 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     // Constructors section
     
-
     public ServiceDescriptionImporter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NullReferenceException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file

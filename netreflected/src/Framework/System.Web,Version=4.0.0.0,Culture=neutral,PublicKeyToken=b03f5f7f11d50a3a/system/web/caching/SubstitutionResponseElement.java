@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.caching.ResponseElement;
 import system.web.HttpResponseSubstitutionCallback;
 
 
 /**
  * The base .NET class managing System.Web.Caching.SubstitutionResponseElement, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.SubstitutionResponseElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.SubstitutionResponseElement</a>
  */
-public class SubstitutionResponseElement extends NetObject  {
+public class SubstitutionResponseElement extends ResponseElement  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Caching.SubstitutionResponseElement
+     */
     public static final String className = "System.Web.Caching.SubstitutionResponseElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SubstitutionResponseElement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SubstitutionResponseElement}, a cast assert is made to check if types are compatible.
+     */
     public static SubstitutionResponseElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SubstitutionResponseElement(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SubstitutionResponseElement extends NetObject  {
 
     // Constructors section
     
+    public SubstitutionResponseElement() throws Throwable {
+    }
 
     public SubstitutionResponseElement(HttpResponseSubstitutionCallback callback) throws Throwable, system.ArgumentNullException {
         try {
@@ -119,6 +139,7 @@ public class SubstitutionResponseElement extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

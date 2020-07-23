@@ -46,12 +46,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Windows.Documents.TextRange, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.TextRange" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.TextRange</a>
  */
 public class TextRange extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Documents.TextRange
+     */
     public static final String className = "System.Windows.Documents.TextRange";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class TextRange extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextRange}, a cast assert is made to check if types are compatible.
+     */
     public static TextRange cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TextRange(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class TextRange extends NetObject  {
 
     // Constructors section
     
+    public TextRange() throws Throwable {
+    }
 
     public TextRange(TextPointer position1, TextPointer position2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
@@ -122,6 +141,7 @@ public class TextRange extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

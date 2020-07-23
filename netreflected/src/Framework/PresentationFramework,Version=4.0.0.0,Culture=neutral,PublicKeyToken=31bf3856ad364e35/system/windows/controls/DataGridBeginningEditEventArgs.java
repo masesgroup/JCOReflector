@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.controls.DataGridColumn;
 import system.windows.controls.DataGridRow;
 import system.windows.RoutedEventArgs;
@@ -45,12 +46,27 @@ import system.windows.RoutedEventArgs;
 
 /**
  * The base .NET class managing System.Windows.Controls.DataGridBeginningEditEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridBeginningEditEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridBeginningEditEventArgs</a>
  */
-public class DataGridBeginningEditEventArgs extends NetObject  {
+public class DataGridBeginningEditEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.DataGridBeginningEditEventArgs
+     */
     public static final String className = "System.Windows.Controls.DataGridBeginningEditEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class DataGridBeginningEditEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridBeginningEditEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridBeginningEditEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridBeginningEditEventArgs(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class DataGridBeginningEditEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridBeginningEditEventArgs() throws Throwable {
+    }
 
     public DataGridBeginningEditEventArgs(DataGridColumn column, DataGridRow row, RoutedEventArgs editingEventArgs) throws Throwable {
         try {
@@ -121,6 +141,7 @@ public class DataGridBeginningEditEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

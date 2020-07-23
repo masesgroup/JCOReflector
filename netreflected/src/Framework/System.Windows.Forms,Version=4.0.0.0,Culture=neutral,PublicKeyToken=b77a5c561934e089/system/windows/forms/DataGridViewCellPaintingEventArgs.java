@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.HandledEventArgs;
 import system.windows.forms.DataGridView;
 import system.drawing.Graphics;
 import system.drawing.Rectangle;
@@ -49,12 +50,27 @@ import system.windows.forms.DataGridViewPaintParts;
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewCellPaintingEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs</a>
  */
-public class DataGridViewCellPaintingEventArgs extends NetObject  {
+public class DataGridViewCellPaintingEventArgs extends HandledEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewCellPaintingEventArgs
+     */
     public static final String className = "System.Windows.Forms.DataGridViewCellPaintingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class DataGridViewCellPaintingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewCellPaintingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewCellPaintingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewCellPaintingEventArgs(from.getJCOInstance());
@@ -115,6 +133,8 @@ public class DataGridViewCellPaintingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewCellPaintingEventArgs() throws Throwable {
+    }
 
     public DataGridViewCellPaintingEventArgs(DataGridView dataGridView, Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, int columnIndex, DataGridViewElementStates cellState, NetObject value, NetObject formattedValue, java.lang.String errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
@@ -125,6 +145,7 @@ public class DataGridViewCellPaintingEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -164,26 +185,6 @@ public class DataGridViewCellPaintingEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getHandled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Handled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHandled(boolean Handled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Handled", Handled);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

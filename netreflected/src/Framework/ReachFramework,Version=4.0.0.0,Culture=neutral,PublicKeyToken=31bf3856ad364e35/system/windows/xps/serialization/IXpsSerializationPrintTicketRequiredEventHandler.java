@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.xps.serialization.XpsSerializationPrintTicketRequiredEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link XpsSerializationPrintTicketRequiredEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventHandler</a>
+ */
 public interface IXpsSerializationPrintTicketRequiredEventHandler {
     public void Invoke(NetObject sender, XpsSerializationPrintTicketRequiredEventArgs e);
 }

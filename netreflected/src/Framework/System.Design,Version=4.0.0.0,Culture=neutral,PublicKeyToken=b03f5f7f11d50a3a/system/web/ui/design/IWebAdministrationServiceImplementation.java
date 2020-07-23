@@ -44,12 +44,27 @@ import system.collections.IDictionaryImplementation;
 
 /**
  * The base .NET class managing System.Web.UI.Design.IWebAdministrationService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IWebAdministrationService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IWebAdministrationService</a>
  */
 public class IWebAdministrationServiceImplementation extends NetObject implements IWebAdministrationService {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.IWebAdministrationService
+     */
     public static final String className = "System.Web.UI.Design.IWebAdministrationService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IWebAdministrationServiceImplementation extends NetObject implement
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWebAdministrationService}, a cast assert is made to check if types are compatible.
+     */
     public static IWebAdministrationService ToIWebAdministrationService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWebAdministrationServiceImplementation(from.getJCOInstance());

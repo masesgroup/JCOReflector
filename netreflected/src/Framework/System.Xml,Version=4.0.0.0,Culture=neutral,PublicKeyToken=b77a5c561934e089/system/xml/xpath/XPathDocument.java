@@ -47,12 +47,27 @@ import system.xml.xpath.XPathNavigator;
 
 /**
  * The base .NET class managing System.Xml.XPath.XPathDocument, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XPath.XPathDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XPath.XPathDocument</a>
  */
 public class XPathDocument extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.XPath.XPathDocument
+     */
     public static final String className = "System.Xml.XPath.XPathDocument";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class XPathDocument extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XPathDocument}, a cast assert is made to check if types are compatible.
+     */
     public static XPathDocument cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XPathDocument(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class XPathDocument extends NetObject  {
 
     // Constructors section
     
+    public XPathDocument() throws Throwable {
+    }
 
     public XPathDocument(Stream stream) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.resources.MissingManifestResourceException {
         try {
@@ -173,6 +192,7 @@ public class XPathDocument extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

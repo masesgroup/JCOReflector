@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.compilation.ExpressionBuilder;
 import system.codedom.CodeExpression;
 import system.web.ui.BoundPropertyEntry;
 import system.web.compilation.ExpressionBuilderContext;
@@ -46,12 +47,27 @@ import system.web.ui.Page;
 
 /**
  * The base .NET class managing System.Web.Compilation.RouteValueExpressionBuilder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.RouteValueExpressionBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.RouteValueExpressionBuilder</a>
  */
-public class RouteValueExpressionBuilder extends NetObject  {
+public class RouteValueExpressionBuilder extends ExpressionBuilder  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Compilation.RouteValueExpressionBuilder
+     */
     public static final String className = "System.Web.Compilation.RouteValueExpressionBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class RouteValueExpressionBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RouteValueExpressionBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static RouteValueExpressionBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RouteValueExpressionBuilder(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class RouteValueExpressionBuilder extends NetObject  {
 
     // Constructors section
     
-
     public RouteValueExpressionBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,31 +177,10 @@ public class RouteValueExpressionBuilder extends NetObject  {
         }
     }
 
-    public NetObject ParseExpression(java.lang.String expression, NetType propertyType, ExpressionBuilderContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objParseExpression = (JCObject)classInstance.Invoke("ParseExpression", expression, propertyType == null ? null : propertyType.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            return new NetObject(objParseExpression);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getSupportsEvaluate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SupportsEvaluate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

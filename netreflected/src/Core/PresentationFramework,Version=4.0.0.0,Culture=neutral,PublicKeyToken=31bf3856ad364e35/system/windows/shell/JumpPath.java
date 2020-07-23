@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.shell.JumpItem;
 
 
 /**
  * The base .NET class managing System.Windows.Shell.JumpPath, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Shell.JumpPath" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Shell.JumpPath</a>
  */
-public class JumpPath extends NetObject  {
+public class JumpPath extends JumpItem  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Shell.JumpPath
+     */
     public static final String className = "System.Windows.Shell.JumpPath";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class JumpPath extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JumpPath}, a cast assert is made to check if types are compatible.
+     */
     public static JumpPath cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new JumpPath(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class JumpPath extends NetObject  {
 
     // Constructors section
     
-
     public JumpPath() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -127,26 +144,6 @@ public class JumpPath extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getCustomCategory() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("CustomCategory");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCustomCategory(java.lang.String CustomCategory) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("CustomCategory", CustomCategory);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -44,12 +44,27 @@ import system.web.ui.Control;
 
 /**
  * The base .NET class managing System.Web.UI.CompiledTemplateBuilder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.CompiledTemplateBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.CompiledTemplateBuilder</a>
  */
 public class CompiledTemplateBuilder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.CompiledTemplateBuilder
+     */
     public static final String className = "System.Web.UI.CompiledTemplateBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CompiledTemplateBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompiledTemplateBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static CompiledTemplateBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompiledTemplateBuilder(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class CompiledTemplateBuilder extends NetObject  {
 
     // Constructors section
     
+    public CompiledTemplateBuilder() throws Throwable {
+    }
 
     public CompiledTemplateBuilder(BuildTemplateMethod buildTemplateMethod) throws Throwable {
         try {
@@ -120,6 +139,7 @@ public class CompiledTemplateBuilder extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

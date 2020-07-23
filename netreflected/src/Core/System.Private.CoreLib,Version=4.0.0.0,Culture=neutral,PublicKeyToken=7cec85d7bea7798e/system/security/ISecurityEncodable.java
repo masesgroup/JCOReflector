@@ -42,12 +42,29 @@ import system.security.SecurityElement;
 
 /**
  * The base .NET class managing System.Security.ISecurityEncodable, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityEncodable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityEncodable</a>
  */
 public interface ISecurityEncodable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Security.ISecurityEncodable
+     */
+    public static final String className = "System.Security.ISecurityEncodable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISecurityEncodable}, a cast assert is made to check if types are compatible.
+     */
     public static ISecurityEncodable ToISecurityEncodable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Security.ISecurityEncodable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISecurityEncodableImplementation(from.getJCOInstance());
     }

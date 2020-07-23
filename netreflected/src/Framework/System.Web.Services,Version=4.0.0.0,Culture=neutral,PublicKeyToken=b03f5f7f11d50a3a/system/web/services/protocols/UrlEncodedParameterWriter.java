@@ -38,20 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.services.protocols.MimeParameterWriter;
 import system.web.services.protocols.LogicalMethodInfo;
-import system.net.WebRequest;
-import system.io.Stream;
 import system.text.Encoding;
 
 
 /**
  * The base .NET class managing System.Web.Services.Protocols.UrlEncodedParameterWriter, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.UrlEncodedParameterWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.UrlEncodedParameterWriter</a>
  */
-public class UrlEncodedParameterWriter extends NetObject  {
+public class UrlEncodedParameterWriter extends MimeParameterWriter  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Protocols.UrlEncodedParameterWriter
+     */
     public static final String className = "System.Web.Services.Protocols.UrlEncodedParameterWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +118,9 @@ public class UrlEncodedParameterWriter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UrlEncodedParameterWriter}, a cast assert is made to check if types are compatible.
+     */
     public static UrlEncodedParameterWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UrlEncodedParameterWriter(from.getJCOInstance());
@@ -112,6 +128,8 @@ public class UrlEncodedParameterWriter extends NetObject  {
 
     // Constructors section
     
+    public UrlEncodedParameterWriter() throws Throwable {
+    }
 
     
     // Methods section
@@ -127,33 +145,6 @@ public class UrlEncodedParameterWriter extends NetObject  {
         }
     }
 
-    public NetObject[] GetInitializers(LogicalMethodInfo[] methodInfos) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (Object)toObjectFromArray(methodInfos));
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetObject(resultingObject));
-            }
-            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetRequestUrl(java.lang.String url, NetObject[] parameters) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetRequestUrl", url, toObjectFromArray(parameters));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Initialize(NetObject initializer) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,61 +155,10 @@ public class UrlEncodedParameterWriter extends NetObject  {
         }
     }
 
-    public void InitializeRequest(WebRequest request, NetObject[] values) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InitializeRequest", request == null ? null : request.getJCOInstance(), toObjectFromArray(values));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteRequest(Stream requestStream, NetObject[] values) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteRequest", requestStream == null ? null : requestStream.getJCOInstance(), toObjectFromArray(values));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getUsesWriteRequest() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("UsesWriteRequest");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Encoding getRequestEncoding() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RequestEncoding");
-            return new Encoding(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequestEncoding(Encoding RequestEncoding) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RequestEncoding", RequestEncoding == null ? null : RequestEncoding.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

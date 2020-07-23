@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Data.SqlClient.SqlBulkCopyOptions, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlBulkCopyOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlBulkCopyOptions</a>
  */
 public class SqlBulkCopyOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlBulkCopyOptions
+     */
     public static final String className = "System.Data.SqlClient.SqlBulkCopyOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class SqlBulkCopyOptions extends NetObject  {
 
     // Flags management section
 
-    public SqlBulkCopyOptions add(SqlBulkCopyOptions val) throws Throwable {
+    public final SqlBulkCopyOptions add(SqlBulkCopyOptions val) throws Throwable {
         return new SqlBulkCopyOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SqlBulkCopyOptions remove(SqlBulkCopyOptions val) throws Throwable {
+    public final SqlBulkCopyOptions remove(SqlBulkCopyOptions val) throws Throwable {
         return new SqlBulkCopyOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SqlBulkCopyOptions val) throws Throwable {
+    public final boolean is(SqlBulkCopyOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SqlBulkCopyOptions val) throws Throwable {
+    public final boolean has(SqlBulkCopyOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

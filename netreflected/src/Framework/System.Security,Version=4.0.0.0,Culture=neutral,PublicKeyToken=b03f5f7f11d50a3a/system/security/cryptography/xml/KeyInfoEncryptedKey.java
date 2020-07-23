@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.xml.KeyInfoClause;
 import system.security.cryptography.xml.EncryptedKey;
 import system.xml.XmlElement;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.Xml.KeyInfoEncryptedKey, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfoEncryptedKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfoEncryptedKey</a>
  */
-public class KeyInfoEncryptedKey extends NetObject  {
+public class KeyInfoEncryptedKey extends KeyInfoClause  {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Xml.KeyInfoEncryptedKey
+     */
     public static final String className = "System.Security.Cryptography.Xml.KeyInfoEncryptedKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class KeyInfoEncryptedKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyInfoEncryptedKey}, a cast assert is made to check if types are compatible.
+     */
     public static KeyInfoEncryptedKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new KeyInfoEncryptedKey(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class KeyInfoEncryptedKey extends NetObject  {
 
     // Constructors section
     
-
     public KeyInfoEncryptedKey() throws Throwable {
         try {
             // add reference to assemblyName.dll file

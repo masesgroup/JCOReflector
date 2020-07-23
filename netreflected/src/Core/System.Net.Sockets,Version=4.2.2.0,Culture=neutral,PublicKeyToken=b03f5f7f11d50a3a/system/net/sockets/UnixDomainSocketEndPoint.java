@@ -45,12 +45,27 @@ import system.net.sockets.AddressFamily;
 
 /**
  * The base .NET class managing System.Net.Sockets.UnixDomainSocketEndPoint, System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UnixDomainSocketEndPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UnixDomainSocketEndPoint</a>
  */
-public class UnixDomainSocketEndPoint extends NetObject  {
+public class UnixDomainSocketEndPoint extends EndPoint  {
+    /**
+     * Fully assembly qualified name: System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Sockets
+     */
     public static final String assemblyShortName = "System.Net.Sockets";
+    /**
+     * Qualified class name: System.Net.Sockets.UnixDomainSocketEndPoint
+     */
     public static final String className = "System.Net.Sockets.UnixDomainSocketEndPoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class UnixDomainSocketEndPoint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnixDomainSocketEndPoint}, a cast assert is made to check if types are compatible.
+     */
     public static UnixDomainSocketEndPoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UnixDomainSocketEndPoint(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class UnixDomainSocketEndPoint extends NetObject  {
 
     // Constructors section
     
+    public UnixDomainSocketEndPoint() throws Throwable {
+    }
 
     public UnixDomainSocketEndPoint(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
         try {
@@ -121,6 +140,7 @@ public class UnixDomainSocketEndPoint extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -152,17 +172,6 @@ public class UnixDomainSocketEndPoint extends NetObject  {
     
     // Properties section
     
-    public AddressFamily getAddressFamily() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AddressFamily");
-            return new AddressFamily(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

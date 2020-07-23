@@ -50,12 +50,27 @@ import system.directoryservices.activedirectory.ReplicationSpan;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.ReplicationConnection, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationConnection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationConnection</a>
  */
 public class ReplicationConnection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.ReplicationConnection
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.ReplicationConnection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class ReplicationConnection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReplicationConnection}, a cast assert is made to check if types are compatible.
+     */
     public static ReplicationConnection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ReplicationConnection(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class ReplicationConnection extends NetObject  {
 
     // Constructors section
     
+    public ReplicationConnection() throws Throwable {
+    }
 
     public ReplicationConnection(DirectoryContext context, java.lang.String name, DirectoryServer sourceServer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.ObjectDisposedException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.threading.SynchronizationLockException {
         try {
@@ -156,6 +175,7 @@ public class ReplicationConnection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,19 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.DependencyObject;
+import system.windows.media.PointHitTestResult;
 import system.windows.documents.Adorner;
-import system.windows.Point;
 
 
 /**
  * The base .NET class managing System.Windows.Media.AdornerHitTestResult, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.AdornerHitTestResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.AdornerHitTestResult</a>
  */
-public class AdornerHitTestResult extends NetObject  {
+public class AdornerHitTestResult extends PointHitTestResult  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Media.AdornerHitTestResult
+     */
     public static final String className = "System.Windows.Media.AdornerHitTestResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +117,9 @@ public class AdornerHitTestResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AdornerHitTestResult}, a cast assert is made to check if types are compatible.
+     */
     public static AdornerHitTestResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AdornerHitTestResult(from.getJCOInstance());
@@ -111,6 +127,10 @@ public class AdornerHitTestResult extends NetObject  {
 
     // Constructors section
     
+    public AdornerHitTestResult() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -119,34 +139,12 @@ public class AdornerHitTestResult extends NetObject  {
     
     // Properties section
     
-    public DependencyObject getVisualHit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("VisualHit");
-            return new DependencyObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Adorner getAdorner() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Adorner");
             return new Adorner(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Point getPointHit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PointHit");
-            return new Point(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

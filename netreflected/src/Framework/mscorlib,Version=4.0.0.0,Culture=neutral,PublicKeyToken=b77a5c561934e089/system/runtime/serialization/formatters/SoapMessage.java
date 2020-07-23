@@ -43,12 +43,27 @@ import system.runtime.remoting.messaging.Header;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.Formatters.SoapMessage, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.SoapMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.SoapMessage</a>
  */
 public class SoapMessage extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.Formatters.SoapMessage
+     */
     public static final String className = "System.Runtime.Serialization.Formatters.SoapMessage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SoapMessage extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapMessage}, a cast assert is made to check if types are compatible.
+     */
     public static SoapMessage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapMessage(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SoapMessage extends NetObject  {
 
     // Constructors section
     
-
     public SoapMessage() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -128,7 +144,7 @@ public class SoapMessage extends NetObject  {
     
     // Properties section
     
-    public NetObject[] getParamValues() throws Throwable {
+    public final NetObject[] getParamValues() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -155,7 +171,7 @@ public class SoapMessage extends NetObject  {
         }
     }
 
-    public Header[] getHeaders() throws Throwable {
+    public final Header[] getHeaders() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -251,7 +267,7 @@ public class SoapMessage extends NetObject  {
         }
     }
 
-    public NetType[] getParamTypes() throws Throwable {
+    public final NetType[] getParamTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

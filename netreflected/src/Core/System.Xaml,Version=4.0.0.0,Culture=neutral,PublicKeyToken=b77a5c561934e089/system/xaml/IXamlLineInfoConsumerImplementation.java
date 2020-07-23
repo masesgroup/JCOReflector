@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Xaml.IXamlLineInfoConsumer, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IXamlLineInfoConsumer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IXamlLineInfoConsumer</a>
  */
 public class IXamlLineInfoConsumerImplementation extends NetObject implements IXamlLineInfoConsumer {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.IXamlLineInfoConsumer
+     */
     public static final String className = "System.Xaml.IXamlLineInfoConsumer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IXamlLineInfoConsumerImplementation extends NetObject implements IX
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXamlLineInfoConsumer}, a cast assert is made to check if types are compatible.
+     */
     public static IXamlLineInfoConsumer ToIXamlLineInfoConsumer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXamlLineInfoConsumerImplementation(from.getJCOInstance());

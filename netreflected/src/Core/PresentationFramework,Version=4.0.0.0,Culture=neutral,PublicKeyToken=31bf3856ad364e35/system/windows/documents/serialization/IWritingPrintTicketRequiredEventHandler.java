@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.documents.serialization.WritingPrintTicketRequiredEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WritingPrintTicketRequiredEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler</a>
+ */
 public interface IWritingPrintTicketRequiredEventHandler {
     public void Invoke(NetObject sender, WritingPrintTicketRequiredEventArgs e);
 }

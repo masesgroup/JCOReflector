@@ -48,12 +48,27 @@ import system.reflection.PropertyInfo;
 
 /**
  * The base .NET class managing System.Reflection.RuntimeReflectionExtensions, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.RuntimeReflectionExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.RuntimeReflectionExtensions</a>
  */
 public class RuntimeReflectionExtensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.RuntimeReflectionExtensions
+     */
     public static final String className = "System.Reflection.RuntimeReflectionExtensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class RuntimeReflectionExtensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuntimeReflectionExtensions}, a cast assert is made to check if types are compatible.
+     */
     public static RuntimeReflectionExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RuntimeReflectionExtensions(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class RuntimeReflectionExtensions extends NetObject  {
 
     // Constructors section
     
+    public RuntimeReflectionExtensions() throws Throwable {
+    }
 
     
     // Methods section

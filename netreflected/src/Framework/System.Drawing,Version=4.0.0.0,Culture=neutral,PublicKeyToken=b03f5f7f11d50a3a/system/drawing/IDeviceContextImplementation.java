@@ -38,16 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
  * The base .NET class managing System.Drawing.IDeviceContext, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.IDeviceContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.IDeviceContext</a>
  */
 public class IDeviceContextImplementation extends NetObject implements IDeviceContext {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.IDeviceContext
+     */
     public static final String className = "System.Drawing.IDeviceContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +112,9 @@ public class IDeviceContextImplementation extends NetObject implements IDeviceCo
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDeviceContext}, a cast assert is made to check if types are compatible.
+     */
     public static IDeviceContext ToIDeviceContext(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDeviceContextImplementation(from.getJCOInstance());
@@ -103,6 +122,26 @@ public class IDeviceContextImplementation extends NetObject implements IDeviceCo
 
     // Methods section
     
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReleaseHdc() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReleaseHdc");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -42,12 +42,27 @@ import system.io.FileSystemEventArgs;
 import system.io.IFileSystemEventHandler;
 /**
  * The base .NET class managing System.IO.FileSystemEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileSystemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileSystemEventHandler</a>
  */
 public class FileSystemEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.IO.FileSystemEventHandler
+     */
     public static final String className = "System.IO.FileSystemEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IFileSystemEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class FileSystemEventHandler extends JCVoidDelegate implements IJCVoidEve
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, FileSystemEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, FileSystemEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class FileSystemEventHandler extends JCVoidDelegate implements IJCVoidEve
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, FileSystemEventArgs e) {
     }
 }

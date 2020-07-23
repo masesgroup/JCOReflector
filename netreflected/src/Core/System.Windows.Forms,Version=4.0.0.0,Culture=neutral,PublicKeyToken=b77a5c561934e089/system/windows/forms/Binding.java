@@ -53,12 +53,27 @@ import system.windows.forms.ConvertEventHandler;
 
 /**
  * The base .NET class managing System.Windows.Forms.Binding, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Binding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Binding</a>
  */
 public class Binding extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.Binding
+     */
     public static final String className = "System.Windows.Forms.Binding";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +126,9 @@ public class Binding extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Binding}, a cast assert is made to check if types are compatible.
+     */
     public static Binding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Binding(from.getJCOInstance());
@@ -119,6 +136,8 @@ public class Binding extends NetObject  {
 
     // Constructors section
     
+    public Binding() throws Throwable {
+    }
 
     public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.RankException, system.MissingMethodException {
         try {
@@ -179,6 +198,7 @@ public class Binding extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

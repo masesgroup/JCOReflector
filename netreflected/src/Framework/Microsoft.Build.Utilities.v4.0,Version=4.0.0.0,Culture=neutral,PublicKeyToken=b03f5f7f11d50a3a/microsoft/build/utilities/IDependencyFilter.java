@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DependencyFilter}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.DependencyFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.DependencyFilter</a>
+ */
 public interface IDependencyFilter {
     public boolean Invoke(java.lang.String fullPath);
 }

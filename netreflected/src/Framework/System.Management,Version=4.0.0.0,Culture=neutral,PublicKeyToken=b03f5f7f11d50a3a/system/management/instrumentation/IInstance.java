@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Management.Instrumentation.IInstance, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.Instrumentation.IInstance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.Instrumentation.IInstance</a>
  */
 public interface IInstance extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Management
+     */
+    public static final String assemblyShortName = "System.Management";
+    /**
+     * Qualified class name: System.Management.Instrumentation.IInstance
+     */
+    public static final String className = "System.Management.Instrumentation.IInstance";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInstance}, a cast assert is made to check if types are compatible.
+     */
     public static IInstance ToIInstance(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Management.Instrumentation.IInstance, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Management"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IInstanceImplementation(from.getJCOInstance());
     }

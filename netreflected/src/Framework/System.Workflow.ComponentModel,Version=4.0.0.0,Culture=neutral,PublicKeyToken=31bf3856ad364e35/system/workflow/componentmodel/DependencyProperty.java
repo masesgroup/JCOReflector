@@ -44,12 +44,27 @@ import system.workflow.componentmodel.PropertyMetadata;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.DependencyProperty, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyProperty</a>
  */
 public class DependencyProperty extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.DependencyProperty
+     */
     public static final String className = "System.Workflow.ComponentModel.DependencyProperty";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DependencyProperty extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DependencyProperty}, a cast assert is made to check if types are compatible.
+     */
     public static DependencyProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DependencyProperty(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class DependencyProperty extends NetObject  {
 
     // Constructors section
     
+    public DependencyProperty() throws Throwable {
+    }
+
+
 
     
     // Methods section

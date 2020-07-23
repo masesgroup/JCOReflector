@@ -44,12 +44,27 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Messaging.MessageQueueCriteria, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueCriteria" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueCriteria</a>
  */
 public class MessageQueueCriteria extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.MessageQueueCriteria
+     */
     public static final String className = "System.Messaging.MessageQueueCriteria";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class MessageQueueCriteria extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageQueueCriteria}, a cast assert is made to check if types are compatible.
+     */
     public static MessageQueueCriteria cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MessageQueueCriteria(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class MessageQueueCriteria extends NetObject  {
 
     // Constructors section
     
-
     public MessageQueueCriteria() throws Throwable {
         try {
             // add reference to assemblyName.dll file

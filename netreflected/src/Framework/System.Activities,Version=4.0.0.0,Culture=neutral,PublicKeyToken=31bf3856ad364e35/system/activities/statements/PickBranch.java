@@ -43,12 +43,27 @@ import system.activities.Activity;
 
 /**
  * The base .NET class managing System.Activities.Statements.PickBranch, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.PickBranch" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.PickBranch</a>
  */
 public class PickBranch extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Statements.PickBranch
+     */
     public static final String className = "System.Activities.Statements.PickBranch";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class PickBranch extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PickBranch}, a cast assert is made to check if types are compatible.
+     */
     public static PickBranch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PickBranch(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class PickBranch extends NetObject  {
 
     // Constructors section
     
-
     public PickBranch() throws Throwable {
         try {
             // add reference to assemblyName.dll file

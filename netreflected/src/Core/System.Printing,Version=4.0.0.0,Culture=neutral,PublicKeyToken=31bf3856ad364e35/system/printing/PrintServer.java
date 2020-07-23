@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.printing.PrintSystemObject;
 import system.printing.PrintSystemDesiredAccess;
 import system.printing.PrintServerIndexedProperty;
 import system.printing.PrintQueue;
@@ -48,18 +49,32 @@ import system.printing.PrintQueueCollection;
 import system.printing.EnumeratedPrintQueueTypes;
 import system.printing.PrintQueueIndexedProperty;
 import system.printing.PrintServerEventLoggingTypes;
-import system.printing.PrintSystemObject;
 import system.threading.ThreadPriority;
 
 
 /**
  * The base .NET class managing System.Printing.PrintServer, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintServer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintServer</a>
  */
-public class PrintServer extends NetObject  {
+public class PrintServer extends PrintSystemObject  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Printing.PrintServer
+     */
     public static final String className = "System.Printing.PrintServer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class PrintServer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintServer}, a cast assert is made to check if types are compatible.
+     */
     public static PrintServer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrintServer(from.getJCOInstance());
@@ -120,7 +137,6 @@ public class PrintServer extends NetObject  {
 
     // Constructors section
     
-
     public PrintServer() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -247,11 +263,33 @@ public class PrintServer extends NetObject  {
         }
     }
 
+    public PrintQueue GetPrintQueue(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetPrintQueue = (JCObject)classInstance.Invoke("GetPrintQueue", dupParam0, dupParam1);
+            return new PrintQueue(objGetPrintQueue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrintQueue InstallPrintQueue(java.lang.String printQueueName, java.lang.String driverName, java.lang.String[] portNames, java.lang.String printProcessorName, PrintPropertyDictionary initialParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ArrayTypeMismatchException, system.printing.PrintQueueException, system.printing.PrintCommitAttributesException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, initialParameters == null ? null : initialParameters.getJCOInstance());
+            return new PrintQueue(objInstallPrintQueue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintQueue InstallPrintQueue(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, java.lang.String dupParam3, PrintPropertyDictionary dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ArrayTypeMismatchException, system.printing.PrintQueueException, system.printing.PrintCommitAttributesException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new PrintQueue(objInstallPrintQueue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -269,6 +307,17 @@ public class PrintServer extends NetObject  {
         }
     }
 
+    public PrintQueue InstallPrintQueue(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, java.lang.String dupParam3, PrintQueueAttributes dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.printing.PrintQueueException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            return new PrintQueue(objInstallPrintQueue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrintQueue InstallPrintQueue(java.lang.String printQueueName, java.lang.String driverName, java.lang.String[] portNames, java.lang.String printProcessorName, PrintQueueAttributes printQueueAttributes, PrintQueueStringProperty printQueueProperty, int printQueuePriority, int printQueueDefaultPriority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.AccessViolationException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -280,11 +329,33 @@ public class PrintServer extends NetObject  {
         }
     }
 
+    public PrintQueue InstallPrintQueue(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, java.lang.String dupParam3, PrintQueueAttributes dupParam4, PrintQueueStringProperty dupParam5, int dupParam6, int dupParam7) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.AccessViolationException, system.globalization.CultureNotFoundException, system.printing.PrintQueueException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7);
+            return new PrintQueue(objInstallPrintQueue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrintQueue InstallPrintQueue(java.lang.String printQueueName, java.lang.String driverName, java.lang.String[] portNames, java.lang.String printProcessorName, PrintQueueAttributes printQueueAttributes, java.lang.String printQueueShareName, java.lang.String printQueueComment, java.lang.String printQueueLocation, java.lang.String printQueueSeparatorFile, int printQueuePriority, int printQueueDefaultPriority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.printing.PrintQueueException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", printQueueName, driverName, portNames, printProcessorName, printQueueAttributes == null ? null : printQueueAttributes.getJCOInstance(), printQueueShareName, printQueueComment, printQueueLocation, printQueueSeparatorFile, printQueuePriority, printQueueDefaultPriority);
+            return new PrintQueue(objInstallPrintQueue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintQueue InstallPrintQueue(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, java.lang.String dupParam3, PrintQueueAttributes dupParam4, java.lang.String dupParam5, java.lang.String dupParam6, java.lang.String dupParam7, java.lang.String dupParam8, int dupParam9, int dupParam10) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.printing.PrintQueueException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInstallPrintQueue = (JCObject)classInstance.Invoke("InstallPrintQueue", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6, dupParam7, dupParam8, dupParam9, dupParam10);
             return new PrintQueue(objInstallPrintQueue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -346,6 +417,17 @@ public class PrintServer extends NetObject  {
         }
     }
 
+    public PrintQueueCollection GetPrintQueues(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (Object)dupParam0);
+            return new PrintQueueCollection(objGetPrintQueues);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrintQueueCollection GetPrintQueues(java.lang.String[] propertiesFilter, EnumeratedPrintQueueTypes[] enumerationFlag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -357,21 +439,22 @@ public class PrintServer extends NetObject  {
         }
     }
 
-    public void Commit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public PrintQueueCollection GetPrintQueues(JCRefOut dupParam0, EnumeratedPrintQueueTypes[] dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Commit");
+            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", dupParam0, toObjectFromArray(dupParam1));
+            return new PrintQueueCollection(objGetPrintQueues);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public void Commit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Dispose");
+            classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,27 +604,6 @@ public class PrintServer extends NetObject  {
         }
     }
 
-    public PrintPropertyDictionary getPropertiesCollection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("PropertiesCollection");
-            return new PrintPropertyDictionary(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setPropertiesCollection(PrintPropertyDictionary PropertiesCollection) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("PropertiesCollection", PropertiesCollection == null ? null : PropertiesCollection.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PrintServerEventLoggingTypes getEventLog() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -563,17 +625,6 @@ public class PrintServer extends NetObject  {
         }
     }
 
-    public PrintSystemObject getParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new PrintSystemObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getDefaultSpoolDirectory() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -589,26 +640,6 @@ public class PrintServer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultSpoolDirectory", DefaultSpoolDirectory);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

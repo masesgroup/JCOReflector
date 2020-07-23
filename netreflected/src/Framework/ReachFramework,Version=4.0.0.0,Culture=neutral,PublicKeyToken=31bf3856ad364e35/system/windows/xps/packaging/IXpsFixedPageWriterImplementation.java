@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.xps.packaging.IStoryFragmentProvider;
+import system.windows.xps.packaging.IStoryFragmentProviderImplementation;
 import system.windows.xps.packaging.XpsColorContext;
 import system.windows.xps.packaging.XpsFont;
 import system.windows.xps.packaging.XpsImage;
@@ -53,12 +55,27 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.Windows.Xps.Packaging.IXpsFixedPageWriter, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter</a>
  */
 public class IXpsFixedPageWriterImplementation extends NetObject implements IXpsFixedPageWriter {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Packaging.IXpsFixedPageWriter
+     */
     public static final String className = "System.Windows.Xps.Packaging.IXpsFixedPageWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +123,9 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXpsFixedPageWriter}, a cast assert is made to check if types are compatible.
+     */
     public static IXpsFixedPageWriter ToIXpsFixedPageWriter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXpsFixedPageWriterImplementation(from.getJCOInstance());

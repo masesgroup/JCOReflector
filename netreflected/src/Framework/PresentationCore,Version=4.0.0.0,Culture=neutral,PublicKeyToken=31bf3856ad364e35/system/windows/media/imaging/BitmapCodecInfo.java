@@ -44,12 +44,27 @@ import system.Version;
 
 /**
  * The base .NET class managing System.Windows.Media.Imaging.BitmapCodecInfo, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.BitmapCodecInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.BitmapCodecInfo</a>
  */
 public class BitmapCodecInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Imaging.BitmapCodecInfo
+     */
     public static final String className = "System.Windows.Media.Imaging.BitmapCodecInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class BitmapCodecInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BitmapCodecInfo}, a cast assert is made to check if types are compatible.
+     */
     public static BitmapCodecInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BitmapCodecInfo(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class BitmapCodecInfo extends NetObject  {
 
     // Constructors section
     
+    public BitmapCodecInfo() throws Throwable {
+    }
 
     
     // Methods section

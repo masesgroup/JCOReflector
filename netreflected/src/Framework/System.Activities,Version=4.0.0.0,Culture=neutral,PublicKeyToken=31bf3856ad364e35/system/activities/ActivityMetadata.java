@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.activities.RuntimeArgument;
 import system.activities.Activity;
 import system.activities.ActivityDelegate;
@@ -49,12 +50,27 @@ import system.activities.LocationReferenceEnvironment;
 
 /**
  * The base .NET class managing System.Activities.ActivityMetadata, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityMetadata" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityMetadata</a>
  */
-public class ActivityMetadata extends NetObject  {
+public class ActivityMetadata extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.ActivityMetadata
+     */
     public static final String className = "System.Activities.ActivityMetadata";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class ActivityMetadata extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityMetadata}, a cast assert is made to check if types are compatible.
+     */
     public static ActivityMetadata cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivityMetadata(from.getJCOInstance());
@@ -115,6 +133,10 @@ public class ActivityMetadata extends NetObject  {
 
     // Constructors section
     
+    public ActivityMetadata() throws Throwable {
+    }
+
+
 
     
     // Methods section

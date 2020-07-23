@@ -47,12 +47,27 @@ import system.web.ui.webcontrols.Style;
 
 /**
  * The base .NET class managing System.Web.UI.Design.ITemplateEditingService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ITemplateEditingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ITemplateEditingService</a>
  */
 public class ITemplateEditingServiceImplementation extends NetObject implements ITemplateEditingService {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.ITemplateEditingService
+     */
     public static final String className = "System.Web.UI.Design.ITemplateEditingService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITemplateEditingService}, a cast assert is made to check if types are compatible.
+     */
     public static ITemplateEditingService ToITemplateEditingService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITemplateEditingServiceImplementation(from.getJCOInstance());
@@ -129,11 +146,33 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
         }
     }
 
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            return new ITemplateEditingFrameImplementation(objCreateFrame);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames, Style controlStyle, Style[] templateStyles) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", designer == null ? null : designer.getJCOInstance(), frameName, templateNames, controlStyle == null ? null : controlStyle.getJCOInstance(), toObjectFromArray(templateStyles));
+            return new ITemplateEditingFrameImplementation(objCreateFrame);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4));
             return new ITemplateEditingFrameImplementation(objCreateFrame);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ServiceModel.ServiceHostingEnvironment, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ServiceHostingEnvironment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ServiceHostingEnvironment</a>
  */
 public class ServiceHostingEnvironment extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activation
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activation";
+    /**
+     * Qualified class name: System.ServiceModel.ServiceHostingEnvironment
+     */
     public static final String className = "System.ServiceModel.ServiceHostingEnvironment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ServiceHostingEnvironment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceHostingEnvironment}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceHostingEnvironment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceHostingEnvironment(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ServiceHostingEnvironment extends NetObject  {
 
     // Constructors section
     
+    public ServiceHostingEnvironment() throws Throwable {
+    }
 
     
     // Methods section
@@ -136,21 +155,21 @@ public class ServiceHostingEnvironment extends NetObject  {
     
     // Properties section
     
-    public static boolean getAspNetCompatibilityEnabled() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getAspNetCompatibilityEnabled() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("AspNetCompatibilityEnabled");
+            return (boolean)classInstance.Get("AspNetCompatibilityEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getMultipleSiteBindingsEnabled() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getMultipleSiteBindingsEnabled() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("MultipleSiteBindingsEnabled");
+            return (boolean)classInstance.Get("MultipleSiteBindingsEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

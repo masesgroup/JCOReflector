@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.Handle;
 import system.activities.NativeActivityContext;
-import system.activities.ActivityInstance;
 
 
 /**
  * The base .NET class managing System.Activities.NoPersistHandle, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.NoPersistHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.NoPersistHandle</a>
  */
-public class NoPersistHandle extends NetObject  {
+public class NoPersistHandle extends Handle  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.NoPersistHandle
+     */
     public static final String className = "System.Activities.NoPersistHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class NoPersistHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NoPersistHandle}, a cast assert is made to check if types are compatible.
+     */
     public static NoPersistHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NoPersistHandle(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class NoPersistHandle extends NetObject  {
 
     // Constructors section
     
-
     public NoPersistHandle() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -149,27 +165,6 @@ public class NoPersistHandle extends NetObject  {
     
     // Properties section
     
-    public ActivityInstance getOwner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
-            return new ActivityInstance(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getExecutionPropertyName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ExecutionPropertyName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

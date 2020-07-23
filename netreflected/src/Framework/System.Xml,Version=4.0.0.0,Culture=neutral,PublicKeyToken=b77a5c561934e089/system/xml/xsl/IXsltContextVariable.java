@@ -43,12 +43,29 @@ import system.xml.xpath.XPathResultType;
 
 /**
  * The base .NET class managing System.Xml.Xsl.IXsltContextVariable, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.IXsltContextVariable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.IXsltContextVariable</a>
  */
 public interface IXsltContextVariable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
+    public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.IXsltContextVariable
+     */
+    public static final String className = "System.Xml.Xsl.IXsltContextVariable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXsltContextVariable}, a cast assert is made to check if types are compatible.
+     */
     public static IXsltContextVariable ToIXsltContextVariable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xml.Xsl.IXsltContextVariable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXsltContextVariableImplementation(from.getJCOInstance());
     }

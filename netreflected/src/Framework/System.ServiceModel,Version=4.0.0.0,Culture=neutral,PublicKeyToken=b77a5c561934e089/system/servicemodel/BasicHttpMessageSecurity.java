@@ -44,12 +44,27 @@ import system.servicemodel.security.SecurityAlgorithmSuite;
 
 /**
  * The base .NET class managing System.ServiceModel.BasicHttpMessageSecurity, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.BasicHttpMessageSecurity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.BasicHttpMessageSecurity</a>
  */
 public class BasicHttpMessageSecurity extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.BasicHttpMessageSecurity
+     */
     public static final String className = "System.ServiceModel.BasicHttpMessageSecurity";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class BasicHttpMessageSecurity extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BasicHttpMessageSecurity}, a cast assert is made to check if types are compatible.
+     */
     public static BasicHttpMessageSecurity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BasicHttpMessageSecurity(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class BasicHttpMessageSecurity extends NetObject  {
 
     // Constructors section
     
-
     public BasicHttpMessageSecurity() throws Throwable {
         try {
             // add reference to assemblyName.dll file

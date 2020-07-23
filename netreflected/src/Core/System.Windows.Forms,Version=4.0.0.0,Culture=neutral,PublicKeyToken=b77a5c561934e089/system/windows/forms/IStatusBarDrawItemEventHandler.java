@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.StatusBarDrawItemEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StatusBarDrawItemEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarDrawItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarDrawItemEventHandler</a>
+ */
 public interface IStatusBarDrawItemEventHandler {
     public void Invoke(NetObject sender, StatusBarDrawItemEventArgs sbdevent);
 }

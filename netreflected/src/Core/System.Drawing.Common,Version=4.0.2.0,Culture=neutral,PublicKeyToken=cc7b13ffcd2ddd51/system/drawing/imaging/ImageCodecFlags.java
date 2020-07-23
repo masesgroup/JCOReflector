@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Drawing.Imaging.ImageCodecFlags, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.ImageCodecFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.ImageCodecFlags</a>
  */
 public class ImageCodecFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Imaging.ImageCodecFlags
+     */
     public static final String className = "System.Drawing.Imaging.ImageCodecFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -145,19 +160,19 @@ public class ImageCodecFlags extends NetObject  {
 
     // Flags management section
 
-    public ImageCodecFlags add(ImageCodecFlags val) throws Throwable {
+    public final ImageCodecFlags add(ImageCodecFlags val) throws Throwable {
         return new ImageCodecFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ImageCodecFlags remove(ImageCodecFlags val) throws Throwable {
+    public final ImageCodecFlags remove(ImageCodecFlags val) throws Throwable {
         return new ImageCodecFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ImageCodecFlags val) throws Throwable {
+    public final boolean is(ImageCodecFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ImageCodecFlags val) throws Throwable {
+    public final boolean has(ImageCodecFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

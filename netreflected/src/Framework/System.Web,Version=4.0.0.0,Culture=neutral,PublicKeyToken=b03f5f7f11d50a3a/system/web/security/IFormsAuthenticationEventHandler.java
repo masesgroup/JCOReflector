@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.security.FormsAuthenticationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link FormsAuthenticationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FormsAuthenticationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FormsAuthenticationEventHandler</a>
+ */
 public interface IFormsAuthenticationEventHandler {
     public void Invoke(NetObject sender, FormsAuthenticationEventArgs e);
 }

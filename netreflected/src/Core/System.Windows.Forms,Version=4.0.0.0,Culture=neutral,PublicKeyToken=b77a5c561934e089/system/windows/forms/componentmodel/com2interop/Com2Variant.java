@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Windows.Forms.ComponentModel.Com2Interop.Com2Variant, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.Com2Variant" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.Com2Variant</a>
  */
 public class Com2Variant extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ComponentModel.Com2Interop.Com2Variant
+     */
     public static final String className = "System.Windows.Forms.ComponentModel.Com2Interop.Com2Variant";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class Com2Variant extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Com2Variant}, a cast assert is made to check if types are compatible.
+     */
     public static Com2Variant cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Com2Variant(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class Com2Variant extends NetObject  {
 
     // Constructors section
     
-
     public Com2Variant() throws Throwable {
         try {
             // add reference to assemblyName.dll file

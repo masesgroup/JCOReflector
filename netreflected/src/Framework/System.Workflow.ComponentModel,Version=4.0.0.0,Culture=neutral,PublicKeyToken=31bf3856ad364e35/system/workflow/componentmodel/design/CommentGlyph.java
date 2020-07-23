@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.componentmodel.design.DesignerGlyph;
 import system.drawing.Rectangle;
 import system.workflow.componentmodel.design.ActivityDesigner;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.CommentGlyph, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.CommentGlyph" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.CommentGlyph</a>
  */
-public class CommentGlyph extends NetObject  {
+public class CommentGlyph extends DesignerGlyph  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.CommentGlyph
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.CommentGlyph";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class CommentGlyph extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommentGlyph}, a cast assert is made to check if types are compatible.
+     */
     public static CommentGlyph cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CommentGlyph(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class CommentGlyph extends NetObject  {
 
     // Constructors section
     
-
     public CommentGlyph() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -140,26 +157,6 @@ public class CommentGlyph extends NetObject  {
     
     // Properties section
     
-    public boolean getCanBeActivated() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanBeActivated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getPriority() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Priority");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

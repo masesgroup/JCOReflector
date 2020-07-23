@@ -46,12 +46,27 @@ import system.componentmodel.CollectionChangeEventHandler;
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewRowCollection, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowCollection</a>
  */
 public class DataGridViewRowCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewRowCollection
+     */
     public static final String className = "System.Windows.Forms.DataGridViewRowCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class DataGridViewRowCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewRowCollection}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewRowCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewRowCollection(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class DataGridViewRowCollection extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewRowCollection() throws Throwable {
+    }
 
     public DataGridViewRowCollection(DataGridView dataGridView) throws Throwable {
         try {
@@ -122,6 +141,7 @@ public class DataGridViewRowCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

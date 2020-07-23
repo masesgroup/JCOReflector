@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.xml.serialization.UnreferencedObjectEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link UnreferencedObjectEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler</a>
+ */
 public interface IUnreferencedObjectEventHandler {
     public void Invoke(NetObject sender, UnreferencedObjectEventArgs e);
 }

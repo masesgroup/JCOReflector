@@ -37,22 +37,39 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.remoting.channels.IClientChannelSinkProvider;
+import system.runtime.remoting.channels.IClientChannelSinkProviderImplementation;
 import system.runtime.remoting.channels.IClientChannelSink;
 import system.runtime.remoting.channels.IClientChannelSinkImplementation;
 import system.runtime.remoting.channels.IChannelSender;
 import system.runtime.remoting.channels.IChannelSenderImplementation;
-import system.runtime.remoting.channels.IClientChannelSinkProvider;
-import system.runtime.remoting.channels.IClientChannelSinkProviderImplementation;
 
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IClientFormatterSinkProvider, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientFormatterSinkProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientFormatterSinkProvider</a>
  */
-public interface IClientFormatterSinkProvider extends IJCOBridgeReflected {
-
+public interface IClientFormatterSinkProvider extends IJCOBridgeReflected, IClientChannelSinkProvider {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IClientFormatterSinkProvider
+     */
+    public static final String className = "System.Runtime.Remoting.Channels.IClientFormatterSinkProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IClientFormatterSinkProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IClientFormatterSinkProvider ToIClientFormatterSinkProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Channels.IClientFormatterSinkProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IClientFormatterSinkProviderImplementation(from.getJCOInstance());
     }
@@ -95,16 +112,11 @@ public interface IClientFormatterSinkProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IClientChannelSink CreateSink(IChannelSender channel, java.lang.String url, NetObject remoteChannelData) throws Throwable;
 
 
     
     // Properties section
     
-    public IClientChannelSinkProvider getNext() throws Throwable;
-
-    public void setNext(IClientChannelSinkProvider Next) throws Throwable;
-
 
 
     // Instance Events section

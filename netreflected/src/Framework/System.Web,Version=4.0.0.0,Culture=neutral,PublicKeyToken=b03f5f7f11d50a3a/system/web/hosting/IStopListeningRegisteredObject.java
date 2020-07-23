@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.web.hosting.IRegisteredObject;
+import system.web.hosting.IRegisteredObjectImplementation;
 
 
 /**
  * The base .NET class managing System.Web.Hosting.IStopListeningRegisteredObject, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.IStopListeningRegisteredObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.IStopListeningRegisteredObject</a>
  */
-public interface IStopListeningRegisteredObject extends IJCOBridgeReflected {
-
+public interface IStopListeningRegisteredObject extends IJCOBridgeReflected, IRegisteredObject {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
+    public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Hosting.IStopListeningRegisteredObject
+     */
+    public static final String className = "System.Web.Hosting.IStopListeningRegisteredObject";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStopListeningRegisteredObject}, a cast assert is made to check if types are compatible.
+     */
     public static IStopListeningRegisteredObject ToIStopListeningRegisteredObject(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.Hosting.IStopListeningRegisteredObject, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Web"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IStopListeningRegisteredObjectImplementation(from.getJCOInstance());
     }
@@ -89,7 +108,6 @@ public interface IStopListeningRegisteredObject extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Stop(boolean immediate) throws Throwable;
 
     public void StopListening() throws Throwable;
 

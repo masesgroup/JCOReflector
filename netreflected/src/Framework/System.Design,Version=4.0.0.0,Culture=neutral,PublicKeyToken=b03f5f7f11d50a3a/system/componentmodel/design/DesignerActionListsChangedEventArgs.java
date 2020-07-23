@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.design.DesignerActionListsChangedType;
 import system.componentmodel.design.DesignerActionListCollection;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignerActionListsChangedEventArgs, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionListsChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionListsChangedEventArgs</a>
  */
-public class DesignerActionListsChangedEventArgs extends NetObject  {
+public class DesignerActionListsChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignerActionListsChangedEventArgs
+     */
     public static final String className = "System.ComponentModel.Design.DesignerActionListsChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DesignerActionListsChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerActionListsChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerActionListsChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerActionListsChangedEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class DesignerActionListsChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DesignerActionListsChangedEventArgs() throws Throwable {
+    }
 
     public DesignerActionListsChangedEventArgs(NetObject relatedObject, DesignerActionListsChangedType changeType, DesignerActionListCollection actionLists) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class DesignerActionListsChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

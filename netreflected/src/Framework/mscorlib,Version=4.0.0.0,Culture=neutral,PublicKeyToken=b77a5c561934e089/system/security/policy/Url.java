@@ -38,20 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.policy.EvidenceBase;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.policy.Evidence;
-import system.security.policy.EvidenceBase;
 
 
 /**
  * The base .NET class managing System.Security.Policy.Url, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Url" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Url</a>
  */
-public class Url extends NetObject  {
+public class Url extends EvidenceBase  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.Url
+     */
     public static final String className = "System.Security.Policy.Url";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class Url extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Url}, a cast assert is made to check if types are compatible.
+     */
     public static Url cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Url(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class Url extends NetObject  {
 
     // Constructors section
     
+    public Url() throws Throwable {
+    }
 
     public Url(java.lang.String name) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException {
         try {
@@ -122,6 +141,7 @@ public class Url extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

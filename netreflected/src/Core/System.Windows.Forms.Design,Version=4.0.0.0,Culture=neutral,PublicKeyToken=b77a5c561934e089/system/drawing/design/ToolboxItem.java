@@ -54,12 +54,27 @@ import system.drawing.design.ToolboxComponentsCreatingEventHandler;
 
 /**
  * The base .NET class managing System.Drawing.Design.ToolboxItem, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItem</a>
  */
 public class ToolboxItem extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.Drawing.Design.ToolboxItem
+     */
     public static final String className = "System.Drawing.Design.ToolboxItem";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class ToolboxItem extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolboxItem}, a cast assert is made to check if types are compatible.
+     */
     public static ToolboxItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolboxItem(from.getJCOInstance());
@@ -120,7 +137,6 @@ public class ToolboxItem extends NetObject  {
 
     // Constructors section
     
-
     public ToolboxItem() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -356,7 +372,7 @@ public class ToolboxItem extends NetObject  {
         }
     }
 
-    public AssemblyName[] getDependentAssemblies() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+    public final AssemblyName[] getDependentAssemblies() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

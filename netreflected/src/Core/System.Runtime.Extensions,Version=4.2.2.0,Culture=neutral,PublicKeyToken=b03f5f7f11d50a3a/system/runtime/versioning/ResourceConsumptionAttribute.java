@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 import system.runtime.versioning.ResourceScope;
 
 
 /**
  * The base .NET class managing System.Runtime.Versioning.ResourceConsumptionAttribute, System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.ResourceConsumptionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.ResourceConsumptionAttribute</a>
  */
-public class ResourceConsumptionAttribute extends NetObject  {
+public class ResourceConsumptionAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.Extensions
+     */
     public static final String assemblyShortName = "System.Runtime.Extensions";
+    /**
+     * Qualified class name: System.Runtime.Versioning.ResourceConsumptionAttribute
+     */
     public static final String className = "System.Runtime.Versioning.ResourceConsumptionAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ResourceConsumptionAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceConsumptionAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static ResourceConsumptionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResourceConsumptionAttribute(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ResourceConsumptionAttribute extends NetObject  {
 
     // Constructors section
     
+    public ResourceConsumptionAttribute() throws Throwable {
+    }
 
     public ResourceConsumptionAttribute(ResourceScope resourceScope) throws Throwable {
         try {
@@ -131,44 +151,14 @@ public class ResourceConsumptionAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ResourceScope getConsumptionScope() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

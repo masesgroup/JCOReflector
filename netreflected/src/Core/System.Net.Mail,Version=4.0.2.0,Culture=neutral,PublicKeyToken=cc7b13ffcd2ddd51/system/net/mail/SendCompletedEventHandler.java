@@ -42,12 +42,27 @@ import system.componentmodel.AsyncCompletedEventArgs;
 import system.net.mail.ISendCompletedEventHandler;
 /**
  * The base .NET class managing System.Net.Mail.SendCompletedEventHandler, System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SendCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SendCompletedEventHandler</a>
  */
 public class SendCompletedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.Mail
+     */
     public static final String assemblyShortName = "System.Net.Mail";
+    /**
+     * Qualified class name: System.Net.Mail.SendCompletedEventHandler
+     */
     public static final String className = "System.Net.Mail.SendCompletedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISendCompletedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class SendCompletedEventHandler extends JCVoidDelegate implements IJCVoid
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, AsyncCompletedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, AsyncCompletedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class SendCompletedEventHandler extends JCVoidDelegate implements IJCVoid
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, AsyncCompletedEventArgs e) {
     }
 }

@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.principal.IdentityReference;
 import system.security.principal.WellKnownSidType;
 import system.security.principal.SecurityIdentifier;
-import system.security.principal.IdentityReference;
 
 
 /**
  * The base .NET class managing System.Security.Principal.SecurityIdentifier, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.SecurityIdentifier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.SecurityIdentifier</a>
  */
-public class SecurityIdentifier extends NetObject  {
+public class SecurityIdentifier extends IdentityReference  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Principal.SecurityIdentifier
+     */
     public static final String className = "System.Security.Principal.SecurityIdentifier";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class SecurityIdentifier extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityIdentifier}, a cast assert is made to check if types are compatible.
+     */
     public static SecurityIdentifier cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SecurityIdentifier(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class SecurityIdentifier extends NetObject  {
 
     // Constructors section
     
+    public SecurityIdentifier() throws Throwable {
+    }
 
     public SecurityIdentifier(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         try {
@@ -141,6 +160,7 @@ public class SecurityIdentifier extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -227,6 +247,16 @@ public class SecurityIdentifier extends NetObject  {
         }
     }
 
+    public void GetBinaryForm(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBinaryForm", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -247,16 +277,6 @@ public class SecurityIdentifier extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("AccountDomainSid");
             return new SecurityIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Value");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

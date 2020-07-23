@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Web.UI.INavigateUIData, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.INavigateUIData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.INavigateUIData</a>
  */
 public class INavigateUIDataImplementation extends NetObject implements INavigateUIData {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.INavigateUIData
+     */
     public static final String className = "System.Web.UI.INavigateUIData";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class INavigateUIDataImplementation extends NetObject implements INavigat
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INavigateUIData}, a cast assert is made to check if types are compatible.
+     */
     public static INavigateUIData ToINavigateUIData(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new INavigateUIDataImplementation(from.getJCOInstance());

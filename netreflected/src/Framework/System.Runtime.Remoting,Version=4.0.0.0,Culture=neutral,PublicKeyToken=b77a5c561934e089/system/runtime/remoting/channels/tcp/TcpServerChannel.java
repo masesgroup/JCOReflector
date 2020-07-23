@@ -48,12 +48,27 @@ import system.runtime.remoting.channels.IAuthorizeRemotingConnectionImplementati
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.Tcp.TcpServerChannel, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.Tcp.TcpServerChannel</a>
  */
 public class TcpServerChannel extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Remoting
+     */
     public static final String assemblyShortName = "System.Runtime.Remoting";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.Tcp.TcpServerChannel
+     */
     public static final String className = "System.Runtime.Remoting.Channels.Tcp.TcpServerChannel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class TcpServerChannel extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TcpServerChannel}, a cast assert is made to check if types are compatible.
+     */
     public static TcpServerChannel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TcpServerChannel(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class TcpServerChannel extends NetObject  {
 
     // Constructors section
     
+    public TcpServerChannel() throws Throwable {
+    }
 
     public TcpServerChannel(int port) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.sockets.SocketException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.globalization.CultureNotFoundException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.authentication.AuthenticationException, system.componentmodel.Win32Exception {
         try {
@@ -164,6 +183,7 @@ public class TcpServerChannel extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

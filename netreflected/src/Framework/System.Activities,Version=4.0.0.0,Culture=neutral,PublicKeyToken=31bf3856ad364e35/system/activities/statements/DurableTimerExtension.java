@@ -38,19 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.Bookmark;
-import system.TimeSpan;
+import system.activities.statements.TimerExtension;
 import system.activities.hosting.WorkflowInstanceProxy;
 
 
 /**
  * The base .NET class managing System.Activities.Statements.DurableTimerExtension, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.DurableTimerExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.DurableTimerExtension</a>
  */
-public class DurableTimerExtension extends NetObject  {
+public class DurableTimerExtension extends TimerExtension  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Statements.DurableTimerExtension
+     */
     public static final String className = "System.Activities.Statements.DurableTimerExtension";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +117,9 @@ public class DurableTimerExtension extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DurableTimerExtension}, a cast assert is made to check if types are compatible.
+     */
     public static DurableTimerExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DurableTimerExtension(from.getJCOInstance());
@@ -111,7 +127,6 @@ public class DurableTimerExtension extends NetObject  {
 
     // Constructors section
     
-
     public DurableTimerExtension() throws Throwable, system.MulticastNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -126,31 +141,11 @@ public class DurableTimerExtension extends NetObject  {
     
     // Methods section
     
-    public void CancelTimer(Bookmark bookmark) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CancelTimer", bookmark == null ? null : bookmark.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Dispose() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RegisterTimer(TimeSpan timeout, Bookmark bookmark) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RegisterTimer", timeout == null ? null : timeout.getJCOInstance(), bookmark == null ? null : bookmark.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

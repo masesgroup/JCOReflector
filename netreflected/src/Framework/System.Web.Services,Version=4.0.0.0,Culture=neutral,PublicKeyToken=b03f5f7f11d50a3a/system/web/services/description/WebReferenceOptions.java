@@ -51,12 +51,27 @@ import system.xml.serialization.CodeGenerationOptions;
 
 /**
  * The base .NET class managing System.Web.Services.Description.WebReferenceOptions, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.WebReferenceOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.WebReferenceOptions</a>
  */
 public class WebReferenceOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Description.WebReferenceOptions
+     */
     public static final String className = "System.Web.Services.Description.WebReferenceOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class WebReferenceOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebReferenceOptions}, a cast assert is made to check if types are compatible.
+     */
     public static WebReferenceOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebReferenceOptions(from.getJCOInstance());
@@ -117,7 +134,6 @@ public class WebReferenceOptions extends NetObject  {
 
     // Constructors section
     
-
     public WebReferenceOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -221,11 +237,11 @@ public class WebReferenceOptions extends NetObject  {
         }
     }
 
-    public static XmlSchema getSchema() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.UriFormatException, system.NullReferenceException, system.xml.XmlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public XmlSchema getSchema() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.UriFormatException, system.NullReferenceException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Schema");
+            JCObject val = (JCObject)classInstance.Get("Schema");
             return new XmlSchema(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

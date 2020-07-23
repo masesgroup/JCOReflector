@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.framework.ITask;
+import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.TaskPropertyInfo;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
@@ -47,12 +49,27 @@ import microsoft.build.framework.ITaskHostImplementation;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.IGeneratedTask, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IGeneratedTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IGeneratedTask</a>
  */
 public class IGeneratedTaskImplementation extends NetObject implements IGeneratedTask {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.IGeneratedTask
+     */
     public static final String className = "Microsoft.Build.Framework.IGeneratedTask";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +117,9 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IGeneratedTask}, a cast assert is made to check if types are compatible.
+     */
     public static IGeneratedTask ToIGeneratedTask(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IGeneratedTaskImplementation(from.getJCOInstance());

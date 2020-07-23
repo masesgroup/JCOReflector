@@ -44,12 +44,27 @@ import system.UInt64;
 
 /**
  * The base .NET class managing System.Numerics.BitOperations, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.BitOperations" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.BitOperations</a>
  */
 public class BitOperations extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Numerics.BitOperations
+     */
     public static final String className = "System.Numerics.BitOperations";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class BitOperations extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BitOperations}, a cast assert is made to check if types are compatible.
+     */
     public static BitOperations cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BitOperations(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class BitOperations extends NetObject  {
 
     // Constructors section
     
+    public BitOperations() throws Throwable {
+    }
 
     
     // Methods section

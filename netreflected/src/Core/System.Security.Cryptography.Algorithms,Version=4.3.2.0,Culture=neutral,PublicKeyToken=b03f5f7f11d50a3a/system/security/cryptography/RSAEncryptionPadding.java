@@ -45,12 +45,27 @@ import system.security.cryptography.RSAEncryptionPaddingMode;
 
 /**
  * The base .NET class managing System.Security.Cryptography.RSAEncryptionPadding, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding</a>
  */
 public class RSAEncryptionPadding extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.RSAEncryptionPadding
+     */
     public static final String className = "System.Security.Cryptography.RSAEncryptionPadding";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class RSAEncryptionPadding extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RSAEncryptionPadding}, a cast assert is made to check if types are compatible.
+     */
     public static RSAEncryptionPadding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RSAEncryptionPadding(from.getJCOInstance());
@@ -111,6 +128,10 @@ public class RSAEncryptionPadding extends NetObject  {
 
     // Constructors section
     
+    public RSAEncryptionPadding() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -151,55 +172,55 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
-    public static RSAEncryptionPadding getOaepSHA1() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RSAEncryptionPadding getOaepSHA1() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA1");
+            JCObject val = (JCObject)classInstance.Get("OaepSHA1");
             return new RSAEncryptionPadding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RSAEncryptionPadding getOaepSHA256() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RSAEncryptionPadding getOaepSHA256() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA256");
+            JCObject val = (JCObject)classInstance.Get("OaepSHA256");
             return new RSAEncryptionPadding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RSAEncryptionPadding getOaepSHA384() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RSAEncryptionPadding getOaepSHA384() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA384");
+            JCObject val = (JCObject)classInstance.Get("OaepSHA384");
             return new RSAEncryptionPadding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RSAEncryptionPadding getOaepSHA512() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RSAEncryptionPadding getOaepSHA512() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("OaepSHA512");
+            JCObject val = (JCObject)classInstance.Get("OaepSHA512");
             return new RSAEncryptionPadding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RSAEncryptionPadding getPkcs1() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RSAEncryptionPadding getPkcs1() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Pkcs1");
+            JCObject val = (JCObject)classInstance.Get("Pkcs1");
             return new RSAEncryptionPadding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -61,12 +61,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.WSTrustChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustChannel</a>
  */
 public class WSTrustChannel extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.WSTrustChannel
+     */
     public static final String className = "System.ServiceModel.Security.WSTrustChannel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -119,7 +134,9 @@ public class WSTrustChannel extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustChannel}, a cast assert is made to check if types are compatible.
+     */
     public static WSTrustChannel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WSTrustChannel(from.getJCOInstance());
@@ -127,6 +144,8 @@ public class WSTrustChannel extends NetObject  {
 
     // Constructors section
     
+    public WSTrustChannel() throws Throwable {
+    }
 
     public WSTrustChannel(WSTrustChannelFactory factory, IWSTrustChannelContract inner, TrustVersion trustVersion, WSTrustSerializationContext context, WSTrustRequestSerializer requestSerializer, WSTrustResponseSerializer responseSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
@@ -137,6 +156,7 @@ public class WSTrustChannel extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -462,6 +482,16 @@ public class WSTrustChannel extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Open() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Open");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

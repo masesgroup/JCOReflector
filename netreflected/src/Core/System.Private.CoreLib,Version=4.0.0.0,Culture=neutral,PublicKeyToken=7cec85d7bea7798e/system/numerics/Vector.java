@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Numerics.Vector, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Vector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Vector</a>
  */
 public class Vector extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Numerics.Vector
+     */
     public static final String className = "System.Numerics.Vector";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class Vector extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector}, a cast assert is made to check if types are compatible.
+     */
     public static Vector cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Vector(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class Vector extends NetObject  {
 
     // Constructors section
     
+    public Vector() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,11 +135,11 @@ public class Vector extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsHardwareAccelerated() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsHardwareAccelerated() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsHardwareAccelerated");
+            return (boolean)classInstance.Get("IsHardwareAccelerated");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

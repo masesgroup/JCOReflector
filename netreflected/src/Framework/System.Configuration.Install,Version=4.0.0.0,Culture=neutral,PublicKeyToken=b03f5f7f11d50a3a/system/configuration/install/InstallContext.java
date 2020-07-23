@@ -43,12 +43,27 @@ import system.collections.specialized.StringDictionary;
 
 /**
  * The base .NET class managing System.Configuration.Install.InstallContext, System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallContext</a>
  */
 public class InstallContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Configuration.Install
+     */
     public static final String assemblyShortName = "System.Configuration.Install";
+    /**
+     * Qualified class name: System.Configuration.Install.InstallContext
+     */
     public static final String className = "System.Configuration.Install.InstallContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class InstallContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstallContext}, a cast assert is made to check if types are compatible.
+     */
     public static InstallContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InstallContext(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class InstallContext extends NetObject  {
 
     // Constructors section
     
-
     public InstallContext() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file

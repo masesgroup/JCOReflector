@@ -49,12 +49,27 @@ import system.reflection.ParameterAttributes;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolWriter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter</a>
  */
 public class ISymbolWriterImplementation extends NetObject implements ISymbolWriter {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolWriter
+     */
     public static final String className = "System.Diagnostics.SymbolStore.ISymbolWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolWriter}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolWriter ToISymbolWriter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISymbolWriterImplementation(from.getJCOInstance());
@@ -181,6 +198,16 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    public void DefineField(SymbolToken dupParam0, java.lang.String dupParam1, FieldAttributes dupParam2, JCRefOut dupParam3, SymAddressKind dupParam4, int dupParam5, int dupParam6, int dupParam7) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefineField", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6, dupParam7);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DefineGlobalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -191,11 +218,31 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    public void DefineGlobalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCRefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefineGlobalVariable", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5, dupParam6);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DefineLocalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DefineLocalVariable", name, attributes == null ? null : attributes.getJCOInstance(), signature, addrKind == null ? null : addrKind.getJCOInstance(), addr1, addr2, addr3, startOffset, endOffset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DefineLocalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCRefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6, int dupParam7, int dupParam8) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefineLocalVariable", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5, dupParam6, dupParam7, dupParam8);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,6 +263,16 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DefineSequencePoints", document == null ? null : document.getJCOInstance(), offsets, lines, columns, endLines, endColumns);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DefineSequencePoints(ISymbolDocumentWriter dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefineSequencePoints", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,6 +323,16 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSymAttribute", parent == null ? null : parent.getJCOInstance(), name, data);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetSymAttribute(SymbolToken dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetSymAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.remoting.messaging.Header;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link HeaderHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.HeaderHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.HeaderHandler</a>
+ */
 public interface IHeaderHandler {
     public NetObject Invoke(Header[] headers);
 }

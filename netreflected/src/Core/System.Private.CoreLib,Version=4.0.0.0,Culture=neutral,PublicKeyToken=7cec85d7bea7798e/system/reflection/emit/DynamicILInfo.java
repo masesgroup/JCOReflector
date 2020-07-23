@@ -46,12 +46,27 @@ import system.RuntimeMethodHandle;
 
 /**
  * The base .NET class managing System.Reflection.Emit.DynamicILInfo, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.DynamicILInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.DynamicILInfo</a>
  */
 public class DynamicILInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.Emit.DynamicILInfo
+     */
     public static final String className = "System.Reflection.Emit.DynamicILInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class DynamicILInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicILInfo}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicILInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicILInfo(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class DynamicILInfo extends NetObject  {
 
     // Constructors section
     
+    public DynamicILInfo() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -121,6 +142,16 @@ public class DynamicILInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetTokenFor", (Object)signature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetTokenFor(JCRefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetTokenFor", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,6 +237,16 @@ public class DynamicILInfo extends NetObject  {
         }
     }
 
+    public void SetCode(JCRefOut dupParam0, int dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetCode", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetExceptions(byte[] exceptions) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -216,11 +257,31 @@ public class DynamicILInfo extends NetObject  {
         }
     }
 
+    public void SetExceptions(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetExceptions", (Object)dupParam0);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetLocalSignature(byte[] localSignature) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLocalSignature", (Object)localSignature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetLocalSignature(JCRefOut dupParam0) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetLocalSignature", (Object)dupParam0);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

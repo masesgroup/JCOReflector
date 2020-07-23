@@ -43,12 +43,27 @@ import system.globalization.RegionInfo;
 
 /**
  * The base .NET class managing System.Globalization.RegionInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.RegionInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.RegionInfo</a>
  */
 public class RegionInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Globalization.RegionInfo
+     */
     public static final String className = "System.Globalization.RegionInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RegionInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegionInfo}, a cast assert is made to check if types are compatible.
+     */
     public static RegionInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RegionInfo(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class RegionInfo extends NetObject  {
 
     // Constructors section
     
+    public RegionInfo() throws Throwable {
+    }
 
     public RegionInfo(int culture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException {
         try {
@@ -129,6 +148,7 @@ public class RegionInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -158,11 +178,11 @@ public class RegionInfo extends NetObject  {
         }
     }
 
-    public static RegionInfo getCurrentRegion() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RegionInfo getCurrentRegion() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentRegion");
+            JCObject val = (JCObject)classInstance.Get("CurrentRegion");
             return new RegionInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

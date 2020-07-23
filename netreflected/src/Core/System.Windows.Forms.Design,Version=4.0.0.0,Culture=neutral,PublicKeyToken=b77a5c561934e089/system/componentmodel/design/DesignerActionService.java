@@ -50,12 +50,27 @@ import system.componentmodel.design.DesignerActionListsChangedEventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignerActionService, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionService</a>
  */
 public class DesignerActionService extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignerActionService
+     */
     public static final String className = "System.ComponentModel.Design.DesignerActionService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class DesignerActionService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerActionService}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerActionService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerActionService(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class DesignerActionService extends NetObject  {
 
     // Constructors section
     
+    public DesignerActionService() throws Throwable {
+    }
 
     public DesignerActionService(IServiceProvider serviceProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         try {
@@ -126,6 +145,7 @@ public class DesignerActionService extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

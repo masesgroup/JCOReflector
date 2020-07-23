@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CngPropertyOptions, System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngPropertyOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngPropertyOptions</a>
  */
 public class CngPropertyOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Cng
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Cng";
+    /**
+     * Qualified class name: System.Security.Cryptography.CngPropertyOptions
+     */
     public static final String className = "System.Security.Cryptography.CngPropertyOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class CngPropertyOptions extends NetObject  {
 
     // Flags management section
 
-    public CngPropertyOptions add(CngPropertyOptions val) throws Throwable {
+    public final CngPropertyOptions add(CngPropertyOptions val) throws Throwable {
         return new CngPropertyOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CngPropertyOptions remove(CngPropertyOptions val) throws Throwable {
+    public final CngPropertyOptions remove(CngPropertyOptions val) throws Throwable {
         return new CngPropertyOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CngPropertyOptions val) throws Throwable {
+    public final boolean is(CngPropertyOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CngPropertyOptions val) throws Throwable {
+    public final boolean has(CngPropertyOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

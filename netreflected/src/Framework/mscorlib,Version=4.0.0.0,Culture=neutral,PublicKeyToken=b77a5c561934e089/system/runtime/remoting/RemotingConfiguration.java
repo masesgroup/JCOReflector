@@ -48,12 +48,27 @@ import system.runtime.remoting.CustomErrorsModes;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.RemotingConfiguration, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.RemotingConfiguration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.RemotingConfiguration</a>
  */
 public class RemotingConfiguration extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.RemotingConfiguration
+     */
     public static final String className = "System.Runtime.Remoting.RemotingConfiguration";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class RemotingConfiguration extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RemotingConfiguration}, a cast assert is made to check if types are compatible.
+     */
     public static RemotingConfiguration cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RemotingConfiguration(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class RemotingConfiguration extends NetObject  {
 
     // Constructors section
     
+    public RemotingConfiguration() throws Throwable {
+    }
 
     
     // Methods section
@@ -354,62 +373,62 @@ public class RemotingConfiguration extends NetObject  {
     
     // Properties section
     
-    public static CustomErrorsModes getCustomErrorsMode() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public CustomErrorsModes getCustomErrorsMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CustomErrorsMode");
+            JCObject val = (JCObject)classInstance.Get("CustomErrorsMode");
             return new CustomErrorsModes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setCustomErrorsMode(CustomErrorsModes CustomErrorsMode) throws Throwable, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setCustomErrorsMode(CustomErrorsModes CustomErrorsMode) throws Throwable, system.runtime.remoting.RemotingException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("CustomErrorsMode", CustomErrorsMode == null ? null : CustomErrorsMode.getJCOInstance());
+            classInstance.Set("CustomErrorsMode", CustomErrorsMode == null ? null : CustomErrorsMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getApplicationId() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getApplicationId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("ApplicationId");
+            return (java.lang.String)classInstance.Get("ApplicationId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getApplicationName() throws Throwable, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getApplicationName() throws Throwable, system.runtime.remoting.RemotingException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("ApplicationName");
+            return (java.lang.String)classInstance.Get("ApplicationName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setApplicationName(java.lang.String ApplicationName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setApplicationName(java.lang.String ApplicationName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("ApplicationName", ApplicationName);
+            classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getProcessId() throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getProcessId() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("ProcessId");
+            return (java.lang.String)classInstance.Get("ProcessId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

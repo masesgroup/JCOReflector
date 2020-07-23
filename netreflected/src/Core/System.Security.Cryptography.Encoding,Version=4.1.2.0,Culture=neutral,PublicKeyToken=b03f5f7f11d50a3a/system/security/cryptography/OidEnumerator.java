@@ -44,10 +44,22 @@ import system.security.cryptography.Oid;
 
 /**
  * The base .NET class managing System.Security.Cryptography.OidEnumerator, System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.OidEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.OidEnumerator</a>
  */
 public class OidEnumerator extends NetObject implements Iterator<Oid> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Encoding
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Encoding";
+    /**
+     * Qualified class name: System.Security.Cryptography.OidEnumerator
+     */
     public static final String className = "System.Security.Cryptography.OidEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class OidEnumerator extends NetObject implements Iterator<Oid> {
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public Oid next() {
+	public final Oid next() {
 		try {
 			return new Oid(classInstance.next());
 		} catch (Throwable jce) {

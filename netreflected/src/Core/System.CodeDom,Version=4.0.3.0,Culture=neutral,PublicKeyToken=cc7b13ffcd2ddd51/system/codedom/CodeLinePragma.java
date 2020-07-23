@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.CodeDom.CodeLinePragma, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeLinePragma" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeLinePragma</a>
  */
 public class CodeLinePragma extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.CodeLinePragma
+     */
     public static final String className = "System.CodeDom.CodeLinePragma";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class CodeLinePragma extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeLinePragma}, a cast assert is made to check if types are compatible.
+     */
     public static CodeLinePragma cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeLinePragma(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class CodeLinePragma extends NetObject  {
 
     // Constructors section
     
-
     public CodeLinePragma() throws Throwable {
         try {
             // add reference to assemblyName.dll file

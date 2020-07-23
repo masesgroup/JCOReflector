@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.AccessControl.PropagationFlags, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.PropagationFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.PropagationFlags</a>
  */
 public class PropagationFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.PropagationFlags
+     */
     public static final String className = "System.Security.AccessControl.PropagationFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class PropagationFlags extends NetObject  {
 
     // Flags management section
 
-    public PropagationFlags add(PropagationFlags val) throws Throwable {
+    public final PropagationFlags add(PropagationFlags val) throws Throwable {
         return new PropagationFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PropagationFlags remove(PropagationFlags val) throws Throwable {
+    public final PropagationFlags remove(PropagationFlags val) throws Throwable {
         return new PropagationFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PropagationFlags val) throws Throwable {
+    public final boolean is(PropagationFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PropagationFlags val) throws Throwable {
+    public final boolean has(PropagationFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Authentication.SslProtocols, System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.SslProtocols" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.SslProtocols</a>
  */
 public class SslProtocols extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Primitives
+     */
     public static final String assemblyShortName = "System.Net.Primitives";
+    /**
+     * Qualified class name: System.Security.Authentication.SslProtocols
+     */
     public static final String className = "System.Security.Authentication.SslProtocols";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class SslProtocols extends NetObject  {
 
     // Flags management section
 
-    public SslProtocols add(SslProtocols val) throws Throwable {
+    public final SslProtocols add(SslProtocols val) throws Throwable {
         return new SslProtocols(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SslProtocols remove(SslProtocols val) throws Throwable {
+    public final SslProtocols remove(SslProtocols val) throws Throwable {
         return new SslProtocols(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SslProtocols val) throws Throwable {
+    public final boolean is(SslProtocols val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SslProtocols val) throws Throwable {
+    public final boolean has(SslProtocols val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

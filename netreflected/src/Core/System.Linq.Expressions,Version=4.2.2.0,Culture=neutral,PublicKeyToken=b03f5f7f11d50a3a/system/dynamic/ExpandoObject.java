@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.ExpandoObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.ExpandoObject</a>
  */
 public class ExpandoObject extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
     public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Dynamic.ExpandoObject
+     */
     public static final String className = "System.Dynamic.ExpandoObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ExpandoObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExpandoObject}, a cast assert is made to check if types are compatible.
+     */
     public static ExpandoObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExpandoObject(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class ExpandoObject extends NetObject  {
 
     // Constructors section
     
-
     public ExpandoObject() throws Throwable {
         try {
             // add reference to assemblyName.dll file

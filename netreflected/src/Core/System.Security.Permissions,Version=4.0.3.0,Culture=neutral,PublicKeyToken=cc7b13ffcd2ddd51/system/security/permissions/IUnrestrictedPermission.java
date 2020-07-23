@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Permissions.IUnrestrictedPermission, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.IUnrestrictedPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.IUnrestrictedPermission</a>
  */
 public interface IUnrestrictedPermission extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
+    public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Permissions.IUnrestrictedPermission
+     */
+    public static final String className = "System.Security.Permissions.IUnrestrictedPermission";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IUnrestrictedPermission}, a cast assert is made to check if types are compatible.
+     */
     public static IUnrestrictedPermission ToIUnrestrictedPermission(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Security.Permissions.IUnrestrictedPermission, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Security.Permissions"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IUnrestrictedPermissionImplementation(from.getJCOInstance());
     }

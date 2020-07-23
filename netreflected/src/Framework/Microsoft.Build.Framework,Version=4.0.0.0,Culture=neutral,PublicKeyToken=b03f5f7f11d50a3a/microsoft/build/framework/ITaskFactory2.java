@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import microsoft.build.framework.ITaskFactory;
+import microsoft.build.framework.ITaskFactoryImplementation;
 import microsoft.build.framework.ITask;
 import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.IBuildEngine;
@@ -46,12 +48,29 @@ import microsoft.build.framework.TaskPropertyInfo;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.ITaskFactory2, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ITaskFactory2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ITaskFactory2</a>
  */
-public interface ITaskFactory2 extends IJCOBridgeReflected {
-
+public interface ITaskFactory2 extends IJCOBridgeReflected, ITaskFactory {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
+    public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.ITaskFactory2
+     */
+    public static final String className = "Microsoft.Build.Framework.ITaskFactory2";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITaskFactory2}, a cast assert is made to check if types are compatible.
+     */
     public static ITaskFactory2 ToITaskFactory2(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("Microsoft.Build.Framework.ITaskFactory2, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "Microsoft.Build.Framework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITaskFactory2Implementation(from.getJCOInstance());
     }
@@ -94,20 +113,13 @@ public interface ITaskFactory2 extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable;
 
-    public TaskPropertyInfo[] GetTaskParameters() throws Throwable;
 
-    public void CleanupTask(ITask task) throws Throwable;
 
 
     
     // Properties section
     
-    public java.lang.String getFactoryName() throws Throwable;
-
-    public NetType getTaskType() throws Throwable;
-
 
 
     // Instance Events section

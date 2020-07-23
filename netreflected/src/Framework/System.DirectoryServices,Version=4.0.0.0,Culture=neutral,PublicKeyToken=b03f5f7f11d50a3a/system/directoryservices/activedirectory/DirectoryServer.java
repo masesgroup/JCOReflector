@@ -52,12 +52,27 @@ import system.directoryservices.activedirectory.SyncUpdateCallback;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.DirectoryServer, System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.DirectoryServer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.DirectoryServer</a>
  */
 public class DirectoryServer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.DirectoryServer
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.DirectoryServer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class DirectoryServer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryServer}, a cast assert is made to check if types are compatible.
+     */
     public static DirectoryServer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DirectoryServer(from.getJCOInstance());
@@ -118,6 +135,8 @@ public class DirectoryServer extends NetObject  {
 
     // Constructors section
     
+    public DirectoryServer() throws Throwable {
+    }
 
     
     // Methods section

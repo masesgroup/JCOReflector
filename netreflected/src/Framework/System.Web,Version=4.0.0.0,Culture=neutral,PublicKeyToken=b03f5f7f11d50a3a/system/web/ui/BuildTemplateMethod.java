@@ -42,12 +42,27 @@ import system.web.ui.Control;
 import system.web.ui.IBuildTemplateMethod;
 /**
  * The base .NET class managing System.Web.UI.BuildTemplateMethod, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildTemplateMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildTemplateMethod</a>
  */
 public class BuildTemplateMethod extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.BuildTemplateMethod
+     */
     public static final String className = "System.Web.UI.BuildTemplateMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IBuildTemplateMethod callerInstance = null;
@@ -147,7 +162,7 @@ public class BuildTemplateMethod extends JCVoidDelegate implements IJCVoidEventE
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(Control control) throws Throwable {
+    public void METHOD_JAVA_NAME(Control control) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -157,7 +172,9 @@ public class BuildTemplateMethod extends JCVoidDelegate implements IJCVoidEventE
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(Control control) {
     }
 }

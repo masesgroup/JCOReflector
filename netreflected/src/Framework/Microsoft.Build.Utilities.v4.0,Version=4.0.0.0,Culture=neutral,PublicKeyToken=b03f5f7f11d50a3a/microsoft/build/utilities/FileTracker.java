@@ -46,12 +46,27 @@ import microsoft.build.framework.ITaskItemImplementation;
 
 /**
  * The base .NET class managing Microsoft.Build.Utilities.FileTracker, Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.FileTracker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.FileTracker</a>
  */
 public class FileTracker extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Utilities.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Utilities.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Utilities.FileTracker
+     */
     public static final String className = "Microsoft.Build.Utilities.FileTracker";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class FileTracker extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileTracker}, a cast assert is made to check if types are compatible.
+     */
     public static FileTracker cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileTracker(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class FileTracker extends NetObject  {
 
     // Constructors section
     
+    public FileTracker() throws Throwable {
+    }
 
     
     // Methods section

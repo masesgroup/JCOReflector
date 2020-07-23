@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DrawToolTipEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DrawToolTipEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawToolTipEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawToolTipEventHandler</a>
+ */
 public interface IDrawToolTipEventHandler {
     public void Invoke(NetObject sender, DrawToolTipEventArgs e);
 }

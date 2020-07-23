@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.activities.presentation.IPublishServiceCallback;
 /**
  * The base .NET class managing System.Activities.Presentation.PublishServiceCallback, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PublishServiceCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PublishServiceCallback</a>
  */
 public class PublishServiceCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.PublishServiceCallback
+     */
     public static final String className = "System.Activities.Presentation.PublishServiceCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IPublishServiceCallback callerInstance = null;
@@ -152,7 +167,7 @@ public class PublishServiceCallback extends JCDelegate implements IJCEventEmit, 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke(NetType serviceType) throws Throwable {
+    public NetObject METHOD_JAVA_NAME(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -163,7 +178,9 @@ public class PublishServiceCallback extends JCDelegate implements IJCEventEmit, 
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke(NetType serviceType) {
         return null;
     }

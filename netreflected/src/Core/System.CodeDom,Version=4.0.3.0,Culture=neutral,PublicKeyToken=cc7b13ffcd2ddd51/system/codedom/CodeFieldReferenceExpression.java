@@ -39,18 +39,31 @@ import java.util.ArrayList;
 
 // Import section
 import system.codedom.CodeExpression;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 
 
 /**
  * The base .NET class managing System.CodeDom.CodeFieldReferenceExpression, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeFieldReferenceExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeFieldReferenceExpression</a>
  */
-public class CodeFieldReferenceExpression extends NetObject  {
+public class CodeFieldReferenceExpression extends CodeExpression  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.CodeFieldReferenceExpression
+     */
     public static final String className = "System.CodeDom.CodeFieldReferenceExpression";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +116,9 @@ public class CodeFieldReferenceExpression extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeFieldReferenceExpression}, a cast assert is made to check if types are compatible.
+     */
     public static CodeFieldReferenceExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeFieldReferenceExpression(from.getJCOInstance());
@@ -111,7 +126,6 @@ public class CodeFieldReferenceExpression extends NetObject  {
 
     // Constructors section
     
-
     public CodeFieldReferenceExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,17 +170,6 @@ public class CodeFieldReferenceExpression extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetObject", TargetObject == null ? null : TargetObject.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

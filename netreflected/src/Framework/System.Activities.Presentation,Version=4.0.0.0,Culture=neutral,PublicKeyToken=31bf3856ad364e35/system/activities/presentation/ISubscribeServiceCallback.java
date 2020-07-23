@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SubscribeServiceCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.SubscribeServiceCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.SubscribeServiceCallback</a>
+ */
 public interface ISubscribeServiceCallback {
     public void Invoke(NetType serviceType, NetObject serviceInstance);
 }

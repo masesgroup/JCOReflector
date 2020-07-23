@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.Linq.LoadOptions, System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.LoadOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.LoadOptions</a>
  */
 public class LoadOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Private.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Linq.LoadOptions
+     */
     public static final String className = "System.Xml.Linq.LoadOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class LoadOptions extends NetObject  {
 
     // Flags management section
 
-    public LoadOptions add(LoadOptions val) throws Throwable {
+    public final LoadOptions add(LoadOptions val) throws Throwable {
         return new LoadOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public LoadOptions remove(LoadOptions val) throws Throwable {
+    public final LoadOptions remove(LoadOptions val) throws Throwable {
         return new LoadOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(LoadOptions val) throws Throwable {
+    public final boolean is(LoadOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(LoadOptions val) throws Throwable {
+    public final boolean has(LoadOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

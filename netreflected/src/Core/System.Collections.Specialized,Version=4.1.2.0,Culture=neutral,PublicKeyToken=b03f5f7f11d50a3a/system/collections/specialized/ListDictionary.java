@@ -47,12 +47,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Collections.Specialized.ListDictionary, System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.ListDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.ListDictionary</a>
  */
 public class ListDictionary extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.Specialized
+     */
     public static final String assemblyShortName = "System.Collections.Specialized";
+    /**
+     * Qualified class name: System.Collections.Specialized.ListDictionary
+     */
     public static final String className = "System.Collections.Specialized.ListDictionary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ListDictionary extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static ListDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ListDictionary(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class ListDictionary extends NetObject  {
 
     // Constructors section
     
-
     public ListDictionary() throws Throwable {
         try {
             // add reference to assemblyName.dll file

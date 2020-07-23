@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TransactedChangeCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TransactedChangeCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TransactedChangeCallback</a>
+ */
 public interface ITransactedChangeCallback {
     public boolean Invoke(NetObject context);
 }

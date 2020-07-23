@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.MarshalByValueComponent;
 import system.data.DataRow;
 import system.data.LoadOption;
 import system.data.DataViewRowState;
@@ -59,8 +60,6 @@ import system.data.MissingSchemaAction;
 import system.data.XmlWriteMode;
 import system.io.TextWriter;
 import system.xml.XmlWriter;
-import system.componentmodel.IContainer;
-import system.componentmodel.IContainerImplementation;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.data.ConstraintCollection;
@@ -82,12 +81,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTable</a>
  */
-public class DataTable extends NetObject  {
+public class DataTable extends MarshalByValueComponent  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.DataTable
+     */
     public static final String className = "System.Data.DataTable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -140,7 +154,9 @@ public class DataTable extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataTable}, a cast assert is made to check if types are compatible.
+     */
     public static DataTable cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataTable(from.getJCOInstance());
@@ -148,7 +164,6 @@ public class DataTable extends NetObject  {
 
     // Constructors section
     
-
     public DataTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -301,7 +316,7 @@ public class DataTable extends NetObject  {
         }
     }
 
-    public DataTable Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public DataTable Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -356,7 +371,7 @@ public class DataTable extends NetObject  {
         }
     }
 
-    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
+    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -367,7 +382,7 @@ public class DataTable extends NetObject  {
         }
     }
 
-    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
+    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -389,7 +404,7 @@ public class DataTable extends NetObject  {
         }
     }
 
-    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.NotImplementedException, system.InvalidOperationException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
+    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.NotImplementedException, system.InvalidOperationException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -406,17 +421,6 @@ public class DataTable extends NetObject  {
         try {
             JCObject objCompute = (JCObject)classInstance.Invoke("Compute", expression, filter);
             return new NetObject(objCompute);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetService(NetType service) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", service == null ? null : service.getJCOInstance());
-            return new NetObject(objGetService);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,16 +472,6 @@ public class DataTable extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -907,16 +901,6 @@ public class DataTable extends NetObject  {
         }
     }
 
-    public boolean getDesignMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("DesignMode");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getHasErrors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -957,38 +941,6 @@ public class DataTable extends NetObject  {
         }
     }
 
-    public IContainer getContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Container");
-            return new IContainerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ISite getSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Site");
-            return new ISiteImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSite(ISite Site) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ConstraintCollection getConstraints() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -1000,7 +952,7 @@ public class DataTable extends NetObject  {
         }
     }
 
-    public DataColumn[] getPrimaryKey() throws Throwable {
+    public final DataColumn[] getPrimaryKey() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -1406,26 +1358,6 @@ public class DataTable extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TableNewRow", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("Disposed", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removeDisposed(EventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

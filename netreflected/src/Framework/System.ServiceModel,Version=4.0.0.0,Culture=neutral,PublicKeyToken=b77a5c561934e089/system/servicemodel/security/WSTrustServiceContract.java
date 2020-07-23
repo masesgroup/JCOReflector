@@ -55,12 +55,27 @@ import system.servicemodel.description.WsdlEndpointConversionContext;
 
 /**
  * The base .NET class managing System.ServiceModel.Security.WSTrustServiceContract, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustServiceContract" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustServiceContract</a>
  */
 public class WSTrustServiceContract extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.WSTrustServiceContract
+     */
     public static final String className = "System.ServiceModel.Security.WSTrustServiceContract";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -113,7 +128,9 @@ public class WSTrustServiceContract extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustServiceContract}, a cast assert is made to check if types are compatible.
+     */
     public static WSTrustServiceContract cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WSTrustServiceContract(from.getJCOInstance());
@@ -121,6 +138,8 @@ public class WSTrustServiceContract extends NetObject  {
 
     // Constructors section
     
+    public WSTrustServiceContract() throws Throwable {
+    }
 
     public WSTrustServiceContract(SecurityTokenServiceConfiguration securityTokenServiceConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -131,6 +150,7 @@ public class WSTrustServiceContract extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

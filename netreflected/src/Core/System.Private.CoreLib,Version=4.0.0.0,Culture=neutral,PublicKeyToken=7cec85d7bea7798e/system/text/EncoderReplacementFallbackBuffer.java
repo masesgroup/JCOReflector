@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.EncoderFallbackBuffer;
 import system.text.EncoderReplacementFallback;
 
 
 /**
  * The base .NET class managing System.Text.EncoderReplacementFallbackBuffer, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.EncoderReplacementFallbackBuffer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.EncoderReplacementFallbackBuffer</a>
  */
-public class EncoderReplacementFallbackBuffer extends NetObject  {
+public class EncoderReplacementFallbackBuffer extends EncoderFallbackBuffer  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Text.EncoderReplacementFallbackBuffer
+     */
     public static final String className = "System.Text.EncoderReplacementFallbackBuffer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class EncoderReplacementFallbackBuffer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncoderReplacementFallbackBuffer}, a cast assert is made to check if types are compatible.
+     */
     public static EncoderReplacementFallbackBuffer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EncoderReplacementFallbackBuffer(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class EncoderReplacementFallbackBuffer extends NetObject  {
 
     // Constructors section
     
+    public EncoderReplacementFallbackBuffer() throws Throwable {
+    }
 
     public EncoderReplacementFallbackBuffer(EncoderReplacementFallback fallback) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         try {
@@ -119,6 +139,7 @@ public class EncoderReplacementFallbackBuffer extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -178,16 +199,6 @@ public class EncoderReplacementFallbackBuffer extends NetObject  {
     
     // Properties section
     
-    public int getRemaining() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Remaining");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

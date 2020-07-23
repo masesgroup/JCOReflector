@@ -44,12 +44,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Activities.Presentation.View.IExpressionEditorInstance, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance</a>
  */
 public interface IExpressionEditorInstance extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
+    public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.View.IExpressionEditorInstance
+     */
+    public static final String className = "System.Activities.Presentation.View.IExpressionEditorInstance";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExpressionEditorInstance}, a cast assert is made to check if types are compatible.
+     */
     public static IExpressionEditorInstance ToIExpressionEditorInstance(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Activities.Presentation.View.IExpressionEditorInstance, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Activities.Presentation"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IExpressionEditorInstanceImplementation(from.getJCOInstance());
     }

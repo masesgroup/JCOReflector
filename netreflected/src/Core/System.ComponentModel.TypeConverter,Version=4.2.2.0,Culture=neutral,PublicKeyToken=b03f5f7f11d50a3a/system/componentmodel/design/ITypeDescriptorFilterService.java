@@ -45,12 +45,29 @@ import system.collections.IDictionaryImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ITypeDescriptorFilterService, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ITypeDescriptorFilterService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ITypeDescriptorFilterService</a>
  */
 public interface ITypeDescriptorFilterService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
+    public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ITypeDescriptorFilterService
+     */
+    public static final String className = "System.ComponentModel.Design.ITypeDescriptorFilterService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeDescriptorFilterService}, a cast assert is made to check if types are compatible.
+     */
     public static ITypeDescriptorFilterService ToITypeDescriptorFilterService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.ITypeDescriptorFilterService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ComponentModel.TypeConverter"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITypeDescriptorFilterServiceImplementation(from.getJCOInstance());
     }

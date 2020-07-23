@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.CustomAttributeHandle;
 
 
 /**
  * The base .NET class managing System.Reflection.Metadata.CustomAttributeHandle, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.CustomAttributeHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.CustomAttributeHandle</a>
  */
-public class CustomAttributeHandle extends NetObject  {
+public class CustomAttributeHandle extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.CustomAttributeHandle
+     */
     public static final String className = "System.Reflection.Metadata.CustomAttributeHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class CustomAttributeHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CustomAttributeHandle}, a cast assert is made to check if types are compatible.
+     */
     public static CustomAttributeHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CustomAttributeHandle(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class CustomAttributeHandle extends NetObject  {
 
     // Constructors section
     
+    public CustomAttributeHandle() throws Throwable {
+    }
+
+
 
     
     // Methods section

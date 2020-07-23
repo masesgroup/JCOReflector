@@ -42,12 +42,29 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Linq.Expressions.IArgumentProvider, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.IArgumentProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.IArgumentProvider</a>
  */
 public interface IArgumentProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
+    public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Linq.Expressions.IArgumentProvider
+     */
+    public static final String className = "System.Linq.Expressions.IArgumentProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IArgumentProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IArgumentProvider ToIArgumentProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Linq.Expressions.IArgumentProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Linq.Expressions"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IArgumentProviderImplementation(from.getJCOInstance());
     }

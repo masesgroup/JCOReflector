@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.data.oracleclient.OracleBoolean;
 import system.data.oracleclient.OracleString;
 
 
 /**
  * The base .NET class managing System.Data.OracleClient.OracleString, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleString" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleString</a>
  */
-public class OracleString extends NetObject  {
+public class OracleString extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.OracleClient
+     */
     public static final String assemblyShortName = "System.Data.OracleClient";
+    /**
+     * Qualified class name: System.Data.OracleClient.OracleString
+     */
     public static final String className = "System.Data.OracleClient.OracleString";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class OracleString extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OracleString}, a cast assert is made to check if types are compatible.
+     */
     public static OracleString cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OracleString(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class OracleString extends NetObject  {
 
     // Constructors section
     
+    public OracleString() throws Throwable {
+    }
 
     public OracleString(java.lang.String s) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class OracleString extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

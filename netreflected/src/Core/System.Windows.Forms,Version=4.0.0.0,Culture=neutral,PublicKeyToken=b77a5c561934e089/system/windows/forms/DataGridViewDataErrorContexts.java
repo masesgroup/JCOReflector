@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewDataErrorContexts, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewDataErrorContexts" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewDataErrorContexts</a>
  */
 public class DataGridViewDataErrorContexts extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewDataErrorContexts
+     */
     public static final String className = "System.Windows.Forms.DataGridViewDataErrorContexts";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -147,19 +162,19 @@ public class DataGridViewDataErrorContexts extends NetObject  {
 
     // Flags management section
 
-    public DataGridViewDataErrorContexts add(DataGridViewDataErrorContexts val) throws Throwable {
+    public final DataGridViewDataErrorContexts add(DataGridViewDataErrorContexts val) throws Throwable {
         return new DataGridViewDataErrorContexts(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public DataGridViewDataErrorContexts remove(DataGridViewDataErrorContexts val) throws Throwable {
+    public final DataGridViewDataErrorContexts remove(DataGridViewDataErrorContexts val) throws Throwable {
         return new DataGridViewDataErrorContexts(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(DataGridViewDataErrorContexts val) throws Throwable {
+    public final boolean is(DataGridViewDataErrorContexts val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(DataGridViewDataErrorContexts val) throws Throwable {
+    public final boolean has(DataGridViewDataErrorContexts val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

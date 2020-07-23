@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.HtmlElementErrorEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link HtmlElementErrorEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlElementErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlElementErrorEventHandler</a>
+ */
 public interface IHtmlElementErrorEventHandler {
     public void Invoke(NetObject sender, HtmlElementErrorEventArgs e);
 }

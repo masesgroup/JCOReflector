@@ -49,12 +49,29 @@ import system.text.StringBuilder;
 
 /**
  * The base .NET class managing System.Workflow.Activities.Rules.IRuleExpression, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression</a>
  */
 public interface IRuleExpression extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
+    public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.Rules.IRuleExpression
+     */
+    public static final String className = "System.Workflow.Activities.Rules.IRuleExpression";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRuleExpression}, a cast assert is made to check if types are compatible.
+     */
     public static IRuleExpression ToIRuleExpression(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Workflow.Activities.Rules.IRuleExpression, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Workflow.Activities"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRuleExpressionImplementation(from.getJCOInstance());
     }

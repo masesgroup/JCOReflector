@@ -44,12 +44,29 @@ import system.windows.automation.provider.ProviderOptions;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderAdviseEvents, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents</a>
  */
-public interface IRawElementProviderAdviseEvents extends IJCOBridgeReflected {
-
+public interface IRawElementProviderAdviseEvents extends IJCOBridgeReflected, IRawElementProviderSimple {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
+    public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.IRawElementProviderAdviseEvents
+     */
+    public static final String className = "System.Windows.Automation.Provider.IRawElementProviderAdviseEvents";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRawElementProviderAdviseEvents}, a cast assert is made to check if types are compatible.
+     */
     public static IRawElementProviderAdviseEvents ToIRawElementProviderAdviseEvents(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Automation.Provider.IRawElementProviderAdviseEvents, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "UIAutomationProvider"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRawElementProviderAdviseEventsImplementation(from.getJCOInstance());
     }
@@ -92,22 +109,20 @@ public interface IRawElementProviderAdviseEvents extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetPatternProvider(int patternId) throws Throwable;
 
-    public NetObject GetPropertyValue(int propertyId) throws Throwable;
 
     public void AdviseEventAdded(int eventId, int[] properties) throws Throwable;
 
+    public void AdviseEventAdded(int dupParam0, JCRefOut dupParam1) throws Throwable;
+
     public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable;
+
+    public void AdviseEventRemoved(int dupParam0, JCRefOut dupParam1) throws Throwable;
 
 
     
     // Properties section
     
-    public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
-
-    public ProviderOptions getProviderOptions() throws Throwable;
-
 
 
     // Instance Events section

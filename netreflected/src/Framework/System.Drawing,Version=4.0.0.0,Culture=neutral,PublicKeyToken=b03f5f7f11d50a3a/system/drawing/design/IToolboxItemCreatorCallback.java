@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.drawing.design.ToolboxItem;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ToolboxItemCreatorCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemCreatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemCreatorCallback</a>
+ */
 public interface IToolboxItemCreatorCallback {
     public ToolboxItem Invoke(NetObject serializedObject, java.lang.String format);
 }

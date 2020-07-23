@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.LinkLabelLinkClickedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link LinkLabelLinkClickedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.LinkLabelLinkClickedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.LinkLabelLinkClickedEventHandler</a>
+ */
 public interface ILinkLabelLinkClickedEventHandler {
     public void Invoke(NetObject sender, LinkLabelLinkClickedEventArgs e);
 }

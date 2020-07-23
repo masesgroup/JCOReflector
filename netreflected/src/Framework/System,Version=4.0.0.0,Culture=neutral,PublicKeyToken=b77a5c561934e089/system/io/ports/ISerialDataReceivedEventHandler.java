@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.io.ports.SerialDataReceivedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SerialDataReceivedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialDataReceivedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialDataReceivedEventHandler</a>
+ */
 public interface ISerialDataReceivedEventHandler {
     public void Invoke(NetObject sender, SerialDataReceivedEventArgs e);
 }

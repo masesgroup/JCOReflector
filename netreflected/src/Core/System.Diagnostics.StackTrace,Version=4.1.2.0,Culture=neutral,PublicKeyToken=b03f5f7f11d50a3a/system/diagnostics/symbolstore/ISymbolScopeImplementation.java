@@ -50,12 +50,27 @@ import system.diagnostics.symbolstore.ISymbolMethodImplementation;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolScope, System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope</a>
  */
 public class ISymbolScopeImplementation extends NetObject implements ISymbolScope {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.StackTrace
+     */
     public static final String assemblyShortName = "System.Diagnostics.StackTrace";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolScope
+     */
     public static final String className = "System.Diagnostics.SymbolStore.ISymbolScope";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolScope}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolScope ToISymbolScope(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISymbolScopeImplementation(from.getJCOInstance());

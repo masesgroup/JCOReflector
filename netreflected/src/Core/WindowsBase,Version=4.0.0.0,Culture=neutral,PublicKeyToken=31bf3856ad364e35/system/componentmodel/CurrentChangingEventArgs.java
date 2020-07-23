@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.ComponentModel.CurrentChangingEventArgs, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CurrentChangingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CurrentChangingEventArgs</a>
  */
-public class CurrentChangingEventArgs extends NetObject  {
+public class CurrentChangingEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.CurrentChangingEventArgs
+     */
     public static final String className = "System.ComponentModel.CurrentChangingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class CurrentChangingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CurrentChangingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static CurrentChangingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CurrentChangingEventArgs(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class CurrentChangingEventArgs extends NetObject  {
 
     // Constructors section
     
-
     public CurrentChangingEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file

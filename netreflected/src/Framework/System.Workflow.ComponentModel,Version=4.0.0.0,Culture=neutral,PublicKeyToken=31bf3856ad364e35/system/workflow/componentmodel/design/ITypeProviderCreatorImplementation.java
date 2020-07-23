@@ -48,12 +48,27 @@ import system.workflow.componentmodel.compiler.ITypeProviderImplementation;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.ITypeProviderCreator, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ITypeProviderCreator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ITypeProviderCreator</a>
  */
 public class ITypeProviderCreatorImplementation extends NetObject implements ITypeProviderCreator {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.ITypeProviderCreator
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.ITypeProviderCreator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeProviderCreator}, a cast assert is made to check if types are compatible.
+     */
     public static ITypeProviderCreator ToITypeProviderCreator(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITypeProviderCreatorImplementation(from.getJCOInstance());

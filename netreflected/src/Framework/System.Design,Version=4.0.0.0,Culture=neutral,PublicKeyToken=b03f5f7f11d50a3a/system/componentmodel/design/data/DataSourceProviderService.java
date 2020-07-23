@@ -50,12 +50,27 @@ import system.componentmodel.design.IDesignerHostImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Data.DataSourceProviderService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Data.DataSourceProviderService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Data.DataSourceProviderService</a>
  */
 public class DataSourceProviderService extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Data.DataSourceProviderService
+     */
     public static final String className = "System.ComponentModel.Design.Data.DataSourceProviderService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class DataSourceProviderService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataSourceProviderService}, a cast assert is made to check if types are compatible.
+     */
     public static DataSourceProviderService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataSourceProviderService(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class DataSourceProviderService extends NetObject  {
 
     // Constructors section
     
+    public DataSourceProviderService() throws Throwable {
+    }
 
     
     // Methods section

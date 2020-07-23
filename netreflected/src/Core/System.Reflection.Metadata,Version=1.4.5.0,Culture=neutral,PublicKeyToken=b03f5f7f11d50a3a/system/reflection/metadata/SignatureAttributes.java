@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.SignatureAttributes, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.SignatureAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.SignatureAttributes</a>
  */
 public class SignatureAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.SignatureAttributes
+     */
     public static final String className = "System.Reflection.Metadata.SignatureAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class SignatureAttributes extends NetObject  {
 
     // Flags management section
 
-    public SignatureAttributes add(SignatureAttributes val) throws Throwable {
+    public final SignatureAttributes add(SignatureAttributes val) throws Throwable {
         return new SignatureAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SignatureAttributes remove(SignatureAttributes val) throws Throwable {
+    public final SignatureAttributes remove(SignatureAttributes val) throws Throwable {
         return new SignatureAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SignatureAttributes val) throws Throwable {
+    public final boolean is(SignatureAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SignatureAttributes val) throws Throwable {
+    public final boolean has(SignatureAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

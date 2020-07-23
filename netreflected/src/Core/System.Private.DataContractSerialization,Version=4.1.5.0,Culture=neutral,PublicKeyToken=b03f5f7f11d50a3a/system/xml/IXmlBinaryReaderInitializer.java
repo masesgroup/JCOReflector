@@ -47,12 +47,29 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Xml.IXmlBinaryReaderInitializer, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlBinaryReaderInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlBinaryReaderInitializer</a>
  */
 public interface IXmlBinaryReaderInitializer extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
+    public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Xml.IXmlBinaryReaderInitializer
+     */
+    public static final String className = "System.Xml.IXmlBinaryReaderInitializer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlBinaryReaderInitializer}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlBinaryReaderInitializer ToIXmlBinaryReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Xml.IXmlBinaryReaderInitializer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Private.DataContractSerialization"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlBinaryReaderInitializerImplementation(from.getJCOInstance());
     }
@@ -96,6 +113,8 @@ public interface IXmlBinaryReaderInitializer extends IJCOBridgeReflected {
     // Methods section
     
     public void SetInput(byte[] buffer, int offset, int count, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable;
+
+    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable;
 
     public void SetInput(Stream stream, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable;
 

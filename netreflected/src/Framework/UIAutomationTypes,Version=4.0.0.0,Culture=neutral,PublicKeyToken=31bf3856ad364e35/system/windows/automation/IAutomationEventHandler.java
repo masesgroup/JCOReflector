@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.automation.AutomationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link AutomationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler</a>
+ */
 public interface IAutomationEventHandler {
     public void Invoke(NetObject sender, AutomationEventArgs e);
 }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.win32.UserPreferenceChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link UserPreferenceChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventHandler</a>
+ */
 public interface IUserPreferenceChangedEventHandler {
     public void Invoke(NetObject sender, UserPreferenceChangedEventArgs e);
 }

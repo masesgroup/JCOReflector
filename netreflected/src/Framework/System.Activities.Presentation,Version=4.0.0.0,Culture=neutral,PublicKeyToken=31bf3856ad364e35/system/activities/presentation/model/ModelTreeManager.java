@@ -44,12 +44,27 @@ import system.activities.presentation.model.ModelItem;
 
 /**
  * The base .NET class managing System.Activities.Presentation.Model.ModelTreeManager, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.ModelTreeManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.ModelTreeManager</a>
  */
 public class ModelTreeManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Model.ModelTreeManager
+     */
     public static final String className = "System.Activities.Presentation.Model.ModelTreeManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ModelTreeManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelTreeManager}, a cast assert is made to check if types are compatible.
+     */
     public static ModelTreeManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ModelTreeManager(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class ModelTreeManager extends NetObject  {
 
     // Constructors section
     
+    public ModelTreeManager() throws Throwable {
+    }
 
     public ModelTreeManager(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -120,6 +139,7 @@ public class ModelTreeManager extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.Saml2Statement;
 import system.Uri;
 import system.identitymodel.tokens.SamlAccessDecision;
 import system.identitymodel.tokens.Saml2Evidence;
@@ -45,12 +46,27 @@ import system.identitymodel.tokens.Saml2Evidence;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement</a>
  */
-public class Saml2AuthorizationDecisionStatement extends NetObject  {
+public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement
+     */
     public static final String className = "System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class Saml2AuthorizationDecisionStatement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Saml2AuthorizationDecisionStatement}, a cast assert is made to check if types are compatible.
+     */
     public static Saml2AuthorizationDecisionStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Saml2AuthorizationDecisionStatement(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class Saml2AuthorizationDecisionStatement extends NetObject  {
 
     // Constructors section
     
+    public Saml2AuthorizationDecisionStatement() throws Throwable {
+    }
 
     public Saml2AuthorizationDecisionStatement(Uri resource, SamlAccessDecision decision) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
@@ -121,6 +141,7 @@ public class Saml2AuthorizationDecisionStatement extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

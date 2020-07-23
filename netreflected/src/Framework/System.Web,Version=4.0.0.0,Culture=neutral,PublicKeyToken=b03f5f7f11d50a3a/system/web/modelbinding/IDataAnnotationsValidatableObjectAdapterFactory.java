@@ -41,7 +41,12 @@ import system.web.modelbinding.ModelValidator;
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.ModelBindingExecutionContext;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataAnnotationsValidatableObjectAdapterFactory}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory</a>
+ */
 public interface IDataAnnotationsValidatableObjectAdapterFactory {
     public ModelValidator Invoke(ModelMetadata metadata, ModelBindingExecutionContext context);
 }

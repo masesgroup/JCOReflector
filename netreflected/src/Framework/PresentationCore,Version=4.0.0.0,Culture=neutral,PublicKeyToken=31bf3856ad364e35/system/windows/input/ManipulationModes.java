@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Input.ManipulationModes, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ManipulationModes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ManipulationModes</a>
  */
 public class ManipulationModes extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.ManipulationModes
+     */
     public static final String className = "System.Windows.Input.ManipulationModes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class ManipulationModes extends NetObject  {
 
     // Flags management section
 
-    public ManipulationModes add(ManipulationModes val) throws Throwable {
+    public final ManipulationModes add(ManipulationModes val) throws Throwable {
         return new ManipulationModes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ManipulationModes remove(ManipulationModes val) throws Throwable {
+    public final ManipulationModes remove(ManipulationModes val) throws Throwable {
         return new ManipulationModes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ManipulationModes val) throws Throwable {
+    public final boolean is(ManipulationModes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ManipulationModes val) throws Throwable {
+    public final boolean has(ManipulationModes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.Cache.HttpRequestCacheLevel, System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Cache.HttpRequestCacheLevel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Cache.HttpRequestCacheLevel</a>
  */
 public class HttpRequestCacheLevel extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Requests
+     */
     public static final String assemblyShortName = "System.Net.Requests";
+    /**
+     * Qualified class name: System.Net.Cache.HttpRequestCacheLevel
+     */
     public static final String className = "System.Net.Cache.HttpRequestCacheLevel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;

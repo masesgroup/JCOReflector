@@ -38,26 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeExpression;
-import system.xml.schema.XmlSchemaAny;
-import system.xml.serialization.XmlSchemas;
-import system.xml.serialization.XmlSchemaImporter;
-import system.codedom.CodeCompileUnit;
-import system.codedom.CodeNamespace;
-import system.xml.serialization.CodeGenerationOptions;
-import system.codedom.compiler.CodeDomProvider;
-import system.xml.schema.XmlSchemaObject;
-import system.xml.schema.XmlSchemaType;
+import system.data.sqltypes.SqlTypesSchemaImporterExtensionHelper;
 
 
 /**
  * The base .NET class managing System.Data.SqlTypes.TypeFloatSchemaImporterExtension, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.TypeFloatSchemaImporterExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.TypeFloatSchemaImporterExtension</a>
  */
-public class TypeFloatSchemaImporterExtension extends NetObject  {
+public class TypeFloatSchemaImporterExtension extends SqlTypesSchemaImporterExtensionHelper  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlTypes.TypeFloatSchemaImporterExtension
+     */
     public static final String className = "System.Data.SqlTypes.TypeFloatSchemaImporterExtension";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +116,9 @@ public class TypeFloatSchemaImporterExtension extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeFloatSchemaImporterExtension}, a cast assert is made to check if types are compatible.
+     */
     public static TypeFloatSchemaImporterExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TypeFloatSchemaImporterExtension(from.getJCOInstance());
@@ -118,7 +126,6 @@ public class TypeFloatSchemaImporterExtension extends NetObject  {
 
     // Constructors section
     
-
     public TypeFloatSchemaImporterExtension() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -133,47 +140,6 @@ public class TypeFloatSchemaImporterExtension extends NetObject  {
     
     // Methods section
     
-    public CodeExpression ImportDefaultValue(java.lang.String value, java.lang.String type) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objImportDefaultValue = (JCObject)classInstance.Invoke("ImportDefaultValue", value, type);
-            return new CodeExpression(objImportDefaultValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ImportAnyElement(XmlSchemaAny any, boolean mixed, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ImportAnyElement", any == null ? null : any.getJCOInstance(), mixed, schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ImportSchemaType(java.lang.String name, java.lang.String xmlNamespace, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ImportSchemaType", name, xmlNamespace, context == null ? null : context.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String ImportSchemaType(XmlSchemaType type, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ImportSchemaType", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

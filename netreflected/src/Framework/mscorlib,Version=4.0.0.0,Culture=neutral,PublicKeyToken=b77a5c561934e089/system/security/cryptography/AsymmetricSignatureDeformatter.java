@@ -44,12 +44,27 @@ import system.security.cryptography.AsymmetricAlgorithm;
 
 /**
  * The base .NET class managing System.Security.Cryptography.AsymmetricSignatureDeformatter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsymmetricSignatureDeformatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsymmetricSignatureDeformatter</a>
  */
 public class AsymmetricSignatureDeformatter extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.AsymmetricSignatureDeformatter
+     */
     public static final String className = "System.Security.Cryptography.AsymmetricSignatureDeformatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class AsymmetricSignatureDeformatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricSignatureDeformatter}, a cast assert is made to check if types are compatible.
+     */
     public static AsymmetricSignatureDeformatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsymmetricSignatureDeformatter(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class AsymmetricSignatureDeformatter extends NetObject  {
 
     // Constructors section
     
+    public AsymmetricSignatureDeformatter() throws Throwable {
+    }
 
     
     // Methods section
@@ -124,11 +143,31 @@ public class AsymmetricSignatureDeformatter extends NetObject  {
         }
     }
 
+    public boolean VerifySignature(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("VerifySignature", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean VerifySignature(HashAlgorithm hash, byte[] rgbSignature) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("VerifySignature", hash == null ? null : hash.getJCOInstance(), rgbSignature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean VerifySignature(HashAlgorithm dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("VerifySignature", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

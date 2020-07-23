@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.Action;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CollectionSynchronizationCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CollectionSynchronizationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CollectionSynchronizationCallback</a>
+ */
 public interface ICollectionSynchronizationCallback {
     public void Invoke(IEnumerable collection, NetObject context, Action accessMethod, boolean writeAccess);
 }

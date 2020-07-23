@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.UriComponents, System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.UriComponents" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.UriComponents</a>
  */
 public class UriComponents extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.Uri
+     */
     public static final String assemblyShortName = "System.Private.Uri";
+    /**
+     * Qualified class name: System.UriComponents
+     */
     public static final String className = "System.UriComponents";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -153,19 +168,19 @@ public class UriComponents extends NetObject  {
 
     // Flags management section
 
-    public UriComponents add(UriComponents val) throws Throwable {
+    public final UriComponents add(UriComponents val) throws Throwable {
         return new UriComponents(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public UriComponents remove(UriComponents val) throws Throwable {
+    public final UriComponents remove(UriComponents val) throws Throwable {
         return new UriComponents(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(UriComponents val) throws Throwable {
+    public final boolean is(UriComponents val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(UriComponents val) throws Throwable {
+    public final boolean has(UriComponents val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

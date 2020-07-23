@@ -43,12 +43,27 @@ import system.drawing.printing.PrinterResolutionKind;
 
 /**
  * The base .NET class managing System.Drawing.Printing.PrinterResolution, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterResolution" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterResolution</a>
  */
 public class PrinterResolution extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Printing.PrinterResolution
+     */
     public static final String className = "System.Drawing.Printing.PrinterResolution";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class PrinterResolution extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrinterResolution}, a cast assert is made to check if types are compatible.
+     */
     public static PrinterResolution cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrinterResolution(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class PrinterResolution extends NetObject  {
 
     // Constructors section
     
-
     public PrinterResolution() throws Throwable {
         try {
             // add reference to assemblyName.dll file

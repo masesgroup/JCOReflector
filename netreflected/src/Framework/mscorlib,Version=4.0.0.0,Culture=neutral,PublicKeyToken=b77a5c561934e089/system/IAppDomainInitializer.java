@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link AppDomainInitializer}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.AppDomainInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.AppDomainInitializer</a>
+ */
 public interface IAppDomainInitializer {
     public void Invoke(java.lang.String[] args);
 }

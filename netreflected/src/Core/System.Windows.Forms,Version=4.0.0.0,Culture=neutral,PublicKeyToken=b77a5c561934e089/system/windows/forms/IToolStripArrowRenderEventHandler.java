@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ToolStripArrowRenderEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ToolStripArrowRenderEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripArrowRenderEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripArrowRenderEventHandler</a>
+ */
 public interface IToolStripArrowRenderEventHandler {
     public void Invoke(NetObject sender, ToolStripArrowRenderEventArgs e);
 }

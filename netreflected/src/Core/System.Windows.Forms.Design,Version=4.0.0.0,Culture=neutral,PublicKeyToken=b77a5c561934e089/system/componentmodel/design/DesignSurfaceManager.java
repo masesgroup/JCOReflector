@@ -49,12 +49,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignSurfaceManager, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignSurfaceManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignSurfaceManager</a>
  */
 public class DesignSurfaceManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignSurfaceManager
+     */
     public static final String className = "System.ComponentModel.Design.DesignSurfaceManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class DesignSurfaceManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignSurfaceManager}, a cast assert is made to check if types are compatible.
+     */
     public static DesignSurfaceManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignSurfaceManager(from.getJCOInstance());
@@ -115,7 +132,6 @@ public class DesignSurfaceManager extends NetObject  {
 
     // Constructors section
     
-
     public DesignSurfaceManager() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file

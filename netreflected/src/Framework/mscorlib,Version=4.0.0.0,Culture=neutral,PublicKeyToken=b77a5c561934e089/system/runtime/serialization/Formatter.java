@@ -47,12 +47,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.Formatter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatter</a>
  */
 public class Formatter extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.Formatter
+     */
     public static final String className = "System.Runtime.Serialization.Formatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class Formatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Formatter}, a cast assert is made to check if types are compatible.
+     */
     public static Formatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Formatter(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class Formatter extends NetObject  {
 
     // Constructors section
     
+    public Formatter() throws Throwable {
+    }
 
     
     // Methods section

@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.ITypeDescriptorContext;
+import system.componentmodel.ITypeDescriptorContextImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.windows.markup.ValueSerializer;
 import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.IContainer;
@@ -45,12 +49,29 @@ import system.componentmodel.IContainerImplementation;
 
 /**
  * The base .NET class managing System.Windows.Markup.IValueSerializerContext, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.IValueSerializerContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.IValueSerializerContext</a>
  */
-public interface IValueSerializerContext extends IJCOBridgeReflected {
-
+public interface IValueSerializerContext extends IJCOBridgeReflected, ITypeDescriptorContext, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
+    public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Windows.Markup.IValueSerializerContext
+     */
+    public static final String className = "System.Windows.Markup.IValueSerializerContext";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IValueSerializerContext}, a cast assert is made to check if types are compatible.
+     */
     public static IValueSerializerContext ToIValueSerializerContext(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Windows.Markup.IValueSerializerContext, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xaml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IValueSerializerContextImplementation(from.getJCOInstance());
     }
@@ -93,26 +114,17 @@ public interface IValueSerializerContext extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean OnComponentChanging() throws Throwable;
 
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
     public ValueSerializer GetValueSerializerFor(PropertyDescriptor descriptor) throws Throwable;
 
     public ValueSerializer GetValueSerializerFor(NetType type) throws Throwable;
 
-    public void OnComponentChanged() throws Throwable;
 
 
     
     // Properties section
     
-    public IContainer getContainer() throws Throwable;
-
-    public PropertyDescriptor getPropertyDescriptor() throws Throwable;
-
-    public NetObject getInstance() throws Throwable;
-
 
 
     // Instance Events section

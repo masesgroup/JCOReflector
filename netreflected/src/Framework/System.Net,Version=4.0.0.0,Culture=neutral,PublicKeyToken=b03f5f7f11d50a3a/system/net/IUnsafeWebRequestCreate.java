@@ -43,12 +43,29 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.Net.IUnsafeWebRequestCreate, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IUnsafeWebRequestCreate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IUnsafeWebRequestCreate</a>
  */
 public interface IUnsafeWebRequestCreate extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
+    public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.IUnsafeWebRequestCreate
+     */
+    public static final String className = "System.Net.IUnsafeWebRequestCreate";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IUnsafeWebRequestCreate}, a cast assert is made to check if types are compatible.
+     */
     public static IUnsafeWebRequestCreate ToIUnsafeWebRequestCreate(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Net.IUnsafeWebRequestCreate, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Net"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IUnsafeWebRequestCreateImplementation(from.getJCOInstance());
     }

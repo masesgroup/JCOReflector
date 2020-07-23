@@ -43,12 +43,27 @@ import system.windows.input.RoutedUICommand;
 
 /**
  * The base .NET class managing System.Windows.Input.ApplicationCommands, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ApplicationCommands" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.ApplicationCommands</a>
  */
 public class ApplicationCommands extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.ApplicationCommands
+     */
     public static final String className = "System.Windows.Input.ApplicationCommands";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ApplicationCommands extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationCommands}, a cast assert is made to check if types are compatible.
+     */
     public static ApplicationCommands cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ApplicationCommands(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ApplicationCommands extends NetObject  {
 
     // Constructors section
     
+    public ApplicationCommands() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,253 +136,253 @@ public class ApplicationCommands extends NetObject  {
     
     // Properties section
     
-    public static RoutedUICommand getCancelPrint() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getCancelPrint() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CancelPrint");
+            JCObject val = (JCObject)classInstance.Get("CancelPrint");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getClose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getClose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Close");
+            JCObject val = (JCObject)classInstance.Get("Close");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getContextMenu() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getContextMenu() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenu");
+            JCObject val = (JCObject)classInstance.Get("ContextMenu");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getCopy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getCopy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Copy");
+            JCObject val = (JCObject)classInstance.Get("Copy");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getCorrectionList() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getCorrectionList() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CorrectionList");
+            JCObject val = (JCObject)classInstance.Get("CorrectionList");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getCut() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getCut() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Cut");
+            JCObject val = (JCObject)classInstance.Get("Cut");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getDelete() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getDelete() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Delete");
+            JCObject val = (JCObject)classInstance.Get("Delete");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getFind() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getFind() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Find");
+            JCObject val = (JCObject)classInstance.Get("Find");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getHelp() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getHelp() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Help");
+            JCObject val = (JCObject)classInstance.Get("Help");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getNew() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getNew() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("New");
+            JCObject val = (JCObject)classInstance.Get("New");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getNotACommand() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getNotACommand() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("NotACommand");
+            JCObject val = (JCObject)classInstance.Get("NotACommand");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getOpen() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getOpen() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Open");
+            JCObject val = (JCObject)classInstance.Get("Open");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getPaste() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getPaste() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Paste");
+            JCObject val = (JCObject)classInstance.Get("Paste");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getPrint() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getPrint() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Print");
+            JCObject val = (JCObject)classInstance.Get("Print");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getPrintPreview() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getPrintPreview() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PrintPreview");
+            JCObject val = (JCObject)classInstance.Get("PrintPreview");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getProperties() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getProperties() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Properties");
+            JCObject val = (JCObject)classInstance.Get("Properties");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getRedo() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getRedo() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Redo");
+            JCObject val = (JCObject)classInstance.Get("Redo");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getReplace() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getReplace() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Replace");
+            JCObject val = (JCObject)classInstance.Get("Replace");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getSave() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getSave() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Save");
+            JCObject val = (JCObject)classInstance.Get("Save");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getSaveAs() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getSaveAs() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SaveAs");
+            JCObject val = (JCObject)classInstance.Get("SaveAs");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getSelectAll() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getSelectAll() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SelectAll");
+            JCObject val = (JCObject)classInstance.Get("SelectAll");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getStop() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getStop() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Stop");
+            JCObject val = (JCObject)classInstance.Get("Stop");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RoutedUICommand getUndo() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RoutedUICommand getUndo() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Undo");
+            JCObject val = (JCObject)classInstance.Get("Undo");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

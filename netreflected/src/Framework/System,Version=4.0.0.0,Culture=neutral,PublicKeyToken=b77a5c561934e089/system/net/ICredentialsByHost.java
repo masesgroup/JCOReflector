@@ -42,12 +42,29 @@ import system.net.NetworkCredential;
 
 /**
  * The base .NET class managing System.Net.ICredentialsByHost, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentialsByHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentialsByHost</a>
  */
 public interface ICredentialsByHost extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.ICredentialsByHost
+     */
+    public static final String className = "System.Net.ICredentialsByHost";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICredentialsByHost}, a cast assert is made to check if types are compatible.
+     */
     public static ICredentialsByHost ToICredentialsByHost(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Net.ICredentialsByHost, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICredentialsByHostImplementation(from.getJCOInstance());
     }

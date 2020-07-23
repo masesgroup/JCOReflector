@@ -43,12 +43,27 @@ import system.xml.linq.XName;
 
 /**
  * The base .NET class managing System.Runtime.DurableInstancing.InstancePersistenceCommand, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceCommand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceCommand</a>
  */
 public class InstancePersistenceCommand extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Runtime.DurableInstancing
+     */
     public static final String assemblyShortName = "System.Runtime.DurableInstancing";
+    /**
+     * Qualified class name: System.Runtime.DurableInstancing.InstancePersistenceCommand
+     */
     public static final String className = "System.Runtime.DurableInstancing.InstancePersistenceCommand";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class InstancePersistenceCommand extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstancePersistenceCommand}, a cast assert is made to check if types are compatible.
+     */
     public static InstancePersistenceCommand cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InstancePersistenceCommand(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class InstancePersistenceCommand extends NetObject  {
 
     // Constructors section
     
+    public InstancePersistenceCommand() throws Throwable {
+    }
 
     
     // Methods section

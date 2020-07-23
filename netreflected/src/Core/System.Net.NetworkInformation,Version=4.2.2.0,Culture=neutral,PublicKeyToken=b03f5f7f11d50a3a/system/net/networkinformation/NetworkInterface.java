@@ -50,12 +50,27 @@ import system.net.networkinformation.OperationalStatus;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.NetworkInterface, System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.NetworkInterface" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.NetworkInterface</a>
  */
 public class NetworkInterface extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.NetworkInformation, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.NetworkInformation
+     */
     public static final String assemblyShortName = "System.Net.NetworkInformation";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.NetworkInterface
+     */
     public static final String className = "System.Net.NetworkInformation.NetworkInterface";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class NetworkInterface extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetworkInterface}, a cast assert is made to check if types are compatible.
+     */
     public static NetworkInterface cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NetworkInterface(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class NetworkInterface extends NetObject  {
 
     // Constructors section
     
+    public NetworkInterface() throws Throwable {
+    }
 
     
     // Methods section
@@ -225,21 +244,21 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public static int getIPv6LoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getIPv6LoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("IPv6LoopbackInterfaceIndex");
+            return (int)classInstance.Get("IPv6LoopbackInterfaceIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getLoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getLoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("LoopbackInterfaceIndex");
+            return (int)classInstance.Get("LoopbackInterfaceIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

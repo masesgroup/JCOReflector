@@ -45,12 +45,27 @@ import system.security.cryptography.pkcs.SignerInfo;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.SignerInfoCollection, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfoCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfoCollection</a>
  */
 public class SignerInfoCollection extends NetObject implements Iterable<SignerInfo> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.SignerInfoCollection
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.SignerInfoCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class SignerInfoCollection extends NetObject implements Iterable<SignerIn
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SignerInfoCollection}, a cast assert is made to check if types are compatible.
+     */
     public static SignerInfoCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SignerInfoCollection(from.getJCOInstance());
@@ -111,16 +128,20 @@ public class SignerInfoCollection extends NetObject implements Iterable<SignerIn
 
     // Constructors section
     
+    public SignerInfoCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public SignerInfoEnumerator GetEnumerator() throws Throwable {
+    public final SignerInfoEnumerator GetEnumerator() throws Throwable {
         return new SignerInfoEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<SignerInfo> iterator() {
+	public final java.util.Iterator<SignerInfo> iterator() {
 		return new SignerInfoEnumerator(classInstance);
 	}
 

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.DecoderFallbackBuffer;
 
 
 /**
  * The base .NET class managing System.Text.DecoderExceptionFallbackBuffer, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderExceptionFallbackBuffer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderExceptionFallbackBuffer</a>
  */
-public class DecoderExceptionFallbackBuffer extends NetObject  {
+public class DecoderExceptionFallbackBuffer extends DecoderFallbackBuffer  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Text.DecoderExceptionFallbackBuffer
+     */
     public static final String className = "System.Text.DecoderExceptionFallbackBuffer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class DecoderExceptionFallbackBuffer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DecoderExceptionFallbackBuffer}, a cast assert is made to check if types are compatible.
+     */
     public static DecoderExceptionFallbackBuffer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DecoderExceptionFallbackBuffer(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class DecoderExceptionFallbackBuffer extends NetObject  {
 
     // Constructors section
     
-
     public DecoderExceptionFallbackBuffer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -128,6 +145,16 @@ public class DecoderExceptionFallbackBuffer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Fallback", bytesUnknown, index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Fallback(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.text.DecoderFallbackException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Fallback", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,30 +180,10 @@ public class DecoderExceptionFallbackBuffer extends NetObject  {
         }
     }
 
-    public void Reset() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Reset");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public int getRemaining() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Remaining");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

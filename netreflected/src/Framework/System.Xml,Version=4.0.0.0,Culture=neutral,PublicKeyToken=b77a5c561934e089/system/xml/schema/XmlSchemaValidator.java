@@ -58,12 +58,27 @@ import system.xml.schema.ValidationEventHandler;
 
 /**
  * The base .NET class managing System.Xml.Schema.XmlSchemaValidator, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaValidator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaValidator</a>
  */
 public class XmlSchemaValidator extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.XmlSchemaValidator
+     */
     public static final String className = "System.Xml.Schema.XmlSchemaValidator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -116,7 +131,9 @@ public class XmlSchemaValidator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaValidator}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSchemaValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSchemaValidator(from.getJCOInstance());
@@ -124,6 +141,8 @@ public class XmlSchemaValidator extends NetObject  {
 
     // Constructors section
     
+    public XmlSchemaValidator() throws Throwable {
+    }
 
     public XmlSchemaValidator(XmlNameTable nameTable, XmlSchemaSet schemas, IXmlNamespaceResolver namespaceResolver, XmlSchemaValidationFlags validationFlags) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.RankException {
         try {
@@ -134,6 +153,7 @@ public class XmlSchemaValidator extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

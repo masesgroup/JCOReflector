@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.QueryContinueDragEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link QueryContinueDragEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.QueryContinueDragEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.QueryContinueDragEventHandler</a>
+ */
 public interface IQueryContinueDragEventHandler {
     public void Invoke(NetObject sender, QueryContinueDragEventArgs e);
 }

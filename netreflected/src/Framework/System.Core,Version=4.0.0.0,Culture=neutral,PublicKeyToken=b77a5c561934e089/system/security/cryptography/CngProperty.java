@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.security.cryptography.CngPropertyOptions;
 import system.security.cryptography.CngProperty;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.CngProperty, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngProperty</a>
  */
-public class CngProperty extends NetObject  {
+public class CngProperty extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.CngProperty
+     */
     public static final String className = "System.Security.Cryptography.CngProperty";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class CngProperty extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CngProperty}, a cast assert is made to check if types are compatible.
+     */
     public static CngProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CngProperty(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class CngProperty extends NetObject  {
 
     // Constructors section
     
+    public CngProperty() throws Throwable {
+    }
 
     public CngProperty(java.lang.String name, byte[] value, CngPropertyOptions options) throws Throwable, system.ArgumentNullException {
         try {
@@ -120,6 +140,7 @@ public class CngProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

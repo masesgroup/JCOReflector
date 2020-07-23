@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.net.peertopeer.collaboration.PeerChangeType;
 import system.net.peertopeer.collaboration.PeerContact;
 import system.net.peertopeer.collaboration.PeerEndPoint;
@@ -46,12 +47,27 @@ import system.net.peertopeer.collaboration.PeerObject;
 
 /**
  * The base .NET class managing System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs</a>
  */
-public class ObjectChangedEventArgs extends NetObject  {
+public class ObjectChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs
+     */
     public static final String className = "System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class ObjectChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectChangedEventArgs(from.getJCOInstance());
@@ -112,6 +130,10 @@ public class ObjectChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ObjectChangedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

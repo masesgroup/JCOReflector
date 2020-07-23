@@ -44,10 +44,22 @@ import system.security.cryptography.pkcs.SignerInfo;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.SignerInfoEnumerator, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfoEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfoEnumerator</a>
  */
 public class SignerInfoEnumerator extends NetObject implements Iterator<SignerInfo> {
+    /**
+     * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security
+     */
     public static final String assemblyShortName = "System.Security";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.SignerInfoEnumerator
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.SignerInfoEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class SignerInfoEnumerator extends NetObject implements Iterator<SignerIn
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public SignerInfo next() {
+	public final SignerInfo next() {
 		try {
 			return new SignerInfo(classInstance.next());
 		} catch (Throwable jce) {

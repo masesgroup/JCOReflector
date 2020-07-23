@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.servicemodel.channels.IChannel;
+import system.servicemodel.channels.IChannelImplementation;
+import system.servicemodel.ICommunicationObject;
+import system.servicemodel.ICommunicationObjectImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.TimeSpan;
@@ -49,12 +53,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.IReplyChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IReplyChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IReplyChannel</a>
  */
-public interface IReplyChannel extends IJCOBridgeReflected {
-
+public interface IReplyChannel extends IJCOBridgeReflected, IChannel, ICommunicationObject {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
+    public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.IReplyChannel
+     */
+    public static final String className = "System.ServiceModel.Channels.IReplyChannel";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReplyChannel}, a cast assert is made to check if types are compatible.
+     */
     public static IReplyChannel ToIReplyChannel(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ServiceModel.Channels.IReplyChannel, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ServiceModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IReplyChannelImplementation(from.getJCOInstance());
     }
@@ -101,13 +122,9 @@ public interface IReplyChannel extends IJCOBridgeReflected {
 
     public boolean WaitForRequest(TimeSpan timeout) throws Throwable;
 
-    public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
     public IAsyncResult BeginReceiveRequest(AsyncCallback callback, NetObject state) throws Throwable;
 
@@ -123,51 +140,22 @@ public interface IReplyChannel extends IJCOBridgeReflected {
 
     public RequestContext ReceiveRequest(TimeSpan timeout) throws Throwable;
 
-    public void Abort() throws Throwable;
 
-    public void Close() throws Throwable;
 
-    public void Close(TimeSpan timeout) throws Throwable;
 
-    public void EndClose(IAsyncResult result) throws Throwable;
 
-    public void EndOpen(IAsyncResult result) throws Throwable;
 
-    public void Open() throws Throwable;
 
-    public void Open(TimeSpan timeout) throws Throwable;
 
 
     
     // Properties section
     
-    public CommunicationState getState() throws Throwable;
-
     public EndpointAddress getLocalAddress() throws Throwable;
 
 
 
     // Instance Events section
     
-    public void addClosed(EventHandler handler) throws Throwable;
-
-    public void removeClosed(EventHandler handler) throws Throwable;
-
-    public void addClosing(EventHandler handler) throws Throwable;
-
-    public void removeClosing(EventHandler handler) throws Throwable;
-
-    public void addFaulted(EventHandler handler) throws Throwable;
-
-    public void removeFaulted(EventHandler handler) throws Throwable;
-
-    public void addOpened(EventHandler handler) throws Throwable;
-
-    public void removeOpened(EventHandler handler) throws Throwable;
-
-    public void addOpening(EventHandler handler) throws Throwable;
-
-    public void removeOpening(EventHandler handler) throws Throwable;
-
 
 }

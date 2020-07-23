@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.drawing.FontFamily;
+import system.drawing.text.FontCollection;
 
 
 /**
  * The base .NET class managing System.Drawing.Text.PrivateFontCollection, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.PrivateFontCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.PrivateFontCollection</a>
  */
-public class PrivateFontCollection extends NetObject  {
+public class PrivateFontCollection extends FontCollection  {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Text.PrivateFontCollection
+     */
     public static final String className = "System.Drawing.Text.PrivateFontCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class PrivateFontCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrivateFontCollection}, a cast assert is made to check if types are compatible.
+     */
     public static PrivateFontCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrivateFontCollection(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class PrivateFontCollection extends NetObject  {
 
     // Constructors section
     
-
     public PrivateFontCollection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -138,23 +154,6 @@ public class PrivateFontCollection extends NetObject  {
     
     // Properties section
     
-    public FontFamily[] getFamilies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<FontFamily> resultingArrayList = new ArrayList<FontFamily>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Families");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FontFamily(resultingObject));
-            }
-            FontFamily[] resultingArray = new FontFamily[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

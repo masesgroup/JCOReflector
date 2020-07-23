@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.forms.DataGridViewAutoSizeColumnMode;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs</a>
  */
-public class DataGridViewAutoSizeColumnsModeEventArgs extends NetObject  {
+public class DataGridViewAutoSizeColumnsModeEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs
+     */
     public static final String className = "System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewAutoSizeColumnsModeEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewAutoSizeColumnsModeEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewAutoSizeColumnsModeEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewAutoSizeColumnsModeEventArgs() throws Throwable {
+    }
 
     public DataGridViewAutoSizeColumnsModeEventArgs(DataGridViewAutoSizeColumnMode[] previousModes) throws Throwable {
         try {
@@ -121,6 +141,7 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -128,7 +149,7 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends NetObject  {
     
     // Properties section
     
-    public DataGridViewAutoSizeColumnMode[] getPreviousModes() throws Throwable {
+    public final DataGridViewAutoSizeColumnMode[] getPreviousModes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

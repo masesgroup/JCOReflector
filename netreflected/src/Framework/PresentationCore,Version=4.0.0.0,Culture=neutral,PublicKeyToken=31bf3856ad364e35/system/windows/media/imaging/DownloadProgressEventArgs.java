@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Media.Imaging.DownloadProgressEventArgs, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.DownloadProgressEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.DownloadProgressEventArgs</a>
  */
-public class DownloadProgressEventArgs extends NetObject  {
+public class DownloadProgressEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Imaging.DownloadProgressEventArgs
+     */
     public static final String className = "System.Windows.Media.Imaging.DownloadProgressEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class DownloadProgressEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DownloadProgressEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DownloadProgressEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DownloadProgressEventArgs(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class DownloadProgressEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DownloadProgressEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

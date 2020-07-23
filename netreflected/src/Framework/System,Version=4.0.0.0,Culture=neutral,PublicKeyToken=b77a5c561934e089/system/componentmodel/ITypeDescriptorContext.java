@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
 import system.componentmodel.PropertyDescriptor;
@@ -44,12 +46,29 @@ import system.componentmodel.PropertyDescriptor;
 
 /**
  * The base .NET class managing System.ComponentModel.ITypeDescriptorContext, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ITypeDescriptorContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ITypeDescriptorContext</a>
  */
-public interface ITypeDescriptorContext extends IJCOBridgeReflected {
-
+public interface ITypeDescriptorContext extends IJCOBridgeReflected, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.ITypeDescriptorContext
+     */
+    public static final String className = "System.ComponentModel.ITypeDescriptorContext";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeDescriptorContext}, a cast assert is made to check if types are compatible.
+     */
     public static ITypeDescriptorContext ToITypeDescriptorContext(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.ITypeDescriptorContext, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITypeDescriptorContextImplementation(from.getJCOInstance());
     }
@@ -94,7 +113,6 @@ public interface ITypeDescriptorContext extends IJCOBridgeReflected {
     
     public boolean OnComponentChanging() throws Throwable;
 
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
     public void OnComponentChanged() throws Throwable;
 

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.media.media3d.HitTestParameters3D;
 import system.windows.media.media3d.Point3D;
 import system.windows.media.media3d.Vector3D;
 
 
 /**
  * The base .NET class managing System.Windows.Media.Media3D.RayHitTestParameters, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.RayHitTestParameters" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.RayHitTestParameters</a>
  */
-public class RayHitTestParameters extends NetObject  {
+public class RayHitTestParameters extends HitTestParameters3D  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Media3D.RayHitTestParameters
+     */
     public static final String className = "System.Windows.Media.Media3D.RayHitTestParameters";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class RayHitTestParameters extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RayHitTestParameters}, a cast assert is made to check if types are compatible.
+     */
     public static RayHitTestParameters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RayHitTestParameters(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class RayHitTestParameters extends NetObject  {
 
     // Constructors section
     
+    public RayHitTestParameters() throws Throwable {
+    }
 
     public RayHitTestParameters(Point3D origin, Vector3D direction) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class RayHitTestParameters extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

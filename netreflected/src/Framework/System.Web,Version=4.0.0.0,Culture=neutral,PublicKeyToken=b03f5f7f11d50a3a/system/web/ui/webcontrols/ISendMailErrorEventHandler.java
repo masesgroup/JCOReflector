@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.SendMailErrorEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SendMailErrorEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SendMailErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SendMailErrorEventHandler</a>
+ */
 public interface ISendMailErrorEventHandler {
     public void Invoke(NetObject sender, SendMailErrorEventArgs e);
 }

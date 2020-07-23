@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.annotations.storage.StoreContentChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StoreContentChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.StoreContentChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.StoreContentChangedEventHandler</a>
+ */
 public interface IStoreContentChangedEventHandler {
     public void Invoke(NetObject sender, StoreContentChangedEventArgs e);
 }

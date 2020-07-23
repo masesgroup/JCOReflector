@@ -51,12 +51,27 @@ import system.runtime.remoting.messaging.LogicalCallContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.MethodResponse, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.MethodResponse" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.MethodResponse</a>
  */
 public class MethodResponse extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.MethodResponse
+     */
     public static final String className = "System.Runtime.Remoting.Messaging.MethodResponse";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class MethodResponse extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodResponse}, a cast assert is made to check if types are compatible.
+     */
     public static MethodResponse cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MethodResponse(from.getJCOInstance());
@@ -117,6 +134,8 @@ public class MethodResponse extends NetObject  {
 
     // Constructors section
     
+    public MethodResponse() throws Throwable {
+    }
 
     public MethodResponse(Header[] h1, IMethodCallMessage mcm) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.IndexOutOfRangeException {
         try {
@@ -127,6 +146,7 @@ public class MethodResponse extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -283,7 +303,7 @@ public class MethodResponse extends NetObject  {
         }
     }
 
-    public NetObject[] getArgs() throws Throwable {
+    public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -300,7 +320,7 @@ public class MethodResponse extends NetObject  {
         }
     }
 
-    public NetObject[] getOutArgs() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public final NetObject[] getOutArgs() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -44,12 +44,29 @@ import system.workflow.componentmodel.compiler.AccessTypes;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.IDynamicPropertyTypeProvider, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.IDynamicPropertyTypeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.IDynamicPropertyTypeProvider</a>
  */
 public interface IDynamicPropertyTypeProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
+    public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.IDynamicPropertyTypeProvider
+     */
+    public static final String className = "System.Workflow.ComponentModel.IDynamicPropertyTypeProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDynamicPropertyTypeProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IDynamicPropertyTypeProvider ToIDynamicPropertyTypeProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Workflow.ComponentModel.IDynamicPropertyTypeProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Workflow.ComponentModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDynamicPropertyTypeProviderImplementation(from.getJCOInstance());
     }

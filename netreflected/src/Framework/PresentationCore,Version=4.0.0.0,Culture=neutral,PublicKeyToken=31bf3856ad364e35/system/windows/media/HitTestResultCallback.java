@@ -43,12 +43,27 @@ import system.windows.media.HitTestResult;
 import system.windows.media.IHitTestResultCallback;
 /**
  * The base .NET class managing System.Windows.Media.HitTestResultCallback, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestResultCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestResultCallback</a>
  */
 public class HitTestResultCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.HitTestResultCallback
+     */
     public static final String className = "System.Windows.Media.HitTestResultCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IHitTestResultCallback callerInstance = null;
@@ -154,7 +169,7 @@ public class HitTestResultCallback extends JCDelegate implements IJCEventEmit, I
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final HitTestResultBehavior DynamicInvoke(HitTestResult result) throws Throwable {
+    public HitTestResultBehavior METHOD_JAVA_NAME(HitTestResult result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -165,7 +180,9 @@ public class HitTestResultCallback extends JCDelegate implements IJCEventEmit, I
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public HitTestResultBehavior Invoke(HitTestResult result) {
         return null;
     }

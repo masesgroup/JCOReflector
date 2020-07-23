@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.windows.threading.IDispatcherOperationCallback;
 /**
  * The base .NET class managing System.Windows.Threading.DispatcherOperationCallback, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherOperationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherOperationCallback</a>
  */
 public class DispatcherOperationCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Threading.DispatcherOperationCallback
+     */
     public static final String className = "System.Windows.Threading.DispatcherOperationCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDispatcherOperationCallback callerInstance = null;
@@ -152,7 +167,7 @@ public class DispatcherOperationCallback extends JCDelegate implements IJCEventE
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke(NetObject arg) throws Throwable {
+    public NetObject METHOD_JAVA_NAME(NetObject arg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -163,7 +178,9 @@ public class DispatcherOperationCallback extends JCDelegate implements IJCEventE
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke(NetObject arg) {
         return null;
     }

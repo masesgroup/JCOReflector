@@ -42,12 +42,27 @@ import system.windows.controls.ToolTipEventArgs;
 import system.windows.controls.IToolTipEventHandler;
 /**
  * The base .NET class managing System.Windows.Controls.ToolTipEventHandler, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler</a>
  */
 public class ToolTipEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.ToolTipEventHandler
+     */
     public static final String className = "System.Windows.Controls.ToolTipEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IToolTipEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ToolTipEventHandler extends JCVoidDelegate implements IJCVoidEventE
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ToolTipEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ToolTipEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ToolTipEventHandler extends JCVoidDelegate implements IJCVoidEventE
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ToolTipEventArgs e) {
     }
 }

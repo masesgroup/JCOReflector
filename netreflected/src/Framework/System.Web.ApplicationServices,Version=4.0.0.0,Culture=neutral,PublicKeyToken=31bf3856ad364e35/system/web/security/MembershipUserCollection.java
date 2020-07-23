@@ -43,12 +43,27 @@ import system.web.security.MembershipUser;
 
 /**
  * The base .NET class managing System.Web.Security.MembershipUserCollection, System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MembershipUserCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.MembershipUserCollection</a>
  */
 public class MembershipUserCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Web.ApplicationServices
+     */
     public static final String assemblyShortName = "System.Web.ApplicationServices";
+    /**
+     * Qualified class name: System.Web.Security.MembershipUserCollection
+     */
     public static final String className = "System.Web.Security.MembershipUserCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class MembershipUserCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MembershipUserCollection}, a cast assert is made to check if types are compatible.
+     */
     public static MembershipUserCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MembershipUserCollection(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class MembershipUserCollection extends NetObject  {
 
     // Constructors section
     
-
     public MembershipUserCollection() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

@@ -42,12 +42,27 @@ import system.windows.xps.packaging.PackagingProgressEventArgs;
 import system.windows.xps.packaging.IPackagingProgressEventHandler;
 /**
  * The base .NET class managing System.Windows.Xps.Packaging.PackagingProgressEventHandler, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.PackagingProgressEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.PackagingProgressEventHandler</a>
  */
 public class PackagingProgressEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Packaging.PackagingProgressEventHandler
+     */
     public static final String className = "System.Windows.Xps.Packaging.PackagingProgressEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IPackagingProgressEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class PackagingProgressEventHandler extends JCVoidDelegate implements IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, PackagingProgressEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, PackagingProgressEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class PackagingProgressEventHandler extends JCVoidDelegate implements IJC
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, PackagingProgressEventArgs e) {
     }
 }

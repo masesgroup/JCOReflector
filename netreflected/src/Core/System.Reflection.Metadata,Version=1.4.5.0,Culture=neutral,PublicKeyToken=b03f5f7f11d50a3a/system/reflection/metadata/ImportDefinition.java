@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.AssemblyReferenceHandle;
 import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.EntityHandle;
@@ -46,12 +47,27 @@ import system.reflection.metadata.ImportDefinitionKind;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.ImportDefinition, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.ImportDefinition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.ImportDefinition</a>
  */
-public class ImportDefinition extends NetObject  {
+public class ImportDefinition extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.ImportDefinition
+     */
     public static final String className = "System.Reflection.Metadata.ImportDefinition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class ImportDefinition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImportDefinition}, a cast assert is made to check if types are compatible.
+     */
     public static ImportDefinition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ImportDefinition(from.getJCOInstance());
@@ -112,6 +130,10 @@ public class ImportDefinition extends NetObject  {
 
     // Constructors section
     
+    public ImportDefinition() throws Throwable {
+    }
+
+
 
     
     // Methods section

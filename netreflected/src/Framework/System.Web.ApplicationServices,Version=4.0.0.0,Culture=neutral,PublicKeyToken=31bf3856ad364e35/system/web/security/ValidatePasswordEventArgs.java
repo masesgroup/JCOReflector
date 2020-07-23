@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Web.Security.ValidatePasswordEventArgs, System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.ValidatePasswordEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.ValidatePasswordEventArgs</a>
  */
-public class ValidatePasswordEventArgs extends NetObject  {
+public class ValidatePasswordEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Web.ApplicationServices
+     */
     public static final String assemblyShortName = "System.Web.ApplicationServices";
+    /**
+     * Qualified class name: System.Web.Security.ValidatePasswordEventArgs
+     */
     public static final String className = "System.Web.Security.ValidatePasswordEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ValidatePasswordEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValidatePasswordEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ValidatePasswordEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValidatePasswordEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class ValidatePasswordEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ValidatePasswordEventArgs() throws Throwable {
+    }
 
     public ValidatePasswordEventArgs(java.lang.String userName, java.lang.String password, boolean isNewUser) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class ValidatePasswordEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

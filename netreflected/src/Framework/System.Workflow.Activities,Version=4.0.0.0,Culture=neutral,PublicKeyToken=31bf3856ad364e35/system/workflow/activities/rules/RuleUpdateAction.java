@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.activities.rules.RuleValidation;
 import system.workflow.activities.rules.RuleAction;
+import system.workflow.activities.rules.RuleValidation;
 import system.workflow.activities.rules.RuleExecution;
 
 
 /**
  * The base .NET class managing System.Workflow.Activities.Rules.RuleUpdateAction, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleUpdateAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleUpdateAction</a>
  */
-public class RuleUpdateAction extends NetObject  {
+public class RuleUpdateAction extends RuleAction  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.Rules.RuleUpdateAction
+     */
     public static final String className = "System.Workflow.Activities.Rules.RuleUpdateAction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class RuleUpdateAction extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuleUpdateAction}, a cast assert is made to check if types are compatible.
+     */
     public static RuleUpdateAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RuleUpdateAction(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class RuleUpdateAction extends NetObject  {
 
     // Constructors section
     
-
     public RuleUpdateAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -45,12 +45,27 @@ import system.runtime.durableinstancing.InstanceValueConsistency;
 
 /**
  * The base .NET class managing System.Runtime.DurableInstancing.InstanceKeyView, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView</a>
  */
 public class InstanceKeyView extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Runtime.DurableInstancing
+     */
     public static final String assemblyShortName = "System.Runtime.DurableInstancing";
+    /**
+     * Qualified class name: System.Runtime.DurableInstancing.InstanceKeyView
+     */
     public static final String className = "System.Runtime.DurableInstancing.InstanceKeyView";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class InstanceKeyView extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceKeyView}, a cast assert is made to check if types are compatible.
+     */
     public static InstanceKeyView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new InstanceKeyView(from.getJCOInstance());
@@ -111,6 +128,10 @@ public class InstanceKeyView extends NetObject  {
 
     // Constructors section
     
+    public InstanceKeyView() throws Throwable {
+    }
+
+
 
     
     // Methods section

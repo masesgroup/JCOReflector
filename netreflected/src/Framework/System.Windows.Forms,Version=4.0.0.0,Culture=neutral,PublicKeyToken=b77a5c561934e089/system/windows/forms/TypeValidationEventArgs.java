@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.TypeValidationEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TypeValidationEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TypeValidationEventArgs</a>
  */
-public class TypeValidationEventArgs extends NetObject  {
+public class TypeValidationEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.TypeValidationEventArgs
+     */
     public static final String className = "System.Windows.Forms.TypeValidationEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class TypeValidationEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeValidationEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static TypeValidationEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TypeValidationEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class TypeValidationEventArgs extends NetObject  {
 
     // Constructors section
     
+    public TypeValidationEventArgs() throws Throwable {
+    }
 
     public TypeValidationEventArgs(NetType validatingType, boolean isValidInput, NetObject returnValue, java.lang.String message) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class TypeValidationEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

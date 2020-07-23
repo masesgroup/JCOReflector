@@ -45,12 +45,27 @@ import system.transactions.IDtcTransactionImplementation;
 
 /**
  * The base .NET class managing System.Transactions.TransactionInterop, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionInterop" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionInterop</a>
  */
 public class TransactionInterop extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Transactions.Local
+     */
     public static final String assemblyShortName = "System.Transactions.Local";
+    /**
+     * Qualified class name: System.Transactions.TransactionInterop
+     */
     public static final String className = "System.Transactions.TransactionInterop";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class TransactionInterop extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionInterop}, a cast assert is made to check if types are compatible.
+     */
     public static TransactionInterop cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TransactionInterop(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class TransactionInterop extends NetObject  {
 
     // Constructors section
     
+    public TransactionInterop() throws Throwable {
+    }
 
     
     // Methods section
@@ -121,6 +140,25 @@ public class TransactionInterop extends NetObject  {
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetExportCookie", transaction == null ? null : transaction.getJCOInstance(), whereabouts);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetExportCookie = 0; indexGetExportCookie < resultingArrayList.size(); indexGetExportCookie++ ) {
+				resultingArray[indexGetExportCookie] = (byte)resultingArrayList.get(indexGetExportCookie);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static byte[] GetExportCookie(Transaction dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.transactions.TransactionPromotionException, system.transactions.TransactionException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetExportCookie", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -205,11 +243,33 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    public static Transaction GetTransactionFromExportCookie(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (Object)dupParam0);
+            return new Transaction(objGetTransactionFromExportCookie);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Transaction GetTransactionFromTransmitterPropagationToken(byte[] propagationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (Object)propagationToken);
+            return new Transaction(objGetTransactionFromTransmitterPropagationToken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Transaction GetTransactionFromTransmitterPropagationToken(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (Object)dupParam0);
             return new Transaction(objGetTransactionFromTransmitterPropagationToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

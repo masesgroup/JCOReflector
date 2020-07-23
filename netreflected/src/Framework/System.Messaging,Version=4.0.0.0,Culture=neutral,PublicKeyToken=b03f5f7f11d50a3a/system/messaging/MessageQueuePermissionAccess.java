@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Messaging.MessageQueuePermissionAccess, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueuePermissionAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueuePermissionAccess</a>
  */
 public class MessageQueuePermissionAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Messaging
+     */
     public static final String assemblyShortName = "System.Messaging";
+    /**
+     * Qualified class name: System.Messaging.MessageQueuePermissionAccess
+     */
     public static final String className = "System.Messaging.MessageQueuePermissionAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class MessageQueuePermissionAccess extends NetObject  {
 
     // Flags management section
 
-    public MessageQueuePermissionAccess add(MessageQueuePermissionAccess val) throws Throwable {
+    public final MessageQueuePermissionAccess add(MessageQueuePermissionAccess val) throws Throwable {
         return new MessageQueuePermissionAccess(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public MessageQueuePermissionAccess remove(MessageQueuePermissionAccess val) throws Throwable {
+    public final MessageQueuePermissionAccess remove(MessageQueuePermissionAccess val) throws Throwable {
         return new MessageQueuePermissionAccess(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(MessageQueuePermissionAccess val) throws Throwable {
+    public final boolean is(MessageQueuePermissionAccess val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(MessageQueuePermissionAccess val) throws Throwable {
+    public final boolean has(MessageQueuePermissionAccess val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

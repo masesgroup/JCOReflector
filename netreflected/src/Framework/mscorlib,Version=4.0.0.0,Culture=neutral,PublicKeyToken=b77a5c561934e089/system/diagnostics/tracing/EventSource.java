@@ -51,12 +51,27 @@ import system.diagnostics.tracing.EventSourceOptions;
 
 /**
  * The base .NET class managing System.Diagnostics.Tracing.EventSource, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventSource</a>
  */
 public class EventSource extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.Tracing.EventSource
+     */
     public static final String className = "System.Diagnostics.Tracing.EventSource";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class EventSource extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventSource}, a cast assert is made to check if types are compatible.
+     */
     public static EventSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventSource(from.getJCOInstance());
@@ -117,6 +134,8 @@ public class EventSource extends NetObject  {
 
     // Constructors section
     
+    public EventSource() throws Throwable {
+    }
 
     public EventSource(java.lang.String eventSourceName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.security.SecurityException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.NotSupportedException, system.NotImplementedException {
         try {
@@ -147,6 +166,7 @@ public class EventSource extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -299,11 +319,11 @@ public class EventSource extends NetObject  {
         }
     }
 
-    public static Guid getCurrentThreadActivityId() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Guid getCurrentThreadActivityId() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentThreadActivityId");
+            JCObject val = (JCObject)classInstance.Get("CurrentThreadActivityId");
             return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

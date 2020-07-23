@@ -47,12 +47,27 @@ import system.RuntimeTypeHandle;
 
 /**
  * The base .NET class managing Microsoft.JScript.Convert, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Convert" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Convert</a>
  */
 public class Convert extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.Convert
+     */
     public static final String className = "Microsoft.JScript.Convert";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class Convert extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Convert}, a cast assert is made to check if types are compatible.
+     */
     public static Convert cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Convert(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class Convert extends NetObject  {
 
     // Constructors section
     
-
     public Convert() throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.VisualStyles.VisualStyleState, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.VisualStyles.VisualStyleState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.VisualStyles.VisualStyleState</a>
  */
 public class VisualStyleState extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.VisualStyles.VisualStyleState
+     */
     public static final String className = "System.Windows.Forms.VisualStyles.VisualStyleState";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class VisualStyleState extends NetObject  {
 
     // Flags management section
 
-    public VisualStyleState add(VisualStyleState val) throws Throwable {
+    public final VisualStyleState add(VisualStyleState val) throws Throwable {
         return new VisualStyleState(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public VisualStyleState remove(VisualStyleState val) throws Throwable {
+    public final VisualStyleState remove(VisualStyleState val) throws Throwable {
         return new VisualStyleState(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(VisualStyleState val) throws Throwable {
+    public final boolean is(VisualStyleState val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(VisualStyleState val) throws Throwable {
+    public final boolean has(VisualStyleState val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

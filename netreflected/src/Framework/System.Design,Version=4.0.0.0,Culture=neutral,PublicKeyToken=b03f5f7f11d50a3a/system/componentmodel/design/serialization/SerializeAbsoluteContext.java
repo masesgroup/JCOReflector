@@ -43,12 +43,27 @@ import system.componentmodel.MemberDescriptor;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.SerializeAbsoluteContext, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.SerializeAbsoluteContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.SerializeAbsoluteContext</a>
  */
 public class SerializeAbsoluteContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.SerializeAbsoluteContext
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.SerializeAbsoluteContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SerializeAbsoluteContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SerializeAbsoluteContext}, a cast assert is made to check if types are compatible.
+     */
     public static SerializeAbsoluteContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SerializeAbsoluteContext(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SerializeAbsoluteContext extends NetObject  {
 
     // Constructors section
     
-
     public SerializeAbsoluteContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file

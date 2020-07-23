@@ -44,10 +44,22 @@ import system.security.accesscontrol.GenericAce;
 
 /**
  * The base .NET class managing System.Security.AccessControl.AceEnumerator, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AceEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AceEnumerator</a>
  */
 public class AceEnumerator extends NetObject implements Iterator<GenericAce> {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.AceEnumerator
+     */
     public static final String className = "System.Security.AccessControl.AceEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class AceEnumerator extends NetObject implements Iterator<GenericAce> {
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public GenericAce next() {
+	public final GenericAce next() {
 		try {
 			return new GenericAce(classInstance.next());
 		} catch (Throwable jce) {

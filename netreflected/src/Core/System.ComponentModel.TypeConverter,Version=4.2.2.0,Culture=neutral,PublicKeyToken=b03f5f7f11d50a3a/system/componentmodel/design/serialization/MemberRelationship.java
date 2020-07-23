@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.componentmodel.MemberDescriptor;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.MemberRelationship, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.MemberRelationship" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.MemberRelationship</a>
  */
-public class MemberRelationship extends NetObject  {
+public class MemberRelationship extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.MemberRelationship
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.MemberRelationship";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class MemberRelationship extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemberRelationship}, a cast assert is made to check if types are compatible.
+     */
     public static MemberRelationship cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MemberRelationship(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class MemberRelationship extends NetObject  {
 
     // Constructors section
     
+    public MemberRelationship() throws Throwable {
+    }
 
     public MemberRelationship(NetObject owner, MemberDescriptor member) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -119,6 +139,7 @@ public class MemberRelationship extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

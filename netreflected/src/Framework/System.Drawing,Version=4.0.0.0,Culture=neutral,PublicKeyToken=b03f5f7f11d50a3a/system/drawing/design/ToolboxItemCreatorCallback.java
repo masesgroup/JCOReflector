@@ -42,12 +42,27 @@ import system.drawing.design.ToolboxItem;
 import system.drawing.design.IToolboxItemCreatorCallback;
 /**
  * The base .NET class managing System.Drawing.Design.ToolboxItemCreatorCallback, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemCreatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemCreatorCallback</a>
  */
 public class ToolboxItemCreatorCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Design.ToolboxItemCreatorCallback
+     */
     public static final String className = "System.Drawing.Design.ToolboxItemCreatorCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IToolboxItemCreatorCallback callerInstance = null;
@@ -155,7 +170,7 @@ public class ToolboxItemCreatorCallback extends JCDelegate implements IJCEventEm
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final ToolboxItem DynamicInvoke(NetObject serializedObject, java.lang.String format) throws Throwable {
+    public ToolboxItem METHOD_JAVA_NAME(NetObject serializedObject, java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -166,7 +181,9 @@ public class ToolboxItemCreatorCallback extends JCDelegate implements IJCEventEm
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public ToolboxItem Invoke(NetObject serializedObject, java.lang.String format) {
         return null;
     }

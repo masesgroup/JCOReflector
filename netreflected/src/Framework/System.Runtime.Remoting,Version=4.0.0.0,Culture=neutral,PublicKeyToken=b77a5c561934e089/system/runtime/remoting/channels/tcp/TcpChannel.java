@@ -50,12 +50,27 @@ import system.runtime.remoting.messaging.IMessageSinkImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.Tcp.TcpChannel, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.Tcp.TcpChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.Tcp.TcpChannel</a>
  */
 public class TcpChannel extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Remoting
+     */
     public static final String assemblyShortName = "System.Runtime.Remoting";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.Tcp.TcpChannel
+     */
     public static final String className = "System.Runtime.Remoting.Channels.Tcp.TcpChannel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class TcpChannel extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TcpChannel}, a cast assert is made to check if types are compatible.
+     */
     public static TcpChannel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TcpChannel(from.getJCOInstance());
@@ -116,7 +133,6 @@ public class TcpChannel extends NetObject  {
 
     // Constructors section
     
-
     public TcpChannel() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

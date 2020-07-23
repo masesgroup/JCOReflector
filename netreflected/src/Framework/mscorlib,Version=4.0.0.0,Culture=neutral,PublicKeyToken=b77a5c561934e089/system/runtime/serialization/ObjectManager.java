@@ -47,12 +47,27 @@ import system.runtime.serialization.SerializationInfo;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.ObjectManager, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ObjectManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ObjectManager</a>
  */
 public class ObjectManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.ObjectManager
+     */
     public static final String className = "System.Runtime.Serialization.ObjectManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ObjectManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectManager}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectManager(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ObjectManager extends NetObject  {
 
     // Constructors section
     
+    public ObjectManager() throws Throwable {
+    }
 
     public ObjectManager(ISurrogateSelector selector, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
@@ -123,6 +142,7 @@ public class ObjectManager extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -189,6 +209,16 @@ public class ObjectManager extends NetObject  {
         }
     }
 
+    public void RecordArrayElementFixup(long dupParam0, JCRefOut dupParam1, long dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RecordArrayElementFixup", dupParam0, dupParam1, dupParam2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void RecordDelayedFixup(long objectToBeFixed, java.lang.String memberName, long objectRequired) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -244,6 +274,16 @@ public class ObjectManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID, info == null ? null : info.getJCOInstance(), idOfContainingObj, member == null ? null : member.getJCOInstance(), arrayIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterObject(NetObject dupParam0, long dupParam1, SerializationInfo dupParam2, long dupParam3, MemberInfo dupParam4, JCRefOut dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MissingMemberException, system.reflection.TargetException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterObject", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

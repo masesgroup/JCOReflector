@@ -49,12 +49,27 @@ import system.windows.Point;
 
 /**
  * The base .NET class managing System.Windows.Media.GlyphRun, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GlyphRun" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GlyphRun</a>
  */
 public class GlyphRun extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.GlyphRun
+     */
     public static final String className = "System.Windows.Media.GlyphRun";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class GlyphRun extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GlyphRun}, a cast assert is made to check if types are compatible.
+     */
     public static GlyphRun cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GlyphRun(from.getJCOInstance());
@@ -115,7 +132,6 @@ public class GlyphRun extends NetObject  {
 
     // Constructors section
     
-
     public GlyphRun() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file

@@ -42,12 +42,27 @@ import system.web.ui.Control;
 import system.web.ui.IBuildMethod;
 /**
  * The base .NET class managing System.Web.UI.BuildMethod, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod</a>
  */
 public class BuildMethod extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.BuildMethod
+     */
     public static final String className = "System.Web.UI.BuildMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IBuildMethod callerInstance = null;
@@ -151,7 +166,7 @@ public class BuildMethod extends JCDelegate implements IJCEventEmit, IJCOBridgeR
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final Control DynamicInvoke() throws Throwable {
+    public Control METHOD_JAVA_NAME() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -162,7 +177,9 @@ public class BuildMethod extends JCDelegate implements IJCEventEmit, IJCOBridgeR
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public Control Invoke() {
         return null;
     }

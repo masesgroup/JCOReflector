@@ -44,10 +44,22 @@ import system.collections.DictionaryEntry;
 
 /**
  * The base .NET class managing System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator</a>
  */
 public class BamlLocalizationDictionaryEnumerator extends NetObject implements Iterator<DictionaryEntry> {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator
+     */
     public static final String className = "System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class BamlLocalizationDictionaryEnumerator extends NetObject implements I
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public DictionaryEntry next() {
+	public final DictionaryEntry next() {
 		try {
 			return new DictionaryEntry(classInstance.next());
 		} catch (Throwable jce) {

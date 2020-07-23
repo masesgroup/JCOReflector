@@ -56,12 +56,27 @@ import microsoft.build.framework.TaskStartedEventHandler;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.IEventSource, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IEventSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IEventSource</a>
  */
 public class IEventSourceImplementation extends NetObject implements IEventSource {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.IEventSource
+     */
     public static final String className = "Microsoft.Build.Framework.IEventSource";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEventSource}, a cast assert is made to check if types are compatible.
+     */
     public static IEventSource ToIEventSource(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IEventSourceImplementation(from.getJCOInstance());

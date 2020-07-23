@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.messaging.IMessage;
+import system.runtime.remoting.messaging.IMessageImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.reflection.MethodBase;
@@ -46,12 +48,27 @@ import system.runtime.remoting.messaging.LogicalCallContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.IMethodMessage, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage</a>
  */
 public class IMethodMessageImplementation extends NetObject implements IMethodMessage {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.IMethodMessage
+     */
     public static final String className = "System.Runtime.Remoting.Messaging.IMethodMessage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +116,9 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMethodMessage}, a cast assert is made to check if types are compatible.
+     */
     public static IMethodMessage ToIMethodMessage(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IMethodMessageImplementation(from.getJCOInstance());
@@ -174,7 +193,7 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
-    public NetObject[] getArgs() throws Throwable {
+    public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -48,12 +48,27 @@ import system.runtime.remoting.channels.IClientChannelSinkProviderImplementation
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IClientChannelSinkProvider, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkProvider</a>
  */
 public class IClientChannelSinkProviderImplementation extends NetObject implements IClientChannelSinkProvider {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IClientChannelSinkProvider
+     */
     public static final String className = "System.Runtime.Remoting.Channels.IClientChannelSinkProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class IClientChannelSinkProviderImplementation extends NetObject implemen
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IClientChannelSinkProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IClientChannelSinkProvider ToIClientChannelSinkProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IClientChannelSinkProviderImplementation(from.getJCOInstance());

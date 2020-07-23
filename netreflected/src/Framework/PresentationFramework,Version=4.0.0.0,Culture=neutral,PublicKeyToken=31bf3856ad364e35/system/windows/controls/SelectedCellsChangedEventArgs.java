@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Controls.SelectedCellsChangedEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs</a>
  */
-public class SelectedCellsChangedEventArgs extends NetObject  {
+public class SelectedCellsChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.SelectedCellsChangedEventArgs
+     */
     public static final String className = "System.Windows.Controls.SelectedCellsChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SelectedCellsChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SelectedCellsChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SelectedCellsChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SelectedCellsChangedEventArgs(from.getJCOInstance());
@@ -108,6 +126,9 @@ public class SelectedCellsChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SelectedCellsChangedEventArgs() throws Throwable {
+    }
+
 
 
     

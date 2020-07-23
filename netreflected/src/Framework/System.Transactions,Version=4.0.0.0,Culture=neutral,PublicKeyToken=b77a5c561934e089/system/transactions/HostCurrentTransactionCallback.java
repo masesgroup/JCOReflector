@@ -42,12 +42,27 @@ import system.transactions.Transaction;
 import system.transactions.IHostCurrentTransactionCallback;
 /**
  * The base .NET class managing System.Transactions.HostCurrentTransactionCallback, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.HostCurrentTransactionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.HostCurrentTransactionCallback</a>
  */
 public class HostCurrentTransactionCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Transactions
+     */
     public static final String assemblyShortName = "System.Transactions";
+    /**
+     * Qualified class name: System.Transactions.HostCurrentTransactionCallback
+     */
     public static final String className = "System.Transactions.HostCurrentTransactionCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IHostCurrentTransactionCallback callerInstance = null;
@@ -151,7 +166,7 @@ public class HostCurrentTransactionCallback extends JCDelegate implements IJCEve
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final Transaction DynamicInvoke() throws Throwable {
+    public Transaction METHOD_JAVA_NAME() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -162,7 +177,9 @@ public class HostCurrentTransactionCallback extends JCDelegate implements IJCEve
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public Transaction Invoke() {
         return null;
     }

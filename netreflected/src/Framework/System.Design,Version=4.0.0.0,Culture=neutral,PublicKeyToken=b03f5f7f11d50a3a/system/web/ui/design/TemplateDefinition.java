@@ -38,20 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.design.DesignerObject;
 import system.web.ui.design.ControlDesigner;
 import system.web.ui.webcontrols.Style;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 
 
 /**
  * The base .NET class managing System.Web.UI.Design.TemplateDefinition, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TemplateDefinition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TemplateDefinition</a>
  */
-public class TemplateDefinition extends NetObject  {
+public class TemplateDefinition extends DesignerObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.TemplateDefinition
+     */
     public static final String className = "System.Web.UI.Design.TemplateDefinition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +118,9 @@ public class TemplateDefinition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateDefinition}, a cast assert is made to check if types are compatible.
+     */
     public static TemplateDefinition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TemplateDefinition(from.getJCOInstance());
@@ -112,6 +128,8 @@ public class TemplateDefinition extends NetObject  {
 
     // Constructors section
     
+    public TemplateDefinition() throws Throwable {
+    }
 
     public TemplateDefinition(ControlDesigner designer, java.lang.String name, NetObject templatedObject, java.lang.String templatePropertyName) throws Throwable, system.ArgumentNullException {
         try {
@@ -152,6 +170,7 @@ public class TemplateDefinition extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -201,17 +220,6 @@ public class TemplateDefinition extends NetObject  {
         }
     }
 
-    public IDictionary getProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getTemplatedObject() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -243,32 +251,11 @@ public class TemplateDefinition extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getTemplatePropertyName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("TemplatePropertyName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ControlDesigner getDesigner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Designer");
-            return new ControlDesigner(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

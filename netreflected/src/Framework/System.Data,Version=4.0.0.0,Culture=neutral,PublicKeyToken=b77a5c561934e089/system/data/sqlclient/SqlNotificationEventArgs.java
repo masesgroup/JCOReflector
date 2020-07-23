@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.data.sqlclient.SqlNotificationType;
 import system.data.sqlclient.SqlNotificationInfo;
 import system.data.sqlclient.SqlNotificationSource;
@@ -45,12 +46,27 @@ import system.data.sqlclient.SqlNotificationSource;
 
 /**
  * The base .NET class managing System.Data.SqlClient.SqlNotificationEventArgs, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlNotificationEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlNotificationEventArgs</a>
  */
-public class SqlNotificationEventArgs extends NetObject  {
+public class SqlNotificationEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlNotificationEventArgs
+     */
     public static final String className = "System.Data.SqlClient.SqlNotificationEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class SqlNotificationEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlNotificationEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SqlNotificationEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlNotificationEventArgs(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class SqlNotificationEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SqlNotificationEventArgs() throws Throwable {
+    }
 
     public SqlNotificationEventArgs(SqlNotificationType type, SqlNotificationInfo info, SqlNotificationSource source) throws Throwable {
         try {
@@ -121,6 +141,7 @@ public class SqlNotificationEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.Vector;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
@@ -47,12 +48,27 @@ import system.windows.media.Matrix;
 
 /**
  * The base .NET class managing System.Windows.Vector, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Vector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Vector</a>
  */
-public class Vector extends NetObject  {
+public class Vector extends ValueType  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Vector
+     */
     public static final String className = "System.Windows.Vector";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class Vector extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector}, a cast assert is made to check if types are compatible.
+     */
     public static Vector cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Vector(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class Vector extends NetObject  {
 
     // Constructors section
     
+    public Vector() throws Throwable {
+    }
 
     public Vector(double x, double y) throws Throwable {
         try {
@@ -123,6 +143,7 @@ public class Vector extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

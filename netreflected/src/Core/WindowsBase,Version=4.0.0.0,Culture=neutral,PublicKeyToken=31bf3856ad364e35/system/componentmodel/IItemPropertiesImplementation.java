@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.IItemProperties, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IItemProperties" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IItemProperties</a>
  */
 public class IItemPropertiesImplementation extends NetObject implements IItemProperties {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.IItemProperties
+     */
     public static final String className = "System.ComponentModel.IItemProperties";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IItemPropertiesImplementation extends NetObject implements IItemPro
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IItemProperties}, a cast assert is made to check if types are compatible.
+     */
     public static IItemProperties ToIItemProperties(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IItemPropertiesImplementation(from.getJCOInstance());

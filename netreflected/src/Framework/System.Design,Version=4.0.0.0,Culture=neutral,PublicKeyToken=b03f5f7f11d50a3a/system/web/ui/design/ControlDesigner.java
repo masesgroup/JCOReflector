@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.design.HtmlControlDesigner;
 import system.drawing.Rectangle;
 import system.web.ui.design.DesignerRegionCollection;
 import system.web.ui.design.EditableDesignerRegion;
@@ -49,8 +50,6 @@ import system.web.ui.Control;
 import system.web.ui.design.ControlDesigner;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 import system.web.ui.design.TransactedChangeCallback;
 import system.componentmodel.MemberDescriptor;
 import system.web.ui.design.IDesignTimeResourceWriter;
@@ -58,26 +57,34 @@ import system.web.ui.design.IDesignTimeResourceWriterImplementation;
 import system.web.ui.design.DesignerAutoFormat;
 import system.componentmodel.design.ComponentChangedEventArgs;
 import system.componentmodel.design.ComponentChangingEventArgs;
-import system.collections.ICollection;
-import system.collections.ICollectionImplementation;
 import system.componentmodel.design.DesignerActionListCollection;
-import system.componentmodel.design.DesignerVerbCollection;
-import system.web.ui.DataBindingCollection;
 import system.web.ui.design.DesignerAutoFormatCollection;
-import system.web.ui.design.IHtmlControlDesignerBehavior;
-import system.web.ui.design.IHtmlControlDesignerBehaviorImplementation;
 import system.web.ui.design.TemplateGroupCollection;
-import system.web.ui.ExpressionBindingCollection;
 
 
 /**
  * The base .NET class managing System.Web.UI.Design.ControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ControlDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ControlDesigner</a>
  */
-public class ControlDesigner extends NetObject  {
+public class ControlDesigner extends HtmlControlDesigner  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.ControlDesigner
+     */
     public static final String className = "System.Web.UI.Design.ControlDesigner";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -130,7 +137,9 @@ public class ControlDesigner extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ControlDesigner}, a cast assert is made to check if types are compatible.
+     */
     public static ControlDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ControlDesigner(from.getJCOInstance());
@@ -138,7 +147,6 @@ public class ControlDesigner extends NetObject  {
 
     // Constructors section
     
-
     public ControlDesigner() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -268,61 +276,11 @@ public class ControlDesigner extends NetObject  {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Dispose");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void DoDefaultAction() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("DoDefaultAction");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.RankException, system.NullReferenceException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InitializeExistingComponent(IDictionary defaultValues) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InitializeExistingComponent", defaultValues == null ? null : defaultValues.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InitializeNewComponent(IDictionary defaultValues) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InitializeNewComponent", defaultValues == null ? null : defaultValues.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void InitializeNonDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("InitializeNonDefault");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,26 +371,6 @@ public class ControlDesigner extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnComponentChanging", sender == null ? null : sender.getJCOInstance(), ce == null ? null : ce.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OnSetComponentDefaults() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnSetComponentDefaults");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OnSetParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OnSetParent");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,26 +480,6 @@ public class ControlDesigner extends NetObject  {
         }
     }
 
-    public boolean getShouldCodeSerialize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ShouldCodeSerialize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setShouldCodeSerialize(boolean ShouldCodeSerialize) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ShouldCodeSerialize", ShouldCodeSerialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getViewControlCreated() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -577,50 +495,6 @@ public class ControlDesigner extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewControlCreated", ViewControlCreated);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ICollection getAssociatedComponents() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedComponents");
-            return new ICollectionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DesignerActionListCollection getActionLists() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ActionLists");
-            return new DesignerActionListCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DesignerVerbCollection getVerbs() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Verbs");
-            return new DesignerVerbCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IComponent getComponent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Component");
-            return new IComponentImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -667,17 +541,6 @@ public class ControlDesigner extends NetObject  {
         }
     }
 
-    public DataBindingCollection getDataBindings() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DataBindings");
-            return new DataBindingCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignerAutoFormatCollection getAutoFormats() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -689,44 +552,12 @@ public class ControlDesigner extends NetObject  {
         }
     }
 
-    public IHtmlControlDesignerBehavior getBehavior() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Behavior");
-            return new IHtmlControlDesignerBehaviorImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBehavior(IHtmlControlDesignerBehavior Behavior) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Behavior", Behavior == null ? null : Behavior.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TemplateGroupCollection getTemplateGroups() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("TemplateGroups");
             return new TemplateGroupCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ExpressionBindingCollection getExpressions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Expressions");
-            return new ExpressionBindingCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.AsymmetricSignatureDeformatter;
 import system.security.cryptography.AsymmetricAlgorithm;
-import system.security.cryptography.HashAlgorithm;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.RSAPKCS1SignatureDeformatter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSAPKCS1SignatureDeformatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSAPKCS1SignatureDeformatter</a>
  */
-public class RSAPKCS1SignatureDeformatter extends NetObject  {
+public class RSAPKCS1SignatureDeformatter extends AsymmetricSignatureDeformatter  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.RSAPKCS1SignatureDeformatter
+     */
     public static final String className = "System.Security.Cryptography.RSAPKCS1SignatureDeformatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class RSAPKCS1SignatureDeformatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RSAPKCS1SignatureDeformatter}, a cast assert is made to check if types are compatible.
+     */
     public static RSAPKCS1SignatureDeformatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RSAPKCS1SignatureDeformatter(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class RSAPKCS1SignatureDeformatter extends NetObject  {
 
     // Constructors section
     
-
     public RSAPKCS1SignatureDeformatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -145,11 +161,11 @@ public class RSAPKCS1SignatureDeformatter extends NetObject  {
         }
     }
 
-    public boolean VerifySignature(HashAlgorithm hash, byte[] rgbSignature) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public boolean VerifySignature(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", hash == null ? null : hash.getJCOInstance(), rgbSignature);
+            return (boolean)classInstance.Invoke("VerifySignature", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

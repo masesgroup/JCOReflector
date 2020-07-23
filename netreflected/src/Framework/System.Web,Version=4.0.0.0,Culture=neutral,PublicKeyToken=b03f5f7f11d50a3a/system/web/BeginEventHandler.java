@@ -45,12 +45,27 @@ import system.AsyncCallback;
 import system.web.IBeginEventHandler;
 /**
  * The base .NET class managing System.Web.BeginEventHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.BeginEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.BeginEventHandler</a>
  */
 public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.BeginEventHandler
+     */
     public static final String className = "System.Web.BeginEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IBeginEventHandler callerInstance = null;
@@ -162,7 +177,7 @@ public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOB
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final IAsyncResult DynamicInvoke(NetObject sender, EventArgs e, AsyncCallback cb, NetObject extraData) throws Throwable {
+    public IAsyncResult METHOD_JAVA_NAME(NetObject sender, EventArgs e, AsyncCallback cb, NetObject extraData) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -173,7 +188,9 @@ public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOB
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public IAsyncResult Invoke(NetObject sender, EventArgs e, AsyncCallback cb, NetObject extraData) {
         return null;
     }

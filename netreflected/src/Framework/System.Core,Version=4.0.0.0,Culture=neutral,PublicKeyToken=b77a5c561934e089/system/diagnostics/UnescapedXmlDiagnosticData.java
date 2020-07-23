@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Diagnostics.UnescapedXmlDiagnosticData, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.UnescapedXmlDiagnosticData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.UnescapedXmlDiagnosticData</a>
  */
 public class UnescapedXmlDiagnosticData extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Diagnostics.UnescapedXmlDiagnosticData
+     */
     public static final String className = "System.Diagnostics.UnescapedXmlDiagnosticData";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class UnescapedXmlDiagnosticData extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnescapedXmlDiagnosticData}, a cast assert is made to check if types are compatible.
+     */
     public static UnescapedXmlDiagnosticData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UnescapedXmlDiagnosticData(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class UnescapedXmlDiagnosticData extends NetObject  {
 
     // Constructors section
     
+    public UnescapedXmlDiagnosticData() throws Throwable {
+    }
 
     public UnescapedXmlDiagnosticData(java.lang.String xmlPayload) throws Throwable {
         try {
@@ -118,6 +137,7 @@ public class UnescapedXmlDiagnosticData extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

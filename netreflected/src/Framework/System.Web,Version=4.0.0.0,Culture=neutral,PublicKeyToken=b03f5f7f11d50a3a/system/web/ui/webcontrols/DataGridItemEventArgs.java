@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.web.ui.webcontrols.DataGridItem;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.DataGridItemEventArgs, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridItemEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridItemEventArgs</a>
  */
-public class DataGridItemEventArgs extends NetObject  {
+public class DataGridItemEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.DataGridItemEventArgs
+     */
     public static final String className = "System.Web.UI.WebControls.DataGridItemEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DataGridItemEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridItemEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridItemEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridItemEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class DataGridItemEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridItemEventArgs() throws Throwable {
+    }
 
     public DataGridItemEventArgs(DataGridItem item) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class DataGridItemEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

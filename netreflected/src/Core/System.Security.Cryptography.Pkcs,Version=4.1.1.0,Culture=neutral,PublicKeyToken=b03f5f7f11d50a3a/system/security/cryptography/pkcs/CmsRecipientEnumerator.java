@@ -44,10 +44,22 @@ import system.security.cryptography.pkcs.CmsRecipient;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.CmsRecipientEnumerator, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.CmsRecipientEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.CmsRecipientEnumerator</a>
  */
 public class CmsRecipientEnumerator extends NetObject implements Iterator<CmsRecipient> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.CmsRecipientEnumerator
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.CmsRecipientEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class CmsRecipientEnumerator extends NetObject implements Iterator<CmsRec
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public CmsRecipient next() {
+	public final CmsRecipient next() {
 		try {
 			return new CmsRecipient(classInstance.next());
 		} catch (Throwable jce) {

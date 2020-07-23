@@ -56,12 +56,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.RemotingServices, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.RemotingServices" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.RemotingServices</a>
  */
 public class RemotingServices extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.RemotingServices
+     */
     public static final String className = "System.Runtime.Remoting.RemotingServices";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +129,9 @@ public class RemotingServices extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RemotingServices}, a cast assert is made to check if types are compatible.
+     */
     public static RemotingServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RemotingServices(from.getJCOInstance());
@@ -122,6 +139,8 @@ public class RemotingServices extends NetObject  {
 
     // Constructors section
     
+    public RemotingServices() throws Throwable {
+    }
 
     
     // Methods section

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpFileCollectionBase;
 import system.web.HttpFileCollection;
 import system.web.HttpPostedFileBase;
 import system.Array;
@@ -47,12 +48,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.Web.HttpFileCollectionWrapper, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpFileCollectionWrapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpFileCollectionWrapper</a>
  */
-public class HttpFileCollectionWrapper extends NetObject  {
+public class HttpFileCollectionWrapper extends HttpFileCollectionBase  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.HttpFileCollectionWrapper
+     */
     public static final String className = "System.Web.HttpFileCollectionWrapper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class HttpFileCollectionWrapper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpFileCollectionWrapper}, a cast assert is made to check if types are compatible.
+     */
     public static HttpFileCollectionWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpFileCollectionWrapper(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class HttpFileCollectionWrapper extends NetObject  {
 
     // Constructors section
     
+    public HttpFileCollectionWrapper() throws Throwable {
+    }
 
     public HttpFileCollectionWrapper(HttpFileCollection httpFileCollection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
@@ -123,6 +143,7 @@ public class HttpFileCollectionWrapper extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -194,56 +215,6 @@ public class HttpFileCollectionWrapper extends NetObject  {
     
     // Properties section
     
-    public boolean getIsSynchronized() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSynchronized");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getSyncRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String[] getAllKeys() throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AllKeys");
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-			for(int indexAllKeys = 0; indexAllKeys < resultingArrayList.size(); indexAllKeys++ ) {
-				resultingArray[indexAllKeys] = (java.lang.String)resultingArrayList.get(indexAllKeys);
-			}
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

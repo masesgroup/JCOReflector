@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Input.Manipulations.Manipulations2D, System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.Manipulations2D" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.Manipulations2D</a>
  */
 public class Manipulations2D extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Input.Manipulations
+     */
     public static final String assemblyShortName = "System.Windows.Input.Manipulations";
+    /**
+     * Qualified class name: System.Windows.Input.Manipulations.Manipulations2D
+     */
     public static final String className = "System.Windows.Input.Manipulations.Manipulations2D";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class Manipulations2D extends NetObject  {
 
     // Flags management section
 
-    public Manipulations2D add(Manipulations2D val) throws Throwable {
+    public final Manipulations2D add(Manipulations2D val) throws Throwable {
         return new Manipulations2D(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public Manipulations2D remove(Manipulations2D val) throws Throwable {
+    public final Manipulations2D remove(Manipulations2D val) throws Throwable {
         return new Manipulations2D(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(Manipulations2D val) throws Throwable {
+    public final boolean is(Manipulations2D val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(Manipulations2D val) throws Throwable {
+    public final boolean has(Manipulations2D val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

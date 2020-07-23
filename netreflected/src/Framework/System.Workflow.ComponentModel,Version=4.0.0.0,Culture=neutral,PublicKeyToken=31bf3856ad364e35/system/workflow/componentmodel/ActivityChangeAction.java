@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.componentmodel.WorkflowChangeAction;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.ActivityChangeAction, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.ActivityChangeAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.ActivityChangeAction</a>
  */
-public class ActivityChangeAction extends NetObject  {
+public class ActivityChangeAction extends WorkflowChangeAction  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.ActivityChangeAction
+     */
     public static final String className = "System.Workflow.ComponentModel.ActivityChangeAction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ActivityChangeAction extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityChangeAction}, a cast assert is made to check if types are compatible.
+     */
     public static ActivityChangeAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivityChangeAction(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class ActivityChangeAction extends NetObject  {
 
     // Constructors section
     
+    public ActivityChangeAction() throws Throwable {
+    }
 
     
     // Methods section

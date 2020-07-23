@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.MetadataExchangeBindings, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MetadataExchangeBindings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MetadataExchangeBindings</a>
  */
 public class MetadataExchangeBindings extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.MetadataExchangeBindings
+     */
     public static final String className = "System.ServiceModel.Description.MetadataExchangeBindings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class MetadataExchangeBindings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataExchangeBindings}, a cast assert is made to check if types are compatible.
+     */
     public static MetadataExchangeBindings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MetadataExchangeBindings(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class MetadataExchangeBindings extends NetObject  {
 
     // Constructors section
     
+    public MetadataExchangeBindings() throws Throwable {
+    }
 
     
     // Methods section

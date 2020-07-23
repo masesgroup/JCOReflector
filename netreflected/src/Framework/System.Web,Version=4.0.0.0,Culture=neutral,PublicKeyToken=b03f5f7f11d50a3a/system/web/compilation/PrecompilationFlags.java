@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.Compilation.PrecompilationFlags, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.PrecompilationFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.PrecompilationFlags</a>
  */
 public class PrecompilationFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Compilation.PrecompilationFlags
+     */
     public static final String className = "System.Web.Compilation.PrecompilationFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -146,19 +161,19 @@ public class PrecompilationFlags extends NetObject  {
 
     // Flags management section
 
-    public PrecompilationFlags add(PrecompilationFlags val) throws Throwable {
+    public final PrecompilationFlags add(PrecompilationFlags val) throws Throwable {
         return new PrecompilationFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PrecompilationFlags remove(PrecompilationFlags val) throws Throwable {
+    public final PrecompilationFlags remove(PrecompilationFlags val) throws Throwable {
         return new PrecompilationFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PrecompilationFlags val) throws Throwable {
+    public final boolean is(PrecompilationFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PrecompilationFlags val) throws Throwable {
+    public final boolean has(PrecompilationFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

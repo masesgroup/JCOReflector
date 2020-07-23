@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.serialization.SchemaImporter;
 import system.xml.serialization.XmlSchemas;
 import system.xml.serialization.CodeGenerationOptions;
 import system.codedom.compiler.CodeDomProvider;
@@ -47,17 +48,31 @@ import system.xml.serialization.XmlMembersMapping;
 import system.xml.serialization.SoapSchemaMember;
 import system.xml.serialization.XmlTypeMapping;
 import system.xml.XmlQualifiedName;
-import system.xml.serialization.advanced.SchemaImporterExtensionCollection;
 
 
 /**
  * The base .NET class managing System.Xml.Serialization.SoapSchemaImporter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapSchemaImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapSchemaImporter</a>
  */
-public class SoapSchemaImporter extends NetObject  {
+public class SoapSchemaImporter extends SchemaImporter  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.SoapSchemaImporter
+     */
     public static final String className = "System.Xml.Serialization.SoapSchemaImporter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +125,9 @@ public class SoapSchemaImporter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapSchemaImporter}, a cast assert is made to check if types are compatible.
+     */
     public static SoapSchemaImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapSchemaImporter(from.getJCOInstance());
@@ -118,6 +135,8 @@ public class SoapSchemaImporter extends NetObject  {
 
     // Constructors section
     
+    public SoapSchemaImporter() throws Throwable {
+    }
 
     public SoapSchemaImporter(XmlSchemas schemas) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.RankException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
@@ -168,6 +187,7 @@ public class SoapSchemaImporter extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -232,17 +252,6 @@ public class SoapSchemaImporter extends NetObject  {
     
     // Properties section
     
-    public SchemaImporterExtensionCollection getExtensions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Extensions");
-            return new SchemaImporterExtensionCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

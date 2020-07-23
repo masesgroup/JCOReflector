@@ -46,12 +46,27 @@ import system.componentmodel.SortDescriptionCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.GroupDescription, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.GroupDescription" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.GroupDescription</a>
  */
 public class GroupDescription extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.GroupDescription
+     */
     public static final String className = "System.ComponentModel.GroupDescription";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class GroupDescription extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GroupDescription}, a cast assert is made to check if types are compatible.
+     */
     public static GroupDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GroupDescription(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class GroupDescription extends NetObject  {
 
     // Constructors section
     
+    public GroupDescription() throws Throwable {
+    }
 
     
     // Methods section

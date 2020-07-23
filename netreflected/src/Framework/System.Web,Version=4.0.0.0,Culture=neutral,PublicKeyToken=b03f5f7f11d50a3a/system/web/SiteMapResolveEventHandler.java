@@ -43,12 +43,27 @@ import system.web.SiteMapResolveEventArgs;
 import system.web.ISiteMapResolveEventHandler;
 /**
  * The base .NET class managing System.Web.SiteMapResolveEventHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SiteMapResolveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SiteMapResolveEventHandler</a>
  */
 public class SiteMapResolveEventHandler extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.SiteMapResolveEventHandler
+     */
     public static final String className = "System.Web.SiteMapResolveEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ISiteMapResolveEventHandler callerInstance = null;
@@ -156,7 +171,7 @@ public class SiteMapResolveEventHandler extends JCDelegate implements IJCEventEm
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final SiteMapNode DynamicInvoke(NetObject sender, SiteMapResolveEventArgs e) throws Throwable {
+    public SiteMapNode METHOD_JAVA_NAME(NetObject sender, SiteMapResolveEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -167,7 +182,9 @@ public class SiteMapResolveEventHandler extends JCDelegate implements IJCEventEm
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public SiteMapNode Invoke(NetObject sender, SiteMapResolveEventArgs e) {
         return null;
     }

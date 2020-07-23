@@ -43,12 +43,27 @@ import system.runtime.remoting.ObjRef;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Services.ITrackingHandler, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.ITrackingHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.ITrackingHandler</a>
  */
 public class ITrackingHandlerImplementation extends NetObject implements ITrackingHandler {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Services.ITrackingHandler
+     */
     public static final String className = "System.Runtime.Remoting.Services.ITrackingHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITrackingHandler}, a cast assert is made to check if types are compatible.
+     */
     public static ITrackingHandler ToITrackingHandler(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITrackingHandlerImplementation(from.getJCOInstance());

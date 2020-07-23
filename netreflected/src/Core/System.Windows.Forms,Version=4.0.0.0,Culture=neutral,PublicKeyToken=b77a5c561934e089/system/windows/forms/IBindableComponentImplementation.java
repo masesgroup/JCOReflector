@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.IComponent;
+import system.componentmodel.IComponentImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.windows.forms.BindingContext;
@@ -47,12 +51,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Windows.Forms.IBindableComponent, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IBindableComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IBindableComponent</a>
  */
 public class IBindableComponentImplementation extends NetObject implements IBindableComponent {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.IBindableComponent
+     */
     public static final String className = "System.Windows.Forms.IBindableComponent";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +119,9 @@ public class IBindableComponentImplementation extends NetObject implements IBind
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindableComponent}, a cast assert is made to check if types are compatible.
+     */
     public static IBindableComponent ToIBindableComponent(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IBindableComponentImplementation(from.getJCOInstance());

@@ -42,12 +42,29 @@ import system.componentmodel.composition.primitives.ComposablePart;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.ICompositionService, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.ICompositionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.ICompositionService</a>
  */
 public interface ICompositionService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
+    public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.ICompositionService
+     */
+    public static final String className = "System.ComponentModel.Composition.ICompositionService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICompositionService}, a cast assert is made to check if types are compatible.
+     */
     public static ICompositionService ToICompositionService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.Composition.ICompositionService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ComponentModel.Composition"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICompositionServiceImplementation(from.getJCOInstance());
     }

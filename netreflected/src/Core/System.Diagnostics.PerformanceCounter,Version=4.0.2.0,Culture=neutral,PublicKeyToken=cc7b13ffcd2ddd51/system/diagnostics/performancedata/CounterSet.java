@@ -46,12 +46,27 @@ import system.diagnostics.performancedata.CounterType;
 
 /**
  * The base .NET class managing System.Diagnostics.PerformanceData.CounterSet, System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSet</a>
  */
 public class CounterSet extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.PerformanceCounter
+     */
     public static final String assemblyShortName = "System.Diagnostics.PerformanceCounter";
+    /**
+     * Qualified class name: System.Diagnostics.PerformanceData.CounterSet
+     */
     public static final String className = "System.Diagnostics.PerformanceData.CounterSet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class CounterSet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CounterSet}, a cast assert is made to check if types are compatible.
+     */
     public static CounterSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CounterSet(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class CounterSet extends NetObject  {
 
     // Constructors section
     
+    public CounterSet() throws Throwable {
+    }
 
     public CounterSet(Guid providerGuid, Guid counterSetGuid, CounterSetInstanceType instanceType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         try {
@@ -122,6 +141,7 @@ public class CounterSet extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

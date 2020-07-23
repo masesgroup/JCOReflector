@@ -43,12 +43,27 @@ import system.componentmodel.dataannotations.ValidationContext;
 
 /**
  * The base .NET class managing System.ComponentModel.DataAnnotations.Validator, System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.Validator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.Validator</a>
  */
 public class Validator extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ComponentModel.DataAnnotations
+     */
     public static final String assemblyShortName = "System.ComponentModel.DataAnnotations";
+    /**
+     * Qualified class name: System.ComponentModel.DataAnnotations.Validator
+     */
     public static final String className = "System.ComponentModel.DataAnnotations.Validator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Validator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Validator}, a cast assert is made to check if types are compatible.
+     */
     public static Validator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Validator(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class Validator extends NetObject  {
 
     // Constructors section
     
+    public Validator() throws Throwable {
+    }
 
     
     // Methods section

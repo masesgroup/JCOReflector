@@ -43,12 +43,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.Net.IWebProxyScript, System.Net.WebProxy, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IWebProxyScript" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IWebProxyScript</a>
  */
 public class IWebProxyScriptImplementation extends NetObject implements IWebProxyScript {
+    /**
+     * Fully assembly qualified name: System.Net.WebProxy, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.WebProxy, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.WebProxy
+     */
     public static final String assemblyShortName = "System.Net.WebProxy";
+    /**
+     * Qualified class name: System.Net.IWebProxyScript
+     */
     public static final String className = "System.Net.IWebProxyScript";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWebProxyScript}, a cast assert is made to check if types are compatible.
+     */
     public static IWebProxyScript ToIWebProxyScript(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IWebProxyScriptImplementation(from.getJCOInstance());

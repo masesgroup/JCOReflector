@@ -44,12 +44,27 @@ import system.componentmodel.design.ComponentRenameEventHandler;
 
 /**
  * The base .NET class managing System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser</a>
  */
 public class IComPropertyBrowserImplementation extends NetObject implements IComPropertyBrowser {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser
+     */
     public static final String className = "System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IComPropertyBrowser}, a cast assert is made to check if types are compatible.
+     */
     public static IComPropertyBrowser ToIComPropertyBrowser(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IComPropertyBrowserImplementation(from.getJCOInstance());

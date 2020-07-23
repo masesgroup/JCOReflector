@@ -43,12 +43,27 @@ import system.drawing.Color;
 
 /**
  * The base .NET class managing System.Drawing.Imaging.ColorPalette, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.ColorPalette" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.ColorPalette</a>
  */
 public class ColorPalette extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Imaging.ColorPalette
+     */
     public static final String className = "System.Drawing.Imaging.ColorPalette";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ColorPalette extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ColorPalette}, a cast assert is made to check if types are compatible.
+     */
     public static ColorPalette cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ColorPalette(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class ColorPalette extends NetObject  {
 
     // Constructors section
     
+    public ColorPalette() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -127,7 +148,7 @@ public class ColorPalette extends NetObject  {
         }
     }
 
-    public Color[] getEntries() throws Throwable {
+    public final Color[] getEntries() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

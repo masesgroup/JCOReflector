@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.TreeNodeEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TreeNodeEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.TreeNodeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.TreeNodeEventHandler</a>
+ */
 public interface ITreeNodeEventHandler {
     public void Invoke(NetObject sender, TreeNodeEventArgs e);
 }

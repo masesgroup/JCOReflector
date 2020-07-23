@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.accesscontrol.CommonAcl;
 import system.security.accesscontrol.RawAcl;
 import system.security.accesscontrol.AuditFlags;
 import system.security.principal.SecurityIdentifier;
@@ -46,18 +47,31 @@ import system.security.accesscontrol.PropagationFlags;
 import system.security.accesscontrol.ObjectAceFlags;
 import system.Guid;
 import system.security.accesscontrol.ObjectAuditRule;
-import system.security.accesscontrol.AceEnumerator;
-import system.security.accesscontrol.GenericAce;
 
 
 /**
  * The base .NET class managing System.Security.AccessControl.SystemAcl, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.SystemAcl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.SystemAcl</a>
  */
-public class SystemAcl extends NetObject implements Iterable<GenericAce> {
+public class SystemAcl extends CommonAcl  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.SystemAcl
+     */
     public static final String className = "System.Security.AccessControl.SystemAcl";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +124,9 @@ public class SystemAcl extends NetObject implements Iterable<GenericAce> {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SystemAcl}, a cast assert is made to check if types are compatible.
+     */
     public static SystemAcl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SystemAcl(from.getJCOInstance());
@@ -118,6 +134,8 @@ public class SystemAcl extends NetObject implements Iterable<GenericAce> {
 
     // Constructors section
     
+    public SystemAcl() throws Throwable {
+    }
 
     public SystemAcl(boolean isContainer, boolean isDS, byte revision, int capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
@@ -148,6 +166,7 @@ public class SystemAcl extends NetObject implements Iterable<GenericAce> {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -183,15 +202,6 @@ public class SystemAcl extends NetObject implements Iterable<GenericAce> {
         }
     }
 
-    public AceEnumerator GetEnumerator() throws Throwable {
-        return new AceEnumerator(classInstance);
-    }
-
-	@SuppressWarnings("unchecked")
-	public java.util.Iterator<GenericAce> iterator() {
-		return new AceEnumerator(classInstance);
-	}
-
     public void AddAudit(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -222,36 +232,6 @@ public class SystemAcl extends NetObject implements Iterable<GenericAce> {
         }
     }
 
-    public void CopyTo(GenericAce[] array, int index) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("GetBinaryForm", binaryForm, offset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Purge(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Purge", sid == null ? null : sid.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RemoveAuditSpecific(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -277,16 +257,6 @@ public class SystemAcl extends NetObject implements Iterable<GenericAce> {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAuditSpecific", sid == null ? null : sid.getJCOInstance(), rule == null ? null : rule.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveInheritedAces() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveInheritedAces");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,87 +296,6 @@ public class SystemAcl extends NetObject implements Iterable<GenericAce> {
     
     // Properties section
     
-    public boolean getIsCanonical() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsCanonical");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsContainer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsContainer");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsDS() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDS");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSynchronized() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSynchronized");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte getRevision() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (byte)classInstance.Get("Revision");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getBinaryLength() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("BinaryLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getSyncRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataSourceViewSelectCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.DataSourceViewSelectCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.DataSourceViewSelectCallback</a>
+ */
 public interface IDataSourceViewSelectCallback {
     public void Invoke(IEnumerable data);
 }

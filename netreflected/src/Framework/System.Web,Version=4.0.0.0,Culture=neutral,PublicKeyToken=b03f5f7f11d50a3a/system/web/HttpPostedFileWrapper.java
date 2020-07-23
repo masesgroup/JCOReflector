@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpPostedFileBase;
 import system.web.HttpPostedFile;
 import system.io.Stream;
 
 
 /**
  * The base .NET class managing System.Web.HttpPostedFileWrapper, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpPostedFileWrapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpPostedFileWrapper</a>
  */
-public class HttpPostedFileWrapper extends NetObject  {
+public class HttpPostedFileWrapper extends HttpPostedFileBase  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.HttpPostedFileWrapper
+     */
     public static final String className = "System.Web.HttpPostedFileWrapper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class HttpPostedFileWrapper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpPostedFileWrapper}, a cast assert is made to check if types are compatible.
+     */
     public static HttpPostedFileWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HttpPostedFileWrapper(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class HttpPostedFileWrapper extends NetObject  {
 
     // Constructors section
     
+    public HttpPostedFileWrapper() throws Throwable {
+    }
 
     public HttpPostedFileWrapper(HttpPostedFile httpPostedFile) throws Throwable, system.ArgumentNullException {
         try {
@@ -120,6 +140,7 @@ public class HttpPostedFileWrapper extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -139,47 +160,6 @@ public class HttpPostedFileWrapper extends NetObject  {
     
     // Properties section
     
-    public int getContentLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("ContentLength");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Stream getInputStream() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InputStream");
-            return new Stream(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getContentType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ContentType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getFileName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("FileName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

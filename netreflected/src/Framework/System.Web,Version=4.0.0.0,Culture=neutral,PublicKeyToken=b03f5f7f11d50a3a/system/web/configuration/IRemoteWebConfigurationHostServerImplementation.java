@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Web.Configuration.IRemoteWebConfigurationHostServer, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.IRemoteWebConfigurationHostServer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.IRemoteWebConfigurationHostServer</a>
  */
 public class IRemoteWebConfigurationHostServerImplementation extends NetObject implements IRemoteWebConfigurationHostServer {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.IRemoteWebConfigurationHostServer
+     */
     public static final String className = "System.Web.Configuration.IRemoteWebConfigurationHostServer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRemoteWebConfigurationHostServer}, a cast assert is made to check if types are compatible.
+     */
     public static IRemoteWebConfigurationHostServer ToIRemoteWebConfigurationHostServer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRemoteWebConfigurationHostServerImplementation(from.getJCOInstance());
@@ -108,6 +125,16 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("DoEncryptOrDecrypt", doEncrypt, xmlString, protectionProviderName, protectionProviderType, parameterKeys, parameterValues);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("DoEncryptOrDecrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

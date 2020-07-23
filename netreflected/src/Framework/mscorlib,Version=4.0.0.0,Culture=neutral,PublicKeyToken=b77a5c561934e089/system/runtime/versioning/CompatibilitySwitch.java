@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.Versioning.CompatibilitySwitch, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.CompatibilitySwitch" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.CompatibilitySwitch</a>
  */
 public class CompatibilitySwitch extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Versioning.CompatibilitySwitch
+     */
     public static final String className = "System.Runtime.Versioning.CompatibilitySwitch";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class CompatibilitySwitch extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompatibilitySwitch}, a cast assert is made to check if types are compatible.
+     */
     public static CompatibilitySwitch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompatibilitySwitch(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class CompatibilitySwitch extends NetObject  {
 
     // Constructors section
     
+    public CompatibilitySwitch() throws Throwable {
+    }
 
     
     // Methods section

@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.IContextChannel;
+import system.servicemodel.IContextChannelImplementation;
+import system.servicemodel.channels.IChannel;
+import system.servicemodel.channels.IChannelImplementation;
+import system.servicemodel.ICommunicationObject;
+import system.servicemodel.ICommunicationObjectImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
@@ -54,12 +60,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ServiceModel.IDuplexContextChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.IDuplexContextChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.IDuplexContextChannel</a>
  */
 public class IDuplexContextChannelImplementation extends NetObject implements IDuplexContextChannel {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.IDuplexContextChannel
+     */
     public static final String className = "System.ServiceModel.IDuplexContextChannel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +128,9 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDuplexContextChannel}, a cast assert is made to check if types are compatible.
+     */
     public static IDuplexContextChannel ToIDuplexContextChannel(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDuplexContextChannelImplementation(from.getJCOInstance());

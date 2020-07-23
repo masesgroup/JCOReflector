@@ -38,7 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Array;
+import system.collections.DictionaryBase;
 import system.directoryservices.protocols.DirectoryAttribute;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
@@ -46,12 +46,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.SearchResultAttributeCollection, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.SearchResultAttributeCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.SearchResultAttributeCollection</a>
  */
-public class SearchResultAttributeCollection extends NetObject  {
+public class SearchResultAttributeCollection extends DictionaryBase  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.SearchResultAttributeCollection
+     */
     public static final String className = "System.DirectoryServices.Protocols.SearchResultAttributeCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class SearchResultAttributeCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SearchResultAttributeCollection}, a cast assert is made to check if types are compatible.
+     */
     public static SearchResultAttributeCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SearchResultAttributeCollection(from.getJCOInstance());
@@ -112,6 +129,10 @@ public class SearchResultAttributeCollection extends NetObject  {
 
     // Constructors section
     
+    public SearchResultAttributeCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -121,26 +142,6 @@ public class SearchResultAttributeCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Contains", attributeName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Clear() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(Array array, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,16 +161,6 @@ public class SearchResultAttributeCollection extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ICollection getAttributeNames() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

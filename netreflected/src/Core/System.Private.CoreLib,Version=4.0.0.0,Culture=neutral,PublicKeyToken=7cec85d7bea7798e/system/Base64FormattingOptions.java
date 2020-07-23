@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Base64FormattingOptions, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Base64FormattingOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Base64FormattingOptions</a>
  */
 public class Base64FormattingOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Base64FormattingOptions
+     */
     public static final String className = "System.Base64FormattingOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class Base64FormattingOptions extends NetObject  {
 
     // Flags management section
 
-    public Base64FormattingOptions add(Base64FormattingOptions val) throws Throwable {
+    public final Base64FormattingOptions add(Base64FormattingOptions val) throws Throwable {
         return new Base64FormattingOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public Base64FormattingOptions remove(Base64FormattingOptions val) throws Throwable {
+    public final Base64FormattingOptions remove(Base64FormattingOptions val) throws Throwable {
         return new Base64FormattingOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(Base64FormattingOptions val) throws Throwable {
+    public final boolean is(Base64FormattingOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(Base64FormattingOptions val) throws Throwable {
+    public final boolean has(Base64FormattingOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

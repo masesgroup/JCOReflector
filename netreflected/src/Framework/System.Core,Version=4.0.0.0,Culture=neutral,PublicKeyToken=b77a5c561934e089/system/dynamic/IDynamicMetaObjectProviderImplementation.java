@@ -44,12 +44,27 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Dynamic.IDynamicMetaObjectProvider, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IDynamicMetaObjectProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IDynamicMetaObjectProvider</a>
  */
 public class IDynamicMetaObjectProviderImplementation extends NetObject implements IDynamicMetaObjectProvider {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Dynamic.IDynamicMetaObjectProvider
+     */
     public static final String className = "System.Dynamic.IDynamicMetaObjectProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IDynamicMetaObjectProviderImplementation extends NetObject implemen
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDynamicMetaObjectProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IDynamicMetaObjectProvider ToIDynamicMetaObjectProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDynamicMetaObjectProviderImplementation(from.getJCOInstance());

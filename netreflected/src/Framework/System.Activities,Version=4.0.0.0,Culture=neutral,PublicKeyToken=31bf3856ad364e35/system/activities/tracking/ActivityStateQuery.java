@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.tracking.TrackingQuery;
 
 
 /**
  * The base .NET class managing System.Activities.Tracking.ActivityStateQuery, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.ActivityStateQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.ActivityStateQuery</a>
  */
-public class ActivityStateQuery extends NetObject  {
+public class ActivityStateQuery extends TrackingQuery  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Tracking.ActivityStateQuery
+     */
     public static final String className = "System.Activities.Tracking.ActivityStateQuery";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ActivityStateQuery extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityStateQuery}, a cast assert is made to check if types are compatible.
+     */
     public static ActivityStateQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivityStateQuery(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class ActivityStateQuery extends NetObject  {
 
     // Constructors section
     
-
     public ActivityStateQuery() throws Throwable {
         try {
             // add reference to assemblyName.dll file

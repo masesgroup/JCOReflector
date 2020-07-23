@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.MyGroupCollectionAttribute, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.MyGroupCollectionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.MyGroupCollectionAttribute</a>
  */
-public class MyGroupCollectionAttribute extends NetObject  {
+public class MyGroupCollectionAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.MyGroupCollectionAttribute
+     */
     public static final String className = "Microsoft.VisualBasic.MyGroupCollectionAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class MyGroupCollectionAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MyGroupCollectionAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static MyGroupCollectionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MyGroupCollectionAttribute(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class MyGroupCollectionAttribute extends NetObject  {
 
     // Constructors section
     
+    public MyGroupCollectionAttribute() throws Throwable {
+    }
 
     public MyGroupCollectionAttribute(java.lang.String typeToCollect, java.lang.String createInstanceMethodName, java.lang.String disposeInstanceMethodName, java.lang.String defaultInstanceAlias) throws Throwable {
         try {
@@ -120,44 +140,14 @@ public class MyGroupCollectionAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getCreateMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -47,12 +47,27 @@ import system.web.ui.webcontrols.webparts.WebPartTransformerCollection;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.WebParts.WebPartConnection, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection</a>
  */
 public class WebPartConnection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.WebParts.WebPartConnection
+     */
     public static final String className = "System.Web.UI.WebControls.WebParts.WebPartConnection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class WebPartConnection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebPartConnection}, a cast assert is made to check if types are compatible.
+     */
     public static WebPartConnection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebPartConnection(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class WebPartConnection extends NetObject  {
 
     // Constructors section
     
-
     public WebPartConnection() throws Throwable {
         try {
             // add reference to assemblyName.dll file

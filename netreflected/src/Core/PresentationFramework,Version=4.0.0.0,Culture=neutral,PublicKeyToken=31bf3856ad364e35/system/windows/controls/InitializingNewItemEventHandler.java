@@ -42,12 +42,27 @@ import system.windows.controls.InitializingNewItemEventArgs;
 import system.windows.controls.IInitializingNewItemEventHandler;
 /**
  * The base .NET class managing System.Windows.Controls.InitializingNewItemEventHandler, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InitializingNewItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InitializingNewItemEventHandler</a>
  */
 public class InitializingNewItemEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.InitializingNewItemEventHandler
+     */
     public static final String className = "System.Windows.Controls.InitializingNewItemEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IInitializingNewItemEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class InitializingNewItemEventHandler extends JCVoidDelegate implements I
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, InitializingNewItemEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, InitializingNewItemEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class InitializingNewItemEventHandler extends JCVoidDelegate implements I
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, InitializingNewItemEventArgs e) {
     }
 }

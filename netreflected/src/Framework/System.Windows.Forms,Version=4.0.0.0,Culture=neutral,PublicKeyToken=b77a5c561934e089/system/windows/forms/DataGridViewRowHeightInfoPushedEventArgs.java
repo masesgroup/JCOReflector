@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.HandledEventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs</a>
  */
-public class DataGridViewRowHeightInfoPushedEventArgs extends NetObject  {
+public class DataGridViewRowHeightInfoPushedEventArgs extends HandledEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs
+     */
     public static final String className = "System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewRowHeightInfoPushedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewRowHeightInfoPushedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewRowHeightInfoPushedEventArgs(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewRowHeightInfoPushedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -116,26 +138,6 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getHandled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Handled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHandled(boolean Handled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Handled", Handled);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getHeight() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

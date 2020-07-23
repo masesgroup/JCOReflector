@@ -42,12 +42,27 @@ import system.drawing.printing.PrintPageEventArgs;
 import system.drawing.printing.IPrintPageEventHandler;
 /**
  * The base .NET class managing System.Drawing.Printing.PrintPageEventHandler, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintPageEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintPageEventHandler</a>
  */
 public class PrintPageEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
     public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Printing.PrintPageEventHandler
+     */
     public static final String className = "System.Drawing.Printing.PrintPageEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IPrintPageEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class PrintPageEventHandler extends JCVoidDelegate implements IJCVoidEven
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, PrintPageEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, PrintPageEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class PrintPageEventHandler extends JCVoidDelegate implements IJCVoidEven
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, PrintPageEventArgs e) {
     }
 }

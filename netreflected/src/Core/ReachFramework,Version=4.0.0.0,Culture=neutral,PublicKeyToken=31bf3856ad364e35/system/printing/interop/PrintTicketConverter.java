@@ -45,12 +45,27 @@ import system.printing.PrintTicketScope;
 
 /**
  * The base .NET class managing System.Printing.Interop.PrintTicketConverter, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.Interop.PrintTicketConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.Interop.PrintTicketConverter</a>
  */
 public class PrintTicketConverter extends NetObject  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Printing.Interop.PrintTicketConverter
+     */
     public static final String className = "System.Printing.Interop.PrintTicketConverter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class PrintTicketConverter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintTicketConverter}, a cast assert is made to check if types are compatible.
+     */
     public static PrintTicketConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PrintTicketConverter(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class PrintTicketConverter extends NetObject  {
 
     // Constructors section
     
+    public PrintTicketConverter() throws Throwable {
+    }
 
     public PrintTicketConverter(java.lang.String deviceName, int clientPrintSchemaVersion) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException, system.FormatException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         try {
@@ -121,6 +140,7 @@ public class PrintTicketConverter extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -175,11 +195,33 @@ public class PrintTicketConverter extends NetObject  {
         }
     }
 
+    public PrintTicket ConvertDevModeToPrintTicket(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (Object)dupParam0);
+            return new PrintTicket(objConvertDevModeToPrintTicket);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode, PrintTicketScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", devMode, scope == null ? null : scope.getJCOInstance());
+            return new PrintTicket(objConvertDevModeToPrintTicket);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintTicket ConvertDevModeToPrintTicket(JCRefOut dupParam0, PrintTicketScope dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new PrintTicket(objConvertDevModeToPrintTicket);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,11 +242,11 @@ public class PrintTicketConverter extends NetObject  {
     
     // Properties section
     
-    public static int getMaxPrintSchemaVersion() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getMaxPrintSchemaVersion() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("MaxPrintSchemaVersion");
+            return (int)classInstance.Get("MaxPrintSchemaVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

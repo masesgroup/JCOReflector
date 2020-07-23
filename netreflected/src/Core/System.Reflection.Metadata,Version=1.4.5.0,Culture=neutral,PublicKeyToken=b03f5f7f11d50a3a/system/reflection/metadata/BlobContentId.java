@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Guid;
 import system.UInt32;
 import system.reflection.metadata.BlobContentId;
@@ -45,12 +46,27 @@ import system.reflection.metadata.BlobContentId;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.BlobContentId, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.BlobContentId" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.BlobContentId</a>
  */
-public class BlobContentId extends NetObject  {
+public class BlobContentId extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.BlobContentId
+     */
     public static final String className = "System.Reflection.Metadata.BlobContentId";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class BlobContentId extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BlobContentId}, a cast assert is made to check if types are compatible.
+     */
     public static BlobContentId cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BlobContentId(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class BlobContentId extends NetObject  {
 
     // Constructors section
     
+    public BlobContentId() throws Throwable {
+    }
 
     public BlobContentId(byte[] id) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.BadImageFormatException {
         try {
@@ -133,6 +153,7 @@ public class BlobContentId extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -151,6 +172,17 @@ public class BlobContentId extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (Object)hashCode);
+            return new BlobContentId(objFromHash);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BlobContentId FromHash(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (Object)dupParam0);
             return new BlobContentId(objFromHash);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

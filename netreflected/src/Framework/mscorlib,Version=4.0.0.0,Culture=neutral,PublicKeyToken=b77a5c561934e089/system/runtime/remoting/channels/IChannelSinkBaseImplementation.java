@@ -44,12 +44,27 @@ import system.collections.IDictionaryImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IChannelSinkBase, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IChannelSinkBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IChannelSinkBase</a>
  */
 public class IChannelSinkBaseImplementation extends NetObject implements IChannelSinkBase {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IChannelSinkBase
+     */
     public static final String className = "System.Runtime.Remoting.Channels.IChannelSinkBase";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IChannelSinkBaseImplementation extends NetObject implements IChanne
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IChannelSinkBase}, a cast assert is made to check if types are compatible.
+     */
     public static IChannelSinkBase ToIChannelSinkBase(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IChannelSinkBaseImplementation(from.getJCOInstance());

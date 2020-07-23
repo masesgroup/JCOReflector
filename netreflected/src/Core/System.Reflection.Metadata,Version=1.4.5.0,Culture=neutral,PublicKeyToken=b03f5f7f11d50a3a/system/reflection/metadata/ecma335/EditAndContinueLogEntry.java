@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.ecma335.EditAndContinueOperation;
 import system.reflection.metadata.ecma335.EditAndContinueLogEntry;
@@ -45,12 +46,27 @@ import system.reflection.metadata.ecma335.EditAndContinueLogEntry;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry</a>
  */
-public class EditAndContinueLogEntry extends NetObject  {
+public class EditAndContinueLogEntry extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry
+     */
     public static final String className = "System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class EditAndContinueLogEntry extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EditAndContinueLogEntry}, a cast assert is made to check if types are compatible.
+     */
     public static EditAndContinueLogEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EditAndContinueLogEntry(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class EditAndContinueLogEntry extends NetObject  {
 
     // Constructors section
     
+    public EditAndContinueLogEntry() throws Throwable {
+    }
 
     public EditAndContinueLogEntry(EntityHandle handle, EditAndContinueOperation operation) throws Throwable {
         try {
@@ -121,6 +141,7 @@ public class EditAndContinueLogEntry extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

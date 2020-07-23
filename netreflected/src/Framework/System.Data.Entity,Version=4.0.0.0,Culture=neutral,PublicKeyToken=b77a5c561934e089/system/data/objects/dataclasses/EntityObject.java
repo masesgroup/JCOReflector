@@ -38,20 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.objects.dataclasses.StructuralObject;
 import system.data.EntityKey;
 import system.data.EntityState;
-import system.componentmodel.PropertyChangedEventHandler;
-import system.componentmodel.PropertyChangingEventHandler;
 
 
 /**
  * The base .NET class managing System.Data.Objects.DataClasses.EntityObject, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.EntityObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.EntityObject</a>
  */
-public class EntityObject extends NetObject  {
+public class EntityObject extends StructuralObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Objects.DataClasses.EntityObject
+     */
     public static final String className = "System.Data.Objects.DataClasses.EntityObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +118,9 @@ public class EntityObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityObject}, a cast assert is made to check if types are compatible.
+     */
     public static EntityObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EntityObject(from.getJCOInstance());
@@ -112,6 +128,8 @@ public class EntityObject extends NetObject  {
 
     // Constructors section
     
+    public EntityObject() throws Throwable {
+    }
 
     
     // Methods section
@@ -156,46 +174,6 @@ public class EntityObject extends NetObject  {
 
     // Instance Events section
     
-
-    public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("PropertyChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("PropertyChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addPropertyChanging(PropertyChangingEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("PropertyChanging", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removePropertyChanging(PropertyChangingEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("PropertyChanging", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
 }

@@ -43,12 +43,27 @@ import system.web.HttpContext;
 
 /**
  * The base .NET class managing System.Web.SessionState.SessionIDManager, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionIDManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionIDManager</a>
  */
 public class SessionIDManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.SessionState.SessionIDManager
+     */
     public static final String className = "System.Web.SessionState.SessionIDManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SessionIDManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionIDManager}, a cast assert is made to check if types are compatible.
+     */
     public static SessionIDManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionIDManager(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class SessionIDManager extends NetObject  {
 
     // Constructors section
     
-
     public SessionIDManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -198,11 +214,11 @@ public class SessionIDManager extends NetObject  {
     
     // Properties section
     
-    public static int getSessionIDMaxLength() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getSessionIDMaxLength() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("SessionIDMaxLength");
+            return (int)classInstance.Get("SessionIDMaxLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

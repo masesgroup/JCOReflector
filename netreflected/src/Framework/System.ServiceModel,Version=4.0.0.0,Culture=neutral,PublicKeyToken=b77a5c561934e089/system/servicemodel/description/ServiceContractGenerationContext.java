@@ -45,12 +45,27 @@ import system.codedom.CodeTypeDeclaration;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.ServiceContractGenerationContext, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext</a>
  */
 public class ServiceContractGenerationContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.ServiceContractGenerationContext
+     */
     public static final String className = "System.ServiceModel.Description.ServiceContractGenerationContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ServiceContractGenerationContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceContractGenerationContext}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceContractGenerationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceContractGenerationContext(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ServiceContractGenerationContext extends NetObject  {
 
     // Constructors section
     
+    public ServiceContractGenerationContext() throws Throwable {
+    }
 
     public ServiceContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ContractDescription contract, CodeTypeDeclaration contractType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -131,6 +150,7 @@ public class ServiceContractGenerationContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

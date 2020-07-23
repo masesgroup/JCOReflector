@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.objects.ObjectMaterializedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ObjectMaterializedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventHandler</a>
+ */
 public interface IObjectMaterializedEventHandler {
     public void Invoke(NetObject sender, ObjectMaterializedEventArgs e);
 }

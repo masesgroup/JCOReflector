@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.annotations.Annotation;
 import system.windows.annotations.AnnotationAction;
 
 
 /**
  * The base .NET class managing System.Windows.Annotations.AnnotationAuthorChangedEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationAuthorChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationAuthorChangedEventArgs</a>
  */
-public class AnnotationAuthorChangedEventArgs extends NetObject  {
+public class AnnotationAuthorChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.AnnotationAuthorChangedEventArgs
+     */
     public static final String className = "System.Windows.Annotations.AnnotationAuthorChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class AnnotationAuthorChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnnotationAuthorChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static AnnotationAuthorChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AnnotationAuthorChangedEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class AnnotationAuthorChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public AnnotationAuthorChangedEventArgs() throws Throwable {
+    }
 
     public AnnotationAuthorChangedEventArgs(Annotation annotation, AnnotationAction action, NetObject author) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         try {
@@ -120,6 +140,7 @@ public class AnnotationAuthorChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

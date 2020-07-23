@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Web.SessionState.StateRuntime, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.StateRuntime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.StateRuntime</a>
  */
 public class StateRuntime extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.SessionState.StateRuntime
+     */
     public static final String className = "System.Web.SessionState.StateRuntime";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class StateRuntime extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StateRuntime}, a cast assert is made to check if types are compatible.
+     */
     public static StateRuntime cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StateRuntime(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class StateRuntime extends NetObject  {
 
     // Constructors section
     
-
     public StateRuntime() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -123,6 +139,16 @@ public class StateRuntime extends NetObject  {
     
     // Methods section
     
+    public void StopProcessing() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.configuration.provider.ProviderException, system.MemberAccessException, system.NotImplementedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StopProcessing");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -45,12 +45,27 @@ import system.workflow.componentmodel.CompositeActivity;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.WorkflowChanges, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.WorkflowChanges" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.WorkflowChanges</a>
  */
 public class WorkflowChanges extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.WorkflowChanges
+     */
     public static final String className = "System.Workflow.ComponentModel.WorkflowChanges";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class WorkflowChanges extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowChanges}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowChanges cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowChanges(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class WorkflowChanges extends NetObject  {
 
     // Constructors section
     
+    public WorkflowChanges() throws Throwable {
+    }
 
     public WorkflowChanges(Activity rootActivity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.FormatException, system.xml.XmlException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         try {
@@ -121,6 +140,7 @@ public class WorkflowChanges extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.webparts.WebPartVerbsEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link WebPartVerbsEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartVerbsEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartVerbsEventHandler</a>
+ */
 public interface IWebPartVerbsEventHandler {
     public void Invoke(NetObject sender, WebPartVerbsEventArgs e);
 }

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.IRuntimeVariables, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IRuntimeVariables" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IRuntimeVariables</a>
  */
 public class IRuntimeVariablesImplementation extends NetObject implements IRuntimeVariables {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.IRuntimeVariables
+     */
     public static final String className = "System.Runtime.CompilerServices.IRuntimeVariables";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IRuntimeVariablesImplementation extends NetObject implements IRunti
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRuntimeVariables}, a cast assert is made to check if types are compatible.
+     */
     public static IRuntimeVariables ToIRuntimeVariables(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRuntimeVariablesImplementation(from.getJCOInstance());

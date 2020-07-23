@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Data.EntityState, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.EntityState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.EntityState</a>
  */
 public class EntityState extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.EntityState
+     */
     public static final String className = "System.Data.EntityState";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class EntityState extends NetObject  {
 
     // Flags management section
 
-    public EntityState add(EntityState val) throws Throwable {
+    public final EntityState add(EntityState val) throws Throwable {
         return new EntityState(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public EntityState remove(EntityState val) throws Throwable {
+    public final EntityState remove(EntityState val) throws Throwable {
         return new EntityState(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(EntityState val) throws Throwable {
+    public final boolean is(EntityState val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(EntityState val) throws Throwable {
+    public final boolean has(EntityState val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -43,12 +43,27 @@ import system.web.configuration.WebApplicationLevel;
 
 /**
  * The base .NET class managing System.Web.Configuration.WebContext, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.WebContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.WebContext</a>
  */
 public class WebContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.WebContext
+     */
     public static final String className = "System.Web.Configuration.WebContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class WebContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebContext}, a cast assert is made to check if types are compatible.
+     */
     public static WebContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebContext(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class WebContext extends NetObject  {
 
     // Constructors section
     
+    public WebContext() throws Throwable {
+    }
 
     public WebContext(WebApplicationLevel pathLevel, java.lang.String site, java.lang.String applicationPath, java.lang.String path, java.lang.String locationSubPath, java.lang.String appConfigPath) throws Throwable {
         try {
@@ -119,6 +138,7 @@ public class WebContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

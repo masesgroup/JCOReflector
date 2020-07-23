@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MethodInvoker}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.MethodInvoker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.MethodInvoker</a>
+ */
 public interface IMethodInvoker {
     public void Invoke();
 }

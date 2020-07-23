@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Data.SqlClient.SqlRowsCopiedEventArgs, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowsCopiedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowsCopiedEventArgs</a>
  */
-public class SqlRowsCopiedEventArgs extends NetObject  {
+public class SqlRowsCopiedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlRowsCopiedEventArgs
+     */
     public static final String className = "System.Data.SqlClient.SqlRowsCopiedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SqlRowsCopiedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlRowsCopiedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SqlRowsCopiedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlRowsCopiedEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class SqlRowsCopiedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SqlRowsCopiedEventArgs() throws Throwable {
+    }
 
     public SqlRowsCopiedEventArgs(long rowsCopied) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class SqlRowsCopiedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

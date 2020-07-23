@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Workflow.Activities.SetStateEventArgs, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.SetStateEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.SetStateEventArgs</a>
  */
-public class SetStateEventArgs extends NetObject  {
+public class SetStateEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.SetStateEventArgs
+     */
     public static final String className = "System.Workflow.Activities.SetStateEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SetStateEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SetStateEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SetStateEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SetStateEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class SetStateEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SetStateEventArgs() throws Throwable {
+    }
 
     public SetStateEventArgs(java.lang.String targetStateName) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class SetStateEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

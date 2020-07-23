@@ -38,22 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.codedom.CodeObject;
 import system.codedom.CodeAttributeDeclarationCollection;
 import system.codedom.CodeDirectiveCollection;
 import system.codedom.CodeNamespaceCollection;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 import system.collections.specialized.StringCollection;
 
 
 /**
  * The base .NET class managing System.CodeDom.CodeCompileUnit, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeCompileUnit" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeCompileUnit</a>
  */
-public class CodeCompileUnit extends NetObject  {
+public class CodeCompileUnit extends CodeObject  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.CodeCompileUnit
+     */
     public static final String className = "System.CodeDom.CodeCompileUnit";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +120,9 @@ public class CodeCompileUnit extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeCompileUnit}, a cast assert is made to check if types are compatible.
+     */
     public static CodeCompileUnit cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeCompileUnit(from.getJCOInstance());
@@ -114,7 +130,6 @@ public class CodeCompileUnit extends NetObject  {
 
     // Constructors section
     
-
     public CodeCompileUnit() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,17 +187,6 @@ public class CodeCompileUnit extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Namespaces");
             return new CodeNamespaceCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

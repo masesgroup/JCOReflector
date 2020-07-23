@@ -44,12 +44,27 @@ import system.runtime.GCLatencyMode;
 
 /**
  * The base .NET class managing System.Runtime.GCSettings, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.GCSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.GCSettings</a>
  */
 public class GCSettings extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.GCSettings
+     */
     public static final String className = "System.Runtime.GCSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class GCSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GCSettings}, a cast assert is made to check if types are compatible.
+     */
     public static GCSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GCSettings(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class GCSettings extends NetObject  {
 
     // Constructors section
     
+    public GCSettings() throws Throwable {
+    }
 
     
     // Methods section
@@ -118,53 +137,53 @@ public class GCSettings extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsServerGC() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsServerGC() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsServerGC");
+            return (boolean)classInstance.Get("IsServerGC");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static GCLargeObjectHeapCompactionMode getLargeObjectHeapCompactionMode() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public GCLargeObjectHeapCompactionMode getLargeObjectHeapCompactionMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LargeObjectHeapCompactionMode");
+            JCObject val = (JCObject)classInstance.Get("LargeObjectHeapCompactionMode");
             return new GCLargeObjectHeapCompactionMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setLargeObjectHeapCompactionMode(GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setLargeObjectHeapCompactionMode(GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("LargeObjectHeapCompactionMode", LargeObjectHeapCompactionMode == null ? null : LargeObjectHeapCompactionMode.getJCOInstance());
+            classInstance.Set("LargeObjectHeapCompactionMode", LargeObjectHeapCompactionMode == null ? null : LargeObjectHeapCompactionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static GCLatencyMode getLatencyMode() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public GCLatencyMode getLatencyMode() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("LatencyMode");
+            JCObject val = (JCObject)classInstance.Get("LatencyMode");
             return new GCLatencyMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setLatencyMode(GCLatencyMode LatencyMode) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setLatencyMode(GCLatencyMode LatencyMode) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("LatencyMode", LatencyMode == null ? null : LatencyMode.getJCOInstance());
+            classInstance.Set("LatencyMode", LatencyMode == null ? null : LatencyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.MenuEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MenuEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.MenuEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.MenuEventHandler</a>
+ */
 public interface IMenuEventHandler {
     public void Invoke(NetObject sender, MenuEventArgs e);
 }

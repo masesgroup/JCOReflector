@@ -43,12 +43,29 @@ import system.componentmodel.PropertyDescriptor;
 
 /**
  * The base .NET class managing System.ComponentModel.ITypedList, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ITypedList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ITypedList</a>
  */
 public interface ITypedList extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.ITypedList
+     */
+    public static final String className = "System.ComponentModel.ITypedList";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypedList}, a cast assert is made to check if types are compatible.
+     */
     public static ITypedList ToITypedList(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.ITypedList, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITypedListImplementation(from.getJCOInstance());
     }

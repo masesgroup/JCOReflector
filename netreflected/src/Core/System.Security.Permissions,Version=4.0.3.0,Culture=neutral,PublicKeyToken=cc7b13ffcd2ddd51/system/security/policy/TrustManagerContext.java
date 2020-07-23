@@ -44,12 +44,27 @@ import system.ApplicationIdentity;
 
 /**
  * The base .NET class managing System.Security.Policy.TrustManagerContext, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.TrustManagerContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.TrustManagerContext</a>
  */
 public class TrustManagerContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Policy.TrustManagerContext
+     */
     public static final String className = "System.Security.Policy.TrustManagerContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class TrustManagerContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TrustManagerContext}, a cast assert is made to check if types are compatible.
+     */
     public static TrustManagerContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TrustManagerContext(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class TrustManagerContext extends NetObject  {
 
     // Constructors section
     
-
     public TrustManagerContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file

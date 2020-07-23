@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Policy.PolicyStatementAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.PolicyStatementAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.PolicyStatementAttribute</a>
  */
 public class PolicyStatementAttribute extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.PolicyStatementAttribute
+     */
     public static final String className = "System.Security.Policy.PolicyStatementAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class PolicyStatementAttribute extends NetObject  {
 
     // Flags management section
 
-    public PolicyStatementAttribute add(PolicyStatementAttribute val) throws Throwable {
+    public final PolicyStatementAttribute add(PolicyStatementAttribute val) throws Throwable {
         return new PolicyStatementAttribute(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PolicyStatementAttribute remove(PolicyStatementAttribute val) throws Throwable {
+    public final PolicyStatementAttribute remove(PolicyStatementAttribute val) throws Throwable {
         return new PolicyStatementAttribute(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PolicyStatementAttribute val) throws Throwable {
+    public final boolean is(PolicyStatementAttribute val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PolicyStatementAttribute val) throws Throwable {
+    public final boolean has(PolicyStatementAttribute val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

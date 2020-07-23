@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Metadata.SoapOption, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.SoapOption" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.SoapOption</a>
  */
 public class SoapOption extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Metadata.SoapOption
+     */
     public static final String className = "System.Runtime.Remoting.Metadata.SoapOption";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class SoapOption extends NetObject  {
 
     // Flags management section
 
-    public SoapOption add(SoapOption val) throws Throwable {
+    public final SoapOption add(SoapOption val) throws Throwable {
         return new SoapOption(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SoapOption remove(SoapOption val) throws Throwable {
+    public final SoapOption remove(SoapOption val) throws Throwable {
         return new SoapOption(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SoapOption val) throws Throwable {
+    public final boolean is(SoapOption val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SoapOption val) throws Throwable {
+    public final boolean has(SoapOption val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

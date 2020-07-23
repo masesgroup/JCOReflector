@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.windows.forms.Control;
@@ -45,12 +46,27 @@ import system.windows.forms.Control;
 
 /**
  * The base .NET class managing System.Windows.Forms.LayoutEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.LayoutEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.LayoutEventArgs</a>
  */
-public class LayoutEventArgs extends NetObject  {
+public class LayoutEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.LayoutEventArgs
+     */
     public static final String className = "System.Windows.Forms.LayoutEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class LayoutEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LayoutEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static LayoutEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LayoutEventArgs(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class LayoutEventArgs extends NetObject  {
 
     // Constructors section
     
+    public LayoutEventArgs() throws Throwable {
+    }
 
     public LayoutEventArgs(IComponent affectedComponent, java.lang.String affectedProperty) throws Throwable {
         try {
@@ -131,6 +151,7 @@ public class LayoutEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

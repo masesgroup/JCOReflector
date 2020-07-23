@@ -48,12 +48,27 @@ import system.security.cryptography.PaddingMode;
 
 /**
  * The base .NET class managing System.Security.Cryptography.SymmetricAlgorithm, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm</a>
  */
 public class SymmetricAlgorithm extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.SymmetricAlgorithm
+     */
     public static final String className = "System.Security.Cryptography.SymmetricAlgorithm";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class SymmetricAlgorithm extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SymmetricAlgorithm}, a cast assert is made to check if types are compatible.
+     */
     public static SymmetricAlgorithm cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SymmetricAlgorithm(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class SymmetricAlgorithm extends NetObject  {
 
     // Constructors section
     
+    public SymmetricAlgorithm() throws Throwable {
+    }
 
     
     // Methods section
@@ -150,6 +169,17 @@ public class SymmetricAlgorithm extends NetObject  {
         }
     }
 
+    public ICryptoTransform CreateDecryptor(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", dupParam0, dupParam1);
+            return new ICryptoTransformImplementation(objCreateDecryptor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ICryptoTransform CreateEncryptor() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -166,6 +196,17 @@ public class SymmetricAlgorithm extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", rgbKey, rgbIV);
+            return new ICryptoTransformImplementation(objCreateEncryptor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICryptoTransform CreateEncryptor(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", dupParam0, dupParam1);
             return new ICryptoTransformImplementation(objCreateEncryptor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -377,7 +418,7 @@ public class SymmetricAlgorithm extends NetObject  {
         }
     }
 
-    public KeySizes[] getLegalBlockSizes() throws Throwable {
+    public final KeySizes[] getLegalBlockSizes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -394,7 +435,7 @@ public class SymmetricAlgorithm extends NetObject  {
         }
     }
 
-    public KeySizes[] getLegalKeySizes() throws Throwable {
+    public final KeySizes[] getLegalKeySizes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

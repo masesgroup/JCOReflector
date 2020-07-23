@@ -44,12 +44,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.ISerializable, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ISerializable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ISerializable</a>
  */
 public class ISerializableImplementation extends NetObject implements ISerializable {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.ISerializable
+     */
     public static final String className = "System.Runtime.Serialization.ISerializable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class ISerializableImplementation extends NetObject implements ISerializa
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISerializable}, a cast assert is made to check if types are compatible.
+     */
     public static ISerializable ToISerializable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISerializableImplementation(from.getJCOInstance());

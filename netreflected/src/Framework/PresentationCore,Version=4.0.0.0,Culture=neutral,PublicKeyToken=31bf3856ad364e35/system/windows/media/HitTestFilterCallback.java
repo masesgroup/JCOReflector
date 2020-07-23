@@ -43,12 +43,27 @@ import system.windows.DependencyObject;
 import system.windows.media.IHitTestFilterCallback;
 /**
  * The base .NET class managing System.Windows.Media.HitTestFilterCallback, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback</a>
  */
 public class HitTestFilterCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.HitTestFilterCallback
+     */
     public static final String className = "System.Windows.Media.HitTestFilterCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IHitTestFilterCallback callerInstance = null;
@@ -154,7 +169,7 @@ public class HitTestFilterCallback extends JCDelegate implements IJCEventEmit, I
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final HitTestFilterBehavior DynamicInvoke(DependencyObject potentialHitTestTarget) throws Throwable {
+    public HitTestFilterBehavior METHOD_JAVA_NAME(DependencyObject potentialHitTestTarget) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -165,7 +180,9 @@ public class HitTestFilterCallback extends JCDelegate implements IJCEventEmit, I
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public HitTestFilterBehavior Invoke(DependencyObject potentialHitTestTarget) {
         return null;
     }

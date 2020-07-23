@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.QuestionEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link QuestionEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.QuestionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.QuestionEventHandler</a>
+ */
 public interface IQuestionEventHandler {
     public void Invoke(NetObject sender, QuestionEventArgs e);
 }

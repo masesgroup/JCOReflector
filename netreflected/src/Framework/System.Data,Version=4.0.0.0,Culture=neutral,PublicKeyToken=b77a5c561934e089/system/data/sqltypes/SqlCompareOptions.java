@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Data.SqlTypes.SqlCompareOptions, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlCompareOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlCompareOptions</a>
  */
 public class SqlCompareOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlTypes.SqlCompareOptions
+     */
     public static final String className = "System.Data.SqlTypes.SqlCompareOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class SqlCompareOptions extends NetObject  {
 
     // Flags management section
 
-    public SqlCompareOptions add(SqlCompareOptions val) throws Throwable {
+    public final SqlCompareOptions add(SqlCompareOptions val) throws Throwable {
         return new SqlCompareOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SqlCompareOptions remove(SqlCompareOptions val) throws Throwable {
+    public final SqlCompareOptions remove(SqlCompareOptions val) throws Throwable {
         return new SqlCompareOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SqlCompareOptions val) throws Throwable {
+    public final boolean is(SqlCompareOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SqlCompareOptions val) throws Throwable {
+    public final boolean has(SqlCompareOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

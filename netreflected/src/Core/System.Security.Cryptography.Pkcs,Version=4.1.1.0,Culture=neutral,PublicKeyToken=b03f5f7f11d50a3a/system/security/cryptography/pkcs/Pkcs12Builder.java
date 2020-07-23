@@ -45,12 +45,27 @@ import system.security.cryptography.HashAlgorithmName;
 
 /**
  * The base .NET class managing System.Security.Cryptography.Pkcs.Pkcs12Builder, System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12Builder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12Builder</a>
  */
 public class Pkcs12Builder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Pkcs
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Pkcs";
+    /**
+     * Qualified class name: System.Security.Cryptography.Pkcs.Pkcs12Builder
+     */
     public static final String className = "System.Security.Cryptography.Pkcs.Pkcs12Builder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class Pkcs12Builder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs12Builder}, a cast assert is made to check if types are compatible.
+     */
     public static Pkcs12Builder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Pkcs12Builder(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class Pkcs12Builder extends NetObject  {
 
     // Constructors section
     
-
     public Pkcs12Builder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -150,6 +166,16 @@ public class Pkcs12Builder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSafeContentsEncrypted", safeContents == null ? null : safeContents.getJCOInstance(), passwordBytes, pbeParameters == null ? null : pbeParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddSafeContentsEncrypted(Pkcs12SafeContents dupParam0, JCRefOut dupParam1, PbeParameters dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OverflowException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddSafeContentsEncrypted", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -59,12 +59,27 @@ import system.collections.IDictionaryImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.SoapClientFormatterSink, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.SoapClientFormatterSink" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.SoapClientFormatterSink</a>
  */
 public class SoapClientFormatterSink extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Remoting
+     */
     public static final String assemblyShortName = "System.Runtime.Remoting";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.SoapClientFormatterSink
+     */
     public static final String className = "System.Runtime.Remoting.Channels.SoapClientFormatterSink";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -117,7 +132,9 @@ public class SoapClientFormatterSink extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapClientFormatterSink}, a cast assert is made to check if types are compatible.
+     */
     public static SoapClientFormatterSink cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapClientFormatterSink(from.getJCOInstance());
@@ -125,6 +142,8 @@ public class SoapClientFormatterSink extends NetObject  {
 
     // Constructors section
     
+    public SoapClientFormatterSink() throws Throwable {
+    }
 
     public SoapClientFormatterSink(IClientChannelSink nextSink) throws Throwable {
         try {
@@ -135,6 +154,7 @@ public class SoapClientFormatterSink extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

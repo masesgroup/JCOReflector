@@ -48,12 +48,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.Windows.Markup.Localizer.BamlLocalizationDictionary, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizationDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizationDictionary</a>
  */
 public class BamlLocalizationDictionary extends NetObject implements Iterable<DictionaryEntry> {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Markup.Localizer.BamlLocalizationDictionary
+     */
     public static final String className = "System.Windows.Markup.Localizer.BamlLocalizationDictionary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class BamlLocalizationDictionary extends NetObject implements Iterable<Di
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BamlLocalizationDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static BamlLocalizationDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BamlLocalizationDictionary(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class BamlLocalizationDictionary extends NetObject implements Iterable<Di
 
     // Constructors section
     
-
     public BamlLocalizationDictionary() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -139,12 +155,12 @@ public class BamlLocalizationDictionary extends NetObject implements Iterable<Di
         }
     }
 
-    public BamlLocalizationDictionaryEnumerator GetEnumerator() throws Throwable {
+    public final BamlLocalizationDictionaryEnumerator GetEnumerator() throws Throwable {
         return new BamlLocalizationDictionaryEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<DictionaryEntry> iterator() {
+	public final java.util.Iterator<DictionaryEntry> iterator() {
 		return new BamlLocalizationDictionaryEnumerator(classInstance);
 	}
 

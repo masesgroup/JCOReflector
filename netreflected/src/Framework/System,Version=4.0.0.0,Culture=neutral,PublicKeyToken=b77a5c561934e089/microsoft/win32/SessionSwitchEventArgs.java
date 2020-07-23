@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import microsoft.win32.SessionSwitchReason;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.SessionSwitchEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionSwitchEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionSwitchEventArgs</a>
  */
-public class SessionSwitchEventArgs extends NetObject  {
+public class SessionSwitchEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: Microsoft.Win32.SessionSwitchEventArgs
+     */
     public static final String className = "Microsoft.Win32.SessionSwitchEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SessionSwitchEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionSwitchEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SessionSwitchEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionSwitchEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SessionSwitchEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SessionSwitchEventArgs() throws Throwable {
+    }
 
     public SessionSwitchEventArgs(SessionSwitchReason reason) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class SessionSwitchEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

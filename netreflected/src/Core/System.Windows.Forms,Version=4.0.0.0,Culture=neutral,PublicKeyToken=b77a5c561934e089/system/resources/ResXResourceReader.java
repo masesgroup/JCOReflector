@@ -50,12 +50,27 @@ import system.resources.ResXResourceReader;
 
 /**
  * The base .NET class managing System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResXResourceReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResXResourceReader</a>
  */
 public class ResXResourceReader extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Resources.ResXResourceReader
+     */
     public static final String className = "System.Resources.ResXResourceReader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class ResXResourceReader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResXResourceReader}, a cast assert is made to check if types are compatible.
+     */
     public static ResXResourceReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResXResourceReader(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class ResXResourceReader extends NetObject  {
 
     // Constructors section
     
+    public ResXResourceReader() throws Throwable {
+    }
 
     public ResXResourceReader(Stream stream) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
@@ -206,6 +225,7 @@ public class ResXResourceReader extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

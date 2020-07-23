@@ -39,9 +39,9 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.automation.provider.IRawElementProviderFragment;
 import system.windows.automation.provider.IRawElementProviderFragmentImplementation;
-import system.windows.automation.provider.NavigateDirection;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
+import system.windows.automation.provider.NavigateDirection;
 import system.windows.automation.provider.IRawElementProviderFragmentRoot;
 import system.windows.automation.provider.IRawElementProviderFragmentRootImplementation;
 import system.windows.automation.provider.ProviderOptions;
@@ -50,12 +50,29 @@ import system.windows.Rect;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderFragmentRoot, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot</a>
  */
-public interface IRawElementProviderFragmentRoot extends IJCOBridgeReflected {
-
+public interface IRawElementProviderFragmentRoot extends IJCOBridgeReflected, IRawElementProviderFragment, IRawElementProviderSimple {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
+    public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.IRawElementProviderFragmentRoot
+     */
+    public static final String className = "System.Windows.Automation.Provider.IRawElementProviderFragmentRoot";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRawElementProviderFragmentRoot}, a cast assert is made to check if types are compatible.
+     */
     public static IRawElementProviderFragmentRoot ToIRawElementProviderFragmentRoot(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Automation.Provider.IRawElementProviderFragmentRoot, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "UIAutomationProvider"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRawElementProviderFragmentRootImplementation(from.getJCOInstance());
     }
@@ -98,34 +115,20 @@ public interface IRawElementProviderFragmentRoot extends IJCOBridgeReflected {
 
     // Methods section
     
-    public int[] GetRuntimeId() throws Throwable;
 
-    public NetObject GetPatternProvider(int patternId) throws Throwable;
 
-    public NetObject GetPropertyValue(int propertyId) throws Throwable;
 
     public IRawElementProviderFragment ElementProviderFromPoint(double x, double y) throws Throwable;
 
     public IRawElementProviderFragment GetFocus() throws Throwable;
 
-    public IRawElementProviderFragment Navigate(NavigateDirection direction) throws Throwable;
 
-    public IRawElementProviderSimple[] GetEmbeddedFragmentRoots() throws Throwable;
 
-    public void SetFocus() throws Throwable;
 
 
     
     // Properties section
     
-    public IRawElementProviderFragmentRoot getFragmentRoot() throws Throwable;
-
-    public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
-
-    public ProviderOptions getProviderOptions() throws Throwable;
-
-    public Rect getBoundingRectangle() throws Throwable;
-
 
 
     // Instance Events section

@@ -43,12 +43,29 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Dynamic.IDynamicMetaObjectProvider, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IDynamicMetaObjectProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IDynamicMetaObjectProvider</a>
  */
 public interface IDynamicMetaObjectProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
+    public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Dynamic.IDynamicMetaObjectProvider
+     */
+    public static final String className = "System.Dynamic.IDynamicMetaObjectProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDynamicMetaObjectProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IDynamicMetaObjectProvider ToIDynamicMetaObjectProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Dynamic.IDynamicMetaObjectProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Core"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDynamicMetaObjectProviderImplementation(from.getJCOInstance());
     }

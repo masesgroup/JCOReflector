@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Dynamic.CallInfo, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.CallInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.CallInfo</a>
  */
 public class CallInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Dynamic.CallInfo
+     */
     public static final String className = "System.Dynamic.CallInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class CallInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CallInfo}, a cast assert is made to check if types are compatible.
+     */
     public static CallInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CallInfo(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class CallInfo extends NetObject  {
 
     // Constructors section
     
+    public CallInfo() throws Throwable {
+    }
 
     public CallInfo(int argCount, java.lang.String... argNames) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException {
         try {
@@ -118,6 +137,7 @@ public class CallInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

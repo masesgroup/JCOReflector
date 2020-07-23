@@ -43,12 +43,29 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.Xml.IApplicationResourceStreamResolver, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IApplicationResourceStreamResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IApplicationResourceStreamResolver</a>
  */
 public interface IApplicationResourceStreamResolver extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
+    public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.IApplicationResourceStreamResolver
+     */
+    public static final String className = "System.Xml.IApplicationResourceStreamResolver";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IApplicationResourceStreamResolver}, a cast assert is made to check if types are compatible.
+     */
     public static IApplicationResourceStreamResolver ToIApplicationResourceStreamResolver(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xml.IApplicationResourceStreamResolver, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IApplicationResourceStreamResolverImplementation(from.getJCOInstance());
     }

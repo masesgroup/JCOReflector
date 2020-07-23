@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.management.StoppedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StoppedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.StoppedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.StoppedEventHandler</a>
+ */
 public interface IStoppedEventHandler {
     public void Invoke(NetObject sender, StoppedEventArgs e);
 }

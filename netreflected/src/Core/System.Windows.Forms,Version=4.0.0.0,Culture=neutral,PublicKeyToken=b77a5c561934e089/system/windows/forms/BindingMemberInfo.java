@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.BindingMemberInfo, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingMemberInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingMemberInfo</a>
  */
-public class BindingMemberInfo extends NetObject  {
+public class BindingMemberInfo extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.BindingMemberInfo
+     */
     public static final String className = "System.Windows.Forms.BindingMemberInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class BindingMemberInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindingMemberInfo}, a cast assert is made to check if types are compatible.
+     */
     public static BindingMemberInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BindingMemberInfo(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class BindingMemberInfo extends NetObject  {
 
     // Constructors section
     
+    public BindingMemberInfo() throws Throwable {
+    }
 
     public BindingMemberInfo(java.lang.String dataMember) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         try {
@@ -118,6 +138,7 @@ public class BindingMemberInfo extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

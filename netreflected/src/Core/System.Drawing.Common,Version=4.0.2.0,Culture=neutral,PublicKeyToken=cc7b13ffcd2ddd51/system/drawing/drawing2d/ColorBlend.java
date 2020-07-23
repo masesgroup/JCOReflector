@@ -44,12 +44,27 @@ import system.drawing.Color;
 
 /**
  * The base .NET class managing System.Drawing.Drawing2D.ColorBlend, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.ColorBlend" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.ColorBlend</a>
  */
 public class ColorBlend extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Drawing2D.ColorBlend
+     */
     public static final String className = "System.Drawing.Drawing2D.ColorBlend";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ColorBlend extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ColorBlend}, a cast assert is made to check if types are compatible.
+     */
     public static ColorBlend cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ColorBlend(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class ColorBlend extends NetObject  {
 
     // Constructors section
     
-
     public ColorBlend() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -139,7 +155,7 @@ public class ColorBlend extends NetObject  {
     
     // Properties section
     
-    public Single[] getPositions() throws Throwable {
+    public final Single[] getPositions() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -166,7 +182,7 @@ public class ColorBlend extends NetObject  {
         }
     }
 
-    public Color[] getColors() throws Throwable {
+    public final Color[] getColors() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

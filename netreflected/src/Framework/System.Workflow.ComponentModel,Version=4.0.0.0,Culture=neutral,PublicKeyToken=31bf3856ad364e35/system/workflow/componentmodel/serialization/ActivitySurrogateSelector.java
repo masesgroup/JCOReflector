@@ -38,22 +38,36 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.serialization.SurrogateSelector;
 import system.runtime.serialization.ISerializationSurrogate;
 import system.runtime.serialization.ISerializationSurrogateImplementation;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.ISurrogateSelector;
-import system.runtime.serialization.ISurrogateSelectorImplementation;
 import system.workflow.componentmodel.serialization.ActivitySurrogateSelector;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector</a>
  */
-public class ActivitySurrogateSelector extends NetObject  {
+public class ActivitySurrogateSelector extends SurrogateSelector  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector
+     */
     public static final String className = "System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +120,9 @@ public class ActivitySurrogateSelector extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivitySurrogateSelector}, a cast assert is made to check if types are compatible.
+     */
     public static ActivitySurrogateSelector cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivitySurrogateSelector(from.getJCOInstance());
@@ -114,7 +130,6 @@ public class ActivitySurrogateSelector extends NetObject  {
 
     // Constructors section
     
-
     public ActivitySurrogateSelector() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -129,56 +144,15 @@ public class ActivitySurrogateSelector extends NetObject  {
     
     // Methods section
     
-    public ISurrogateSelector GetNextSelector() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNextSelector = (JCObject)classInstance.Invoke("GetNextSelector");
-            return new ISurrogateSelectorImplementation(objGetNextSelector);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void AddSurrogate(NetType type, StreamingContext context, ISerializationSurrogate surrogate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), surrogate == null ? null : surrogate.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void ChainSelector(ISurrogateSelector selector) throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ChainSelector", selector == null ? null : selector.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveSurrogate(NetType type, StreamingContext context) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public static ActivitySurrogateSelector getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ActivitySurrogateSelector getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new ActivitySurrogateSelector(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

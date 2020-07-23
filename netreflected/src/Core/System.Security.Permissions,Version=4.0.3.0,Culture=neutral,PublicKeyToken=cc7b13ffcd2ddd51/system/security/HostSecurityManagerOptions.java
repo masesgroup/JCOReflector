@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.HostSecurityManagerOptions, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.HostSecurityManagerOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.HostSecurityManagerOptions</a>
  */
 public class HostSecurityManagerOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.HostSecurityManagerOptions
+     */
     public static final String className = "System.Security.HostSecurityManagerOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class HostSecurityManagerOptions extends NetObject  {
 
     // Flags management section
 
-    public HostSecurityManagerOptions add(HostSecurityManagerOptions val) throws Throwable {
+    public final HostSecurityManagerOptions add(HostSecurityManagerOptions val) throws Throwable {
         return new HostSecurityManagerOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public HostSecurityManagerOptions remove(HostSecurityManagerOptions val) throws Throwable {
+    public final HostSecurityManagerOptions remove(HostSecurityManagerOptions val) throws Throwable {
         return new HostSecurityManagerOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(HostSecurityManagerOptions val) throws Throwable {
+    public final boolean is(HostSecurityManagerOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(HostSecurityManagerOptions val) throws Throwable {
+    public final boolean has(HostSecurityManagerOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

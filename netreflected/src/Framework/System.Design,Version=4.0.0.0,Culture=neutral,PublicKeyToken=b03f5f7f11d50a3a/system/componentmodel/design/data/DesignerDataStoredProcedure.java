@@ -44,12 +44,27 @@ import system.collections.ICollectionImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Data.DesignerDataStoredProcedure, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Data.DesignerDataStoredProcedure" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Data.DesignerDataStoredProcedure</a>
  */
 public class DesignerDataStoredProcedure extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Data.DesignerDataStoredProcedure
+     */
     public static final String className = "System.ComponentModel.Design.Data.DesignerDataStoredProcedure";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DesignerDataStoredProcedure extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerDataStoredProcedure}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerDataStoredProcedure cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerDataStoredProcedure(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class DesignerDataStoredProcedure extends NetObject  {
 
     // Constructors section
     
+    public DesignerDataStoredProcedure() throws Throwable {
+    }
 
     
     // Methods section

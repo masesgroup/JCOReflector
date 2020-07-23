@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.componentmodel.design.DesignerGlyph;
 import system.drawing.Rectangle;
 import system.workflow.componentmodel.design.ActivityDesigner;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.SelectionGlyph, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.SelectionGlyph" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.SelectionGlyph</a>
  */
-public class SelectionGlyph extends NetObject  {
+public class SelectionGlyph extends DesignerGlyph  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.SelectionGlyph
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.SelectionGlyph";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SelectionGlyph extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SelectionGlyph}, a cast assert is made to check if types are compatible.
+     */
     public static SelectionGlyph cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SelectionGlyph(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class SelectionGlyph extends NetObject  {
 
     // Constructors section
     
+    public SelectionGlyph() throws Throwable {
+    }
 
     
     // Methods section
@@ -146,31 +166,11 @@ public class SelectionGlyph extends NetObject  {
     
     // Properties section
     
-    public boolean getCanBeActivated() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanBeActivated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsPrimarySelection() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("IsPrimarySelection");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getPriority() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Priority");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

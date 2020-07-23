@@ -44,12 +44,27 @@ import system.windows.DependencyObject;
 
 /**
  * The base .NET class managing System.Windows.Navigation.BaseUriHelper, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.BaseUriHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.BaseUriHelper</a>
  */
 public class BaseUriHelper extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Navigation.BaseUriHelper
+     */
     public static final String className = "System.Windows.Navigation.BaseUriHelper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class BaseUriHelper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BaseUriHelper}, a cast assert is made to check if types are compatible.
+     */
     public static BaseUriHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BaseUriHelper(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class BaseUriHelper extends NetObject  {
 
     // Constructors section
     
+    public BaseUriHelper() throws Throwable {
+    }
 
     
     // Methods section

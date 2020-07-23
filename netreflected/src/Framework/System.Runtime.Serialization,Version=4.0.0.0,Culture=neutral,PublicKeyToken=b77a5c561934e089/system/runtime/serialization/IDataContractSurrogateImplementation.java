@@ -45,12 +45,27 @@ import system.reflection.MemberInfo;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.IDataContractSurrogate, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.IDataContractSurrogate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.IDataContractSurrogate</a>
  */
 public class IDataContractSurrogateImplementation extends NetObject implements IDataContractSurrogate {
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
     public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Runtime.Serialization.IDataContractSurrogate
+     */
     public static final String className = "System.Runtime.Serialization.IDataContractSurrogate";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class IDataContractSurrogateImplementation extends NetObject implements I
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataContractSurrogate}, a cast assert is made to check if types are compatible.
+     */
     public static IDataContractSurrogate ToIDataContractSurrogate(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDataContractSurrogateImplementation(from.getJCOInstance());

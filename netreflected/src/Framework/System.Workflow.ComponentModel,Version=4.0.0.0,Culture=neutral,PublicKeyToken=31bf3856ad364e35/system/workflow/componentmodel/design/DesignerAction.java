@@ -46,12 +46,27 @@ import system.collections.IDictionaryImplementation;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.DesignerAction, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.DesignerAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.DesignerAction</a>
  */
 public class DesignerAction extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.DesignerAction
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.DesignerAction";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class DesignerAction extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerAction}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerAction(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class DesignerAction extends NetObject  {
 
     // Constructors section
     
+    public DesignerAction() throws Throwable {
+    }
 
     public DesignerAction(ActivityDesigner activityDesigner, int actionId, java.lang.String text) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -132,6 +151,7 @@ public class DesignerAction extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

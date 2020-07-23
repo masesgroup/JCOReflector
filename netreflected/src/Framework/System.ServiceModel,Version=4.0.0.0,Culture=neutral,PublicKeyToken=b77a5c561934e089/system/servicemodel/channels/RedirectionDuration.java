@@ -43,12 +43,27 @@ import system.servicemodel.channels.RedirectionDuration;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.RedirectionDuration, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.RedirectionDuration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.RedirectionDuration</a>
  */
 public class RedirectionDuration extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.RedirectionDuration
+     */
     public static final String className = "System.ServiceModel.Channels.RedirectionDuration";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RedirectionDuration extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RedirectionDuration}, a cast assert is made to check if types are compatible.
+     */
     public static RedirectionDuration cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RedirectionDuration(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class RedirectionDuration extends NetObject  {
 
     // Constructors section
     
+    public RedirectionDuration() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -128,22 +149,22 @@ public class RedirectionDuration extends NetObject  {
     
     // Properties section
     
-    public static RedirectionDuration getPermanent() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RedirectionDuration getPermanent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Permanent");
+            JCObject val = (JCObject)classInstance.Get("Permanent");
             return new RedirectionDuration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RedirectionDuration getTemporary() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RedirectionDuration getTemporary() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Temporary");
+            JCObject val = (JCObject)classInstance.Get("Temporary");
             return new RedirectionDuration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.CancelEventArgs;
 
 
 /**
  * The base .NET class managing System.Configuration.SettingChangingEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingChangingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingChangingEventArgs</a>
  */
-public class SettingChangingEventArgs extends NetObject  {
+public class SettingChangingEventArgs extends CancelEventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Configuration.SettingChangingEventArgs
+     */
     public static final String className = "System.Configuration.SettingChangingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SettingChangingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SettingChangingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SettingChangingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SettingChangingEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class SettingChangingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SettingChangingEventArgs() throws Throwable {
+    }
 
     public SettingChangingEventArgs(java.lang.String settingName, java.lang.String settingClass, java.lang.String settingKey, NetObject newValue, boolean cancel) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class SettingChangingEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -127,26 +148,6 @@ public class SettingChangingEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

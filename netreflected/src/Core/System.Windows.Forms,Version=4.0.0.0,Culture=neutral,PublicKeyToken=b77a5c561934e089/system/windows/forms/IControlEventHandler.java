@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ControlEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ControlEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ControlEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ControlEventHandler</a>
+ */
 public interface IControlEventHandler {
     public void Invoke(NetObject sender, ControlEventArgs e);
 }

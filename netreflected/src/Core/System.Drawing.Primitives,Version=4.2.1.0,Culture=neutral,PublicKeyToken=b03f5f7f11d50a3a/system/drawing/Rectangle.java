@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.drawing.Point;
 import system.drawing.Size;
 import system.drawing.Rectangle;
@@ -46,12 +47,27 @@ import system.drawing.RectangleF;
 
 /**
  * The base .NET class managing System.Drawing.Rectangle, System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Rectangle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Rectangle</a>
  */
-public class Rectangle extends NetObject  {
+public class Rectangle extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing.Primitives
+     */
     public static final String assemblyShortName = "System.Drawing.Primitives";
+    /**
+     * Qualified class name: System.Drawing.Rectangle
+     */
     public static final String className = "System.Drawing.Rectangle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class Rectangle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rectangle}, a cast assert is made to check if types are compatible.
+     */
     public static Rectangle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Rectangle(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class Rectangle extends NetObject  {
 
     // Constructors section
     
+    public Rectangle() throws Throwable {
+    }
 
     public Rectangle(int x, int y, int width, int height) throws Throwable {
         try {
@@ -132,6 +152,7 @@ public class Rectangle extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

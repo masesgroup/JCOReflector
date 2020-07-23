@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.ComponentModel.AsyncCompletedEventArgs, System.ComponentModel.EventBasedAsync, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AsyncCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AsyncCompletedEventArgs</a>
  */
-public class AsyncCompletedEventArgs extends NetObject  {
+public class AsyncCompletedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.EventBasedAsync, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.EventBasedAsync, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.EventBasedAsync
+     */
     public static final String assemblyShortName = "System.ComponentModel.EventBasedAsync";
+    /**
+     * Qualified class name: System.ComponentModel.AsyncCompletedEventArgs
+     */
     public static final String className = "System.ComponentModel.AsyncCompletedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class AsyncCompletedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncCompletedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static AsyncCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsyncCompletedEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class AsyncCompletedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public AsyncCompletedEventArgs() throws Throwable {
+    }
 
     public AsyncCompletedEventArgs(NetException error, boolean cancelled, NetObject userState) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class AsyncCompletedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

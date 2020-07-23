@@ -44,12 +44,27 @@ import system.web.modelbinding.ModelBindingContext;
 
 /**
  * The base .NET class managing System.Web.ModelBinding.TypeMatchModelBinder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.TypeMatchModelBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.TypeMatchModelBinder</a>
  */
 public class TypeMatchModelBinder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.ModelBinding.TypeMatchModelBinder
+     */
     public static final String className = "System.Web.ModelBinding.TypeMatchModelBinder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class TypeMatchModelBinder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeMatchModelBinder}, a cast assert is made to check if types are compatible.
+     */
     public static TypeMatchModelBinder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TypeMatchModelBinder(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class TypeMatchModelBinder extends NetObject  {
 
     // Constructors section
     
-
     public TypeMatchModelBinder() throws Throwable {
         try {
             // add reference to assemblyName.dll file

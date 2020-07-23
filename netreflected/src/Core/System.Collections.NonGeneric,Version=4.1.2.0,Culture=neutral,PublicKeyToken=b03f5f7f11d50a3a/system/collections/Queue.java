@@ -47,12 +47,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Collections.Queue, System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Queue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Queue</a>
  */
 public class Queue extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections.NonGeneric
+     */
     public static final String assemblyShortName = "System.Collections.NonGeneric";
+    /**
+     * Qualified class name: System.Collections.Queue
+     */
     public static final String className = "System.Collections.Queue";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class Queue extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Queue}, a cast assert is made to check if types are compatible.
+     */
     public static Queue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Queue(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class Queue extends NetObject  {
 
     // Constructors section
     
-
     public Queue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file

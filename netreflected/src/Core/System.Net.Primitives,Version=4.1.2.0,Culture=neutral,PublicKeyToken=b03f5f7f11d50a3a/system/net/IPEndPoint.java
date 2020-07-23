@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.IPAddress;
 import system.net.EndPoint;
+import system.net.IPAddress;
 import system.net.SocketAddress;
 import system.net.IPEndPoint;
 import system.net.sockets.AddressFamily;
@@ -47,12 +47,27 @@ import system.net.sockets.AddressFamily;
 
 /**
  * The base .NET class managing System.Net.IPEndPoint, System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IPEndPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IPEndPoint</a>
  */
-public class IPEndPoint extends NetObject  {
+public class IPEndPoint extends EndPoint  {
+    /**
+     * Fully assembly qualified name: System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Primitives
+     */
     public static final String assemblyShortName = "System.Net.Primitives";
+    /**
+     * Qualified class name: System.Net.IPEndPoint
+     */
     public static final String className = "System.Net.IPEndPoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class IPEndPoint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPEndPoint}, a cast assert is made to check if types are compatible.
+     */
     public static IPEndPoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IPEndPoint(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class IPEndPoint extends NetObject  {
 
     // Constructors section
     
+    public IPEndPoint() throws Throwable {
+    }
 
     public IPEndPoint(long address, int port) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -133,6 +152,7 @@ public class IPEndPoint extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -211,17 +231,6 @@ public class IPEndPoint extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Address", Address == null ? null : Address.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AddressFamily getAddressFamily() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AddressFamily");
-            return new AddressFamily(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

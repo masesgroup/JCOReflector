@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.runtime.compilerservices.AsyncValueTaskMethodBuilder;
 import system.runtime.compilerservices.IAsyncStateMachine;
 import system.runtime.compilerservices.IAsyncStateMachineImplementation;
@@ -46,12 +47,27 @@ import system.threading.tasks.ValueTask;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder</a>
  */
-public class AsyncValueTaskMethodBuilder extends NetObject  {
+public class AsyncValueTaskMethodBuilder extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder
+     */
     public static final String className = "System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class AsyncValueTaskMethodBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncValueTaskMethodBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static AsyncValueTaskMethodBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsyncValueTaskMethodBuilder(from.getJCOInstance());
@@ -112,6 +130,10 @@ public class AsyncValueTaskMethodBuilder extends NetObject  {
 
     // Constructors section
     
+    public AsyncValueTaskMethodBuilder() throws Throwable {
+    }
+
+
 
     
     // Methods section

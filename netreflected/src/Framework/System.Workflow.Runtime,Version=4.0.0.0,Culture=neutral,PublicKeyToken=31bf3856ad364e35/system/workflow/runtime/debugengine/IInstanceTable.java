@@ -42,12 +42,29 @@ import system.workflow.componentmodel.Activity;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.DebugEngine.IInstanceTable, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.IInstanceTable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.IInstanceTable</a>
  */
 public interface IInstanceTable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
+    public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.DebugEngine.IInstanceTable
+     */
+    public static final String className = "System.Workflow.Runtime.DebugEngine.IInstanceTable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInstanceTable}, a cast assert is made to check if types are compatible.
+     */
     public static IInstanceTable ToIInstanceTable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Workflow.Runtime.DebugEngine.IInstanceTable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Workflow.Runtime"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IInstanceTableImplementation(from.getJCOInstance());
     }

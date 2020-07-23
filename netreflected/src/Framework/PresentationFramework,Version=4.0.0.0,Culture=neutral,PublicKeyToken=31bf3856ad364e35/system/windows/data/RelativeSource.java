@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.MarkupExtension;
 import system.windows.data.RelativeSourceMode;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
@@ -46,12 +47,27 @@ import system.windows.data.RelativeSource;
 
 /**
  * The base .NET class managing System.Windows.Data.RelativeSource, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.RelativeSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.RelativeSource</a>
  */
-public class RelativeSource extends NetObject  {
+public class RelativeSource extends MarkupExtension  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Data.RelativeSource
+     */
     public static final String className = "System.Windows.Data.RelativeSource";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class RelativeSource extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RelativeSource}, a cast assert is made to check if types are compatible.
+     */
     public static RelativeSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RelativeSource(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class RelativeSource extends NetObject  {
 
     // Constructors section
     
-
     public RelativeSource() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -223,33 +240,33 @@ public class RelativeSource extends NetObject  {
         }
     }
 
-    public static RelativeSource getPreviousData() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RelativeSource getPreviousData() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("PreviousData");
+            JCObject val = (JCObject)classInstance.Get("PreviousData");
             return new RelativeSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RelativeSource getSelf() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RelativeSource getSelf() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Self");
+            JCObject val = (JCObject)classInstance.Get("Self");
             return new RelativeSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static RelativeSource getTemplatedParent() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public RelativeSource getTemplatedParent() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TemplatedParent");
+            JCObject val = (JCObject)classInstance.Get("TemplatedParent");
             return new RelativeSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

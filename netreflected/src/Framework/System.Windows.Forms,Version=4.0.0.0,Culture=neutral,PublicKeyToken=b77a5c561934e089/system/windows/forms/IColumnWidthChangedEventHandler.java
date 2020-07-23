@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ColumnWidthChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ColumnWidthChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ColumnWidthChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ColumnWidthChangedEventHandler</a>
+ */
 public interface IColumnWidthChangedEventHandler {
     public void Invoke(NetObject sender, ColumnWidthChangedEventArgs e);
 }

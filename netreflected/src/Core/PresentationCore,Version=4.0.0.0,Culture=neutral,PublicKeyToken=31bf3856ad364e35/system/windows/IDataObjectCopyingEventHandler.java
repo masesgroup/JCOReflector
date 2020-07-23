@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.DataObjectCopyingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataObjectCopyingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DataObjectCopyingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DataObjectCopyingEventHandler</a>
+ */
 public interface IDataObjectCopyingEventHandler {
     public void Invoke(NetObject sender, DataObjectCopyingEventArgs e);
 }

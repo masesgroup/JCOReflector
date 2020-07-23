@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.net.UploadStringCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link UploadStringCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadStringCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadStringCompletedEventHandler</a>
+ */
 public interface IUploadStringCompletedEventHandler {
     public void Invoke(NetObject sender, UploadStringCompletedEventArgs e);
 }

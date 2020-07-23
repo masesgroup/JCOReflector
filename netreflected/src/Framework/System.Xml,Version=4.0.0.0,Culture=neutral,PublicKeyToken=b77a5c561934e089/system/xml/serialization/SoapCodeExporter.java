@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.serialization.CodeExporter;
 import system.codedom.CodeNamespace;
 import system.codedom.CodeCompileUnit;
 import system.codedom.compiler.CodeDomProvider;
@@ -51,12 +52,27 @@ import system.xml.serialization.XmlTypeMapping;
 
 /**
  * The base .NET class managing System.Xml.Serialization.SoapCodeExporter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapCodeExporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapCodeExporter</a>
  */
-public class SoapCodeExporter extends NetObject  {
+public class SoapCodeExporter extends CodeExporter  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.SoapCodeExporter
+     */
     public static final String className = "System.Xml.Serialization.SoapCodeExporter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +125,9 @@ public class SoapCodeExporter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapCodeExporter}, a cast assert is made to check if types are compatible.
+     */
     public static SoapCodeExporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapCodeExporter(from.getJCOInstance());
@@ -117,6 +135,8 @@ public class SoapCodeExporter extends NetObject  {
 
     // Constructors section
     
+    public SoapCodeExporter() throws Throwable {
+    }
 
     public SoapCodeExporter(CodeNamespace codeNamespace) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
@@ -169,6 +189,7 @@ public class SoapCodeExporter extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -216,17 +237,6 @@ public class SoapCodeExporter extends NetObject  {
     
     // Properties section
     
-    public CodeAttributeDeclarationCollection getIncludeMetadata() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("IncludeMetadata");
-            return new CodeAttributeDeclarationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

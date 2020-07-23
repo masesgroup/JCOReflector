@@ -44,12 +44,29 @@ import system.codedom.CodeCompileUnit;
 
 /**
  * The base .NET class managing System.CodeDom.Compiler.ICodeCompiler, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.ICodeCompiler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.ICodeCompiler</a>
  */
 public interface ICodeCompiler extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
+    public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.Compiler.ICodeCompiler
+     */
+    public static final String className = "System.CodeDom.Compiler.ICodeCompiler";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICodeCompiler}, a cast assert is made to check if types are compatible.
+     */
     public static ICodeCompiler ToICodeCompiler(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.CodeDom.Compiler.ICodeCompiler, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.CodeDom"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICodeCompilerImplementation(from.getJCOInstance());
     }
@@ -100,9 +117,13 @@ public interface ICodeCompiler extends IJCOBridgeReflected {
 
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters options, java.lang.String[] fileNames) throws Throwable;
 
+    public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable;
+
     public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable;
 
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters options, java.lang.String[] sources) throws Throwable;
+
+    public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable;
 
 
     

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.tasks.xaml.PropertyRelation;
 
 
 /**
  * The base .NET class managing Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation</a>
  */
-public class CommandLineArgumentRelation extends NetObject  {
+public class CommandLineArgumentRelation extends PropertyRelation  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Tasks.v4.0
+     */
     public static final String assemblyShortName = "Microsoft.Build.Tasks.v4.0";
+    /**
+     * Qualified class name: Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation
+     */
     public static final String className = "Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class CommandLineArgumentRelation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommandLineArgumentRelation}, a cast assert is made to check if types are compatible.
+     */
     public static CommandLineArgumentRelation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CommandLineArgumentRelation(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class CommandLineArgumentRelation extends NetObject  {
 
     // Constructors section
     
+    public CommandLineArgumentRelation() throws Throwable {
+    }
 
     public CommandLineArgumentRelation(java.lang.String argument, java.lang.String value, boolean required, java.lang.String separator) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class CommandLineArgumentRelation extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -127,46 +148,6 @@ public class CommandLineArgumentRelation extends NetObject  {
     
     // Properties section
     
-    public boolean getRequired() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Required");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRequired(boolean Required) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Required", Required);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getArgument() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Argument");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setArgument(java.lang.String Argument) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Argument", Argument);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -182,26 +163,6 @@ public class CommandLineArgumentRelation extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Separator", Separator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Value");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValue(java.lang.String Value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

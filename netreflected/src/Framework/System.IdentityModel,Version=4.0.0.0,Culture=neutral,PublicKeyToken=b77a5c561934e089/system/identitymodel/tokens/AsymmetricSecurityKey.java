@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.SecurityKey;
 import system.security.cryptography.AsymmetricAlgorithm;
 import system.security.cryptography.AsymmetricSignatureDeformatter;
 import system.security.cryptography.AsymmetricSignatureFormatter;
@@ -46,12 +47,27 @@ import system.security.cryptography.HashAlgorithm;
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.AsymmetricSecurityKey, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.AsymmetricSecurityKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.AsymmetricSecurityKey</a>
  */
-public class AsymmetricSecurityKey extends NetObject  {
+public class AsymmetricSecurityKey extends SecurityKey  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.AsymmetricSecurityKey
+     */
     public static final String className = "System.IdentityModel.Tokens.AsymmetricSecurityKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class AsymmetricSecurityKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricSecurityKey}, a cast assert is made to check if types are compatible.
+     */
     public static AsymmetricSecurityKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsymmetricSecurityKey(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class AsymmetricSecurityKey extends NetObject  {
 
     // Constructors section
     
+    public AsymmetricSecurityKey() throws Throwable {
+    }
 
     
     // Methods section
@@ -121,74 +141,6 @@ public class AsymmetricSecurityKey extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("HasPrivateKey");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] DecryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", algorithm, keyData);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexDecryptKey = 0; indexDecryptKey < resultingArrayList.size(); indexDecryptKey++ ) {
-				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public byte[] EncryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", algorithm, keyData);
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            byte[] resultingArray = new byte[resultingArrayList.size()];
-            for(int indexEncryptKey = 0; indexEncryptKey < resultingArrayList.size(); indexEncryptKey++ ) {
-				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
-            }
-            return resultingArray;
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,16 +194,6 @@ public class AsymmetricSecurityKey extends NetObject  {
     
     // Properties section
     
-    public int getKeySize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("KeySize");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

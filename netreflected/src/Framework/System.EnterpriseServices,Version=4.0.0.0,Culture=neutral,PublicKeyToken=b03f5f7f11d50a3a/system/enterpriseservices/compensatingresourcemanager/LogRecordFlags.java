@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags</a>
  */
 public class LogRecordFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
     public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags
+     */
     public static final String className = "System.EnterpriseServices.CompensatingResourceManager.LogRecordFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class LogRecordFlags extends NetObject  {
 
     // Flags management section
 
-    public LogRecordFlags add(LogRecordFlags val) throws Throwable {
+    public final LogRecordFlags add(LogRecordFlags val) throws Throwable {
         return new LogRecordFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public LogRecordFlags remove(LogRecordFlags val) throws Throwable {
+    public final LogRecordFlags remove(LogRecordFlags val) throws Throwable {
         return new LogRecordFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(LogRecordFlags val) throws Throwable {
+    public final boolean is(LogRecordFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(LogRecordFlags val) throws Throwable {
+    public final boolean has(LogRecordFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

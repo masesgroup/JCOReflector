@@ -44,12 +44,29 @@ import system.web.ui.webcontrols.IButtonControlImplementation;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.IPostBackContainer, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.IPostBackContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.IPostBackContainer</a>
  */
 public interface IPostBackContainer extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
+    public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.IPostBackContainer
+     */
+    public static final String className = "System.Web.UI.WebControls.IPostBackContainer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPostBackContainer}, a cast assert is made to check if types are compatible.
+     */
     public static IPostBackContainer ToIPostBackContainer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Web.UI.WebControls.IPostBackContainer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Web"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPostBackContainerImplementation(from.getJCOInstance());
     }

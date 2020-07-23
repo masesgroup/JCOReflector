@@ -50,12 +50,27 @@ import system.net.websockets.WebSocketState;
 
 /**
  * The base .NET class managing System.Net.WebSockets.WebSocket, System.Net.WebSockets, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.WebSocket" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.WebSocket</a>
  */
 public class WebSocket extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.WebSockets, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.WebSockets, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.WebSockets
+     */
     public static final String assemblyShortName = "System.Net.WebSockets";
+    /**
+     * Qualified class name: System.Net.WebSockets.WebSocket
+     */
     public static final String className = "System.Net.WebSockets.WebSocket";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class WebSocket extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebSocket}, a cast assert is made to check if types are compatible.
+     */
     public static WebSocket cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebSocket(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class WebSocket extends NetObject  {
 
     // Constructors section
     
+    public WebSocket() throws Throwable {
+    }
 
     
     // Methods section
@@ -163,6 +182,36 @@ public class WebSocket extends NetObject  {
         }
     }
 
+    public void Abort() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Abort");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RegisterPrefixes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterPrefixes");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -198,11 +247,11 @@ public class WebSocket extends NetObject  {
         }
     }
 
-    public static TimeSpan getDefaultKeepAliveInterval() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TimeSpan getDefaultKeepAliveInterval() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DefaultKeepAliveInterval");
+            JCObject val = (JCObject)classInstance.Get("DefaultKeepAliveInterval");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -47,12 +47,27 @@ import system.net.IAuthenticationModuleImplementation;
 
 /**
  * The base .NET class managing System.Net.ICredentialPolicy, System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentialPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentialPolicy</a>
  */
 public class ICredentialPolicyImplementation extends NetObject implements ICredentialPolicy {
+    /**
+     * Fully assembly qualified name: System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Requests, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Requests
+     */
     public static final String assemblyShortName = "System.Net.Requests";
+    /**
+     * Qualified class name: System.Net.ICredentialPolicy
+     */
     public static final String className = "System.Net.ICredentialPolicy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ICredentialPolicyImplementation extends NetObject implements ICrede
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICredentialPolicy}, a cast assert is made to check if types are compatible.
+     */
     public static ICredentialPolicy ToICredentialPolicy(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICredentialPolicyImplementation(from.getJCOInstance());

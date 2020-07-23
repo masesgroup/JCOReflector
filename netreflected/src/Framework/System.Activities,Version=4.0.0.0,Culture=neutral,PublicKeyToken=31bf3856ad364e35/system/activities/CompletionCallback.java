@@ -43,12 +43,27 @@ import system.activities.ActivityInstance;
 import system.activities.ICompletionCallback;
 /**
  * The base .NET class managing System.Activities.CompletionCallback, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.CompletionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.CompletionCallback</a>
  */
 public class CompletionCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.CompletionCallback
+     */
     public static final String className = "System.Activities.CompletionCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     ICompletionCallback callerInstance = null;
@@ -150,7 +165,7 @@ public class CompletionCallback extends JCVoidDelegate implements IJCVoidEventEm
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NativeActivityContext context, ActivityInstance completedInstance) throws Throwable {
+    public void METHOD_JAVA_NAME(NativeActivityContext context, ActivityInstance completedInstance) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -160,7 +175,9 @@ public class CompletionCallback extends JCVoidDelegate implements IJCVoidEventEm
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NativeActivityContext context, ActivityInstance completedInstance) {
     }
 }

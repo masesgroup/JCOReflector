@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.AsymmetricKeyExchangeFormatter;
 import system.security.cryptography.AsymmetricAlgorithm;
 import system.security.cryptography.RandomNumberGenerator;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter</a>
  */
-public class RSAPKCS1KeyExchangeFormatter extends NetObject  {
+public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Algorithms
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Algorithms";
+    /**
+     * Qualified class name: System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter
+     */
     public static final String className = "System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class RSAPKCS1KeyExchangeFormatter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RSAPKCS1KeyExchangeFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static RSAPKCS1KeyExchangeFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RSAPKCS1KeyExchangeFormatter(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class RSAPKCS1KeyExchangeFormatter extends NetObject  {
 
     // Constructors section
     
-
     public RSAPKCS1KeyExchangeFormatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -154,12 +171,50 @@ public class RSAPKCS1KeyExchangeFormatter extends NetObject  {
         }
     }
 
+    public byte[] CreateKeyExchange(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (Object)dupParam0);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexCreateKeyExchange = 0; indexCreateKeyExchange < resultingArrayList.size(); indexCreateKeyExchange++ ) {
+				resultingArray[indexCreateKeyExchange] = (byte)resultingArrayList.get(indexCreateKeyExchange);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] CreateKeyExchange(byte[] rgbData, NetType symAlgType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", rgbData, symAlgType == null ? null : symAlgType.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexCreateKeyExchange = 0; indexCreateKeyExchange < resultingArrayList.size(); indexCreateKeyExchange++ ) {
+				resultingArray[indexCreateKeyExchange] = (byte)resultingArrayList.get(indexCreateKeyExchange);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] CreateKeyExchange(JCRefOut dupParam0, NetType dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -203,16 +258,6 @@ public class RSAPKCS1KeyExchangeFormatter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rng", Rng == null ? null : Rng.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getParameters() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Parameters");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

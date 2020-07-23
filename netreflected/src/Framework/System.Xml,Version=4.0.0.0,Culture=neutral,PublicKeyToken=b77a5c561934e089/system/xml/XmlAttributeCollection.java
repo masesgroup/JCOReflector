@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.XmlNamedNodeMap;
 import system.xml.XmlAttribute;
 import system.xml.XmlNode;
 
 
 /**
  * The base .NET class managing System.Xml.XmlAttributeCollection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlAttributeCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlAttributeCollection</a>
  */
-public class XmlAttributeCollection extends NetObject  {
+public class XmlAttributeCollection extends XmlNamedNodeMap  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlAttributeCollection
+     */
     public static final String className = "System.Xml.XmlAttributeCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class XmlAttributeCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlAttributeCollection}, a cast assert is made to check if types are compatible.
+     */
     public static XmlAttributeCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlAttributeCollection(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class XmlAttributeCollection extends NetObject  {
 
     // Constructors section
     
+    public XmlAttributeCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -180,61 +202,6 @@ public class XmlAttributeCollection extends NetObject  {
         }
     }
 
-    public XmlNode GetNamedItem(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNamedItem = (JCObject)classInstance.Invoke("GetNamedItem", name);
-            return new XmlNode(objGetNamedItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNode GetNamedItem(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetNamedItem = (JCObject)classInstance.Invoke("GetNamedItem", localName, namespaceURI);
-            return new XmlNode(objGetNamedItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNode Item(int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objItem = (JCObject)classInstance.Invoke("Item", index);
-            return new XmlNode(objItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNode RemoveNamedItem(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemoveNamedItem = (JCObject)classInstance.Invoke("RemoveNamedItem", name);
-            return new XmlNode(objRemoveNamedItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNode RemoveNamedItem(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objRemoveNamedItem = (JCObject)classInstance.Invoke("RemoveNamedItem", localName, namespaceURI);
-            return new XmlNode(objRemoveNamedItem);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlNode SetNamedItem(XmlNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -270,16 +237,6 @@ public class XmlAttributeCollection extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

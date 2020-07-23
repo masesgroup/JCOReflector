@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.EnterpriseServices.IProcessInitControl, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.IProcessInitControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.IProcessInitControl</a>
  */
 public interface IProcessInitControl extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.EnterpriseServices
+     */
+    public static final String assemblyShortName = "System.EnterpriseServices";
+    /**
+     * Qualified class name: System.EnterpriseServices.IProcessInitControl
+     */
+    public static final String className = "System.EnterpriseServices.IProcessInitControl";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProcessInitControl}, a cast assert is made to check if types are compatible.
+     */
     public static IProcessInitControl ToIProcessInitControl(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.EnterpriseServices.IProcessInitControl, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.EnterpriseServices"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IProcessInitControlImplementation(from.getJCOInstance());
     }

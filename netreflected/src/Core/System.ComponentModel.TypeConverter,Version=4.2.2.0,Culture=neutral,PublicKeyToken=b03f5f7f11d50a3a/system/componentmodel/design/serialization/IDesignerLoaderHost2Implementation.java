@@ -38,6 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.serialization.IDesignerLoaderHost;
+import system.componentmodel.design.serialization.IDesignerLoaderHostImplementation;
+import system.componentmodel.design.IDesignerHost;
+import system.componentmodel.design.IDesignerHostImplementation;
+import system.componentmodel.design.IServiceContainer;
+import system.componentmodel.design.IServiceContainerImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.design.DesignerTransaction;
 import system.componentmodel.design.IDesigner;
 import system.componentmodel.design.IDesignerImplementation;
@@ -54,12 +62,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.IDesignerLoaderHost2, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderHost2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderHost2</a>
  */
 public class IDesignerLoaderHost2Implementation extends NetObject implements IDesignerLoaderHost2 {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.IDesignerLoaderHost2
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.IDesignerLoaderHost2";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +130,9 @@ public class IDesignerLoaderHost2Implementation extends NetObject implements IDe
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerLoaderHost2}, a cast assert is made to check if types are compatible.
+     */
     public static IDesignerLoaderHost2 ToIDesignerLoaderHost2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDesignerLoaderHost2Implementation(from.getJCOInstance());

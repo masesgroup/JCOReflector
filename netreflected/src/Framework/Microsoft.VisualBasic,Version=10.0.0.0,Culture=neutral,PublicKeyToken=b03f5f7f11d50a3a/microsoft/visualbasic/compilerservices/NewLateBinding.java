@@ -43,12 +43,27 @@ import microsoft.visualbasic.CallType;
 
 /**
  * The base .NET class managing Microsoft.VisualBasic.CompilerServices.NewLateBinding, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.CompilerServices.NewLateBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.CompilerServices.NewLateBinding</a>
  */
 public class NewLateBinding extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.VisualBasic
+     */
     public static final String assemblyShortName = "Microsoft.VisualBasic";
+    /**
+     * Qualified class name: Microsoft.VisualBasic.CompilerServices.NewLateBinding
+     */
     public static final String className = "Microsoft.VisualBasic.CompilerServices.NewLateBinding";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class NewLateBinding extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NewLateBinding}, a cast assert is made to check if types are compatible.
+     */
     public static NewLateBinding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NewLateBinding(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class NewLateBinding extends NetObject  {
 
     // Constructors section
     
+    public NewLateBinding() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -134,11 +155,33 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static NetObject FallbackCall(NetObject dupParam0, java.lang.String dupParam1, NetObject[] dupParam2, JCRefOut dupParam3, boolean dupParam4) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.MissingMemberException, system.InvalidCastException, microsoft.visualbasic.compilerservices.InternalErrorException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFallbackCall = (JCObject)classType.Invoke("FallbackCall", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, toObjectFromArray(dupParam2), dupParam3, dupParam4);
+            return new NetObject(objFallbackCall);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject FallbackGet(NetObject Instance, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.MissingMemberException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.reflection.AmbiguousMatchException, system.MissingMethodException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objFallbackGet = (JCObject)classType.Invoke("FallbackGet", Instance == null ? null : Instance.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames);
+            return new NetObject(objFallbackGet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject FallbackGet(NetObject dupParam0, java.lang.String dupParam1, NetObject[] dupParam2, JCRefOut dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.MissingMemberException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.reflection.AmbiguousMatchException, system.MissingMethodException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFallbackGet = (JCObject)classType.Invoke("FallbackGet", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, toObjectFromArray(dupParam2), dupParam3);
             return new NetObject(objFallbackGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -156,11 +199,33 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static NetObject FallbackInvokeDefault1(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2, boolean dupParam3) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFallbackInvokeDefault1 = (JCObject)classType.Invoke("FallbackInvokeDefault1", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2, dupParam3);
+            return new NetObject(objFallbackInvokeDefault1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject FallbackInvokeDefault2(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean ReportErrors) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidCastException, system.NotSupportedException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.MissingMethodException, system.OverflowException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objFallbackInvokeDefault2 = (JCObject)classType.Invoke("FallbackInvokeDefault2", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, ReportErrors);
+            return new NetObject(objFallbackInvokeDefault2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject FallbackInvokeDefault2(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2, boolean dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidCastException, system.NotSupportedException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.MissingMethodException, system.OverflowException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFallbackInvokeDefault2 = (JCObject)classType.Invoke("FallbackInvokeDefault2", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2, dupParam3);
             return new NetObject(objFallbackInvokeDefault2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,11 +243,33 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static NetObject LateCall(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCRefOut dupParam4, NetType[] dupParam5, JCRefOut dupParam6, boolean dupParam7) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMemberException, system.InvalidCastException, system.FormatException, system.OverflowException, system.MissingMethodException, system.NullReferenceException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.security.SecurityException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateCall = (JCObject)classType.Invoke("LateCall", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, toObjectFromArray(dupParam3), dupParam4, toObjectFromArray(dupParam5), dupParam6, dupParam7);
+            return new NetObject(objLateCall);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject LateCallInvokeDefault(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean ReportErrors) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.RankException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objLateCallInvokeDefault = (JCObject)classType.Invoke("LateCallInvokeDefault", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, ReportErrors);
+            return new NetObject(objLateCallInvokeDefault);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject LateCallInvokeDefault(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2, boolean dupParam3) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.RankException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateCallInvokeDefault = (JCObject)classType.Invoke("LateCallInvokeDefault", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2, dupParam3);
             return new NetObject(objLateCallInvokeDefault);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,11 +287,33 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static NetObject LateGet(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCRefOut dupParam4, NetType[] dupParam5, JCRefOut dupParam6) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMethodException, system.NullReferenceException, system.NotSupportedException, system.InvalidCastException, system.RankException, system.FormatException, system.OverflowException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.security.SecurityException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateGet = (JCObject)classType.Invoke("LateGet", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, toObjectFromArray(dupParam3), dupParam4, toObjectFromArray(dupParam5), dupParam6);
+            return new NetObject(objLateGet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject LateGetInvokeDefault(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean ReportErrors) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.RankException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objLateGetInvokeDefault = (JCObject)classType.Invoke("LateGetInvokeDefault", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, ReportErrors);
+            return new NetObject(objLateGetInvokeDefault);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject LateGetInvokeDefault(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2, boolean dupParam3) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.RankException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateGetInvokeDefault = (JCObject)classType.Invoke("LateGetInvokeDefault", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2, dupParam3);
             return new NetObject(objLateGetInvokeDefault);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,6 +331,17 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static NetObject LateIndexGet(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.RankException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLateIndexGet = (JCObject)classType.Invoke("LateIndexGet", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2);
+            return new NetObject(objLateIndexGet);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void FallbackIndexSet(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException, system.NotSupportedException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -232,11 +352,31 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static void FallbackIndexSet(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException, system.NotSupportedException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FallbackIndexSet", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void FallbackIndexSetComplex(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.FormatException, system.InvalidCastException, system.OverflowException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FallbackIndexSetComplex", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, OptimisticSet, RValueBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FallbackIndexSetComplex(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2, boolean dupParam3, boolean dupParam4) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.FormatException, system.InvalidCastException, system.OverflowException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FallbackIndexSetComplex", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2, dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,11 +412,31 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static void LateIndexSet(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException, system.reflection.AmbiguousMatchException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("LateIndexSet", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void LateIndexSetComplex(NetObject Instance, NetObject[] Arguments, java.lang.String[] ArgumentNames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException, system.reflection.AmbiguousMatchException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("LateIndexSetComplex", Instance == null ? null : Instance.getJCOInstance(), toObjectFromArray(Arguments), ArgumentNames, OptimisticSet, RValueBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void LateIndexSetComplex(NetObject dupParam0, NetObject[] dupParam1, JCRefOut dupParam2, boolean dupParam3, boolean dupParam4) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.MissingMemberException, system.reflection.AmbiguousMatchException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("LateIndexSetComplex", dupParam0 == null ? null : dupParam0.getJCOInstance(), toObjectFromArray(dupParam1), dupParam2, dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,6 +452,16 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static void LateSet(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCRefOut dupParam4, NetType[] dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.RankException, system.reflection.AmbiguousMatchException, system.reflection.TargetInvocationException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("LateSet", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, toObjectFromArray(dupParam3), dupParam4, toObjectFromArray(dupParam5));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void LateSet(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean OptimisticSet, boolean RValueBase, CallType CallType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.FormatException, system.OverflowException, system.NullReferenceException, system.NotSupportedException, system.RankException, system.reflection.AmbiguousMatchException, system.reflection.TargetInvocationException, system.reflection.TargetParameterCountException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -302,11 +472,31 @@ public class NewLateBinding extends NetObject  {
         }
     }
 
+    public static void LateSet(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCRefOut dupParam4, NetType[] dupParam5, boolean dupParam6, boolean dupParam7, CallType dupParam8) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.FormatException, system.OverflowException, system.NullReferenceException, system.NotSupportedException, system.RankException, system.reflection.AmbiguousMatchException, system.reflection.TargetInvocationException, system.reflection.TargetParameterCountException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("LateSet", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, toObjectFromArray(dupParam3), dupParam4, toObjectFromArray(dupParam5), dupParam6, dupParam7, dupParam8 == null ? null : dupParam8.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void LateSetComplex(NetObject Instance, NetType Type, java.lang.String MemberName, NetObject[] Arguments, java.lang.String[] ArgumentNames, NetType[] TypeArguments, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.RankException, system.reflection.AmbiguousMatchException, system.reflection.TargetInvocationException, microsoft.visualbasic.compilerservices.InternalErrorException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("LateSetComplex", Instance == null ? null : Instance.getJCOInstance(), Type == null ? null : Type.getJCOInstance(), MemberName, toObjectFromArray(Arguments), ArgumentNames, toObjectFromArray(TypeArguments), OptimisticSet, RValueBase);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void LateSetComplex(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCRefOut dupParam4, NetType[] dupParam5, boolean dupParam6, boolean dupParam7) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.NullReferenceException, system.RankException, system.reflection.AmbiguousMatchException, system.reflection.TargetInvocationException, microsoft.visualbasic.compilerservices.InternalErrorException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("LateSetComplex", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, toObjectFromArray(dupParam3), dupParam4, toObjectFromArray(dupParam5), dupParam6, dupParam7);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

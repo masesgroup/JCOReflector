@@ -45,12 +45,27 @@ import system.xml.XmlNodeType;
 
 /**
  * The base .NET class managing System.Xml.Linq.XObject, System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XObject</a>
  */
 public class XObject extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Private.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Linq.XObject
+     */
     public static final String className = "System.Xml.Linq.XObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class XObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XObject}, a cast assert is made to check if types are compatible.
+     */
     public static XObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XObject(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class XObject extends NetObject  {
 
     // Constructors section
     
+    public XObject() throws Throwable {
+    }
 
     
     // Methods section

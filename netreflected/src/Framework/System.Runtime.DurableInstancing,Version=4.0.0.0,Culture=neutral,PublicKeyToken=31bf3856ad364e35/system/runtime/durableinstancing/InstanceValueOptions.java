@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.DurableInstancing.InstanceValueOptions, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceValueOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceValueOptions</a>
  */
 public class InstanceValueOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Runtime.DurableInstancing
+     */
     public static final String assemblyShortName = "System.Runtime.DurableInstancing";
+    /**
+     * Qualified class name: System.Runtime.DurableInstancing.InstanceValueOptions
+     */
     public static final String className = "System.Runtime.DurableInstancing.InstanceValueOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class InstanceValueOptions extends NetObject  {
 
     // Flags management section
 
-    public InstanceValueOptions add(InstanceValueOptions val) throws Throwable {
+    public final InstanceValueOptions add(InstanceValueOptions val) throws Throwable {
         return new InstanceValueOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public InstanceValueOptions remove(InstanceValueOptions val) throws Throwable {
+    public final InstanceValueOptions remove(InstanceValueOptions val) throws Throwable {
         return new InstanceValueOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(InstanceValueOptions val) throws Throwable {
+    public final boolean is(InstanceValueOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(InstanceValueOptions val) throws Throwable {
+    public final boolean has(InstanceValueOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

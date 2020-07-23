@@ -44,12 +44,27 @@ import system.windows.forms.BoundsSpecified;
 
 /**
  * The base .NET class managing System.Windows.Forms.Layout.LayoutEngine, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Layout.LayoutEngine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Layout.LayoutEngine</a>
  */
 public class LayoutEngine extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.Layout.LayoutEngine
+     */
     public static final String className = "System.Windows.Forms.Layout.LayoutEngine";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class LayoutEngine extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LayoutEngine}, a cast assert is made to check if types are compatible.
+     */
     public static LayoutEngine cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LayoutEngine(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class LayoutEngine extends NetObject  {
 
     // Constructors section
     
+    public LayoutEngine() throws Throwable {
+    }
 
     
     // Methods section

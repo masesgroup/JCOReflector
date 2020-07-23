@@ -44,12 +44,27 @@ import system.text.regularexpressions.Match;
 
 /**
  * The base .NET class managing System.Text.RegularExpressions.MatchCollection, System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchCollection</a>
  */
 public class MatchCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Text.RegularExpressions
+     */
     public static final String assemblyShortName = "System.Text.RegularExpressions";
+    /**
+     * Qualified class name: System.Text.RegularExpressions.MatchCollection
+     */
     public static final String className = "System.Text.RegularExpressions.MatchCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class MatchCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MatchCollection}, a cast assert is made to check if types are compatible.
+     */
     public static MatchCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MatchCollection(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class MatchCollection extends NetObject  {
 
     // Constructors section
     
+    public MatchCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section

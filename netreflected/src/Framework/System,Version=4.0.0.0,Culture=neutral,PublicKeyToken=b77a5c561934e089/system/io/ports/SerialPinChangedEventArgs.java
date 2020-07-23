@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.io.ports.SerialPinChange;
 
 
 /**
  * The base .NET class managing System.IO.Ports.SerialPinChangedEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialPinChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialPinChangedEventArgs</a>
  */
-public class SerialPinChangedEventArgs extends NetObject  {
+public class SerialPinChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.IO.Ports.SerialPinChangedEventArgs
+     */
     public static final String className = "System.IO.Ports.SerialPinChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SerialPinChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SerialPinChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SerialPinChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SerialPinChangedEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class SerialPinChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SerialPinChangedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

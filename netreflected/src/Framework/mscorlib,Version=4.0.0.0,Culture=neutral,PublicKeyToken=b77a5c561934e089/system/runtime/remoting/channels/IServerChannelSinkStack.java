@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.remoting.channels.IServerResponseChannelSinkStack;
+import system.runtime.remoting.channels.IServerResponseChannelSinkStackImplementation;
 import system.io.Stream;
 import system.runtime.remoting.messaging.IMessage;
 import system.runtime.remoting.messaging.IMessageImplementation;
@@ -50,12 +52,29 @@ import system.IAsyncResultImplementation;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IServerChannelSinkStack, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack</a>
  */
-public interface IServerChannelSinkStack extends IJCOBridgeReflected {
-
+public interface IServerChannelSinkStack extends IJCOBridgeReflected, IServerResponseChannelSinkStack {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IServerChannelSinkStack
+     */
+    public static final String className = "System.Runtime.Remoting.Channels.IServerChannelSinkStack";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IServerChannelSinkStack}, a cast assert is made to check if types are compatible.
+     */
     public static IServerChannelSinkStack ToIServerChannelSinkStack(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Channels.IServerChannelSinkStack, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IServerChannelSinkStackImplementation(from.getJCOInstance());
     }
@@ -98,11 +117,9 @@ public interface IServerChannelSinkStack extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable;
 
     public NetObject Pop(IServerChannelSink sink) throws Throwable;
 
-    public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable;
 
     public void Push(IServerChannelSink sink, NetObject state) throws Throwable;
 

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.xml.xpath.XPathNavigator;
 import system.xml.xpath.XPathNodeType;
 
 
 /**
  * The base .NET class managing System.Xml.Xsl.Runtime.NodeKindContentIterator, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.NodeKindContentIterator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.NodeKindContentIterator</a>
  */
-public class NodeKindContentIterator extends NetObject  {
+public class NodeKindContentIterator extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.Runtime.NodeKindContentIterator
+     */
     public static final String className = "System.Xml.Xsl.Runtime.NodeKindContentIterator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class NodeKindContentIterator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NodeKindContentIterator}, a cast assert is made to check if types are compatible.
+     */
     public static NodeKindContentIterator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NodeKindContentIterator(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class NodeKindContentIterator extends NetObject  {
 
     // Constructors section
     
+    public NodeKindContentIterator() throws Throwable {
+    }
+
+
 
     
     // Methods section

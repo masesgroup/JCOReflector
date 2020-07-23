@@ -41,12 +41,27 @@ import java.util.ArrayList;
 import system.windows.data.IUpdateSourceExceptionFilterCallback;
 /**
  * The base .NET class managing System.Windows.Data.UpdateSourceExceptionFilterCallback, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.UpdateSourceExceptionFilterCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.UpdateSourceExceptionFilterCallback</a>
  */
 public class UpdateSourceExceptionFilterCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Data.UpdateSourceExceptionFilterCallback
+     */
     public static final String className = "System.Windows.Data.UpdateSourceExceptionFilterCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IUpdateSourceExceptionFilterCallback callerInstance = null;
@@ -154,7 +169,7 @@ public class UpdateSourceExceptionFilterCallback extends JCDelegate implements I
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke(NetObject bindExpression, NetException exception) throws Throwable {
+    public NetObject METHOD_JAVA_NAME(NetObject bindExpression, NetException exception) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -165,7 +180,9 @@ public class UpdateSourceExceptionFilterCallback extends JCDelegate implements I
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke(NetObject bindExpression, NetException exception) {
         return null;
     }

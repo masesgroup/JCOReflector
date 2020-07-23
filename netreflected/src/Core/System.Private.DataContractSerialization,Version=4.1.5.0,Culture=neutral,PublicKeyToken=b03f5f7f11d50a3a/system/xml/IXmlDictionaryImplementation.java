@@ -43,12 +43,27 @@ import system.xml.XmlDictionaryString;
 
 /**
  * The base .NET class managing System.Xml.IXmlDictionary, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlDictionary</a>
  */
 public class IXmlDictionaryImplementation extends NetObject implements IXmlDictionary {
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
     public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Xml.IXmlDictionary
+     */
     public static final String className = "System.Xml.IXmlDictionary";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlDictionary ToIXmlDictionary(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXmlDictionaryImplementation(from.getJCOInstance());

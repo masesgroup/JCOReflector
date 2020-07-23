@@ -46,12 +46,27 @@ import system.servicemodel.channels.IMessagePropertyImplementation;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.ContextMessageProperty, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ContextMessageProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ContextMessageProperty</a>
  */
 public class ContextMessageProperty extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.ContextMessageProperty
+     */
     public static final String className = "System.ServiceModel.Channels.ContextMessageProperty";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class ContextMessageProperty extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContextMessageProperty}, a cast assert is made to check if types are compatible.
+     */
     public static ContextMessageProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ContextMessageProperty(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class ContextMessageProperty extends NetObject  {
 
     // Constructors section
     
-
     public ContextMessageProperty() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -162,11 +178,11 @@ public class ContextMessageProperty extends NetObject  {
     
     // Properties section
     
-    public static java.lang.String getName() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("Name");
+            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.activities.presentation.metadata.AttributeCallbackBuilder;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link AttributeCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Metadata.AttributeCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Metadata.AttributeCallback</a>
+ */
 public interface IAttributeCallback {
     public void Invoke(AttributeCallbackBuilder builder);
 }

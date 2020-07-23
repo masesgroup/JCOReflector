@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.ConsoleCancelEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ConsoleCancelEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleCancelEventHandler</a>
+ */
 public interface IConsoleCancelEventHandler {
     public void Invoke(NetObject sender, ConsoleCancelEventArgs e);
 }

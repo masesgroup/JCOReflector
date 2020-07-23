@@ -45,12 +45,27 @@ import system.security.principal.IdentityReference;
 
 /**
  * The base .NET class managing System.Security.AccessControl.AuthorizationRule, System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AuthorizationRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AuthorizationRule</a>
  */
 public class AuthorizationRule extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.AccessControl
+     */
     public static final String assemblyShortName = "System.Security.AccessControl";
+    /**
+     * Qualified class name: System.Security.AccessControl.AuthorizationRule
+     */
     public static final String className = "System.Security.AccessControl.AuthorizationRule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class AuthorizationRule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AuthorizationRule}, a cast assert is made to check if types are compatible.
+     */
     public static AuthorizationRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AuthorizationRule(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class AuthorizationRule extends NetObject  {
 
     // Constructors section
     
+    public AuthorizationRule() throws Throwable {
+    }
 
     
     // Methods section

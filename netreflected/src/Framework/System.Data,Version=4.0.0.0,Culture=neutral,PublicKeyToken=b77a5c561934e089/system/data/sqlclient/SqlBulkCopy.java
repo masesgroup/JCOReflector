@@ -55,12 +55,27 @@ import system.data.sqlclient.SqlRowsCopiedEventHandler;
 
 /**
  * The base .NET class managing System.Data.SqlClient.SqlBulkCopy, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlBulkCopy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlBulkCopy</a>
  */
 public class SqlBulkCopy extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.SqlClient.SqlBulkCopy
+     */
     public static final String className = "System.Data.SqlClient.SqlBulkCopy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -113,7 +128,9 @@ public class SqlBulkCopy extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlBulkCopy}, a cast assert is made to check if types are compatible.
+     */
     public static SqlBulkCopy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlBulkCopy(from.getJCOInstance());
@@ -121,6 +138,8 @@ public class SqlBulkCopy extends NetObject  {
 
     // Constructors section
     
+    public SqlBulkCopy() throws Throwable {
+    }
 
     public SqlBulkCopy(SqlConnection connection) throws Throwable {
         try {
@@ -161,6 +180,7 @@ public class SqlBulkCopy extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

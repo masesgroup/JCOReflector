@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.Claims.ClaimTypes, System.Security.Claims, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Claims.ClaimTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Claims.ClaimTypes</a>
  */
 public class ClaimTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Claims, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Claims, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Claims
+     */
     public static final String assemblyShortName = "System.Security.Claims";
+    /**
+     * Qualified class name: System.Security.Claims.ClaimTypes
+     */
     public static final String className = "System.Security.Claims.ClaimTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ClaimTypes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClaimTypes}, a cast assert is made to check if types are compatible.
+     */
     public static ClaimTypes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ClaimTypes(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ClaimTypes extends NetObject  {
 
     // Constructors section
     
+    public ClaimTypes() throws Throwable {
+    }
 
     
     // Methods section

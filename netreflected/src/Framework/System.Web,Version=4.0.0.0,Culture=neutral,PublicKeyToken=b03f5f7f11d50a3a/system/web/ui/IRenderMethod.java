@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.web.ui.HtmlTextWriter;
 import system.web.ui.Control;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link RenderMethod}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.RenderMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.RenderMethod</a>
+ */
 public interface IRenderMethod {
     public void Invoke(HtmlTextWriter output, Control container);
 }

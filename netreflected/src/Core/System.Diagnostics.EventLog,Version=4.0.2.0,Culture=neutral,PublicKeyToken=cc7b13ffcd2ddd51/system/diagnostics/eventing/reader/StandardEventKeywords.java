@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Diagnostics.Eventing.Reader.StandardEventKeywords, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.StandardEventKeywords" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.StandardEventKeywords</a>
  */
 public class StandardEventKeywords extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.EventLog
+     */
     public static final String assemblyShortName = "System.Diagnostics.EventLog";
+    /**
+     * Qualified class name: System.Diagnostics.Eventing.Reader.StandardEventKeywords
+     */
     public static final String className = "System.Diagnostics.Eventing.Reader.StandardEventKeywords";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -146,19 +161,19 @@ public class StandardEventKeywords extends NetObject  {
 
     // Flags management section
 
-    public StandardEventKeywords add(StandardEventKeywords val) throws Throwable {
+    public final StandardEventKeywords add(StandardEventKeywords val) throws Throwable {
         return new StandardEventKeywords(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public StandardEventKeywords remove(StandardEventKeywords val) throws Throwable {
+    public final StandardEventKeywords remove(StandardEventKeywords val) throws Throwable {
         return new StandardEventKeywords(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(StandardEventKeywords val) throws Throwable {
+    public final boolean is(StandardEventKeywords val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(StandardEventKeywords val) throws Throwable {
+    public final boolean has(StandardEventKeywords val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import microsoft.win32.SessionEndReasons;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.SessionEndingEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionEndingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionEndingEventArgs</a>
  */
-public class SessionEndingEventArgs extends NetObject  {
+public class SessionEndingEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: Microsoft.Win32.SessionEndingEventArgs
+     */
     public static final String className = "Microsoft.Win32.SessionEndingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SessionEndingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionEndingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SessionEndingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SessionEndingEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SessionEndingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public SessionEndingEventArgs() throws Throwable {
+    }
 
     public SessionEndingEventArgs(SessionEndReasons reason) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class SessionEndingEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

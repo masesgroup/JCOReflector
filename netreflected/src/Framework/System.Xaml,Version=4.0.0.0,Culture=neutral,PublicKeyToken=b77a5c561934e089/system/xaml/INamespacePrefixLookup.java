@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xaml.INamespacePrefixLookup, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.INamespacePrefixLookup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.INamespacePrefixLookup</a>
  */
 public interface INamespacePrefixLookup extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
+    public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.INamespacePrefixLookup
+     */
+    public static final String className = "System.Xaml.INamespacePrefixLookup";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INamespacePrefixLookup}, a cast assert is made to check if types are compatible.
+     */
     public static INamespacePrefixLookup ToINamespacePrefixLookup(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xaml.INamespacePrefixLookup, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xaml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INamespacePrefixLookupImplementation(from.getJCOInstance());
     }

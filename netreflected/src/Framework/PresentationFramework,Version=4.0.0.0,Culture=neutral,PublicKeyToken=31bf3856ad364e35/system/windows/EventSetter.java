@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.SetterBase;
 import system.windows.RoutedEvent;
 
 
 /**
  * The base .NET class managing System.Windows.EventSetter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.EventSetter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.EventSetter</a>
  */
-public class EventSetter extends NetObject  {
+public class EventSetter extends SetterBase  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.EventSetter
+     */
     public static final String className = "System.Windows.EventSetter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class EventSetter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventSetter}, a cast assert is made to check if types are compatible.
+     */
     public static EventSetter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EventSetter(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class EventSetter extends NetObject  {
 
     // Constructors section
     
-
     public EventSetter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -143,16 +160,6 @@ public class EventSetter extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HandledEventsToo", HandledEventsToo);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSealed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSealed");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

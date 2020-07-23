@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.AccessControl.AccessControlSections, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AccessControlSections" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.AccessControlSections</a>
  */
 public class AccessControlSections extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.AccessControlSections
+     */
     public static final String className = "System.Security.AccessControl.AccessControlSections";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class AccessControlSections extends NetObject  {
 
     // Flags management section
 
-    public AccessControlSections add(AccessControlSections val) throws Throwable {
+    public final AccessControlSections add(AccessControlSections val) throws Throwable {
         return new AccessControlSections(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public AccessControlSections remove(AccessControlSections val) throws Throwable {
+    public final AccessControlSections remove(AccessControlSections val) throws Throwable {
         return new AccessControlSections(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(AccessControlSections val) throws Throwable {
+    public final boolean is(AccessControlSections val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(AccessControlSections val) throws Throwable {
+    public final boolean has(AccessControlSections val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

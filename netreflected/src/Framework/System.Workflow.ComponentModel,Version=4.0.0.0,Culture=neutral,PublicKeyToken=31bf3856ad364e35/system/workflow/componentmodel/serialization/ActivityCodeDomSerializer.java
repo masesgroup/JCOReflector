@@ -38,22 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeStatementCollection;
+import system.workflow.componentmodel.serialization.DependencyObjectCodeDomSerializer;
 import system.componentmodel.design.serialization.IDesignerSerializationManager;
 import system.componentmodel.design.serialization.IDesignerSerializationManagerImplementation;
-import system.componentmodel.MemberDescriptor;
-import system.codedom.CodeStatement;
-import system.codedom.CodeExpression;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer</a>
  */
-public class ActivityCodeDomSerializer extends NetObject  {
+public class ActivityCodeDomSerializer extends DependencyObjectCodeDomSerializer  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer
+     */
     public static final String className = "System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +118,9 @@ public class ActivityCodeDomSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityCodeDomSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static ActivityCodeDomSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActivityCodeDomSerializer(from.getJCOInstance());
@@ -114,7 +128,6 @@ public class ActivityCodeDomSerializer extends NetObject  {
 
     // Constructors section
     
-
     public ActivityCodeDomSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -129,66 +142,12 @@ public class ActivityCodeDomSerializer extends NetObject  {
     
     // Methods section
     
-    public CodeStatementCollection SerializeMember(IDesignerSerializationManager manager, NetObject owningObject, MemberDescriptor member) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.componentmodel.design.serialization.CodeDomSerializerException, system.NotSupportedException, system.TypeLoadException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerializeMember = (JCObject)classInstance.Invoke("SerializeMember", manager == null ? null : manager.getJCOInstance(), owningObject == null ? null : owningObject.getJCOInstance(), member == null ? null : member.getJCOInstance());
-            return new CodeStatementCollection(objSerializeMember);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeStatementCollection SerializeMemberAbsolute(IDesignerSerializationManager manager, NetObject owningObject, MemberDescriptor member) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.componentmodel.design.serialization.CodeDomSerializerException, system.NotSupportedException, system.TypeLoadException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerializeMemberAbsolute = (JCObject)classInstance.Invoke("SerializeMemberAbsolute", manager == null ? null : manager.getJCOInstance(), owningObject == null ? null : owningObject.getJCOInstance(), member == null ? null : member.getJCOInstance());
-            return new CodeStatementCollection(objSerializeMemberAbsolute);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject Deserialize(IDesignerSerializationManager manager, NetObject codeObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.design.serialization.CodeDomSerializerException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", manager == null ? null : manager.getJCOInstance(), codeObject == null ? null : codeObject.getJCOInstance());
-            return new NetObject(objDeserialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject Serialize(IDesignerSerializationManager manager, NetObject obj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.design.serialization.CodeDomSerializerException, system.NullReferenceException, system.RankException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
             return new NetObject(objSerialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject SerializeAbsolute(IDesignerSerializationManager manager, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.design.serialization.CodeDomSerializerException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.RankException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerializeAbsolute = (JCObject)classInstance.Invoke("SerializeAbsolute", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new NetObject(objSerializeAbsolute);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String GetTargetComponentName(CodeStatement statement, CodeExpression expression, NetType targetType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetTargetComponentName", statement == null ? null : statement.getJCOInstance(), expression == null ? null : expression.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

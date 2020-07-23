@@ -45,12 +45,27 @@ import system.windows.FrameworkElement;
 
 /**
  * The base .NET class managing System.Windows.LogicalTreeHelper, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.LogicalTreeHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.LogicalTreeHelper</a>
  */
 public class LogicalTreeHelper extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.LogicalTreeHelper
+     */
     public static final String className = "System.Windows.LogicalTreeHelper";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class LogicalTreeHelper extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LogicalTreeHelper}, a cast assert is made to check if types are compatible.
+     */
     public static LogicalTreeHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LogicalTreeHelper(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class LogicalTreeHelper extends NetObject  {
 
     // Constructors section
     
+    public LogicalTreeHelper() throws Throwable {
+    }
 
     
     // Methods section

@@ -45,12 +45,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.Net.NetworkCredential, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkCredential" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkCredential</a>
  */
 public class NetworkCredential extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.NetworkCredential
+     */
     public static final String className = "System.Net.NetworkCredential";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class NetworkCredential extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetworkCredential}, a cast assert is made to check if types are compatible.
+     */
     public static NetworkCredential cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NetworkCredential(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class NetworkCredential extends NetObject  {
 
     // Constructors section
     
-
     public NetworkCredential() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file

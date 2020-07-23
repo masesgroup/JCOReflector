@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.TypeValidationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TypeValidationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TypeValidationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TypeValidationEventHandler</a>
+ */
 public interface ITypeValidationEventHandler {
     public void Invoke(NetObject sender, TypeValidationEventArgs e);
 }

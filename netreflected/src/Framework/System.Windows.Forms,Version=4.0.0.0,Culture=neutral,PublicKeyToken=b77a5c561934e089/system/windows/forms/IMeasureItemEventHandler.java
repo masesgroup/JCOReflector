@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.MeasureItemEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MeasureItemEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.MeasureItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.MeasureItemEventHandler</a>
+ */
 public interface IMeasureItemEventHandler {
     public void Invoke(NetObject sender, MeasureItemEventArgs e);
 }

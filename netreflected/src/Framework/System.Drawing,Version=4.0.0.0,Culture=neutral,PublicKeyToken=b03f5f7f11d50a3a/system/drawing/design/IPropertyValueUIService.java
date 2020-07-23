@@ -47,12 +47,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Drawing.Design.IPropertyValueUIService, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IPropertyValueUIService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IPropertyValueUIService</a>
  */
 public interface IPropertyValueUIService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
+    public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Design.IPropertyValueUIService
+     */
+    public static final String className = "System.Drawing.Design.IPropertyValueUIService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPropertyValueUIService}, a cast assert is made to check if types are compatible.
+     */
     public static IPropertyValueUIService ToIPropertyValueUIService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Drawing.Design.IPropertyValueUIService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Drawing"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPropertyValueUIServiceImplementation(from.getJCOInstance());
     }

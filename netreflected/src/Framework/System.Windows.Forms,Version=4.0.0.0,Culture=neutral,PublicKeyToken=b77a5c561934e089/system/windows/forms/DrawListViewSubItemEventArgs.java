@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.drawing.Graphics;
 import system.drawing.Rectangle;
 import system.windows.forms.ListViewItem;
@@ -48,12 +49,27 @@ import system.windows.forms.ListViewItemStates;
 
 /**
  * The base .NET class managing System.Windows.Forms.DrawListViewSubItemEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawListViewSubItemEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawListViewSubItemEventArgs</a>
  */
-public class DrawListViewSubItemEventArgs extends NetObject  {
+public class DrawListViewSubItemEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DrawListViewSubItemEventArgs
+     */
     public static final String className = "System.Windows.Forms.DrawListViewSubItemEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class DrawListViewSubItemEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DrawListViewSubItemEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DrawListViewSubItemEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DrawListViewSubItemEventArgs(from.getJCOInstance());
@@ -114,6 +132,9 @@ public class DrawListViewSubItemEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DrawListViewSubItemEventArgs() throws Throwable {
+    }
+
 
 
     

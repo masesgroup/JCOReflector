@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.input.NotifyInputEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link NotifyInputEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.NotifyInputEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.NotifyInputEventHandler</a>
+ */
 public interface INotifyInputEventHandler {
     public void Invoke(NetObject sender, NotifyInputEventArgs e);
 }

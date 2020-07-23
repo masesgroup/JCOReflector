@@ -44,10 +44,22 @@ import system.security.cryptography.x509certificates.X509Certificate2;
 
 /**
  * The base .NET class managing System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator, System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator</a>
  */
 public class X509Certificate2Enumerator extends NetObject implements Iterator<X509Certificate2> {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.X509Certificates
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.X509Certificates";
+    /**
+     * Qualified class name: System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator
+     */
     public static final String className = "System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class X509Certificate2Enumerator extends NetObject implements Iterator<X5
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public X509Certificate2 next() {
+	public final X509Certificate2 next() {
 		try {
 			return new X509Certificate2(classInstance.next());
 		} catch (Throwable jce) {

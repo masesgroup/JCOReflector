@@ -43,12 +43,27 @@ import system.diagnostics.DebugProvider;
 
 /**
  * The base .NET class managing System.Diagnostics.Debug, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Debug" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Debug</a>
  */
 public class Debug extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Diagnostics.Debug
+     */
     public static final String className = "System.Diagnostics.Debug";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class Debug extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Debug}, a cast assert is made to check if types are compatible.
+     */
     public static Debug cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Debug(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class Debug extends NetObject  {
 
     // Constructors section
     
+    public Debug() throws Throwable {
+    }
 
     
     // Methods section
@@ -418,61 +437,61 @@ public class Debug extends NetObject  {
     
     // Properties section
     
-    public static boolean getAutoFlush() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getAutoFlush() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("AutoFlush");
+            return (boolean)classInstance.Get("AutoFlush");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setAutoFlush(boolean AutoFlush) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setAutoFlush(boolean AutoFlush) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("AutoFlush", AutoFlush);
+            classInstance.Set("AutoFlush", AutoFlush);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getIndentLevel() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getIndentLevel() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("IndentLevel");
+            return (int)classInstance.Get("IndentLevel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setIndentLevel(int IndentLevel) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setIndentLevel(int IndentLevel) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("IndentLevel", IndentLevel);
+            classInstance.Set("IndentLevel", IndentLevel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int getIndentSize() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public int getIndentSize() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Get("IndentSize");
+            return (int)classInstance.Get("IndentSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setIndentSize(int IndentSize) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setIndentSize(int IndentSize) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("IndentSize", IndentSize);
+            classInstance.Set("IndentSize", IndentSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

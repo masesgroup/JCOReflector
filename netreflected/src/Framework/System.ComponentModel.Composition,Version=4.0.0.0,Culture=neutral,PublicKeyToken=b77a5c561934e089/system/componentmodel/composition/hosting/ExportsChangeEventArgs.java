@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.composition.hosting.AtomicComposition;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs</a>
  */
-public class ExportsChangeEventArgs extends NetObject  {
+public class ExportsChangeEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ExportsChangeEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExportsChangeEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ExportsChangeEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExportsChangeEventArgs(from.getJCOInstance());
@@ -109,6 +127,9 @@ public class ExportsChangeEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ExportsChangeEventArgs() throws Throwable {
+    }
+
 
 
     

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Threading.Tasks.TaskContinuationOptions, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.TaskContinuationOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.TaskContinuationOptions</a>
  */
 public class TaskContinuationOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.Tasks.TaskContinuationOptions
+     */
     public static final String className = "System.Threading.Tasks.TaskContinuationOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -151,19 +166,19 @@ public class TaskContinuationOptions extends NetObject  {
 
     // Flags management section
 
-    public TaskContinuationOptions add(TaskContinuationOptions val) throws Throwable {
+    public final TaskContinuationOptions add(TaskContinuationOptions val) throws Throwable {
         return new TaskContinuationOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public TaskContinuationOptions remove(TaskContinuationOptions val) throws Throwable {
+    public final TaskContinuationOptions remove(TaskContinuationOptions val) throws Throwable {
         return new TaskContinuationOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(TaskContinuationOptions val) throws Throwable {
+    public final boolean is(TaskContinuationOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(TaskContinuationOptions val) throws Throwable {
+    public final boolean has(TaskContinuationOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

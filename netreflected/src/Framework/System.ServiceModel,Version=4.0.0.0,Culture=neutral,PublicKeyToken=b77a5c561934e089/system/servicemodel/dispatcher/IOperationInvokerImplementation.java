@@ -45,12 +45,27 @@ import system.AsyncCallback;
 
 /**
  * The base .NET class managing System.ServiceModel.Dispatcher.IOperationInvoker, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.IOperationInvoker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.IOperationInvoker</a>
  */
 public class IOperationInvokerImplementation extends NetObject implements IOperationInvoker {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Dispatcher.IOperationInvoker
+     */
     public static final String className = "System.ServiceModel.Dispatcher.IOperationInvoker";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IOperationInvoker}, a cast assert is made to check if types are compatible.
+     */
     public static IOperationInvoker ToIOperationInvoker(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IOperationInvokerImplementation(from.getJCOInstance());

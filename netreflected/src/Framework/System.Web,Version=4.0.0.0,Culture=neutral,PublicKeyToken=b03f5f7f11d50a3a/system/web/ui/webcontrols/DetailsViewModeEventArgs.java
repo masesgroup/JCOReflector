@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.CancelEventArgs;
 import system.web.ui.webcontrols.DetailsViewMode;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.DetailsViewModeEventArgs, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewModeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsViewModeEventArgs</a>
  */
-public class DetailsViewModeEventArgs extends NetObject  {
+public class DetailsViewModeEventArgs extends CancelEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.DetailsViewModeEventArgs
+     */
     public static final String className = "System.Web.UI.WebControls.DetailsViewModeEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class DetailsViewModeEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DetailsViewModeEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DetailsViewModeEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DetailsViewModeEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class DetailsViewModeEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DetailsViewModeEventArgs() throws Throwable {
+    }
 
     public DetailsViewModeEventArgs(DetailsViewMode mode, boolean cancelingEdit) throws Throwable {
         try {
@@ -121,6 +141,7 @@ public class DetailsViewModeEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -128,26 +149,6 @@ public class DetailsViewModeEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCancelingEdit() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

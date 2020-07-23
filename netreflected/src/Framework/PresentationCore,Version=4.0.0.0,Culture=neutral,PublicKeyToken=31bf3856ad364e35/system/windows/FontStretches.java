@@ -43,12 +43,27 @@ import system.windows.FontStretch;
 
 /**
  * The base .NET class managing System.Windows.FontStretches, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FontStretches" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FontStretches</a>
  */
 public class FontStretches extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.FontStretches
+     */
     public static final String className = "System.Windows.FontStretches";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FontStretches extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontStretches}, a cast assert is made to check if types are compatible.
+     */
     public static FontStretches cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FontStretches(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class FontStretches extends NetObject  {
 
     // Constructors section
     
+    public FontStretches() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,110 +136,110 @@ public class FontStretches extends NetObject  {
     
     // Properties section
     
-    public static FontStretch getCondensed() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getCondensed() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Condensed");
+            JCObject val = (JCObject)classInstance.Get("Condensed");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getExpanded() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getExpanded() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Expanded");
+            JCObject val = (JCObject)classInstance.Get("Expanded");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getExtraCondensed() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getExtraCondensed() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ExtraCondensed");
+            JCObject val = (JCObject)classInstance.Get("ExtraCondensed");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getExtraExpanded() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getExtraExpanded() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("ExtraExpanded");
+            JCObject val = (JCObject)classInstance.Get("ExtraExpanded");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getMedium() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getMedium() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Medium");
+            JCObject val = (JCObject)classInstance.Get("Medium");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getNormal() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getNormal() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Normal");
+            JCObject val = (JCObject)classInstance.Get("Normal");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getSemiCondensed() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getSemiCondensed() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SemiCondensed");
+            JCObject val = (JCObject)classInstance.Get("SemiCondensed");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getSemiExpanded() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getSemiExpanded() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SemiExpanded");
+            JCObject val = (JCObject)classInstance.Get("SemiExpanded");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getUltraCondensed() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getUltraCondensed() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UltraCondensed");
+            JCObject val = (JCObject)classInstance.Get("UltraCondensed");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static FontStretch getUltraExpanded() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public FontStretch getUltraExpanded() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UltraExpanded");
+            JCObject val = (JCObject)classInstance.Get("UltraExpanded");
             return new FontStretch(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

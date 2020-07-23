@@ -38,19 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.DateTime;
-import system.identitymodel.metadata.Organization;
-import system.Uri;
+import system.identitymodel.metadata.RoleDescriptor;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Metadata.WebServiceDescriptor, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor</a>
  */
-public class WebServiceDescriptor extends NetObject  {
+public class WebServiceDescriptor extends RoleDescriptor  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Metadata.WebServiceDescriptor
+     */
     public static final String className = "System.IdentityModel.Metadata.WebServiceDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +116,9 @@ public class WebServiceDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebServiceDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static WebServiceDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebServiceDescriptor(from.getJCOInstance());
@@ -111,6 +126,8 @@ public class WebServiceDescriptor extends NetObject  {
 
     // Constructors section
     
+    public WebServiceDescriptor() throws Throwable {
+    }
 
     
     // Methods section
@@ -119,48 +136,6 @@ public class WebServiceDescriptor extends NetObject  {
     
     // Properties section
     
-    public DateTime getValidUntil() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidUntil");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValidUntil(DateTime ValidUntil) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValidUntil", ValidUntil == null ? null : ValidUntil.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Organization getOrganization() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Organization");
-            return new Organization(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setOrganization(Organization Organization) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Organization", Organization == null ? null : Organization.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getServiceDescription() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -196,27 +171,6 @@ public class WebServiceDescriptor extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceDisplayName", ServiceDisplayName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getErrorUrl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ErrorUrl");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setErrorUrl(Uri ErrorUrl) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ErrorUrl", ErrorUrl == null ? null : ErrorUrl.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

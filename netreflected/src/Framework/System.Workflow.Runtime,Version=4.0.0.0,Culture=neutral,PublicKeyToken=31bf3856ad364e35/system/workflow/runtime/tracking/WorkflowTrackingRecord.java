@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.runtime.tracking.TrackingRecord;
 import system.workflow.runtime.tracking.TrackingWorkflowEvent;
 import system.DateTime;
 import system.EventArgs;
@@ -46,12 +47,27 @@ import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Tracking.WorkflowTrackingRecord, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingRecord</a>
  */
-public class WorkflowTrackingRecord extends NetObject  {
+public class WorkflowTrackingRecord extends TrackingRecord  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
     public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.Tracking.WorkflowTrackingRecord
+     */
     public static final String className = "System.Workflow.Runtime.Tracking.WorkflowTrackingRecord";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class WorkflowTrackingRecord extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowTrackingRecord}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowTrackingRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowTrackingRecord(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class WorkflowTrackingRecord extends NetObject  {
 
     // Constructors section
     
-
     public WorkflowTrackingRecord() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -141,79 +158,6 @@ public class WorkflowTrackingRecord extends NetObject  {
     
     // Properties section
     
-    public int getEventOrder() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("EventOrder");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEventOrder(int EventOrder) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EventOrder", EventOrder);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getEventDateTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventDateTime");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEventDateTime(DateTime EventDateTime) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EventDateTime", EventDateTime == null ? null : EventDateTime.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EventArgs getEventArgs() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventArgs");
-            return new EventArgs(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEventArgs(EventArgs EventArgs) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("EventArgs", EventArgs == null ? null : EventArgs.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TrackingAnnotationCollection getAnnotations() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
-            return new TrackingAnnotationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TrackingWorkflowEvent getTrackingWorkflowEvent() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.workflow.componentmodel.DependencyObject;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SetValueOverride}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.SetValueOverride" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.SetValueOverride</a>
+ */
 public interface ISetValueOverride {
     public void Invoke(DependencyObject d, NetObject value);
 }

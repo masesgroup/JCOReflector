@@ -56,12 +56,27 @@ import system.xml.XmlWriterSettings;
 
 /**
  * The base .NET class managing System.Xml.Xsl.XslCompiledTransform, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XslCompiledTransform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XslCompiledTransform</a>
  */
 public class XslCompiledTransform extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.XslCompiledTransform
+     */
     public static final String className = "System.Xml.Xsl.XslCompiledTransform";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +129,9 @@ public class XslCompiledTransform extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XslCompiledTransform}, a cast assert is made to check if types are compatible.
+     */
     public static XslCompiledTransform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XslCompiledTransform(from.getJCOInstance());
@@ -122,7 +139,6 @@ public class XslCompiledTransform extends NetObject  {
 
     // Constructors section
     
-
     public XslCompiledTransform() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +179,16 @@ public class XslCompiledTransform extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", executeMethod == null ? null : executeMethod.getJCOInstance(), queryData, toObjectFromArray(earlyBoundTypes));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Load(MethodInfo dupParam0, JCRefOut dupParam1, NetType[] dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.FormatException, system.io.EndOfStreamException, system.xml.XmlException, system.io.IOException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, toObjectFromArray(dupParam2));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

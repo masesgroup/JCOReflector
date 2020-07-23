@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 import system.web.compilation.BuildProviderAppliesTo;
 
 
 /**
  * The base .NET class managing System.Web.Compilation.BuildProviderAppliesToAttribute, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildProviderAppliesToAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildProviderAppliesToAttribute</a>
  */
-public class BuildProviderAppliesToAttribute extends NetObject  {
+public class BuildProviderAppliesToAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Compilation.BuildProviderAppliesToAttribute
+     */
     public static final String className = "System.Web.Compilation.BuildProviderAppliesToAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class BuildProviderAppliesToAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BuildProviderAppliesToAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static BuildProviderAppliesToAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BuildProviderAppliesToAttribute(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class BuildProviderAppliesToAttribute extends NetObject  {
 
     // Constructors section
     
+    public BuildProviderAppliesToAttribute() throws Throwable {
+    }
 
     public BuildProviderAppliesToAttribute(BuildProviderAppliesTo appliesTo) throws Throwable {
         try {
@@ -121,44 +141,14 @@ public class BuildProviderAppliesToAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BuildProviderAppliesTo getAppliesTo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

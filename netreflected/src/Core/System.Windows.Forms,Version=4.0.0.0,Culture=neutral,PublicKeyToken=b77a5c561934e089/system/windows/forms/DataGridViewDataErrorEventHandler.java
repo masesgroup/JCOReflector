@@ -42,12 +42,27 @@ import system.windows.forms.DataGridViewDataErrorEventArgs;
 import system.windows.forms.IDataGridViewDataErrorEventHandler;
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewDataErrorEventHandler, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewDataErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewDataErrorEventHandler</a>
  */
 public class DataGridViewDataErrorEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewDataErrorEventHandler
+     */
     public static final String className = "System.Windows.Forms.DataGridViewDataErrorEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDataGridViewDataErrorEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DataGridViewDataErrorEventHandler extends JCVoidDelegate implements
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DataGridViewDataErrorEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DataGridViewDataErrorEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DataGridViewDataErrorEventHandler extends JCVoidDelegate implements
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DataGridViewDataErrorEventArgs e) {
     }
 }

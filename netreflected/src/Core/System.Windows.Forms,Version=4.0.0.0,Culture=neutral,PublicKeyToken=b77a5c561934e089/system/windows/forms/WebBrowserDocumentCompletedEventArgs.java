@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.Uri;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.WebBrowserDocumentCompletedEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserDocumentCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserDocumentCompletedEventArgs</a>
  */
-public class WebBrowserDocumentCompletedEventArgs extends NetObject  {
+public class WebBrowserDocumentCompletedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.WebBrowserDocumentCompletedEventArgs
+     */
     public static final String className = "System.Windows.Forms.WebBrowserDocumentCompletedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class WebBrowserDocumentCompletedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebBrowserDocumentCompletedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static WebBrowserDocumentCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebBrowserDocumentCompletedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class WebBrowserDocumentCompletedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public WebBrowserDocumentCompletedEventArgs() throws Throwable {
+    }
 
     public WebBrowserDocumentCompletedEventArgs(Uri url) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class WebBrowserDocumentCompletedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

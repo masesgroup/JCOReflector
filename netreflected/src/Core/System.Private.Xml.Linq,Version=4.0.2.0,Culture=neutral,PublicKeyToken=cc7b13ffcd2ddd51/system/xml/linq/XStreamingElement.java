@@ -47,12 +47,27 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.Xml.Linq.XStreamingElement, System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XStreamingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XStreamingElement</a>
  */
 public class XStreamingElement extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Private.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Linq.XStreamingElement
+     */
     public static final String className = "System.Xml.Linq.XStreamingElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class XStreamingElement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XStreamingElement}, a cast assert is made to check if types are compatible.
+     */
     public static XStreamingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XStreamingElement(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class XStreamingElement extends NetObject  {
 
     // Constructors section
     
+    public XStreamingElement() throws Throwable {
+    }
 
     public XStreamingElement(XName name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -143,6 +162,7 @@ public class XStreamingElement extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

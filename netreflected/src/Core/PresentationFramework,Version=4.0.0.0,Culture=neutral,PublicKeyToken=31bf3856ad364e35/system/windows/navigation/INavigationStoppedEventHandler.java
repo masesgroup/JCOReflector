@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.navigation.NavigationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link NavigationStoppedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationStoppedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationStoppedEventHandler</a>
+ */
 public interface INavigationStoppedEventHandler {
     public void Invoke(NetObject sender, NavigationEventArgs e);
 }

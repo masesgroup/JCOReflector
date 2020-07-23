@@ -42,12 +42,27 @@ import system.drawing.design.ToolboxComponentsCreatingEventArgs;
 import system.drawing.design.IToolboxComponentsCreatingEventHandler;
 /**
  * The base .NET class managing System.Drawing.Design.ToolboxComponentsCreatingEventHandler, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxComponentsCreatingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxComponentsCreatingEventHandler</a>
  */
 public class ToolboxComponentsCreatingEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.Drawing.Design.ToolboxComponentsCreatingEventHandler
+     */
     public static final String className = "System.Drawing.Design.ToolboxComponentsCreatingEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IToolboxComponentsCreatingEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ToolboxComponentsCreatingEventHandler extends JCVoidDelegate implem
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ToolboxComponentsCreatingEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ToolboxComponentsCreatingEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ToolboxComponentsCreatingEventHandler extends JCVoidDelegate implem
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ToolboxComponentsCreatingEventArgs e) {
     }
 }

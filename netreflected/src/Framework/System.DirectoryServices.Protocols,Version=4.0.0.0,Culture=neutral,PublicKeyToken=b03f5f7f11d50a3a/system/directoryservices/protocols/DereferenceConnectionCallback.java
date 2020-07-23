@@ -42,12 +42,27 @@ import system.directoryservices.protocols.LdapConnection;
 import system.directoryservices.protocols.IDereferenceConnectionCallback;
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.DereferenceConnectionCallback, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback</a>
  */
 public class DereferenceConnectionCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.DereferenceConnectionCallback
+     */
     public static final String className = "System.DirectoryServices.Protocols.DereferenceConnectionCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDereferenceConnectionCallback callerInstance = null;
@@ -149,7 +164,7 @@ public class DereferenceConnectionCallback extends JCVoidDelegate implements IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(LdapConnection primaryConnection, LdapConnection connectionToDereference) throws Throwable {
+    public void METHOD_JAVA_NAME(LdapConnection primaryConnection, LdapConnection connectionToDereference) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DereferenceConnectionCallback extends JCVoidDelegate implements IJC
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(LdapConnection primaryConnection, LdapConnection connectionToDereference) {
     }
 }

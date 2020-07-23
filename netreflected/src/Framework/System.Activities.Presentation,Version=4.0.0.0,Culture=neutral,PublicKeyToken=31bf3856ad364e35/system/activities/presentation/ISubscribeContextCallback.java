@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.activities.presentation.ContextItem;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SubscribeContextCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.SubscribeContextCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.SubscribeContextCallback</a>
+ */
 public interface ISubscribeContextCallback {
     public void Invoke(ContextItem item);
 }

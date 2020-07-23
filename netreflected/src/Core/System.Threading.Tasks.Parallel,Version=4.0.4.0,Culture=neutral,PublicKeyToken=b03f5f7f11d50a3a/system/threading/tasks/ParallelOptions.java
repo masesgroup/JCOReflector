@@ -44,12 +44,27 @@ import system.threading.tasks.TaskScheduler;
 
 /**
  * The base .NET class managing System.Threading.Tasks.ParallelOptions, System.Threading.Tasks.Parallel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.ParallelOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.ParallelOptions</a>
  */
 public class ParallelOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Threading.Tasks.Parallel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Threading.Tasks.Parallel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Threading.Tasks.Parallel
+     */
     public static final String assemblyShortName = "System.Threading.Tasks.Parallel";
+    /**
+     * Qualified class name: System.Threading.Tasks.ParallelOptions
+     */
     public static final String className = "System.Threading.Tasks.ParallelOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class ParallelOptions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParallelOptions}, a cast assert is made to check if types are compatible.
+     */
     public static ParallelOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ParallelOptions(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class ParallelOptions extends NetObject  {
 
     // Constructors section
     
-
     public ParallelOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file

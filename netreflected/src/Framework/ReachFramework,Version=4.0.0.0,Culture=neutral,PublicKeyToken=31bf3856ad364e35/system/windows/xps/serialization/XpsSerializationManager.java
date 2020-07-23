@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.xps.serialization.PackageSerializationManager;
 import system.windows.xps.serialization.BasePackagingPolicy;
 import system.windows.xps.serialization.FontSubsetterCommitPolicies;
 import system.windows.xps.serialization.XpsSerializationPrintTicketRequiredEventHandler;
@@ -46,12 +47,27 @@ import system.windows.xps.serialization.XpsSerializationProgressChangedEventHand
 
 /**
  * The base .NET class managing System.Windows.Xps.Serialization.XpsSerializationManager, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationManager</a>
  */
-public class XpsSerializationManager extends NetObject  {
+public class XpsSerializationManager extends PackageSerializationManager  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Serialization.XpsSerializationManager
+     */
     public static final String className = "System.Windows.Xps.Serialization.XpsSerializationManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class XpsSerializationManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XpsSerializationManager}, a cast assert is made to check if types are compatible.
+     */
     public static XpsSerializationManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XpsSerializationManager(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class XpsSerializationManager extends NetObject  {
 
     // Constructors section
     
+    public XpsSerializationManager() throws Throwable {
+    }
 
     public XpsSerializationManager(BasePackagingPolicy packagingPolicy, boolean batchMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException {
         try {
@@ -122,6 +142,7 @@ public class XpsSerializationManager extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

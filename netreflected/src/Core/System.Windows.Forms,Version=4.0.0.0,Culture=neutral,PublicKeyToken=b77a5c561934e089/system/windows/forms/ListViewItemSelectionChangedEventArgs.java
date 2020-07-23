@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.forms.ListViewItem;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.ListViewItemSelectionChangedEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemSelectionChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemSelectionChangedEventArgs</a>
  */
-public class ListViewItemSelectionChangedEventArgs extends NetObject  {
+public class ListViewItemSelectionChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ListViewItemSelectionChangedEventArgs
+     */
     public static final String className = "System.Windows.Forms.ListViewItemSelectionChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ListViewItemSelectionChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListViewItemSelectionChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ListViewItemSelectionChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ListViewItemSelectionChangedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ListViewItemSelectionChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ListViewItemSelectionChangedEventArgs() throws Throwable {
+    }
 
     public ListViewItemSelectionChangedEventArgs(ListViewItem item, int itemIndex, boolean isSelected) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class ListViewItemSelectionChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

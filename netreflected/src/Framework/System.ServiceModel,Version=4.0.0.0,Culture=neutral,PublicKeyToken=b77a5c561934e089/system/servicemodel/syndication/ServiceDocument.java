@@ -48,12 +48,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.ServiceModel.Syndication.ServiceDocument, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.ServiceDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.ServiceDocument</a>
  */
 public class ServiceDocument extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Syndication.ServiceDocument
+     */
     public static final String className = "System.ServiceModel.Syndication.ServiceDocument";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ServiceDocument extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceDocument}, a cast assert is made to check if types are compatible.
+     */
     public static ServiceDocument cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServiceDocument(from.getJCOInstance());
@@ -114,7 +131,6 @@ public class ServiceDocument extends NetObject  {
 
     // Constructors section
     
-
     public ServiceDocument() throws Throwable, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file

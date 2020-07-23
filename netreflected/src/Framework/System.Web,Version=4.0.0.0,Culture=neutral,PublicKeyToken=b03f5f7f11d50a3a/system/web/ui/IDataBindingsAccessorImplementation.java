@@ -43,12 +43,27 @@ import system.web.ui.DataBindingCollection;
 
 /**
  * The base .NET class managing System.Web.UI.IDataBindingsAccessor, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.IDataBindingsAccessor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.IDataBindingsAccessor</a>
  */
 public class IDataBindingsAccessorImplementation extends NetObject implements IDataBindingsAccessor {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.IDataBindingsAccessor
+     */
     public static final String className = "System.Web.UI.IDataBindingsAccessor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IDataBindingsAccessorImplementation extends NetObject implements ID
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataBindingsAccessor}, a cast assert is made to check if types are compatible.
+     */
     public static IDataBindingsAccessor ToIDataBindingsAccessor(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDataBindingsAccessorImplementation(from.getJCOInstance());

@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.reflection.Module;
 import system.ResolveEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ModuleResolveEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleResolveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleResolveEventHandler</a>
+ */
 public interface IModuleResolveEventHandler {
     public Module Invoke(NetObject sender, ResolveEventArgs e);
 }

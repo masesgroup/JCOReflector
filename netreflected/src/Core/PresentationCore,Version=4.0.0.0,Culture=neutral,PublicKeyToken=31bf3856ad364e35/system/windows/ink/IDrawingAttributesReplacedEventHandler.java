@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.ink.DrawingAttributesReplacedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DrawingAttributesReplacedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.DrawingAttributesReplacedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.DrawingAttributesReplacedEventHandler</a>
+ */
 public interface IDrawingAttributesReplacedEventHandler {
     public void Invoke(NetObject sender, DrawingAttributesReplacedEventArgs e);
 }

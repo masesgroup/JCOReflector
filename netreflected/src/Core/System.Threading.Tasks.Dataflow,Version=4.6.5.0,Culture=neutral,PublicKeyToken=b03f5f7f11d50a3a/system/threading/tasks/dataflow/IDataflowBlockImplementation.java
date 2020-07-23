@@ -43,12 +43,27 @@ import system.threading.tasks.Task;
 
 /**
  * The base .NET class managing System.Threading.Tasks.Dataflow.IDataflowBlock, System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.IDataflowBlock" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.IDataflowBlock</a>
  */
 public class IDataflowBlockImplementation extends NetObject implements IDataflowBlock {
+    /**
+     * Fully assembly qualified name: System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Threading.Tasks.Dataflow
+     */
     public static final String assemblyShortName = "System.Threading.Tasks.Dataflow";
+    /**
+     * Qualified class name: System.Threading.Tasks.Dataflow.IDataflowBlock
+     */
     public static final String className = "System.Threading.Tasks.Dataflow.IDataflowBlock";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IDataflowBlockImplementation extends NetObject implements IDataflow
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataflowBlock}, a cast assert is made to check if types are compatible.
+     */
     public static IDataflowBlock ToIDataflowBlock(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDataflowBlockImplementation(from.getJCOInstance());

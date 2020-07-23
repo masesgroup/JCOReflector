@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing Microsoft.Win32.RegistryValueOptions, Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.RegistryValueOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.RegistryValueOptions</a>
  */
 public class RegistryValueOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Win32.Registry
+     */
     public static final String assemblyShortName = "Microsoft.Win32.Registry";
+    /**
+     * Qualified class name: Microsoft.Win32.RegistryValueOptions
+     */
     public static final String className = "Microsoft.Win32.RegistryValueOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class RegistryValueOptions extends NetObject  {
 
     // Flags management section
 
-    public RegistryValueOptions add(RegistryValueOptions val) throws Throwable {
+    public final RegistryValueOptions add(RegistryValueOptions val) throws Throwable {
         return new RegistryValueOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public RegistryValueOptions remove(RegistryValueOptions val) throws Throwable {
+    public final RegistryValueOptions remove(RegistryValueOptions val) throws Throwable {
         return new RegistryValueOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(RegistryValueOptions val) throws Throwable {
+    public final boolean is(RegistryValueOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(RegistryValueOptions val) throws Throwable {
+    public final boolean has(RegistryValueOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Globalization.CompareOptions, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CompareOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CompareOptions</a>
  */
 public class CompareOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Globalization.CompareOptions
+     */
     public static final String className = "System.Globalization.CompareOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -145,19 +160,19 @@ public class CompareOptions extends NetObject  {
 
     // Flags management section
 
-    public CompareOptions add(CompareOptions val) throws Throwable {
+    public final CompareOptions add(CompareOptions val) throws Throwable {
         return new CompareOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CompareOptions remove(CompareOptions val) throws Throwable {
+    public final CompareOptions remove(CompareOptions val) throws Throwable {
         return new CompareOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CompareOptions val) throws Throwable {
+    public final boolean is(CompareOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CompareOptions val) throws Throwable {
+    public final boolean has(CompareOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

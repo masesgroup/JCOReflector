@@ -57,12 +57,27 @@ import system.security.cryptography.CngUIPolicy;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CngKey, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKey</a>
  */
 public class CngKey extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.CngKey
+     */
     public static final String className = "System.Security.Cryptography.CngKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -115,7 +130,9 @@ public class CngKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CngKey}, a cast assert is made to check if types are compatible.
+     */
     public static CngKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CngKey(from.getJCOInstance());
@@ -123,6 +140,10 @@ public class CngKey extends NetObject  {
 
     // Constructors section
     
+    public CngKey() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -230,11 +251,33 @@ public class CngKey extends NetObject  {
         }
     }
 
+    public static CngKey Import(JCRefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objImport = (JCObject)classType.Invoke("Import", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return new CngKey(objImport);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static CngKey Import(byte[] keyBlob, CngKeyBlobFormat format, CngProvider provider) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objImport = (JCObject)classType.Invoke("Import", keyBlob, format == null ? null : format.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return new CngKey(objImport);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CngKey Import(JCRefOut dupParam0, CngKeyBlobFormat dupParam1, CngProvider dupParam2) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objImport = (JCObject)classType.Invoke("Import", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new CngKey(objImport);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

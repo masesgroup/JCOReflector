@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.io.ErrorEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ErrorEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.ErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.ErrorEventHandler</a>
+ */
 public interface IErrorEventHandler {
     public void Invoke(NetObject sender, ErrorEventArgs e);
 }

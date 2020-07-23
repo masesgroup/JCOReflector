@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
 import system.reflection.metadata.ecma335.SignatureTypeEncoder;
 
 
 /**
  * The base .NET class managing System.Reflection.Metadata.Ecma335.GenericTypeArgumentsEncoder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.GenericTypeArgumentsEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.GenericTypeArgumentsEncoder</a>
  */
-public class GenericTypeArgumentsEncoder extends NetObject  {
+public class GenericTypeArgumentsEncoder extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.Ecma335.GenericTypeArgumentsEncoder
+     */
     public static final String className = "System.Reflection.Metadata.Ecma335.GenericTypeArgumentsEncoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class GenericTypeArgumentsEncoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GenericTypeArgumentsEncoder}, a cast assert is made to check if types are compatible.
+     */
     public static GenericTypeArgumentsEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GenericTypeArgumentsEncoder(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class GenericTypeArgumentsEncoder extends NetObject  {
 
     // Constructors section
     
+    public GenericTypeArgumentsEncoder() throws Throwable {
+    }
 
     public GenericTypeArgumentsEncoder(BlobBuilder builder) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class GenericTypeArgumentsEncoder extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

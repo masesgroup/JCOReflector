@@ -42,12 +42,27 @@ import system.windows.threading.DispatcherUnhandledExceptionFilterEventArgs;
 import system.windows.threading.IDispatcherUnhandledExceptionFilterEventHandler;
 /**
  * The base .NET class managing System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler</a>
  */
 public class DispatcherUnhandledExceptionFilterEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler
+     */
     public static final String className = "System.Windows.Threading.DispatcherUnhandledExceptionFilterEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IDispatcherUnhandledExceptionFilterEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class DispatcherUnhandledExceptionFilterEventHandler extends JCVoidDelega
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, DispatcherUnhandledExceptionFilterEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, DispatcherUnhandledExceptionFilterEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class DispatcherUnhandledExceptionFilterEventHandler extends JCVoidDelega
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, DispatcherUnhandledExceptionFilterEventArgs e) {
     }
 }

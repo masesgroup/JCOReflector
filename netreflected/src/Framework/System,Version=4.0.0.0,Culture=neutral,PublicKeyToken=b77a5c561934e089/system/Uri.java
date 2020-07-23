@@ -49,12 +49,27 @@ import system.UriHostNameType;
 
 /**
  * The base .NET class managing System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Uri" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Uri</a>
  */
 public class Uri extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Uri
+     */
     public static final String className = "System.Uri";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class Uri extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Uri}, a cast assert is made to check if types are compatible.
+     */
     public static Uri cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Uri(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class Uri extends NetObject  {
 
     // Constructors section
     
+    public Uri() throws Throwable {
+    }
 
     public Uri(java.lang.String uriString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.MemberAccessException, system.io.PathTooLongException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.NotSupportedException {
         try {
@@ -175,6 +194,7 @@ public class Uri extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

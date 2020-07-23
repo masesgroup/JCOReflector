@@ -43,12 +43,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.IReceiveContextSettings, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IReceiveContextSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IReceiveContextSettings</a>
  */
 public class IReceiveContextSettingsImplementation extends NetObject implements IReceiveContextSettings {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.IReceiveContextSettings
+     */
     public static final String className = "System.ServiceModel.Channels.IReceiveContextSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IReceiveContextSettingsImplementation extends NetObject implements 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReceiveContextSettings}, a cast assert is made to check if types are compatible.
+     */
     public static IReceiveContextSettings ToIReceiveContextSettings(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IReceiveContextSettingsImplementation(from.getJCOInstance());

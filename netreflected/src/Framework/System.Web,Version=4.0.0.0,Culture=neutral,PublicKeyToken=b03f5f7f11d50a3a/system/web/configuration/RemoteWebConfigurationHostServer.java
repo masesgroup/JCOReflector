@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Web.Configuration.RemoteWebConfigurationHostServer, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer</a>
  */
 public class RemoteWebConfigurationHostServer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Configuration.RemoteWebConfigurationHostServer
+     */
     public static final String className = "System.Web.Configuration.RemoteWebConfigurationHostServer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RemoteWebConfigurationHostServer}, a cast assert is made to check if types are compatible.
+     */
     public static RemoteWebConfigurationHostServer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RemoteWebConfigurationHostServer(from.getJCOInstance());
@@ -108,7 +125,6 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
 
     // Constructors section
     
-
     public RemoteWebConfigurationHostServer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -128,6 +144,16 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("DoEncryptOrDecrypt", doEncrypt, xmlString, protectionProviderName, protectionProviderType, paramKeys, paramValues);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("DoEncryptOrDecrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,23 +38,37 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.design.DesignerHierarchicalDataSourceView;
 import system.web.ui.design.webcontrols.XmlDataSourceDesigner;
 import system.web.ui.IHierarchicalEnumerable;
 import system.web.ui.IHierarchicalEnumerableImplementation;
 import system.web.ui.design.IDataSourceSchema;
 import system.web.ui.design.IDataSourceSchemaImplementation;
-import system.web.ui.design.IHierarchicalDataSourceDesigner;
-import system.web.ui.design.IHierarchicalDataSourceDesignerImplementation;
 
 
 /**
  * The base .NET class managing System.Web.UI.Design.WebControls.XmlDesignerHierarchicalDataSourceView, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.XmlDesignerHierarchicalDataSourceView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.XmlDesignerHierarchicalDataSourceView</a>
  */
-public class XmlDesignerHierarchicalDataSourceView extends NetObject  {
+public class XmlDesignerHierarchicalDataSourceView extends DesignerHierarchicalDataSourceView  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.WebControls.XmlDesignerHierarchicalDataSourceView
+     */
     public static final String className = "System.Web.UI.Design.WebControls.XmlDesignerHierarchicalDataSourceView";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +121,9 @@ public class XmlDesignerHierarchicalDataSourceView extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDesignerHierarchicalDataSourceView}, a cast assert is made to check if types are compatible.
+     */
     public static XmlDesignerHierarchicalDataSourceView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlDesignerHierarchicalDataSourceView(from.getJCOInstance());
@@ -115,6 +131,8 @@ public class XmlDesignerHierarchicalDataSourceView extends NetObject  {
 
     // Constructors section
     
+    public XmlDesignerHierarchicalDataSourceView() throws Throwable {
+    }
 
     public XmlDesignerHierarchicalDataSourceView(XmlDataSourceDesigner owner, java.lang.String viewPath) throws Throwable, system.ArgumentNullException {
         try {
@@ -127,6 +145,7 @@ public class XmlDesignerHierarchicalDataSourceView extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -134,38 +153,6 @@ public class XmlDesignerHierarchicalDataSourceView extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Path");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDataSourceSchema getSchema() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.configuration.provider.ProviderException, system.ObjectDisposedException, system.xml.XmlException, system.web.HttpRequestValidationException, system.NullReferenceException, system.xml.xsl.XsltCompileException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotImplementedException, system.OverflowException, system.RankException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Schema");
-            return new IDataSourceSchemaImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IHierarchicalDataSourceDesigner getDataSourceDesigner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceDesigner");
-            return new IHierarchicalDataSourceDesignerImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

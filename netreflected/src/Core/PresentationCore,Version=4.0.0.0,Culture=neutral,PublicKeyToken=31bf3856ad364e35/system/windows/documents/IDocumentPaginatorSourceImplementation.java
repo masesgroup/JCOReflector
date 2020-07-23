@@ -43,12 +43,27 @@ import system.windows.documents.DocumentPaginator;
 
 /**
  * The base .NET class managing System.Windows.Documents.IDocumentPaginatorSource, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.IDocumentPaginatorSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.IDocumentPaginatorSource</a>
  */
 public class IDocumentPaginatorSourceImplementation extends NetObject implements IDocumentPaginatorSource {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Documents.IDocumentPaginatorSource
+     */
     public static final String className = "System.Windows.Documents.IDocumentPaginatorSource";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IDocumentPaginatorSourceImplementation extends NetObject implements
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDocumentPaginatorSource}, a cast assert is made to check if types are compatible.
+     */
     public static IDocumentPaginatorSource ToIDocumentPaginatorSource(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDocumentPaginatorSourceImplementation(from.getJCOInstance());

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.security.cryptography.HashAlgorithmName;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.HashAlgorithmName, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.HashAlgorithmName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.HashAlgorithmName</a>
  */
-public class HashAlgorithmName extends NetObject  {
+public class HashAlgorithmName extends ValueType  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.HashAlgorithmName
+     */
     public static final String className = "System.Security.Cryptography.HashAlgorithmName";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class HashAlgorithmName extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HashAlgorithmName}, a cast assert is made to check if types are compatible.
+     */
     public static HashAlgorithmName cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HashAlgorithmName(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class HashAlgorithmName extends NetObject  {
 
     // Constructors section
     
+    public HashAlgorithmName() throws Throwable {
+    }
 
     public HashAlgorithmName(java.lang.String name) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class HashAlgorithmName extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -138,55 +159,55 @@ public class HashAlgorithmName extends NetObject  {
     
     // Properties section
     
-    public static HashAlgorithmName getMD5() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HashAlgorithmName getMD5() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("MD5");
+            JCObject val = (JCObject)classInstance.Get("MD5");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static HashAlgorithmName getSHA1() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HashAlgorithmName getSHA1() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SHA1");
+            JCObject val = (JCObject)classInstance.Get("SHA1");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static HashAlgorithmName getSHA256() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HashAlgorithmName getSHA256() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SHA256");
+            JCObject val = (JCObject)classInstance.Get("SHA256");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static HashAlgorithmName getSHA384() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HashAlgorithmName getSHA384() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SHA384");
+            JCObject val = (JCObject)classInstance.Get("SHA384");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static HashAlgorithmName getSHA512() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public HashAlgorithmName getSHA512() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("SHA512");
+            JCObject val = (JCObject)classInstance.Get("SHA512");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

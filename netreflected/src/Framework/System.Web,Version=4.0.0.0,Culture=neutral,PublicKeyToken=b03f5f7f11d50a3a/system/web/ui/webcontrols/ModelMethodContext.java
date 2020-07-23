@@ -45,12 +45,27 @@ import system.web.ui.webcontrols.ModelMethodContext;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.ModelMethodContext, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ModelMethodContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ModelMethodContext</a>
  */
 public class ModelMethodContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.ModelMethodContext
+     */
     public static final String className = "System.Web.UI.WebControls.ModelMethodContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ModelMethodContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelMethodContext}, a cast assert is made to check if types are compatible.
+     */
     public static ModelMethodContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ModelMethodContext(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ModelMethodContext extends NetObject  {
 
     // Constructors section
     
+    public ModelMethodContext() throws Throwable {
+    }
 
     public ModelMethodContext(Page page) throws Throwable, system.ArgumentNullException {
         try {
@@ -121,6 +140,7 @@ public class ModelMethodContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -141,11 +161,11 @@ public class ModelMethodContext extends NetObject  {
         }
     }
 
-    public static ModelMethodContext getCurrent() throws Throwable, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ModelMethodContext getCurrent() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            JCObject val = (JCObject)classInstance.Get("Current");
             return new ModelMethodContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

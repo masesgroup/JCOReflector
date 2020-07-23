@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.MailMessageEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MailMessageEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.MailMessageEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.MailMessageEventHandler</a>
+ */
 public interface IMailMessageEventHandler {
     public void Invoke(NetObject sender, MailMessageEventArgs e);
 }

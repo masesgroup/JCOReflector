@@ -42,12 +42,29 @@ import system.UInt32;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices._LocalBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._LocalBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._LocalBuilder</a>
  */
 public interface _LocalBuilder extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices._LocalBuilder
+     */
+    public static final String className = "System.Runtime.InteropServices._LocalBuilder";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _LocalBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static _LocalBuilder To_LocalBuilder(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices._LocalBuilder, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new _LocalBuilderImplementation(from.getJCOInstance());
     }

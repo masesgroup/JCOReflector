@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.data.odbc.OdbcErrorCollection;
 
 
 /**
  * The base .NET class managing System.Data.Odbc.OdbcInfoMessageEventArgs, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcInfoMessageEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcInfoMessageEventArgs</a>
  */
-public class OdbcInfoMessageEventArgs extends NetObject  {
+public class OdbcInfoMessageEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.Odbc.OdbcInfoMessageEventArgs
+     */
     public static final String className = "System.Data.Odbc.OdbcInfoMessageEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class OdbcInfoMessageEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link OdbcInfoMessageEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static OdbcInfoMessageEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new OdbcInfoMessageEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class OdbcInfoMessageEventArgs extends NetObject  {
 
     // Constructors section
     
+    public OdbcInfoMessageEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

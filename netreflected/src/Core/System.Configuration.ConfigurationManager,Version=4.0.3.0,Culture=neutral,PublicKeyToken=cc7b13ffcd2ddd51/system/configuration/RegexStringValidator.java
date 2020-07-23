@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.ConfigurationValidatorBase;
 
 
 /**
  * The base .NET class managing System.Configuration.RegexStringValidator, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.RegexStringValidator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.RegexStringValidator</a>
  */
-public class RegexStringValidator extends NetObject  {
+public class RegexStringValidator extends ConfigurationValidatorBase  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.RegexStringValidator
+     */
     public static final String className = "System.Configuration.RegexStringValidator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class RegexStringValidator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegexStringValidator}, a cast assert is made to check if types are compatible.
+     */
     public static RegexStringValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RegexStringValidator(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class RegexStringValidator extends NetObject  {
 
     // Constructors section
     
+    public RegexStringValidator() throws Throwable {
+    }
 
     public RegexStringValidator(java.lang.String regex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.NotSupportedException, system.NotImplementedException {
         try {
@@ -118,6 +138,7 @@ public class RegexStringValidator extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

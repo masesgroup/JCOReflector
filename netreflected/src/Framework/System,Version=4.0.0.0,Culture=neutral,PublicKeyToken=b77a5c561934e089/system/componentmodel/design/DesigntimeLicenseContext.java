@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.LicenseContext;
 import system.reflection.Assembly;
 import system.componentmodel.LicenseUsageMode;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.DesigntimeLicenseContext, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesigntimeLicenseContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesigntimeLicenseContext</a>
  */
-public class DesigntimeLicenseContext extends NetObject  {
+public class DesigntimeLicenseContext extends LicenseContext  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesigntimeLicenseContext
+     */
     public static final String className = "System.ComponentModel.Design.DesigntimeLicenseContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DesigntimeLicenseContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesigntimeLicenseContext}, a cast assert is made to check if types are compatible.
+     */
     public static DesigntimeLicenseContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesigntimeLicenseContext(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class DesigntimeLicenseContext extends NetObject  {
 
     // Constructors section
     
-
     public DesigntimeLicenseContext() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -125,17 +142,6 @@ public class DesigntimeLicenseContext extends NetObject  {
     
     // Methods section
     
-    public NetObject GetService(NetType type) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", type == null ? null : type.getJCOInstance());
-            return new NetObject(objGetService);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String GetSavedLicenseKey(NetType type, Assembly resourceAssembly) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,17 +166,6 @@ public class DesigntimeLicenseContext extends NetObject  {
     
     // Properties section
     
-    public LicenseUsageMode getUsageMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UsageMode");
-            return new LicenseUsageMode(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

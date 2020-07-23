@@ -42,12 +42,29 @@ import system.drawing.design.ToolboxItemCollection;
 
 /**
  * The base .NET class managing System.Drawing.Design.IToolboxItemProvider, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IToolboxItemProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IToolboxItemProvider</a>
  */
 public interface IToolboxItemProvider extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Drawing
+     */
+    public static final String assemblyShortName = "System.Drawing";
+    /**
+     * Qualified class name: System.Drawing.Design.IToolboxItemProvider
+     */
+    public static final String className = "System.Drawing.Design.IToolboxItemProvider";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IToolboxItemProvider}, a cast assert is made to check if types are compatible.
+     */
     public static IToolboxItemProvider ToIToolboxItemProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Drawing.Design.IToolboxItemProvider, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Drawing"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IToolboxItemProviderImplementation(from.getJCOInstance());
     }

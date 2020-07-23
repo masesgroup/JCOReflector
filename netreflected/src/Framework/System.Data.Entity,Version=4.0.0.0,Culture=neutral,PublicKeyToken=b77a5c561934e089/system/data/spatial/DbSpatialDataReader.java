@@ -44,12 +44,27 @@ import system.data.spatial.DbGeometry;
 
 /**
  * The base .NET class managing System.Data.Spatial.DbSpatialDataReader, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Spatial.DbSpatialDataReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Spatial.DbSpatialDataReader</a>
  */
 public class DbSpatialDataReader extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Spatial.DbSpatialDataReader
+     */
     public static final String className = "System.Data.Spatial.DbSpatialDataReader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DbSpatialDataReader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbSpatialDataReader}, a cast assert is made to check if types are compatible.
+     */
     public static DbSpatialDataReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbSpatialDataReader(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class DbSpatialDataReader extends NetObject  {
 
     // Constructors section
     
+    public DbSpatialDataReader() throws Throwable {
+    }
 
     
     // Methods section

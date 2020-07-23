@@ -46,12 +46,27 @@ import system.componentmodel.design.IDesignerHostImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignerCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerCollection</a>
  */
 public class DesignerCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignerCollection
+     */
     public static final String className = "System.ComponentModel.Design.DesignerCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class DesignerCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerCollection}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerCollection(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class DesignerCollection extends NetObject  {
 
     // Constructors section
     
+    public DesignerCollection() throws Throwable {
+    }
 
     public DesignerCollection(IList designers) throws Throwable {
         try {
@@ -132,6 +151,7 @@ public class DesignerCollection extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

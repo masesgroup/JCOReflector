@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.design.ServiceCreatorCallback;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IServiceContainer, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IServiceContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IServiceContainer</a>
  */
 public class IServiceContainerImplementation extends NetObject implements IServiceContainer {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IServiceContainer
+     */
     public static final String className = "System.ComponentModel.Design.IServiceContainer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class IServiceContainerImplementation extends NetObject implements IServi
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IServiceContainer}, a cast assert is made to check if types are compatible.
+     */
     public static IServiceContainer ToIServiceContainer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IServiceContainerImplementation(from.getJCOInstance());

@@ -43,12 +43,27 @@ import system.globalization.CultureInfo;
 
 /**
  * The base .NET class managing System.Windows.Controls.BooleanToVisibilityConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.BooleanToVisibilityConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.BooleanToVisibilityConverter</a>
  */
 public class BooleanToVisibilityConverter extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.BooleanToVisibilityConverter
+     */
     public static final String className = "System.Windows.Controls.BooleanToVisibilityConverter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class BooleanToVisibilityConverter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BooleanToVisibilityConverter}, a cast assert is made to check if types are compatible.
+     */
     public static BooleanToVisibilityConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BooleanToVisibilityConverter(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class BooleanToVisibilityConverter extends NetObject  {
 
     // Constructors section
     
-
     public BooleanToVisibilityConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file

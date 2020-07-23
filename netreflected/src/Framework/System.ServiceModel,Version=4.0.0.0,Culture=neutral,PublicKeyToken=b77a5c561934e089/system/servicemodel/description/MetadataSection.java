@@ -46,12 +46,27 @@ import system.web.services.description.ServiceDescription;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.MetadataSection, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MetadataSection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MetadataSection</a>
  */
 public class MetadataSection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.MetadataSection
+     */
     public static final String className = "System.ServiceModel.Description.MetadataSection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class MetadataSection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataSection}, a cast assert is made to check if types are compatible.
+     */
     public static MetadataSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MetadataSection(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class MetadataSection extends NetObject  {
 
     // Constructors section
     
-
     public MetadataSection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -235,41 +251,41 @@ public class MetadataSection extends NetObject  {
         }
     }
 
-    public static java.lang.String getMetadataExchangeDialect() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getMetadataExchangeDialect() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("MetadataExchangeDialect");
+            return (java.lang.String)classInstance.Get("MetadataExchangeDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getPolicyDialect() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getPolicyDialect() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("PolicyDialect");
+            return (java.lang.String)classInstance.Get("PolicyDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getServiceDescriptionDialect() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getServiceDescriptionDialect() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("ServiceDescriptionDialect");
+            return (java.lang.String)classInstance.Get("ServiceDescriptionDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String getXmlSchemaDialect() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String getXmlSchemaDialect() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Get("XmlSchemaDialect");
+            return (java.lang.String)classInstance.Get("XmlSchemaDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

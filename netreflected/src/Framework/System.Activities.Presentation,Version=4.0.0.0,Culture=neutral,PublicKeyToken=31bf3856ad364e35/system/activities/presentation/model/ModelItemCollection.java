@@ -39,23 +39,32 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.model.ModelItem;
-import system.activities.presentation.model.ModelEditingScope;
-import system.activities.presentation.model.ModelProperty;
-import system.activities.presentation.model.ModelPropertyCollection;
-import system.componentmodel.AttributeCollection;
-import system.windows.DependencyObject;
 import system.collections.specialized.NotifyCollectionChangedEventHandler;
-import system.componentmodel.PropertyChangedEventHandler;
 
 
 /**
  * The base .NET class managing System.Activities.Presentation.Model.ModelItemCollection, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.ModelItemCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.ModelItemCollection</a>
  */
-public class ModelItemCollection extends NetObject  {
+public class ModelItemCollection extends ModelItem  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Model.ModelItemCollection
+     */
     public static final String className = "System.Activities.Presentation.Model.ModelItemCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +117,9 @@ public class ModelItemCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelItemCollection}, a cast assert is made to check if types are compatible.
+     */
     public static ModelItemCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ModelItemCollection(from.getJCOInstance());
@@ -116,6 +127,8 @@ public class ModelItemCollection extends NetObject  {
 
     // Constructors section
     
+    public ModelItemCollection() throws Throwable {
+    }
 
     
     // Methods section
@@ -170,50 +183,6 @@ public class ModelItemCollection extends NetObject  {
         }
     }
 
-    public ModelEditingScope BeginEdit() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginEdit = (JCObject)classInstance.Invoke("BeginEdit");
-            return new ModelEditingScope(objBeginEdit);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelEditingScope BeginEdit(boolean shouldApplyChangesImmediately) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginEdit = (JCObject)classInstance.Invoke("BeginEdit", shouldApplyChangesImmediately);
-            return new ModelEditingScope(objBeginEdit);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelEditingScope BeginEdit(java.lang.String description) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginEdit = (JCObject)classInstance.Invoke("BeginEdit", description);
-            return new ModelEditingScope(objBeginEdit);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelEditingScope BeginEdit(java.lang.String description, boolean shouldApplyChangesImmediately) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objBeginEdit = (JCObject)classInstance.Invoke("BeginEdit", description, shouldApplyChangesImmediately);
-            return new ModelEditingScope(objBeginEdit);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ModelItem Add(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -231,17 +200,6 @@ public class ModelItemCollection extends NetObject  {
         try {
             JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value == null ? null : value.getJCOInstance());
             return new ModelItem(objInsert);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject GetCurrentValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetCurrentValue = (JCObject)classInstance.Invoke("GetCurrentValue");
-            return new NetObject(objGetCurrentValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,114 +289,6 @@ public class ModelItemCollection extends NetObject  {
         }
     }
 
-    public ModelItem getParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new ModelItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelItem getRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Root");
-            return new ModelItem(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelProperty getContent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Content");
-            return new ModelProperty(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelProperty getSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Source");
-            return new ModelProperty(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ModelPropertyCollection getProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new ModelPropertyCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AttributeCollection getAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
-            return new AttributeCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setName(java.lang.String Name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Name", Name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getItemType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DependencyObject getView() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("View");
-            return new DependencyObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section
@@ -459,26 +309,6 @@ public class ModelItemCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CollectionChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.RegisterEventListener("PropertyChanged", handler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.UnregisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

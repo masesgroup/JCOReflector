@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.reflection.metadata.CustomAttributeHandleCollection;
 import system.reflection.metadata.DeclarativeSecurityAttributeHandleCollection;
 import system.reflection.metadata.EventDefinitionHandleCollection;
@@ -57,12 +58,27 @@ import system.reflection.TypeAttributes;
 
 /**
  * The base .NET class managing System.Reflection.Metadata.TypeDefinition, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.TypeDefinition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.TypeDefinition</a>
  */
-public class TypeDefinition extends NetObject  {
+public class TypeDefinition extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.Metadata.TypeDefinition
+     */
     public static final String className = "System.Reflection.Metadata.TypeDefinition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -115,7 +131,9 @@ public class TypeDefinition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeDefinition}, a cast assert is made to check if types are compatible.
+     */
     public static TypeDefinition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TypeDefinition(from.getJCOInstance());
@@ -123,6 +141,10 @@ public class TypeDefinition extends NetObject  {
 
     // Constructors section
     
+    public TypeDefinition() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.transactions.Enlistment;
 
 
 /**
  * The base .NET class managing System.Transactions.SinglePhaseEnlistment, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.SinglePhaseEnlistment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.SinglePhaseEnlistment</a>
  */
-public class SinglePhaseEnlistment extends NetObject  {
+public class SinglePhaseEnlistment extends Enlistment  {
+    /**
+     * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Transactions
+     */
     public static final String assemblyShortName = "System.Transactions";
+    /**
+     * Qualified class name: System.Transactions.SinglePhaseEnlistment
+     */
     public static final String className = "System.Transactions.SinglePhaseEnlistment";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SinglePhaseEnlistment extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SinglePhaseEnlistment}, a cast assert is made to check if types are compatible.
+     */
     public static SinglePhaseEnlistment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SinglePhaseEnlistment(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class SinglePhaseEnlistment extends NetObject  {
 
     // Constructors section
     
+    public SinglePhaseEnlistment() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -137,16 +159,6 @@ public class SinglePhaseEnlistment extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Committed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Done() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Done");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

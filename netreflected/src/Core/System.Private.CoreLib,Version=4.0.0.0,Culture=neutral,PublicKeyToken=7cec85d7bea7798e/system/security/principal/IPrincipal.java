@@ -43,12 +43,29 @@ import system.security.principal.IIdentityImplementation;
 
 /**
  * The base .NET class managing System.Security.Principal.IPrincipal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IPrincipal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IPrincipal</a>
  */
 public interface IPrincipal extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Security.Principal.IPrincipal
+     */
+    public static final String className = "System.Security.Principal.IPrincipal";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPrincipal}, a cast assert is made to check if types are compatible.
+     */
     public static IPrincipal ToIPrincipal(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Security.Principal.IPrincipal, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPrincipalImplementation(from.getJCOInstance());
     }

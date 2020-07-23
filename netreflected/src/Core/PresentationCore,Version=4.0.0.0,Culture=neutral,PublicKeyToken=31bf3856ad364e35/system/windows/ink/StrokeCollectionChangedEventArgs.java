@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.ink.StrokeCollection;
 
 
 /**
  * The base .NET class managing System.Windows.Ink.StrokeCollectionChangedEventArgs, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StrokeCollectionChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StrokeCollectionChangedEventArgs</a>
  */
-public class StrokeCollectionChangedEventArgs extends NetObject  {
+public class StrokeCollectionChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Ink.StrokeCollectionChangedEventArgs
+     */
     public static final String className = "System.Windows.Ink.StrokeCollectionChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class StrokeCollectionChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StrokeCollectionChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static StrokeCollectionChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StrokeCollectionChangedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class StrokeCollectionChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public StrokeCollectionChangedEventArgs() throws Throwable {
+    }
 
     public StrokeCollectionChangedEventArgs(StrokeCollection added, StrokeCollection removed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         try {
@@ -119,6 +139,7 @@ public class StrokeCollectionChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

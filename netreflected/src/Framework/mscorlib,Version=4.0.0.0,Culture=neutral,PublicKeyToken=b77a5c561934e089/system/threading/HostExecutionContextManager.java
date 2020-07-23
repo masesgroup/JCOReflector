@@ -43,12 +43,27 @@ import system.threading.HostExecutionContext;
 
 /**
  * The base .NET class managing System.Threading.HostExecutionContextManager, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.HostExecutionContextManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.HostExecutionContextManager</a>
  */
 public class HostExecutionContextManager extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Threading.HostExecutionContextManager
+     */
     public static final String className = "System.Threading.HostExecutionContextManager";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class HostExecutionContextManager extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HostExecutionContextManager}, a cast assert is made to check if types are compatible.
+     */
     public static HostExecutionContextManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HostExecutionContextManager(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class HostExecutionContextManager extends NetObject  {
 
     // Constructors section
     
-
     public HostExecutionContextManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file

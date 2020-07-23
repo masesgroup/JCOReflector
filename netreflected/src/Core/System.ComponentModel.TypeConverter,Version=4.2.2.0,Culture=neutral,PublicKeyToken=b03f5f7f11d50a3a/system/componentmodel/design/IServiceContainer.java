@@ -37,17 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.design.ServiceCreatorCallback;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IServiceContainer, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IServiceContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IServiceContainer</a>
  */
-public interface IServiceContainer extends IJCOBridgeReflected {
-
+public interface IServiceContainer extends IJCOBridgeReflected, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
+    public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IServiceContainer
+     */
+    public static final String className = "System.ComponentModel.Design.IServiceContainer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IServiceContainer}, a cast assert is made to check if types are compatible.
+     */
     public static IServiceContainer ToIServiceContainer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.IServiceContainer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ComponentModel.TypeConverter"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IServiceContainerImplementation(from.getJCOInstance());
     }
@@ -90,7 +109,6 @@ public interface IServiceContainer extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
     public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable;
 

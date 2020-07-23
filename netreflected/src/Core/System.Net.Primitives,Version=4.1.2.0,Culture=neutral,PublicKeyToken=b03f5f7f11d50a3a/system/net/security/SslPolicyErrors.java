@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.Security.SslPolicyErrors, System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.SslPolicyErrors" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.SslPolicyErrors</a>
  */
 public class SslPolicyErrors extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Primitives
+     */
     public static final String assemblyShortName = "System.Net.Primitives";
+    /**
+     * Qualified class name: System.Net.Security.SslPolicyErrors
+     */
     public static final String className = "System.Net.Security.SslPolicyErrors";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class SslPolicyErrors extends NetObject  {
 
     // Flags management section
 
-    public SslPolicyErrors add(SslPolicyErrors val) throws Throwable {
+    public final SslPolicyErrors add(SslPolicyErrors val) throws Throwable {
         return new SslPolicyErrors(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SslPolicyErrors remove(SslPolicyErrors val) throws Throwable {
+    public final SslPolicyErrors remove(SslPolicyErrors val) throws Throwable {
         return new SslPolicyErrors(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SslPolicyErrors val) throws Throwable {
+    public final boolean is(SslPolicyErrors val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SslPolicyErrors val) throws Throwable {
+    public final boolean has(SslPolicyErrors val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

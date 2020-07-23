@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.MergeFailedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MergeFailedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.MergeFailedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.MergeFailedEventHandler</a>
+ */
 public interface IMergeFailedEventHandler {
     public void Invoke(NetObject sender, MergeFailedEventArgs e);
 }

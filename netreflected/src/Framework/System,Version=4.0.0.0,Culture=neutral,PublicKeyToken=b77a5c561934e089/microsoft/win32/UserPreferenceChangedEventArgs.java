@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import microsoft.win32.UserPreferenceCategory;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.UserPreferenceChangedEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventArgs</a>
  */
-public class UserPreferenceChangedEventArgs extends NetObject  {
+public class UserPreferenceChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: Microsoft.Win32.UserPreferenceChangedEventArgs
+     */
     public static final String className = "Microsoft.Win32.UserPreferenceChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class UserPreferenceChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UserPreferenceChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static UserPreferenceChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UserPreferenceChangedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class UserPreferenceChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public UserPreferenceChangedEventArgs() throws Throwable {
+    }
 
     public UserPreferenceChangedEventArgs(UserPreferenceCategory category) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class UserPreferenceChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

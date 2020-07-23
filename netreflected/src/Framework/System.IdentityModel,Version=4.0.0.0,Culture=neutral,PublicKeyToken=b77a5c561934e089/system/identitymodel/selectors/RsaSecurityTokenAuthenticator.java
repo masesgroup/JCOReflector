@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.identitymodel.tokens.SecurityToken;
+import system.identitymodel.selectors.SecurityTokenAuthenticator;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator</a>
  */
-public class RsaSecurityTokenAuthenticator extends NetObject  {
+public class RsaSecurityTokenAuthenticator extends SecurityTokenAuthenticator  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator
+     */
     public static final String className = "System.IdentityModel.Selectors.RsaSecurityTokenAuthenticator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RsaSecurityTokenAuthenticator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RsaSecurityTokenAuthenticator}, a cast assert is made to check if types are compatible.
+     */
     public static RsaSecurityTokenAuthenticator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RsaSecurityTokenAuthenticator(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class RsaSecurityTokenAuthenticator extends NetObject  {
 
     // Constructors section
     
-
     public RsaSecurityTokenAuthenticator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -124,16 +140,6 @@ public class RsaSecurityTokenAuthenticator extends NetObject  {
     
     // Methods section
     
-    public boolean CanValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanValidateToken", token == null ? null : token.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

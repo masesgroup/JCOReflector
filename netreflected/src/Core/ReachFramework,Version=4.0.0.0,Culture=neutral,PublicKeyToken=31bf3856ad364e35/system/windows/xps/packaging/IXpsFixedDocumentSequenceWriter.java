@@ -47,12 +47,29 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter</a>
  */
 public interface IXpsFixedDocumentSequenceWriter extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
+    public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter
+     */
+    public static final String className = "System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXpsFixedDocumentSequenceWriter}, a cast assert is made to check if types are compatible.
+     */
     public static IXpsFixedDocumentSequenceWriter ToIXpsFixedDocumentSequenceWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "ReachFramework"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXpsFixedDocumentSequenceWriterImplementation(from.getJCOInstance());
     }

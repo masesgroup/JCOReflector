@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.GiveFeedbackEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link GiveFeedbackEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.GiveFeedbackEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.GiveFeedbackEventHandler</a>
+ */
 public interface IGiveFeedbackEventHandler {
     public void Invoke(NetObject sender, GiveFeedbackEventArgs e);
 }

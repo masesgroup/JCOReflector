@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Media.SystemSound, System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Media.SystemSound" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Media.SystemSound</a>
  */
 public class SystemSound extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Windows.Extensions
+     */
     public static final String assemblyShortName = "System.Windows.Extensions";
+    /**
+     * Qualified class name: System.Media.SystemSound
+     */
     public static final String className = "System.Media.SystemSound";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class SystemSound extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SystemSound}, a cast assert is made to check if types are compatible.
+     */
     public static SystemSound cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SystemSound(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class SystemSound extends NetObject  {
 
     // Constructors section
     
+    public SystemSound() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.BindingManagerDataErrorEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BindingManagerDataErrorEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingManagerDataErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingManagerDataErrorEventHandler</a>
+ */
 public interface IBindingManagerDataErrorEventHandler {
     public void Invoke(NetObject sender, BindingManagerDataErrorEventArgs e);
 }

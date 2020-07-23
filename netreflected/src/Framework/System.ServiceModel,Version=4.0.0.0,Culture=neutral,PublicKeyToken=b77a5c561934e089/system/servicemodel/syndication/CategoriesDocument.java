@@ -50,12 +50,27 @@ import system.servicemodel.syndication.SyndicationElementExtensionCollection;
 
 /**
  * The base .NET class managing System.ServiceModel.Syndication.CategoriesDocument, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument</a>
  */
 public class CategoriesDocument extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Syndication.CategoriesDocument
+     */
     public static final String className = "System.ServiceModel.Syndication.CategoriesDocument";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class CategoriesDocument extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CategoriesDocument}, a cast assert is made to check if types are compatible.
+     */
     public static CategoriesDocument cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CategoriesDocument(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class CategoriesDocument extends NetObject  {
 
     // Constructors section
     
+    public CategoriesDocument() throws Throwable {
+    }
 
     
     // Methods section

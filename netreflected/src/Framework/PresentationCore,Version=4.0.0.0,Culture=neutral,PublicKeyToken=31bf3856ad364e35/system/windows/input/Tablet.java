@@ -44,12 +44,27 @@ import system.windows.input.TabletDeviceCollection;
 
 /**
  * The base .NET class managing System.Windows.Input.Tablet, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Tablet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Tablet</a>
  */
 public class Tablet extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.Tablet
+     */
     public static final String className = "System.Windows.Input.Tablet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class Tablet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Tablet}, a cast assert is made to check if types are compatible.
+     */
     public static Tablet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Tablet(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class Tablet extends NetObject  {
 
     // Constructors section
     
+    public Tablet() throws Throwable {
+    }
 
     
     // Methods section
@@ -118,22 +137,22 @@ public class Tablet extends NetObject  {
     
     // Properties section
     
-    public static TabletDevice getCurrentTabletDevice() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TabletDevice getCurrentTabletDevice() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("CurrentTabletDevice");
+            JCObject val = (JCObject)classInstance.Get("CurrentTabletDevice");
             return new TabletDevice(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TabletDeviceCollection getTabletDevices() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TabletDeviceCollection getTabletDevices() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("TabletDevices");
+            JCObject val = (JCObject)classInstance.Get("TabletDevices");
             return new TabletDeviceCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

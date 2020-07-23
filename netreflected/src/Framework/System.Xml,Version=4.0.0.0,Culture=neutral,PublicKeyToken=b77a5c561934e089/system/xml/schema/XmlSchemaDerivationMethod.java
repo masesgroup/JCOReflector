@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.Schema.XmlSchemaDerivationMethod, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaDerivationMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaDerivationMethod</a>
  */
 public class XmlSchemaDerivationMethod extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.XmlSchemaDerivationMethod
+     */
     public static final String className = "System.Xml.Schema.XmlSchemaDerivationMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class XmlSchemaDerivationMethod extends NetObject  {
 
     // Flags management section
 
-    public XmlSchemaDerivationMethod add(XmlSchemaDerivationMethod val) throws Throwable {
+    public final XmlSchemaDerivationMethod add(XmlSchemaDerivationMethod val) throws Throwable {
         return new XmlSchemaDerivationMethod(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public XmlSchemaDerivationMethod remove(XmlSchemaDerivationMethod val) throws Throwable {
+    public final XmlSchemaDerivationMethod remove(XmlSchemaDerivationMethod val) throws Throwable {
         return new XmlSchemaDerivationMethod(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(XmlSchemaDerivationMethod val) throws Throwable {
+    public final boolean is(XmlSchemaDerivationMethod val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(XmlSchemaDerivationMethod val) throws Throwable {
+    public final boolean has(XmlSchemaDerivationMethod val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -47,12 +47,27 @@ import system.UInt32;
 
 /**
  * The base .NET class managing System.Reflection.PortableExecutable.DebugDirectoryBuilder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder</a>
  */
 public class DebugDirectoryBuilder extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Reflection.Metadata
+     */
     public static final String assemblyShortName = "System.Reflection.Metadata";
+    /**
+     * Qualified class name: System.Reflection.PortableExecutable.DebugDirectoryBuilder
+     */
     public static final String className = "System.Reflection.PortableExecutable.DebugDirectoryBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class DebugDirectoryBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DebugDirectoryBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static DebugDirectoryBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DebugDirectoryBuilder(from.getJCOInstance());
@@ -113,7 +130,6 @@ public class DebugDirectoryBuilder extends NetObject  {
 
     // Constructors section
     
-
     public DebugDirectoryBuilder() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -153,6 +169,16 @@ public class DebugDirectoryBuilder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEntry", type == null ? null : type.getJCOInstance(), version == null ? null : version.getJCOInstance(), stamp == null ? null : stamp.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddReproducibleEntry() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddReproducibleEntry");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

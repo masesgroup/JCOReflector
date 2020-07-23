@@ -47,12 +47,27 @@ import system.data.objects.ObjectParameterCollection;
 
 /**
  * The base .NET class managing System.Data.Objects.ObjectQuery, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectQuery</a>
  */
 public class ObjectQuery extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Objects.ObjectQuery
+     */
     public static final String className = "System.Data.Objects.ObjectQuery";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ObjectQuery extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectQuery}, a cast assert is made to check if types are compatible.
+     */
     public static ObjectQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ObjectQuery(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class ObjectQuery extends NetObject  {
 
     // Constructors section
     
+    public ObjectQuery() throws Throwable {
+    }
 
     
     // Methods section

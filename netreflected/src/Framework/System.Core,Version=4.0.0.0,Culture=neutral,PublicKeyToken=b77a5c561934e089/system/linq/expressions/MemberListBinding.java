@@ -38,19 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.expressions.MemberBinding;
 import system.linq.expressions.MemberListBinding;
-import system.linq.expressions.MemberBindingType;
-import system.reflection.MemberInfo;
 
 
 /**
  * The base .NET class managing System.Linq.Expressions.MemberListBinding, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberListBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberListBinding</a>
  */
-public class MemberListBinding extends NetObject  {
+public class MemberListBinding extends MemberBinding  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Linq.Expressions.MemberListBinding
+     */
     public static final String className = "System.Linq.Expressions.MemberListBinding";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +117,9 @@ public class MemberListBinding extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemberListBinding}, a cast assert is made to check if types are compatible.
+     */
     public static MemberListBinding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MemberListBinding(from.getJCOInstance());
@@ -111,6 +127,10 @@ public class MemberListBinding extends NetObject  {
 
     // Constructors section
     
+    public MemberListBinding() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -119,28 +139,6 @@ public class MemberListBinding extends NetObject  {
     
     // Properties section
     
-    public MemberBindingType getBindingType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BindingType");
-            return new MemberBindingType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MemberInfo getMember() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Member");
-            return new MemberInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

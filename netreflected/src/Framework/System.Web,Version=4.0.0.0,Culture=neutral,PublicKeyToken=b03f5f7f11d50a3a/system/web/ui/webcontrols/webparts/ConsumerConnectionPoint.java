@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.webcontrols.webparts.ConnectionPoint;
 import system.reflection.MethodInfo;
 import system.web.ui.Control;
 import system.web.ui.webcontrols.webparts.ConnectionInterfaceCollection;
@@ -45,12 +46,27 @@ import system.web.ui.webcontrols.webparts.ConnectionInterfaceCollection;
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</a>
  */
-public class ConsumerConnectionPoint extends NetObject  {
+public class ConsumerConnectionPoint extends ConnectionPoint  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint
+     */
     public static final String className = "System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class ConsumerConnectionPoint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConsumerConnectionPoint}, a cast assert is made to check if types are compatible.
+     */
     public static ConsumerConnectionPoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ConsumerConnectionPoint(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class ConsumerConnectionPoint extends NetObject  {
 
     // Constructors section
     
+    public ConsumerConnectionPoint() throws Throwable {
+    }
 
     public ConsumerConnectionPoint(MethodInfo callbackMethod, NetType interfaceType, NetType controlType, java.lang.String displayName, java.lang.String id, boolean allowsMultipleConnections) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -123,19 +143,10 @@ public class ConsumerConnectionPoint extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean GetEnabled(Control control) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetEnabled", control == null ? null : control.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean SupportsConnection(Control control, ConnectionInterfaceCollection secondaryInterfaces) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -160,58 +171,6 @@ public class ConsumerConnectionPoint extends NetObject  {
     
     // Properties section
     
-    public boolean getAllowsMultipleConnections() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AllowsMultipleConnections");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDisplayName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DisplayName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getID() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ID");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getControlType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ControlType");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType getInterfaceType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InterfaceType");
-            return new NetType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

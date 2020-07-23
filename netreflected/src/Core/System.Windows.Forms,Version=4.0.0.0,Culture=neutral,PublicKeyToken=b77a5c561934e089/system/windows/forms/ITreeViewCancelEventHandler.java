@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.TreeViewCancelEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TreeViewCancelEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TreeViewCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TreeViewCancelEventHandler</a>
+ */
 public interface ITreeViewCancelEventHandler {
     public void Invoke(NetObject sender, TreeViewCancelEventArgs e);
 }

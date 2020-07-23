@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.DesignerEdges, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.DesignerEdges" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.DesignerEdges</a>
  */
 public class DesignerEdges extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.DesignerEdges
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.DesignerEdges";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class DesignerEdges extends NetObject  {
 
     // Flags management section
 
-    public DesignerEdges add(DesignerEdges val) throws Throwable {
+    public final DesignerEdges add(DesignerEdges val) throws Throwable {
         return new DesignerEdges(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public DesignerEdges remove(DesignerEdges val) throws Throwable {
+    public final DesignerEdges remove(DesignerEdges val) throws Throwable {
         return new DesignerEdges(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(DesignerEdges val) throws Throwable {
+    public final boolean is(DesignerEdges val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(DesignerEdges val) throws Throwable {
+    public final boolean has(DesignerEdges val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

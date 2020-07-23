@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.ComponentModel.AsyncCompletedEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AsyncCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.AsyncCompletedEventArgs</a>
  */
-public class AsyncCompletedEventArgs extends NetObject  {
+public class AsyncCompletedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.AsyncCompletedEventArgs
+     */
     public static final String className = "System.ComponentModel.AsyncCompletedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class AsyncCompletedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncCompletedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static AsyncCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsyncCompletedEventArgs(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class AsyncCompletedEventArgs extends NetObject  {
 
     // Constructors section
     
-
     public AsyncCompletedEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file

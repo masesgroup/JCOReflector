@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.threading.tasks.Task;
 import system.EventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TaskEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.TaskEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.TaskEventHandler</a>
+ */
 public interface ITaskEventHandler {
     public Task Invoke(NetObject sender, EventArgs e);
 }

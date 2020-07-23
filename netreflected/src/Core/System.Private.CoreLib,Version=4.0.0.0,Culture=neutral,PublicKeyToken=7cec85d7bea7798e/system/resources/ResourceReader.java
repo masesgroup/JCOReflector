@@ -43,12 +43,27 @@ import system.io.Stream;
 
 /**
  * The base .NET class managing System.Resources.ResourceReader, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceReader</a>
  */
 public class ResourceReader extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Resources.ResourceReader
+     */
     public static final String className = "System.Resources.ResourceReader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ResourceReader extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceReader}, a cast assert is made to check if types are compatible.
+     */
     public static ResourceReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResourceReader(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ResourceReader extends NetObject  {
 
     // Constructors section
     
+    public ResourceReader() throws Throwable {
+    }
 
     public ResourceReader(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.BadImageFormatException, system.FormatException, system.io.IOException, system.OutOfMemoryException {
         try {
@@ -129,6 +148,7 @@ public class ResourceReader extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

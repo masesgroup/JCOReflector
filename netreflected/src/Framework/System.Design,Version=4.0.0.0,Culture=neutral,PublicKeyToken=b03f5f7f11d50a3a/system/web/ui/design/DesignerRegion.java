@@ -38,20 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.design.DesignerObject;
 import system.web.ui.design.ControlDesigner;
 import system.drawing.Rectangle;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
 
 
 /**
  * The base .NET class managing System.Web.UI.Design.DesignerRegion, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.DesignerRegion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.DesignerRegion</a>
  */
-public class DesignerRegion extends NetObject  {
+public class DesignerRegion extends DesignerObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.DesignerRegion
+     */
     public static final String className = "System.Web.UI.Design.DesignerRegion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +118,9 @@ public class DesignerRegion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerRegion}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerRegion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerRegion(from.getJCOInstance());
@@ -112,6 +128,8 @@ public class DesignerRegion extends NetObject  {
 
     // Constructors section
     
+    public DesignerRegion() throws Throwable {
+    }
 
     public DesignerRegion(ControlDesigner designer, java.lang.String name) throws Throwable, system.ArgumentNullException {
         try {
@@ -132,6 +150,7 @@ public class DesignerRegion extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -232,17 +251,6 @@ public class DesignerRegion extends NetObject  {
         }
     }
 
-    public IDictionary getProperties() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
-            return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getUserData() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -299,27 +307,6 @@ public class DesignerRegion extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ControlDesigner getDesigner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Designer");
-            return new ControlDesigner(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

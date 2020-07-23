@@ -42,12 +42,29 @@ import system.xml.XmlNodeList;
 
 /**
  * The base .NET class managing System.IdentityModel.Configuration.ICustomIdentityConfiguration, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Configuration.ICustomIdentityConfiguration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Configuration.ICustomIdentityConfiguration</a>
  */
 public interface ICustomIdentityConfiguration extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
+    public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Configuration.ICustomIdentityConfiguration
+     */
+    public static final String className = "System.IdentityModel.Configuration.ICustomIdentityConfiguration";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICustomIdentityConfiguration}, a cast assert is made to check if types are compatible.
+     */
     public static ICustomIdentityConfiguration ToICustomIdentityConfiguration(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.IdentityModel.Configuration.ICustomIdentityConfiguration, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.IdentityModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICustomIdentityConfigurationImplementation(from.getJCOInstance());
     }

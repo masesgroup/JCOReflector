@@ -43,12 +43,27 @@ import system.net.security.ProtectionLevel;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.FaultDescription, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.FaultDescription" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.FaultDescription</a>
  */
 public class FaultDescription extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.FaultDescription
+     */
     public static final String className = "System.ServiceModel.Description.FaultDescription";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FaultDescription extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FaultDescription}, a cast assert is made to check if types are compatible.
+     */
     public static FaultDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FaultDescription(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class FaultDescription extends NetObject  {
 
     // Constructors section
     
+    public FaultDescription() throws Throwable {
+    }
 
     public FaultDescription(java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -119,6 +138,7 @@ public class FaultDescription extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

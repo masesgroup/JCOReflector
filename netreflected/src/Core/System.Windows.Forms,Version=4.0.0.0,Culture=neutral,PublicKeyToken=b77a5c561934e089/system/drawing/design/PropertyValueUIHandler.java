@@ -44,12 +44,27 @@ import system.componentmodel.PropertyDescriptor;
 import system.drawing.design.IPropertyValueUIHandler;
 /**
  * The base .NET class managing System.Drawing.Design.PropertyValueUIHandler, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.PropertyValueUIHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.PropertyValueUIHandler</a>
  */
 public class PropertyValueUIHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Drawing.Design.PropertyValueUIHandler
+     */
     public static final String className = "System.Drawing.Design.PropertyValueUIHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IPropertyValueUIHandler callerInstance = null;
@@ -153,7 +168,7 @@ public class PropertyValueUIHandler extends JCVoidDelegate implements IJCVoidEve
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(ITypeDescriptorContext context, PropertyDescriptor propDesc, NetArrayList valueUIItemList) throws Throwable {
+    public void METHOD_JAVA_NAME(ITypeDescriptorContext context, PropertyDescriptor propDesc, NetArrayList valueUIItemList) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -163,7 +178,9 @@ public class PropertyValueUIHandler extends JCVoidDelegate implements IJCVoidEve
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(ITypeDescriptorContext context, PropertyDescriptor propDesc, NetArrayList valueUIItemList) {
     }
 }

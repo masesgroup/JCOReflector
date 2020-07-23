@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.UI.Design.ViewFlags, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ViewFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ViewFlags</a>
  */
 public class ViewFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.ViewFlags
+     */
     public static final String className = "System.Web.UI.Design.ViewFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class ViewFlags extends NetObject  {
 
     // Flags management section
 
-    public ViewFlags add(ViewFlags val) throws Throwable {
+    public final ViewFlags add(ViewFlags val) throws Throwable {
         return new ViewFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ViewFlags remove(ViewFlags val) throws Throwable {
+    public final ViewFlags remove(ViewFlags val) throws Throwable {
         return new ViewFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ViewFlags val) throws Throwable {
+    public final boolean is(ViewFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ViewFlags val) throws Throwable {
+    public final boolean has(ViewFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

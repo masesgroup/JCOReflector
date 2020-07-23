@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.data.ConnectionState;
 
 
 /**
  * The base .NET class managing System.Data.StateChangeEventArgs, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.StateChangeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.StateChangeEventArgs</a>
  */
-public class StateChangeEventArgs extends NetObject  {
+public class StateChangeEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.StateChangeEventArgs
+     */
     public static final String className = "System.Data.StateChangeEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class StateChangeEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StateChangeEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static StateChangeEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StateChangeEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class StateChangeEventArgs extends NetObject  {
 
     // Constructors section
     
+    public StateChangeEventArgs() throws Throwable {
+    }
 
     public StateChangeEventArgs(ConnectionState originalState, ConnectionState currentState) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class StateChangeEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

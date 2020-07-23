@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.documents.serialization.SerializerWriterCollator;
 import system.windows.media.Visual;
 import system.printing.PrintTicket;
 
 
 /**
  * The base .NET class managing System.Windows.Xps.VisualsToXpsDocument, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.VisualsToXpsDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.VisualsToXpsDocument</a>
  */
-public class VisualsToXpsDocument extends NetObject  {
+public class VisualsToXpsDocument extends SerializerWriterCollator  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Windows.Xps.VisualsToXpsDocument
+     */
     public static final String className = "System.Windows.Xps.VisualsToXpsDocument";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class VisualsToXpsDocument extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link VisualsToXpsDocument}, a cast assert is made to check if types are compatible.
+     */
     public static VisualsToXpsDocument cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new VisualsToXpsDocument(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class VisualsToXpsDocument extends NetObject  {
 
     // Constructors section
     
+    public VisualsToXpsDocument() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.persistence.PersistenceParticipant;
 
 
 /**
  * The base .NET class managing System.Activities.Statements.CompensationExtension, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.CompensationExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.CompensationExtension</a>
  */
-public class CompensationExtension extends NetObject  {
+public class CompensationExtension extends PersistenceParticipant  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Statements.CompensationExtension
+     */
     public static final String className = "System.Activities.Statements.CompensationExtension";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class CompensationExtension extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompensationExtension}, a cast assert is made to check if types are compatible.
+     */
     public static CompensationExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompensationExtension(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class CompensationExtension extends NetObject  {
 
     // Constructors section
     
-
     public CompensationExtension() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

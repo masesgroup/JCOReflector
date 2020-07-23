@@ -42,12 +42,29 @@ import system.Guid;
 
 /**
  * The base .NET class managing System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService</a>
  */
 public interface ICom2PropertyPageDisplayService extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
+    public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService
+     */
+    public static final String className = "System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICom2PropertyPageDisplayService}, a cast assert is made to check if types are compatible.
+     */
     public static ICom2PropertyPageDisplayService ToICom2PropertyPageDisplayService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Windows.Forms"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICom2PropertyPageDisplayServiceImplementation(from.getJCOInstance());
     }

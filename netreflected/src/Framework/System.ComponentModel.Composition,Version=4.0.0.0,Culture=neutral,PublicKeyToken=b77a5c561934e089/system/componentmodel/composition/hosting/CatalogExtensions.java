@@ -44,12 +44,27 @@ import system.componentmodel.composition.primitives.ComposablePartCatalog;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.CatalogExtensions, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CatalogExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CatalogExtensions</a>
  */
 public class CatalogExtensions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.CatalogExtensions
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.CatalogExtensions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class CatalogExtensions extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CatalogExtensions}, a cast assert is made to check if types are compatible.
+     */
     public static CatalogExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CatalogExtensions(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class CatalogExtensions extends NetObject  {
 
     // Constructors section
     
+    public CatalogExtensions() throws Throwable {
+    }
 
     
     // Methods section

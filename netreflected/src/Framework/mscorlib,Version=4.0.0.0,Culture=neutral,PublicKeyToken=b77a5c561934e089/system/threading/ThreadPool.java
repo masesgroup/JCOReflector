@@ -49,12 +49,27 @@ import system.UInt32;
 
 /**
  * The base .NET class managing System.Threading.ThreadPool, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadPool" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadPool</a>
  */
 public class ThreadPool extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Threading.ThreadPool
+     */
     public static final String className = "System.Threading.ThreadPool";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class ThreadPool extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ThreadPool}, a cast assert is made to check if types are compatible.
+     */
     public static ThreadPool cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ThreadPool(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class ThreadPool extends NetObject  {
 
     // Constructors section
     
+    public ThreadPool() throws Throwable {
+    }
 
     
     // Methods section

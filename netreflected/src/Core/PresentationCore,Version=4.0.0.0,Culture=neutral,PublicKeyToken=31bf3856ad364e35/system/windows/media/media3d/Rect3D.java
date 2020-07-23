@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.media.media3d.Point3D;
 import system.windows.media.media3d.Size3D;
 import system.windows.media.media3d.Rect3D;
@@ -48,12 +49,27 @@ import system.windows.media.media3d.Vector3D;
 
 /**
  * The base .NET class managing System.Windows.Media.Media3D.Rect3D, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.Rect3D" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.Rect3D</a>
  */
-public class Rect3D extends NetObject  {
+public class Rect3D extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.Media3D.Rect3D
+     */
     public static final String className = "System.Windows.Media.Media3D.Rect3D";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class Rect3D extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rect3D}, a cast assert is made to check if types are compatible.
+     */
     public static Rect3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Rect3D(from.getJCOInstance());
@@ -114,6 +132,8 @@ public class Rect3D extends NetObject  {
 
     // Constructors section
     
+    public Rect3D() throws Throwable {
+    }
 
     public Rect3D(double x, double y, double z, double sizeX, double sizeY, double sizeZ) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
@@ -134,6 +154,7 @@ public class Rect3D extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -480,11 +501,11 @@ public class Rect3D extends NetObject  {
         }
     }
 
-    public static Rect3D getEmpty() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Rect3D getEmpty() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Empty");
+            JCObject val = (JCObject)classInstance.Get("Empty");
             return new Rect3D(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

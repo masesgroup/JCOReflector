@@ -45,12 +45,27 @@ import system.windows.interop.IKeyboardInputSinkImplementation;
 
 /**
  * The base .NET class managing System.Windows.Interop.IKeyboardInputSite, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.IKeyboardInputSite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.IKeyboardInputSite</a>
  */
 public class IKeyboardInputSiteImplementation extends NetObject implements IKeyboardInputSite {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Interop.IKeyboardInputSite
+     */
     public static final String className = "System.Windows.Interop.IKeyboardInputSite";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +113,9 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IKeyboardInputSite}, a cast assert is made to check if types are compatible.
+     */
     public static IKeyboardInputSite ToIKeyboardInputSite(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IKeyboardInputSiteImplementation(from.getJCOInstance());

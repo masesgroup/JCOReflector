@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.MarkupExtension;
 import system.activities.dynamicupdate.DynamicUpdateMap;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
@@ -47,12 +48,27 @@ import system.xml.serialization.IXmlSerializableImplementation;
 
 /**
  * The base .NET class managing System.Activities.XamlIntegration.DynamicUpdateMapExtension, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.DynamicUpdateMapExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.DynamicUpdateMapExtension</a>
  */
-public class DynamicUpdateMapExtension extends NetObject  {
+public class DynamicUpdateMapExtension extends MarkupExtension  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.XamlIntegration.DynamicUpdateMapExtension
+     */
     public static final String className = "System.Activities.XamlIntegration.DynamicUpdateMapExtension";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class DynamicUpdateMapExtension extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicUpdateMapExtension}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicUpdateMapExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicUpdateMapExtension(from.getJCOInstance());
@@ -113,7 +131,6 @@ public class DynamicUpdateMapExtension extends NetObject  {
 
     // Constructors section
     
-
     public DynamicUpdateMapExtension() throws Throwable {
         try {
             // add reference to assemblyName.dll file

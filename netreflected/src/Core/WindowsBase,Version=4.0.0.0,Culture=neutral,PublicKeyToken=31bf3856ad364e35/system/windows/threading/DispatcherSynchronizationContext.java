@@ -38,20 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.threading.SynchronizationContext;
 import system.windows.threading.Dispatcher;
 import system.windows.threading.DispatcherPriority;
-import system.threading.SynchronizationContext;
 import system.threading.SendOrPostCallback;
 
 
 /**
  * The base .NET class managing System.Windows.Threading.DispatcherSynchronizationContext, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherSynchronizationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherSynchronizationContext</a>
  */
-public class DispatcherSynchronizationContext extends NetObject  {
+public class DispatcherSynchronizationContext extends SynchronizationContext  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.Threading.DispatcherSynchronizationContext
+     */
     public static final String className = "System.Windows.Threading.DispatcherSynchronizationContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class DispatcherSynchronizationContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DispatcherSynchronizationContext}, a cast assert is made to check if types are compatible.
+     */
     public static DispatcherSynchronizationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DispatcherSynchronizationContext(from.getJCOInstance());
@@ -112,7 +129,6 @@ public class DispatcherSynchronizationContext extends NetObject  {
 
     // Constructors section
     
-
     public DispatcherSynchronizationContext() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.TimeoutException, system.PlatformNotSupportedException, system.InvalidCastException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -147,42 +163,12 @@ public class DispatcherSynchronizationContext extends NetObject  {
     
     // Methods section
     
-    public boolean IsWaitNotificationRequired() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsWaitNotificationRequired");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SynchronizationContext CreateCopy() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
             return new SynchronizationContext(objCreateCopy);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OperationCompleted() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OperationCompleted");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void OperationStarted() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("OperationStarted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

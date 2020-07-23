@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Web.UI.Design.ContentDefinition, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ContentDefinition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ContentDefinition</a>
  */
 public class ContentDefinition extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.ContentDefinition
+     */
     public static final String className = "System.Web.UI.Design.ContentDefinition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class ContentDefinition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContentDefinition}, a cast assert is made to check if types are compatible.
+     */
     public static ContentDefinition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ContentDefinition(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class ContentDefinition extends NetObject  {
 
     // Constructors section
     
+    public ContentDefinition() throws Throwable {
+    }
 
     public ContentDefinition(java.lang.String id, java.lang.String content, java.lang.String designTimeHtml) throws Throwable {
         try {
@@ -118,6 +137,7 @@ public class ContentDefinition extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

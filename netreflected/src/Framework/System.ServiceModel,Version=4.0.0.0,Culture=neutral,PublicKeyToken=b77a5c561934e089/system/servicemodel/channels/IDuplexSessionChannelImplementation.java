@@ -38,13 +38,21 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.IDuplexChannel;
+import system.servicemodel.channels.IDuplexChannelImplementation;
+import system.servicemodel.channels.IInputChannel;
+import system.servicemodel.channels.IInputChannelImplementation;
+import system.servicemodel.channels.IChannel;
+import system.servicemodel.channels.IChannelImplementation;
+import system.servicemodel.ICommunicationObject;
+import system.servicemodel.ICommunicationObjectImplementation;
+import system.servicemodel.channels.IOutputChannel;
+import system.servicemodel.channels.IOutputChannelImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.TimeSpan;
 import system.AsyncCallback;
 import system.servicemodel.channels.Message;
-import system.servicemodel.channels.IDuplexSession;
-import system.servicemodel.channels.IDuplexSessionImplementation;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.Uri;
@@ -53,12 +61,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.IDuplexSessionChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel</a>
  */
 public class IDuplexSessionChannelImplementation extends NetObject implements IDuplexSessionChannel {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.IDuplexSessionChannel
+     */
     public static final String className = "System.ServiceModel.Channels.IDuplexSessionChannel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +129,9 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDuplexSessionChannel}, a cast assert is made to check if types are compatible.
+     */
     public static IDuplexSessionChannel ToIDuplexSessionChannel(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDuplexSessionChannelImplementation(from.getJCOInstance());
@@ -381,17 +406,6 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
     
     // Properties section
     
-    public IDuplexSession getSession() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Session");
-            return new IDuplexSessionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

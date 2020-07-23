@@ -54,12 +54,27 @@ import system.windows.input.TextCompositionEventHandler;
 
 /**
  * The base .NET class managing System.Windows.IInputElement, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.IInputElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.IInputElement</a>
  */
 public class IInputElementImplementation extends NetObject implements IInputElement {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.IInputElement
+     */
     public static final String className = "System.Windows.IInputElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class IInputElementImplementation extends NetObject implements IInputElem
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInputElement}, a cast assert is made to check if types are compatible.
+     */
     public static IInputElement ToIInputElement(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IInputElementImplementation(from.getJCOInstance());

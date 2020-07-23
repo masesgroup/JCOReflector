@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.IStackWalk, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.IStackWalk" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.IStackWalk</a>
  */
 public class IStackWalkImplementation extends NetObject implements IStackWalk {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Security.IStackWalk
+     */
     public static final String className = "System.Security.IStackWalk";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStackWalk}, a cast assert is made to check if types are compatible.
+     */
     public static IStackWalk ToIStackWalk(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IStackWalkImplementation(from.getJCOInstance());

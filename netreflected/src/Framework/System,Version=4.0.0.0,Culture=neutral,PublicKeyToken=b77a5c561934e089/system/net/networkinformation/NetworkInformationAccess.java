@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.NetworkInformationAccess, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.NetworkInformationAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.NetworkInformationAccess</a>
  */
 public class NetworkInformationAccess extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.NetworkInformationAccess
+     */
     public static final String className = "System.Net.NetworkInformation.NetworkInformationAccess";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -139,19 +154,19 @@ public class NetworkInformationAccess extends NetObject  {
 
     // Flags management section
 
-    public NetworkInformationAccess add(NetworkInformationAccess val) throws Throwable {
+    public final NetworkInformationAccess add(NetworkInformationAccess val) throws Throwable {
         return new NetworkInformationAccess(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public NetworkInformationAccess remove(NetworkInformationAccess val) throws Throwable {
+    public final NetworkInformationAccess remove(NetworkInformationAccess val) throws Throwable {
         return new NetworkInformationAccess(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(NetworkInformationAccess val) throws Throwable {
+    public final boolean is(NetworkInformationAccess val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(NetworkInformationAccess val) throws Throwable {
+    public final boolean has(NetworkInformationAccess val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

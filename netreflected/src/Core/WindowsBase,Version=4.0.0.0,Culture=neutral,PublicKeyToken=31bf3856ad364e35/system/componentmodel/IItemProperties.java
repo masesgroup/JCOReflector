@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ComponentModel.IItemProperties, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IItemProperties" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IItemProperties</a>
  */
 public interface IItemProperties extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
+    public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.IItemProperties
+     */
+    public static final String className = "System.ComponentModel.IItemProperties";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IItemProperties}, a cast assert is made to check if types are compatible.
+     */
     public static IItemProperties ToIItemProperties(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.ComponentModel.IItemProperties, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "WindowsBase"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IItemPropertiesImplementation(from.getJCOInstance());
     }

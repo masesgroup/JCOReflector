@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.SafeHandles.SafeRegistryHandle, Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeRegistryHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeRegistryHandle</a>
  */
-public class SafeRegistryHandle extends NetObject  {
+public class SafeRegistryHandle extends SafeHandleZeroOrMinusOneIsInvalid  {
+    /**
+     * Fully assembly qualified name: Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Win32.Registry
+     */
     public static final String assemblyShortName = "Microsoft.Win32.Registry";
+    /**
+     * Qualified class name: Microsoft.Win32.SafeHandles.SafeRegistryHandle
+     */
     public static final String className = "Microsoft.Win32.SafeHandles.SafeRegistryHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class SafeRegistryHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SafeRegistryHandle}, a cast assert is made to check if types are compatible.
+     */
     public static SafeRegistryHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SafeRegistryHandle(from.getJCOInstance());
@@ -108,6 +126,9 @@ public class SafeRegistryHandle extends NetObject  {
 
     // Constructors section
     
+    public SafeRegistryHandle() throws Throwable {
+    }
+
 
 
     
@@ -117,26 +138,6 @@ public class SafeRegistryHandle extends NetObject  {
     
     // Properties section
     
-    public boolean getIsClosed() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsClosed");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsInvalid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsInvalid");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

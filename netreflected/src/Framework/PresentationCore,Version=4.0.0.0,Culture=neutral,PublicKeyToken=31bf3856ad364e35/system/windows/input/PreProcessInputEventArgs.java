@@ -38,19 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.input.StagingAreaInputItem;
-import system.windows.input.InputEventArgs;
-import system.windows.input.InputManager;
+import system.windows.input.ProcessInputEventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Input.PreProcessInputEventArgs, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.PreProcessInputEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.PreProcessInputEventArgs</a>
  */
-public class PreProcessInputEventArgs extends NetObject  {
+public class PreProcessInputEventArgs extends ProcessInputEventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.PreProcessInputEventArgs
+     */
     public static final String className = "System.Windows.Input.PreProcessInputEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +116,9 @@ public class PreProcessInputEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PreProcessInputEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static PreProcessInputEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PreProcessInputEventArgs(from.getJCOInstance());
@@ -111,54 +126,14 @@ public class PreProcessInputEventArgs extends NetObject  {
 
     // Constructors section
     
+    public PreProcessInputEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section
     
-    public StagingAreaInputItem PeekInput() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPeekInput = (JCObject)classInstance.Invoke("PeekInput");
-            return new StagingAreaInputItem(objPeekInput);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StagingAreaInputItem PopInput() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPopInput = (JCObject)classInstance.Invoke("PopInput");
-            return new StagingAreaInputItem(objPopInput);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StagingAreaInputItem PushInput(InputEventArgs input, StagingAreaInputItem promote) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPushInput = (JCObject)classInstance.Invoke("PushInput", input == null ? null : input.getJCOInstance(), promote == null ? null : promote.getJCOInstance());
-            return new StagingAreaInputItem(objPushInput);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StagingAreaInputItem PushInput(StagingAreaInputItem input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objPushInput = (JCObject)classInstance.Invoke("PushInput", input == null ? null : input.getJCOInstance());
-            return new StagingAreaInputItem(objPushInput);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -178,28 +153,6 @@ public class PreProcessInputEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("Canceled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public InputManager getInputManager() throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InputManager");
-            return new InputManager(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StagingAreaInputItem getStagingItem() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StagingItem");
-            return new StagingAreaInputItem(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

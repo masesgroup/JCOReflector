@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Configuration.IPersistComponentSettings, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IPersistComponentSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IPersistComponentSettings</a>
  */
 public interface IPersistComponentSettings extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
+    public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
+    public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.IPersistComponentSettings
+     */
+    public static final String className = "System.Configuration.IPersistComponentSettings";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPersistComponentSettings}, a cast assert is made to check if types are compatible.
+     */
     public static IPersistComponentSettings ToIPersistComponentSettings(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType("System.Configuration.IPersistComponentSettings, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" : "System.Configuration.ConfigurationManager"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPersistComponentSettingsImplementation(from.getJCOInstance());
     }

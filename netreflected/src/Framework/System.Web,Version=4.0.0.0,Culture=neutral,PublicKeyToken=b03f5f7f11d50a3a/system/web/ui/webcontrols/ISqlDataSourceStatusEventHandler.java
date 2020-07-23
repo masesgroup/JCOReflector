@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.SqlDataSourceStatusEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SqlDataSourceStatusEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SqlDataSourceStatusEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SqlDataSourceStatusEventHandler</a>
+ */
 public interface ISqlDataSourceStatusEventHandler {
     public void Invoke(NetObject sender, SqlDataSourceStatusEventArgs e);
 }

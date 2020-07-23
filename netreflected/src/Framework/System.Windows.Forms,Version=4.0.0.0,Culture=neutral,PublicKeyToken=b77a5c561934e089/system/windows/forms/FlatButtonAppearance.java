@@ -43,12 +43,27 @@ import system.drawing.Color;
 
 /**
  * The base .NET class managing System.Windows.Forms.FlatButtonAppearance, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FlatButtonAppearance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FlatButtonAppearance</a>
  */
 public class FlatButtonAppearance extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.FlatButtonAppearance
+     */
     public static final String className = "System.Windows.Forms.FlatButtonAppearance";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FlatButtonAppearance extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FlatButtonAppearance}, a cast assert is made to check if types are compatible.
+     */
     public static FlatButtonAppearance cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FlatButtonAppearance(from.getJCOInstance());
@@ -109,6 +126,10 @@ public class FlatButtonAppearance extends NetObject  {
 
     // Constructors section
     
+    public FlatButtonAppearance() throws Throwable {
+    }
+
+
 
     
     // Methods section

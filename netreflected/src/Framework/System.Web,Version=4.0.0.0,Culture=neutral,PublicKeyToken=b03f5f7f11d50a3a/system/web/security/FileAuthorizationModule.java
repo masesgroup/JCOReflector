@@ -43,12 +43,27 @@ import system.web.HttpApplication;
 
 /**
  * The base .NET class managing System.Web.Security.FileAuthorizationModule, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FileAuthorizationModule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FileAuthorizationModule</a>
  */
 public class FileAuthorizationModule extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Security.FileAuthorizationModule
+     */
     public static final String className = "System.Web.Security.FileAuthorizationModule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FileAuthorizationModule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileAuthorizationModule}, a cast assert is made to check if types are compatible.
+     */
     public static FileAuthorizationModule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FileAuthorizationModule(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class FileAuthorizationModule extends NetObject  {
 
     // Constructors section
     
-
     public FileAuthorizationModule() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -124,6 +140,16 @@ public class FileAuthorizationModule extends NetObject  {
     
     // Methods section
     
+    public void Dispose() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Init(HttpApplication app) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.configuration.ConfigurationException, system.NullReferenceException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.io.FileNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -46,12 +46,27 @@ import system.text.Encoding;
 
 /**
  * The base .NET class managing System.Xml.XmlParserContext, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlParserContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlParserContext</a>
  */
 public class XmlParserContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.XmlParserContext
+     */
     public static final String className = "System.Xml.XmlParserContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class XmlParserContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlParserContext}, a cast assert is made to check if types are compatible.
+     */
     public static XmlParserContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlParserContext(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class XmlParserContext extends NetObject  {
 
     // Constructors section
     
+    public XmlParserContext() throws Throwable {
+    }
 
     public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String docTypeName, java.lang.String pubId, java.lang.String sysId, java.lang.String internalSubset, java.lang.String baseURI, java.lang.String xmlLang, XmlSpace xmlSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         try {
@@ -152,6 +171,7 @@ public class XmlParserContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

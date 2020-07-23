@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.remoting.messaging.IMethodMessage;
+import system.runtime.remoting.messaging.IMethodMessageImplementation;
+import system.runtime.remoting.messaging.IMessage;
+import system.runtime.remoting.messaging.IMessageImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.reflection.MethodBase;
@@ -45,12 +49,29 @@ import system.runtime.remoting.messaging.LogicalCallContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.IMethodReturnMessage, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.IMethodReturnMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.IMethodReturnMessage</a>
  */
-public interface IMethodReturnMessage extends IJCOBridgeReflected {
-
+public interface IMethodReturnMessage extends IJCOBridgeReflected, IMethodMessage, IMessage {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.IMethodReturnMessage
+     */
+    public static final String className = "System.Runtime.Remoting.Messaging.IMethodReturnMessage";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMethodReturnMessage}, a cast assert is made to check if types are compatible.
+     */
     public static IMethodReturnMessage ToIMethodReturnMessage(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Messaging.IMethodReturnMessage, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IMethodReturnMessageImplementation(from.getJCOInstance());
     }
@@ -93,11 +114,9 @@ public interface IMethodReturnMessage extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject GetArg(int argNum) throws Throwable;
 
     public NetObject GetOutArg(int argNum) throws Throwable;
 
-    public java.lang.String GetArgName(int index) throws Throwable;
 
     public java.lang.String GetOutArgName(int index) throws Throwable;
 
@@ -105,33 +124,13 @@ public interface IMethodReturnMessage extends IJCOBridgeReflected {
     
     // Properties section
     
-    public boolean getHasVarArgs() throws Throwable;
-
-    public int getArgCount() throws Throwable;
-
     public int getOutArgCount() throws Throwable;
-
-    public IDictionary getProperties() throws Throwable;
 
     public NetException getException() throws Throwable;
 
-    public NetObject getMethodSignature() throws Throwable;
-
     public NetObject getReturnValue() throws Throwable;
 
-    public NetObject[] getArgs() throws Throwable;
-
     public NetObject[] getOutArgs() throws Throwable;
-
-    public MethodBase getMethodBase() throws Throwable;
-
-    public LogicalCallContext getLogicalCallContext() throws Throwable;
-
-    public java.lang.String getMethodName() throws Throwable;
-
-    public java.lang.String getTypeName() throws Throwable;
-
-    public java.lang.String getUri() throws Throwable;
 
 
 

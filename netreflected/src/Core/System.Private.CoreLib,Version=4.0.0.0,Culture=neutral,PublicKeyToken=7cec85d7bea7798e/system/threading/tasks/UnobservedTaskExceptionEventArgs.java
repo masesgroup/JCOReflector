@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.AggregateException;
 
 
 /**
  * The base .NET class managing System.Threading.Tasks.UnobservedTaskExceptionEventArgs, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.UnobservedTaskExceptionEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.UnobservedTaskExceptionEventArgs</a>
  */
-public class UnobservedTaskExceptionEventArgs extends NetObject  {
+public class UnobservedTaskExceptionEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Threading.Tasks.UnobservedTaskExceptionEventArgs
+     */
     public static final String className = "System.Threading.Tasks.UnobservedTaskExceptionEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class UnobservedTaskExceptionEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnobservedTaskExceptionEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static UnobservedTaskExceptionEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UnobservedTaskExceptionEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class UnobservedTaskExceptionEventArgs extends NetObject  {
 
     // Constructors section
     
+    public UnobservedTaskExceptionEventArgs() throws Throwable {
+    }
 
     public UnobservedTaskExceptionEventArgs(AggregateException exception) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class UnobservedTaskExceptionEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

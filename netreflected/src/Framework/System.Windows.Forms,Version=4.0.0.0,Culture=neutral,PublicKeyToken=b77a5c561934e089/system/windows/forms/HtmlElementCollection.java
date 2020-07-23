@@ -44,12 +44,27 @@ import system.windows.forms.HtmlElement;
 
 /**
  * The base .NET class managing System.Windows.Forms.HtmlElementCollection, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlElementCollection</a>
  */
 public class HtmlElementCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.HtmlElementCollection
+     */
     public static final String className = "System.Windows.Forms.HtmlElementCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class HtmlElementCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlElementCollection}, a cast assert is made to check if types are compatible.
+     */
     public static HtmlElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new HtmlElementCollection(from.getJCOInstance());
@@ -110,6 +127,10 @@ public class HtmlElementCollection extends NetObject  {
 
     // Constructors section
     
+    public HtmlElementCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section

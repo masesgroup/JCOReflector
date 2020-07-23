@@ -44,12 +44,27 @@ import system.xml.xpath.XPathResultType;
 
 /**
  * The base .NET class managing System.Xml.Xsl.IXsltContextVariable, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.IXsltContextVariable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.IXsltContextVariable</a>
  */
 public class IXsltContextVariableImplementation extends NetObject implements IXsltContextVariable {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.IXsltContextVariable
+     */
     public static final String className = "System.Xml.Xsl.IXsltContextVariable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXsltContextVariable}, a cast assert is made to check if types are compatible.
+     */
     public static IXsltContextVariable ToIXsltContextVariable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IXsltContextVariableImplementation(from.getJCOInstance());

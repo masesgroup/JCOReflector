@@ -45,12 +45,27 @@ import system.net.networkinformation.PingOptions;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.PingReply, System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingReply" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingReply</a>
  */
 public class PingReply extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Ping
+     */
     public static final String assemblyShortName = "System.Net.Ping";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.PingReply
+     */
     public static final String className = "System.Net.NetworkInformation.PingReply";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class PingReply extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PingReply}, a cast assert is made to check if types are compatible.
+     */
     public static PingReply cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PingReply(from.getJCOInstance());
@@ -111,6 +128,10 @@ public class PingReply extends NetObject  {
 
     // Constructors section
     
+    public PingReply() throws Throwable {
+    }
+
+
 
     
     // Methods section

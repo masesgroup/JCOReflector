@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.DataGridViewElement;
 import system.windows.forms.ContextMenuStrip;
-import system.windows.forms.DataGridView;
 import system.windows.forms.DataGridViewCellStyle;
-import system.windows.forms.DataGridViewElementStates;
 import system.windows.forms.DataGridViewTriState;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewBand, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBand</a>
  */
-public class DataGridViewBand extends NetObject  {
+public class DataGridViewBand extends DataGridViewElement  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewBand
+     */
     public static final String className = "System.Windows.Forms.DataGridViewBand";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class DataGridViewBand extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewBand}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewBand cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewBand(from.getJCOInstance());
@@ -113,6 +129,10 @@ public class DataGridViewBand extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewBand() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -315,17 +335,6 @@ public class DataGridViewBand extends NetObject  {
         }
     }
 
-    public DataGridView getDataGridView() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("DataGridView");
-            return new DataGridView(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataGridViewCellStyle getDefaultCellStyle() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -353,17 +362,6 @@ public class DataGridViewBand extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("InheritedStyle");
             return new DataGridViewCellStyle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataGridViewElementStates getState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("State");
-            return new DataGridViewElementStates(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

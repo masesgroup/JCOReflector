@@ -45,12 +45,27 @@ import system.activities.dynamicupdate.DynamicUpdateMapItem;
 
 /**
  * The base .NET class managing System.Activities.DynamicUpdate.DynamicUpdateInfo, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateInfo</a>
  */
 public class DynamicUpdateInfo extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.DynamicUpdate.DynamicUpdateInfo
+     */
     public static final String className = "System.Activities.DynamicUpdate.DynamicUpdateInfo";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class DynamicUpdateInfo extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicUpdateInfo}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicUpdateInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicUpdateInfo(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class DynamicUpdateInfo extends NetObject  {
 
     // Constructors section
     
+    public DynamicUpdateInfo() throws Throwable {
+    }
 
     
     // Methods section

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.ArrangeDirection, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ArrangeDirection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ArrangeDirection</a>
  */
 public class ArrangeDirection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ArrangeDirection
+     */
     public static final String className = "System.Windows.Forms.ArrangeDirection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class ArrangeDirection extends NetObject  {
 
     // Flags management section
 
-    public ArrangeDirection add(ArrangeDirection val) throws Throwable {
+    public final ArrangeDirection add(ArrangeDirection val) throws Throwable {
         return new ArrangeDirection(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ArrangeDirection remove(ArrangeDirection val) throws Throwable {
+    public final ArrangeDirection remove(ArrangeDirection val) throws Throwable {
         return new ArrangeDirection(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ArrangeDirection val) throws Throwable {
+    public final boolean is(ArrangeDirection val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ArrangeDirection val) throws Throwable {
+    public final boolean has(ArrangeDirection val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

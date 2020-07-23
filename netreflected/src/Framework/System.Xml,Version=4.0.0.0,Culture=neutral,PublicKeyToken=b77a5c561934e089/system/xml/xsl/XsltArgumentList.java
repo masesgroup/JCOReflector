@@ -43,12 +43,27 @@ import system.xml.xsl.XsltMessageEncounteredEventHandler;
 
 /**
  * The base .NET class managing System.Xml.Xsl.XsltArgumentList, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltArgumentList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltArgumentList</a>
  */
 public class XsltArgumentList extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.XsltArgumentList
+     */
     public static final String className = "System.Xml.Xsl.XsltArgumentList";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class XsltArgumentList extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XsltArgumentList}, a cast assert is made to check if types are compatible.
+     */
     public static XsltArgumentList cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XsltArgumentList(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class XsltArgumentList extends NetObject  {
 
     // Constructors section
     
-
     public XsltArgumentList() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file

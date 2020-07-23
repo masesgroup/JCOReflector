@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.IXmlLineInfo, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlLineInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlLineInfo</a>
  */
 public interface IXmlLineInfo extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
+    public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.IXmlLineInfo
+     */
+    public static final String className = "System.Xml.IXmlLineInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlLineInfo}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlLineInfo ToIXmlLineInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xml.IXmlLineInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlLineInfoImplementation(from.getJCOInstance());
     }

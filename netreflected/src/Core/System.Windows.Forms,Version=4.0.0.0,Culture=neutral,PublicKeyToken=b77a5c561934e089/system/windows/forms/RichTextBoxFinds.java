@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.RichTextBoxFinds, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.RichTextBoxFinds" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.RichTextBoxFinds</a>
  */
 public class RichTextBoxFinds extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.RichTextBoxFinds
+     */
     public static final String className = "System.Windows.Forms.RichTextBoxFinds";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class RichTextBoxFinds extends NetObject  {
 
     // Flags management section
 
-    public RichTextBoxFinds add(RichTextBoxFinds val) throws Throwable {
+    public final RichTextBoxFinds add(RichTextBoxFinds val) throws Throwable {
         return new RichTextBoxFinds(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public RichTextBoxFinds remove(RichTextBoxFinds val) throws Throwable {
+    public final RichTextBoxFinds remove(RichTextBoxFinds val) throws Throwable {
         return new RichTextBoxFinds(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(RichTextBoxFinds val) throws Throwable {
+    public final boolean is(RichTextBoxFinds val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(RichTextBoxFinds val) throws Throwable {
+    public final boolean has(RichTextBoxFinds val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

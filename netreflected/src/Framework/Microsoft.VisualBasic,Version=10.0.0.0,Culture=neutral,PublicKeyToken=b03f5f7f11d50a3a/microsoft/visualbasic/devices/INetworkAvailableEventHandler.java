@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.visualbasic.devices.NetworkAvailableEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link NetworkAvailableEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler</a>
+ */
 public interface INetworkAvailableEventHandler {
     public void Invoke(NetObject sender, NetworkAvailableEventArgs e);
 }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.security.cryptography.x509certificates.X509Certificate;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ServerCertificateSelectionCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.ServerCertificateSelectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.ServerCertificateSelectionCallback</a>
+ */
 public interface IServerCertificateSelectionCallback {
     public X509Certificate Invoke(NetObject sender, java.lang.String hostName);
 }

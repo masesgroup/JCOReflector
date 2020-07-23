@@ -43,12 +43,27 @@ import system.reflection.MethodBase;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.CallSiteHelpers, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.CallSiteHelpers" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.CallSiteHelpers</a>
  */
 public class CallSiteHelpers extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
     public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.CallSiteHelpers
+     */
     public static final String className = "System.Runtime.CompilerServices.CallSiteHelpers";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class CallSiteHelpers extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CallSiteHelpers}, a cast assert is made to check if types are compatible.
+     */
     public static CallSiteHelpers cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CallSiteHelpers(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class CallSiteHelpers extends NetObject  {
 
     // Constructors section
     
+    public CallSiteHelpers() throws Throwable {
+    }
 
     
     // Methods section

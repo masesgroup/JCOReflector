@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.ListChangedType;
 import system.componentmodel.PropertyDescriptor;
 
 
 /**
  * The base .NET class managing System.ComponentModel.ListChangedEventArgs, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ListChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ListChangedEventArgs</a>
  */
-public class ListChangedEventArgs extends NetObject  {
+public class ListChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.ListChangedEventArgs
+     */
     public static final String className = "System.ComponentModel.ListChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ListChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ListChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ListChangedEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class ListChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ListChangedEventArgs() throws Throwable {
+    }
 
     public ListChangedEventArgs(ListChangedType listChangedType, int newIndex) throws Throwable {
         try {
@@ -150,6 +170,7 @@ public class ListChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -45,12 +45,27 @@ import system.collections.IComparerImplementation;
 
 /**
  * The base .NET class managing System.Array, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Array" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Array</a>
  */
 public class Array extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Array
+     */
     public static final String className = "System.Array";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class Array extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Array}, a cast assert is made to check if types are compatible.
+     */
     public static Array cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Array(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class Array extends NetObject  {
 
     // Constructors section
     
+    public Array() throws Throwable {
+    }
 
     
     // Methods section
@@ -299,11 +318,33 @@ public class Array extends NetObject  {
         }
     }
 
+    public static Array CreateInstance(NetType dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            return new Array(objCreateInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Array CreateInstance(NetType elementType, int[] lengths, int[] lowerBounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), lengths, lowerBounds);
+            return new Array(objCreateInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Array CreateInstance(NetType dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
             return new Array(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -370,6 +411,17 @@ public class Array extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (Object)indices);
+            return new NetObject(objGetValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetValue(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (Object)dupParam0);
             return new NetObject(objGetValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -565,6 +617,16 @@ public class Array extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), indices);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetValue(NetObject dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetValue", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

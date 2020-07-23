@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.annotations.Annotation;
 import system.windows.annotations.AnnotationAction;
 import system.windows.annotations.AnnotationResource;
@@ -45,12 +46,27 @@ import system.windows.annotations.AnnotationResource;
 
 /**
  * The base .NET class managing System.Windows.Annotations.AnnotationResourceChangedEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationResourceChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationResourceChangedEventArgs</a>
  */
-public class AnnotationResourceChangedEventArgs extends NetObject  {
+public class AnnotationResourceChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.AnnotationResourceChangedEventArgs
+     */
     public static final String className = "System.Windows.Annotations.AnnotationResourceChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class AnnotationResourceChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnnotationResourceChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static AnnotationResourceChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AnnotationResourceChangedEventArgs(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class AnnotationResourceChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public AnnotationResourceChangedEventArgs() throws Throwable {
+    }
 
     public AnnotationResourceChangedEventArgs(Annotation annotation, AnnotationAction action, AnnotationResource resource) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
@@ -121,6 +141,7 @@ public class AnnotationResourceChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

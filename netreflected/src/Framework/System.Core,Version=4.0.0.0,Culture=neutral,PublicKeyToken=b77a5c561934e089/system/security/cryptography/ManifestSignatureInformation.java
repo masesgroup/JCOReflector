@@ -49,12 +49,27 @@ import system.security.cryptography.x509certificates.AuthenticodeSignatureInform
 
 /**
  * The base .NET class managing System.Security.Cryptography.ManifestSignatureInformation, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ManifestSignatureInformation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ManifestSignatureInformation</a>
  */
 public class ManifestSignatureInformation extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.ManifestSignatureInformation
+     */
     public static final String className = "System.Security.Cryptography.ManifestSignatureInformation";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class ManifestSignatureInformation extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManifestSignatureInformation}, a cast assert is made to check if types are compatible.
+     */
     public static ManifestSignatureInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ManifestSignatureInformation(from.getJCOInstance());
@@ -115,6 +132,10 @@ public class ManifestSignatureInformation extends NetObject  {
 
     // Constructors section
     
+    public ManifestSignatureInformation() throws Throwable {
+    }
+
+
 
     
     // Methods section

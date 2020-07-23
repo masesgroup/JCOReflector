@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.composition.primitives.ComposablePartCatalog;
 import system.reflection.Assembly;
 import system.componentmodel.composition.primitives.ICompositionElement;
 import system.componentmodel.composition.primitives.ICompositionElementImplementation;
@@ -46,12 +47,27 @@ import system.reflection.ReflectionContext;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.AssemblyCatalog, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.AssemblyCatalog" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.AssemblyCatalog</a>
  */
-public class AssemblyCatalog extends NetObject  {
+public class AssemblyCatalog extends ComposablePartCatalog  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.AssemblyCatalog
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.AssemblyCatalog";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class AssemblyCatalog extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyCatalog}, a cast assert is made to check if types are compatible.
+     */
     public static AssemblyCatalog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AssemblyCatalog(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class AssemblyCatalog extends NetObject  {
 
     // Constructors section
     
+    public AssemblyCatalog() throws Throwable {
+    }
 
     public AssemblyCatalog(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
@@ -192,6 +212,7 @@ public class AssemblyCatalog extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

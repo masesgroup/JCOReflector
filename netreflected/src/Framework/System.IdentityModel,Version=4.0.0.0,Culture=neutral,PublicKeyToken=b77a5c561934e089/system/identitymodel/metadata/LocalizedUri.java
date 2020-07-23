@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.metadata.LocalizedEntry;
 import system.Uri;
 import system.globalization.CultureInfo;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Metadata.LocalizedUri, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.LocalizedUri" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.LocalizedUri</a>
  */
-public class LocalizedUri extends NetObject  {
+public class LocalizedUri extends LocalizedEntry  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Metadata.LocalizedUri
+     */
     public static final String className = "System.IdentityModel.Metadata.LocalizedUri";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class LocalizedUri extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LocalizedUri}, a cast assert is made to check if types are compatible.
+     */
     public static LocalizedUri cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LocalizedUri(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class LocalizedUri extends NetObject  {
 
     // Constructors section
     
-
     public LocalizedUri() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -139,27 +156,6 @@ public class LocalizedUri extends NetObject  {
     
     // Properties section
     
-    public CultureInfo getLanguage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Language");
-            return new CultureInfo(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLanguage(CultureInfo Language) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Language", Language == null ? null : Language.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

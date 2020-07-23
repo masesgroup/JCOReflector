@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.data.IDbConnection;
 import system.data.IDbConnectionImplementation;
 import system.data.IsolationLevel;
@@ -44,12 +46,29 @@ import system.data.IsolationLevel;
 
 /**
  * The base .NET class managing System.Data.IDbTransaction, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbTransaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbTransaction</a>
  */
-public interface IDbTransaction extends IJCOBridgeReflected {
-
+public interface IDbTransaction extends IJCOBridgeReflected, IDisposable {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
+    public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.IDbTransaction
+     */
+    public static final String className = "System.Data.IDbTransaction";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDbTransaction}, a cast assert is made to check if types are compatible.
+     */
     public static IDbTransaction ToIDbTransaction(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Data.IDbTransaction, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Data"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDbTransactionImplementation(from.getJCOInstance());
     }
@@ -94,7 +113,6 @@ public interface IDbTransaction extends IJCOBridgeReflected {
     
     public void Commit() throws Throwable;
 
-    public void Dispose() throws Throwable;
 
     public void Rollback() throws Throwable;
 

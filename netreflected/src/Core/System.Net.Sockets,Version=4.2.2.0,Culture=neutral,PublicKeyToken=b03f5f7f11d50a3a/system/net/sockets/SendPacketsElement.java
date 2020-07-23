@@ -43,12 +43,27 @@ import system.io.FileStream;
 
 /**
  * The base .NET class managing System.Net.Sockets.SendPacketsElement, System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SendPacketsElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SendPacketsElement</a>
  */
 public class SendPacketsElement extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Sockets
+     */
     public static final String assemblyShortName = "System.Net.Sockets";
+    /**
+     * Qualified class name: System.Net.Sockets.SendPacketsElement
+     */
     public static final String className = "System.Net.Sockets.SendPacketsElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class SendPacketsElement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SendPacketsElement}, a cast assert is made to check if types are compatible.
+     */
     public static SendPacketsElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SendPacketsElement(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class SendPacketsElement extends NetObject  {
 
     // Constructors section
     
+    public SendPacketsElement() throws Throwable {
+    }
 
     public SendPacketsElement(byte[] buffer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -219,6 +238,7 @@ public class SendPacketsElement extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

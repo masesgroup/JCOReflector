@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.OpenObject;
 import system.identitymodel.protocols.wstrust.BinaryExchange;
 import system.identitymodel.protocols.wstrust.EndpointReference;
 import system.identitymodel.protocols.wstrust.Entropy;
@@ -47,12 +48,27 @@ import system.identitymodel.protocols.wstrust.UseKey;
 
 /**
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.WSTrustMessage, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage</a>
  */
-public class WSTrustMessage extends NetObject  {
+public class WSTrustMessage extends OpenObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Protocols.WSTrust.WSTrustMessage
+     */
     public static final String className = "System.IdentityModel.Protocols.WSTrust.WSTrustMessage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class WSTrustMessage extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustMessage}, a cast assert is made to check if types are compatible.
+     */
     public static WSTrustMessage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WSTrustMessage(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class WSTrustMessage extends NetObject  {
 
     // Constructors section
     
+    public WSTrustMessage() throws Throwable {
+    }
 
     
     // Methods section

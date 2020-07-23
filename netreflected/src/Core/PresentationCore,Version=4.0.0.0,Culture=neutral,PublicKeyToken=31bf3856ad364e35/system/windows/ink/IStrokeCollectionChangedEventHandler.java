@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.ink.StrokeCollectionChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StrokeCollectionChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StrokeCollectionChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StrokeCollectionChangedEventHandler</a>
+ */
 public interface IStrokeCollectionChangedEventHandler {
     public void Invoke(NetObject sender, StrokeCollectionChangedEventArgs e);
 }

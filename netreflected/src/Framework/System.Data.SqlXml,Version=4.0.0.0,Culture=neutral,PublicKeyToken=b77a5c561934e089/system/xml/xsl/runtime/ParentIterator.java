@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.runtime.XmlNavigatorFilter;
 
 
 /**
  * The base .NET class managing System.Xml.Xsl.Runtime.ParentIterator, System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.ParentIterator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.ParentIterator</a>
  */
-public class ParentIterator extends NetObject  {
+public class ParentIterator extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.SqlXml
+     */
     public static final String assemblyShortName = "System.Data.SqlXml";
+    /**
+     * Qualified class name: System.Xml.Xsl.Runtime.ParentIterator
+     */
     public static final String className = "System.Xml.Xsl.Runtime.ParentIterator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ParentIterator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParentIterator}, a cast assert is made to check if types are compatible.
+     */
     public static ParentIterator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ParentIterator(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class ParentIterator extends NetObject  {
 
     // Constructors section
     
+    public ParentIterator() throws Throwable {
+    }
+
+
 
     
     // Methods section

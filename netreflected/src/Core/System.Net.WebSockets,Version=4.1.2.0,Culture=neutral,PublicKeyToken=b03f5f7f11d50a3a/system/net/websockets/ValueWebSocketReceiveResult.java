@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.net.websockets.WebSocketMessageType;
 
 
 /**
  * The base .NET class managing System.Net.WebSockets.ValueWebSocketReceiveResult, System.Net.WebSockets, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.ValueWebSocketReceiveResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.ValueWebSocketReceiveResult</a>
  */
-public class ValueWebSocketReceiveResult extends NetObject  {
+public class ValueWebSocketReceiveResult extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Net.WebSockets, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.WebSockets, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.WebSockets
+     */
     public static final String assemblyShortName = "System.Net.WebSockets";
+    /**
+     * Qualified class name: System.Net.WebSockets.ValueWebSocketReceiveResult
+     */
     public static final String className = "System.Net.WebSockets.ValueWebSocketReceiveResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ValueWebSocketReceiveResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValueWebSocketReceiveResult}, a cast assert is made to check if types are compatible.
+     */
     public static ValueWebSocketReceiveResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValueWebSocketReceiveResult(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ValueWebSocketReceiveResult extends NetObject  {
 
     // Constructors section
     
+    public ValueWebSocketReceiveResult() throws Throwable {
+    }
 
     public ValueWebSocketReceiveResult(int count, WebSocketMessageType messageType, boolean endOfMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
@@ -119,6 +139,7 @@ public class ValueWebSocketReceiveResult extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

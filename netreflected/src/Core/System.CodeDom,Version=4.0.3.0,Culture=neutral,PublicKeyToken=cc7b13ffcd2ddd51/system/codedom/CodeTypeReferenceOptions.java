@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.CodeDom.CodeTypeReferenceOptions, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeReferenceOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeReferenceOptions</a>
  */
 public class CodeTypeReferenceOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.CodeTypeReferenceOptions
+     */
     public static final String className = "System.CodeDom.CodeTypeReferenceOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class CodeTypeReferenceOptions extends NetObject  {
 
     // Flags management section
 
-    public CodeTypeReferenceOptions add(CodeTypeReferenceOptions val) throws Throwable {
+    public final CodeTypeReferenceOptions add(CodeTypeReferenceOptions val) throws Throwable {
         return new CodeTypeReferenceOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public CodeTypeReferenceOptions remove(CodeTypeReferenceOptions val) throws Throwable {
+    public final CodeTypeReferenceOptions remove(CodeTypeReferenceOptions val) throws Throwable {
         return new CodeTypeReferenceOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(CodeTypeReferenceOptions val) throws Throwable {
+    public final boolean is(CodeTypeReferenceOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(CodeTypeReferenceOptions val) throws Throwable {
+    public final boolean has(CodeTypeReferenceOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

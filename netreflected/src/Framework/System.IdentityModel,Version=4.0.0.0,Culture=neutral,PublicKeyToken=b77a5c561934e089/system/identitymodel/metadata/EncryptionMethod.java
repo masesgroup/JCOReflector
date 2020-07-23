@@ -43,12 +43,27 @@ import system.Uri;
 
 /**
  * The base .NET class managing System.IdentityModel.Metadata.EncryptionMethod, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.EncryptionMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.EncryptionMethod</a>
  */
 public class EncryptionMethod extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Metadata.EncryptionMethod
+     */
     public static final String className = "System.IdentityModel.Metadata.EncryptionMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class EncryptionMethod extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncryptionMethod}, a cast assert is made to check if types are compatible.
+     */
     public static EncryptionMethod cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EncryptionMethod(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class EncryptionMethod extends NetObject  {
 
     // Constructors section
     
+    public EncryptionMethod() throws Throwable {
+    }
 
     public EncryptionMethod(Uri algorithm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -119,6 +138,7 @@ public class EncryptionMethod extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

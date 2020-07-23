@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Printing.PrintQueueAttributes, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueAttributes</a>
  */
 public class PrintQueueAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Printing
+     */
     public static final String assemblyShortName = "System.Printing";
+    /**
+     * Qualified class name: System.Printing.PrintQueueAttributes
+     */
     public static final String className = "System.Printing.PrintQueueAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -147,19 +162,19 @@ public class PrintQueueAttributes extends NetObject  {
 
     // Flags management section
 
-    public PrintQueueAttributes add(PrintQueueAttributes val) throws Throwable {
+    public final PrintQueueAttributes add(PrintQueueAttributes val) throws Throwable {
         return new PrintQueueAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PrintQueueAttributes remove(PrintQueueAttributes val) throws Throwable {
+    public final PrintQueueAttributes remove(PrintQueueAttributes val) throws Throwable {
         return new PrintQueueAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PrintQueueAttributes val) throws Throwable {
+    public final boolean is(PrintQueueAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PrintQueueAttributes val) throws Throwable {
+    public final boolean has(PrintQueueAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

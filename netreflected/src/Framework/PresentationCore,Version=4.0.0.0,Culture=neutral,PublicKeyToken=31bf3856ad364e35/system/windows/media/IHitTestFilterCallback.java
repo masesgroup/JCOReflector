@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.windows.media.HitTestFilterBehavior;
 import system.windows.DependencyObject;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link HitTestFilterCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback</a>
+ */
 public interface IHitTestFilterCallback {
     public HitTestFilterBehavior Invoke(DependencyObject potentialHitTestTarget);
 }

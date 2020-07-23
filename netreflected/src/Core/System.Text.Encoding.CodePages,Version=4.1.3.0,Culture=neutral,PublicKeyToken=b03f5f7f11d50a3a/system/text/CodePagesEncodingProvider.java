@@ -38,20 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.text.Encoding;
-import system.text.EncoderFallback;
-import system.text.DecoderFallback;
 import system.text.EncodingProvider;
+import system.text.Encoding;
 
 
 /**
  * The base .NET class managing System.Text.CodePagesEncodingProvider, System.Text.Encoding.CodePages, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.CodePagesEncodingProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.CodePagesEncodingProvider</a>
  */
-public class CodePagesEncodingProvider extends NetObject  {
+public class CodePagesEncodingProvider extends EncodingProvider  {
+    /**
+     * Fully assembly qualified name: System.Text.Encoding.CodePages, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Text.Encoding.CodePages, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Text.Encoding.CodePages
+     */
     public static final String assemblyShortName = "System.Text.Encoding.CodePages";
+    /**
+     * Qualified class name: System.Text.CodePagesEncodingProvider
+     */
     public static final String className = "System.Text.CodePagesEncodingProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +117,9 @@ public class CodePagesEncodingProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodePagesEncodingProvider}, a cast assert is made to check if types are compatible.
+     */
     public static CodePagesEncodingProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodePagesEncodingProvider(from.getJCOInstance());
@@ -112,6 +127,10 @@ public class CodePagesEncodingProvider extends NetObject  {
 
     // Constructors section
     
+    public CodePagesEncodingProvider() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -121,17 +140,6 @@ public class CodePagesEncodingProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", codepage);
-            return new Encoding(objGetEncoding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Encoding GetEncoding(int codepage, EncoderFallback encoderFallback, DecoderFallback decoderFallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", codepage, encoderFallback == null ? null : encoderFallback.getJCOInstance(), decoderFallback == null ? null : decoderFallback.getJCOInstance());
             return new Encoding(objGetEncoding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -149,26 +157,15 @@ public class CodePagesEncodingProvider extends NetObject  {
         }
     }
 
-    public Encoding GetEncoding(java.lang.String name, EncoderFallback encoderFallback, DecoderFallback decoderFallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", name, encoderFallback == null ? null : encoderFallback.getJCOInstance(), decoderFallback == null ? null : decoderFallback.getJCOInstance());
-            return new Encoding(objGetEncoding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public static EncodingProvider getInstance() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public EncodingProvider getInstance() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Instance");
+            JCObject val = (JCObject)classInstance.Get("Instance");
             return new EncodingProvider(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

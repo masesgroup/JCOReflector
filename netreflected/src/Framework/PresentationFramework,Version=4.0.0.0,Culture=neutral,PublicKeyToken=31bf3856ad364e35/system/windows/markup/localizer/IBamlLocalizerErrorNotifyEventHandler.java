@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.markup.localizer.BamlLocalizerErrorNotifyEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link BamlLocalizerErrorNotifyEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventHandler</a>
+ */
 public interface IBamlLocalizerErrorNotifyEventHandler {
     public void Invoke(NetObject sender, BamlLocalizerErrorNotifyEventArgs e);
 }

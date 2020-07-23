@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.IList;
+import system.collections.IListImplementation;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.data.IColumnMapping;
 import system.data.IColumnMappingImplementation;
 import system.Array;
@@ -45,12 +49,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Data.IColumnMappingCollection, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IColumnMappingCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IColumnMappingCollection</a>
  */
-public class IColumnMappingCollectionImplementation extends NetObject implements IColumnMappingCollection {
+public class IColumnMappingCollectionImplementation extends IEnumerableImplementation implements IColumnMappingCollection {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.IColumnMappingCollection
+     */
     public static final String className = "System.Data.IColumnMappingCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -98,7 +117,9 @@ public class IColumnMappingCollectionImplementation extends NetObject implements
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IColumnMappingCollection}, a cast assert is made to check if types are compatible.
+     */
     public static IColumnMappingCollection ToIColumnMappingCollection(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IColumnMappingCollectionImplementation(from.getJCOInstance());

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ContentsResizedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ContentsResizedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ContentsResizedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ContentsResizedEventHandler</a>
+ */
 public interface IContentsResizedEventHandler {
     public void Invoke(NetObject sender, ContentsResizedEventArgs e);
 }

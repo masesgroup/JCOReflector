@@ -43,12 +43,27 @@ import system.Array;
 
 /**
  * The base .NET class managing System.Collections.ICollection, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ICollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ICollection</a>
  */
-public class ICollectionImplementation extends NetObject implements ICollection {
+public class ICollectionImplementation extends IEnumerableImplementation implements ICollection {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Collections.ICollection
+     */
     public static final String className = "System.Collections.ICollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class ICollectionImplementation extends NetObject implements ICollection 
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollection}, a cast assert is made to check if types are compatible.
+     */
     public static ICollection ToICollection(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICollectionImplementation(from.getJCOInstance());

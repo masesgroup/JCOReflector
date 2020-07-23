@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.SelectedGridItemChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SelectedGridItemChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SelectedGridItemChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SelectedGridItemChangedEventHandler</a>
+ */
 public interface ISelectedGridItemChangedEventHandler {
     public void Invoke(NetObject sender, SelectedGridItemChangedEventArgs e);
 }

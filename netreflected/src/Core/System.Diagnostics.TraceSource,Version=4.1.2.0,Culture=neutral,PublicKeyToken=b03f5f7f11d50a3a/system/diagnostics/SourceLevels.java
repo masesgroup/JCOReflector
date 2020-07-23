@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Diagnostics.SourceLevels, System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SourceLevels" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SourceLevels</a>
  */
 public class SourceLevels extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.TraceSource, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.TraceSource
+     */
     public static final String assemblyShortName = "System.Diagnostics.TraceSource";
+    /**
+     * Qualified class name: System.Diagnostics.SourceLevels
+     */
     public static final String className = "System.Diagnostics.SourceLevels";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class SourceLevels extends NetObject  {
 
     // Flags management section
 
-    public SourceLevels add(SourceLevels val) throws Throwable {
+    public final SourceLevels add(SourceLevels val) throws Throwable {
         return new SourceLevels(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SourceLevels remove(SourceLevels val) throws Throwable {
+    public final SourceLevels remove(SourceLevels val) throws Throwable {
         return new SourceLevels(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SourceLevels val) throws Throwable {
+    public final boolean is(SourceLevels val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SourceLevels val) throws Throwable {
+    public final boolean has(SourceLevels val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

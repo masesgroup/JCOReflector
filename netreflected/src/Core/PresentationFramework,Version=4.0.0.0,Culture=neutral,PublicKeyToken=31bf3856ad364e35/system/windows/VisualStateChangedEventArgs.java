@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.FrameworkElement;
 import system.windows.VisualState;
 
 
 /**
  * The base .NET class managing System.Windows.VisualStateChangedEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.VisualStateChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.VisualStateChangedEventArgs</a>
  */
-public class VisualStateChangedEventArgs extends NetObject  {
+public class VisualStateChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.VisualStateChangedEventArgs
+     */
     public static final String className = "System.Windows.VisualStateChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class VisualStateChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link VisualStateChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static VisualStateChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new VisualStateChangedEventArgs(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class VisualStateChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public VisualStateChangedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

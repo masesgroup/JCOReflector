@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.Cryptography.CryptographicOperations, System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptographicOperations" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptographicOperations</a>
  */
 public class CryptographicOperations extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Primitives
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Primitives";
+    /**
+     * Qualified class name: System.Security.Cryptography.CryptographicOperations
+     */
     public static final String className = "System.Security.Cryptography.CryptographicOperations";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class CryptographicOperations extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CryptographicOperations}, a cast assert is made to check if types are compatible.
+     */
     public static CryptographicOperations cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CryptographicOperations(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class CryptographicOperations extends NetObject  {
 
     // Constructors section
     
+    public CryptographicOperations() throws Throwable {
+    }
 
     
     // Methods section

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Windows.BaseCompatibilityPreferences, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.BaseCompatibilityPreferences" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.BaseCompatibilityPreferences</a>
  */
 public class BaseCompatibilityPreferences extends NetObject  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.Windows.BaseCompatibilityPreferences
+     */
     public static final String className = "System.Windows.BaseCompatibilityPreferences";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class BaseCompatibilityPreferences extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BaseCompatibilityPreferences}, a cast assert is made to check if types are compatible.
+     */
     public static BaseCompatibilityPreferences cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BaseCompatibilityPreferences(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class BaseCompatibilityPreferences extends NetObject  {
 
     // Constructors section
     
+    public BaseCompatibilityPreferences() throws Throwable {
+    }
 
     
     // Methods section
@@ -116,61 +135,61 @@ public class BaseCompatibilityPreferences extends NetObject  {
     
     // Properties section
     
-    public static boolean getFlowDispatcherSynchronizationContextPriority() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getFlowDispatcherSynchronizationContextPriority() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("FlowDispatcherSynchronizationContextPriority");
+            return (boolean)classInstance.Get("FlowDispatcherSynchronizationContextPriority");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setFlowDispatcherSynchronizationContextPriority(boolean FlowDispatcherSynchronizationContextPriority) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setFlowDispatcherSynchronizationContextPriority(boolean FlowDispatcherSynchronizationContextPriority) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("FlowDispatcherSynchronizationContextPriority", FlowDispatcherSynchronizationContextPriority);
+            classInstance.Set("FlowDispatcherSynchronizationContextPriority", FlowDispatcherSynchronizationContextPriority);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getInlineDispatcherSynchronizationContextSend() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getInlineDispatcherSynchronizationContextSend() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("InlineDispatcherSynchronizationContextSend");
+            return (boolean)classInstance.Get("InlineDispatcherSynchronizationContextSend");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setInlineDispatcherSynchronizationContextSend(boolean InlineDispatcherSynchronizationContextSend) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setInlineDispatcherSynchronizationContextSend(boolean InlineDispatcherSynchronizationContextSend) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("InlineDispatcherSynchronizationContextSend", InlineDispatcherSynchronizationContextSend);
+            classInstance.Set("InlineDispatcherSynchronizationContextSend", InlineDispatcherSynchronizationContextSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static boolean getReuseDispatcherSynchronizationContextInstance() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getReuseDispatcherSynchronizationContextInstance() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("ReuseDispatcherSynchronizationContextInstance");
+            return (boolean)classInstance.Get("ReuseDispatcherSynchronizationContextInstance");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setReuseDispatcherSynchronizationContextInstance(boolean ReuseDispatcherSynchronizationContextInstance) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setReuseDispatcherSynchronizationContextInstance(boolean ReuseDispatcherSynchronizationContextInstance) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("ReuseDispatcherSynchronizationContextInstance", ReuseDispatcherSynchronizationContextInstance);
+            classInstance.Set("ReuseDispatcherSynchronizationContextInstance", ReuseDispatcherSynchronizationContextInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

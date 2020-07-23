@@ -49,12 +49,27 @@ import system.xml.schema.ValidationEventHandler;
 
 /**
  * The base .NET class managing System.Xml.Schema.XmlSchemaCollection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaCollection</a>
  */
 public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema> {
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
     public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Schema.XmlSchemaCollection
+     */
     public static final String className = "System.Xml.Schema.XmlSchemaCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaCollection}, a cast assert is made to check if types are compatible.
+     */
     public static XmlSchemaCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XmlSchemaCollection(from.getJCOInstance());
@@ -115,7 +132,6 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
 
     // Constructors section
     
-
     public XmlSchemaCollection() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file
@@ -215,12 +231,12 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
         }
     }
 
-    public XmlSchemaCollectionEnumerator GetEnumerator() throws Throwable {
+    public final XmlSchemaCollectionEnumerator GetEnumerator() throws Throwable {
         return new XmlSchemaCollectionEnumerator(classInstance);
     }
 
 	@SuppressWarnings("unchecked")
-	public java.util.Iterator<XmlSchema> iterator() {
+	public final java.util.Iterator<XmlSchema> iterator() {
 		return new XmlSchemaCollectionEnumerator(classInstance);
 	}
 

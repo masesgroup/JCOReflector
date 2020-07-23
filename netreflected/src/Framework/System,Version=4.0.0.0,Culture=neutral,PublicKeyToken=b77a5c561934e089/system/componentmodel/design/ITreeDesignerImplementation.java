@@ -38,23 +38,40 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.IDesigner;
+import system.componentmodel.design.IDesignerImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.componentmodel.design.DesignerVerbCollection;
-import system.componentmodel.design.IDesigner;
-import system.componentmodel.design.IDesignerImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ITreeDesigner, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ITreeDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ITreeDesigner</a>
  */
 public class ITreeDesignerImplementation extends NetObject implements ITreeDesigner {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ITreeDesigner
+     */
     public static final String className = "System.ComponentModel.Design.ITreeDesigner";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +119,9 @@ public class ITreeDesignerImplementation extends NetObject implements ITreeDesig
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITreeDesigner}, a cast assert is made to check if types are compatible.
+     */
     public static ITreeDesigner ToITreeDesigner(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITreeDesignerImplementation(from.getJCOInstance());

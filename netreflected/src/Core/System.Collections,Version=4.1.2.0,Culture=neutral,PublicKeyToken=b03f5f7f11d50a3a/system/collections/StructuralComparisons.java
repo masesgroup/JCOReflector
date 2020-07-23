@@ -46,12 +46,27 @@ import system.collections.IEqualityComparerImplementation;
 
 /**
  * The base .NET class managing System.Collections.StructuralComparisons, System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.StructuralComparisons" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.StructuralComparisons</a>
  */
 public class StructuralComparisons extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Collections
+     */
     public static final String assemblyShortName = "System.Collections";
+    /**
+     * Qualified class name: System.Collections.StructuralComparisons
+     */
     public static final String className = "System.Collections.StructuralComparisons";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class StructuralComparisons extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StructuralComparisons}, a cast assert is made to check if types are compatible.
+     */
     public static StructuralComparisons cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StructuralComparisons(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class StructuralComparisons extends NetObject  {
 
     // Constructors section
     
+    public StructuralComparisons() throws Throwable {
+    }
 
     
     // Methods section
@@ -120,22 +139,22 @@ public class StructuralComparisons extends NetObject  {
     
     // Properties section
     
-    public static IComparer getStructuralComparer() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IComparer getStructuralComparer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("StructuralComparer");
+            JCObject val = (JCObject)classInstance.Get("StructuralComparer");
             return new IComparerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static IEqualityComparer getStructuralEqualityComparer() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IEqualityComparer getStructuralEqualityComparer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("StructuralEqualityComparer");
+            JCObject val = (JCObject)classInstance.Get("StructuralEqualityComparer");
             return new IEqualityComparerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

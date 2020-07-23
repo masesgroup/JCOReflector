@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.annotations.storage.StoreContentAction;
 import system.windows.annotations.Annotation;
 
 
 /**
  * The base .NET class managing System.Windows.Annotations.Storage.StoreContentChangedEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.StoreContentChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.StoreContentChangedEventArgs</a>
  */
-public class StoreContentChangedEventArgs extends NetObject  {
+public class StoreContentChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.Storage.StoreContentChangedEventArgs
+     */
     public static final String className = "System.Windows.Annotations.Storage.StoreContentChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class StoreContentChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StoreContentChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static StoreContentChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StoreContentChangedEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class StoreContentChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public StoreContentChangedEventArgs() throws Throwable {
+    }
 
     public StoreContentChangedEventArgs(StoreContentAction action, Annotation annotation) throws Throwable, system.ArgumentNullException {
         try {
@@ -120,6 +140,7 @@ public class StoreContentChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.webcontrols.webparts.WebPartCancelEventArgs;
 import system.web.ui.webcontrols.webparts.WebPart;
 import system.web.ui.webcontrols.webparts.WebPartZoneBase;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs</a>
  */
-public class WebPartMovingEventArgs extends NetObject  {
+public class WebPartMovingEventArgs extends WebPartCancelEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs
+     */
     public static final String className = "System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class WebPartMovingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebPartMovingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static WebPartMovingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WebPartMovingEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class WebPartMovingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public WebPartMovingEventArgs() throws Throwable {
+    }
 
     public WebPartMovingEventArgs(WebPart webPart, WebPartZoneBase zone, int zoneIndex) throws Throwable {
         try {
@@ -122,6 +142,7 @@ public class WebPartMovingEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -129,26 +150,6 @@ public class WebPartMovingEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int getZoneIndex() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,27 +165,6 @@ public class WebPartMovingEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ZoneIndex", ZoneIndex);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WebPart getWebPart() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WebPart");
-            return new WebPart(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWebPart(WebPart WebPart) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("WebPart", WebPart == null ? null : WebPart.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

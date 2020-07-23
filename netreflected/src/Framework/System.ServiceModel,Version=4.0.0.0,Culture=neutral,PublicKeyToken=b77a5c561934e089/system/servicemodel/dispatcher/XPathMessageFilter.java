@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.dispatcher.MessageFilter;
 import system.xml.XmlNamespaceManager;
 import system.xml.xsl.XsltContext;
 import system.xml.XmlReader;
@@ -52,12 +53,27 @@ import system.xml.XmlWriter;
 
 /**
  * The base .NET class managing System.ServiceModel.Dispatcher.XPathMessageFilter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilter</a>
  */
-public class XPathMessageFilter extends NetObject  {
+public class XPathMessageFilter extends MessageFilter  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Dispatcher.XPathMessageFilter
+     */
     public static final String className = "System.ServiceModel.Dispatcher.XPathMessageFilter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +126,9 @@ public class XPathMessageFilter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XPathMessageFilter}, a cast assert is made to check if types are compatible.
+     */
     public static XPathMessageFilter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XPathMessageFilter(from.getJCOInstance());
@@ -118,7 +136,6 @@ public class XPathMessageFilter extends NetObject  {
 
     // Constructors section
     
-
     public XPathMessageFilter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file

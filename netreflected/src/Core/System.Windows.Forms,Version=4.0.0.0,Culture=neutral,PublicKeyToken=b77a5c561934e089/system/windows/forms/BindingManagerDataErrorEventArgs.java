@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.BindingManagerDataErrorEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingManagerDataErrorEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingManagerDataErrorEventArgs</a>
  */
-public class BindingManagerDataErrorEventArgs extends NetObject  {
+public class BindingManagerDataErrorEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.BindingManagerDataErrorEventArgs
+     */
     public static final String className = "System.Windows.Forms.BindingManagerDataErrorEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class BindingManagerDataErrorEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindingManagerDataErrorEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static BindingManagerDataErrorEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BindingManagerDataErrorEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class BindingManagerDataErrorEventArgs extends NetObject  {
 
     // Constructors section
     
+    public BindingManagerDataErrorEventArgs() throws Throwable {
+    }
 
     public BindingManagerDataErrorEventArgs(NetException exception) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class BindingManagerDataErrorEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

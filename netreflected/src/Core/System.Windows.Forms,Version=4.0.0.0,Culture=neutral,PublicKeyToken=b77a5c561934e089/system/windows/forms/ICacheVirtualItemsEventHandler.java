@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.CacheVirtualItemsEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CacheVirtualItemsEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.CacheVirtualItemsEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.CacheVirtualItemsEventHandler</a>
+ */
 public interface ICacheVirtualItemsEventHandler {
     public void Invoke(NetObject sender, CacheVirtualItemsEventArgs e);
 }

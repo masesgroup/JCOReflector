@@ -42,12 +42,29 @@ import system.windows.forms.DialogResult;
 
 /**
  * The base .NET class managing System.Windows.Forms.IButtonControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IButtonControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IButtonControl</a>
  */
 public interface IButtonControl extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
+    public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.IButtonControl
+     */
+    public static final String className = "System.Windows.Forms.IButtonControl";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IButtonControl}, a cast assert is made to check if types are compatible.
+     */
     public static IButtonControl ToIButtonControl(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Windows.Forms.IButtonControl, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Windows.Forms"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IButtonControlImplementation(from.getJCOInstance());
     }

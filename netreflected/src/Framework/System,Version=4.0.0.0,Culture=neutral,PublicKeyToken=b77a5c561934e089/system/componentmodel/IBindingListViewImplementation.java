@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.IBindingList;
+import system.componentmodel.IBindingListImplementation;
+import system.collections.IList;
+import system.collections.IListImplementation;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.ListSortDescriptionCollection;
 import system.componentmodel.ListSortDirection;
@@ -47,12 +53,27 @@ import system.componentmodel.ListChangedEventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.IBindingListView, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IBindingListView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IBindingListView</a>
  */
-public class IBindingListViewImplementation extends NetObject implements IBindingListView {
+public class IBindingListViewImplementation extends IEnumerableImplementation implements IBindingListView {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.IBindingListView
+     */
     public static final String className = "System.ComponentModel.IBindingListView";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +121,9 @@ public class IBindingListViewImplementation extends NetObject implements IBindin
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindingListView}, a cast assert is made to check if types are compatible.
+     */
     public static IBindingListView ToIBindingListView(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IBindingListViewImplementation(from.getJCOInstance());

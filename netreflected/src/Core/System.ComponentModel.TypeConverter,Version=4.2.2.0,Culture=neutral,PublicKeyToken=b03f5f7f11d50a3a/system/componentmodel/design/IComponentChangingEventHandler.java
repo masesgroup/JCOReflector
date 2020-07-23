@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.design.ComponentChangingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ComponentChangingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangingEventHandler</a>
+ */
 public interface IComponentChangingEventHandler {
     public void Invoke(NetObject sender, ComponentChangingEventArgs e);
 }

@@ -55,12 +55,27 @@ import system.net.networkinformation.NetBiosNodeType;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.IPGlobalProperties, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties</a>
  */
 public class IPGlobalProperties extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.IPGlobalProperties
+     */
     public static final String className = "System.Net.NetworkInformation.IPGlobalProperties";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -113,7 +128,9 @@ public class IPGlobalProperties extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPGlobalProperties}, a cast assert is made to check if types are compatible.
+     */
     public static IPGlobalProperties cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IPGlobalProperties(from.getJCOInstance());
@@ -121,6 +138,8 @@ public class IPGlobalProperties extends NetObject  {
 
     // Constructors section
     
+    public IPGlobalProperties() throws Throwable {
+    }
 
     
     // Methods section

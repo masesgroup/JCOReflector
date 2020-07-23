@@ -43,12 +43,27 @@ import system.globalization.CultureInfo;
 
 /**
  * The base .NET class managing System.ServiceModel.FaultReasonText, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.FaultReasonText" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.FaultReasonText</a>
  */
 public class FaultReasonText extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.FaultReasonText
+     */
     public static final String className = "System.ServiceModel.FaultReasonText";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class FaultReasonText extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FaultReasonText}, a cast assert is made to check if types are compatible.
+     */
     public static FaultReasonText cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FaultReasonText(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class FaultReasonText extends NetObject  {
 
     // Constructors section
     
+    public FaultReasonText() throws Throwable {
+    }
 
     public FaultReasonText(java.lang.String text) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -139,6 +158,7 @@ public class FaultReasonText extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

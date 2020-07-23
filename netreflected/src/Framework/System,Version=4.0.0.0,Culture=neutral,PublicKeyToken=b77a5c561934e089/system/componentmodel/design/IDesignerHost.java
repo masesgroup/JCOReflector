@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.componentmodel.design.IServiceContainer;
+import system.componentmodel.design.IServiceContainerImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.design.DesignerTransaction;
 import system.componentmodel.design.IDesigner;
 import system.componentmodel.design.IDesignerImplementation;
@@ -51,12 +55,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IDesignerHost, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerHost</a>
  */
-public interface IDesignerHost extends IJCOBridgeReflected {
-
+public interface IDesignerHost extends IJCOBridgeReflected, IServiceContainer, IServiceProvider {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IDesignerHost
+     */
+    public static final String className = "System.ComponentModel.Design.IDesignerHost";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerHost}, a cast assert is made to check if types are compatible.
+     */
     public static IDesignerHost ToIDesignerHost(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.Design.IDesignerHost, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDesignerHostImplementation(from.getJCOInstance());
     }
@@ -109,25 +130,18 @@ public interface IDesignerHost extends IJCOBridgeReflected {
 
     public IComponent CreateComponent(NetType componentClass, java.lang.String name) throws Throwable;
 
-    public NetObject GetService(NetType serviceType) throws Throwable;
 
     public NetType GetType(java.lang.String typeName) throws Throwable;
 
     public void Activate() throws Throwable;
 
-    public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable;
 
-    public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable;
 
-    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable;
 
-    public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable;
 
     public void DestroyComponent(IComponent component) throws Throwable;
 
-    public void RemoveService(NetType serviceType) throws Throwable;
 
-    public void RemoveService(NetType serviceType, boolean promote) throws Throwable;
 
 
     

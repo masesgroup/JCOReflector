@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Activities.DynamicUpdate.DynamicUpdateMapItem, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapItem</a>
  */
 public class DynamicUpdateMapItem extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.DynamicUpdate.DynamicUpdateMapItem
+     */
     public static final String className = "System.Activities.DynamicUpdate.DynamicUpdateMapItem";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class DynamicUpdateMapItem extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicUpdateMapItem}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicUpdateMapItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicUpdateMapItem(from.getJCOInstance());
@@ -108,6 +125,10 @@ public class DynamicUpdateMapItem extends NetObject  {
 
     // Constructors section
     
+    public DynamicUpdateMapItem() throws Throwable {
+    }
+
+
 
     
     // Methods section

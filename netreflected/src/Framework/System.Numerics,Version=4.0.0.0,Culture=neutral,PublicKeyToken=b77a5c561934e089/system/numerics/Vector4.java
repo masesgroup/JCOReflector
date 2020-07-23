@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Single;
 import system.numerics.Vector2;
 import system.numerics.Vector3;
@@ -50,12 +51,27 @@ import system.IFormatProviderImplementation;
 
 /**
  * The base .NET class managing System.Numerics.Vector4, System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Vector4" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Vector4</a>
  */
-public class Vector4 extends NetObject  {
+public class Vector4 extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Numerics
+     */
     public static final String assemblyShortName = "System.Numerics";
+    /**
+     * Qualified class name: System.Numerics.Vector4
+     */
     public static final String className = "System.Numerics.Vector4";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +124,9 @@ public class Vector4 extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector4}, a cast assert is made to check if types are compatible.
+     */
     public static Vector4 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Vector4(from.getJCOInstance());
@@ -116,6 +134,8 @@ public class Vector4 extends NetObject  {
 
     // Constructors section
     
+    public Vector4() throws Throwable {
+    }
 
     public Vector4(Single value) throws Throwable {
         try {
@@ -156,6 +176,7 @@ public class Vector4 extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -501,66 +522,66 @@ public class Vector4 extends NetObject  {
     
     // Properties section
     
-    public static Vector4 getOne() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector4 getOne() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("One");
+            JCObject val = (JCObject)classInstance.Get("One");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 getUnitW() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector4 getUnitW() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnitW");
+            JCObject val = (JCObject)classInstance.Get("UnitW");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 getUnitX() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector4 getUnitX() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnitX");
+            JCObject val = (JCObject)classInstance.Get("UnitX");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 getUnitY() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector4 getUnitY() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnitY");
+            JCObject val = (JCObject)classInstance.Get("UnitY");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 getUnitZ() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector4 getUnitZ() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("UnitZ");
+            JCObject val = (JCObject)classInstance.Get("UnitZ");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Vector4 getZero() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Vector4 getZero() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Zero");
+            JCObject val = (JCObject)classInstance.Get("Zero");
             return new Vector4(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

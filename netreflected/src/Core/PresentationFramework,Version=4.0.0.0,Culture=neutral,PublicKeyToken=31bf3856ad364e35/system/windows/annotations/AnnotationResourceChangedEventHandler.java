@@ -42,12 +42,27 @@ import system.windows.annotations.AnnotationResourceChangedEventArgs;
 import system.windows.annotations.IAnnotationResourceChangedEventHandler;
 /**
  * The base .NET class managing System.Windows.Annotations.AnnotationResourceChangedEventHandler, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationResourceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationResourceChangedEventHandler</a>
  */
 public class AnnotationResourceChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Annotations.AnnotationResourceChangedEventHandler
+     */
     public static final String className = "System.Windows.Annotations.AnnotationResourceChangedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IAnnotationResourceChangedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class AnnotationResourceChangedEventHandler extends JCVoidDelegate implem
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, AnnotationResourceChangedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, AnnotationResourceChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class AnnotationResourceChangedEventHandler extends JCVoidDelegate implem
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, AnnotationResourceChangedEventArgs e) {
     }
 }

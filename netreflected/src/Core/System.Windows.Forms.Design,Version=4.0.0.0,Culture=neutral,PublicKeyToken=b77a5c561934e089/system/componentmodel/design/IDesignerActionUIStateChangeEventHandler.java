@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.design.DesignerActionUIStateChangeEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DesignerActionUIStateChangeEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeEventHandler</a>
+ */
 public interface IDesignerActionUIStateChangeEventHandler {
     public void Invoke(NetObject sender, DesignerActionUIStateChangeEventArgs e);
 }

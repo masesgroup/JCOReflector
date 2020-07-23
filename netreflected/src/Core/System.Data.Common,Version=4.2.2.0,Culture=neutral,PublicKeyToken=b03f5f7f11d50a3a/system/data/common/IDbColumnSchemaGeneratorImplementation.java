@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Data.Common.IDbColumnSchemaGenerator, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.IDbColumnSchemaGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.IDbColumnSchemaGenerator</a>
  */
 public class IDbColumnSchemaGeneratorImplementation extends NetObject implements IDbColumnSchemaGenerator {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.Common.IDbColumnSchemaGenerator
+     */
     public static final String className = "System.Data.Common.IDbColumnSchemaGenerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IDbColumnSchemaGeneratorImplementation extends NetObject implements
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDbColumnSchemaGenerator}, a cast assert is made to check if types are compatible.
+     */
     public static IDbColumnSchemaGenerator ToIDbColumnSchemaGenerator(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDbColumnSchemaGeneratorImplementation(from.getJCOInstance());

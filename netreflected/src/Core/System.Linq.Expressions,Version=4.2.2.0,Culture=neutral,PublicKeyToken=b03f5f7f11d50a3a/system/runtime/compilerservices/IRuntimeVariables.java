@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.IRuntimeVariables, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IRuntimeVariables" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IRuntimeVariables</a>
  */
 public interface IRuntimeVariables extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
+    public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.IRuntimeVariables
+     */
+    public static final String className = "System.Runtime.CompilerServices.IRuntimeVariables";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRuntimeVariables}, a cast assert is made to check if types are compatible.
+     */
     public static IRuntimeVariables ToIRuntimeVariables(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Runtime.CompilerServices.IRuntimeVariables, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Linq.Expressions"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRuntimeVariablesImplementation(from.getJCOInstance());
     }

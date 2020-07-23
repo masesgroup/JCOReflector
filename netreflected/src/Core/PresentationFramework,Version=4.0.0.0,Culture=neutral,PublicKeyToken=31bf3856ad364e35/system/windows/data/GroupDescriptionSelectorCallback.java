@@ -43,12 +43,27 @@ import system.windows.data.CollectionViewGroup;
 import system.windows.data.IGroupDescriptionSelectorCallback;
 /**
  * The base .NET class managing System.Windows.Data.GroupDescriptionSelectorCallback, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.GroupDescriptionSelectorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.GroupDescriptionSelectorCallback</a>
  */
 public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Data.GroupDescriptionSelectorCallback
+     */
     public static final String className = "System.Windows.Data.GroupDescriptionSelectorCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IGroupDescriptionSelectorCallback callerInstance = null;
@@ -156,7 +171,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final GroupDescription DynamicInvoke(CollectionViewGroup group, int level) throws Throwable {
+    public GroupDescription METHOD_JAVA_NAME(CollectionViewGroup group, int level) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -167,7 +182,9 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public GroupDescription Invoke(CollectionViewGroup group, int level) {
         return null;
     }

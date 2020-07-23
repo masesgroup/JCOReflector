@@ -44,10 +44,22 @@ import system.text.Rune;
 
 /**
  * The base .NET class managing System.Text.StringRuneEnumerator, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.StringRuneEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.StringRuneEnumerator</a>
  */
 public class StringRuneEnumerator extends NetObject implements Iterator<Rune> {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Text.StringRuneEnumerator
+     */
     public static final String className = "System.Text.StringRuneEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class StringRuneEnumerator extends NetObject implements Iterator<Rune> {
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public Rune next() {
+	public final Rune next() {
 		try {
 			return new Rune(classInstance.next());
 		} catch (Throwable jce) {

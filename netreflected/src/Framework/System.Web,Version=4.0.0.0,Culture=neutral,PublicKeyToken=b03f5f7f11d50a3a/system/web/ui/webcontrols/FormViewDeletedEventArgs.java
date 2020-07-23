@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.collections.specialized.IOrderedDictionary;
 import system.collections.specialized.IOrderedDictionaryImplementation;
 
 
 /**
  * The base .NET class managing System.Web.UI.WebControls.FormViewDeletedEventArgs, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewDeletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewDeletedEventArgs</a>
  */
-public class FormViewDeletedEventArgs extends NetObject  {
+public class FormViewDeletedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.UI.WebControls.FormViewDeletedEventArgs
+     */
     public static final String className = "System.Web.UI.WebControls.FormViewDeletedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class FormViewDeletedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FormViewDeletedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static FormViewDeletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FormViewDeletedEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class FormViewDeletedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public FormViewDeletedEventArgs() throws Throwable {
+    }
 
     public FormViewDeletedEventArgs(int affectedRows, NetException e) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class FormViewDeletedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

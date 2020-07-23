@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewCellToolTipTextNeededEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewCellToolTipTextNeededEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler</a>
+ */
 public interface IDataGridViewCellToolTipTextNeededEventHandler {
     public void Invoke(NetObject sender, DataGridViewCellToolTipTextNeededEventArgs e);
 }

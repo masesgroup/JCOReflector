@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.MarkupExtension;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.reflection.Assembly;
@@ -45,12 +46,27 @@ import system.reflection.Assembly;
 
 /**
  * The base .NET class managing System.Windows.ResourceKey, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.ResourceKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.ResourceKey</a>
  */
-public class ResourceKey extends NetObject  {
+public class ResourceKey extends MarkupExtension  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.ResourceKey
+     */
     public static final String className = "System.Windows.ResourceKey";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class ResourceKey extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceKey}, a cast assert is made to check if types are compatible.
+     */
     public static ResourceKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResourceKey(from.getJCOInstance());
@@ -111,6 +129,8 @@ public class ResourceKey extends NetObject  {
 
     // Constructors section
     
+    public ResourceKey() throws Throwable {
+    }
 
     
     // Methods section

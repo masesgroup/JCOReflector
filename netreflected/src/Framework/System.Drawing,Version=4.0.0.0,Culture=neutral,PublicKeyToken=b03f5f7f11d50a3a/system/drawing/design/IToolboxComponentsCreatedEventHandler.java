@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.drawing.design.ToolboxComponentsCreatedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ToolboxComponentsCreatedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxComponentsCreatedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxComponentsCreatedEventHandler</a>
+ */
 public interface IToolboxComponentsCreatedEventHandler {
     public void Invoke(NetObject sender, ToolboxComponentsCreatedEventArgs e);
 }

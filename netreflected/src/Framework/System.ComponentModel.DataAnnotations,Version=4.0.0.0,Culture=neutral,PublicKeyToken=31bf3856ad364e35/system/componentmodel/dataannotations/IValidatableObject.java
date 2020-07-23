@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ComponentModel.DataAnnotations.IValidatableObject, System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.IValidatableObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.IValidatableObject</a>
  */
 public interface IValidatableObject extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ComponentModel.DataAnnotations
+     */
+    public static final String assemblyShortName = "System.ComponentModel.DataAnnotations";
+    /**
+     * Qualified class name: System.ComponentModel.DataAnnotations.IValidatableObject
+     */
+    public static final String className = "System.ComponentModel.DataAnnotations.IValidatableObject";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IValidatableObject}, a cast assert is made to check if types are compatible.
+     */
     public static IValidatableObject ToIValidatableObject(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.ComponentModel.DataAnnotations.IValidatableObject, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.ComponentModel.DataAnnotations"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IValidatableObjectImplementation(from.getJCOInstance());
     }

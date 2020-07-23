@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.servicemodel.channels.Message;
 
 
 /**
  * The base .NET class managing System.ServiceModel.UnknownMessageReceivedEventArgs, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.UnknownMessageReceivedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.UnknownMessageReceivedEventArgs</a>
  */
-public class UnknownMessageReceivedEventArgs extends NetObject  {
+public class UnknownMessageReceivedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.UnknownMessageReceivedEventArgs
+     */
     public static final String className = "System.ServiceModel.UnknownMessageReceivedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class UnknownMessageReceivedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnknownMessageReceivedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static UnknownMessageReceivedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UnknownMessageReceivedEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class UnknownMessageReceivedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public UnknownMessageReceivedEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

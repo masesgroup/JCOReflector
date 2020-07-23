@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.MemberDescriptor;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.ComponentChangingEventArgs, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangingEventArgs</a>
  */
-public class ComponentChangingEventArgs extends NetObject  {
+public class ComponentChangingEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ComponentChangingEventArgs
+     */
     public static final String className = "System.ComponentModel.Design.ComponentChangingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ComponentChangingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComponentChangingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ComponentChangingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ComponentChangingEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ComponentChangingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ComponentChangingEventArgs() throws Throwable {
+    }
 
     public ComponentChangingEventArgs(NetObject component, MemberDescriptor member) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class ComponentChangingEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

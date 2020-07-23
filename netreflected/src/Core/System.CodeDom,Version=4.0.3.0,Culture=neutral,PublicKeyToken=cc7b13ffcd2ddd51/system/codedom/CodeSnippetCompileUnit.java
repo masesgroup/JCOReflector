@@ -38,23 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.codedom.CodeAttributeDeclarationCollection;
-import system.codedom.CodeDirectiveCollection;
+import system.codedom.CodeCompileUnit;
 import system.codedom.CodeLinePragma;
-import system.codedom.CodeNamespaceCollection;
-import system.collections.IDictionary;
-import system.collections.IDictionaryImplementation;
-import system.collections.specialized.StringCollection;
 
 
 /**
  * The base .NET class managing System.CodeDom.CodeSnippetCompileUnit, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeSnippetCompileUnit" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeSnippetCompileUnit</a>
  */
-public class CodeSnippetCompileUnit extends NetObject  {
+public class CodeSnippetCompileUnit extends CodeCompileUnit  {
+    /**
+     * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.CodeDom
+     */
     public static final String assemblyShortName = "System.CodeDom";
+    /**
+     * Qualified class name: System.CodeDom.CodeSnippetCompileUnit
+     */
     public static final String className = "System.CodeDom.CodeSnippetCompileUnit";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +117,9 @@ public class CodeSnippetCompileUnit extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeSnippetCompileUnit}, a cast assert is made to check if types are compatible.
+     */
     public static CodeSnippetCompileUnit cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CodeSnippetCompileUnit(from.getJCOInstance());
@@ -115,7 +127,6 @@ public class CodeSnippetCompileUnit extends NetObject  {
 
     // Constructors section
     
-
     public CodeSnippetCompileUnit() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -144,39 +155,6 @@ public class CodeSnippetCompileUnit extends NetObject  {
     
     // Properties section
     
-    public CodeAttributeDeclarationCollection getAssemblyCustomAttributes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyCustomAttributes");
-            return new CodeAttributeDeclarationCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeDirectiveCollection getEndDirectives() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EndDirectives");
-            return new CodeDirectiveCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeDirectiveCollection getStartDirectives() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("StartDirectives");
-            return new CodeDirectiveCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeLinePragma getLinePragma() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -193,39 +171,6 @@ public class CodeSnippetCompileUnit extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinePragma", LinePragma == null ? null : LinePragma.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CodeNamespaceCollection getNamespaces() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
-            return new CodeNamespaceCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDictionary getUserData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
-            return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringCollection getReferencedAssemblies() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ReferencedAssemblies");
-            return new StringCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

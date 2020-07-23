@@ -37,19 +37,36 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.Array;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.Array;
 
 
 /**
  * The base .NET class managing System.Collections.IDictionary, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IDictionary</a>
  */
-public interface IDictionary extends IJCOBridgeReflected {
-
+public interface IDictionary extends IJCOBridgeReflected, ICollection, IEnumerable {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Collections.IDictionary
+     */
+    public static final String className = "System.Collections.IDictionary";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDictionary}, a cast assert is made to check if types are compatible.
+     */
     public static IDictionary ToIDictionary(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Collections.IDictionary, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IDictionaryImplementation(from.getJCOInstance());
     }
@@ -98,7 +115,6 @@ public interface IDictionary extends IJCOBridgeReflected {
 
     public void Clear() throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
 
     public void Remove(NetObject key) throws Throwable;
 
@@ -110,15 +126,9 @@ public interface IDictionary extends IJCOBridgeReflected {
 
     public boolean getIsReadOnly() throws Throwable;
 
-    public boolean getIsSynchronized() throws Throwable;
-
-    public int getCount() throws Throwable;
-
     public ICollection getKeys() throws Throwable;
 
     public ICollection getValues() throws Throwable;
-
-    public NetObject getSyncRoot() throws Throwable;
 
 
 

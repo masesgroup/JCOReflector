@@ -42,12 +42,27 @@ import system.identitymodel.tokens.SecurityToken;
 import system.servicemodel.security.tokens.IRenewedSecurityTokenHandler;
 /**
  * The base .NET class managing System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler</a>
  */
 public class RenewedSecurityTokenHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler
+     */
     public static final String className = "System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IRenewedSecurityTokenHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class RenewedSecurityTokenHandler extends JCVoidDelegate implements IJCVo
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(SecurityToken newSecurityToken, SecurityToken oldSecurityToken) throws Throwable {
+    public void METHOD_JAVA_NAME(SecurityToken newSecurityToken, SecurityToken oldSecurityToken) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class RenewedSecurityTokenHandler extends JCVoidDelegate implements IJCVo
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(SecurityToken newSecurityToken, SecurityToken oldSecurityToken) {
     }
 }

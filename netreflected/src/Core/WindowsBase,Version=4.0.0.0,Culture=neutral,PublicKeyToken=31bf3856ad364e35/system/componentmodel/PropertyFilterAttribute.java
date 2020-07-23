@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Attribute;
 import system.componentmodel.PropertyFilterOptions;
 
 
 /**
  * The base .NET class managing System.ComponentModel.PropertyFilterAttribute, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyFilterAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyFilterAttribute</a>
  */
-public class PropertyFilterAttribute extends NetObject  {
+public class PropertyFilterAttribute extends Attribute  {
+    /**
+     * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: WindowsBase
+     */
     public static final String assemblyShortName = "WindowsBase";
+    /**
+     * Qualified class name: System.ComponentModel.PropertyFilterAttribute
+     */
     public static final String className = "System.ComponentModel.PropertyFilterAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class PropertyFilterAttribute extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyFilterAttribute}, a cast assert is made to check if types are compatible.
+     */
     public static PropertyFilterAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new PropertyFilterAttribute(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class PropertyFilterAttribute extends NetObject  {
 
     // Constructors section
     
+    public PropertyFilterAttribute() throws Throwable {
+    }
 
     public PropertyFilterAttribute(PropertyFilterOptions filter) throws Throwable {
         try {
@@ -121,19 +141,10 @@ public class PropertyFilterAttribute extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public boolean IsDefaultAttribute() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean Match(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -154,17 +165,6 @@ public class PropertyFilterAttribute extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Filter");
             return new PropertyFilterOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getTypeId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
-            return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

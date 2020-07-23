@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.net.AuthenticationSchemes;
 import system.net.HttpListenerRequest;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link AuthenticationSchemeSelector}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemeSelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemeSelector</a>
+ */
 public interface IAuthenticationSchemeSelector {
     public AuthenticationSchemes Invoke(HttpListenerRequest httpRequest);
 }

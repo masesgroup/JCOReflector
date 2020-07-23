@@ -43,12 +43,27 @@ import system.servicemodel.EndpointAddress;
 import system.servicemodel.security.tokens.IIssuedSecurityTokenHandler;
 /**
  * The base .NET class managing System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler</a>
  */
 public class IssuedSecurityTokenHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler
+     */
     public static final String className = "System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IIssuedSecurityTokenHandler callerInstance = null;
@@ -150,7 +165,7 @@ public class IssuedSecurityTokenHandler extends JCVoidDelegate implements IJCVoi
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(SecurityToken issuedToken, EndpointAddress tokenRequestor) throws Throwable {
+    public void METHOD_JAVA_NAME(SecurityToken issuedToken, EndpointAddress tokenRequestor) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -160,7 +175,9 @@ public class IssuedSecurityTokenHandler extends JCVoidDelegate implements IJCVoi
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(SecurityToken issuedToken, EndpointAddress tokenRequestor) {
     }
 }

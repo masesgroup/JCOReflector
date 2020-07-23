@@ -44,12 +44,29 @@ import system.transactions.Transaction;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.IPendingWork, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.IPendingWork" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.IPendingWork</a>
  */
 public interface IPendingWork extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Runtime
+     */
+    public static final String assemblyShortName = "System.Workflow.Runtime";
+    /**
+     * Qualified class name: System.Workflow.Runtime.IPendingWork
+     */
+    public static final String className = "System.Workflow.Runtime.IPendingWork";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPendingWork}, a cast assert is made to check if types are compatible.
+     */
     public static IPendingWork ToIPendingWork(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("System.Workflow.Runtime.IPendingWork, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "System.Workflow.Runtime"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IPendingWorkImplementation(from.getJCOInstance());
     }

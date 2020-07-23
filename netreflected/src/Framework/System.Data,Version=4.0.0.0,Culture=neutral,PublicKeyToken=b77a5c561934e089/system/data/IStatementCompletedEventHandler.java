@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.StatementCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link StatementCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.StatementCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.StatementCompletedEventHandler</a>
+ */
 public interface IStatementCompletedEventHandler {
     public void Invoke(NetObject sender, StatementCompletedEventArgs e);
 }

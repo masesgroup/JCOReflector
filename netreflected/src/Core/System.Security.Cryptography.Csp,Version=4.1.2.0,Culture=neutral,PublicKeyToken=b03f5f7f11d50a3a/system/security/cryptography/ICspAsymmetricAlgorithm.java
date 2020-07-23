@@ -42,12 +42,29 @@ import system.security.cryptography.CspKeyContainerInfo;
 
 /**
  * The base .NET class managing System.Security.Cryptography.ICspAsymmetricAlgorithm, System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ICspAsymmetricAlgorithm" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ICspAsymmetricAlgorithm</a>
  */
 public interface ICspAsymmetricAlgorithm extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Cryptography.Csp
+     */
+    public static final String assemblyShortName = "System.Security.Cryptography.Csp";
+    /**
+     * Qualified class name: System.Security.Cryptography.ICspAsymmetricAlgorithm
+     */
+    public static final String className = "System.Security.Cryptography.ICspAsymmetricAlgorithm";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICspAsymmetricAlgorithm}, a cast assert is made to check if types are compatible.
+     */
     public static ICspAsymmetricAlgorithm ToICspAsymmetricAlgorithm(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Security.Cryptography.ICspAsymmetricAlgorithm, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Security.Cryptography.Csp"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICspAsymmetricAlgorithmImplementation(from.getJCOInstance());
     }
@@ -93,6 +110,8 @@ public interface ICspAsymmetricAlgorithm extends IJCOBridgeReflected {
     public byte[] ExportCspBlob(boolean includePrivateParameters) throws Throwable;
 
     public void ImportCspBlob(byte[] rawData) throws Throwable;
+
+    public void ImportCspBlob(JCRefOut dupParam0) throws Throwable;
 
 
     

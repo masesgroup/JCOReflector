@@ -38,21 +38,35 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.tracking.WorkflowInstanceRecord;
 import system.Guid;
 import system.activities.tracking.ActivityInfo;
 import system.activities.WorkflowIdentity;
-import system.DateTime;
-import system.diagnostics.TraceLevel;
 
 
 /**
  * The base .NET class managing System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord</a>
  */
-public class WorkflowInstanceUnhandledExceptionRecord extends NetObject  {
+public class WorkflowInstanceUnhandledExceptionRecord extends WorkflowInstanceRecord  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord
+     */
     public static final String className = "System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +119,9 @@ public class WorkflowInstanceUnhandledExceptionRecord extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowInstanceUnhandledExceptionRecord}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowInstanceUnhandledExceptionRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowInstanceUnhandledExceptionRecord(from.getJCOInstance());
@@ -113,6 +129,8 @@ public class WorkflowInstanceUnhandledExceptionRecord extends NetObject  {
 
     // Constructors section
     
+    public WorkflowInstanceUnhandledExceptionRecord() throws Throwable {
+    }
 
     public WorkflowInstanceUnhandledExceptionRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, ActivityInfo faultSource, NetException exception) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         try {
@@ -155,6 +173,7 @@ public class WorkflowInstanceUnhandledExceptionRecord extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -162,26 +181,6 @@ public class WorkflowInstanceUnhandledExceptionRecord extends NetObject  {
     
     // Properties section
     
-    public long getRecordNumber() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (long)classInstance.Get("RecordNumber");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setRecordNumber(long RecordNumber) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("RecordNumber", RecordNumber);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ActivityInfo getFaultSource() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -203,59 +202,6 @@ public class WorkflowInstanceUnhandledExceptionRecord extends NetObject  {
         }
     }
 
-    public WorkflowIdentity getWorkflowDefinitionIdentity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowDefinitionIdentity");
-            return new WorkflowIdentity(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setWorkflowDefinitionIdentity(WorkflowIdentity WorkflowDefinitionIdentity) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("WorkflowDefinitionIdentity", WorkflowDefinitionIdentity == null ? null : WorkflowDefinitionIdentity.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime getEventTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventTime");
-            return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TraceLevel getLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Level");
-            return new TraceLevel(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLevel(TraceLevel Level) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Level", Level == null ? null : Level.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetException getUnhandledException() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -272,47 +218,6 @@ public class WorkflowInstanceUnhandledExceptionRecord extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnhandledException", UnhandledException == null ? null : UnhandledException.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Guid getInstanceId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setInstanceId(Guid InstanceId) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("InstanceId", InstanceId == null ? null : InstanceId.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getActivityDefinitionId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ActivityDefinitionId");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("State");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

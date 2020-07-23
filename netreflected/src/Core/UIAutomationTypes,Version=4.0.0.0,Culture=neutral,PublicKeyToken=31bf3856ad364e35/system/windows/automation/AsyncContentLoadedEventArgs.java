@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.automation.AutomationEventArgs;
 import system.windows.automation.AsyncContentLoadedState;
-import system.windows.automation.AutomationEvent;
 
 
 /**
  * The base .NET class managing System.Windows.Automation.AsyncContentLoadedEventArgs, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AsyncContentLoadedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AsyncContentLoadedEventArgs</a>
  */
-public class AsyncContentLoadedEventArgs extends NetObject  {
+public class AsyncContentLoadedEventArgs extends AutomationEventArgs  {
+    /**
+     * Fully assembly qualified name: UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationTypes
+     */
     public static final String assemblyShortName = "UIAutomationTypes";
+    /**
+     * Qualified class name: System.Windows.Automation.AsyncContentLoadedEventArgs
+     */
     public static final String className = "System.Windows.Automation.AsyncContentLoadedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class AsyncContentLoadedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncContentLoadedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static AsyncContentLoadedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AsyncContentLoadedEventArgs(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class AsyncContentLoadedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public AsyncContentLoadedEventArgs() throws Throwable {
+    }
 
     public AsyncContentLoadedEventArgs(AsyncContentLoadedState asyncContentState, double percentComplete) throws Throwable {
         try {
@@ -120,6 +139,7 @@ public class AsyncContentLoadedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -145,17 +165,6 @@ public class AsyncContentLoadedEventArgs extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("AsyncContentLoadedState");
             return new AsyncContentLoadedState(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AutomationEvent getEventId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("EventId");
-            return new AutomationEvent(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

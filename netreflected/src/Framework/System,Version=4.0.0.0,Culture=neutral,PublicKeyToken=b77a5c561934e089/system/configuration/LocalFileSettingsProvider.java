@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.SettingsProvider;
 import system.configuration.SettingsPropertyValue;
 import system.configuration.SettingsContext;
 import system.configuration.SettingsProperty;
@@ -48,12 +49,27 @@ import system.collections.specialized.NameValueCollection;
 
 /**
  * The base .NET class managing System.Configuration.LocalFileSettingsProvider, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.LocalFileSettingsProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.LocalFileSettingsProvider</a>
  */
-public class LocalFileSettingsProvider extends NetObject  {
+public class LocalFileSettingsProvider extends SettingsProvider  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Configuration.LocalFileSettingsProvider
+     */
     public static final String className = "System.Configuration.LocalFileSettingsProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +122,9 @@ public class LocalFileSettingsProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link LocalFileSettingsProvider}, a cast assert is made to check if types are compatible.
+     */
     public static LocalFileSettingsProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new LocalFileSettingsProvider(from.getJCOInstance());
@@ -114,7 +132,6 @@ public class LocalFileSettingsProvider extends NetObject  {
 
     // Constructors section
     
-
     public LocalFileSettingsProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -195,46 +212,6 @@ public class LocalFileSettingsProvider extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getApplicationName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ApplicationName", ApplicationName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

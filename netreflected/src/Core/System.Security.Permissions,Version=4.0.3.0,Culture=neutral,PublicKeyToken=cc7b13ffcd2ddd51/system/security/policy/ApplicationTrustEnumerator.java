@@ -44,10 +44,22 @@ import system.security.policy.ApplicationTrust;
 
 /**
  * The base .NET class managing System.Security.Policy.ApplicationTrustEnumerator, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ApplicationTrustEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ApplicationTrustEnumerator</a>
  */
 public class ApplicationTrustEnumerator extends NetObject implements Iterator<ApplicationTrust> {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Policy.ApplicationTrustEnumerator
+     */
     public static final String className = "System.Security.Policy.ApplicationTrustEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class ApplicationTrustEnumerator extends NetObject implements Iterator<Ap
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public ApplicationTrust next() {
+	public final ApplicationTrust next() {
 		try {
 			return new ApplicationTrust(classInstance.next());
 		} catch (Throwable jce) {

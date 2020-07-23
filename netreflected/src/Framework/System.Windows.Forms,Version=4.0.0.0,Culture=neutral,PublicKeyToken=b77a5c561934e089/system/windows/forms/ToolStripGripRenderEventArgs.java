@@ -38,9 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.ToolStripRenderEventArgs;
 import system.drawing.Graphics;
 import system.windows.forms.ToolStrip;
-import system.drawing.Color;
 import system.drawing.Rectangle;
 import system.windows.forms.ToolStripGripDisplayStyle;
 import system.windows.forms.ToolStripGripStyle;
@@ -48,12 +48,27 @@ import system.windows.forms.ToolStripGripStyle;
 
 /**
  * The base .NET class managing System.Windows.Forms.ToolStripGripRenderEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripGripRenderEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripGripRenderEventArgs</a>
  */
-public class ToolStripGripRenderEventArgs extends NetObject  {
+public class ToolStripGripRenderEventArgs extends ToolStripRenderEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ToolStripGripRenderEventArgs
+     */
     public static final String className = "System.Windows.Forms.ToolStripGripRenderEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ToolStripGripRenderEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripGripRenderEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ToolStripGripRenderEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ToolStripGripRenderEventArgs(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class ToolStripGripRenderEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ToolStripGripRenderEventArgs() throws Throwable {
+    }
 
     public ToolStripGripRenderEventArgs(Graphics g, ToolStrip toolStrip) throws Throwable {
         try {
@@ -126,6 +145,7 @@ public class ToolStripGripRenderEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -133,67 +153,12 @@ public class ToolStripGripRenderEventArgs extends NetObject  {
     
     // Properties section
     
-    public Color getBackColor() throws Throwable, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
-            return new Color(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Graphics getGraphics() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
-            return new Graphics(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Rectangle getAffectedBounds() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AffectedBounds");
-            return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Rectangle getConnectedArea() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ConnectedArea");
-            return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Rectangle getGripBounds() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("GripBounds");
             return new Rectangle(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ToolStrip getToolStrip() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ToolStrip");
-            return new ToolStrip(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

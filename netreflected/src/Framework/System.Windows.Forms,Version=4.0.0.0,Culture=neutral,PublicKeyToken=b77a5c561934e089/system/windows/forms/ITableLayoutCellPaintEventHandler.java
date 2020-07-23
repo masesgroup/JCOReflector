@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.TableLayoutCellPaintEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TableLayoutCellPaintEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventHandler</a>
+ */
 public interface ITableLayoutCellPaintEventHandler {
     public void Invoke(NetObject sender, TableLayoutCellPaintEventArgs e);
 }

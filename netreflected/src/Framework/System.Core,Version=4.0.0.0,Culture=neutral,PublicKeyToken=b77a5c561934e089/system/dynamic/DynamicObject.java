@@ -56,12 +56,27 @@ import system.linq.expressions.Expression;
 
 /**
  * The base .NET class managing System.Dynamic.DynamicObject, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.DynamicObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.DynamicObject</a>
  */
 public class DynamicObject extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Dynamic.DynamicObject
+     */
     public static final String className = "System.Dynamic.DynamicObject";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -114,7 +129,9 @@ public class DynamicObject extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicObject}, a cast assert is made to check if types are compatible.
+     */
     public static DynamicObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DynamicObject(from.getJCOInstance());
@@ -122,6 +139,10 @@ public class DynamicObject extends NetObject  {
 
     // Constructors section
     
+    public DynamicObject() throws Throwable {
+    }
+
+
 
     
     // Methods section

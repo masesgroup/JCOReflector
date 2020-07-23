@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Design.DesignerEventArgs, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerEventArgs</a>
  */
-public class DesignerEventArgs extends NetObject  {
+public class DesignerEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.TypeConverter
+     */
     public static final String assemblyShortName = "System.ComponentModel.TypeConverter";
+    /**
+     * Qualified class name: System.ComponentModel.Design.DesignerEventArgs
+     */
     public static final String className = "System.ComponentModel.Design.DesignerEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DesignerEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DesignerEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DesignerEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class DesignerEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DesignerEventArgs() throws Throwable {
+    }
 
     public DesignerEventArgs(IDesignerHost host) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class DesignerEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

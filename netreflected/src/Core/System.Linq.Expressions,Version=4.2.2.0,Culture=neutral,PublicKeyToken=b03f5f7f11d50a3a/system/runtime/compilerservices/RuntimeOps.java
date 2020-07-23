@@ -46,12 +46,27 @@ import system.runtime.compilerservices.IRuntimeVariablesImplementation;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.RuntimeOps, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.RuntimeOps" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.RuntimeOps</a>
  */
 public class RuntimeOps extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Linq.Expressions
+     */
     public static final String assemblyShortName = "System.Linq.Expressions";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.RuntimeOps
+     */
     public static final String className = "System.Runtime.CompilerServices.RuntimeOps";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class RuntimeOps extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuntimeOps}, a cast assert is made to check if types are compatible.
+     */
     public static RuntimeOps cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RuntimeOps(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class RuntimeOps extends NetObject  {
 
     // Constructors section
     
+    public RuntimeOps() throws Throwable {
+    }
 
     
     // Methods section
@@ -180,11 +199,33 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    public static IRuntimeVariables CreateRuntimeVariables(NetObject[] dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateRuntimeVariables = (JCObject)classType.Invoke("CreateRuntimeVariables", toObjectFromArray(dupParam0), dupParam1);
+            return new IRuntimeVariablesImplementation(objCreateRuntimeVariables);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables first, IRuntimeVariables second, int[] indexes) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objMergeRuntimeVariables = (JCObject)classType.Invoke("MergeRuntimeVariables", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), indexes);
+            return new IRuntimeVariablesImplementation(objMergeRuntimeVariables);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables dupParam0, IRuntimeVariables dupParam1, JCRefOut dupParam2) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMergeRuntimeVariables = (JCObject)classType.Invoke("MergeRuntimeVariables", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
             return new IRuntimeVariablesImplementation(objMergeRuntimeVariables);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

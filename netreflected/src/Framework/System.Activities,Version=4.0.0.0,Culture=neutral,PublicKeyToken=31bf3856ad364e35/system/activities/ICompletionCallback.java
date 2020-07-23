@@ -40,7 +40,12 @@ import org.mases.jcobridge.netreflection.*;
 import system.activities.NativeActivityContext;
 import system.activities.ActivityInstance;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CompletionCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.CompletionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.CompletionCallback</a>
+ */
 public interface ICompletionCallback {
     public void Invoke(NativeActivityContext context, ActivityInstance completedInstance);
 }

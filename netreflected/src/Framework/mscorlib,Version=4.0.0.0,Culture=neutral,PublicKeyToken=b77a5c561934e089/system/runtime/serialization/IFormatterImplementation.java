@@ -47,12 +47,27 @@ import system.runtime.serialization.StreamingContext;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.IFormatter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.IFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.IFormatter</a>
  */
 public class IFormatterImplementation extends NetObject implements IFormatter {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.IFormatter
+     */
     public static final String className = "System.Runtime.Serialization.IFormatter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class IFormatterImplementation extends NetObject implements IFormatter {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFormatter}, a cast assert is made to check if types are compatible.
+     */
     public static IFormatter ToIFormatter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IFormatterImplementation(from.getJCOInstance());

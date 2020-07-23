@@ -44,12 +44,27 @@ import system.windows.controls.ListView;
 
 /**
  * The base .NET class managing System.Windows.Automation.Peers.GridViewAutomationPeer, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.GridViewAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.GridViewAutomationPeer</a>
  */
 public class GridViewAutomationPeer extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Automation.Peers.GridViewAutomationPeer
+     */
     public static final String className = "System.Windows.Automation.Peers.GridViewAutomationPeer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class GridViewAutomationPeer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GridViewAutomationPeer}, a cast assert is made to check if types are compatible.
+     */
     public static GridViewAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GridViewAutomationPeer(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class GridViewAutomationPeer extends NetObject  {
 
     // Constructors section
     
+    public GridViewAutomationPeer() throws Throwable {
+    }
 
     public GridViewAutomationPeer(GridView owner, ListView listview) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.OutOfMemoryException {
         try {
@@ -120,6 +139,7 @@ public class GridViewAutomationPeer extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

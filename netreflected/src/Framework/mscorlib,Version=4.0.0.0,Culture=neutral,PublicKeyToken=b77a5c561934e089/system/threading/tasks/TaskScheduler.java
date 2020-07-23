@@ -43,12 +43,27 @@ import system.threading.tasks.TaskScheduler;
 
 /**
  * The base .NET class managing System.Threading.Tasks.TaskScheduler, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.TaskScheduler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.TaskScheduler</a>
  */
 public class TaskScheduler extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Threading.Tasks.TaskScheduler
+     */
     public static final String className = "System.Threading.Tasks.TaskScheduler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class TaskScheduler extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TaskScheduler}, a cast assert is made to check if types are compatible.
+     */
     public static TaskScheduler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TaskScheduler(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class TaskScheduler extends NetObject  {
 
     // Constructors section
     
+    public TaskScheduler() throws Throwable {
+    }
 
     
     // Methods section
@@ -148,22 +167,22 @@ public class TaskScheduler extends NetObject  {
         }
     }
 
-    public static TaskScheduler getCurrent() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TaskScheduler getCurrent() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            JCObject val = (JCObject)classInstance.Get("Current");
             return new TaskScheduler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static TaskScheduler getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public TaskScheduler getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new TaskScheduler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

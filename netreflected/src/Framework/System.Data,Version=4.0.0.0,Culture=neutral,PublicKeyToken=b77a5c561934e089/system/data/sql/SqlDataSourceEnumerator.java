@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.DbDataSourceEnumerator;
 import system.data.DataTable;
 import system.data.sql.SqlDataSourceEnumerator;
 
 
 /**
  * The base .NET class managing System.Data.Sql.SqlDataSourceEnumerator, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Sql.SqlDataSourceEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Sql.SqlDataSourceEnumerator</a>
  */
-public class SqlDataSourceEnumerator extends NetObject  {
+public class SqlDataSourceEnumerator extends DbDataSourceEnumerator  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.Sql.SqlDataSourceEnumerator
+     */
     public static final String className = "System.Data.Sql.SqlDataSourceEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SqlDataSourceEnumerator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlDataSourceEnumerator}, a cast assert is made to check if types are compatible.
+     */
     public static SqlDataSourceEnumerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SqlDataSourceEnumerator(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class SqlDataSourceEnumerator extends NetObject  {
 
     // Constructors section
     
+    public SqlDataSourceEnumerator() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -129,11 +151,11 @@ public class SqlDataSourceEnumerator extends NetObject  {
     
     // Properties section
     
-    public static SqlDataSourceEnumerator getInstance() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public SqlDataSourceEnumerator getInstance() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Instance");
+            JCObject val = (JCObject)classInstance.Get("Instance");
             return new SqlDataSourceEnumerator(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

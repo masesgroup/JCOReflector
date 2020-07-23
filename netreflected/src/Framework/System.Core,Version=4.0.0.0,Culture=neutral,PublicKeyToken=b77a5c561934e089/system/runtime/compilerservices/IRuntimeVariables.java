@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.CompilerServices.IRuntimeVariables, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IRuntimeVariables" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.IRuntimeVariables</a>
  */
 public interface IRuntimeVariables extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
+    public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Runtime.CompilerServices.IRuntimeVariables
+     */
+    public static final String className = "System.Runtime.CompilerServices.IRuntimeVariables";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRuntimeVariables}, a cast assert is made to check if types are compatible.
+     */
     public static IRuntimeVariables ToIRuntimeVariables(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.CompilerServices.IRuntimeVariables, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Core"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IRuntimeVariablesImplementation(from.getJCOInstance());
     }

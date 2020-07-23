@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.xml.xsl.runtime.IteratorResult;
 import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.runtime.XmlNavigatorFilter;
@@ -45,12 +46,27 @@ import system.xml.xsl.runtime.XmlNavigatorFilter;
 
 /**
  * The base .NET class managing System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator</a>
  */
-public class FollowingSiblingMergeIterator extends NetObject  {
+public class FollowingSiblingMergeIterator extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Private.Xml
+     */
     public static final String assemblyShortName = "System.Private.Xml";
+    /**
+     * Qualified class name: System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator
+     */
     public static final String className = "System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class FollowingSiblingMergeIterator extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link FollowingSiblingMergeIterator}, a cast assert is made to check if types are compatible.
+     */
     public static FollowingSiblingMergeIterator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new FollowingSiblingMergeIterator(from.getJCOInstance());
@@ -111,6 +129,10 @@ public class FollowingSiblingMergeIterator extends NetObject  {
 
     // Constructors section
     
+    public FollowingSiblingMergeIterator() throws Throwable {
+    }
+
+
 
     
     // Methods section

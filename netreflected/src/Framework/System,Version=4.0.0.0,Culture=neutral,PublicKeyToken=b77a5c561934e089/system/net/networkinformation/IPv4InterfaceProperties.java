@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Net.NetworkInformation.IPv4InterfaceProperties, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties</a>
  */
 public class IPv4InterfaceProperties extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.NetworkInformation.IPv4InterfaceProperties
+     */
     public static final String className = "System.Net.NetworkInformation.IPv4InterfaceProperties";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class IPv4InterfaceProperties extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPv4InterfaceProperties}, a cast assert is made to check if types are compatible.
+     */
     public static IPv4InterfaceProperties cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IPv4InterfaceProperties(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class IPv4InterfaceProperties extends NetObject  {
 
     // Constructors section
     
+    public IPv4InterfaceProperties() throws Throwable {
+    }
 
     
     // Methods section

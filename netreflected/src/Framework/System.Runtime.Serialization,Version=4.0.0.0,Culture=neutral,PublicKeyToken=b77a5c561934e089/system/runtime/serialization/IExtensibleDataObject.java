@@ -42,12 +42,29 @@ import system.runtime.serialization.ExtensionDataObject;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.IExtensibleDataObject, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.IExtensibleDataObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.IExtensibleDataObject</a>
  */
 public interface IExtensibleDataObject extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Runtime.Serialization
+     */
+    public static final String assemblyShortName = "System.Runtime.Serialization";
+    /**
+     * Qualified class name: System.Runtime.Serialization.IExtensibleDataObject
+     */
+    public static final String className = "System.Runtime.Serialization.IExtensibleDataObject";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExtensibleDataObject}, a cast assert is made to check if types are compatible.
+     */
     public static IExtensibleDataObject ToIExtensibleDataObject(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Serialization.IExtensibleDataObject, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Runtime.Serialization"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IExtensibleDataObjectImplementation(from.getJCOInstance());
     }

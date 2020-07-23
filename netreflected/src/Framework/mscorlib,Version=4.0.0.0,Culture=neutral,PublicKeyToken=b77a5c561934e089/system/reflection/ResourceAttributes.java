@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.ResourceAttributes, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ResourceAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ResourceAttributes</a>
  */
 public class ResourceAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Reflection.ResourceAttributes
+     */
     public static final String className = "System.Reflection.ResourceAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class ResourceAttributes extends NetObject  {
 
     // Flags management section
 
-    public ResourceAttributes add(ResourceAttributes val) throws Throwable {
+    public final ResourceAttributes add(ResourceAttributes val) throws Throwable {
         return new ResourceAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ResourceAttributes remove(ResourceAttributes val) throws Throwable {
+    public final ResourceAttributes remove(ResourceAttributes val) throws Throwable {
         return new ResourceAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ResourceAttributes val) throws Throwable {
+    public final boolean is(ResourceAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ResourceAttributes val) throws Throwable {
+    public final boolean has(ResourceAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

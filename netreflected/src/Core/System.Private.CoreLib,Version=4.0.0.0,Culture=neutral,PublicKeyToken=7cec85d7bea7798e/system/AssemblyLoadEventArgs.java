@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.reflection.Assembly;
 
 
 /**
  * The base .NET class managing System.AssemblyLoadEventArgs, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.AssemblyLoadEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.AssemblyLoadEventArgs</a>
  */
-public class AssemblyLoadEventArgs extends NetObject  {
+public class AssemblyLoadEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.AssemblyLoadEventArgs
+     */
     public static final String className = "System.AssemblyLoadEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class AssemblyLoadEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyLoadEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static AssemblyLoadEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AssemblyLoadEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class AssemblyLoadEventArgs extends NetObject  {
 
     // Constructors section
     
+    public AssemblyLoadEventArgs() throws Throwable {
+    }
 
     public AssemblyLoadEventArgs(Assembly loadedAssembly) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class AssemblyLoadEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

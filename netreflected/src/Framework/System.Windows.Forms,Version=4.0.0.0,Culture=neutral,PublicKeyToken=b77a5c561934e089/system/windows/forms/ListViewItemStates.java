@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Forms.ListViewItemStates, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemStates" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemStates</a>
  */
 public class ListViewItemStates extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ListViewItemStates
+     */
     public static final String className = "System.Windows.Forms.ListViewItemStates";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -145,19 +160,19 @@ public class ListViewItemStates extends NetObject  {
 
     // Flags management section
 
-    public ListViewItemStates add(ListViewItemStates val) throws Throwable {
+    public final ListViewItemStates add(ListViewItemStates val) throws Throwable {
         return new ListViewItemStates(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ListViewItemStates remove(ListViewItemStates val) throws Throwable {
+    public final ListViewItemStates remove(ListViewItemStates val) throws Throwable {
         return new ListViewItemStates(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ListViewItemStates val) throws Throwable {
+    public final boolean is(ListViewItemStates val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ListViewItemStates val) throws Throwable {
+    public final boolean has(ListViewItemStates val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

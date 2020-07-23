@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.jscript.BinaryOp;
 
 
 /**
  * The base .NET class managing Microsoft.JScript.StrictEquality, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.StrictEquality" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.StrictEquality</a>
  */
-public class StrictEquality extends NetObject  {
+public class StrictEquality extends BinaryOp  {
+    /**
+     * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.JScript
+     */
     public static final String assemblyShortName = "Microsoft.JScript";
+    /**
+     * Qualified class name: Microsoft.JScript.StrictEquality
+     */
     public static final String className = "Microsoft.JScript.StrictEquality";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class StrictEquality extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StrictEquality}, a cast assert is made to check if types are compatible.
+     */
     public static StrictEquality cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StrictEquality(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class StrictEquality extends NetObject  {
 
     // Constructors section
     
+    public StrictEquality() throws Throwable {
+    }
+
+
 
     
     // Methods section

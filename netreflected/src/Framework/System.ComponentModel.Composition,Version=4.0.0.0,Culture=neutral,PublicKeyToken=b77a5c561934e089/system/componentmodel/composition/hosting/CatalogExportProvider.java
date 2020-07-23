@@ -38,21 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.composition.hosting.ExportProvider;
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
 import system.componentmodel.composition.hosting.CompositionOptions;
-import system.componentmodel.composition.primitives.ImportDefinition;
-import system.componentmodel.composition.hosting.AtomicComposition;
-import system.componentmodel.composition.hosting.ExportProvider;
 
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.CatalogExportProvider, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CatalogExportProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CatalogExportProvider</a>
  */
-public class CatalogExportProvider extends NetObject  {
+public class CatalogExportProvider extends ExportProvider  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.CatalogExportProvider
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.CatalogExportProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +118,9 @@ public class CatalogExportProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CatalogExportProvider}, a cast assert is made to check if types are compatible.
+     */
     public static CatalogExportProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CatalogExportProvider(from.getJCOInstance());
@@ -113,6 +128,8 @@ public class CatalogExportProvider extends NetObject  {
 
     // Constructors section
     
+    public CatalogExportProvider() throws Throwable {
+    }
 
     public CatalogExportProvider(ComposablePartCatalog catalog) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.NotSupportedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
         try {
@@ -145,9 +162,20 @@ public class CatalogExportProvider extends NetObject  {
     }
 
 
+
     
     // Methods section
     
+    public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

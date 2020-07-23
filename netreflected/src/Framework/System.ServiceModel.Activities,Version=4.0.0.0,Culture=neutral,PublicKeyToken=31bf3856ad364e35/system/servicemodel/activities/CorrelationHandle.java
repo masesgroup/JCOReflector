@@ -38,17 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.activities.ActivityInstance;
+import system.activities.Handle;
 
 
 /**
  * The base .NET class managing System.ServiceModel.Activities.CorrelationHandle, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.CorrelationHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.CorrelationHandle</a>
  */
-public class CorrelationHandle extends NetObject  {
+public class CorrelationHandle extends Handle  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ServiceModel.Activities
+     */
     public static final String assemblyShortName = "System.ServiceModel.Activities";
+    /**
+     * Qualified class name: System.ServiceModel.Activities.CorrelationHandle
+     */
     public static final String className = "System.ServiceModel.Activities.CorrelationHandle";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class CorrelationHandle extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CorrelationHandle}, a cast assert is made to check if types are compatible.
+     */
     public static CorrelationHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CorrelationHandle(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class CorrelationHandle extends NetObject  {
 
     // Constructors section
     
-
     public CorrelationHandle() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -128,27 +144,6 @@ public class CorrelationHandle extends NetObject  {
     
     // Properties section
     
-    public ActivityInstance getOwner() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
-            return new ActivityInstance(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getExecutionPropertyName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ExecutionPropertyName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

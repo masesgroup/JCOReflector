@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DrawItemEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DrawItemEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawItemEventHandler</a>
+ */
 public interface IDrawItemEventHandler {
     public void Invoke(NetObject sender, DrawItemEventArgs e);
 }

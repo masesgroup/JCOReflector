@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Permissions.ReflectionPermissionFlag, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.ReflectionPermissionFlag" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.ReflectionPermissionFlag</a>
  */
 public class ReflectionPermissionFlag extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Permissions
+     */
     public static final String assemblyShortName = "System.Security.Permissions";
+    /**
+     * Qualified class name: System.Security.Permissions.ReflectionPermissionFlag
+     */
     public static final String className = "System.Security.Permissions.ReflectionPermissionFlag";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class ReflectionPermissionFlag extends NetObject  {
 
     // Flags management section
 
-    public ReflectionPermissionFlag add(ReflectionPermissionFlag val) throws Throwable {
+    public final ReflectionPermissionFlag add(ReflectionPermissionFlag val) throws Throwable {
         return new ReflectionPermissionFlag(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ReflectionPermissionFlag remove(ReflectionPermissionFlag val) throws Throwable {
+    public final ReflectionPermissionFlag remove(ReflectionPermissionFlag val) throws Throwable {
         return new ReflectionPermissionFlag(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ReflectionPermissionFlag val) throws Throwable {
+    public final boolean is(ReflectionPermissionFlag val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ReflectionPermissionFlag val) throws Throwable {
+    public final boolean has(ReflectionPermissionFlag val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

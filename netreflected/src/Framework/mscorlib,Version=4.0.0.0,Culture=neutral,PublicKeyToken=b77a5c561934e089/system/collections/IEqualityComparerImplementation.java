@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Collections.IEqualityComparer, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEqualityComparer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEqualityComparer</a>
  */
 public class IEqualityComparerImplementation extends NetObject implements IEqualityComparer {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Collections.IEqualityComparer
+     */
     public static final String className = "System.Collections.IEqualityComparer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IEqualityComparerImplementation extends NetObject implements IEqual
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEqualityComparer}, a cast assert is made to check if types are compatible.
+     */
     public static IEqualityComparer ToIEqualityComparer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IEqualityComparerImplementation(from.getJCOInstance());

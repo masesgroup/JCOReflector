@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.DbProviderFactory;
 import system.data.common.DbCommand;
 import system.data.common.DbCommandBuilder;
 import system.data.common.DbConnection;
 import system.data.common.DbConnectionStringBuilder;
 import system.data.common.DbDataAdapter;
-import system.data.common.DbDataSourceEnumerator;
 import system.data.common.DbParameter;
 import system.security.CodeAccessPermission;
 import system.security.permissions.PermissionState;
@@ -51,12 +51,27 @@ import system.security.permissions.PermissionState;
 
 /**
  * The base .NET class managing System.Data.EntityClient.EntityProviderFactory, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.EntityClient.EntityProviderFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.EntityClient.EntityProviderFactory</a>
  */
-public class EntityProviderFactory extends NetObject  {
+public class EntityProviderFactory extends DbProviderFactory  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.EntityClient.EntityProviderFactory
+     */
     public static final String className = "System.Data.EntityClient.EntityProviderFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class EntityProviderFactory extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityProviderFactory}, a cast assert is made to check if types are compatible.
+     */
     public static EntityProviderFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EntityProviderFactory(from.getJCOInstance());
@@ -117,6 +134,10 @@ public class EntityProviderFactory extends NetObject  {
 
     // Constructors section
     
+    public EntityProviderFactory() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -176,17 +197,6 @@ public class EntityProviderFactory extends NetObject  {
         }
     }
 
-    public DbDataSourceEnumerator CreateDataSourceEnumerator() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateDataSourceEnumerator = (JCObject)classInstance.Invoke("CreateDataSourceEnumerator");
-            return new DbDataSourceEnumerator(objCreateDataSourceEnumerator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DbParameter CreateParameter() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -213,16 +223,6 @@ public class EntityProviderFactory extends NetObject  {
     
     // Properties section
     
-    public boolean getCanCreateDataSourceEnumerator() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("CanCreateDataSourceEnumerator");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

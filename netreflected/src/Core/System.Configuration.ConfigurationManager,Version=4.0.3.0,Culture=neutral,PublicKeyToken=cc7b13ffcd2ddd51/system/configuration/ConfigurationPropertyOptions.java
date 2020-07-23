@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Configuration.ConfigurationPropertyOptions, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyOptions</a>
  */
 public class ConfigurationPropertyOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.ConfigurationPropertyOptions
+     */
     public static final String className = "System.Configuration.ConfigurationPropertyOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -143,19 +158,19 @@ public class ConfigurationPropertyOptions extends NetObject  {
 
     // Flags management section
 
-    public ConfigurationPropertyOptions add(ConfigurationPropertyOptions val) throws Throwable {
+    public final ConfigurationPropertyOptions add(ConfigurationPropertyOptions val) throws Throwable {
         return new ConfigurationPropertyOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ConfigurationPropertyOptions remove(ConfigurationPropertyOptions val) throws Throwable {
+    public final ConfigurationPropertyOptions remove(ConfigurationPropertyOptions val) throws Throwable {
         return new ConfigurationPropertyOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ConfigurationPropertyOptions val) throws Throwable {
+    public final boolean is(ConfigurationPropertyOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ConfigurationPropertyOptions val) throws Throwable {
+    public final boolean has(ConfigurationPropertyOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

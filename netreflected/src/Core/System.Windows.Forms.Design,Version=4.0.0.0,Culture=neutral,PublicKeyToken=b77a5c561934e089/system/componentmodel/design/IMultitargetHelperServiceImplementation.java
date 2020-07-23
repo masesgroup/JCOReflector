@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IMultitargetHelperService, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService</a>
  */
 public class IMultitargetHelperServiceImplementation extends NetObject implements IMultitargetHelperService {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IMultitargetHelperService
+     */
     public static final String className = "System.ComponentModel.Design.IMultitargetHelperService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class IMultitargetHelperServiceImplementation extends NetObject implement
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMultitargetHelperService}, a cast assert is made to check if types are compatible.
+     */
     public static IMultitargetHelperService ToIMultitargetHelperService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IMultitargetHelperServiceImplementation(from.getJCOInstance());

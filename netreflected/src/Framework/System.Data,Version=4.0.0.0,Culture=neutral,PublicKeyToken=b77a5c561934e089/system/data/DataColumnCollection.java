@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.InternalDataCollectionBase;
 import system.data.DataColumn;
-import system.Array;
 import system.componentmodel.CollectionChangeEventHandler;
 
 
 /**
  * The base .NET class managing System.Data.DataColumnCollection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataColumnCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataColumnCollection</a>
  */
-public class DataColumnCollection extends NetObject  {
+public class DataColumnCollection extends InternalDataCollectionBase  {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.DataColumnCollection
+     */
     public static final String className = "System.Data.DataColumnCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class DataColumnCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataColumnCollection}, a cast assert is made to check if types are compatible.
+     */
     public static DataColumnCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataColumnCollection(from.getJCOInstance());
@@ -111,6 +128,10 @@ public class DataColumnCollection extends NetObject  {
 
     // Constructors section
     
+    public DataColumnCollection() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -155,7 +176,7 @@ public class DataColumnCollection extends NetObject  {
         }
     }
 
-    public DataColumn Add() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException {
+    public DataColumn Add() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -166,7 +187,7 @@ public class DataColumnCollection extends NetObject  {
         }
     }
 
-    public DataColumn Add(java.lang.String columnName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException {
+    public DataColumn Add(java.lang.String columnName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -177,7 +198,7 @@ public class DataColumnCollection extends NetObject  {
         }
     }
 
-    public DataColumn Add(java.lang.String columnName, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException {
+    public DataColumn Add(java.lang.String columnName, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -188,7 +209,7 @@ public class DataColumnCollection extends NetObject  {
         }
     }
 
-    public DataColumn Add(java.lang.String columnName, NetType type, java.lang.String expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException {
+    public DataColumn Add(java.lang.String columnName, NetType type, java.lang.String expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -224,16 +245,6 @@ public class DataColumnCollection extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void CopyTo(Array ar, int index) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("CopyTo", ar == null ? null : ar.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,47 +294,6 @@ public class DataColumnCollection extends NetObject  {
     
     // Properties section
     
-    public boolean getIsReadOnly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsReadOnly");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSynchronized() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSynchronized");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getSyncRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

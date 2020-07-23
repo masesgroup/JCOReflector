@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Media.TextFormatting.InvertAxes, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.InvertAxes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.InvertAxes</a>
  */
 public class InvertAxes extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Media.TextFormatting.InvertAxes
+     */
     public static final String className = "System.Windows.Media.TextFormatting.InvertAxes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class InvertAxes extends NetObject  {
 
     // Flags management section
 
-    public InvertAxes add(InvertAxes val) throws Throwable {
+    public final InvertAxes add(InvertAxes val) throws Throwable {
         return new InvertAxes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public InvertAxes remove(InvertAxes val) throws Throwable {
+    public final InvertAxes remove(InvertAxes val) throws Throwable {
         return new InvertAxes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(InvertAxes val) throws Throwable {
+    public final boolean is(InvertAxes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(InvertAxes val) throws Throwable {
+    public final boolean has(InvertAxes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

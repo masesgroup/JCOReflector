@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.ui.design.DataBindingHandler;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
 import system.web.ui.Control;
@@ -45,12 +46,27 @@ import system.web.ui.Control;
 
 /**
  * The base .NET class managing System.Web.UI.Design.CalendarDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.CalendarDataBindingHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.CalendarDataBindingHandler</a>
  */
-public class CalendarDataBindingHandler extends NetObject  {
+public class CalendarDataBindingHandler extends DataBindingHandler  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.CalendarDataBindingHandler
+     */
     public static final String className = "System.Web.UI.Design.CalendarDataBindingHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +119,9 @@ public class CalendarDataBindingHandler extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CalendarDataBindingHandler}, a cast assert is made to check if types are compatible.
+     */
     public static CalendarDataBindingHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CalendarDataBindingHandler(from.getJCOInstance());
@@ -111,7 +129,6 @@ public class CalendarDataBindingHandler extends NetObject  {
 
     // Constructors section
     
-
     public CalendarDataBindingHandler() throws Throwable {
         try {
             // add reference to assemblyName.dll file

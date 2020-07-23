@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Security.Permissions.StorePermissionFlags, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.StorePermissionFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.StorePermissionFlags</a>
  */
 public class StorePermissionFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Security.Permissions.StorePermissionFlags
+     */
     public static final String className = "System.Security.Permissions.StorePermissionFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -145,19 +160,19 @@ public class StorePermissionFlags extends NetObject  {
 
     // Flags management section
 
-    public StorePermissionFlags add(StorePermissionFlags val) throws Throwable {
+    public final StorePermissionFlags add(StorePermissionFlags val) throws Throwable {
         return new StorePermissionFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public StorePermissionFlags remove(StorePermissionFlags val) throws Throwable {
+    public final StorePermissionFlags remove(StorePermissionFlags val) throws Throwable {
         return new StorePermissionFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(StorePermissionFlags val) throws Throwable {
+    public final boolean is(StorePermissionFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(StorePermissionFlags val) throws Throwable {
+    public final boolean has(StorePermissionFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

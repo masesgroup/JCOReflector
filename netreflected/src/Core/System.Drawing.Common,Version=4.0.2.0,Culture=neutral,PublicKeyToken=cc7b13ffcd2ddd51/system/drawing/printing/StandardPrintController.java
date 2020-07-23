@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.drawing.printing.PrintController;
 import system.drawing.Graphics;
 import system.drawing.printing.PrintDocument;
 import system.drawing.printing.PrintPageEventArgs;
@@ -46,12 +47,27 @@ import system.drawing.printing.PrintEventArgs;
 
 /**
  * The base .NET class managing System.Drawing.Printing.StandardPrintController, System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.StandardPrintController" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.StandardPrintController</a>
  */
-public class StandardPrintController extends NetObject  {
+public class StandardPrintController extends PrintController  {
+    /**
+     * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Drawing.Common
+     */
     public static final String assemblyShortName = "System.Drawing.Common";
+    /**
+     * Qualified class name: System.Drawing.Printing.StandardPrintController
+     */
     public static final String className = "System.Drawing.Printing.StandardPrintController";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class StandardPrintController extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StandardPrintController}, a cast assert is made to check if types are compatible.
+     */
     public static StandardPrintController cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StandardPrintController(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class StandardPrintController extends NetObject  {
 
     // Constructors section
     
-
     public StandardPrintController() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,16 +189,6 @@ public class StandardPrintController extends NetObject  {
     
     // Properties section
     
-    public boolean getIsPreview() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsPreview");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

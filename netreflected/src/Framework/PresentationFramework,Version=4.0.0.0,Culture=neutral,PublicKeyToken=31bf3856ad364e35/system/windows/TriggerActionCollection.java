@@ -43,12 +43,27 @@ import system.windows.TriggerAction;
 
 /**
  * The base .NET class managing System.Windows.TriggerActionCollection, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TriggerActionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TriggerActionCollection</a>
  */
 public class TriggerActionCollection extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.TriggerActionCollection
+     */
     public static final String className = "System.Windows.TriggerActionCollection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class TriggerActionCollection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TriggerActionCollection}, a cast assert is made to check if types are compatible.
+     */
     public static TriggerActionCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TriggerActionCollection(from.getJCOInstance());
@@ -109,7 +126,6 @@ public class TriggerActionCollection extends NetObject  {
 
     // Constructors section
     
-
     public TriggerActionCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file

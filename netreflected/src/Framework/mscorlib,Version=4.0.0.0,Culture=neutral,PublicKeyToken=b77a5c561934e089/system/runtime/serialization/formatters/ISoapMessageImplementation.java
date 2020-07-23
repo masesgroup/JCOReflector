@@ -43,12 +43,27 @@ import system.runtime.remoting.messaging.Header;
 
 /**
  * The base .NET class managing System.Runtime.Serialization.Formatters.ISoapMessage, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage</a>
  */
 public class ISoapMessageImplementation extends NetObject implements ISoapMessage {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Serialization.Formatters.ISoapMessage
+     */
     public static final String className = "System.Runtime.Serialization.Formatters.ISoapMessage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISoapMessage}, a cast assert is made to check if types are compatible.
+     */
     public static ISoapMessage ToISoapMessage(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISoapMessageImplementation(from.getJCOInstance());
@@ -108,7 +125,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
     
     // Properties section
     
-    public NetObject[] getParamValues() throws Throwable {
+    public final NetObject[] getParamValues() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -135,7 +152,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
-    public Header[] getHeaders() throws Throwable {
+    public final Header[] getHeaders() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -231,7 +248,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
-    public NetType[] getParamTypes() throws Throwable {
+    public final NetType[] getParamTypes() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

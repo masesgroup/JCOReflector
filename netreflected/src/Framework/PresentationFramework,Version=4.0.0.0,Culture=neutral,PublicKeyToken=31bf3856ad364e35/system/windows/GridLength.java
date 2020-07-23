@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.windows.GridUnitType;
 import system.windows.GridLength;
 
 
 /**
  * The base .NET class managing System.Windows.GridLength, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.GridLength" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.GridLength</a>
  */
-public class GridLength extends NetObject  {
+public class GridLength extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.GridLength
+     */
     public static final String className = "System.Windows.GridLength";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class GridLength extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GridLength}, a cast assert is made to check if types are compatible.
+     */
     public static GridLength cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GridLength(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class GridLength extends NetObject  {
 
     // Constructors section
     
+    public GridLength() throws Throwable {
+    }
 
     public GridLength(double pixels) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
@@ -130,6 +150,7 @@ public class GridLength extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -189,11 +210,11 @@ public class GridLength extends NetObject  {
         }
     }
 
-    public static GridLength getAuto() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public GridLength getAuto() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Auto");
+            JCObject val = (JCObject)classInstance.Get("Auto");
             return new GridLength(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

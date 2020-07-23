@@ -38,21 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.controls.ValidationRule;
 import system.windows.controls.ValidationResult;
 import system.globalization.CultureInfo;
-import system.windows.data.BindingExpressionBase;
-import system.windows.data.BindingGroup;
-import system.windows.controls.ValidationStep;
 
 
 /**
  * The base .NET class managing System.Windows.Controls.ExceptionValidationRule, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ExceptionValidationRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ExceptionValidationRule</a>
  */
-public class ExceptionValidationRule extends NetObject  {
+public class ExceptionValidationRule extends ValidationRule  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Controls.ExceptionValidationRule
+     */
     public static final String className = "System.Windows.Controls.ExceptionValidationRule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +118,9 @@ public class ExceptionValidationRule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExceptionValidationRule}, a cast assert is made to check if types are compatible.
+     */
     public static ExceptionValidationRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ExceptionValidationRule(from.getJCOInstance());
@@ -113,7 +128,6 @@ public class ExceptionValidationRule extends NetObject  {
 
     // Constructors section
     
-
     public ExceptionValidationRule() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -139,73 +153,10 @@ public class ExceptionValidationRule extends NetObject  {
         }
     }
 
-    public ValidationResult Validate(NetObject value, CultureInfo cultureInfo, BindingExpressionBase owner) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
-            return new ValidationResult(objValidate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ValidationResult Validate(NetObject value, CultureInfo cultureInfo, BindingGroup owner) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
-            return new ValidationResult(objValidate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getValidatesOnTargetUpdated() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ValidatesOnTargetUpdated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValidatesOnTargetUpdated(boolean ValidatesOnTargetUpdated) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValidatesOnTargetUpdated", ValidatesOnTargetUpdated);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ValidationStep getValidationStep() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ValidationStep");
-            return new ValidationStep(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValidationStep(ValidationStep ValidationStep) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValidationStep", ValidationStep == null ? null : ValidationStep.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

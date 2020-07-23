@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.Uri;
 
 
 /**
  * The base .NET class managing System.Windows.Navigation.NavigationProgressEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationProgressEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationProgressEventArgs</a>
  */
-public class NavigationProgressEventArgs extends NetObject  {
+public class NavigationProgressEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationFramework
+     */
     public static final String assemblyShortName = "PresentationFramework";
+    /**
+     * Qualified class name: System.Windows.Navigation.NavigationProgressEventArgs
+     */
     public static final String className = "System.Windows.Navigation.NavigationProgressEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class NavigationProgressEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NavigationProgressEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static NavigationProgressEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NavigationProgressEventArgs(from.getJCOInstance());
@@ -109,6 +127,10 @@ public class NavigationProgressEventArgs extends NetObject  {
 
     // Constructors section
     
+    public NavigationProgressEventArgs() throws Throwable {
+    }
+
+
 
     
     // Methods section

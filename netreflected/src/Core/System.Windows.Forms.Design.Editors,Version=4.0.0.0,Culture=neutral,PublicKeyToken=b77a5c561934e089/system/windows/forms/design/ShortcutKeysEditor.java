@@ -38,24 +38,37 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.drawing.design.UITypeEditor;
+import system.drawing.design.UITypeEditorEditStyle;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
-import system.drawing.design.UITypeEditorEditStyle;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
-import system.drawing.design.PaintValueEventArgs;
-import system.drawing.Graphics;
-import system.drawing.Rectangle;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.Design.ShortcutKeysEditor, System.Windows.Forms.Design.Editors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ShortcutKeysEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ShortcutKeysEditor</a>
  */
-public class ShortcutKeysEditor extends NetObject  {
+public class ShortcutKeysEditor extends UITypeEditor  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design.Editors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design.Editors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design.Editors
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design.Editors";
+    /**
+     * Qualified class name: System.Windows.Forms.Design.ShortcutKeysEditor
+     */
     public static final String className = "System.Windows.Forms.Design.ShortcutKeysEditor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +121,9 @@ public class ShortcutKeysEditor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ShortcutKeysEditor}, a cast assert is made to check if types are compatible.
+     */
     public static ShortcutKeysEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ShortcutKeysEditor(from.getJCOInstance());
@@ -116,7 +131,6 @@ public class ShortcutKeysEditor extends NetObject  {
 
     // Constructors section
     
-
     public ShortcutKeysEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -131,37 +145,6 @@ public class ShortcutKeysEditor extends NetObject  {
     
     // Methods section
     
-    public boolean GetPaintValueSupported() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean GetPaintValueSupported(ITypeDescriptorContext context) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported", context == null ? null : context.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UITypeEditorEditStyle GetEditStyle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle");
-            return new UITypeEditorEditStyle(objGetEditStyle);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -184,51 +167,10 @@ public class ShortcutKeysEditor extends NetObject  {
         }
     }
 
-    public NetObject EditValue(IServiceProvider provider, NetObject value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
-            return new NetObject(objEditValue);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PaintValue(PaintValueEventArgs e) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PaintValue", e == null ? null : e.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void PaintValue(NetObject value, Graphics canvas, Rectangle rectangle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("PaintValue", value == null ? null : value.getJCOInstance(), canvas == null ? null : canvas.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
-    public boolean getIsDropDownResizable() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsDropDownResizable");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

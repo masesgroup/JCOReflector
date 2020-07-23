@@ -43,12 +43,27 @@ import system.security.principal.IdentityReference;
 
 /**
  * The base .NET class managing System.Security.Principal.IdentityReference, System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IdentityReference" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IdentityReference</a>
  */
 public class IdentityReference extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Security.Principal.Windows
+     */
     public static final String assemblyShortName = "System.Security.Principal.Windows";
+    /**
+     * Qualified class name: System.Security.Principal.IdentityReference
+     */
     public static final String className = "System.Security.Principal.IdentityReference";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class IdentityReference extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IdentityReference}, a cast assert is made to check if types are compatible.
+     */
     public static IdentityReference cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IdentityReference(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class IdentityReference extends NetObject  {
 
     // Constructors section
     
+    public IdentityReference() throws Throwable {
+    }
 
     
     // Methods section

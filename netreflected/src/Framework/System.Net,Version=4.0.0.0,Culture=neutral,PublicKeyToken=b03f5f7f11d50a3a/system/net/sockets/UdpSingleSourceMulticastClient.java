@@ -46,12 +46,27 @@ import system.AsyncCallback;
 
 /**
  * The base .NET class managing System.Net.Sockets.UdpSingleSourceMulticastClient, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient</a>
  */
 public class UdpSingleSourceMulticastClient extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net
+     */
     public static final String assemblyShortName = "System.Net";
+    /**
+     * Qualified class name: System.Net.Sockets.UdpSingleSourceMulticastClient
+     */
     public static final String className = "System.Net.Sockets.UdpSingleSourceMulticastClient";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class UdpSingleSourceMulticastClient extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UdpSingleSourceMulticastClient}, a cast assert is made to check if types are compatible.
+     */
     public static UdpSingleSourceMulticastClient cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new UdpSingleSourceMulticastClient(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class UdpSingleSourceMulticastClient extends NetObject  {
 
     // Constructors section
     
+    public UdpSingleSourceMulticastClient() throws Throwable {
+    }
 
     public UdpSingleSourceMulticastClient(IPAddress sourceAddress, IPAddress groupAddress, int localPort) throws Throwable {
         try {
@@ -122,6 +141,7 @@ public class UdpSingleSourceMulticastClient extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -149,11 +169,33 @@ public class UdpSingleSourceMulticastClient extends NetObject  {
         }
     }
 
+    public IAsyncResult BeginReceiveFromSource(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginReceiveFromSource = (JCObject)classInstance.Invoke("BeginReceiveFromSource", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginReceiveFromSource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginSendToSource(byte[] buffer, int offset, int count, int remotePort, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBeginSendToSource = (JCObject)classInstance.Invoke("BeginSendToSource", buffer, offset, count, remotePort, callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginSendToSource);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginSendToSource(JCRefOut dupParam0, int dupParam1, int dupParam2, int dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginSendToSource = (JCObject)classInstance.Invoke("BeginSendToSource", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendToSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

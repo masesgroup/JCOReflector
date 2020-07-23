@@ -40,18 +40,31 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.EncryptingCredentials;
 import system.security.cryptography.x509certificates.X509Certificate2;
-import system.identitymodel.tokens.SecurityKey;
-import system.identitymodel.tokens.SecurityKeyIdentifier;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.EncryptedKeyEncryptingCredentials, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.EncryptedKeyEncryptingCredentials" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.EncryptedKeyEncryptingCredentials</a>
  */
-public class EncryptedKeyEncryptingCredentials extends NetObject  {
+public class EncryptedKeyEncryptingCredentials extends EncryptingCredentials  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.EncryptedKeyEncryptingCredentials
+     */
     public static final String className = "System.IdentityModel.Tokens.EncryptedKeyEncryptingCredentials";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +117,9 @@ public class EncryptedKeyEncryptingCredentials extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncryptedKeyEncryptingCredentials}, a cast assert is made to check if types are compatible.
+     */
     public static EncryptedKeyEncryptingCredentials cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new EncryptedKeyEncryptingCredentials(from.getJCOInstance());
@@ -112,6 +127,8 @@ public class EncryptedKeyEncryptingCredentials extends NetObject  {
 
     // Constructors section
     
+    public EncryptedKeyEncryptingCredentials() throws Throwable {
+    }
 
     public EncryptedKeyEncryptingCredentials(EncryptingCredentials wrappingCredentials, int keySizeInBits, java.lang.String encryptionAlgorithm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         try {
@@ -144,6 +161,7 @@ public class EncryptedKeyEncryptingCredentials extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -157,68 +175,6 @@ public class EncryptedKeyEncryptingCredentials extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("WrappingCredentials");
             return new EncryptingCredentials(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityKey getSecurityKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SecurityKey");
-            return new SecurityKey(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSecurityKey(SecurityKey SecurityKey) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SecurityKey", SecurityKey == null ? null : SecurityKey.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityKeyIdentifier getSecurityKeyIdentifier() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SecurityKeyIdentifier");
-            return new SecurityKeyIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSecurityKeyIdentifier(SecurityKeyIdentifier SecurityKeyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SecurityKeyIdentifier", SecurityKeyIdentifier == null ? null : SecurityKeyIdentifier.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Algorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAlgorithm(java.lang.String Algorithm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Algorithm", Algorithm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

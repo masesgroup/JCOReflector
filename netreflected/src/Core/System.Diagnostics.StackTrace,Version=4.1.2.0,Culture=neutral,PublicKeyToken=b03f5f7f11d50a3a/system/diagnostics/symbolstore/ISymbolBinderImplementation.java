@@ -44,12 +44,27 @@ import system.diagnostics.symbolstore.ISymbolReaderImplementation;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolBinder, System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolBinder</a>
  */
 public class ISymbolBinderImplementation extends NetObject implements ISymbolBinder {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Diagnostics.StackTrace
+     */
     public static final String assemblyShortName = "System.Diagnostics.StackTrace";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolBinder
+     */
     public static final String className = "System.Diagnostics.SymbolStore.ISymbolBinder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class ISymbolBinderImplementation extends NetObject implements ISymbolBin
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolBinder}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolBinder ToISymbolBinder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISymbolBinderImplementation(from.getJCOInstance());

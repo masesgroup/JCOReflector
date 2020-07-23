@@ -47,12 +47,27 @@ import system.servicemodel.description.MessagePropertyDescriptionCollection;
 
 /**
  * The base .NET class managing System.ServiceModel.Description.MessageDescription, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MessageDescription" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MessageDescription</a>
  */
 public class MessageDescription extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Description.MessageDescription
+     */
     public static final String className = "System.ServiceModel.Description.MessageDescription";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class MessageDescription extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageDescription}, a cast assert is made to check if types are compatible.
+     */
     public static MessageDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MessageDescription(from.getJCOInstance());
@@ -113,6 +130,8 @@ public class MessageDescription extends NetObject  {
 
     // Constructors section
     
+    public MessageDescription() throws Throwable {
+    }
 
     public MessageDescription(java.lang.String action, MessageDirection direction) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
@@ -123,6 +142,7 @@ public class MessageDescription extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

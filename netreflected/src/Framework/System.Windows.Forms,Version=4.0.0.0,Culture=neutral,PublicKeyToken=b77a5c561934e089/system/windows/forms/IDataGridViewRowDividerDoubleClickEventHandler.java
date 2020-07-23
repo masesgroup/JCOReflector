@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewRowDividerDoubleClickEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewRowDividerDoubleClickEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowDividerDoubleClickEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowDividerDoubleClickEventHandler</a>
+ */
 public interface IDataGridViewRowDividerDoubleClickEventHandler {
     public void Invoke(NetObject sender, DataGridViewRowDividerDoubleClickEventArgs e);
 }

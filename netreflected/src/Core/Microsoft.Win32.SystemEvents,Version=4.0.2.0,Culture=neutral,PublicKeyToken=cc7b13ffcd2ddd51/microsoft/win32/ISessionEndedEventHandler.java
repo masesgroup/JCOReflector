@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.win32.SessionEndedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SessionEndedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionEndedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionEndedEventHandler</a>
+ */
 public interface ISessionEndedEventHandler {
     public void Invoke(NetObject sender, SessionEndedEventArgs e);
 }

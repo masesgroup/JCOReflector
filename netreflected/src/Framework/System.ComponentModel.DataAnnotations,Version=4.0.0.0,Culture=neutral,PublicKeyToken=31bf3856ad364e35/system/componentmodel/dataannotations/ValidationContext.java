@@ -46,12 +46,27 @@ import system.componentmodel.design.IServiceContainerImplementation;
 
 /**
  * The base .NET class managing System.ComponentModel.DataAnnotations.ValidationContext, System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext</a>
  */
 public class ValidationContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.ComponentModel.DataAnnotations
+     */
     public static final String assemblyShortName = "System.ComponentModel.DataAnnotations";
+    /**
+     * Qualified class name: System.ComponentModel.DataAnnotations.ValidationContext
+     */
     public static final String className = "System.ComponentModel.DataAnnotations.ValidationContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class ValidationContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValidationContext}, a cast assert is made to check if types are compatible.
+     */
     public static ValidationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ValidationContext(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class ValidationContext extends NetObject  {
 
     // Constructors section
     
+    public ValidationContext() throws Throwable {
+    }
 
     public ValidationContext(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
@@ -122,6 +141,7 @@ public class ValidationContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

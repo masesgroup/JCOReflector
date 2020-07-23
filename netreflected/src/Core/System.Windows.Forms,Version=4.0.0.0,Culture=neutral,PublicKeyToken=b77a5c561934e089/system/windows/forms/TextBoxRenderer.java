@@ -47,12 +47,27 @@ import system.windows.forms.visualstyles.TextBoxState;
 
 /**
  * The base .NET class managing System.Windows.Forms.TextBoxRenderer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TextBoxRenderer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TextBoxRenderer</a>
  */
 public class TextBoxRenderer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.TextBoxRenderer
+     */
     public static final String className = "System.Windows.Forms.TextBoxRenderer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class TextBoxRenderer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextBoxRenderer}, a cast assert is made to check if types are compatible.
+     */
     public static TextBoxRenderer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TextBoxRenderer(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class TextBoxRenderer extends NetObject  {
 
     // Constructors section
     
+    public TextBoxRenderer() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -171,11 +192,11 @@ public class TextBoxRenderer extends NetObject  {
     
     // Properties section
     
-    public static boolean getIsSupported() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getIsSupported() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("IsSupported");
+            return (boolean)classInstance.Get("IsSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Threading.Channels.Channel, System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.Channel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.Channel</a>
  */
 public class Channel extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Threading.Channels
+     */
     public static final String assemblyShortName = "System.Threading.Channels";
+    /**
+     * Qualified class name: System.Threading.Channels.Channel
+     */
     public static final String className = "System.Threading.Channels.Channel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class Channel extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Channel}, a cast assert is made to check if types are compatible.
+     */
     public static Channel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Channel(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class Channel extends NetObject  {
 
     // Constructors section
     
+    public Channel() throws Throwable {
+    }
 
     
     // Methods section

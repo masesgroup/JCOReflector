@@ -38,19 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.tokens.SigningCredentials;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.identitymodel.tokens.SecurityKeyIdentifier;
-import system.identitymodel.tokens.SecurityKey;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Tokens.X509SigningCredentials, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509SigningCredentials" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509SigningCredentials</a>
  */
-public class X509SigningCredentials extends NetObject  {
+public class X509SigningCredentials extends SigningCredentials  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Tokens.X509SigningCredentials
+     */
     public static final String className = "System.IdentityModel.Tokens.X509SigningCredentials";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class X509SigningCredentials extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509SigningCredentials}, a cast assert is made to check if types are compatible.
+     */
     public static X509SigningCredentials cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new X509SigningCredentials(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class X509SigningCredentials extends NetObject  {
 
     // Constructors section
     
+    public X509SigningCredentials() throws Throwable {
+    }
 
     public X509SigningCredentials(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.FormatException, system.security.cryptography.CryptographicException {
         try {
@@ -153,6 +172,7 @@ public class X509SigningCredentials extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -160,54 +180,12 @@ public class X509SigningCredentials extends NetObject  {
     
     // Properties section
     
-    public SecurityKey getSigningKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SigningKey");
-            return new SecurityKey(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityKeyIdentifier getSigningKeyIdentifier() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("SigningKeyIdentifier");
-            return new SecurityKeyIdentifier(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public X509Certificate2 getCertificate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject val = (JCObject)classInstance.Get("Certificate");
             return new X509Certificate2(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDigestAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("DigestAlgorithm");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSignatureAlgorithm() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SignatureAlgorithm");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

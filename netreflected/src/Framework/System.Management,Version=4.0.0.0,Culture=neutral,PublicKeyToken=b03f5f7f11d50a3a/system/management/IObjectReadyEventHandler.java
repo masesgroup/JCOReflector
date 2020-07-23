@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.management.ObjectReadyEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ObjectReadyEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectReadyEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectReadyEventHandler</a>
+ */
 public interface IObjectReadyEventHandler {
     public void Invoke(NetObject sender, ObjectReadyEventArgs e);
 }

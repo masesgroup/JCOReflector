@@ -43,12 +43,29 @@ import system.collections.IComparerImplementation;
 
 /**
  * The base .NET class managing System.Collections.IStructuralComparable, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IStructuralComparable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IStructuralComparable</a>
  */
 public interface IStructuralComparable extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
+    public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
+    public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Collections.IStructuralComparable
+     */
+    public static final String className = "System.Collections.IStructuralComparable";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStructuralComparable}, a cast assert is made to check if types are compatible.
+     */
     public static IStructuralComparable ToIStructuralComparable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType("System.Collections.IStructuralComparable, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" : "System.Private.CoreLib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IStructuralComparableImplementation(from.getJCOInstance());
     }

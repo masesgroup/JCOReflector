@@ -37,13 +37,17 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.servicemodel.channels.IReplyChannel;
+import system.servicemodel.channels.IReplyChannelImplementation;
+import system.servicemodel.channels.IChannel;
+import system.servicemodel.channels.IChannelImplementation;
+import system.servicemodel.ICommunicationObject;
+import system.servicemodel.ICommunicationObjectImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.TimeSpan;
 import system.AsyncCallback;
 import system.servicemodel.channels.RequestContext;
-import system.servicemodel.channels.IInputSession;
-import system.servicemodel.channels.IInputSessionImplementation;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.EventHandler;
@@ -51,12 +55,29 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.IReplySessionChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IReplySessionChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IReplySessionChannel</a>
  */
-public interface IReplySessionChannel extends IJCOBridgeReflected {
-
+public interface IReplySessionChannel extends IJCOBridgeReflected, IReplyChannel, IChannel, ICommunicationObject {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
+    public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.IReplySessionChannel
+     */
+    public static final String className = "System.ServiceModel.Channels.IReplySessionChannel";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReplySessionChannel}, a cast assert is made to check if types are compatible.
+     */
     public static IReplySessionChannel ToIReplySessionChannel(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ServiceModel.Channels.IReplySessionChannel, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ServiceModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IReplySessionChannelImplementation(from.getJCOInstance());
     }
@@ -99,79 +120,33 @@ public interface IReplySessionChannel extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean EndWaitForRequest(IAsyncResult result) throws Throwable;
 
-    public boolean WaitForRequest(TimeSpan timeout) throws Throwable;
 
-    public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginReceiveRequest(AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginReceiveRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginTryReceiveRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public IAsyncResult BeginWaitForRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable;
 
-    public RequestContext EndReceiveRequest(IAsyncResult result) throws Throwable;
 
-    public RequestContext ReceiveRequest() throws Throwable;
 
-    public RequestContext ReceiveRequest(TimeSpan timeout) throws Throwable;
 
-    public void Abort() throws Throwable;
 
-    public void Close() throws Throwable;
 
-    public void Close(TimeSpan timeout) throws Throwable;
 
-    public void EndClose(IAsyncResult result) throws Throwable;
 
-    public void EndOpen(IAsyncResult result) throws Throwable;
 
-    public void Open() throws Throwable;
 
-    public void Open(TimeSpan timeout) throws Throwable;
 
 
     
     // Properties section
     
-    public IInputSession getSession() throws Throwable;
-
-    public CommunicationState getState() throws Throwable;
-
-    public EndpointAddress getLocalAddress() throws Throwable;
-
 
 
     // Instance Events section
     
-    public void addClosed(EventHandler handler) throws Throwable;
-
-    public void removeClosed(EventHandler handler) throws Throwable;
-
-    public void addClosing(EventHandler handler) throws Throwable;
-
-    public void removeClosing(EventHandler handler) throws Throwable;
-
-    public void addFaulted(EventHandler handler) throws Throwable;
-
-    public void removeFaulted(EventHandler handler) throws Throwable;
-
-    public void addOpened(EventHandler handler) throws Throwable;
-
-    public void removeOpened(EventHandler handler) throws Throwable;
-
-    public void addOpening(EventHandler handler) throws Throwable;
-
-    public void removeOpening(EventHandler handler) throws Throwable;
-
 
 }

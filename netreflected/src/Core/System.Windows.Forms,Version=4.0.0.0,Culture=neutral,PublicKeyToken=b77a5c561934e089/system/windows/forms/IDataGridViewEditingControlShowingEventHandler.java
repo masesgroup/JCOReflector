@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DataGridViewEditingControlShowingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewEditingControlShowingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewEditingControlShowingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewEditingControlShowingEventHandler</a>
+ */
 public interface IDataGridViewEditingControlShowingEventHandler {
     public void Invoke(NetObject sender, DataGridViewEditingControlShowingEventArgs e);
 }

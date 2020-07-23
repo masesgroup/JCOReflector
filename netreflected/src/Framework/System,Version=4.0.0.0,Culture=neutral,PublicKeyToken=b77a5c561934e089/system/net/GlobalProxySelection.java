@@ -44,12 +44,27 @@ import system.net.IWebProxyImplementation;
 
 /**
  * The base .NET class managing System.Net.GlobalProxySelection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.GlobalProxySelection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.GlobalProxySelection</a>
  */
 public class GlobalProxySelection extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.GlobalProxySelection
+     */
     public static final String className = "System.Net.GlobalProxySelection";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class GlobalProxySelection extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GlobalProxySelection}, a cast assert is made to check if types are compatible.
+     */
     public static GlobalProxySelection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GlobalProxySelection(from.getJCOInstance());
@@ -110,7 +127,6 @@ public class GlobalProxySelection extends NetObject  {
 
     // Constructors section
     
-
     public GlobalProxySelection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -140,22 +156,22 @@ public class GlobalProxySelection extends NetObject  {
     
     // Properties section
     
-    public static IWebProxy getSelect() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.security.SecurityException, system.TypeLoadException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public IWebProxy getSelect() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.security.SecurityException, system.TypeLoadException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Select");
+            JCObject val = (JCObject)classInstance.Get("Select");
             return new IWebProxyImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setSelect(IWebProxy Select) throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setSelect(IWebProxy Select) throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("Select", Select == null ? null : Select.getJCOInstance());
+            classInstance.Set("Select", Select == null ? null : Select.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

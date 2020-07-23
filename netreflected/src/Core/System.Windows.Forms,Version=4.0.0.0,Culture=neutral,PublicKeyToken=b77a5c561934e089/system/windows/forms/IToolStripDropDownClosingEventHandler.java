@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.ToolStripDropDownClosingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ToolStripDropDownClosingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripDropDownClosingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripDropDownClosingEventHandler</a>
+ */
 public interface IToolStripDropDownClosingEventHandler {
     public void Invoke(NetObject sender, ToolStripDropDownClosingEventArgs e);
 }

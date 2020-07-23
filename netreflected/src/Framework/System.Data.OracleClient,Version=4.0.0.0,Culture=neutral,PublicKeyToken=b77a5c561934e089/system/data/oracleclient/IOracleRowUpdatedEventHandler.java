@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.oracleclient.OracleRowUpdatedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link OracleRowUpdatedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleRowUpdatedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleRowUpdatedEventHandler</a>
+ */
 public interface IOracleRowUpdatedEventHandler {
     public void Invoke(NetObject sender, OracleRowUpdatedEventArgs e);
 }

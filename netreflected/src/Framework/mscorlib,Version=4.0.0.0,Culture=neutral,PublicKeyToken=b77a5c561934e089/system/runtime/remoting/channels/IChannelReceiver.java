@@ -37,16 +37,35 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.remoting.channels.IChannel;
+import system.runtime.remoting.channels.IChannelImplementation;
 
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Channels.IChannelReceiver, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver</a>
  */
-public interface IChannelReceiver extends IJCOBridgeReflected {
-
+public interface IChannelReceiver extends IJCOBridgeReflected, IChannel {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Channels.IChannelReceiver
+     */
+    public static final String className = "System.Runtime.Remoting.Channels.IChannelReceiver";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IChannelReceiver}, a cast assert is made to check if types are compatible.
+     */
     public static IChannelReceiver ToIChannelReceiver(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.Remoting.Channels.IChannelReceiver, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IChannelReceiverImplementation(from.getJCOInstance());
     }
@@ -99,11 +118,7 @@ public interface IChannelReceiver extends IJCOBridgeReflected {
     
     // Properties section
     
-    public int getChannelPriority() throws Throwable;
-
     public NetObject getChannelData() throws Throwable;
-
-    public java.lang.String getChannelName() throws Throwable;
 
 
 

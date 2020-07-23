@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.Security.Cryptography.KeySizes, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.KeySizes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.KeySizes</a>
  */
 public class KeySizes extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Cryptography.KeySizes
+     */
     public static final String className = "System.Security.Cryptography.KeySizes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +115,9 @@ public class KeySizes extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeySizes}, a cast assert is made to check if types are compatible.
+     */
     public static KeySizes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new KeySizes(from.getJCOInstance());
@@ -108,6 +125,8 @@ public class KeySizes extends NetObject  {
 
     // Constructors section
     
+    public KeySizes() throws Throwable {
+    }
 
     public KeySizes(int minSize, int maxSize, int skipSize) throws Throwable {
         try {
@@ -118,6 +137,7 @@ public class KeySizes extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

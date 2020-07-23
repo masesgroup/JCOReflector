@@ -51,12 +51,27 @@ import system.windows.forms.Control;
 
 /**
  * The base .NET class managing System.Windows.Forms.CheckBoxRenderer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.CheckBoxRenderer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.CheckBoxRenderer</a>
  */
 public class CheckBoxRenderer extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.CheckBoxRenderer
+     */
     public static final String className = "System.Windows.Forms.CheckBoxRenderer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +124,9 @@ public class CheckBoxRenderer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CheckBoxRenderer}, a cast assert is made to check if types are compatible.
+     */
     public static CheckBoxRenderer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CheckBoxRenderer(from.getJCOInstance());
@@ -117,6 +134,10 @@ public class CheckBoxRenderer extends NetObject  {
 
     // Constructors section
     
+    public CheckBoxRenderer() throws Throwable {
+    }
+
+
 
     
     // Methods section
@@ -206,21 +227,21 @@ public class CheckBoxRenderer extends NetObject  {
     
     // Properties section
     
-    public static boolean getRenderMatchingApplicationState() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean getRenderMatchingApplicationState() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classType.Get("RenderMatchingApplicationState");
+            return (boolean)classInstance.Get("RenderMatchingApplicationState");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classType.Set("RenderMatchingApplicationState", RenderMatchingApplicationState);
+            classInstance.Set("RenderMatchingApplicationState", RenderMatchingApplicationState);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

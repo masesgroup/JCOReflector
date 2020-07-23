@@ -38,17 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.comtypes.ITypeInfo;
+import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
 import system.runtime.interopservices.comtypes.INVOKEKIND;
 
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.ITypeInfo2, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2</a>
  */
 public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.ITypeInfo2
+     */
     public static final String className = "System.Runtime.InteropServices.ComTypes.ITypeInfo2";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +113,9 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeInfo2}, a cast assert is made to check if types are compatible.
+     */
     public static ITypeInfo2 ToITypeInfo2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITypeInfo2Implementation(from.getJCOInstance());

@@ -42,12 +42,27 @@ import microsoft.win32.UserPreferenceChangedEventArgs;
 import microsoft.win32.IUserPreferenceChangedEventHandler;
 /**
  * The base .NET class managing Microsoft.Win32.UserPreferenceChangedEventHandler, Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventHandler</a>
  */
 public class UserPreferenceChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: Microsoft.Win32.SystemEvents
+     */
     public static final String assemblyShortName = "Microsoft.Win32.SystemEvents";
+    /**
+     * Qualified class name: Microsoft.Win32.UserPreferenceChangedEventHandler
+     */
     public static final String className = "Microsoft.Win32.UserPreferenceChangedEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IUserPreferenceChangedEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class UserPreferenceChangedEventHandler extends JCVoidDelegate implements
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, UserPreferenceChangedEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, UserPreferenceChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class UserPreferenceChangedEventHandler extends JCVoidDelegate implements
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, UserPreferenceChangedEventArgs e) {
     }
 }

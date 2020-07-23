@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.IDesigner;
+import system.componentmodel.design.IDesignerImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.design.ViewTechnology;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
@@ -46,12 +50,27 @@ import system.componentmodel.design.DesignerVerbCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IRootDesigner, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IRootDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IRootDesigner</a>
  */
 public class IRootDesignerImplementation extends NetObject implements IRootDesigner {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IRootDesigner
+     */
     public static final String className = "System.ComponentModel.Design.IRootDesigner";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +118,9 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRootDesigner}, a cast assert is made to check if types are compatible.
+     */
     public static IRootDesigner ToIRootDesigner(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRootDesignerImplementation(from.getJCOInstance());
@@ -163,7 +184,7 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
         }
     }
 
-    public ViewTechnology[] getSupportedTechnologies() throws Throwable {
+    public final ViewTechnology[] getSupportedTechnologies() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

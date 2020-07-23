@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.net.EndPoint;
 import system.net.sockets.IPPacketInformation;
 import system.net.sockets.SendPacketsElement;
@@ -51,12 +52,27 @@ import system.net.sockets.TransmitFileOptions;
 
 /**
  * The base .NET class managing System.Net.Sockets.SocketAsyncEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs</a>
  */
-public class SocketAsyncEventArgs extends NetObject  {
+public class SocketAsyncEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.Sockets.SocketAsyncEventArgs
+     */
     public static final String className = "System.Net.Sockets.SocketAsyncEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -109,7 +125,9 @@ public class SocketAsyncEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SocketAsyncEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static SocketAsyncEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SocketAsyncEventArgs(from.getJCOInstance());
@@ -117,7 +135,6 @@ public class SocketAsyncEventArgs extends NetObject  {
 
     // Constructors section
     
-
     public SocketAsyncEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -147,6 +164,16 @@ public class SocketAsyncEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBuffer", buffer, offset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetBuffer(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetBuffer", dupParam0, dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +325,7 @@ public class SocketAsyncEventArgs extends NetObject  {
         }
     }
 
-    public SendPacketsElement[] getSendPacketsElements() throws Throwable {
+    public final SendPacketsElement[] getSendPacketsElements() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

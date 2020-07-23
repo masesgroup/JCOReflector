@@ -46,12 +46,27 @@ import system.Single;
 
 /**
  * The base .NET class managing System.Windows.Input.Manipulations.ManipulationProcessor2D, System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.ManipulationProcessor2D" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Manipulations.ManipulationProcessor2D</a>
  */
 public class ManipulationProcessor2D extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Input.Manipulations
+     */
     public static final String assemblyShortName = "System.Windows.Input.Manipulations";
+    /**
+     * Qualified class name: System.Windows.Input.Manipulations.ManipulationProcessor2D
+     */
     public static final String className = "System.Windows.Input.Manipulations.ManipulationProcessor2D";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class ManipulationProcessor2D extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManipulationProcessor2D}, a cast assert is made to check if types are compatible.
+     */
     public static ManipulationProcessor2D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ManipulationProcessor2D(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class ManipulationProcessor2D extends NetObject  {
 
     // Constructors section
     
+    public ManipulationProcessor2D() throws Throwable {
+    }
 
     public ManipulationProcessor2D(Manipulations2D supportedManipulations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
@@ -132,6 +151,7 @@ public class ManipulationProcessor2D extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

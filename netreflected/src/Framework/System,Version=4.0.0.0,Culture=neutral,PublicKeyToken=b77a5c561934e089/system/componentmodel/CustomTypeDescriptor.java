@@ -49,12 +49,27 @@ import system.componentmodel.TypeConverter;
 
 /**
  * The base .NET class managing System.ComponentModel.CustomTypeDescriptor, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CustomTypeDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CustomTypeDescriptor</a>
  */
 public class CustomTypeDescriptor extends NetObject  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.CustomTypeDescriptor
+     */
     public static final String className = "System.ComponentModel.CustomTypeDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class CustomTypeDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CustomTypeDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static CustomTypeDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CustomTypeDescriptor(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class CustomTypeDescriptor extends NetObject  {
 
     // Constructors section
     
+    public CustomTypeDescriptor() throws Throwable {
+    }
 
     
     // Methods section

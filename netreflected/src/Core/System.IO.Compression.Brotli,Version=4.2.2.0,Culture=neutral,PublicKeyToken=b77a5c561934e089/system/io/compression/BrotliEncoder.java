@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.buffers.OperationStatus;
 
 
 /**
  * The base .NET class managing System.IO.Compression.BrotliEncoder, System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.BrotliEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.BrotliEncoder</a>
  */
-public class BrotliEncoder extends NetObject  {
+public class BrotliEncoder extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IO.Compression.Brotli
+     */
     public static final String assemblyShortName = "System.IO.Compression.Brotli";
+    /**
+     * Qualified class name: System.IO.Compression.BrotliEncoder
+     */
     public static final String className = "System.IO.Compression.BrotliEncoder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class BrotliEncoder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link BrotliEncoder}, a cast assert is made to check if types are compatible.
+     */
     public static BrotliEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new BrotliEncoder(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class BrotliEncoder extends NetObject  {
 
     // Constructors section
     
+    public BrotliEncoder() throws Throwable {
+    }
 
     public BrotliEncoder(int quality, int window) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.io.IOException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
@@ -121,6 +141,7 @@ public class BrotliEncoder extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -129,6 +150,16 @@ public class BrotliEncoder extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("GetMaxCompressedLength", length);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Dispose() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.IO.FileAttributes, System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileAttributes</a>
  */
 public class FileAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime
+     */
     public static final String assemblyShortName = "System.Runtime";
+    /**
+     * Qualified class name: System.IO.FileAttributes
+     */
     public static final String className = "System.IO.FileAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -152,19 +167,19 @@ public class FileAttributes extends NetObject  {
 
     // Flags management section
 
-    public FileAttributes add(FileAttributes val) throws Throwable {
+    public final FileAttributes add(FileAttributes val) throws Throwable {
         return new FileAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public FileAttributes remove(FileAttributes val) throws Throwable {
+    public final FileAttributes remove(FileAttributes val) throws Throwable {
         return new FileAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(FileAttributes val) throws Throwable {
+    public final boolean is(FileAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(FileAttributes val) throws Throwable {
+    public final boolean has(FileAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

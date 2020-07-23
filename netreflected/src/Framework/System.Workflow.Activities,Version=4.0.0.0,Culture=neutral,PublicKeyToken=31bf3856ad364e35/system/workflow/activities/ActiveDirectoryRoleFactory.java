@@ -45,12 +45,27 @@ import system.workflow.activities.configuration.ActiveDirectoryRoleFactoryConfig
 
 /**
  * The base .NET class managing System.Workflow.Activities.ActiveDirectoryRoleFactory, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ActiveDirectoryRoleFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ActiveDirectoryRoleFactory</a>
  */
 public class ActiveDirectoryRoleFactory extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.ActiveDirectoryRoleFactory
+     */
     public static final String className = "System.Workflow.Activities.ActiveDirectoryRoleFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectoryRoleFactory}, a cast assert is made to check if types are compatible.
+     */
     public static ActiveDirectoryRoleFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ActiveDirectoryRoleFactory(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
 
     // Constructors section
     
+    public ActiveDirectoryRoleFactory() throws Throwable {
+    }
 
     
     // Methods section
@@ -152,11 +171,11 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
     
     // Properties section
     
-    public static ActiveDirectoryRoleFactoryConfiguration getConfiguration() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ActiveDirectoryRoleFactoryConfiguration getConfiguration() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Configuration");
+            JCObject val = (JCObject)classInstance.Get("Configuration");
             return new ActiveDirectoryRoleFactoryConfiguration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

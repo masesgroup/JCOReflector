@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.markup.XamlSetValueEventArgs;
 import system.xaml.XamlMember;
 import system.componentmodel.TypeConverter;
 import system.componentmodel.ITypeDescriptorContext;
@@ -47,12 +48,27 @@ import system.globalization.CultureInfo;
 
 /**
  * The base .NET class managing System.Windows.Markup.XamlSetTypeConverterEventArgs, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs</a>
  */
-public class XamlSetTypeConverterEventArgs extends NetObject  {
+public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Windows.Markup.XamlSetTypeConverterEventArgs
+     */
     public static final String className = "System.Windows.Markup.XamlSetTypeConverterEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlSetTypeConverterEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static XamlSetTypeConverterEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlSetTypeConverterEventArgs(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
 
     // Constructors section
     
+    public XamlSetTypeConverterEventArgs() throws Throwable {
+    }
 
     public XamlSetTypeConverterEventArgs(XamlMember member, TypeConverter typeConverter, NetObject value, ITypeDescriptorContext serviceProvider, CultureInfo cultureInfo) throws Throwable {
         try {
@@ -123,6 +143,7 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -142,26 +163,6 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getHandled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Handled");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setHandled(boolean Handled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Handled", Handled);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ITypeDescriptorContext getServiceProvider() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -220,28 +221,6 @@ public class XamlSetTypeConverterEventArgs extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CultureInfo", CultureInfo == null ? null : CultureInfo.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject getValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Value");
-            return new NetObject(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XamlMember getMember() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Member");
-            return new XamlMember(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -43,12 +43,27 @@ import system.workflow.activities.rules.RulePathQualifier;
 
 /**
  * The base .NET class managing System.Workflow.Activities.Rules.RulePathQualifier, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RulePathQualifier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RulePathQualifier</a>
  */
 public class RulePathQualifier extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.Activities
+     */
     public static final String assemblyShortName = "System.Workflow.Activities";
+    /**
+     * Qualified class name: System.Workflow.Activities.Rules.RulePathQualifier
+     */
     public static final String className = "System.Workflow.Activities.Rules.RulePathQualifier";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class RulePathQualifier extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link RulePathQualifier}, a cast assert is made to check if types are compatible.
+     */
     public static RulePathQualifier cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new RulePathQualifier(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class RulePathQualifier extends NetObject  {
 
     // Constructors section
     
+    public RulePathQualifier() throws Throwable {
+    }
 
     public RulePathQualifier(java.lang.String name, RulePathQualifier next) throws Throwable {
         try {
@@ -119,6 +138,7 @@ public class RulePathQualifier extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

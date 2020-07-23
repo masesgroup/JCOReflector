@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.TypeLibTypeFlags, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.TypeLibTypeFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.TypeLibTypeFlags</a>
  */
 public class TypeLibTypeFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.TypeLibTypeFlags
+     */
     public static final String className = "System.Runtime.InteropServices.TypeLibTypeFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -150,19 +165,19 @@ public class TypeLibTypeFlags extends NetObject  {
 
     // Flags management section
 
-    public TypeLibTypeFlags add(TypeLibTypeFlags val) throws Throwable {
+    public final TypeLibTypeFlags add(TypeLibTypeFlags val) throws Throwable {
         return new TypeLibTypeFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public TypeLibTypeFlags remove(TypeLibTypeFlags val) throws Throwable {
+    public final TypeLibTypeFlags remove(TypeLibTypeFlags val) throws Throwable {
         return new TypeLibTypeFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(TypeLibTypeFlags val) throws Throwable {
+    public final boolean is(TypeLibTypeFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(TypeLibTypeFlags val) throws Throwable {
+    public final boolean has(TypeLibTypeFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

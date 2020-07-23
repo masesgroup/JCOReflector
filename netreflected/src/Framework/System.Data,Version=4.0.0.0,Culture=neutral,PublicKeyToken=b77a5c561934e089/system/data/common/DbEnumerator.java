@@ -43,10 +43,22 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Data.Common.DbEnumerator, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbEnumerator</a>
  */
 public class DbEnumerator extends NetObject implements Iterator<NetObject> {
+    /**
+     * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data
+     */
     public static final String assemblyShortName = "System.Data";
+    /**
+     * Qualified class name: System.Data.Common.DbEnumerator
+     */
     public static final String className = "System.Data.Common.DbEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -95,11 +107,11 @@ public class DbEnumerator extends NetObject implements Iterator<NetObject> {
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public NetObject next() {
+	public final NetObject next() {
 		try {
 			return new NetObject(classInstance.next());
 		} catch (Throwable jce) {

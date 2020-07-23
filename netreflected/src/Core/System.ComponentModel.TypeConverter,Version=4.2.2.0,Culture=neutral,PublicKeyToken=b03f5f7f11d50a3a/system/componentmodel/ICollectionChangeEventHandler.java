@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.CollectionChangeEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CollectionChangeEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CollectionChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CollectionChangeEventHandler</a>
+ */
 public interface ICollectionChangeEventHandler {
     public void Invoke(NetObject sender, CollectionChangeEventArgs e);
 }

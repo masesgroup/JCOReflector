@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.IServiceContainer;
+import system.componentmodel.design.IServiceContainerImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import system.componentmodel.design.DesignerTransaction;
 import system.componentmodel.design.IDesigner;
 import system.componentmodel.design.IDesignerImplementation;
@@ -52,12 +56,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.IDesignerHost, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerHost</a>
  */
 public class IDesignerHostImplementation extends NetObject implements IDesignerHost {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.IDesignerHost
+     */
     public static final String className = "System.ComponentModel.Design.IDesignerHost";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +124,9 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerHost}, a cast assert is made to check if types are compatible.
+     */
     public static IDesignerHost ToIDesignerHost(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IDesignerHostImplementation(from.getJCOInstance());

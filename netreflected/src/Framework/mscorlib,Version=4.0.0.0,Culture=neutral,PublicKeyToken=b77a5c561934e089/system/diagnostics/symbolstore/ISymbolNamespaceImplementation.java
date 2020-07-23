@@ -46,12 +46,27 @@ import system.diagnostics.symbolstore.ISymbolVariableImplementation;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolNamespace, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolNamespace" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolNamespace</a>
  */
 public class ISymbolNamespaceImplementation extends NetObject implements ISymbolNamespace {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolNamespace
+     */
     public static final String className = "System.Diagnostics.SymbolStore.ISymbolNamespace";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +114,9 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolNamespace}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolNamespace ToISymbolNamespace(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISymbolNamespaceImplementation(from.getJCOInstance());

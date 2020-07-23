@@ -49,12 +49,27 @@ import system.security.policy.PolicyLevel;
 
 /**
  * The base .NET class managing System.Security.Policy.StrongNameMembershipCondition, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.StrongNameMembershipCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.StrongNameMembershipCondition</a>
  */
 public class StrongNameMembershipCondition extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.StrongNameMembershipCondition
+     */
     public static final String className = "System.Security.Policy.StrongNameMembershipCondition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class StrongNameMembershipCondition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StrongNameMembershipCondition}, a cast assert is made to check if types are compatible.
+     */
     public static StrongNameMembershipCondition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StrongNameMembershipCondition(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class StrongNameMembershipCondition extends NetObject  {
 
     // Constructors section
     
+    public StrongNameMembershipCondition() throws Throwable {
+    }
 
     public StrongNameMembershipCondition(StrongNamePublicKeyBlob blob, java.lang.String name, Version version) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException {
         try {
@@ -125,6 +144,7 @@ public class StrongNameMembershipCondition extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

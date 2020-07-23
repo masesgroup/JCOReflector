@@ -50,12 +50,27 @@ import system.windows.xps.packaging.IXpsFixedDocumentSequenceReaderImplementatio
 
 /**
  * The base .NET class managing System.Windows.Xps.Packaging.XpsDigitalSignature, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature</a>
  */
 public class XpsDigitalSignature extends NetObject  {
+    /**
+     * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: ReachFramework
+     */
     public static final String assemblyShortName = "ReachFramework";
+    /**
+     * Qualified class name: System.Windows.Xps.Packaging.XpsDigitalSignature
+     */
     public static final String className = "System.Windows.Xps.Packaging.XpsDigitalSignature";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +123,9 @@ public class XpsDigitalSignature extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XpsDigitalSignature}, a cast assert is made to check if types are compatible.
+     */
     public static XpsDigitalSignature cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XpsDigitalSignature(from.getJCOInstance());
@@ -116,6 +133,8 @@ public class XpsDigitalSignature extends NetObject  {
 
     // Constructors section
     
+    public XpsDigitalSignature() throws Throwable {
+    }
 
     public XpsDigitalSignature(PackageDigitalSignature packageSignature, XpsDocument _package) throws Throwable {
         try {
@@ -126,6 +145,7 @@ public class XpsDigitalSignature extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

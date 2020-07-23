@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Web.Services.Description.ServiceDescriptionImportWarnings, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.ServiceDescriptionImportWarnings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.ServiceDescriptionImportWarnings</a>
  */
 public class ServiceDescriptionImportWarnings extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Description.ServiceDescriptionImportWarnings
+     */
     public static final String className = "System.Web.Services.Description.ServiceDescriptionImportWarnings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class ServiceDescriptionImportWarnings extends NetObject  {
 
     // Flags management section
 
-    public ServiceDescriptionImportWarnings add(ServiceDescriptionImportWarnings val) throws Throwable {
+    public final ServiceDescriptionImportWarnings add(ServiceDescriptionImportWarnings val) throws Throwable {
         return new ServiceDescriptionImportWarnings(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ServiceDescriptionImportWarnings remove(ServiceDescriptionImportWarnings val) throws Throwable {
+    public final ServiceDescriptionImportWarnings remove(ServiceDescriptionImportWarnings val) throws Throwable {
         return new ServiceDescriptionImportWarnings(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ServiceDescriptionImportWarnings val) throws Throwable {
+    public final boolean is(ServiceDescriptionImportWarnings val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ServiceDescriptionImportWarnings val) throws Throwable {
+    public final boolean has(ServiceDescriptionImportWarnings val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.CancelEventArgs;
 
 
 /**
  * The base .NET class managing System.ComponentModel.DoWorkEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DoWorkEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DoWorkEventArgs</a>
  */
-public class DoWorkEventArgs extends NetObject  {
+public class DoWorkEventArgs extends CancelEventArgs  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.DoWorkEventArgs
+     */
     public static final String className = "System.ComponentModel.DoWorkEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class DoWorkEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DoWorkEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DoWorkEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DoWorkEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class DoWorkEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DoWorkEventArgs() throws Throwable {
+    }
 
     public DoWorkEventArgs(NetObject argument) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class DoWorkEventArgs extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -127,26 +148,6 @@ public class DoWorkEventArgs extends NetObject  {
     
     // Properties section
     
-    public boolean getCancel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("Cancel");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setCancel(boolean Cancel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Cancel", Cancel);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetObject getArgument() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.SplitterCancelEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SplitterCancelEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitterCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitterCancelEventHandler</a>
+ */
 public interface ISplitterCancelEventHandler {
     public void Invoke(NetObject sender, SplitterCancelEventArgs e);
 }

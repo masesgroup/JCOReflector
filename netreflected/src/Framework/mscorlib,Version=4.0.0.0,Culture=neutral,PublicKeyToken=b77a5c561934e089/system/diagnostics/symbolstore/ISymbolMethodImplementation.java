@@ -51,12 +51,27 @@ import system.diagnostics.symbolstore.SymbolToken;
 
 /**
  * The base .NET class managing System.Diagnostics.SymbolStore.ISymbolMethod, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod</a>
  */
 public class ISymbolMethodImplementation extends NetObject implements ISymbolMethod {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Diagnostics.SymbolStore.ISymbolMethod
+     */
     public static final String className = "System.Diagnostics.SymbolStore.ISymbolMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolMethod}, a cast assert is made to check if types are compatible.
+     */
     public static ISymbolMethod ToISymbolMethod(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ISymbolMethodImplementation(from.getJCOInstance());
@@ -117,6 +134,16 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("GetSourceStartEnd", toObjectFromArray(docs), lines, columns);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("GetSourceStartEnd", toObjectFromArray(dupParam0), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,6 +222,16 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetSequencePoints", offsets, toObjectFromArray(documents), lines, columns, endLines, endColumns);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetSequencePoints(JCRefOut dupParam0, ISymbolDocument[] dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetSequencePoints", dupParam0, toObjectFromArray(dupParam1), dupParam2, dupParam3, dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

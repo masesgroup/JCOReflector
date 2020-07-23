@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.serialization.CodeDomSerializerBase;
 import system.componentmodel.design.serialization.IDesignerSerializationManager;
 import system.componentmodel.design.serialization.IDesignerSerializationManagerImplementation;
 import system.componentmodel.MemberDescriptor;
@@ -46,12 +47,27 @@ import system.codedom.CodeStatementCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.Design.Serialization.MemberCodeDomSerializer, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.MemberCodeDomSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.MemberCodeDomSerializer</a>
  */
-public class MemberCodeDomSerializer extends NetObject  {
+public class MemberCodeDomSerializer extends CodeDomSerializerBase  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.ComponentModel.Design.Serialization.MemberCodeDomSerializer
+     */
     public static final String className = "System.ComponentModel.Design.Serialization.MemberCodeDomSerializer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class MemberCodeDomSerializer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemberCodeDomSerializer}, a cast assert is made to check if types are compatible.
+     */
     public static MemberCodeDomSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MemberCodeDomSerializer(from.getJCOInstance());
@@ -112,6 +130,8 @@ public class MemberCodeDomSerializer extends NetObject  {
 
     // Constructors section
     
+    public MemberCodeDomSerializer() throws Throwable {
+    }
 
     
     // Methods section

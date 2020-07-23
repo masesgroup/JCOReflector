@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.messaging.PeekCompletedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PeekCompletedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.PeekCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.PeekCompletedEventHandler</a>
+ */
 public interface IPeekCompletedEventHandler {
     public void Invoke(NetObject sender, PeekCompletedEventArgs e);
 }

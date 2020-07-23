@@ -54,12 +54,27 @@ import system.threading.CancellationToken;
 
 /**
  * The base .NET class managing System.IO.File, System.IO.FileSystem, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.File" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.File</a>
  */
 public class File extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.IO.FileSystem, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.IO.FileSystem, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.IO.FileSystem
+     */
     public static final String assemblyShortName = "System.IO.FileSystem";
+    /**
+     * Qualified class name: System.IO.File
+     */
     public static final String className = "System.IO.File";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -112,7 +127,9 @@ public class File extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link File}, a cast assert is made to check if types are compatible.
+     */
     public static File cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new File(from.getJCOInstance());
@@ -120,6 +137,8 @@ public class File extends NetObject  {
 
     // Constructors section
     
+    public File() throws Throwable {
+    }
 
     
     // Methods section
@@ -442,6 +461,17 @@ public class File extends NetObject  {
         }
     }
 
+    public static Task WriteAllBytesAsync(java.lang.String dupParam0, JCRefOut dupParam1, CancellationToken dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objWriteAllBytesAsync = (JCObject)classType.Invoke("WriteAllBytesAsync", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return new Task(objWriteAllBytesAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Task WriteAllTextAsync(java.lang.String path, java.lang.String contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -654,6 +684,16 @@ public class File extends NetObject  {
         }
     }
 
+    public static void WriteAllBytes(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteAllBytes", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void WriteAllLines(java.lang.String path, java.lang.String[] contents) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -664,11 +704,31 @@ public class File extends NetObject  {
         }
     }
 
+    public static void WriteAllLines(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteAllLines", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void WriteAllLines(java.lang.String path, java.lang.String[] contents, Encoding encoding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllLines", path, contents, encoding == null ? null : encoding.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteAllLines(java.lang.String dupParam0, JCRefOut dupParam1, Encoding dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteAllLines", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

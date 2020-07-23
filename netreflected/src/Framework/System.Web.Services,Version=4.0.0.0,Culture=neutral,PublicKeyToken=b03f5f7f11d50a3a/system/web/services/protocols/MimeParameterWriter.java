@@ -38,7 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.web.services.protocols.LogicalMethodInfo;
+import system.web.services.protocols.MimeFormatter;
 import system.net.WebRequest;
 import system.io.Stream;
 import system.text.Encoding;
@@ -46,12 +46,27 @@ import system.text.Encoding;
 
 /**
  * The base .NET class managing System.Web.Services.Protocols.MimeParameterWriter, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.MimeParameterWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.MimeParameterWriter</a>
  */
-public class MimeParameterWriter extends NetObject  {
+public class MimeParameterWriter extends MimeFormatter  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Protocols.MimeParameterWriter
+     */
     public static final String className = "System.Web.Services.Protocols.MimeParameterWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class MimeParameterWriter extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link MimeParameterWriter}, a cast assert is made to check if types are compatible.
+     */
     public static MimeParameterWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new MimeParameterWriter(from.getJCOInstance());
@@ -112,53 +129,17 @@ public class MimeParameterWriter extends NetObject  {
 
     // Constructors section
     
+    public MimeParameterWriter() throws Throwable {
+    }
 
     
     // Methods section
     
-    public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetInitializer = (JCObject)classInstance.Invoke("GetInitializer", methodInfo == null ? null : methodInfo.getJCOInstance());
-            return new NetObject(objGetInitializer);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject[] GetInitializers(LogicalMethodInfo[] methodInfos) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (Object)toObjectFromArray(methodInfos));
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new NetObject(resultingObject));
-            }
-            NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String GetRequestUrl(java.lang.String url, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetRequestUrl", url, toObjectFromArray(parameters));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Initialize(NetObject initializer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Initialize", initializer == null ? null : initializer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

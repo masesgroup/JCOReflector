@@ -44,12 +44,27 @@ import system.web.ui.design.TemplateDefinition;
 
 /**
  * The base .NET class managing System.Web.UI.Design.TemplateGroup, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TemplateGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.TemplateGroup</a>
  */
 public class TemplateGroup extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.TemplateGroup
+     */
     public static final String className = "System.Web.UI.Design.TemplateGroup";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class TemplateGroup extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateGroup}, a cast assert is made to check if types are compatible.
+     */
     public static TemplateGroup cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TemplateGroup(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class TemplateGroup extends NetObject  {
 
     // Constructors section
     
+    public TemplateGroup() throws Throwable {
+    }
 
     public TemplateGroup(java.lang.String groupName) throws Throwable {
         try {
@@ -130,6 +149,7 @@ public class TemplateGroup extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     
@@ -169,7 +189,7 @@ public class TemplateGroup extends NetObject  {
         }
     }
 
-    public TemplateDefinition[] getTemplates() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+    public final TemplateDefinition[] getTemplates() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

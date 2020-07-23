@@ -48,12 +48,27 @@ import system.windows.UIElement;
 
 /**
  * The base .NET class managing System.Activities.Presentation.View.VirtualizedContainerService, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.VirtualizedContainerService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.VirtualizedContainerService</a>
  */
 public class VirtualizedContainerService extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.View.VirtualizedContainerService
+     */
     public static final String className = "System.Activities.Presentation.View.VirtualizedContainerService";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class VirtualizedContainerService extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link VirtualizedContainerService}, a cast assert is made to check if types are compatible.
+     */
     public static VirtualizedContainerService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new VirtualizedContainerService(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class VirtualizedContainerService extends NetObject  {
 
     // Constructors section
     
+    public VirtualizedContainerService() throws Throwable {
+    }
 
     public VirtualizedContainerService(EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.InvalidCastException {
         try {
@@ -124,6 +143,7 @@ public class VirtualizedContainerService extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

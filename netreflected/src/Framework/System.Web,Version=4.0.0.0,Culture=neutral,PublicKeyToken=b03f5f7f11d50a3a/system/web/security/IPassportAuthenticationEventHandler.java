@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.security.PassportAuthenticationEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link PassportAuthenticationEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.PassportAuthenticationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.PassportAuthenticationEventHandler</a>
+ */
 public interface IPassportAuthenticationEventHandler {
     public void Invoke(NetObject sender, PassportAuthenticationEventArgs e);
 }

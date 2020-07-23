@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.TimeSpan;
 
 
 /**
  * The base .NET class managing System.Threading.SpinLock, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SpinLock" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SpinLock</a>
  */
-public class SpinLock extends NetObject  {
+public class SpinLock extends ValueType  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Threading.SpinLock
+     */
     public static final String className = "System.Threading.SpinLock";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class SpinLock extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SpinLock}, a cast assert is made to check if types are compatible.
+     */
     public static SpinLock cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SpinLock(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class SpinLock extends NetObject  {
 
     // Constructors section
     
+    public SpinLock() throws Throwable {
+    }
 
     public SpinLock(boolean enableThreadOwnerTracking) throws Throwable {
         try {
@@ -121,9 +141,20 @@ public class SpinLock extends NetObject  {
     }
 
 
+
     
     // Methods section
     
+    public void Exit() throws Throwable, system.InvalidOperationException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Exit");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Exit(boolean useMemoryBarrier) throws Throwable, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

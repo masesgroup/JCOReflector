@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.oledb.OleDbRowUpdatingEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link OleDbRowUpdatingEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbRowUpdatingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbRowUpdatingEventHandler</a>
+ */
 public interface IOleDbRowUpdatingEventHandler {
     public void Invoke(NetObject sender, OleDbRowUpdatingEventArgs e);
 }

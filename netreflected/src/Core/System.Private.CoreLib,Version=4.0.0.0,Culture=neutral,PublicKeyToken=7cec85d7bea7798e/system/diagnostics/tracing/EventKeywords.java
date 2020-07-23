@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Diagnostics.Tracing.EventKeywords, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventKeywords" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventKeywords</a>
  */
 public class EventKeywords extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Diagnostics.Tracing.EventKeywords
+     */
     public static final String className = "System.Diagnostics.Tracing.EventKeywords";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -146,19 +161,19 @@ public class EventKeywords extends NetObject  {
 
     // Flags management section
 
-    public EventKeywords add(EventKeywords val) throws Throwable {
+    public final EventKeywords add(EventKeywords val) throws Throwable {
         return new EventKeywords(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public EventKeywords remove(EventKeywords val) throws Throwable {
+    public final EventKeywords remove(EventKeywords val) throws Throwable {
         return new EventKeywords(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(EventKeywords val) throws Throwable {
+    public final boolean is(EventKeywords val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(EventKeywords val) throws Throwable {
+    public final boolean has(EventKeywords val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

@@ -38,11 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.DbDataRecord;
 import system.Single;
 import system.data.common.DbDataReader;
-import system.data.common.DbDataRecord;
-import system.data.IDataReader;
-import system.data.IDataReaderImplementation;
 import system.DateTime;
 import system.Decimal;
 import system.Guid;
@@ -53,12 +51,27 @@ import system.data.common.DataRecordInfo;
 
 /**
  * The base .NET class managing System.Data.Objects.DbUpdatableDataRecord, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DbUpdatableDataRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DbUpdatableDataRecord</a>
  */
-public class DbUpdatableDataRecord extends NetObject  {
+public class DbUpdatableDataRecord extends DbDataRecord  {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
     public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.Objects.DbUpdatableDataRecord
+     */
     public static final String className = "System.Data.Objects.DbUpdatableDataRecord";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -111,7 +124,9 @@ public class DbUpdatableDataRecord extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbUpdatableDataRecord}, a cast assert is made to check if types are compatible.
+     */
     public static DbUpdatableDataRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DbUpdatableDataRecord(from.getJCOInstance());
@@ -119,6 +134,8 @@ public class DbUpdatableDataRecord extends NetObject  {
 
     // Constructors section
     
+    public DbUpdatableDataRecord() throws Throwable {
+    }
 
     
     // Methods section
@@ -233,11 +250,31 @@ public class DbUpdatableDataRecord extends NetObject  {
         }
     }
 
+    public long GetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long GetChars(int ordinal, long dataIndex, char[] buffer, int bufferIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (long)classInstance.Invoke("GetChars", ordinal, dataIndex, buffer, bufferIndex, length);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long GetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,17 +318,6 @@ public class DbUpdatableDataRecord extends NetObject  {
         try {
             JCObject objGetDataRecord = (JCObject)classInstance.Invoke("GetDataRecord", ordinal);
             return new DbDataRecord(objGetDataRecord);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IDataReader GetData(int i) throws Throwable, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", i);
-            return new IDataReaderImplementation(objGetData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,16 +562,6 @@ public class DbUpdatableDataRecord extends NetObject  {
     
     // Properties section
     
-    public int getFieldCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("FieldCount");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataRecordInfo getDataRecordInfo() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

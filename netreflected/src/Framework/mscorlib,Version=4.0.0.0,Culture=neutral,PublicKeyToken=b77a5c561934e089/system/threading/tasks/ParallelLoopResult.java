@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 
 
 /**
  * The base .NET class managing System.Threading.Tasks.ParallelLoopResult, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.ParallelLoopResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.ParallelLoopResult</a>
  */
-public class ParallelLoopResult extends NetObject  {
+public class ParallelLoopResult extends ValueType  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Threading.Tasks.ParallelLoopResult
+     */
     public static final String className = "System.Threading.Tasks.ParallelLoopResult";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class ParallelLoopResult extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParallelLoopResult}, a cast assert is made to check if types are compatible.
+     */
     public static ParallelLoopResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ParallelLoopResult(from.getJCOInstance());
@@ -108,6 +126,10 @@ public class ParallelLoopResult extends NetObject  {
 
     // Constructors section
     
+    public ParallelLoopResult() throws Throwable {
+    }
+
+
 
     
     // Methods section

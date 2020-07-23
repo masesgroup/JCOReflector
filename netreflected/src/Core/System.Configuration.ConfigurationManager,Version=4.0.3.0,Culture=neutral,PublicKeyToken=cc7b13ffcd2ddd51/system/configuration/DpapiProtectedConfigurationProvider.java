@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.ProtectedConfigurationProvider;
 import system.xml.XmlNode;
 import system.collections.specialized.NameValueCollection;
 
 
 /**
  * The base .NET class managing System.Configuration.DpapiProtectedConfigurationProvider, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.DpapiProtectedConfigurationProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.DpapiProtectedConfigurationProvider</a>
  */
-public class DpapiProtectedConfigurationProvider extends NetObject  {
+public class DpapiProtectedConfigurationProvider extends ProtectedConfigurationProvider  {
+    /**
+     * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Configuration.ConfigurationManager
+     */
     public static final String assemblyShortName = "System.Configuration.ConfigurationManager";
+    /**
+     * Qualified class name: System.Configuration.DpapiProtectedConfigurationProvider
+     */
     public static final String className = "System.Configuration.DpapiProtectedConfigurationProvider";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DpapiProtectedConfigurationProvider extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DpapiProtectedConfigurationProvider}, a cast assert is made to check if types are compatible.
+     */
     public static DpapiProtectedConfigurationProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DpapiProtectedConfigurationProvider(from.getJCOInstance());
@@ -110,7 +128,6 @@ public class DpapiProtectedConfigurationProvider extends NetObject  {
 
     // Constructors section
     
-
     public DpapiProtectedConfigurationProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,26 +183,6 @@ public class DpapiProtectedConfigurationProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Get("UseMachineProtection");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getDescription() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Description");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

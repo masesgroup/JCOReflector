@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.remoting.messaging.IMethodMessage;
+import system.runtime.remoting.messaging.IMethodMessageImplementation;
+import system.runtime.remoting.messaging.IMessage;
+import system.runtime.remoting.messaging.IMessageImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.reflection.MethodBase;
@@ -46,12 +50,27 @@ import system.runtime.remoting.messaging.LogicalCallContext;
 
 /**
  * The base .NET class managing System.Runtime.Remoting.Messaging.IMethodCallMessage, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.IMethodCallMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.IMethodCallMessage</a>
  */
 public class IMethodCallMessageImplementation extends NetObject implements IMethodCallMessage {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.Remoting.Messaging.IMethodCallMessage
+     */
     public static final String className = "System.Runtime.Remoting.Messaging.IMethodCallMessage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -99,7 +118,9 @@ public class IMethodCallMessageImplementation extends NetObject implements IMeth
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMethodCallMessage}, a cast assert is made to check if types are compatible.
+     */
     public static IMethodCallMessage ToIMethodCallMessage(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IMethodCallMessageImplementation(from.getJCOInstance());
@@ -205,7 +226,7 @@ public class IMethodCallMessageImplementation extends NetObject implements IMeth
         }
     }
 
-    public NetObject[] getArgs() throws Throwable {
+    public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -222,7 +243,7 @@ public class IMethodCallMessageImplementation extends NetObject implements IMeth
         }
     }
 
-    public NetObject[] getInArgs() throws Throwable {
+    public final NetObject[] getInArgs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

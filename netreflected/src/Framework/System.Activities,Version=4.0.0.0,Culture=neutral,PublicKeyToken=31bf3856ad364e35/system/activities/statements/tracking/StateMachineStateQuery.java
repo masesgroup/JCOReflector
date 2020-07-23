@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.tracking.CustomTrackingQuery;
 
 
 /**
  * The base .NET class managing System.Activities.Statements.Tracking.StateMachineStateQuery, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateQuery</a>
  */
-public class StateMachineStateQuery extends NetObject  {
+public class StateMachineStateQuery extends CustomTrackingQuery  {
+    /**
+     * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities
+     */
     public static final String assemblyShortName = "System.Activities";
+    /**
+     * Qualified class name: System.Activities.Statements.Tracking.StateMachineStateQuery
+     */
     public static final String className = "System.Activities.Statements.Tracking.StateMachineStateQuery";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class StateMachineStateQuery extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StateMachineStateQuery}, a cast assert is made to check if types are compatible.
+     */
     public static StateMachineStateQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StateMachineStateQuery(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class StateMachineStateQuery extends NetObject  {
 
     // Constructors section
     
-
     public StateMachineStateQuery() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -127,26 +144,6 @@ public class StateMachineStateQuery extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getActivityName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("ActivityName");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setActivityName(java.lang.String ActivityName) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ActivityName", ActivityName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

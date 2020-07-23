@@ -38,18 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.MessageCredentialType;
-import system.servicemodel.security.SecurityAlgorithmSuite;
+import system.servicemodel.MessageSecurityOverHttp;
 
 
 /**
  * The base .NET class managing System.ServiceModel.NonDualMessageSecurityOverHttp, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.NonDualMessageSecurityOverHttp" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.NonDualMessageSecurityOverHttp</a>
  */
-public class NonDualMessageSecurityOverHttp extends NetObject  {
+public class NonDualMessageSecurityOverHttp extends MessageSecurityOverHttp  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.NonDualMessageSecurityOverHttp
+     */
     public static final String className = "System.ServiceModel.NonDualMessageSecurityOverHttp";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +116,9 @@ public class NonDualMessageSecurityOverHttp extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link NonDualMessageSecurityOverHttp}, a cast assert is made to check if types are compatible.
+     */
     public static NonDualMessageSecurityOverHttp cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new NonDualMessageSecurityOverHttp(from.getJCOInstance());
@@ -110,7 +126,6 @@ public class NonDualMessageSecurityOverHttp extends NetObject  {
 
     // Constructors section
     
-
     public NonDualMessageSecurityOverHttp() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -125,36 +140,6 @@ public class NonDualMessageSecurityOverHttp extends NetObject  {
     
     // Methods section
     
-    public boolean ShouldSerializeAlgorithmSuite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeAlgorithmSuite");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean ShouldSerializeClientCredentialType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeClientCredentialType");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean ShouldSerializeNegotiateServiceCredential() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ShouldSerializeNegotiateServiceCredential");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -174,68 +159,6 @@ public class NonDualMessageSecurityOverHttp extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EstablishSecurityContext", EstablishSecurityContext);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getNegotiateServiceCredential() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("NegotiateServiceCredential");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setNegotiateServiceCredential(boolean NegotiateServiceCredential) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("NegotiateServiceCredential", NegotiateServiceCredential);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public MessageCredentialType getClientCredentialType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ClientCredentialType");
-            return new MessageCredentialType(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setClientCredentialType(MessageCredentialType ClientCredentialType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ClientCredentialType", ClientCredentialType == null ? null : ClientCredentialType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SecurityAlgorithmSuite getAlgorithmSuite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmSuite");
-            return new SecurityAlgorithmSuite(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAlgorithmSuite(SecurityAlgorithmSuite AlgorithmSuite) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AlgorithmSuite", AlgorithmSuite == null ? null : AlgorithmSuite.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

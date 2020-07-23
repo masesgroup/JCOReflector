@@ -46,12 +46,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Windows.Documents.DocumentPage, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentPage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentPage</a>
  */
 public class DocumentPage extends NetObject  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Documents.DocumentPage
+     */
     public static final String className = "System.Windows.Documents.DocumentPage";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +119,9 @@ public class DocumentPage extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DocumentPage}, a cast assert is made to check if types are compatible.
+     */
     public static DocumentPage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DocumentPage(from.getJCOInstance());
@@ -112,6 +129,8 @@ public class DocumentPage extends NetObject  {
 
     // Constructors section
     
+    public DocumentPage() throws Throwable {
+    }
 
     public DocumentPage(Visual visual) throws Throwable {
         try {
@@ -132,6 +151,7 @@ public class DocumentPage extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.ToolTipEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link ToolTipEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler</a>
+ */
 public interface IToolTipEventHandler {
     public void Invoke(NetObject sender, ToolTipEventArgs e);
 }

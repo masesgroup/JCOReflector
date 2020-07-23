@@ -38,19 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xaml.XamlReaderSettings;
 import system.xaml.XamlXmlReaderSettings;
-import system.reflection.Assembly;
-import system.Uri;
 
 
 /**
  * The base .NET class managing System.Xaml.XamlXmlReaderSettings, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlXmlReaderSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlXmlReaderSettings</a>
  */
-public class XamlXmlReaderSettings extends NetObject  {
+public class XamlXmlReaderSettings extends XamlReaderSettings  {
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
     public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.XamlXmlReaderSettings
+     */
     public static final String className = "System.Xaml.XamlXmlReaderSettings";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +117,9 @@ public class XamlXmlReaderSettings extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlXmlReaderSettings}, a cast assert is made to check if types are compatible.
+     */
     public static XamlXmlReaderSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XamlXmlReaderSettings(from.getJCOInstance());
@@ -111,7 +127,6 @@ public class XamlXmlReaderSettings extends NetObject  {
 
     // Constructors section
     
-
     public XamlXmlReaderSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -140,26 +155,6 @@ public class XamlXmlReaderSettings extends NetObject  {
     
     // Properties section
     
-    public boolean getAllowProtectedMembersOnRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("AllowProtectedMembersOnRoot");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setAllowProtectedMembersOnRoot(boolean AllowProtectedMembersOnRoot) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("AllowProtectedMembersOnRoot", AllowProtectedMembersOnRoot);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getCloseInput() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -175,46 +170,6 @@ public class XamlXmlReaderSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CloseInput", CloseInput);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIgnoreUidsOnPropertyElements() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IgnoreUidsOnPropertyElements");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setIgnoreUidsOnPropertyElements(boolean IgnoreUidsOnPropertyElements) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("IgnoreUidsOnPropertyElements", IgnoreUidsOnPropertyElements);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getProvideLineInfo() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ProvideLineInfo");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setProvideLineInfo(boolean ProvideLineInfo) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ProvideLineInfo", ProvideLineInfo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,26 +195,6 @@ public class XamlXmlReaderSettings extends NetObject  {
         }
     }
 
-    public boolean getValuesMustBeString() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("ValuesMustBeString");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setValuesMustBeString(boolean ValuesMustBeString) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ValuesMustBeString", ValuesMustBeString);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getXmlSpacePreserve() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -280,27 +215,6 @@ public class XamlXmlReaderSettings extends NetObject  {
         }
     }
 
-    public Assembly getLocalAssembly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("LocalAssembly");
-            return new Assembly(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setLocalAssembly(Assembly LocalAssembly) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("LocalAssembly", LocalAssembly == null ? null : LocalAssembly.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -316,27 +230,6 @@ public class XamlXmlReaderSettings extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlLang", XmlLang);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getBaseUri() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
-            return new Uri(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setBaseUri(Uri BaseUri) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

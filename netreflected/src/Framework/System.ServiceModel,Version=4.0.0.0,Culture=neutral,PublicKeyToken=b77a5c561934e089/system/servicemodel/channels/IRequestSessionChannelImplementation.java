@@ -38,13 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.IRequestChannel;
+import system.servicemodel.channels.IRequestChannelImplementation;
+import system.servicemodel.channels.IChannel;
+import system.servicemodel.channels.IChannelImplementation;
+import system.servicemodel.ICommunicationObject;
+import system.servicemodel.ICommunicationObjectImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.TimeSpan;
 import system.servicemodel.channels.Message;
-import system.servicemodel.channels.IOutputSession;
-import system.servicemodel.channels.IOutputSessionImplementation;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.Uri;
@@ -53,12 +57,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.IRequestSessionChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IRequestSessionChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IRequestSessionChannel</a>
  */
 public class IRequestSessionChannelImplementation extends NetObject implements IRequestSessionChannel {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.IRequestSessionChannel
+     */
     public static final String className = "System.ServiceModel.Channels.IRequestSessionChannel";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +125,9 @@ public class IRequestSessionChannelImplementation extends NetObject implements I
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRequestSessionChannel}, a cast assert is made to check if types are compatible.
+     */
     public static IRequestSessionChannel ToIRequestSessionChannel(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IRequestSessionChannelImplementation(from.getJCOInstance());
@@ -287,17 +308,6 @@ public class IRequestSessionChannelImplementation extends NetObject implements I
     
     // Properties section
     
-    public IOutputSession getSession() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Session");
-            return new IOutputSessionImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

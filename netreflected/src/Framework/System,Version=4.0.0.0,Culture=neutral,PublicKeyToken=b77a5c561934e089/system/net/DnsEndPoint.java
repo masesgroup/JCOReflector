@@ -38,19 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.sockets.AddressFamily;
 import system.net.EndPoint;
-import system.net.SocketAddress;
+import system.net.sockets.AddressFamily;
 
 
 /**
  * The base .NET class managing System.Net.DnsEndPoint, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DnsEndPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DnsEndPoint</a>
  */
-public class DnsEndPoint extends NetObject  {
+public class DnsEndPoint extends EndPoint  {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Net.DnsEndPoint
+     */
     public static final String className = "System.Net.DnsEndPoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +117,9 @@ public class DnsEndPoint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DnsEndPoint}, a cast assert is made to check if types are compatible.
+     */
     public static DnsEndPoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DnsEndPoint(from.getJCOInstance());
@@ -111,6 +127,8 @@ public class DnsEndPoint extends NetObject  {
 
     // Constructors section
     
+    public DnsEndPoint() throws Throwable {
+    }
 
     public DnsEndPoint(java.lang.String host, int port) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         try {
@@ -133,31 +151,10 @@ public class DnsEndPoint extends NetObject  {
     }
 
 
+
     
     // Methods section
     
-    public EndPoint Create(SocketAddress socketAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", socketAddress == null ? null : socketAddress.getJCOInstance());
-            return new EndPoint(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public SocketAddress Serialize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize");
-            return new SocketAddress(objSerialize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
@@ -167,17 +164,6 @@ public class DnsEndPoint extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Get("Port");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public AddressFamily getAddressFamily() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("AddressFamily");
-            return new AddressFamily(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

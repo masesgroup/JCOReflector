@@ -42,12 +42,27 @@ import system.windows.forms.ListViewItemMouseHoverEventArgs;
 import system.windows.forms.IListViewItemMouseHoverEventHandler;
 /**
  * The base .NET class managing System.Windows.Forms.ListViewItemMouseHoverEventHandler, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemMouseHoverEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemMouseHoverEventHandler</a>
  */
 public class ListViewItemMouseHoverEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ListViewItemMouseHoverEventHandler
+     */
     public static final String className = "System.Windows.Forms.ListViewItemMouseHoverEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IListViewItemMouseHoverEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ListViewItemMouseHoverEventHandler extends JCVoidDelegate implement
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ListViewItemMouseHoverEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ListViewItemMouseHoverEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ListViewItemMouseHoverEventHandler extends JCVoidDelegate implement
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ListViewItemMouseHoverEventArgs e) {
     }
 }

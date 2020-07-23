@@ -45,12 +45,27 @@ import system.security.principal.SecurityIdentifier;
 
 /**
  * The base .NET class managing System.Security.AccessControl.GenericSecurityDescriptor, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.GenericSecurityDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.GenericSecurityDescriptor</a>
  */
 public class GenericSecurityDescriptor extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.AccessControl.GenericSecurityDescriptor
+     */
     public static final String className = "System.Security.AccessControl.GenericSecurityDescriptor";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class GenericSecurityDescriptor extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link GenericSecurityDescriptor}, a cast assert is made to check if types are compatible.
+     */
     public static GenericSecurityDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new GenericSecurityDescriptor(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     // Constructors section
     
+    public GenericSecurityDescriptor() throws Throwable {
+    }
 
     
     // Methods section
@@ -145,15 +164,25 @@ public class GenericSecurityDescriptor extends NetObject  {
         }
     }
 
+    public void GetBinaryForm(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBinaryForm", dupParam0, dupParam1);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public static byte getRevision() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public byte getRevision() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (byte)classType.Get("Revision");
+            return (byte)classInstance.Get("Revision");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

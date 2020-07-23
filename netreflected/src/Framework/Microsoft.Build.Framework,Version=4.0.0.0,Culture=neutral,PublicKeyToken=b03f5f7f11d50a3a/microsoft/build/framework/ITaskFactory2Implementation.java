@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.framework.ITaskFactory;
+import microsoft.build.framework.ITaskFactoryImplementation;
 import microsoft.build.framework.ITask;
 import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.IBuildEngine;
@@ -47,12 +49,27 @@ import microsoft.build.framework.TaskPropertyInfo;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.ITaskFactory2, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ITaskFactory2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ITaskFactory2</a>
  */
 public class ITaskFactory2Implementation extends NetObject implements ITaskFactory2 {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.ITaskFactory2
+     */
     public static final String className = "Microsoft.Build.Framework.ITaskFactory2";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +117,9 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITaskFactory2}, a cast assert is made to check if types are compatible.
+     */
     public static ITaskFactory2 ToITaskFactory2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ITaskFactory2Implementation(from.getJCOInstance());

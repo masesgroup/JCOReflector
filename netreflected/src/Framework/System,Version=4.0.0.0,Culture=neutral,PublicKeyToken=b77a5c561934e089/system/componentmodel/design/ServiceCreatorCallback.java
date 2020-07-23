@@ -43,12 +43,27 @@ import system.componentmodel.design.IServiceContainerImplementation;
 import system.componentmodel.design.IServiceCreatorCallback;
 /**
  * The base .NET class managing System.ComponentModel.Design.ServiceCreatorCallback, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceCreatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceCreatorCallback</a>
  */
 public class ServiceCreatorCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.Design.ServiceCreatorCallback
+     */
     public static final String className = "System.ComponentModel.Design.ServiceCreatorCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IServiceCreatorCallback callerInstance = null;
@@ -156,7 +171,7 @@ public class ServiceCreatorCallback extends JCDelegate implements IJCEventEmit, 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final NetObject DynamicInvoke(IServiceContainer container, NetType serviceType) throws Throwable {
+    public NetObject METHOD_JAVA_NAME(IServiceContainer container, NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -167,7 +182,9 @@ public class ServiceCreatorCallback extends JCDelegate implements IJCEventEmit, 
         }
     }
 
-
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public NetObject Invoke(IServiceContainer container, NetType serviceType) {
         return null;
     }

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.CleanUpVirtualizedItemEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link CleanUpVirtualizedItemEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventHandler</a>
+ */
 public interface ICleanUpVirtualizedItemEventHandler {
     public void Invoke(NetObject sender, CleanUpVirtualizedItemEventArgs e);
 }

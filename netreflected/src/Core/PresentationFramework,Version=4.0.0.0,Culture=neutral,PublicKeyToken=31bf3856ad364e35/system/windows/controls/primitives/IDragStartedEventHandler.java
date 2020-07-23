@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.controls.primitives.DragStartedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DragStartedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.DragStartedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.DragStartedEventHandler</a>
+ */
 public interface IDragStartedEventHandler {
     public void Invoke(NetObject sender, DragStartedEventArgs e);
 }

@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.activities.presentation.model.ModelItem;
 
 
 /**
  * The base .NET class managing System.Activities.Presentation.View.ViewStateChangedEventArgs, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.ViewStateChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.ViewStateChangedEventArgs</a>
  */
-public class ViewStateChangedEventArgs extends NetObject  {
+public class ViewStateChangedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.View.ViewStateChangedEventArgs
+     */
     public static final String className = "System.Activities.Presentation.View.ViewStateChangedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class ViewStateChangedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ViewStateChangedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static ViewStateChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ViewStateChangedEventArgs(from.getJCOInstance());
@@ -109,6 +127,8 @@ public class ViewStateChangedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public ViewStateChangedEventArgs() throws Throwable {
+    }
 
     public ViewStateChangedEventArgs(ModelItem modelItem, java.lang.String key, NetObject newValue, NetObject oldValue) throws Throwable {
         try {
@@ -119,6 +139,7 @@ public class ViewStateChangedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

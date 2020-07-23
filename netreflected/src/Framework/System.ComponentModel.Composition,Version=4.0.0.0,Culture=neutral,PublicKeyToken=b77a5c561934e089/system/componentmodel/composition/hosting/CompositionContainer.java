@@ -38,11 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.composition.hosting.CompositionOptions;
 import system.componentmodel.composition.hosting.ExportProvider;
+import system.componentmodel.composition.hosting.CompositionOptions;
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
-import system.componentmodel.composition.primitives.ImportDefinition;
-import system.componentmodel.composition.hosting.AtomicComposition;
 import system.componentmodel.composition.hosting.CompositionBatch;
 import system.componentmodel.composition.primitives.Export;
 import system.componentmodel.composition.primitives.ComposablePart;
@@ -50,12 +48,27 @@ import system.componentmodel.composition.primitives.ComposablePart;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.Hosting.CompositionContainer, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionContainer</a>
  */
-public class CompositionContainer extends NetObject  {
+public class CompositionContainer extends ExportProvider  {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ComponentModel.Composition
+     */
     public static final String assemblyShortName = "System.ComponentModel.Composition";
+    /**
+     * Qualified class name: System.ComponentModel.Composition.Hosting.CompositionContainer
+     */
     public static final String className = "System.ComponentModel.Composition.Hosting.CompositionContainer";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -108,7 +121,9 @@ public class CompositionContainer extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompositionContainer}, a cast assert is made to check if types are compatible.
+     */
     public static CompositionContainer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new CompositionContainer(from.getJCOInstance());
@@ -116,7 +131,6 @@ public class CompositionContainer extends NetObject  {
 
     // Constructors section
     
-
     public CompositionContainer() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file

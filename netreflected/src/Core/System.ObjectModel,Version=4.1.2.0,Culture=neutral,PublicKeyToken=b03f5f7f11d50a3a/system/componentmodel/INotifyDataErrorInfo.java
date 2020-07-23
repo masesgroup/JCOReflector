@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.ComponentModel.INotifyDataErrorInfo, System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INotifyDataErrorInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INotifyDataErrorInfo</a>
  */
 public interface INotifyDataErrorInfo extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ObjectModel
+     */
+    public static final String assemblyShortName = "System.ObjectModel";
+    /**
+     * Qualified class name: System.ComponentModel.INotifyDataErrorInfo
+     */
+    public static final String className = "System.ComponentModel.INotifyDataErrorInfo";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyDataErrorInfo}, a cast assert is made to check if types are compatible.
+     */
     public static INotifyDataErrorInfo ToINotifyDataErrorInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.INotifyDataErrorInfo, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ObjectModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INotifyDataErrorInfoImplementation(from.getJCOInstance());
     }

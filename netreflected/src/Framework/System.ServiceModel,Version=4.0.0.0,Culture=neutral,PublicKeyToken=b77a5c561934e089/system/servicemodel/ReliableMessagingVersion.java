@@ -43,12 +43,27 @@ import system.servicemodel.ReliableMessagingVersion;
 
 /**
  * The base .NET class managing System.ServiceModel.ReliableMessagingVersion, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ReliableMessagingVersion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ReliableMessagingVersion</a>
  */
 public class ReliableMessagingVersion extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.ReliableMessagingVersion
+     */
     public static final String className = "System.ServiceModel.ReliableMessagingVersion";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class ReliableMessagingVersion extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReliableMessagingVersion}, a cast assert is made to check if types are compatible.
+     */
     public static ReliableMessagingVersion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ReliableMessagingVersion(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class ReliableMessagingVersion extends NetObject  {
 
     // Constructors section
     
+    public ReliableMessagingVersion() throws Throwable {
+    }
 
     
     // Methods section
@@ -117,33 +136,33 @@ public class ReliableMessagingVersion extends NetObject  {
     
     // Properties section
     
-    public static ReliableMessagingVersion getDefault() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ReliableMessagingVersion getDefault() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            JCObject val = (JCObject)classInstance.Get("Default");
             return new ReliableMessagingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ReliableMessagingVersion getWSReliableMessaging11() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ReliableMessagingVersion getWSReliableMessaging11() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSReliableMessaging11");
+            JCObject val = (JCObject)classInstance.Get("WSReliableMessaging11");
             return new ReliableMessagingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ReliableMessagingVersion getWSReliableMessagingFebruary2005() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public ReliableMessagingVersion getWSReliableMessagingFebruary2005() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("WSReliableMessagingFebruary2005");
+            JCObject val = (JCObject)classInstance.Get("WSReliableMessagingFebruary2005");
             return new ReliableMessagingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

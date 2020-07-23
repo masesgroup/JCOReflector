@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.build.framework.TaskStartedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link TaskStartedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.TaskStartedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.TaskStartedEventHandler</a>
+ */
 public interface ITaskStartedEventHandler {
     public void Invoke(NetObject sender, TaskStartedEventArgs e);
 }

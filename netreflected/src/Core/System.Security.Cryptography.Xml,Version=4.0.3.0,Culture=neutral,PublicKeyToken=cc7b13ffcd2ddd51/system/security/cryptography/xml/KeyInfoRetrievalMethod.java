@@ -38,17 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.security.cryptography.xml.KeyInfoClause;
 import system.xml.XmlElement;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.Xml.KeyInfoRetrievalMethod, System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfoRetrievalMethod</a>
  */
-public class KeyInfoRetrievalMethod extends NetObject  {
+public class KeyInfoRetrievalMethod extends KeyInfoClause  {
+    /**
+     * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Security.Cryptography.Xml
+     */
     public static final String assemblyShortName = "System.Security.Cryptography.Xml";
+    /**
+     * Qualified class name: System.Security.Cryptography.Xml.KeyInfoRetrievalMethod
+     */
     public static final String className = "System.Security.Cryptography.Xml.KeyInfoRetrievalMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +117,9 @@ public class KeyInfoRetrievalMethod extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyInfoRetrievalMethod}, a cast assert is made to check if types are compatible.
+     */
     public static KeyInfoRetrievalMethod cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new KeyInfoRetrievalMethod(from.getJCOInstance());
@@ -109,7 +127,6 @@ public class KeyInfoRetrievalMethod extends NetObject  {
 
     // Constructors section
     
-
     public KeyInfoRetrievalMethod() throws Throwable {
         try {
             // add reference to assemblyName.dll file

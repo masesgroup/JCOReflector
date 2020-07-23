@@ -43,12 +43,27 @@ import system.UInt32;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices._MethodBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._MethodBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._MethodBuilder</a>
  */
 public class _MethodBuilderImplementation extends NetObject implements _MethodBuilder {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices._MethodBuilder
+     */
     public static final String className = "System.Runtime.InteropServices._MethodBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class _MethodBuilderImplementation extends NetObject implements _MethodBu
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link _MethodBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static _MethodBuilder To_MethodBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new _MethodBuilderImplementation(from.getJCOInstance());

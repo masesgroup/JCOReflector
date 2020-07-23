@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Dynamic.IInvokeOnGetBinder, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IInvokeOnGetBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IInvokeOnGetBinder</a>
  */
 public interface IInvokeOnGetBinder extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
+    public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Dynamic.IInvokeOnGetBinder
+     */
+    public static final String className = "System.Dynamic.IInvokeOnGetBinder";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInvokeOnGetBinder}, a cast assert is made to check if types are compatible.
+     */
     public static IInvokeOnGetBinder ToIInvokeOnGetBinder(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Dynamic.IInvokeOnGetBinder, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Core"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IInvokeOnGetBinderImplementation(from.getJCOInstance());
     }

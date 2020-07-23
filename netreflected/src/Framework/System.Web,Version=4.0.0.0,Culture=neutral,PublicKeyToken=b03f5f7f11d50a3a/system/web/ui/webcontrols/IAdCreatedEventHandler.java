@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.web.ui.webcontrols.AdCreatedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link AdCreatedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.AdCreatedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.AdCreatedEventHandler</a>
+ */
 public interface IAdCreatedEventHandler {
     public void Invoke(NetObject sender, AdCreatedEventArgs e);
 }

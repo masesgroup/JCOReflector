@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xml.XmlDictionaryReaderQuotaTypes, System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlDictionaryReaderQuotaTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlDictionaryReaderQuotaTypes</a>
  */
 public class XmlDictionaryReaderQuotaTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.DataContractSerialization
+     */
     public static final String assemblyShortName = "System.Private.DataContractSerialization";
+    /**
+     * Qualified class name: System.Xml.XmlDictionaryReaderQuotaTypes
+     */
     public static final String className = "System.Xml.XmlDictionaryReaderQuotaTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -141,19 +156,19 @@ public class XmlDictionaryReaderQuotaTypes extends NetObject  {
 
     // Flags management section
 
-    public XmlDictionaryReaderQuotaTypes add(XmlDictionaryReaderQuotaTypes val) throws Throwable {
+    public final XmlDictionaryReaderQuotaTypes add(XmlDictionaryReaderQuotaTypes val) throws Throwable {
         return new XmlDictionaryReaderQuotaTypes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public XmlDictionaryReaderQuotaTypes remove(XmlDictionaryReaderQuotaTypes val) throws Throwable {
+    public final XmlDictionaryReaderQuotaTypes remove(XmlDictionaryReaderQuotaTypes val) throws Throwable {
         return new XmlDictionaryReaderQuotaTypes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(XmlDictionaryReaderQuotaTypes val) throws Throwable {
+    public final boolean is(XmlDictionaryReaderQuotaTypes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(XmlDictionaryReaderQuotaTypes val) throws Throwable {
+    public final boolean has(XmlDictionaryReaderQuotaTypes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

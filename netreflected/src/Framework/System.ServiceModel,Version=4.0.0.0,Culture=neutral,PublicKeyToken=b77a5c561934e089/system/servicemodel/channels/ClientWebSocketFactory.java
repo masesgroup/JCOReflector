@@ -45,12 +45,27 @@ import system.servicemodel.channels.WebSocketTransportSettings;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.ClientWebSocketFactory, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ClientWebSocketFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ClientWebSocketFactory</a>
  */
 public class ClientWebSocketFactory extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.ClientWebSocketFactory
+     */
     public static final String className = "System.ServiceModel.Channels.ClientWebSocketFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ClientWebSocketFactory extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClientWebSocketFactory}, a cast assert is made to check if types are compatible.
+     */
     public static ClientWebSocketFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ClientWebSocketFactory(from.getJCOInstance());
@@ -111,6 +128,8 @@ public class ClientWebSocketFactory extends NetObject  {
 
     // Constructors section
     
+    public ClientWebSocketFactory() throws Throwable {
+    }
 
     
     // Methods section

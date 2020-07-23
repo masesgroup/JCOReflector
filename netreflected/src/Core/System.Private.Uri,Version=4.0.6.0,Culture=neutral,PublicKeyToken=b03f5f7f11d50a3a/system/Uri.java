@@ -49,12 +49,27 @@ import system.UriHostNameType;
 
 /**
  * The base .NET class managing System.Uri, System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Uri" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Uri</a>
  */
 public class Uri extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Private.Uri
+     */
     public static final String assemblyShortName = "System.Private.Uri";
+    /**
+     * Qualified class name: System.Uri
+     */
     public static final String className = "System.Uri";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +122,9 @@ public class Uri extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Uri}, a cast assert is made to check if types are compatible.
+     */
     public static Uri cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Uri(from.getJCOInstance());
@@ -115,6 +132,8 @@ public class Uri extends NetObject  {
 
     // Constructors section
     
+    public Uri() throws Throwable {
+    }
 
     public Uri(java.lang.String uriString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.UriFormatException, system.OverflowException {
         try {
@@ -175,6 +194,7 @@ public class Uri extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

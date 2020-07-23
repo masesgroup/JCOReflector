@@ -38,16 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
  * The base .NET class managing System.Resources.IResourceWriter, System.Resources.Writer, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceWriter</a>
  */
 public class IResourceWriterImplementation extends NetObject implements IResourceWriter {
+    /**
+     * Fully assembly qualified name: System.Resources.Writer, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Resources.Writer, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Resources.Writer
+     */
     public static final String assemblyShortName = "System.Resources.Writer";
+    /**
+     * Qualified class name: System.Resources.IResourceWriter
+     */
     public static final String className = "System.Resources.IResourceWriter";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +112,9 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IResourceWriter}, a cast assert is made to check if types are compatible.
+     */
     public static IResourceWriter ToIResourceWriter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IResourceWriterImplementation(from.getJCOInstance());
@@ -108,6 +127,16 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddResource(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddResource", dupParam0, dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

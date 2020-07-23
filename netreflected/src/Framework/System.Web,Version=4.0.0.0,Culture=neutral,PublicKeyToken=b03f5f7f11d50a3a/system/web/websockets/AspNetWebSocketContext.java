@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.websockets.WebSocketContext;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.collections.specialized.NameValueCollection;
@@ -59,12 +60,27 @@ import system.web.UnvalidatedRequestValuesBase;
 
 /**
  * The base .NET class managing System.Web.WebSockets.AspNetWebSocketContext, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext</a>
  */
-public class AspNetWebSocketContext extends NetObject  {
+public class AspNetWebSocketContext extends WebSocketContext  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.WebSockets.AspNetWebSocketContext
+     */
     public static final String className = "System.Web.WebSockets.AspNetWebSocketContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -117,7 +133,9 @@ public class AspNetWebSocketContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link AspNetWebSocketContext}, a cast assert is made to check if types are compatible.
+     */
     public static AspNetWebSocketContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new AspNetWebSocketContext(from.getJCOInstance());
@@ -125,6 +143,8 @@ public class AspNetWebSocketContext extends NetObject  {
 
     // Constructors section
     
+    public AspNetWebSocketContext() throws Throwable {
+    }
 
     
     // Methods section
@@ -133,16 +153,6 @@ public class AspNetWebSocketContext extends NetObject  {
     
     // Properties section
     
-    public boolean getIsAuthenticated() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsAuthenticated");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean getIsClientConnected() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -163,31 +173,11 @@ public class AspNetWebSocketContext extends NetObject  {
         }
     }
 
-    public boolean getIsLocal() throws Throwable, system.NotImplementedException {
+    public int getConnectionCount() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("IsLocal");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getIsSecureConnection() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("IsSecureConnection");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int getConnectionCount() throws Throwable, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Get("ConnectionCount");
+            return (int)classInstance.Get("ConnectionCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,17 +189,6 @@ public class AspNetWebSocketContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Items");
             return new IDictionaryImplementation(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NameValueCollection getHeaders() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
-            return new NameValueCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,39 +222,6 @@ public class AspNetWebSocketContext extends NetObject  {
         try {
             JCObject val = (JCObject)classInstance.Get("Timestamp");
             return new DateTime(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CookieCollection getCookieCollection() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("CookieCollection");
-            return new CookieCollection(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public WebSocket getWebSocket() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("WebSocket");
-            return new WebSocket(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public IPrincipal getUser() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("User");
-            return new IPrincipalImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,16 +268,6 @@ public class AspNetWebSocketContext extends NetObject  {
         }
     }
 
-    public java.lang.String getOrigin() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("Origin");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String getPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -357,26 +293,6 @@ public class AspNetWebSocketContext extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Get("RawUrl");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSecWebSocketKey() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SecWebSocketKey");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public java.lang.String getSecWebSocketVersion() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("SecWebSocketVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,17 +342,6 @@ public class AspNetWebSocketContext extends NetObject  {
 				resultingArray[indexUserLanguages] = (java.lang.String)resultingArrayList.get(indexUserLanguages);
 			}
             return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Uri getRequestUri() throws Throwable, system.NotImplementedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("RequestUri");
-            return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

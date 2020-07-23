@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing System.Data.StatementCompletedEventArgs, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.StatementCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.StatementCompletedEventArgs</a>
  */
-public class StatementCompletedEventArgs extends NetObject  {
+public class StatementCompletedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Data.Common
+     */
     public static final String assemblyShortName = "System.Data.Common";
+    /**
+     * Qualified class name: System.Data.StatementCompletedEventArgs
+     */
     public static final String className = "System.Data.StatementCompletedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class StatementCompletedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StatementCompletedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static StatementCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StatementCompletedEventArgs(from.getJCOInstance());
@@ -108,6 +126,8 @@ public class StatementCompletedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public StatementCompletedEventArgs() throws Throwable {
+    }
 
     public StatementCompletedEventArgs(int recordCount) throws Throwable {
         try {
@@ -118,6 +138,7 @@ public class StatementCompletedEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

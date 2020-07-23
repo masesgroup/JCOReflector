@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Activities.Presentation.Debug.BreakpointTypes, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Debug.BreakpointTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Debug.BreakpointTypes</a>
  */
 public class BreakpointTypes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Debug.BreakpointTypes
+     */
     public static final String className = "System.Activities.Presentation.Debug.BreakpointTypes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class BreakpointTypes extends NetObject  {
 
     // Flags management section
 
-    public BreakpointTypes add(BreakpointTypes val) throws Throwable {
+    public final BreakpointTypes add(BreakpointTypes val) throws Throwable {
         return new BreakpointTypes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public BreakpointTypes remove(BreakpointTypes val) throws Throwable {
+    public final BreakpointTypes remove(BreakpointTypes val) throws Throwable {
         return new BreakpointTypes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(BreakpointTypes val) throws Throwable {
+    public final boolean is(BreakpointTypes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(BreakpointTypes val) throws Throwable {
+    public final boolean has(BreakpointTypes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

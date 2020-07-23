@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Windows.Automation.Provider.ProviderOptions, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ProviderOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ProviderOptions</a>
  */
 public class ProviderOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: UIAutomationProvider
+     */
     public static final String assemblyShortName = "UIAutomationProvider";
+    /**
+     * Qualified class name: System.Windows.Automation.Provider.ProviderOptions
+     */
     public static final String className = "System.Windows.Automation.Provider.ProviderOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -142,19 +157,19 @@ public class ProviderOptions extends NetObject  {
 
     // Flags management section
 
-    public ProviderOptions add(ProviderOptions val) throws Throwable {
+    public final ProviderOptions add(ProviderOptions val) throws Throwable {
         return new ProviderOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ProviderOptions remove(ProviderOptions val) throws Throwable {
+    public final ProviderOptions remove(ProviderOptions val) throws Throwable {
         return new ProviderOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ProviderOptions val) throws Throwable {
+    public final boolean is(ProviderOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ProviderOptions val) throws Throwable {
+    public final boolean has(ProviderOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

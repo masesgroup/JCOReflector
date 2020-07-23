@@ -42,12 +42,29 @@ import system.net.security.ProtectionLevel;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.ISecurityCapabilities, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ISecurityCapabilities" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ISecurityCapabilities</a>
  */
 public interface ISecurityCapabilities extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
+    public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.ISecurityCapabilities
+     */
+    public static final String className = "System.ServiceModel.Channels.ISecurityCapabilities";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISecurityCapabilities}, a cast assert is made to check if types are compatible.
+     */
     public static ISecurityCapabilities ToISecurityCapabilities(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ServiceModel.Channels.ISecurityCapabilities, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.ServiceModel"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISecurityCapabilitiesImplementation(from.getJCOInstance());
     }

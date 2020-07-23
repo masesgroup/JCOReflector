@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions</a>
  */
 public class TopLevelNameCollisionOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class TopLevelNameCollisionOptions extends NetObject  {
 
     // Flags management section
 
-    public TopLevelNameCollisionOptions add(TopLevelNameCollisionOptions val) throws Throwable {
+    public final TopLevelNameCollisionOptions add(TopLevelNameCollisionOptions val) throws Throwable {
         return new TopLevelNameCollisionOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public TopLevelNameCollisionOptions remove(TopLevelNameCollisionOptions val) throws Throwable {
+    public final TopLevelNameCollisionOptions remove(TopLevelNameCollisionOptions val) throws Throwable {
         return new TopLevelNameCollisionOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(TopLevelNameCollisionOptions val) throws Throwable {
+    public final boolean is(TopLevelNameCollisionOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(TopLevelNameCollisionOptions val) throws Throwable {
+    public final boolean has(TopLevelNameCollisionOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

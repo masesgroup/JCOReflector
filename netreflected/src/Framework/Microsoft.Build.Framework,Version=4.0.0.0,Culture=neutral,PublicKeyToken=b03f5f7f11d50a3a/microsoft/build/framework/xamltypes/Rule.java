@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import microsoft.build.framework.xamltypes.RuleSchema;
 import microsoft.build.framework.xamltypes.BaseProperty;
 import system.collections.specialized.OrderedDictionary;
 import microsoft.build.framework.xamltypes.DataSource;
@@ -46,12 +47,27 @@ import microsoft.build.framework.xamltypes.RuleOverrideMode;
 
 /**
  * The base .NET class managing Microsoft.Build.Framework.XamlTypes.Rule, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule</a>
  */
-public class Rule extends NetObject  {
+public class Rule extends RuleSchema  {
+    /**
+     * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: Microsoft.Build.Framework
+     */
     public static final String assemblyShortName = "Microsoft.Build.Framework";
+    /**
+     * Qualified class name: Microsoft.Build.Framework.XamlTypes.Rule
+     */
     public static final String className = "Microsoft.Build.Framework.XamlTypes.Rule";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class Rule extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rule}, a cast assert is made to check if types are compatible.
+     */
     public static Rule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new Rule(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class Rule extends NetObject  {
 
     // Constructors section
     
-
     public Rule() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

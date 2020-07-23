@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.data.sqlclient.SqlRowsCopiedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SqlRowsCopiedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowsCopiedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowsCopiedEventHandler</a>
+ */
 public interface ISqlRowsCopiedEventHandler {
     public void Invoke(NetObject sender, SqlRowsCopiedEventArgs e);
 }

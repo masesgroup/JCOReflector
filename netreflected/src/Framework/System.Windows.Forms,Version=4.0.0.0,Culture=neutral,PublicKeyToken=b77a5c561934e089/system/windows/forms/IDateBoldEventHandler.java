@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.DateBoldEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DateBoldEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DateBoldEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DateBoldEventHandler</a>
+ */
 public interface IDateBoldEventHandler {
     public void Invoke(NetObject sender, DateBoldEventArgs e);
 }

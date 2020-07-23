@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.windows.forms.Control;
 import system.windows.forms.DataGridViewCellStyle;
 
 
 /**
  * The base .NET class managing System.Windows.Forms.DataGridViewEditingControlShowingEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewEditingControlShowingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewEditingControlShowingEventArgs</a>
  */
-public class DataGridViewEditingControlShowingEventArgs extends NetObject  {
+public class DataGridViewEditingControlShowingEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DataGridViewEditingControlShowingEventArgs
+     */
     public static final String className = "System.Windows.Forms.DataGridViewEditingControlShowingEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class DataGridViewEditingControlShowingEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewEditingControlShowingEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DataGridViewEditingControlShowingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DataGridViewEditingControlShowingEventArgs(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class DataGridViewEditingControlShowingEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DataGridViewEditingControlShowingEventArgs() throws Throwable {
+    }
 
     public DataGridViewEditingControlShowingEventArgs(Control control, DataGridViewCellStyle cellStyle) throws Throwable {
         try {
@@ -120,6 +140,7 @@ public class DataGridViewEditingControlShowingEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

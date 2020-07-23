@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.input.MouseEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link MouseEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.MouseEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.MouseEventHandler</a>
+ */
 public interface IMouseEventHandler {
     public void Invoke(NetObject sender, MouseEventArgs e);
 }

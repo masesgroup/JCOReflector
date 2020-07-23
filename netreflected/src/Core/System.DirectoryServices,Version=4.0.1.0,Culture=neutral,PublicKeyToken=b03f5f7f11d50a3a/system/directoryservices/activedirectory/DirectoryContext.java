@@ -43,12 +43,27 @@ import system.directoryservices.activedirectory.DirectoryContextType;
 
 /**
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.DirectoryContext, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.DirectoryContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.DirectoryContext</a>
  */
 public class DirectoryContext extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices
+     */
     public static final String assemblyShortName = "System.DirectoryServices";
+    /**
+     * Qualified class name: System.DirectoryServices.ActiveDirectory.DirectoryContext
+     */
     public static final String className = "System.DirectoryServices.ActiveDirectory.DirectoryContext";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -101,7 +116,9 @@ public class DirectoryContext extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryContext}, a cast assert is made to check if types are compatible.
+     */
     public static DirectoryContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DirectoryContext(from.getJCOInstance());
@@ -109,6 +126,8 @@ public class DirectoryContext extends NetObject  {
 
     // Constructors section
     
+    public DirectoryContext() throws Throwable {
+    }
 
     public DirectoryContext(DirectoryContextType contextType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
@@ -149,6 +168,7 @@ public class DirectoryContext extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

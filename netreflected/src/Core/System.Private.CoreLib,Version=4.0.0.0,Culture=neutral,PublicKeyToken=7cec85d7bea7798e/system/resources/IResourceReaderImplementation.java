@@ -38,16 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
  * The base .NET class managing System.Resources.IResourceReader, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceReader</a>
  */
-public class IResourceReaderImplementation extends NetObject implements IResourceReader {
+public class IResourceReaderImplementation extends IEnumerableImplementation implements IResourceReader {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Resources.IResourceReader
+     */
     public static final String className = "System.Resources.IResourceReader";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +112,9 @@ public class IResourceReaderImplementation extends NetObject implements IResourc
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IResourceReader}, a cast assert is made to check if types are compatible.
+     */
     public static IResourceReader ToIResourceReader(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IResourceReaderImplementation(from.getJCOInstance());

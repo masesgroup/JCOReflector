@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing Accessibility.IAccPropServices, Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Accessibility.IAccPropServices" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Accessibility.IAccPropServices</a>
  */
 public interface IAccPropServices extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
+    public static final String assemblyFullName = "Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: Accessibility
+     */
+    public static final String assemblyShortName = "Accessibility";
+    /**
+     * Qualified class name: Accessibility.IAccPropServices
+     */
+    public static final String className = "Accessibility.IAccPropServices";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAccPropServices}, a cast assert is made to check if types are compatible.
+     */
     public static IAccPropServices ToIAccPropServices(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType("Accessibility.IAccPropServices, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" : "Accessibility"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IAccPropServicesImplementation(from.getJCOInstance());
     }

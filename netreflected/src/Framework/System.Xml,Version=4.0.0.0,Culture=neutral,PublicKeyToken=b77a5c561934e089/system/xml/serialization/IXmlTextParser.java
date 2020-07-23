@@ -42,12 +42,29 @@ import system.xml.WhitespaceHandling;
 
 /**
  * The base .NET class managing System.Xml.Serialization.IXmlTextParser, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.IXmlTextParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.IXmlTextParser</a>
  */
 public interface IXmlTextParser extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml
+     */
+    public static final String assemblyShortName = "System.Xml";
+    /**
+     * Qualified class name: System.Xml.Serialization.IXmlTextParser
+     */
+    public static final String className = "System.Xml.Serialization.IXmlTextParser";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlTextParser}, a cast assert is made to check if types are compatible.
+     */
     public static IXmlTextParser ToIXmlTextParser(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xml.Serialization.IXmlTextParser, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlTextParserImplementation(from.getJCOInstance());
     }

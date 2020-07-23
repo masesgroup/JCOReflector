@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.services.protocols.ServerType;
 import system.web.services.configuration.WebServiceProtocols;
 import system.web.services.protocols.SoapServerMethod;
 
 
 /**
  * The base .NET class managing System.Web.Services.Protocols.SoapServerType, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.SoapServerType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.SoapServerType</a>
  */
-public class SoapServerType extends NetObject  {
+public class SoapServerType extends ServerType  {
+    /**
+     * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web.Services
+     */
     public static final String assemblyShortName = "System.Web.Services";
+    /**
+     * Qualified class name: System.Web.Services.Protocols.SoapServerType
+     */
     public static final String className = "System.Web.Services.Protocols.SoapServerType";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class SoapServerType extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapServerType}, a cast assert is made to check if types are compatible.
+     */
     public static SoapServerType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new SoapServerType(from.getJCOInstance());
@@ -110,6 +128,8 @@ public class SoapServerType extends NetObject  {
 
     // Constructors section
     
+    public SoapServerType() throws Throwable {
+    }
 
     public SoapServerType(NetType type, WebServiceProtocols protocolsSupported) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.RankException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.io.PathTooLongException, system.MemberAccessException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.web.services.protocols.SoapException {
         try {
@@ -120,6 +140,7 @@ public class SoapServerType extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

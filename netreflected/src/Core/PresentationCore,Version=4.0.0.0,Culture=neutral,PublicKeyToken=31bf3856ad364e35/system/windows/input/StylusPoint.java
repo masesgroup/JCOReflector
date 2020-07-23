@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.Single;
 import system.windows.input.StylusPointDescription;
 import system.windows.input.StylusPoint;
@@ -47,12 +48,27 @@ import system.windows.Point;
 
 /**
  * The base .NET class managing System.Windows.Input.StylusPoint, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusPoint</a>
  */
-public class StylusPoint extends NetObject  {
+public class StylusPoint extends ValueType  {
+    /**
+     * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: PresentationCore
+     */
     public static final String assemblyShortName = "PresentationCore";
+    /**
+     * Qualified class name: System.Windows.Input.StylusPoint
+     */
     public static final String className = "System.Windows.Input.StylusPoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +121,9 @@ public class StylusPoint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StylusPoint}, a cast assert is made to check if types are compatible.
+     */
     public static StylusPoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new StylusPoint(from.getJCOInstance());
@@ -113,6 +131,8 @@ public class StylusPoint extends NetObject  {
 
     // Constructors section
     
+    public StylusPoint() throws Throwable {
+    }
 
     public StylusPoint(double x, double y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         try {
@@ -143,6 +163,7 @@ public class StylusPoint extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

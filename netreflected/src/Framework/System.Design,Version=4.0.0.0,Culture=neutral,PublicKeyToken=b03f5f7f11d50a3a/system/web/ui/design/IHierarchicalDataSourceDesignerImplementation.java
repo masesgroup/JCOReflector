@@ -44,12 +44,27 @@ import system.EventHandler;
 
 /**
  * The base .NET class managing System.Web.UI.Design.IHierarchicalDataSourceDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner</a>
  */
 public class IHierarchicalDataSourceDesignerImplementation extends NetObject implements IHierarchicalDataSourceDesigner {
+    /**
+     * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Design
+     */
     public static final String assemblyShortName = "System.Design";
+    /**
+     * Qualified class name: System.Web.UI.Design.IHierarchicalDataSourceDesigner
+     */
     public static final String className = "System.Web.UI.Design.IHierarchicalDataSourceDesigner";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -97,7 +112,9 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHierarchicalDataSourceDesigner}, a cast assert is made to check if types are compatible.
+     */
     public static IHierarchicalDataSourceDesigner ToIHierarchicalDataSourceDesigner(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IHierarchicalDataSourceDesignerImplementation(from.getJCOInstance());

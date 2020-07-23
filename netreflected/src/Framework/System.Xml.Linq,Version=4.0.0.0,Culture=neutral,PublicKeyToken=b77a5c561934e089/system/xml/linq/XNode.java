@@ -38,26 +38,39 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.linq.XObject;
 import system.xml.linq.XNode;
 import system.xml.linq.SaveOptions;
 import system.xml.XmlReader;
 import system.xml.linq.ReaderOptions;
 import system.xml.XmlWriter;
-import system.xml.linq.XDocument;
-import system.xml.linq.XElement;
 import system.xml.linq.XNodeDocumentOrderComparer;
 import system.xml.linq.XNodeEqualityComparer;
-import system.xml.XmlNodeType;
 
 
 /**
  * The base .NET class managing System.Xml.Linq.XNode, System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNode</a>
  */
-public class XNode extends NetObject  {
+public class XNode extends XObject  {
+    /**
+     * Fully assembly qualified name: System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xml.Linq
+     */
     public static final String assemblyShortName = "System.Xml.Linq";
+    /**
+     * Qualified class name: System.Xml.Linq.XNode
+     */
     public static final String className = "System.Xml.Linq.XNode";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -110,7 +123,9 @@ public class XNode extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link XNode}, a cast assert is made to check if types are compatible.
+     */
     public static XNode cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new XNode(from.getJCOInstance());
@@ -118,6 +133,8 @@ public class XNode extends NetObject  {
 
     // Constructors section
     
+    public XNode() throws Throwable {
+    }
 
     
     // Methods section
@@ -157,17 +174,6 @@ public class XNode extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("CompareDocumentOrder", n1 == null ? null : n1.getJCOInstance(), n2 == null ? null : n2.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject Annotation(NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAnnotation = (JCObject)classInstance.Invoke("Annotation", type == null ? null : type.getJCOInstance());
-            return new NetObject(objAnnotation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,16 +242,6 @@ public class XNode extends NetObject  {
         }
     }
 
-    public void AddAnnotation(NetObject annotation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddAnnotation", annotation == null ? null : annotation.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddBeforeSelf(NetObject content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -271,16 +267,6 @@ public class XNode extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RemoveAnnotations(NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveAnnotations", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,38 +306,6 @@ public class XNode extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getBaseUri() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Get("BaseUri");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XDocument getDocument() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Document");
-            return new XDocument(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XElement getParent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
-            return new XElement(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XNode getNextNode() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -374,34 +328,23 @@ public class XNode extends NetObject  {
         }
     }
 
-    public static XNodeDocumentOrderComparer getDocumentOrderComparer() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public XNodeDocumentOrderComparer getDocumentOrderComparer() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classType.Get("DocumentOrderComparer");
+            JCObject val = (JCObject)classInstance.Get("DocumentOrderComparer");
             return new XNodeDocumentOrderComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XNodeEqualityComparer getEqualityComparer() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("EqualityComparer");
-            return new XNodeEqualityComparer(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public XmlNodeType getNodeType() throws Throwable {
+    public XNodeEqualityComparer getEqualityComparer() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
-            return new XmlNodeType(val);
+            JCObject val = (JCObject)classInstance.Get("EqualityComparer");
+            return new XNodeEqualityComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

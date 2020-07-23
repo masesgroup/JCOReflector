@@ -43,12 +43,27 @@ import system.drawing.design.ToolboxItem;
 
 /**
  * The base .NET class managing System.Drawing.Design.IToolboxUser, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IToolboxUser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.IToolboxUser</a>
  */
 public class IToolboxUserImplementation extends NetObject implements IToolboxUser {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms.Design
+     */
     public static final String assemblyShortName = "System.Windows.Forms.Design";
+    /**
+     * Qualified class name: System.Drawing.Design.IToolboxUser
+     */
     public static final String className = "System.Drawing.Design.IToolboxUser";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -96,7 +111,9 @@ public class IToolboxUserImplementation extends NetObject implements IToolboxUse
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IToolboxUser}, a cast assert is made to check if types are compatible.
+     */
     public static IToolboxUser ToIToolboxUser(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new IToolboxUserImplementation(from.getJCOInstance());

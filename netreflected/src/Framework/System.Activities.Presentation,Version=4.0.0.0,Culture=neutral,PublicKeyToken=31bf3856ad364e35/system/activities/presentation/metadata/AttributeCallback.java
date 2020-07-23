@@ -42,12 +42,27 @@ import system.activities.presentation.metadata.AttributeCallbackBuilder;
 import system.activities.presentation.metadata.IAttributeCallback;
 /**
  * The base .NET class managing System.Activities.Presentation.Metadata.AttributeCallback, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Metadata.AttributeCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Metadata.AttributeCallback</a>
  */
 public class AttributeCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Activities.Presentation
+     */
     public static final String assemblyShortName = "System.Activities.Presentation";
+    /**
+     * Qualified class name: System.Activities.Presentation.Metadata.AttributeCallback
+     */
     public static final String className = "System.Activities.Presentation.Metadata.AttributeCallback";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IAttributeCallback callerInstance = null;
@@ -147,7 +162,7 @@ public class AttributeCallback extends JCVoidDelegate implements IJCVoidEventEmi
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(AttributeCallbackBuilder builder) throws Throwable {
+    public void METHOD_JAVA_NAME(AttributeCallbackBuilder builder) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -157,7 +172,9 @@ public class AttributeCallback extends JCVoidDelegate implements IJCVoidEventEmi
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(AttributeCallbackBuilder builder) {
     }
 }

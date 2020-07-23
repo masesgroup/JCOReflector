@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.data.IDataRecord;
+import system.data.IDataRecordImplementation;
 import system.Single;
 import system.data.common.DbDataReader;
 import system.data.common.DbDataRecord;
@@ -50,12 +52,29 @@ import system.data.common.DataRecordInfo;
 
 /**
  * The base .NET class managing System.Data.IExtendedDataRecord, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IExtendedDataRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IExtendedDataRecord</a>
  */
-public interface IExtendedDataRecord extends IJCOBridgeReflected {
-
+public interface IExtendedDataRecord extends IJCOBridgeReflected, IDataRecord {
+    /**
+     * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Data.Entity
+     */
+    public static final String assemblyShortName = "System.Data.Entity";
+    /**
+     * Qualified class name: System.Data.IExtendedDataRecord
+     */
+    public static final String className = "System.Data.IExtendedDataRecord";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExtendedDataRecord}, a cast assert is made to check if types are compatible.
+     */
     public static IExtendedDataRecord ToIExtendedDataRecord(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Data.IExtendedDataRecord, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Data.Entity"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IExtendedDataRecordImplementation(from.getJCOInstance());
     }
@@ -98,60 +117,36 @@ public interface IExtendedDataRecord extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean GetBoolean(int i) throws Throwable;
 
-    public boolean IsDBNull(int i) throws Throwable;
 
-    public byte GetByte(int i) throws Throwable;
 
-    public char GetChar(int i) throws Throwable;
 
-    public double GetDouble(int i) throws Throwable;
 
-    public short GetInt16(int i) throws Throwable;
 
-    public int GetInt32(int i) throws Throwable;
 
-    public int GetOrdinal(java.lang.String name) throws Throwable;
 
-    public int GetValues(NetObject[] values) throws Throwable;
 
-    public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable;
 
-    public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable;
 
-    public long GetInt64(int i) throws Throwable;
 
-    public Single GetFloat(int i) throws Throwable;
 
     public DbDataReader GetDataReader(int i) throws Throwable;
 
     public DbDataRecord GetDataRecord(int i) throws Throwable;
 
-    public IDataReader GetData(int i) throws Throwable;
 
-    public DateTime GetDateTime(int i) throws Throwable;
 
-    public Decimal GetDecimal(int i) throws Throwable;
 
-    public Guid GetGuid(int i) throws Throwable;
 
-    public NetObject GetValue(int i) throws Throwable;
 
-    public java.lang.String GetDataTypeName(int i) throws Throwable;
 
-    public java.lang.String GetName(int i) throws Throwable;
 
-    public java.lang.String GetString(int i) throws Throwable;
 
-    public NetType GetFieldType(int i) throws Throwable;
 
 
     
     // Properties section
     
-    public int getFieldCount() throws Throwable;
-
     public DataRecordInfo getDataRecordInfo() throws Throwable;
 
 

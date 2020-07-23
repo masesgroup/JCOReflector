@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.IDisposable;
+import system.IDisposableImplementation;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.componentmodel.ComponentCollection;
@@ -44,12 +46,29 @@ import system.componentmodel.ComponentCollection;
 
 /**
  * The base .NET class managing System.ComponentModel.IContainer, System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IContainer</a>
  */
-public interface IContainer extends IJCOBridgeReflected {
-
+public interface IContainer extends IJCOBridgeReflected, IDisposable {
+    /**
+     * Fully assembly qualified name: System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.ComponentModel.Primitives
+     */
+    public static final String assemblyShortName = "System.ComponentModel.Primitives";
+    /**
+     * Qualified class name: System.ComponentModel.IContainer
+     */
+    public static final String className = "System.ComponentModel.IContainer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContainer}, a cast assert is made to check if types are compatible.
+     */
     public static IContainer ToIContainer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.ComponentModel.IContainer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.ComponentModel.Primitives"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IContainerImplementation(from.getJCOInstance());
     }
@@ -96,7 +115,6 @@ public interface IContainer extends IJCOBridgeReflected {
 
     public void Add(IComponent component, java.lang.String name) throws Throwable;
 
-    public void Dispose() throws Throwable;
 
     public void Remove(IComponent component) throws Throwable;
 

@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.StandardCommands;
 
 
 /**
  * The base .NET class managing System.Workflow.ComponentModel.Design.WorkflowMenuCommands, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowMenuCommands" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowMenuCommands</a>
  */
-public class WorkflowMenuCommands extends NetObject  {
+public class WorkflowMenuCommands extends StandardCommands  {
+    /**
+     * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     */
     public static final String assemblyFullName = "System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    /**
+     * Assembly name: System.Workflow.ComponentModel
+     */
     public static final String assemblyShortName = "System.Workflow.ComponentModel";
+    /**
+     * Qualified class name: System.Workflow.ComponentModel.Design.WorkflowMenuCommands
+     */
     public static final String className = "System.Workflow.ComponentModel.Design.WorkflowMenuCommands";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class WorkflowMenuCommands extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowMenuCommands}, a cast assert is made to check if types are compatible.
+     */
     public static WorkflowMenuCommands cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new WorkflowMenuCommands(from.getJCOInstance());
@@ -108,7 +126,6 @@ public class WorkflowMenuCommands extends NetObject  {
 
     // Constructors section
     
-
     public WorkflowMenuCommands() throws Throwable {
         try {
             // add reference to assemblyName.dll file

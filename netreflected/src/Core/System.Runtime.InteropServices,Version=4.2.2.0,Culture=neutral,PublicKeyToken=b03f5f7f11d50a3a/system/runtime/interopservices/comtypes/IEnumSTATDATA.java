@@ -42,12 +42,29 @@ import system.runtime.interopservices.comtypes.STATDATA;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.IEnumSTATDATA, System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumSTATDATA" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumSTATDATA</a>
  */
 public interface IEnumSTATDATA extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
+    public static final String assemblyFullName = "System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Runtime.InteropServices
+     */
+    public static final String assemblyShortName = "System.Runtime.InteropServices";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ComTypes.IEnumSTATDATA
+     */
+    public static final String className = "System.Runtime.InteropServices.ComTypes.IEnumSTATDATA";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEnumSTATDATA}, a cast assert is made to check if types are compatible.
+     */
     public static IEnumSTATDATA ToIEnumSTATDATA(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices.ComTypes.IEnumSTATDATA, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" : "System.Runtime.InteropServices"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IEnumSTATDATAImplementation(from.getJCOInstance());
     }

@@ -38,18 +38,34 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ValueType;
 import system.security.cryptography.ECCurve;
 import system.security.cryptography.Oid;
 
 
 /**
  * The base .NET class managing System.Security.Cryptography.ECCurve, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECCurve" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECCurve</a>
  */
-public class ECCurve extends NetObject  {
+public class ECCurve extends ValueType  {
+    /**
+     * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Core
+     */
     public static final String assemblyShortName = "System.Core";
+    /**
+     * Qualified class name: System.Security.Cryptography.ECCurve
+     */
     public static final String className = "System.Security.Cryptography.ECCurve";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +118,9 @@ public class ECCurve extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ECCurve}, a cast assert is made to check if types are compatible.
+     */
     public static ECCurve cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ECCurve(from.getJCOInstance());
@@ -110,6 +128,10 @@ public class ECCurve extends NetObject  {
 
     // Constructors section
     
+    public ECCurve() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.componentmodel.design.DesignerTransactionCloseEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link DesignerTransactionCloseEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerTransactionCloseEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerTransactionCloseEventHandler</a>
+ */
 public interface IDesignerTransactionCloseEventHandler {
     public void Invoke(NetObject sender, DesignerTransactionCloseEventArgs e);
 }

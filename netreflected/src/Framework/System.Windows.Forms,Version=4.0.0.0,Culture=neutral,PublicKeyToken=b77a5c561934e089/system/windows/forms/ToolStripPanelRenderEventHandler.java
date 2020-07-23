@@ -42,12 +42,27 @@ import system.windows.forms.ToolStripPanelRenderEventArgs;
 import system.windows.forms.IToolStripPanelRenderEventHandler;
 /**
  * The base .NET class managing System.Windows.Forms.ToolStripPanelRenderEventHandler, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripPanelRenderEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripPanelRenderEventHandler</a>
  */
 public class ToolStripPanelRenderEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.ToolStripPanelRenderEventHandler
+     */
     public static final String className = "System.Windows.Forms.ToolStripPanelRenderEventHandler";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     JCObject classInstance = null;
     IToolStripPanelRenderEventHandler callerInstance = null;
@@ -149,7 +164,7 @@ public class ToolStripPanelRenderEventHandler extends JCVoidDelegate implements 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public final void DynamicInvoke(NetObject sender, ToolStripPanelRenderEventArgs e) throws Throwable {
+    public void METHOD_JAVA_NAME(NetObject sender, ToolStripPanelRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +174,9 @@ public class ToolStripPanelRenderEventHandler extends JCVoidDelegate implements 
         }
     }
 
-	
+    /**
+     * Methods invoked in JVM when an event is raised in CLR 
+     */
     public void Invoke(NetObject sender, ToolStripPanelRenderEventArgs e) {
     }
 }

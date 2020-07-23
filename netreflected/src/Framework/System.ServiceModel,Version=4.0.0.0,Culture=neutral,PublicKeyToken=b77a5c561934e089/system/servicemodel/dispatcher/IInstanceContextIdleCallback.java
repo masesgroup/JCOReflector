@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.servicemodel.InstanceContext;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link InstanceContextIdleCallback}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.InstanceContextIdleCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.InstanceContextIdleCallback</a>
+ */
 public interface IInstanceContextIdleCallback {
     public void Invoke(InstanceContext instanceContext);
 }

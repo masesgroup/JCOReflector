@@ -44,10 +44,22 @@ import system.security.cryptography.x509certificates.X509ChainElement;
 
 /**
  * The base .NET class managing System.Security.Cryptography.X509Certificates.X509ChainElementEnumerator, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}. 
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElementEnumerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElementEnumerator</a>
  */
 public class X509ChainElementEnumerator extends NetObject implements Iterator<X509ChainElement> {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.Security.Cryptography.X509Certificates.X509ChainElementEnumerator
+     */
     public static final String className = "System.Security.Cryptography.X509Certificates.X509ChainElementEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     static JCType classType = createType();
@@ -96,11 +108,11 @@ public class X509ChainElementEnumerator extends NetObject implements Iterator<X5
         return classType;
     }
 
-	public boolean hasNext() {
+	public final boolean hasNext() {
 		return classInstance.hasNext();
 	}
 
-	public X509ChainElement next() {
+	public final X509ChainElement next() {
 		try {
 			return new X509ChainElement(classInstance.next());
 		} catch (Throwable jce) {

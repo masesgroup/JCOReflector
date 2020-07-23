@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.compilerservices.CallSite;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SiteDelegate0}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.CompilerServices.SiteDelegate0" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.CompilerServices.SiteDelegate0</a>
+ */
 public interface ISiteDelegate0 {
     public NetObject Invoke(CallSite site, NetObject instance);
 }

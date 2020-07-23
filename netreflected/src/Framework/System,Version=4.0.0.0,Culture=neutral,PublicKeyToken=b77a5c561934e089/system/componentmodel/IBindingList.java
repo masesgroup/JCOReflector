@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.IList;
+import system.collections.IListImplementation;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
 import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.ListSortDirection;
 import system.Array;
@@ -45,12 +49,29 @@ import system.componentmodel.ListChangedEventHandler;
 
 /**
  * The base .NET class managing System.ComponentModel.IBindingList, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IBindingList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IBindingList</a>
  */
-public interface IBindingList extends IJCOBridgeReflected {
-
+public interface IBindingList extends IJCOBridgeReflected, IList, ICollection, IEnumerable {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
+    public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.IBindingList
+     */
+    public static final String className = "System.ComponentModel.IBindingList";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindingList}, a cast assert is made to check if types are compatible.
+     */
     public static IBindingList ToIBindingList(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.ComponentModel.IBindingList, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IBindingListImplementation(from.getJCOInstance());
     }
@@ -93,13 +114,10 @@ public interface IBindingList extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Contains(NetObject value) throws Throwable;
 
-    public int Add(NetObject value) throws Throwable;
 
     public int Find(PropertyDescriptor property, NetObject key) throws Throwable;
 
-    public int IndexOf(NetObject value) throws Throwable;
 
     public NetObject AddNew() throws Throwable;
 
@@ -107,15 +125,10 @@ public interface IBindingList extends IJCOBridgeReflected {
 
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable;
 
-    public void Clear() throws Throwable;
 
-    public void CopyTo(Array array, int index) throws Throwable;
 
-    public void Insert(int index, NetObject value) throws Throwable;
 
-    public void Remove(NetObject value) throws Throwable;
 
-    public void RemoveAt(int index) throws Throwable;
 
     public void RemoveIndex(PropertyDescriptor property) throws Throwable;
 
@@ -131,13 +144,7 @@ public interface IBindingList extends IJCOBridgeReflected {
 
     public boolean getAllowRemove() throws Throwable;
 
-    public boolean getIsFixedSize() throws Throwable;
-
-    public boolean getIsReadOnly() throws Throwable;
-
     public boolean getIsSorted() throws Throwable;
-
-    public boolean getIsSynchronized() throws Throwable;
 
     public boolean getSupportsChangeNotification() throws Throwable;
 
@@ -145,13 +152,9 @@ public interface IBindingList extends IJCOBridgeReflected {
 
     public boolean getSupportsSorting() throws Throwable;
 
-    public int getCount() throws Throwable;
-
     public ListSortDirection getSortDirection() throws Throwable;
 
     public PropertyDescriptor getSortProperty() throws Throwable;
-
-    public NetObject getSyncRoot() throws Throwable;
 
 
 

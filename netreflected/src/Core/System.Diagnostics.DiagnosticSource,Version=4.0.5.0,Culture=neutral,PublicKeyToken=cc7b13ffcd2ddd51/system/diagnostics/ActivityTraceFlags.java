@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Diagnostics.ActivityTraceFlags, System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ActivityTraceFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ActivityTraceFlags</a>
  */
 public class ActivityTraceFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Diagnostics.DiagnosticSource
+     */
     public static final String assemblyShortName = "System.Diagnostics.DiagnosticSource";
+    /**
+     * Qualified class name: System.Diagnostics.ActivityTraceFlags
+     */
     public static final String className = "System.Diagnostics.ActivityTraceFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -138,19 +153,19 @@ public class ActivityTraceFlags extends NetObject  {
 
     // Flags management section
 
-    public ActivityTraceFlags add(ActivityTraceFlags val) throws Throwable {
+    public final ActivityTraceFlags add(ActivityTraceFlags val) throws Throwable {
         return new ActivityTraceFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public ActivityTraceFlags remove(ActivityTraceFlags val) throws Throwable {
+    public final ActivityTraceFlags remove(ActivityTraceFlags val) throws Throwable {
         return new ActivityTraceFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(ActivityTraceFlags val) throws Throwable {
+    public final boolean is(ActivityTraceFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(ActivityTraceFlags val) throws Throwable {
+    public final boolean has(ActivityTraceFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

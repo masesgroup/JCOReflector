@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.compilation.ExpressionBuilder;
 import system.codedom.CodeExpression;
 import system.web.ui.BoundPropertyEntry;
 import system.web.compilation.ExpressionBuilderContext;
@@ -46,12 +47,27 @@ import system.web.compilation.ResourceExpressionFields;
 
 /**
  * The base .NET class managing System.Web.Compilation.ResourceExpressionBuilder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.ResourceExpressionBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.ResourceExpressionBuilder</a>
  */
-public class ResourceExpressionBuilder extends NetObject  {
+public class ResourceExpressionBuilder extends ExpressionBuilder  {
+    /**
+     * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Web
+     */
     public static final String assemblyShortName = "System.Web";
+    /**
+     * Qualified class name: System.Web.Compilation.ResourceExpressionBuilder
+     */
     public static final String className = "System.Web.Compilation.ResourceExpressionBuilder";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -104,7 +120,9 @@ public class ResourceExpressionBuilder extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceExpressionBuilder}, a cast assert is made to check if types are compatible.
+     */
     public static ResourceExpressionBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ResourceExpressionBuilder(from.getJCOInstance());
@@ -112,7 +130,6 @@ public class ResourceExpressionBuilder extends NetObject  {
 
     // Constructors section
     
-
     public ResourceExpressionBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,16 +192,6 @@ public class ResourceExpressionBuilder extends NetObject  {
     
     // Properties section
     
-    public boolean getSupportsEvaluate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SupportsEvaluate");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

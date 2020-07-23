@@ -38,18 +38,33 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.identitymodel.claims.Claim;
 import system.identitymodel.claims.ClaimSet;
+import system.identitymodel.claims.Claim;
 
 
 /**
  * The base .NET class managing System.IdentityModel.Claims.DefaultClaimSet, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.DefaultClaimSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.DefaultClaimSet</a>
  */
-public class DefaultClaimSet extends NetObject  {
+public class DefaultClaimSet extends ClaimSet  {
+    /**
+     * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.IdentityModel
+     */
     public static final String assemblyShortName = "System.IdentityModel";
+    /**
+     * Qualified class name: System.IdentityModel.Claims.DefaultClaimSet
+     */
     public static final String className = "System.IdentityModel.Claims.DefaultClaimSet";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -102,7 +117,9 @@ public class DefaultClaimSet extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultClaimSet}, a cast assert is made to check if types are compatible.
+     */
     public static DefaultClaimSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DefaultClaimSet(from.getJCOInstance());
@@ -110,6 +127,8 @@ public class DefaultClaimSet extends NetObject  {
 
     // Constructors section
     
+    public DefaultClaimSet() throws Throwable {
+    }
 
     public DefaultClaimSet(Claim... claims) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
@@ -132,6 +151,7 @@ public class DefaultClaimSet extends NetObject  {
     }
 
 
+
     
     // Methods section
     
@@ -149,27 +169,6 @@ public class DefaultClaimSet extends NetObject  {
     
     // Properties section
     
-    public int getCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Get("Count");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ClaimSet getIssuer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Issuer");
-            return new ClaimSet(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

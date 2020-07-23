@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Net.Sockets.SocketInformationOptions, System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketInformationOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketInformationOptions</a>
  */
 public class SocketInformationOptions extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.Net.Sockets, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.Net.Sockets
+     */
     public static final String assemblyShortName = "System.Net.Sockets";
+    /**
+     * Qualified class name: System.Net.Sockets.SocketInformationOptions
+     */
     public static final String className = "System.Net.Sockets.SocketInformationOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -140,19 +155,19 @@ public class SocketInformationOptions extends NetObject  {
 
     // Flags management section
 
-    public SocketInformationOptions add(SocketInformationOptions val) throws Throwable {
+    public final SocketInformationOptions add(SocketInformationOptions val) throws Throwable {
         return new SocketInformationOptions(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public SocketInformationOptions remove(SocketInformationOptions val) throws Throwable {
+    public final SocketInformationOptions remove(SocketInformationOptions val) throws Throwable {
         return new SocketInformationOptions(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(SocketInformationOptions val) throws Throwable {
+    public final boolean is(SocketInformationOptions val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(SocketInformationOptions val) throws Throwable {
+    public final boolean has(SocketInformationOptions val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

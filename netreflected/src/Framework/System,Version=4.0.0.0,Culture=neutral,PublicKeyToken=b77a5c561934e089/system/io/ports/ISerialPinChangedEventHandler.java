@@ -39,7 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.io.ports.SerialPinChangedEventArgs;
 
-
+/**
+ * The Java interface to be implemented to receive events from the CLR using {@link SerialPinChangedEventHandler}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialPinChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialPinChangedEventHandler</a>
+ */
 public interface ISerialPinChangedEventHandler {
     public void Invoke(NetObject sender, SerialPinChangedEventArgs e);
 }

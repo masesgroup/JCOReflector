@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Reflection.PropertyAttributes, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PropertyAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PropertyAttributes</a>
  */
 public class PropertyAttributes extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+     */
     public static final String assemblyFullName = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+    /**
+     * Assembly name: System.Private.CoreLib
+     */
     public static final String assemblyShortName = "System.Private.CoreLib";
+    /**
+     * Qualified class name: System.Reflection.PropertyAttributes
+     */
     public static final String className = "System.Reflection.PropertyAttributes";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -144,19 +159,19 @@ public class PropertyAttributes extends NetObject  {
 
     // Flags management section
 
-    public PropertyAttributes add(PropertyAttributes val) throws Throwable {
+    public final PropertyAttributes add(PropertyAttributes val) throws Throwable {
         return new PropertyAttributes(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public PropertyAttributes remove(PropertyAttributes val) throws Throwable {
+    public final PropertyAttributes remove(PropertyAttributes val) throws Throwable {
         return new PropertyAttributes(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(PropertyAttributes val) throws Throwable {
+    public final boolean is(PropertyAttributes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(PropertyAttributes val) throws Throwable {
+    public final boolean has(PropertyAttributes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

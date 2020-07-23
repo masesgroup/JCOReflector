@@ -41,12 +41,27 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.DirectoryServices.Protocols.LocatorFlags, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.LocatorFlags" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.LocatorFlags</a>
  */
 public class LocatorFlags extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+     */
     public static final String assemblyFullName = "System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+    /**
+     * Assembly name: System.DirectoryServices.Protocols
+     */
     public static final String assemblyShortName = "System.DirectoryServices.Protocols";
+    /**
+     * Qualified class name: System.DirectoryServices.Protocols.LocatorFlags
+     */
     public static final String className = "System.DirectoryServices.Protocols.LocatorFlags";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumReflected = createEnum();
     JCEnum classInstance = null;
@@ -153,19 +168,19 @@ public class LocatorFlags extends NetObject  {
 
     // Flags management section
 
-    public LocatorFlags add(LocatorFlags val) throws Throwable {
+    public final LocatorFlags add(LocatorFlags val) throws Throwable {
         return new LocatorFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
-    public LocatorFlags remove(LocatorFlags val) throws Throwable {
+    public final LocatorFlags remove(LocatorFlags val) throws Throwable {
         return new LocatorFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
-    public boolean is(LocatorFlags val) throws Throwable {
+    public final boolean is(LocatorFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
-    public boolean has(LocatorFlags val) throws Throwable {
+    public final boolean has(LocatorFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }
 }

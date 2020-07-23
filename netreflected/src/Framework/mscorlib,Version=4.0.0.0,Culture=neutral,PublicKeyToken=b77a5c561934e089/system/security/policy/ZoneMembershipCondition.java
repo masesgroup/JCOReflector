@@ -48,12 +48,27 @@ import system.security.policy.PolicyLevel;
 
 /**
  * The base .NET class managing System.Security.Policy.ZoneMembershipCondition, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ZoneMembershipCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ZoneMembershipCondition</a>
  */
 public class ZoneMembershipCondition extends NetObject  {
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
     public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Security.Policy.ZoneMembershipCondition
+     */
     public static final String className = "System.Security.Policy.ZoneMembershipCondition";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -106,7 +121,9 @@ public class ZoneMembershipCondition extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ZoneMembershipCondition}, a cast assert is made to check if types are compatible.
+     */
     public static ZoneMembershipCondition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ZoneMembershipCondition(from.getJCOInstance());
@@ -114,6 +131,8 @@ public class ZoneMembershipCondition extends NetObject  {
 
     // Constructors section
     
+    public ZoneMembershipCondition() throws Throwable {
+    }
 
     public ZoneMembershipCondition(SecurityZone zone) throws Throwable, system.ArgumentException {
         try {
@@ -124,6 +143,7 @@ public class ZoneMembershipCondition extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

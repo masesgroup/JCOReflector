@@ -43,12 +43,29 @@ import system.runtime.interopservices.ImporterEventKind;
 
 /**
  * The base .NET class managing System.Runtime.InteropServices.ITypeLibImporterNotifySink, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ITypeLibImporterNotifySink" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ITypeLibImporterNotifySink</a>
  */
 public interface ITypeLibImporterNotifySink extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: mscorlib
+     */
+    public static final String assemblyShortName = "mscorlib";
+    /**
+     * Qualified class name: System.Runtime.InteropServices.ITypeLibImporterNotifySink
+     */
+    public static final String className = "System.Runtime.InteropServices.ITypeLibImporterNotifySink";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeLibImporterNotifySink}, a cast assert is made to check if types are compatible.
+     */
     public static ITypeLibImporterNotifySink ToITypeLibImporterNotifySink(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Runtime.InteropServices.ITypeLibImporterNotifySink, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "mscorlib"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ITypeLibImporterNotifySinkImplementation(from.getJCOInstance());
     }

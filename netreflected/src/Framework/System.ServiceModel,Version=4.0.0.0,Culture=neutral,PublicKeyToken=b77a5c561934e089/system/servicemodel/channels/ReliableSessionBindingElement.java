@@ -45,12 +45,27 @@ import system.TimeSpan;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.ReliableSessionBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ReliableSessionBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ReliableSessionBindingElement</a>
  */
-public class ReliableSessionBindingElement extends NetObject  {
+public class ReliableSessionBindingElement extends BindingElement  {
+    /**
+     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.ServiceModel
+     */
     public static final String assemblyShortName = "System.ServiceModel";
+    /**
+     * Qualified class name: System.ServiceModel.Channels.ReliableSessionBindingElement
+     */
     public static final String className = "System.ServiceModel.Channels.ReliableSessionBindingElement";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -103,7 +118,9 @@ public class ReliableSessionBindingElement extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReliableSessionBindingElement}, a cast assert is made to check if types are compatible.
+     */
     public static ReliableSessionBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ReliableSessionBindingElement(from.getJCOInstance());
@@ -111,7 +128,6 @@ public class ReliableSessionBindingElement extends NetObject  {
 
     // Constructors section
     
-
     public ReliableSessionBindingElement() throws Throwable {
         try {
             // add reference to assemblyName.dll file

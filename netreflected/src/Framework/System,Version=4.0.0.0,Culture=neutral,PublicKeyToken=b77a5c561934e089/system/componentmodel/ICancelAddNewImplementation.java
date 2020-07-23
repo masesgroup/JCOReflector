@@ -42,12 +42,27 @@ import java.util.ArrayList;
 
 /**
  * The base .NET class managing System.ComponentModel.ICancelAddNew, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICancelAddNew" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ICancelAddNew</a>
  */
 public class ICancelAddNewImplementation extends NetObject implements ICancelAddNew {
+    /**
+     * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System
+     */
     public static final String assemblyShortName = "System";
+    /**
+     * Qualified class name: System.ComponentModel.ICancelAddNew
+     */
     public static final String className = "System.ComponentModel.ICancelAddNew";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -95,7 +110,9 @@ public class ICancelAddNewImplementation extends NetObject implements ICancelAdd
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICancelAddNew}, a cast assert is made to check if types are compatible.
+     */
     public static ICancelAddNew ToICancelAddNew(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ICancelAddNewImplementation(from.getJCOInstance());

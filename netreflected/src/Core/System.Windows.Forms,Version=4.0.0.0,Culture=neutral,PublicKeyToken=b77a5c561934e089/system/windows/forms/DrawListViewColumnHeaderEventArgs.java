@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 import system.drawing.Graphics;
 import system.drawing.Rectangle;
 import system.windows.forms.ColumnHeader;
@@ -49,12 +50,27 @@ import system.windows.forms.TextFormatFlags;
 
 /**
  * The base .NET class managing System.Windows.Forms.DrawListViewColumnHeaderEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawListViewColumnHeaderEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DrawListViewColumnHeaderEventArgs</a>
  */
-public class DrawListViewColumnHeaderEventArgs extends NetObject  {
+public class DrawListViewColumnHeaderEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
     public static final String assemblyFullName = "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Windows.Forms
+     */
     public static final String assemblyShortName = "System.Windows.Forms";
+    /**
+     * Qualified class name: System.Windows.Forms.DrawListViewColumnHeaderEventArgs
+     */
     public static final String className = "System.Windows.Forms.DrawListViewColumnHeaderEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -107,7 +123,9 @@ public class DrawListViewColumnHeaderEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link DrawListViewColumnHeaderEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static DrawListViewColumnHeaderEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new DrawListViewColumnHeaderEventArgs(from.getJCOInstance());
@@ -115,6 +133,8 @@ public class DrawListViewColumnHeaderEventArgs extends NetObject  {
 
     // Constructors section
     
+    public DrawListViewColumnHeaderEventArgs() throws Throwable {
+    }
 
     public DrawListViewColumnHeaderEventArgs(Graphics graphics, Rectangle bounds, int columnIndex, ColumnHeader header, ListViewItemStates state, Color foreColor, Color backColor, Font font) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
@@ -125,6 +145,7 @@ public class DrawListViewColumnHeaderEventArgs extends NetObject  {
             throw translateException(jcne);
         }
     }
+
 
 
     

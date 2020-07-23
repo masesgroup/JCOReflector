@@ -47,12 +47,27 @@ import system.Version;
 
 /**
  * The base .NET class managing System.Net.ServicePoint, System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.ServicePoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.ServicePoint</a>
  */
 public class ServicePoint extends NetObject  {
+    /**
+     * Fully assembly qualified name: System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "System.Net.ServicePoint, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: System.Net.ServicePoint
+     */
     public static final String assemblyShortName = "System.Net.ServicePoint";
+    /**
+     * Qualified class name: System.Net.ServicePoint
+     */
     public static final String className = "System.Net.ServicePoint";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -105,7 +120,9 @@ public class ServicePoint extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServicePoint}, a cast assert is made to check if types are compatible.
+     */
     public static ServicePoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new ServicePoint(from.getJCOInstance());
@@ -113,6 +130,10 @@ public class ServicePoint extends NetObject  {
 
     // Constructors section
     
+    public ServicePoint() throws Throwable {
+    }
+
+
 
     
     // Methods section

@@ -41,12 +41,29 @@ import org.mases.jcobridge.netreflection.*;
 
 /**
  * The base .NET class managing System.Xaml.IXamlLineInfoConsumer, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IXamlLineInfoConsumer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IXamlLineInfoConsumer</a>
  */
 public interface IXamlLineInfoConsumer extends IJCOBridgeReflected {
-
+    /**
+     * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     */
+    public static final String assemblyFullName = "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    /**
+     * Assembly name: System.Xaml
+     */
+    public static final String assemblyShortName = "System.Xaml";
+    /**
+     * Qualified class name: System.Xaml.IXamlLineInfoConsumer
+     */
+    public static final String className = "System.Xaml.IXamlLineInfoConsumer";
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXamlLineInfoConsumer}, a cast assert is made to check if types are compatible.
+     */
     public static IXamlLineInfoConsumer ToIXamlLineInfoConsumer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType("System.Xaml.IXamlLineInfoConsumer, " + (JCOBridgeInstance.getUseFullAssemblyName() ? "System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" : "System.Xaml"));
+        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXamlLineInfoConsumerImplementation(from.getJCOInstance());
     }

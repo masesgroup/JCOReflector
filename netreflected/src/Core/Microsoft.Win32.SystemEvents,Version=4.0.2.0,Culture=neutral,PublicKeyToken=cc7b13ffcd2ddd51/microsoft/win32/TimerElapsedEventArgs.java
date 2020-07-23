@@ -38,16 +38,32 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventArgs;
 
 
 /**
  * The base .NET class managing Microsoft.Win32.TimerElapsedEventArgs, Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * <p>
+ * 
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.TimerElapsedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.TimerElapsedEventArgs</a>
  */
-public class TimerElapsedEventArgs extends NetObject  {
+public class TimerElapsedEventArgs extends EventArgs  {
+    /**
+     * Fully assembly qualified name: Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     */
     public static final String assemblyFullName = "Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    /**
+     * Assembly name: Microsoft.Win32.SystemEvents
+     */
     public static final String assemblyShortName = "Microsoft.Win32.SystemEvents";
+    /**
+     * Qualified class name: Microsoft.Win32.TimerElapsedEventArgs
+     */
     public static final String className = "Microsoft.Win32.TimerElapsedEventArgs";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
+    /**
+     * The type managed from JCOBridge. See {@link JCType}
+     */
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
@@ -100,7 +116,9 @@ public class TimerElapsedEventArgs extends NetObject  {
     public JCType getJCOType() {
         return classType;
     }
-
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link TimerElapsedEventArgs}, a cast assert is made to check if types are compatible.
+     */
     public static TimerElapsedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
         return new TimerElapsedEventArgs(from.getJCOInstance());
@@ -108,6 +126,9 @@ public class TimerElapsedEventArgs extends NetObject  {
 
     // Constructors section
     
+    public TimerElapsedEventArgs() throws Throwable {
+    }
+
 
 
     

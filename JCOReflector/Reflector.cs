@@ -74,6 +74,7 @@ namespace MASES.C2JReflector
     public static class Reflector
     {
         static List<string> assemblyReferenced = new List<string>();
+        static List<string> assemblyParsed = new List<string>();
         public static appendToConsoleHandler AppendToConsoleHandler;
         public static EventHandler<EndOperationEventArgs> EndOperationHandler;
 
@@ -96,6 +97,7 @@ namespace MASES.C2JReflector
         static bool CreateExceptionThrownClause;
         static int ExceptionThrownClauseDepth;
 
+        static long loadedAssemblies = 0;
         static long parsedAssemblies = 0;
         static long discardedTypes = 0;
         static long analyzedTypes = 0;
@@ -144,6 +146,8 @@ namespace MASES.C2JReflector
         public static void ResetStatistics()
         {
             assemblyReferenced.Clear();
+            assemblyParsed.Clear();
+            loadedAssemblies = 0;
             parsedAssemblies = 0;
             analyzedTypes = 0;
             discardedTypes = 0;
@@ -162,6 +166,7 @@ namespace MASES.C2JReflector
             analyzedCtors = 0;
             implementedCtors = 0;
             implementedMethods = 0;
+            implementedDuplicatedMethods = 0;
             analyzedMethods = 0;
             implementedProperties = 0;
             analyzedProperties = 0;
@@ -228,6 +233,7 @@ namespace MASES.C2JReflector
                 sb.Append("implementedProperties;");
                 sb.Append("analyzedEvents;");
                 sb.Append("implementedEvents;");
+                sb.Append("loadedAssemblies;");
 
                 sb.AppendLine();
                 //Add data
@@ -254,6 +260,7 @@ namespace MASES.C2JReflector
                 sb.AppendFormat("{0};", implementedProperties);
                 sb.AppendFormat("{0};", analyzedEvents);
                 sb.AppendFormat("{0};", implementedEvents);
+                sb.AppendFormat("{0};", loadedAssemblies);
 
                 res = sb.ToString();
             }
@@ -352,7 +359,7 @@ namespace MASES.C2JReflector
                     assembly = Assembly.Load(RootAssemblyName);
                 }
 
-                await ExportAssemblyWithReferences(assemblyReferenced, new AssemblyName(assembly.FullName), RootDestinationFolder, SplitByAssembly, ForceRebuild);
+                await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), RootDestinationFolder, SplitByAssembly, ForceRebuild);
                 reportStr = GetReport();
                 string statisticsError;
                 statisticsCsv = GetStatisticsCsv(out statisticsError);
@@ -380,15 +387,15 @@ namespace MASES.C2JReflector
             }
         }
 
-        public static async Task ExportAssemblyWithReferences(IList<string> assemblyReferenced, AssemblyName assemblyName, string rootFolder, bool splitByAssembly, bool forceRebuild)
+        public static async Task ExportAssemblyWithReferences(IList<string> assemblyReferenced, IList<string> assemblyParsed, AssemblyName assemblyName, string rootFolder, bool splitByAssembly, bool forceRebuild)
         {
             if (assemblyReferenced.Contains(assemblyName.FullName)) return;
-            var assembly = ExportAssembly(assemblyName, rootFolder, splitByAssembly, forceRebuild);
+            var assembly = ExportAssembly(assemblyReferenced, assemblyParsed, assemblyName, rootFolder, splitByAssembly, forceRebuild);
             assemblyReferenced.Add(assemblyName.FullName);
             if (assembly == null) return;
             foreach (var item in assembly.GetReferencedAssemblies())
             {
-                await ExportAssemblyWithReferences(assemblyReferenced, item, rootFolder, splitByAssembly, forceRebuild);
+                await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, item, rootFolder, splitByAssembly, forceRebuild);
             }
         }
 
@@ -413,13 +420,27 @@ namespace MASES.C2JReflector
             return false;
         }
 
-        public static Assembly ExportAssembly(AssemblyName assemblyName, string rootFolder, bool splitByAssembly, bool forceRebuild)
+        public static Assembly ExportAssembly(IList<string> assemblyReferenced, IList<string> assemblyParsed, AssemblyName assemblyName, string rootFolder, bool splitByAssembly, bool forceRebuild)
         {
             string destFolder = assemblyDestinationFolder(rootFolder, assemblyName, splitByAssembly);
-            if (splitByAssembly && Directory.Exists(destFolder) && !forceRebuild)
+
+            if (splitByAssembly && Directory.Exists(destFolder))
             {
-                AppendToConsole(LogLevel.Info, "Skipping assembly {0}", assemblyName);
-                return null;
+                if (!forceRebuild)
+                {
+                    AppendToConsole(LogLevel.Info, "Skipping assembly {0}", assemblyName);
+                    return null;
+                }
+                if (assemblyReferenced.Contains(assemblyName.FullName))
+                {
+                    AppendToConsole(LogLevel.Info, "Skipping assembly {0}", assemblyName);
+                    return null;
+                }
+            }
+
+            if (assemblyReferenced.Contains(assemblyName.FullName))
+            {
+                AppendToConsole(LogLevel.Info, "Duplicated assembly {0}", assemblyName);
             }
 
             Assembly assembly = null;
@@ -427,6 +448,7 @@ namespace MASES.C2JReflector
             try
             {
                 assembly = Assembly.Load(assemblyName);
+                AppendToConsole(LogLevel.Info, "Loaded assembly {0}", assembly.FullName);
             }
             catch (Exception ex)
             {
@@ -434,7 +456,7 @@ namespace MASES.C2JReflector
                 return null;
             }
 
-            Interlocked.Increment(ref parsedAssemblies);
+            Interlocked.Increment(ref loadedAssemblies);
 
 #if ENABLE_REFERENCE_BUILDER
             StringBuilder sb = new StringBuilder();
@@ -450,6 +472,13 @@ namespace MASES.C2JReflector
 
             File.WriteAllText(Path.Combine(destFolder, Const.FileNameAndDirectory.ReferencesFile), sb.ToString());
 #endif
+
+            if (assemblyParsed.Contains(assembly.FullName))
+            {
+                AppendToConsole(LogLevel.Info, "Assembly previously parsed {0}", assembly.FullName);
+                return assembly;
+            }
+
             List<Type> typesToExport = new List<Type>();
 
             AppendToConsole(LogLevel.Info, "Getting types from {0}", assembly.FullName);
@@ -476,7 +505,16 @@ namespace MASES.C2JReflector
                 }
             }
 
-            exportingPublicTypes(typesToExport, destFolder, assembly.FullName);
+            if (typesToExport.Count != 0)
+            {
+                exportingPublicTypes(typesToExport, destFolder, assembly.FullName);
+                Interlocked.Increment(ref parsedAssemblies);
+                assemblyParsed.Add(assembly.FullName);
+            }
+            else
+            {
+                AppendToConsole(LogLevel.Info, "No public types in {0}", assembly.FullName);
+            }
 
             return assembly;
         }
@@ -516,6 +554,7 @@ namespace MASES.C2JReflector
             catch (Exception e)
             {
                 AppendToConsole(LogLevel.Error, "Error exporting {0}: {1}", typeToExport.Name, e.Message);
+                throw;
             }
         }
 
@@ -1118,32 +1157,6 @@ namespace MASES.C2JReflector
 
             MethodInfo[] methods = null;
 
-            /*
-            if (withInheritance)
-            {
-                if (type.IsInterface)
-                {
-                    isInterface = true;
-                    List<MethodInfo> allMethods = new List<MethodInfo>();
-                    searchMethods(type, allMethods);
-                    methods = allMethods.ToArray();
-                }
-                else
-                {
-                    methods = type.GetMethods();
-                }
-            }
-            else
-            {
-                if (type.IsInterface)
-                {
-                    isInterface = true;
-                }
-                List<MethodInfo> allMethods = new List<MethodInfo>();
-                searchMethods(type, allMethods);
-                methods = allMethods.ToArray();
-            }
-            */
             if (type.IsInterface)
             {
                 isInterface = true;
@@ -1203,7 +1216,17 @@ namespace MASES.C2JReflector
                     || methodsSignatureCreated.Contains(item.ToString()) // avoid duplicated methods from inheritance
                    ) continue;
 
-                Interlocked.Increment(ref analyzedMethods);
+                if (withInheritance)
+                {
+                    if (!isInterface && item.DeclaringType == type)
+                    {
+                        Interlocked.Increment(ref analyzedMethods);
+                    }
+                }
+                else
+                {
+                    Interlocked.Increment(ref analyzedMethods);
+                }
 
                 if (item.IsGenericMethod // don't manage generic methods
                     || item.ContainsGenericParameters
@@ -1517,42 +1540,6 @@ namespace MASES.C2JReflector
             returnInterfaceSection = string.Empty;
             List<Tuple<bool, PropertyInfo>> properties = new List<Tuple<bool, PropertyInfo>>();
 
-            /*
-            if (withInheritance)
-            {
-                if (type.IsInterface)
-                {
-                    isInterface = true;
-                    searchProperties(type, BindingFlags.Public | BindingFlags.Instance, properties);
-                    searchProperties(type, BindingFlags.Public | BindingFlags.Static, properties);
-                }
-                else
-                {
-                    var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance); // prefer instance properties against static, Java don't like same name of functions
-                    foreach (var item in props)
-                    {
-                        properties.Add(new Tuple<bool, PropertyInfo>(false, item));
-                    }
-                    props = type.GetProperties(BindingFlags.Public | BindingFlags.Static);
-                    foreach (var item in props)
-                    {
-                        properties.Add(new Tuple<bool, PropertyInfo>(true, item));
-                    }
-                }
-            }
-            else
-            {
-                if (type.IsInterface)
-                {
-                    isInterface = true;
-                }
-
-                searchProperties(type, BindingFlags.Public | BindingFlags.Instance, properties);
-                searchProperties(type, BindingFlags.Public | BindingFlags.Static, properties);
-            }
-
-            */
-
             if (type.IsInterface)
             {
                 isInterface = true;
@@ -1591,10 +1578,20 @@ namespace MASES.C2JReflector
 
             foreach (var prop in properties.ToArray())
             {
-                Interlocked.Increment(ref analyzedProperties);
-
                 var statics = prop.Item1;
                 var item = prop.Item2;
+
+                if (withInheritance)
+                {
+                    if (!isInterface && item.DeclaringType == type)
+                    {
+                        Interlocked.Increment(ref analyzedProperties);
+                    }
+                }
+                else
+                {
+                    Interlocked.Increment(ref analyzedProperties);
+                }
 
                 var propertyName = item.Name;
 
@@ -1939,30 +1936,6 @@ namespace MASES.C2JReflector
             EventInfo[] events = null;
 
             List<EventInfo> allEvents = new List<EventInfo>();
-            /*
-            if (withInheritance)
-            {
-                if (type.IsInterface)
-                {
-                    isInterface = true;
-                    searchEvents(type, flags, allEvents);
-                    events = allEvents.ToArray();
-                }
-                else
-                {
-                    events = type.GetEvents(flags);
-                }
-            }
-            else
-            {
-                if (type.IsInterface)
-                {
-                    isInterface = true;
-                }
-                searchEvents(type, flags, allEvents);
-                events = allEvents.ToArray();
-            }
-            */
 
             if (type.IsInterface)
             {
@@ -2005,7 +1978,17 @@ namespace MASES.C2JReflector
 
             foreach (var item in events)
             {
-                Interlocked.Increment(ref analyzedEvents);
+                if (withInheritance)
+                {
+                    if (!isInterface && item.DeclaringType == type)
+                    {
+                        Interlocked.Increment(ref analyzedEvents);
+                    }
+                }
+                else
+                {
+                    Interlocked.Increment(ref analyzedEvents);
+                }
 
                 var eventName = item.Name;
 

@@ -101,9 +101,9 @@ Parsed assemblies are:
 > * Total Interfaces: Implemented = 847
 > * Total Classes: Implemented = 9222 Exceptions = 396
 >   * Total Constructors: Analyzed 11699 - Implemented = 10186
->   * Total Methods: Analyzed 33201 - Implemented = 30652 - Duplicated = 996
->   * Total Properties: Analyzed 30941 - Implemented = 30087
->   * Total Events: Analyzed 2249 - Implemented = 2335
+>   * Total Methods: Analyzed 35846 - Implemented = 29691 - Duplicated = 996
+>   * Total Properties: Analyzed 31911 - Implemented = 29770
+>   * Total Events: Analyzed 2391 - Implemented = 2185
 
 ## CoreCLR (reference is .NET Core 3.1)
 
@@ -381,6 +381,6 @@ Parsed assemblies are:
 > * Total Interfaces: Implemented = 354
 > * Total Classes: Implemented = 5027 Exceptions = 229
 >   * Total Constructors: Analyzed 6403 - Implemented = 5537
->   * Total Methods: Analyzed 25065 - Implemented = 19624 - Duplicated = 723
->   * Total Properties: Analyzed 17334 - Implemented = 16731
->   * Total Events: Analyzed 1641 - Implemented = 1685
+>   * Total Methods: Analyzed 26116 - Implemented = 19414 - Duplicated = 723
+>   * Total Properties: Analyzed 17746 - Implemented = 16607
+>   * Total Events: Analyzed 1725 - Implemented = 1620

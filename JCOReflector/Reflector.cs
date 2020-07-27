@@ -1218,7 +1218,7 @@ namespace MASES.C2JReflector
 
                 if (withInheritance)
                 {
-                    if (!isInterface && item.DeclaringType == type)
+                    if (item.DeclaringType == type)
                     {
                         Interlocked.Increment(ref analyzedMethods);
                     }
@@ -1451,7 +1451,17 @@ namespace MASES.C2JReflector
                     methodsDuplicatedCreated.Add(dupMethodSignature);
                 }
 
-                Interlocked.Increment(ref implementedMethods);
+                if (withInheritance)
+                {
+                    if (item.DeclaringType == type)
+                    {
+                        Interlocked.Increment(ref implementedMethods);
+                    }
+                }
+                else
+                {
+                    Interlocked.Increment(ref implementedMethods);
+                }
             }
 
             returnInterfaceSection = methodInterfaceBuilder.ToString();
@@ -1583,7 +1593,7 @@ namespace MASES.C2JReflector
 
                 if (withInheritance)
                 {
-                    if (!isInterface && item.DeclaringType == type)
+                    if (item.DeclaringType == type)
                     {
                         Interlocked.Increment(ref analyzedProperties);
                     }
@@ -1687,7 +1697,17 @@ namespace MASES.C2JReflector
                 propertiesSignaturesCreated.Add(item.ToString());
                 propertiesNameCreated.Add(item.Name);
 
-                Interlocked.Increment(ref implementedProperties);
+                if (withInheritance)
+                {
+                    if (item.DeclaringType == type)
+                    {
+                        Interlocked.Increment(ref implementedProperties);
+                    }
+                }
+                else
+                {
+                    Interlocked.Increment(ref implementedProperties);
+                }
             }
 
             returnInterfaceSection = propertyInterfaceBuilder.ToString();
@@ -1980,7 +2000,7 @@ namespace MASES.C2JReflector
             {
                 if (withInheritance)
                 {
-                    if (!isInterface && item.DeclaringType == type)
+                    if (item.DeclaringType == type)
                     {
                         Interlocked.Increment(ref analyzedEvents);
                     }
@@ -2049,7 +2069,17 @@ namespace MASES.C2JReflector
 
                 eventBuilder.AppendLine(eventStr);
 
-                Interlocked.Increment(ref implementedEvents);
+                if (withInheritance)
+                {
+                    if (item.DeclaringType == type)
+                    {
+                        Interlocked.Increment(ref implementedEvents);
+                    }
+                }
+                else
+                {
+                    Interlocked.Increment(ref implementedEvents);
+                }
             }
 
             if (isInterface) returnInterfaceSection = eventInterfaceBuilder.ToString();

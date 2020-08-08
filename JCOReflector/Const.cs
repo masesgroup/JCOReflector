@@ -424,5 +424,10 @@ namespace MASES.C2JReflector
             public const string DEFAULT_EXCEPTION = "Throwable";
             public const string SINGLE_EXCEPTION_PROTO = ", {0}.{1}";
         }
+
+        public class Documentation
+        {
+            public const string DOCS_HEADER = "<a href=\\\"https://masesgroup.github.io/JCOReflector\\\" style=\\\"text-decoration: none;margin-left: 0;padding: 1px 20px 0 0;font-size: 30px;font-weight: 200;color: #777777;text-shadow: 0 1px 0 #ffffff;\\\"><b>JCOReflector</b></a> powered by </large><a href=\\\"https://www.jcobridge.com/\\\" style=\\\"text-decoration: none;overflow: hidden;margin-left: 0;padding: 1px 20px 0 0;font-size: 30px;font-weight: 200;color: #777777;text-shadow: 0 1px 0 #ffffff;\\\"><span style=\\\"color: #5090FF;\\\"> <img src=\\\"https://www.jcobridge.com/LogoSquare.png\\\" width=\\\"25\\\">J<small>VM CLR Objects Bridge</small></span></a>";
+        }
     }
 }

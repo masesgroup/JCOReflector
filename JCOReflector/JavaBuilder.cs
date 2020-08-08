@@ -368,7 +368,7 @@ namespace MASES.C2JReflector
 #endif
             destinationFolder = destinationFolder.Replace('\\', '/');
 
-            launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
+            launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + Const.Documentation.DOCS_HEADER + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
 
             return counter;
         }

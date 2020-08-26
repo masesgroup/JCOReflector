@@ -6,6 +6,6 @@
 			<accessrule kind="accessible" pattern="javafx/**"/>
 		</accessrules>
 	</classpathentry>
-	<classpathentry kind="lib" path="../bin/net461/JCOReflector.jar" sourcepath="../bin/net461/JCOReflector-src.jar"/>
-	<!--classpathentry kind="lib" path="../bin/netcoreapp3.1/JCOReflector.jar" /-->
+	<!--classpathentry kind="lib" path="../bin/net461/JCOReflector.jar" sourcepath="../bin/net461/JCOReflector-src.jar"/-->
+	<classpathentry kind="lib" path="../bin/netcoreapp3.1/JCOReflector.jar" />
 </classpath>

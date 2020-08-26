@@ -1,4 +1,25 @@
-theme: jekyll-theme-cayman
+remote_theme: "mmistakes/minimal-mistakes@4.20.1"
 
 plugins:
+  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      share: true
+      sidebar:
+        nav: "sidebar_elements"
+      header:
+        overlay_color: "#333"
+        overlay_filter: 0.5
+        actions:
+          - label: "Browse repository"
+            url: "https://github.com/masesgroup/JCOReflector"
+          - label: "Download"
+            url: "https://github.com/masesgroup/JCOReflector/releases/"

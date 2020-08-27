@@ -114,8 +114,8 @@ For .NET Framework it is possible to execute:
 
 > dotnet run --framework net461 --project JCOReflector\JCOReflectorCore.csproj
 
-![JCOReflector](/images/jcoreflector.png?raw=true "JCOReflector screenshot")
-![JCOReflector](/images/jcoreflector2.png?raw=true "JCOReflector screenshot")
+![JCOReflector](/assets/images/jcoreflector.png?raw=true "JCOReflector screenshot")
+![JCOReflector](/assets/images/jcoreflector2.png?raw=true "JCOReflector screenshot")
 
 ## Reflected Assemblies
 

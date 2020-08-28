@@ -185,9 +185,9 @@ namespace MASES.C2JReflector
 
                     if (!Directory.Exists(CsvDestinationFolder)) Directory.CreateDirectory(CsvDestinationFolder);
 #if NET_CORE
-                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, @"NetcoreStatistics.csv"));
+                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.NETCoreFolder, Const.FileNameAndDirectory.StatisticsFilename));
 #else
-                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, @"FrameworkStatistics.csv"));
+                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.NETFrameworkFolder, Const.FileNameAndDirectory.StatisticsFilename));
 #endif
                     File.WriteAllText(csvFileName, csvString);
                 }

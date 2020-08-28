@@ -97,6 +97,8 @@ namespace MASES.C2JReflector
             public const string StatsDirectory = "statistics";
             public const string DocsDirectory = "docs";
 
+            public const string StatisticsFilename = "Statistics.csv";
+
             public const string CommonDirectory = "JCOReflector";
             public const string ManifestFile = "JCOReflector.manifest";
             public const string ReferencesFile = "references.filelist";

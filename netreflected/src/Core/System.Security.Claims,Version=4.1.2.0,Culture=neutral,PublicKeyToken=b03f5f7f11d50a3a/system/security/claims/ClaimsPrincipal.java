@@ -244,11 +244,11 @@ public class ClaimsPrincipal extends NetObject  {
     
     // Properties section
     
-    public ClaimsPrincipal getCurrent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ClaimsPrincipal getCurrent() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
+            JCObject val = (JCObject)classType.Get("Current");
             return new ClaimsPrincipal(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

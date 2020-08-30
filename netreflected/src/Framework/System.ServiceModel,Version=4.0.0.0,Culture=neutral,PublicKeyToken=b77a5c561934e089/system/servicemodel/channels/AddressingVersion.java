@@ -138,33 +138,33 @@ public class AddressingVersion extends NetObject  {
     
     // Properties section
     
-    public AddressingVersion getNone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static AddressingVersion getNone() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("None");
+            JCObject val = (JCObject)classType.Get("None");
             return new AddressingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public AddressingVersion getWSAddressing10() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static AddressingVersion getWSAddressing10() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSAddressing10");
+            JCObject val = (JCObject)classType.Get("WSAddressing10");
             return new AddressingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public AddressingVersion getWSAddressingAugust2004() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static AddressingVersion getWSAddressingAugust2004() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSAddressingAugust2004");
+            JCObject val = (JCObject)classType.Get("WSAddressingAugust2004");
             return new AddressingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

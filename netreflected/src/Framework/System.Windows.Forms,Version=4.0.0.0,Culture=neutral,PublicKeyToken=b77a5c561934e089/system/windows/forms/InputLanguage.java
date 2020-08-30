@@ -172,43 +172,43 @@ public class InputLanguage extends NetObject  {
         }
     }
 
-    public InputLanguage getCurrentInputLanguage() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static InputLanguage getCurrentInputLanguage() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentInputLanguage");
+            JCObject val = (JCObject)classType.Get("CurrentInputLanguage");
             return new InputLanguage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCurrentInputLanguage(InputLanguage CurrentInputLanguage) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCurrentInputLanguage(InputLanguage CurrentInputLanguage) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CurrentInputLanguage", CurrentInputLanguage == null ? null : CurrentInputLanguage.getJCOInstance());
+            classType.Set("CurrentInputLanguage", CurrentInputLanguage == null ? null : CurrentInputLanguage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public InputLanguage getDefaultInputLanguage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static InputLanguage getDefaultInputLanguage() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultInputLanguage");
+            JCObject val = (JCObject)classType.Get("DefaultInputLanguage");
             return new InputLanguage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public InputLanguageCollection getInstalledInputLanguages() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static InputLanguageCollection getInstalledInputLanguages() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InstalledInputLanguages");
+            JCObject val = (JCObject)classType.Get("InstalledInputLanguages");
             return new InputLanguageCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

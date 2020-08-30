@@ -342,247 +342,247 @@ public class Application extends NetObject  {
     
     // Properties section
     
-    public boolean getAllowQuit() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getAllowQuit() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("AllowQuit");
+            return (boolean)classType.Get("AllowQuit");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getMessageLoop() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getMessageLoop() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("MessageLoop");
+            return (boolean)classType.Get("MessageLoop");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getRenderWithVisualStyles() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getRenderWithVisualStyles() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("RenderWithVisualStyles");
+            return (boolean)classType.Get("RenderWithVisualStyles");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getUseWaitCursor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getUseWaitCursor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("UseWaitCursor");
+            return (boolean)classType.Get("UseWaitCursor");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUseWaitCursor(boolean UseWaitCursor) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setUseWaitCursor(boolean UseWaitCursor) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("UseWaitCursor", UseWaitCursor);
+            classType.Set("UseWaitCursor", UseWaitCursor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RegistryKey getCommonAppDataRegistry() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.resources.MissingManifestResourceException, system.UriFormatException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RegistryKey getCommonAppDataRegistry() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.resources.MissingManifestResourceException, system.UriFormatException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CommonAppDataRegistry");
+            JCObject val = (JCObject)classType.Get("CommonAppDataRegistry");
             return new RegistryKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RegistryKey getUserAppDataRegistry() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RegistryKey getUserAppDataRegistry() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UserAppDataRegistry");
+            JCObject val = (JCObject)classType.Get("UserAppDataRegistry");
             return new RegistryKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CultureInfo getCurrentCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static CultureInfo getCurrentCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentCulture");
+            JCObject val = (JCObject)classType.Get("CurrentCulture");
             return new CultureInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCurrentCulture(CultureInfo CurrentCulture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCurrentCulture(CultureInfo CurrentCulture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CurrentCulture", CurrentCulture == null ? null : CurrentCulture.getJCOInstance());
+            classType.Set("CurrentCulture", CurrentCulture == null ? null : CurrentCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getCommonAppDataPath() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.UriFormatException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.SecurityException, system.AccessViolationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getCommonAppDataPath() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.UriFormatException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.SecurityException, system.AccessViolationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("CommonAppDataPath");
+            return (java.lang.String)classType.Get("CommonAppDataPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getCompanyName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getCompanyName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("CompanyName");
+            return (java.lang.String)classType.Get("CompanyName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getExecutablePath() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MemberAccessException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getExecutablePath() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MemberAccessException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ExecutablePath");
+            return (java.lang.String)classType.Get("ExecutablePath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getLocalUserAppDataPath() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.UriFormatException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.SecurityException, system.AccessViolationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getLocalUserAppDataPath() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.UriFormatException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.SecurityException, system.AccessViolationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("LocalUserAppDataPath");
+            return (java.lang.String)classType.Get("LocalUserAppDataPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getProductName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getProductName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProductName");
+            return (java.lang.String)classType.Get("ProductName");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getProductVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getProductVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ProductVersion");
+            return (java.lang.String)classType.Get("ProductVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getSafeTopLevelCaptionFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSafeTopLevelCaptionFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SafeTopLevelCaptionFormat");
+            return (java.lang.String)classType.Get("SafeTopLevelCaptionFormat");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSafeTopLevelCaptionFormat(java.lang.String SafeTopLevelCaptionFormat) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setSafeTopLevelCaptionFormat(java.lang.String SafeTopLevelCaptionFormat) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("SafeTopLevelCaptionFormat", SafeTopLevelCaptionFormat);
+            classType.Set("SafeTopLevelCaptionFormat", SafeTopLevelCaptionFormat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getStartupPath() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getStartupPath() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("StartupPath");
+            return (java.lang.String)classType.Get("StartupPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getUserAppDataPath() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.UriFormatException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.SecurityException, system.AccessViolationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getUserAppDataPath() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OutOfMemoryException, system.UriFormatException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.SecurityException, system.AccessViolationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("UserAppDataPath");
+            return (java.lang.String)classType.Get("UserAppDataPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FormCollection getOpenForms() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static FormCollection getOpenForms() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OpenForms");
+            JCObject val = (JCObject)classType.Get("OpenForms");
             return new FormCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public InputLanguage getCurrentInputLanguage() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static InputLanguage getCurrentInputLanguage() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentInputLanguage");
+            JCObject val = (JCObject)classType.Get("CurrentInputLanguage");
             return new InputLanguage(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCurrentInputLanguage(InputLanguage CurrentInputLanguage) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCurrentInputLanguage(InputLanguage CurrentInputLanguage) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CurrentInputLanguage", CurrentInputLanguage == null ? null : CurrentInputLanguage.getJCOInstance());
+            classType.Set("CurrentInputLanguage", CurrentInputLanguage == null ? null : CurrentInputLanguage.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public VisualStyleState getVisualStyleState() throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static VisualStyleState getVisualStyleState() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("VisualStyleState");
+            JCObject val = (JCObject)classType.Get("VisualStyleState");
             return new VisualStyleState(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setVisualStyleState(VisualStyleState VisualStyleState) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setVisualStyleState(VisualStyleState VisualStyleState) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("VisualStyleState", VisualStyleState == null ? null : VisualStyleState.getJCOInstance());
+            classType.Set("VisualStyleState", VisualStyleState == null ? null : VisualStyleState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

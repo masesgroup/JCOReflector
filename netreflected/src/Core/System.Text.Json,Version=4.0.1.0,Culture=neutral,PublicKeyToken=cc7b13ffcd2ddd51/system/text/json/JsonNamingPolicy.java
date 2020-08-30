@@ -146,11 +146,11 @@ public class JsonNamingPolicy extends NetObject  {
     
     // Properties section
     
-    public JsonNamingPolicy getCamelCase() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static JsonNamingPolicy getCamelCase() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CamelCase");
+            JCObject val = (JCObject)classType.Get("CamelCase");
             return new JsonNamingPolicy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

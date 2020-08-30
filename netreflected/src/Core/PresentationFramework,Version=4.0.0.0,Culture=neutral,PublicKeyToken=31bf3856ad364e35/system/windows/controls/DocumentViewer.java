@@ -555,44 +555,44 @@ public class DocumentViewer extends DocumentViewerBase  {
         }
     }
 
-    public RoutedUICommand getFitToHeightCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedUICommand getFitToHeightCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FitToHeightCommand");
+            JCObject val = (JCObject)classType.Get("FitToHeightCommand");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedUICommand getFitToMaxPagesAcrossCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedUICommand getFitToMaxPagesAcrossCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FitToMaxPagesAcrossCommand");
+            JCObject val = (JCObject)classType.Get("FitToMaxPagesAcrossCommand");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedUICommand getFitToWidthCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedUICommand getFitToWidthCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FitToWidthCommand");
+            JCObject val = (JCObject)classType.Get("FitToWidthCommand");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedUICommand getViewThumbnailsCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedUICommand getViewThumbnailsCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewThumbnailsCommand");
+            JCObject val = (JCObject)classType.Get("ViewThumbnailsCommand");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

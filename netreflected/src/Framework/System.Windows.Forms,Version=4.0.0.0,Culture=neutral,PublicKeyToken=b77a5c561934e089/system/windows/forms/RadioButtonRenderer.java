@@ -227,21 +227,21 @@ public class RadioButtonRenderer extends NetObject  {
     
     // Properties section
     
-    public boolean getRenderMatchingApplicationState() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getRenderMatchingApplicationState() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("RenderMatchingApplicationState");
+            return (boolean)classType.Get("RenderMatchingApplicationState");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("RenderMatchingApplicationState", RenderMatchingApplicationState);
+            classType.Set("RenderMatchingApplicationState", RenderMatchingApplicationState);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

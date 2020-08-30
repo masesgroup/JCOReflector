@@ -190,11 +190,11 @@ public class InstanceValue extends NetObject  {
         }
     }
 
-    public InstanceValue getDeletedValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static InstanceValue getDeletedValue() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeletedValue");
+            JCObject val = (JCObject)classType.Get("DeletedValue");
             return new InstanceValue(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -178,11 +178,11 @@ public class GenericSecurityDescriptor extends NetObject  {
     
     // Properties section
     
-    public byte getRevision() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static byte getRevision() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (byte)classInstance.Get("Revision");
+            return (byte)classType.Get("Revision");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

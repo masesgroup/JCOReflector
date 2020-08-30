@@ -145,22 +145,22 @@ public class HostServices extends NetObject  {
     
     // Properties section
     
-    public IVbHost getVBHost() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IVbHost getVBHost() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("VBHost");
+            JCObject val = (JCObject)classType.Get("VBHost");
             return new IVbHostImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setVBHost(IVbHost VBHost) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setVBHost(IVbHost VBHost) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("VBHost", VBHost == null ? null : VBHost.getJCOInstance());
+            classType.Set("VBHost", VBHost == null ? null : VBHost.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

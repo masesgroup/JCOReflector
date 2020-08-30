@@ -171,11 +171,11 @@ public class ActiveDirectoryRoleFactory extends NetObject  {
     
     // Properties section
     
-    public ActiveDirectoryRoleFactoryConfiguration getConfiguration() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ActiveDirectoryRoleFactoryConfiguration getConfiguration() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Configuration");
+            JCObject val = (JCObject)classType.Get("Configuration");
             return new ActiveDirectoryRoleFactoryConfiguration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

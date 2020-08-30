@@ -159,55 +159,55 @@ public class HashAlgorithmName extends ValueType  {
     
     // Properties section
     
-    public HashAlgorithmName getMD5() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HashAlgorithmName getMD5() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MD5");
+            JCObject val = (JCObject)classType.Get("MD5");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HashAlgorithmName getSHA1() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HashAlgorithmName getSHA1() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SHA1");
+            JCObject val = (JCObject)classType.Get("SHA1");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HashAlgorithmName getSHA256() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HashAlgorithmName getSHA256() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SHA256");
+            JCObject val = (JCObject)classType.Get("SHA256");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HashAlgorithmName getSHA384() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HashAlgorithmName getSHA384() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SHA384");
+            JCObject val = (JCObject)classType.Get("SHA384");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HashAlgorithmName getSHA512() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HashAlgorithmName getSHA512() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SHA512");
+            JCObject val = (JCObject)classType.Get("SHA512");
             return new HashAlgorithmName(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

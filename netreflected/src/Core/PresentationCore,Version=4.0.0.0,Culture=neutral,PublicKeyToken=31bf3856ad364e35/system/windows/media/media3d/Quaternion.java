@@ -398,11 +398,11 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public Quaternion getIdentity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Quaternion getIdentity() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Identity");
+            JCObject val = (JCObject)classType.Get("Identity");
             return new Quaternion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

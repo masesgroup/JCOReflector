@@ -135,61 +135,61 @@ public class BaseCompatibilityPreferences extends NetObject  {
     
     // Properties section
     
-    public boolean getFlowDispatcherSynchronizationContextPriority() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getFlowDispatcherSynchronizationContextPriority() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("FlowDispatcherSynchronizationContextPriority");
+            return (boolean)classType.Get("FlowDispatcherSynchronizationContextPriority");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setFlowDispatcherSynchronizationContextPriority(boolean FlowDispatcherSynchronizationContextPriority) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setFlowDispatcherSynchronizationContextPriority(boolean FlowDispatcherSynchronizationContextPriority) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("FlowDispatcherSynchronizationContextPriority", FlowDispatcherSynchronizationContextPriority);
+            classType.Set("FlowDispatcherSynchronizationContextPriority", FlowDispatcherSynchronizationContextPriority);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getInlineDispatcherSynchronizationContextSend() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getInlineDispatcherSynchronizationContextSend() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("InlineDispatcherSynchronizationContextSend");
+            return (boolean)classType.Get("InlineDispatcherSynchronizationContextSend");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setInlineDispatcherSynchronizationContextSend(boolean InlineDispatcherSynchronizationContextSend) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setInlineDispatcherSynchronizationContextSend(boolean InlineDispatcherSynchronizationContextSend) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("InlineDispatcherSynchronizationContextSend", InlineDispatcherSynchronizationContextSend);
+            classType.Set("InlineDispatcherSynchronizationContextSend", InlineDispatcherSynchronizationContextSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getReuseDispatcherSynchronizationContextInstance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getReuseDispatcherSynchronizationContextInstance() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("ReuseDispatcherSynchronizationContextInstance");
+            return (boolean)classType.Get("ReuseDispatcherSynchronizationContextInstance");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setReuseDispatcherSynchronizationContextInstance(boolean ReuseDispatcherSynchronizationContextInstance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setReuseDispatcherSynchronizationContextInstance(boolean ReuseDispatcherSynchronizationContextInstance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ReuseDispatcherSynchronizationContextInstance", ReuseDispatcherSynchronizationContextInstance);
+            classType.Set("ReuseDispatcherSynchronizationContextInstance", ReuseDispatcherSynchronizationContextInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

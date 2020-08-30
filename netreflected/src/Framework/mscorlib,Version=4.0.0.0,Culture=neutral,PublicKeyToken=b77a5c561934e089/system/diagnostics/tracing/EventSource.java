@@ -319,11 +319,11 @@ public class EventSource extends NetObject  {
         }
     }
 
-    public Guid getCurrentThreadActivityId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Guid getCurrentThreadActivityId() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentThreadActivityId");
+            JCObject val = (JCObject)classType.Get("CurrentThreadActivityId");
             return new Guid(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

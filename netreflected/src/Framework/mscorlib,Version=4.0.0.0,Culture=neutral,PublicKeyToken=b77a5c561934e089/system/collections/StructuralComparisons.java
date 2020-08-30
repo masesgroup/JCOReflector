@@ -139,22 +139,22 @@ public class StructuralComparisons extends NetObject  {
     
     // Properties section
     
-    public IComparer getStructuralComparer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IComparer getStructuralComparer() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StructuralComparer");
+            JCObject val = (JCObject)classType.Get("StructuralComparer");
             return new IComparerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IEqualityComparer getStructuralEqualityComparer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IEqualityComparer getStructuralEqualityComparer() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("StructuralEqualityComparer");
+            JCObject val = (JCObject)classType.Get("StructuralEqualityComparer");
             return new IEqualityComparerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

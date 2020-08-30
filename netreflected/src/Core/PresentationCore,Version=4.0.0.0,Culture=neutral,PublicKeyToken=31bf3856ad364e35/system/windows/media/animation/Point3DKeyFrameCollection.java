@@ -288,11 +288,11 @@ public class Point3DKeyFrameCollection extends Freezable  {
         }
     }
 
-    public Point3DKeyFrameCollection getEmpty() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Point3DKeyFrameCollection getEmpty() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Empty");
+            JCObject val = (JCObject)classType.Get("Empty");
             return new Point3DKeyFrameCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

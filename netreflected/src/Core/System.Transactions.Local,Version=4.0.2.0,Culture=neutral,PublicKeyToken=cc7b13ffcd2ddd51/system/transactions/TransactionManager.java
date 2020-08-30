@@ -173,43 +173,43 @@ public class TransactionManager extends NetObject  {
     
     // Properties section
     
-    public TimeSpan getDefaultTimeout() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeSpan getDefaultTimeout() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultTimeout");
+            JCObject val = (JCObject)classType.Get("DefaultTimeout");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TimeSpan getMaximumTimeout() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeSpan getMaximumTimeout() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximumTimeout");
+            JCObject val = (JCObject)classType.Get("MaximumTimeout");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HostCurrentTransactionCallback getHostCurrentCallback() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HostCurrentTransactionCallback getHostCurrentCallback() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (HostCurrentTransactionCallback)classInstance.Get("HostCurrentCallback");
+            return (HostCurrentTransactionCallback)classType.Get("HostCurrentCallback");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHostCurrentCallback(HostCurrentTransactionCallback HostCurrentCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setHostCurrentCallback(HostCurrentTransactionCallback HostCurrentCallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("HostCurrentCallback", HostCurrentCallback);
+            classType.Set("HostCurrentCallback", HostCurrentCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

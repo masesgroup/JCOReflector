@@ -135,21 +135,21 @@ public class Rights extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getIdentity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getIdentity() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("Identity");
+            return (java.lang.String)classType.Get("Identity");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getPossessProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getPossessProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("PossessProperty");
+            return (java.lang.String)classType.Get("PossessProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

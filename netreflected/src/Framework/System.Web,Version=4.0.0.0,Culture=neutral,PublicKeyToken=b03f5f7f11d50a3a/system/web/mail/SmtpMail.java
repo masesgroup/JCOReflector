@@ -158,21 +158,21 @@ public class SmtpMail extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getSmtpServer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSmtpServer() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SmtpServer");
+            return (java.lang.String)classType.Get("SmtpServer");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSmtpServer(java.lang.String SmtpServer) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setSmtpServer(java.lang.String SmtpServer) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("SmtpServer", SmtpServer);
+            classType.Set("SmtpServer", SmtpServer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

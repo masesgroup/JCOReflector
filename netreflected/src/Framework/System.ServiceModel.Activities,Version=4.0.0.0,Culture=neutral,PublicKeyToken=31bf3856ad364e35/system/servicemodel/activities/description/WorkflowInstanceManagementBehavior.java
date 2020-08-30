@@ -165,22 +165,22 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
     
     // Properties section
     
-    public system.servicemodel.channels.Binding getHttpControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static system.servicemodel.channels.Binding getHttpControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpControlEndpointBinding");
+            JCObject val = (JCObject)classType.Get("HttpControlEndpointBinding");
             return new system.servicemodel.channels.Binding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public system.servicemodel.channels.Binding getNamedPipeControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static system.servicemodel.channels.Binding getNamedPipeControlEndpointBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NamedPipeControlEndpointBinding");
+            JCObject val = (JCObject)classType.Get("NamedPipeControlEndpointBinding");
             return new system.servicemodel.channels.Binding(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

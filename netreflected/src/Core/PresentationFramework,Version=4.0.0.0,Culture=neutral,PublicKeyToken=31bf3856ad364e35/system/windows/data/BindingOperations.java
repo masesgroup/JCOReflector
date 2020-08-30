@@ -315,11 +315,11 @@ public class BindingOperations extends NetObject  {
     
     // Properties section
     
-    public NetObject getDisconnectedSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static NetObject getDisconnectedSource() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DisconnectedSource");
+            JCObject val = (JCObject)classType.Get("DisconnectedSource");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

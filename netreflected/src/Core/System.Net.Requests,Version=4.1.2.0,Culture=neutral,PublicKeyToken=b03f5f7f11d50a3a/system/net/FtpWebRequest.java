@@ -348,22 +348,22 @@ public class FtpWebRequest extends WebRequest  {
         }
     }
 
-    public RequestCachePolicy getDefaultCachePolicy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RequestCachePolicy getDefaultCachePolicy() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultCachePolicy");
+            JCObject val = (JCObject)classType.Get("DefaultCachePolicy");
             return new RequestCachePolicy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
+            classType.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -281,41 +281,41 @@ public class SoapServices extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getXmlNsForClrType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getXmlNsForClrType() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("XmlNsForClrType");
+            return (java.lang.String)classType.Get("XmlNsForClrType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getXmlNsForClrTypeWithAssembly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getXmlNsForClrTypeWithAssembly() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("XmlNsForClrTypeWithAssembly");
+            return (java.lang.String)classType.Get("XmlNsForClrTypeWithAssembly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getXmlNsForClrTypeWithNs() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getXmlNsForClrTypeWithNs() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("XmlNsForClrTypeWithNs");
+            return (java.lang.String)classType.Get("XmlNsForClrTypeWithNs");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getXmlNsForClrTypeWithNsAndAssembly() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getXmlNsForClrTypeWithNsAndAssembly() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("XmlNsForClrTypeWithNsAndAssembly");
+            return (java.lang.String)classType.Get("XmlNsForClrTypeWithNsAndAssembly");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -302,31 +302,31 @@ public class ThreadPool extends NetObject  {
     
     // Properties section
     
-    public int getThreadCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getThreadCount() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("ThreadCount");
+            return (int)classType.Get("ThreadCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public long getCompletedWorkItemCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static long getCompletedWorkItemCount() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classInstance.Get("CompletedWorkItemCount");
+            return (long)classType.Get("CompletedWorkItemCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public long getPendingWorkItemCount() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static long getPendingWorkItemCount() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classInstance.Get("PendingWorkItemCount");
+            return (long)classType.Get("PendingWorkItemCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

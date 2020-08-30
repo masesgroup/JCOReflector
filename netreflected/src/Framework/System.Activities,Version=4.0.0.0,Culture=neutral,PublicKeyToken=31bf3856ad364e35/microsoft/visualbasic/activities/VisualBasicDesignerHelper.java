@@ -138,11 +138,11 @@ public class VisualBasicDesignerHelper extends NetObject  {
     
     // Properties section
     
-    public Constraint getNameShadowingConstraint() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Constraint getNameShadowingConstraint() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NameShadowingConstraint");
+            JCObject val = (JCObject)classType.Get("NameShadowingConstraint");
             return new Constraint(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

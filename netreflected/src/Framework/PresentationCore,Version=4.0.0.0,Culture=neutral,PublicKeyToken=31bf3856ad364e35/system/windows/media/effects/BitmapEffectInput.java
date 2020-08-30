@@ -211,11 +211,11 @@ public class BitmapEffectInput extends Animatable  {
         }
     }
 
-    public BitmapSource getContextInputSource() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static BitmapSource getContextInputSource() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextInputSource");
+            JCObject val = (JCObject)classType.Get("ContextInputSource");
             return new BitmapSource(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

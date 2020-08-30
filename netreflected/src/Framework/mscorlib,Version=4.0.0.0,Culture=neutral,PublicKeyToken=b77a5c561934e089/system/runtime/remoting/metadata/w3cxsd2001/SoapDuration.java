@@ -165,11 +165,11 @@ public class SoapDuration extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getXsdType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getXsdType() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("XsdType");
+            return (java.lang.String)classType.Get("XsdType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -217,22 +217,22 @@ public class CallContext extends NetObject  {
     
     // Properties section
     
-    public NetObject getHostContext() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static NetObject getHostContext() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HostContext");
+            JCObject val = (JCObject)classType.Get("HostContext");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setHostContext(NetObject HostContext) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setHostContext(NetObject HostContext) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("HostContext", HostContext == null ? null : HostContext.getJCOInstance());
+            classType.Set("HostContext", HostContext == null ? null : HostContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

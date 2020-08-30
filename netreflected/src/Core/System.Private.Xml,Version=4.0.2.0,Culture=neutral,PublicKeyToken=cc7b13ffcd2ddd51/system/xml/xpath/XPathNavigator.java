@@ -1083,11 +1083,11 @@ public class XPathNavigator extends XPathItem  {
         }
     }
 
-    public IEqualityComparer getNavigatorComparer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IEqualityComparer getNavigatorComparer() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigatorComparer");
+            JCObject val = (JCObject)classType.Get("NavigatorComparer");
             return new IEqualityComparerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

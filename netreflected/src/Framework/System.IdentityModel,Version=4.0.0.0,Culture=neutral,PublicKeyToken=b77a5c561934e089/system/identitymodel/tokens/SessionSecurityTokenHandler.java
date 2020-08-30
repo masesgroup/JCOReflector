@@ -308,11 +308,11 @@ public class SessionSecurityTokenHandler extends SecurityTokenHandler  {
         }
     }
 
-    public TimeSpan getDefaultTokenLifetime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeSpan getDefaultTokenLifetime() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultTokenLifetime");
+            JCObject val = (JCObject)classType.Get("DefaultTokenLifetime");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

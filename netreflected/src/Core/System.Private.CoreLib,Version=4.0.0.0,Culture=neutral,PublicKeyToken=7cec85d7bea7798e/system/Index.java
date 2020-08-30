@@ -211,22 +211,22 @@ public class Index extends ValueType  {
         }
     }
 
-    public Index getEnd() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Index getEnd() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("End");
+            JCObject val = (JCObject)classType.Get("End");
             return new Index(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Index getStart() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Index getStart() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Start");
+            JCObject val = (JCObject)classType.Get("Start");
             return new Index(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -204,22 +204,22 @@ public class KeyTime extends ValueType  {
         }
     }
 
-    public KeyTime getPaced() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static KeyTime getPaced() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Paced");
+            JCObject val = (JCObject)classType.Get("Paced");
             return new KeyTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public KeyTime getUniform() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static KeyTime getUniform() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Uniform");
+            JCObject val = (JCObject)classType.Get("Uniform");
             return new KeyTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

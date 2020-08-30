@@ -233,11 +233,11 @@ public class RepeatBehavior extends ValueType  {
         }
     }
 
-    public RepeatBehavior getForever() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RepeatBehavior getForever() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Forever");
+            JCObject val = (JCObject)classType.Get("Forever");
             return new RepeatBehavior(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

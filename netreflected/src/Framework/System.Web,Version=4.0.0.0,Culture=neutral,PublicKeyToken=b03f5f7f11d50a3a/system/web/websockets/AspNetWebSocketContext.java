@@ -173,11 +173,11 @@ public class AspNetWebSocketContext extends WebSocketContext  {
         }
     }
 
-    public int getConnectionCount() throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getConnectionCount() throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("ConnectionCount");
+            return (int)classType.Get("ConnectionCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

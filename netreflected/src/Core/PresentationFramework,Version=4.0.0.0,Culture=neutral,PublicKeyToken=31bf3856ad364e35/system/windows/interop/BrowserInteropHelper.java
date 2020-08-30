@@ -136,43 +136,43 @@ public class BrowserInteropHelper extends NetObject  {
     
     // Properties section
     
-    public boolean getIsBrowserHosted() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsBrowserHosted() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsBrowserHosted");
+            return (boolean)classType.Get("IsBrowserHosted");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getClientSite() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static NetObject getClientSite() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientSite");
+            JCObject val = (JCObject)classType.Get("ClientSite");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getHostScript() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static NetObject getHostScript() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HostScript");
+            JCObject val = (JCObject)classType.Get("HostScript");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Uri getSource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Uri getSource() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            JCObject val = (JCObject)classType.Get("Source");
             return new Uri(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

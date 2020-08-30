@@ -454,21 +454,21 @@ public class Geometry extends Animatable  {
     
     // Properties section
     
-    public double getStandardFlatteningTolerance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static double getStandardFlatteningTolerance() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classInstance.Get("StandardFlatteningTolerance");
+            return (double)classType.Get("StandardFlatteningTolerance");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Geometry getEmpty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Geometry getEmpty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Empty");
+            JCObject val = (JCObject)classType.Get("Empty");
             return new Geometry(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

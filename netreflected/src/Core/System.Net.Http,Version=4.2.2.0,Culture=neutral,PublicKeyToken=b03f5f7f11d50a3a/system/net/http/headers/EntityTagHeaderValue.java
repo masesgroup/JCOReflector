@@ -179,11 +179,11 @@ public class EntityTagHeaderValue extends NetObject  {
         }
     }
 
-    public EntityTagHeaderValue getAny() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static EntityTagHeaderValue getAny() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Any");
+            JCObject val = (JCObject)classType.Get("Any");
             return new EntityTagHeaderValue(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

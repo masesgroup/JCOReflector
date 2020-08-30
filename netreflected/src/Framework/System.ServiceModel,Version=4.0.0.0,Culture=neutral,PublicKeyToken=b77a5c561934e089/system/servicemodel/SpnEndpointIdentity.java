@@ -160,22 +160,22 @@ public class SpnEndpointIdentity extends EndpointIdentity  {
     
     // Properties section
     
-    public TimeSpan getSpnLookupTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeSpan getSpnLookupTime() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SpnLookupTime");
+            JCObject val = (JCObject)classType.Get("SpnLookupTime");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSpnLookupTime(TimeSpan SpnLookupTime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setSpnLookupTime(TimeSpan SpnLookupTime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("SpnLookupTime", SpnLookupTime == null ? null : SpnLookupTime.getJCOInstance());
+            classType.Set("SpnLookupTime", SpnLookupTime == null ? null : SpnLookupTime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

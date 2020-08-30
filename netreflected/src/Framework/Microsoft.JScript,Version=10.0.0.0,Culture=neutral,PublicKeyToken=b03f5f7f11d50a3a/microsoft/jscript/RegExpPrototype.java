@@ -182,11 +182,11 @@ public class RegExpPrototype extends JSObject  {
     
     // Properties section
     
-    public RegExpConstructor getconstructor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RegExpConstructor getconstructor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("constructor");
+            JCObject val = (JCObject)classType.Get("constructor");
             return new RegExpConstructor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

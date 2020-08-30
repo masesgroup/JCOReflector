@@ -381,21 +381,21 @@ public class WebControl extends Control  {
         }
     }
 
-    public java.lang.String getDisabledCssClass() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getDisabledCssClass() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("DisabledCssClass");
+            return (java.lang.String)classType.Get("DisabledCssClass");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDisabledCssClass(java.lang.String DisabledCssClass) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDisabledCssClass(java.lang.String DisabledCssClass) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DisabledCssClass", DisabledCssClass);
+            classType.Set("DisabledCssClass", DisabledCssClass);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

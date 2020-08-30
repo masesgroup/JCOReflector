@@ -178,11 +178,11 @@ public class RegionInfo extends NetObject  {
         }
     }
 
-    public RegionInfo getCurrentRegion() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RegionInfo getCurrentRegion() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentRegion");
+            JCObject val = (JCObject)classType.Get("CurrentRegion");
             return new RegionInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

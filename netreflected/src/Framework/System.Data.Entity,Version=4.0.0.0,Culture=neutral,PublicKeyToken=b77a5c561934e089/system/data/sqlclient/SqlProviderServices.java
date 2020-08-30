@@ -139,11 +139,11 @@ public class SqlProviderServices extends DbProviderServices  {
     
     // Properties section
     
-    public SqlProviderServices getSingletonInstance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SqlProviderServices getSingletonInstance() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SingletonInstance");
+            JCObject val = (JCObject)classType.Get("SingletonInstance");
             return new SqlProviderServices(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -208,11 +208,11 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
         }
     }
 
-    public ComponentResourceKey getTextBlockComboBoxStyleKey() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ComponentResourceKey getTextBlockComboBoxStyleKey() throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TextBlockComboBoxStyleKey");
+            JCObject val = (JCObject)classType.Get("TextBlockComboBoxStyleKey");
             return new ComponentResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,22 +282,22 @@ public class DataGridComboBoxColumn extends DataGridColumn  {
         }
     }
 
-    public Style getDefaultEditingElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Style getDefaultEditingElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultEditingElementStyle");
+            JCObject val = (JCObject)classType.Get("DefaultEditingElementStyle");
             return new Style(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Style getDefaultElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Style getDefaultElementStyle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultElementStyle");
+            JCObject val = (JCObject)classType.Get("DefaultElementStyle");
             return new Style(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

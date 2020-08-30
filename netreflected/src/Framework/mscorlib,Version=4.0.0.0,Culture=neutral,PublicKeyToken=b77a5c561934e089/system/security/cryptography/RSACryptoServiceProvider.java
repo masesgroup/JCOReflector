@@ -730,21 +730,21 @@ public class RSACryptoServiceProvider extends RSA  {
         }
     }
 
-    public boolean getUseMachineKeyStore() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getUseMachineKeyStore() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("UseMachineKeyStore");
+            return (boolean)classType.Get("UseMachineKeyStore");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setUseMachineKeyStore(boolean UseMachineKeyStore) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setUseMachineKeyStore(boolean UseMachineKeyStore) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("UseMachineKeyStore", UseMachineKeyStore);
+            classType.Set("UseMachineKeyStore", UseMachineKeyStore);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

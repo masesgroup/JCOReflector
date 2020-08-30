@@ -144,11 +144,11 @@ public class VisualBasicSettings extends NetObject  {
     
     // Properties section
     
-    public VisualBasicSettings getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static VisualBasicSettings getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new VisualBasicSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

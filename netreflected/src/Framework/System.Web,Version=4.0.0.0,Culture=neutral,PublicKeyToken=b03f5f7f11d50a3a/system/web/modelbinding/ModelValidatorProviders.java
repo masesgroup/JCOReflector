@@ -136,11 +136,11 @@ public class ModelValidatorProviders extends NetObject  {
     
     // Properties section
     
-    public ModelValidatorProviderCollection getProviders() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ModelValidatorProviderCollection getProviders() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Providers");
+            JCObject val = (JCObject)classType.Get("Providers");
             return new ModelValidatorProviderCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

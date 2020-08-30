@@ -158,77 +158,77 @@ public class HttpMethod extends NetObject  {
     
     // Properties section
     
-    public HttpMethod getDelete() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getDelete() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Delete");
+            JCObject val = (JCObject)classType.Get("Delete");
             return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HttpMethod getGet() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getGet() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Get");
+            JCObject val = (JCObject)classType.Get("Get");
             return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HttpMethod getHead() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getHead() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Head");
+            JCObject val = (JCObject)classType.Get("Head");
             return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HttpMethod getOptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getOptions() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            JCObject val = (JCObject)classType.Get("Options");
             return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HttpMethod getPost() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getPost() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Post");
+            JCObject val = (JCObject)classType.Get("Post");
             return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HttpMethod getPut() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getPut() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Put");
+            JCObject val = (JCObject)classType.Get("Put");
             return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public HttpMethod getTrace() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getTrace() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Trace");
+            JCObject val = (JCObject)classType.Get("Trace");
             return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

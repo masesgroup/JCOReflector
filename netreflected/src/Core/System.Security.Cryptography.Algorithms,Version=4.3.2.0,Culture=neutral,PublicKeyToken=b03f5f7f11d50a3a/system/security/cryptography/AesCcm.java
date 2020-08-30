@@ -198,22 +198,22 @@ public class AesCcm extends NetObject  {
     
     // Properties section
     
-    public KeySizes getNonceByteSizes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static KeySizes getNonceByteSizes() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NonceByteSizes");
+            JCObject val = (JCObject)classType.Get("NonceByteSizes");
             return new KeySizes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public KeySizes getTagByteSizes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static KeySizes getTagByteSizes() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TagByteSizes");
+            JCObject val = (JCObject)classType.Get("TagByteSizes");
             return new KeySizes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

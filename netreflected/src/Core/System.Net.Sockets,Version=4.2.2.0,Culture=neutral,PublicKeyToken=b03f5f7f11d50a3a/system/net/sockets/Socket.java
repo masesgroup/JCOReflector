@@ -1290,41 +1290,41 @@ public class Socket extends NetObject  {
         }
     }
 
-    public boolean getOSSupportsIPv4() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getOSSupportsIPv4() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("OSSupportsIPv4");
+            return (boolean)classType.Get("OSSupportsIPv4");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getOSSupportsIPv6() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getOSSupportsIPv6() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("OSSupportsIPv6");
+            return (boolean)classType.Get("OSSupportsIPv6");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getSupportsIPv4() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getSupportsIPv4() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("SupportsIPv4");
+            return (boolean)classType.Get("SupportsIPv4");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getSupportsIPv6() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getSupportsIPv6() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("SupportsIPv6");
+            return (boolean)classType.Get("SupportsIPv6");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

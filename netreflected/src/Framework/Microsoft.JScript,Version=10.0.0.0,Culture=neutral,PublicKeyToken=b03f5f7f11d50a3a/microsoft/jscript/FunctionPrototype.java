@@ -171,11 +171,11 @@ public class FunctionPrototype extends ScriptFunction  {
     
     // Properties section
     
-    public FunctionConstructor getconstructor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static FunctionConstructor getconstructor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("constructor");
+            JCObject val = (JCObject)classType.Get("constructor");
             return new FunctionConstructor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

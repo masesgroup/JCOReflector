@@ -135,21 +135,21 @@ public class CoreCompatibilityPreferences extends NetObject  {
     
     // Properties section
     
-    public boolean getIsAltKeyRequiredInAccessKeyDefaultScope() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsAltKeyRequiredInAccessKeyDefaultScope() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsAltKeyRequiredInAccessKeyDefaultScope");
+            return (boolean)classType.Get("IsAltKeyRequiredInAccessKeyDefaultScope");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsAltKeyRequiredInAccessKeyDefaultScope(boolean IsAltKeyRequiredInAccessKeyDefaultScope) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setIsAltKeyRequiredInAccessKeyDefaultScope(boolean IsAltKeyRequiredInAccessKeyDefaultScope) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("IsAltKeyRequiredInAccessKeyDefaultScope", IsAltKeyRequiredInAccessKeyDefaultScope);
+            classType.Set("IsAltKeyRequiredInAccessKeyDefaultScope", IsAltKeyRequiredInAccessKeyDefaultScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

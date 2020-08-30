@@ -196,21 +196,21 @@ public class WindowsFormsSynchronizationContext extends SynchronizationContext  
     
     // Properties section
     
-    public boolean getAutoInstall() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getAutoInstall() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("AutoInstall");
+            return (boolean)classType.Get("AutoInstall");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAutoInstall(boolean AutoInstall) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setAutoInstall(boolean AutoInstall) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("AutoInstall", AutoInstall);
+            classType.Set("AutoInstall", AutoInstall);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -188,22 +188,22 @@ public class DataGridColumnHeader extends ButtonBase  {
         }
     }
 
-    public ComponentResourceKey getColumnFloatingHeaderStyleKey() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ComponentResourceKey getColumnFloatingHeaderStyleKey() throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnFloatingHeaderStyleKey");
+            JCObject val = (JCObject)classType.Get("ColumnFloatingHeaderStyleKey");
             return new ComponentResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ComponentResourceKey getColumnHeaderDropSeparatorStyleKey() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ComponentResourceKey getColumnHeaderDropSeparatorStyleKey() throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeaderDropSeparatorStyleKey");
+            JCObject val = (JCObject)classType.Get("ColumnHeaderDropSeparatorStyleKey");
             return new ComponentResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -154,7 +154,7 @@ public class ProfileBase extends SettingsBase  {
         }
     }
 
-    public static ProfileBase Create(java.lang.String username) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.FormatException {
+    public static ProfileBase Create(java.lang.String username) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

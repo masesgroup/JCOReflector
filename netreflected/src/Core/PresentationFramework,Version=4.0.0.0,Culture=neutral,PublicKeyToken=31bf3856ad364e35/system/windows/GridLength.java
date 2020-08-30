@@ -210,11 +210,11 @@ public class GridLength extends ValueType  {
         }
     }
 
-    public GridLength getAuto() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static GridLength getAuto() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Auto");
+            JCObject val = (JCObject)classType.Get("Auto");
             return new GridLength(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

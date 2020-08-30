@@ -136,11 +136,11 @@ public class BasicSecurityProfileVersion extends NetObject  {
     
     // Properties section
     
-    public BasicSecurityProfileVersion getBasicSecurityProfile10() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static BasicSecurityProfileVersion getBasicSecurityProfile10() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BasicSecurityProfile10");
+            JCObject val = (JCObject)classType.Get("BasicSecurityProfile10");
             return new BasicSecurityProfileVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

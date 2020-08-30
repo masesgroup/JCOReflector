@@ -136,11 +136,11 @@ public class ModelBinderProviders extends NetObject  {
     
     // Properties section
     
-    public ModelBinderProviderCollection getProviders() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ModelBinderProviderCollection getProviders() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Providers");
+            JCObject val = (JCObject)classType.Get("Providers");
             return new ModelBinderProviderCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

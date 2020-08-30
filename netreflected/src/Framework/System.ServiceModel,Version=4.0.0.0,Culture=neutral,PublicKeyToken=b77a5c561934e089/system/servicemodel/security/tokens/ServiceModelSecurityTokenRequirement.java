@@ -276,261 +276,261 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
         }
     }
 
-    public java.lang.String getAuditLogLocationProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getAuditLogLocationProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("AuditLogLocationProperty");
+            return (java.lang.String)classType.Get("AuditLogLocationProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getChannelParametersCollectionProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getChannelParametersCollectionProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ChannelParametersCollectionProperty");
+            return (java.lang.String)classType.Get("ChannelParametersCollectionProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getDuplexClientLocalAddressProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getDuplexClientLocalAddressProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("DuplexClientLocalAddressProperty");
+            return (java.lang.String)classType.Get("DuplexClientLocalAddressProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getEndpointFilterTableProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getEndpointFilterTableProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("EndpointFilterTableProperty");
+            return (java.lang.String)classType.Get("EndpointFilterTableProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getExtendedProtectionPolicy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getExtendedProtectionPolicy() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ExtendedProtectionPolicy");
+            return (java.lang.String)classType.Get("ExtendedProtectionPolicy");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getHttpAuthenticationSchemeProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getHttpAuthenticationSchemeProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("HttpAuthenticationSchemeProperty");
+            return (java.lang.String)classType.Get("HttpAuthenticationSchemeProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getIsInitiatorProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getIsInitiatorProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("IsInitiatorProperty");
+            return (java.lang.String)classType.Get("IsInitiatorProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getIsOutOfBandTokenProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getIsOutOfBandTokenProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("IsOutOfBandTokenProperty");
+            return (java.lang.String)classType.Get("IsOutOfBandTokenProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getIssuedSecurityTokenParametersProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getIssuedSecurityTokenParametersProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("IssuedSecurityTokenParametersProperty");
+            return (java.lang.String)classType.Get("IssuedSecurityTokenParametersProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getIssuerAddressProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getIssuerAddressProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("IssuerAddressProperty");
+            return (java.lang.String)classType.Get("IssuerAddressProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getIssuerBindingContextProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getIssuerBindingContextProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("IssuerBindingContextProperty");
+            return (java.lang.String)classType.Get("IssuerBindingContextProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getIssuerBindingProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getIssuerBindingProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("IssuerBindingProperty");
+            return (java.lang.String)classType.Get("IssuerBindingProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getListenUriProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getListenUriProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ListenUriProperty");
+            return (java.lang.String)classType.Get("ListenUriProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getMessageAuthenticationAuditLevelProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getMessageAuthenticationAuditLevelProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("MessageAuthenticationAuditLevelProperty");
+            return (java.lang.String)classType.Get("MessageAuthenticationAuditLevelProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getMessageDirectionProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getMessageDirectionProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("MessageDirectionProperty");
+            return (java.lang.String)classType.Get("MessageDirectionProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getMessageSecurityVersionProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getMessageSecurityVersionProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("MessageSecurityVersionProperty");
+            return (java.lang.String)classType.Get("MessageSecurityVersionProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getPreferSslCertificateAuthenticatorProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getPreferSslCertificateAuthenticatorProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("PreferSslCertificateAuthenticatorProperty");
+            return (java.lang.String)classType.Get("PreferSslCertificateAuthenticatorProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getPrivacyNoticeUriProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getPrivacyNoticeUriProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("PrivacyNoticeUriProperty");
+            return (java.lang.String)classType.Get("PrivacyNoticeUriProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getPrivacyNoticeVersionProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getPrivacyNoticeVersionProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("PrivacyNoticeVersionProperty");
+            return (java.lang.String)classType.Get("PrivacyNoticeVersionProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getSecureConversationSecurityBindingElementProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSecureConversationSecurityBindingElementProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SecureConversationSecurityBindingElementProperty");
+            return (java.lang.String)classType.Get("SecureConversationSecurityBindingElementProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getSecurityAlgorithmSuiteProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSecurityAlgorithmSuiteProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SecurityAlgorithmSuiteProperty");
+            return (java.lang.String)classType.Get("SecurityAlgorithmSuiteProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getSecurityBindingElementProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSecurityBindingElementProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SecurityBindingElementProperty");
+            return (java.lang.String)classType.Get("SecurityBindingElementProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getSupportingTokenAttachmentModeProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSupportingTokenAttachmentModeProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SupportingTokenAttachmentModeProperty");
+            return (java.lang.String)classType.Get("SupportingTokenAttachmentModeProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getSupportSecurityContextCancellationProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSupportSecurityContextCancellationProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SupportSecurityContextCancellationProperty");
+            return (java.lang.String)classType.Get("SupportSecurityContextCancellationProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getSuppressAuditFailureProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSuppressAuditFailureProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SuppressAuditFailureProperty");
+            return (java.lang.String)classType.Get("SuppressAuditFailureProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getTargetAddressProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getTargetAddressProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("TargetAddressProperty");
+            return (java.lang.String)classType.Get("TargetAddressProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,21 +556,21 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
         }
     }
 
-    public java.lang.String getTransportSchemeProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getTransportSchemeProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("TransportSchemeProperty");
+            return (java.lang.String)classType.Get("TransportSchemeProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getViaProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getViaProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ViaProperty");
+            return (java.lang.String)classType.Get("ViaProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

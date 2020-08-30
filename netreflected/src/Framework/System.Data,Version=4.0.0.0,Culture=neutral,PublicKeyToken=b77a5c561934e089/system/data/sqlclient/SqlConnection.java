@@ -403,21 +403,21 @@ public class SqlConnection extends DbConnection  {
     
     // Properties section
     
-    public boolean getColumnEncryptionQueryMetadataCacheEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getColumnEncryptionQueryMetadataCacheEnabled() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("ColumnEncryptionQueryMetadataCacheEnabled");
+            return (boolean)classType.Get("ColumnEncryptionQueryMetadataCacheEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setColumnEncryptionQueryMetadataCacheEnabled(boolean ColumnEncryptionQueryMetadataCacheEnabled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setColumnEncryptionQueryMetadataCacheEnabled(boolean ColumnEncryptionQueryMetadataCacheEnabled) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ColumnEncryptionQueryMetadataCacheEnabled", ColumnEncryptionQueryMetadataCacheEnabled);
+            classType.Set("ColumnEncryptionQueryMetadataCacheEnabled", ColumnEncryptionQueryMetadataCacheEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,22 +535,22 @@ public class SqlConnection extends DbConnection  {
         }
     }
 
-    public TimeSpan getColumnEncryptionKeyCacheTtl() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeSpan getColumnEncryptionKeyCacheTtl() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnEncryptionKeyCacheTtl");
+            JCObject val = (JCObject)classType.Get("ColumnEncryptionKeyCacheTtl");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setColumnEncryptionKeyCacheTtl(TimeSpan ColumnEncryptionKeyCacheTtl) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setColumnEncryptionKeyCacheTtl(TimeSpan ColumnEncryptionKeyCacheTtl) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ColumnEncryptionKeyCacheTtl", ColumnEncryptionKeyCacheTtl == null ? null : ColumnEncryptionKeyCacheTtl.getJCOInstance());
+            classType.Set("ColumnEncryptionKeyCacheTtl", ColumnEncryptionKeyCacheTtl == null ? null : ColumnEncryptionKeyCacheTtl.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -224,11 +224,11 @@ public class SamlAuthorizationDecisionStatement extends SamlSubjectStatement  {
         }
     }
 
-    public java.lang.String getClaimType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getClaimType() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ClaimType");
+            return (java.lang.String)classType.Get("ClaimType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

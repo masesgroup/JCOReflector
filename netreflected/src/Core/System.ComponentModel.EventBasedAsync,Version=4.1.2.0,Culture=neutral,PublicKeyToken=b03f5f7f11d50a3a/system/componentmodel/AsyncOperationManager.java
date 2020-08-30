@@ -148,22 +148,22 @@ public class AsyncOperationManager extends NetObject  {
     
     // Properties section
     
-    public SynchronizationContext getSynchronizationContext() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SynchronizationContext getSynchronizationContext() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SynchronizationContext");
+            JCObject val = (JCObject)classType.Get("SynchronizationContext");
             return new SynchronizationContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSynchronizationContext(SynchronizationContext SynchronizationContext) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setSynchronizationContext(SynchronizationContext SynchronizationContext) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("SynchronizationContext", SynchronizationContext == null ? null : SynchronizationContext.getJCOInstance());
+            classType.Set("SynchronizationContext", SynchronizationContext == null ? null : SynchronizationContext.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

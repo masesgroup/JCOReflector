@@ -155,21 +155,21 @@ public class ServiceHostingEnvironment extends NetObject  {
     
     // Properties section
     
-    public boolean getAspNetCompatibilityEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getAspNetCompatibilityEnabled() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("AspNetCompatibilityEnabled");
+            return (boolean)classType.Get("AspNetCompatibilityEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getMultipleSiteBindingsEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getMultipleSiteBindingsEnabled() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("MultipleSiteBindingsEnabled");
+            return (boolean)classType.Get("MultipleSiteBindingsEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -453,11 +453,11 @@ public class CollectionView extends DispatcherObject  {
         }
     }
 
-    public NetObject getNewItemPlaceholder() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static NetObject getNewItemPlaceholder() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NewItemPlaceholder");
+            JCObject val = (JCObject)classType.Get("NewItemPlaceholder");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

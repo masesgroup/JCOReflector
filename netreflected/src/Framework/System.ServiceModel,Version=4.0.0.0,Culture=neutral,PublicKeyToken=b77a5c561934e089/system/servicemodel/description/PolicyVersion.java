@@ -138,33 +138,33 @@ public class PolicyVersion extends NetObject  {
     
     // Properties section
     
-    public PolicyVersion getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static PolicyVersion getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new PolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PolicyVersion getPolicy12() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static PolicyVersion getPolicy12() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Policy12");
+            JCObject val = (JCObject)classType.Get("Policy12");
             return new PolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PolicyVersion getPolicy15() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static PolicyVersion getPolicy15() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Policy15");
+            JCObject val = (JCObject)classType.Get("Policy15");
             return new PolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

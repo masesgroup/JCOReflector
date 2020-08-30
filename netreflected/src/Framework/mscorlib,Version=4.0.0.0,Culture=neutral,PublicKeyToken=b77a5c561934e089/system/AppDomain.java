@@ -1120,21 +1120,21 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public boolean getMonitoringIsEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getMonitoringIsEnabled() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("MonitoringIsEnabled");
+            return (boolean)classType.Get("MonitoringIsEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMonitoringIsEnabled(boolean MonitoringIsEnabled) throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setMonitoringIsEnabled(boolean MonitoringIsEnabled) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("MonitoringIsEnabled", MonitoringIsEnabled);
+            classType.Set("MonitoringIsEnabled", MonitoringIsEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1170,11 +1170,11 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public long getMonitoringSurvivedProcessMemorySize() throws Throwable, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static long getMonitoringSurvivedProcessMemorySize() throws Throwable, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classInstance.Get("MonitoringSurvivedProcessMemorySize");
+            return (long)classType.Get("MonitoringSurvivedProcessMemorySize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1201,11 +1201,11 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public AppDomain getCurrentDomain() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static AppDomain getCurrentDomain() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentDomain");
+            JCObject val = (JCObject)classType.Get("CurrentDomain");
             return new AppDomain(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

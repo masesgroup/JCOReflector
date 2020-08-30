@@ -523,11 +523,11 @@ public class VisualStyleRenderer extends NetObject  {
     
     // Properties section
     
-    public boolean getIsSupported() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsSupported() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsSupported");
+            return (boolean)classType.Get("IsSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

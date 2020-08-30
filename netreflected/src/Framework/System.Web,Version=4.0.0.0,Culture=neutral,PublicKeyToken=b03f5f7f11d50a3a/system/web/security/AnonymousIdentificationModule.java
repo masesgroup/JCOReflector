@@ -161,7 +161,7 @@ public class AnonymousIdentificationModule extends NetObject  {
         }
     }
 
-    public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.ApplicationException, system.OverflowException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+    public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ApplicationException, system.OverflowException, system.threading.ThreadAbortException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -175,11 +175,11 @@ public class AnonymousIdentificationModule extends NetObject  {
     
     // Properties section
     
-    public boolean getEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getEnabled() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("Enabled");
+            return (boolean)classType.Get("Enabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

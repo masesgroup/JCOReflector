@@ -136,22 +136,22 @@ public class SecurityPolicyVersion extends NetObject  {
     
     // Properties section
     
-    public SecurityPolicyVersion getWSSecurityPolicy11() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SecurityPolicyVersion getWSSecurityPolicy11() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSSecurityPolicy11");
+            JCObject val = (JCObject)classType.Get("WSSecurityPolicy11");
             return new SecurityPolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecurityPolicyVersion getWSSecurityPolicy12() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SecurityPolicyVersion getWSSecurityPolicy12() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSSecurityPolicy12");
+            JCObject val = (JCObject)classType.Get("WSSecurityPolicy12");
             return new SecurityPolicyVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

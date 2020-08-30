@@ -269,41 +269,41 @@ public class SecurityManager extends NetObject  {
     
     // Properties section
     
-    public boolean getCheckExecutionRights() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getCheckExecutionRights() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("CheckExecutionRights");
+            return (boolean)classType.Get("CheckExecutionRights");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCheckExecutionRights(boolean CheckExecutionRights) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCheckExecutionRights(boolean CheckExecutionRights) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CheckExecutionRights", CheckExecutionRights);
+            classType.Set("CheckExecutionRights", CheckExecutionRights);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getSecurityEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getSecurityEnabled() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("SecurityEnabled");
+            return (boolean)classType.Get("SecurityEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSecurityEnabled(boolean SecurityEnabled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setSecurityEnabled(boolean SecurityEnabled) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("SecurityEnabled", SecurityEnabled);
+            classType.Set("SecurityEnabled", SecurityEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

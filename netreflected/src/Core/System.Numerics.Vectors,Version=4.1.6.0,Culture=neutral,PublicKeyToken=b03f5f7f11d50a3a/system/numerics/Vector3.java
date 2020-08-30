@@ -500,55 +500,55 @@ public class Vector3 extends ValueType  {
     
     // Properties section
     
-    public Vector3 getOne() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Vector3 getOne() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("One");
+            JCObject val = (JCObject)classType.Get("One");
             return new Vector3(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Vector3 getUnitX() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Vector3 getUnitX() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UnitX");
+            JCObject val = (JCObject)classType.Get("UnitX");
             return new Vector3(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Vector3 getUnitY() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Vector3 getUnitY() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UnitY");
+            JCObject val = (JCObject)classType.Get("UnitY");
             return new Vector3(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Vector3 getUnitZ() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Vector3 getUnitZ() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UnitZ");
+            JCObject val = (JCObject)classType.Get("UnitZ");
             return new Vector3(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Vector3 getZero() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Vector3 getZero() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Zero");
+            JCObject val = (JCObject)classType.Get("Zero");
             return new Vector3(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

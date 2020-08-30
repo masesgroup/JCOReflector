@@ -137,11 +137,11 @@ public class CallSiteBinder extends NetObject  {
     
     // Properties section
     
-    public LabelTarget getUpdateLabel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static LabelTarget getUpdateLabel() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateLabel");
+            JCObject val = (JCObject)classType.Get("UpdateLabel");
             return new LabelTarget(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -775,11 +775,11 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
-    public long getMax() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static long getMax() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classInstance.Get("Max");
+            return (long)classType.Get("Max");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

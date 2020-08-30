@@ -261,11 +261,11 @@ public class PackageDigitalSignatureManager extends NetObject  {
         }
     }
 
-    public java.lang.String getDefaultHashAlgorithm() throws Throwable, system.ArgumentException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getDefaultHashAlgorithm() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("DefaultHashAlgorithm");
+            return (java.lang.String)classType.Get("DefaultHashAlgorithm");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,11 +291,11 @@ public class PackageDigitalSignatureManager extends NetObject  {
         }
     }
 
-    public java.lang.String getSignatureOriginRelationshipType() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSignatureOriginRelationshipType() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SignatureOriginRelationshipType");
+            return (java.lang.String)classType.Get("SignatureOriginRelationshipType");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

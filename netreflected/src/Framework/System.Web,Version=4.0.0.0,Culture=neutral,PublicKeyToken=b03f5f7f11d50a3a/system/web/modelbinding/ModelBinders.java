@@ -136,11 +136,11 @@ public class ModelBinders extends NetObject  {
     
     // Properties section
     
-    public ModelBinderDictionary getBinders() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ModelBinderDictionary getBinders() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Binders");
+            JCObject val = (JCObject)classType.Get("Binders");
             return new ModelBinderDictionary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

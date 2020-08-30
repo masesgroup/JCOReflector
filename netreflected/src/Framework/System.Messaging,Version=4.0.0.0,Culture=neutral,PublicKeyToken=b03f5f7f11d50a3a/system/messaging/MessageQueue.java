@@ -1168,21 +1168,21 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public boolean getEnableConnectionCache() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getEnableConnectionCache() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("EnableConnectionCache");
+            return (boolean)classType.Get("EnableConnectionCache");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEnableConnectionCache(boolean EnableConnectionCache) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setEnableConnectionCache(boolean EnableConnectionCache) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("EnableConnectionCache", EnableConnectionCache);
+            classType.Set("EnableConnectionCache", EnableConnectionCache);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

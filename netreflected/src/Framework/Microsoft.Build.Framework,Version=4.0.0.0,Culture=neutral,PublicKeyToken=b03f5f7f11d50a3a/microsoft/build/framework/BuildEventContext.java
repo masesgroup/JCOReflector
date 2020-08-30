@@ -238,11 +238,11 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
-    public BuildEventContext getInvalid() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static BuildEventContext getInvalid() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Invalid");
+            JCObject val = (JCObject)classType.Get("Invalid");
             return new BuildEventContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

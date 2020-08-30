@@ -593,11 +593,11 @@ public class Task extends NetObject  {
         }
     }
 
-    public Task getCompletedTask() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Task getCompletedTask() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CompletedTask");
+            JCObject val = (JCObject)classType.Get("CompletedTask");
             return new Task(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -615,11 +615,11 @@ public class Task extends NetObject  {
         }
     }
 
-    public TaskFactory getFactory() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TaskFactory getFactory() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Factory");
+            JCObject val = (JCObject)classType.Get("Factory");
             return new TaskFactory(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

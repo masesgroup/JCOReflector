@@ -167,11 +167,11 @@ public class XmlDictionary extends NetObject  {
     
     // Properties section
     
-    public IXmlDictionary getEmpty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IXmlDictionary getEmpty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Empty");
+            JCObject val = (JCObject)classType.Get("Empty");
             return new IXmlDictionaryImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

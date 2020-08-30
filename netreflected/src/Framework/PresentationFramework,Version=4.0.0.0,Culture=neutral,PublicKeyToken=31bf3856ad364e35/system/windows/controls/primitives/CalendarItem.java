@@ -155,11 +155,11 @@ public class CalendarItem extends Control  {
     
     // Properties section
     
-    public ComponentResourceKey getDayTitleTemplateResourceKey() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ComponentResourceKey getDayTitleTemplateResourceKey() throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DayTitleTemplateResourceKey");
+            JCObject val = (JCObject)classType.Get("DayTitleTemplateResourceKey");
             return new ComponentResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

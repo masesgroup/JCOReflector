@@ -422,66 +422,66 @@ public class Slider extends RangeBase  {
         }
     }
 
-    public RoutedCommand getDecreaseLarge() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getDecreaseLarge() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DecreaseLarge");
+            JCObject val = (JCObject)classType.Get("DecreaseLarge");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getDecreaseSmall() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getDecreaseSmall() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DecreaseSmall");
+            JCObject val = (JCObject)classType.Get("DecreaseSmall");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getIncreaseLarge() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getIncreaseLarge() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IncreaseLarge");
+            JCObject val = (JCObject)classType.Get("IncreaseLarge");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getIncreaseSmall() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getIncreaseSmall() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("IncreaseSmall");
+            JCObject val = (JCObject)classType.Get("IncreaseSmall");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getMaximizeValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getMaximizeValue() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximizeValue");
+            JCObject val = (JCObject)classType.Get("MaximizeValue");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getMinimizeValue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getMinimizeValue() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MinimizeValue");
+            JCObject val = (JCObject)classType.Get("MinimizeValue");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

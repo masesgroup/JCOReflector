@@ -137,22 +137,22 @@ public class StringLocalizerProviders extends NetObject  {
     
     // Properties section
     
-    public IStringLocalizerProvider getDataAnnotationStringLocalizerProvider() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IStringLocalizerProvider getDataAnnotationStringLocalizerProvider() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DataAnnotationStringLocalizerProvider");
+            JCObject val = (JCObject)classType.Get("DataAnnotationStringLocalizerProvider");
             return new IStringLocalizerProviderImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDataAnnotationStringLocalizerProvider(IStringLocalizerProvider DataAnnotationStringLocalizerProvider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDataAnnotationStringLocalizerProvider(IStringLocalizerProvider DataAnnotationStringLocalizerProvider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DataAnnotationStringLocalizerProvider", DataAnnotationStringLocalizerProvider == null ? null : DataAnnotationStringLocalizerProvider.getJCOInstance());
+            classType.Set("DataAnnotationStringLocalizerProvider", DataAnnotationStringLocalizerProvider == null ? null : DataAnnotationStringLocalizerProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

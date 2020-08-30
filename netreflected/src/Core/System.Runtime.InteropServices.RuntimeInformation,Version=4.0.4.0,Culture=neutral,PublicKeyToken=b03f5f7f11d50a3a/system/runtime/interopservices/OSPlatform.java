@@ -160,44 +160,44 @@ public class OSPlatform extends ValueType  {
     
     // Properties section
     
-    public OSPlatform getFreeBSD() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static OSPlatform getFreeBSD() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FreeBSD");
+            JCObject val = (JCObject)classType.Get("FreeBSD");
             return new OSPlatform(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public OSPlatform getLinux() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static OSPlatform getLinux() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Linux");
+            JCObject val = (JCObject)classType.Get("Linux");
             return new OSPlatform(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public OSPlatform getOSX() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static OSPlatform getOSX() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OSX");
+            JCObject val = (JCObject)classType.Get("OSX");
             return new OSPlatform(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public OSPlatform getWindows() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static OSPlatform getWindows() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Windows");
+            JCObject val = (JCObject)classType.Get("Windows");
             return new OSPlatform(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

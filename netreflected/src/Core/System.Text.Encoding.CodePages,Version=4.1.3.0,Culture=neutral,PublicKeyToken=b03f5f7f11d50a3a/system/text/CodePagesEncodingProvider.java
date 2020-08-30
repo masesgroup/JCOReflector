@@ -161,11 +161,11 @@ public class CodePagesEncodingProvider extends EncodingProvider  {
     
     // Properties section
     
-    public EncodingProvider getInstance() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static EncodingProvider getInstance() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Instance");
+            JCObject val = (JCObject)classType.Get("Instance");
             return new EncodingProvider(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

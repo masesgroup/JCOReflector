@@ -646,22 +646,22 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public IPrincipal getCurrentPrincipal() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IPrincipal getCurrentPrincipal() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentPrincipal");
+            JCObject val = (JCObject)classType.Get("CurrentPrincipal");
             return new IPrincipalImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCurrentPrincipal(IPrincipal CurrentPrincipal) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCurrentPrincipal(IPrincipal CurrentPrincipal) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CurrentPrincipal", CurrentPrincipal == null ? null : CurrentPrincipal.getJCOInstance());
+            classType.Set("CurrentPrincipal", CurrentPrincipal == null ? null : CurrentPrincipal.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -719,11 +719,11 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public Thread getCurrentThread() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Thread getCurrentThread() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentThread");
+            JCObject val = (JCObject)classType.Get("CurrentThread");
             return new Thread(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

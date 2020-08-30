@@ -720,11 +720,11 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public char getDefaultPasswordChar() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static char getDefaultPasswordChar() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (char)classInstance.Get("DefaultPasswordChar");
+            return (char)classType.Get("DefaultPasswordChar");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -810,11 +810,11 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public int getInvalidIndex() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getInvalidIndex() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("InvalidIndex");
+            return (int)classType.Get("InvalidIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

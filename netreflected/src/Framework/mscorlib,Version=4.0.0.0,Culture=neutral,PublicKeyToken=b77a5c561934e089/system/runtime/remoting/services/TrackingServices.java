@@ -165,12 +165,12 @@ public class TrackingServices extends NetObject  {
     
     // Properties section
     
-    public final ITrackingHandler[] getRegisteredHandlers() throws Throwable, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public final static ITrackingHandler[] getRegisteredHandlers() throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<ITrackingHandler> resultingArrayList = new ArrayList<ITrackingHandler>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("RegisteredHandlers");
+            JCObject resultingObjects = (JCObject)classType.Get("RegisteredHandlers");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITrackingHandlerImplementation(resultingObject));
             }

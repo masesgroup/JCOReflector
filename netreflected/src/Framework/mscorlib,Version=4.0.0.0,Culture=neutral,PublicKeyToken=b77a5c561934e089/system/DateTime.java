@@ -910,33 +910,33 @@ public class DateTime extends ValueType  {
         }
     }
 
-    public DateTime getNow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DateTime getNow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Now");
+            JCObject val = (JCObject)classType.Get("Now");
             return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DateTime getToday() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DateTime getToday() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Today");
+            JCObject val = (JCObject)classType.Get("Today");
             return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DateTime getUtcNow() throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DateTime getUtcNow() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UtcNow");
+            JCObject val = (JCObject)classType.Get("UtcNow");
             return new DateTime(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

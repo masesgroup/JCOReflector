@@ -329,11 +329,11 @@ public class SqlBytes extends NetObject  {
         }
     }
 
-    public SqlBytes getNull() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SqlBytes getNull() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Null");
+            JCObject val = (JCObject)classType.Get("Null");
             return new SqlBytes(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

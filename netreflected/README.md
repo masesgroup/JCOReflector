@@ -94,7 +94,7 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> Total Types: Analyzed = 43258 - Implemented = 12308 - Discarded = 30949 - Non Public = 30492 - Generic = 354 - Internals = 50
+> Total Types: Analyzed = 43267 - Implemented = 12308 - Discarded = 30958 - Non Public = 30501 - Generic = 354 - Internals = 50
 > * Total Enumerators: Analyzed = 26 - Implemented = 25
 > * Total Delegates: Analyzed = 554 - Implemented = 554
 > * Total Enums: Implemented = 1660 - Flags = 314

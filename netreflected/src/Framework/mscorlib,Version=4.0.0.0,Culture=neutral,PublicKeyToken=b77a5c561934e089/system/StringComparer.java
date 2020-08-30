@@ -208,66 +208,66 @@ public class StringComparer extends NetObject  {
     
     // Properties section
     
-    public StringComparer getCurrentCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringComparer getCurrentCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentCulture");
+            JCObject val = (JCObject)classType.Get("CurrentCulture");
             return new StringComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public StringComparer getCurrentCultureIgnoreCase() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringComparer getCurrentCultureIgnoreCase() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentCultureIgnoreCase");
+            JCObject val = (JCObject)classType.Get("CurrentCultureIgnoreCase");
             return new StringComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public StringComparer getInvariantCulture() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringComparer getInvariantCulture() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InvariantCulture");
+            JCObject val = (JCObject)classType.Get("InvariantCulture");
             return new StringComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public StringComparer getInvariantCultureIgnoreCase() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringComparer getInvariantCultureIgnoreCase() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InvariantCultureIgnoreCase");
+            JCObject val = (JCObject)classType.Get("InvariantCultureIgnoreCase");
             return new StringComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public StringComparer getOrdinal() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringComparer getOrdinal() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Ordinal");
+            JCObject val = (JCObject)classType.Get("Ordinal");
             return new StringComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public StringComparer getOrdinalIgnoreCase() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringComparer getOrdinalIgnoreCase() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OrdinalIgnoreCase");
+            JCObject val = (JCObject)classType.Get("OrdinalIgnoreCase");
             return new StringComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

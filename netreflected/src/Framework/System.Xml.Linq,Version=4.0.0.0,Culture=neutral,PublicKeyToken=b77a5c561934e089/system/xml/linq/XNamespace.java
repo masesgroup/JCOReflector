@@ -171,33 +171,33 @@ public class XNamespace extends NetObject  {
         }
     }
 
-    public XNamespace getNone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XNamespace getNone() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("None");
+            JCObject val = (JCObject)classType.Get("None");
             return new XNamespace(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XNamespace getXml() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XNamespace getXml() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Xml");
+            JCObject val = (JCObject)classType.Get("Xml");
             return new XNamespace(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XNamespace getXmlns() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XNamespace getXmlns() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Xmlns");
+            JCObject val = (JCObject)classType.Get("Xmlns");
             return new XNamespace(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

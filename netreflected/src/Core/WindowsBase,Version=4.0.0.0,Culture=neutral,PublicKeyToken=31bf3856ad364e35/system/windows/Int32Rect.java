@@ -292,11 +292,11 @@ public class Int32Rect extends ValueType  {
         }
     }
 
-    public Int32Rect getEmpty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Int32Rect getEmpty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Empty");
+            JCObject val = (JCObject)classType.Get("Empty");
             return new Int32Rect(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

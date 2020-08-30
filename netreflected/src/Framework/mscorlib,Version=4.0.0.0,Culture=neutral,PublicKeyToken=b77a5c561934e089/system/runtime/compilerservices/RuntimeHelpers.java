@@ -261,11 +261,11 @@ public class RuntimeHelpers extends NetObject  {
     
     // Properties section
     
-    public int getOffsetToStringData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getOffsetToStringData() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("OffsetToStringData");
+            return (int)classType.Get("OffsetToStringData");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

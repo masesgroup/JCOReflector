@@ -149,110 +149,110 @@ public class ImageFormat extends NetObject  {
     
     // Properties section
     
-    public ImageFormat getBmp() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getBmp() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Bmp");
+            JCObject val = (JCObject)classType.Get("Bmp");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getEmf() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getEmf() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Emf");
+            JCObject val = (JCObject)classType.Get("Emf");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getExif() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getExif() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Exif");
+            JCObject val = (JCObject)classType.Get("Exif");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getGif() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getGif() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Gif");
+            JCObject val = (JCObject)classType.Get("Gif");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getIcon() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getIcon() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Icon");
+            JCObject val = (JCObject)classType.Get("Icon");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getJpeg() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getJpeg() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Jpeg");
+            JCObject val = (JCObject)classType.Get("Jpeg");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getMemoryBmp() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getMemoryBmp() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MemoryBmp");
+            JCObject val = (JCObject)classType.Get("MemoryBmp");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getPng() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getPng() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Png");
+            JCObject val = (JCObject)classType.Get("Png");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getTiff() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getTiff() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Tiff");
+            JCObject val = (JCObject)classType.Get("Tiff");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ImageFormat getWmf() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ImageFormat getWmf() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Wmf");
+            JCObject val = (JCObject)classType.Get("Wmf");
             return new ImageFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

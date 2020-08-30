@@ -138,11 +138,11 @@ public class ImeModeConversion extends ValueType  {
     
     // Properties section
     
-    public boolean getIsCurrentConversionTableSupported() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsCurrentConversionTableSupported() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsCurrentConversionTableSupported");
+            return (boolean)classType.Get("IsCurrentConversionTableSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

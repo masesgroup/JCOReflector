@@ -1379,22 +1379,22 @@ public class HttpCapabilitiesBase extends NetObject  {
         }
     }
 
-    public HttpCapabilitiesProvider getBrowserCapabilitiesProvider() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpCapabilitiesProvider getBrowserCapabilitiesProvider() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BrowserCapabilitiesProvider");
+            JCObject val = (JCObject)classType.Get("BrowserCapabilitiesProvider");
             return new HttpCapabilitiesProvider(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBrowserCapabilitiesProvider(HttpCapabilitiesProvider BrowserCapabilitiesProvider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setBrowserCapabilitiesProvider(HttpCapabilitiesProvider BrowserCapabilitiesProvider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("BrowserCapabilitiesProvider", BrowserCapabilitiesProvider == null ? null : BrowserCapabilitiesProvider.getJCOInstance());
+            classType.Set("BrowserCapabilitiesProvider", BrowserCapabilitiesProvider == null ? null : BrowserCapabilitiesProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

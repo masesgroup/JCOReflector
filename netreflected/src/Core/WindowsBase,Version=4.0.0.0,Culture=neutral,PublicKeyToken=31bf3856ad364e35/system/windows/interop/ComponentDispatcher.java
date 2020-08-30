@@ -166,21 +166,21 @@ public class ComponentDispatcher extends NetObject  {
     
     // Properties section
     
-    public boolean getIsThreadModal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsThreadModal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsThreadModal");
+            return (boolean)classType.Get("IsThreadModal");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MSG getCurrentKeyboardMessage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MSG getCurrentKeyboardMessage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentKeyboardMessage");
+            JCObject val = (JCObject)classType.Get("CurrentKeyboardMessage");
             return new MSG(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

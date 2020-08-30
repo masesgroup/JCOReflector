@@ -162,11 +162,11 @@ public class OSFeature extends FeatureSupport  {
     
     // Properties section
     
-    public OSFeature getFeature() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static OSFeature getFeature() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Feature");
+            JCObject val = (JCObject)classType.Get("Feature");
             return new OSFeature(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

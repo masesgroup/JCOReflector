@@ -276,11 +276,11 @@ public class WebBaseEvent extends NetObject  {
         }
     }
 
-    public WebApplicationInformation getApplicationInformation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static WebApplicationInformation getApplicationInformation() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationInformation");
+            JCObject val = (JCObject)classType.Get("ApplicationInformation");
             return new WebApplicationInformation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

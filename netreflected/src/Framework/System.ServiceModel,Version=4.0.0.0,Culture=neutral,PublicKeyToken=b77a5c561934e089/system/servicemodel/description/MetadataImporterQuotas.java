@@ -144,22 +144,22 @@ public class MetadataImporterQuotas extends NetObject  {
     
     // Properties section
     
-    public MetadataImporterQuotas getDefaults() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MetadataImporterQuotas getDefaults() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Defaults");
+            JCObject val = (JCObject)classType.Get("Defaults");
             return new MetadataImporterQuotas(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MetadataImporterQuotas getMax() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MetadataImporterQuotas getMax() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Max");
+            JCObject val = (JCObject)classType.Get("Max");
             return new MetadataImporterQuotas(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

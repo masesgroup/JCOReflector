@@ -158,11 +158,11 @@ public class UserNamePasswordValidator extends NetObject  {
     
     // Properties section
     
-    public UserNamePasswordValidator getNone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static UserNamePasswordValidator getNone() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("None");
+            JCObject val = (JCObject)classType.Get("None");
             return new UserNamePasswordValidator(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

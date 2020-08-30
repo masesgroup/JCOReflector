@@ -341,22 +341,22 @@ public class XNode extends XObject  {
         }
     }
 
-    public XNodeDocumentOrderComparer getDocumentOrderComparer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XNodeDocumentOrderComparer getDocumentOrderComparer() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentOrderComparer");
+            JCObject val = (JCObject)classType.Get("DocumentOrderComparer");
             return new XNodeDocumentOrderComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XNodeEqualityComparer getEqualityComparer() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XNodeEqualityComparer getEqualityComparer() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("EqualityComparer");
+            JCObject val = (JCObject)classType.Get("EqualityComparer");
             return new XNodeEqualityComparer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

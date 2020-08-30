@@ -137,41 +137,41 @@ public class Globals extends NetObject  {
     
     // Properties section
     
-    public int getScriptEngineBuildVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getScriptEngineBuildVersion() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("ScriptEngineBuildVersion");
+            return (int)classType.Get("ScriptEngineBuildVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getScriptEngineMajorVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getScriptEngineMajorVersion() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("ScriptEngineMajorVersion");
+            return (int)classType.Get("ScriptEngineMajorVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getScriptEngineMinorVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getScriptEngineMinorVersion() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("ScriptEngineMinorVersion");
+            return (int)classType.Get("ScriptEngineMinorVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getScriptEngine() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getScriptEngine() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ScriptEngine");
+            return (java.lang.String)classType.Get("ScriptEngine");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

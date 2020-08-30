@@ -221,7 +221,7 @@ public class ProcessHost extends MarshalByRefObject  {
         }
     }
 
-    public void StartProcessProtocolListenerChannel(java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.FormatException {
+    public void StartProcessProtocolListenerChannel(java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

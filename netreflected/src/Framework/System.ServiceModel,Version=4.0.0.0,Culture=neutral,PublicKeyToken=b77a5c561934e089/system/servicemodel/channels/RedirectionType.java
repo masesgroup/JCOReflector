@@ -149,33 +149,33 @@ public class RedirectionType extends NetObject  {
     
     // Properties section
     
-    public RedirectionType getCache() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RedirectionType getCache() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Cache");
+            JCObject val = (JCObject)classType.Get("Cache");
             return new RedirectionType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RedirectionType getResource() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RedirectionType getResource() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Resource");
+            JCObject val = (JCObject)classType.Get("Resource");
             return new RedirectionType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RedirectionType getUseIntermediary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RedirectionType getUseIntermediary() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UseIntermediary");
+            JCObject val = (JCObject)classType.Get("UseIntermediary");
             return new RedirectionType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

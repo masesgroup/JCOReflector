@@ -171,11 +171,11 @@ public class AutomationInteropProvider extends NetObject  {
     
     // Properties section
     
-    public boolean getClientsAreListening() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getClientsAreListening() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("ClientsAreListening");
+            return (boolean)classType.Get("ClientsAreListening");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

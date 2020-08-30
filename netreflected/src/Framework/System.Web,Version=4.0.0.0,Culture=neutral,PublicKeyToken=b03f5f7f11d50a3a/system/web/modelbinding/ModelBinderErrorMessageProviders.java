@@ -136,41 +136,41 @@ public class ModelBinderErrorMessageProviders extends NetObject  {
     
     // Properties section
     
-    public ModelBinderErrorMessageProvider getTypeConversionErrorMessageProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ModelBinderErrorMessageProvider getTypeConversionErrorMessageProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (ModelBinderErrorMessageProvider)classInstance.Get("TypeConversionErrorMessageProvider");
+            return (ModelBinderErrorMessageProvider)classType.Get("TypeConversionErrorMessageProvider");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTypeConversionErrorMessageProvider(ModelBinderErrorMessageProvider TypeConversionErrorMessageProvider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setTypeConversionErrorMessageProvider(ModelBinderErrorMessageProvider TypeConversionErrorMessageProvider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("TypeConversionErrorMessageProvider", TypeConversionErrorMessageProvider);
+            classType.Set("TypeConversionErrorMessageProvider", TypeConversionErrorMessageProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ModelBinderErrorMessageProvider getValueRequiredErrorMessageProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ModelBinderErrorMessageProvider getValueRequiredErrorMessageProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (ModelBinderErrorMessageProvider)classInstance.Get("ValueRequiredErrorMessageProvider");
+            return (ModelBinderErrorMessageProvider)classType.Get("ValueRequiredErrorMessageProvider");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setValueRequiredErrorMessageProvider(ModelBinderErrorMessageProvider ValueRequiredErrorMessageProvider) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setValueRequiredErrorMessageProvider(ModelBinderErrorMessageProvider ValueRequiredErrorMessageProvider) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ValueRequiredErrorMessageProvider", ValueRequiredErrorMessageProvider);
+            classType.Set("ValueRequiredErrorMessageProvider", ValueRequiredErrorMessageProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -149,22 +149,22 @@ public class RedirectionDuration extends NetObject  {
     
     // Properties section
     
-    public RedirectionDuration getPermanent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RedirectionDuration getPermanent() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Permanent");
+            JCObject val = (JCObject)classType.Get("Permanent");
             return new RedirectionDuration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RedirectionDuration getTemporary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RedirectionDuration getTemporary() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Temporary");
+            JCObject val = (JCObject)classType.Get("Temporary");
             return new RedirectionDuration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

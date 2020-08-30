@@ -286,11 +286,11 @@ public class Context extends NetObject  {
         }
     }
 
-    public Context getDefaultContext() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Context getDefaultContext() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultContext");
+            JCObject val = (JCObject)classType.Get("DefaultContext");
             return new Context(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

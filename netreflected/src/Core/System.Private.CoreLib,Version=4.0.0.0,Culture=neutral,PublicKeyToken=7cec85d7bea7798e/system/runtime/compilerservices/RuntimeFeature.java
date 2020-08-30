@@ -145,21 +145,21 @@ public class RuntimeFeature extends NetObject  {
     
     // Properties section
     
-    public boolean getIsDynamicCodeCompiled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsDynamicCodeCompiled() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsDynamicCodeCompiled");
+            return (boolean)classType.Get("IsDynamicCodeCompiled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getIsDynamicCodeSupported() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsDynamicCodeSupported() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsDynamicCodeSupported");
+            return (boolean)classType.Get("IsDynamicCodeSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

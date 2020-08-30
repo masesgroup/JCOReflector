@@ -201,22 +201,22 @@ public class PropertyGroupDescription extends GroupDescription  {
     
     // Properties section
     
-    public IComparer getCompareNameAscending() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IComparer getCompareNameAscending() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CompareNameAscending");
+            JCObject val = (JCObject)classType.Get("CompareNameAscending");
             return new IComparerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IComparer getCompareNameDescending() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IComparer getCompareNameDescending() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CompareNameDescending");
+            JCObject val = (JCObject)classType.Get("CompareNameDescending");
             return new IComparerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -194,22 +194,22 @@ public class XsltSettings extends NetObject  {
         }
     }
 
-    public XsltSettings getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XsltSettings getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new XsltSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XsltSettings getTrustedXslt() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XsltSettings getTrustedXslt() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustedXslt");
+            JCObject val = (JCObject)classType.Get("TrustedXslt");
             return new XsltSettings(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

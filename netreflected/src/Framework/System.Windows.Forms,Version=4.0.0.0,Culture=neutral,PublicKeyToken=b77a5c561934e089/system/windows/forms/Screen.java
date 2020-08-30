@@ -292,23 +292,23 @@ public class Screen extends NetObject  {
         }
     }
 
-    public Screen getPrimaryScreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Screen getPrimaryScreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("PrimaryScreen");
+            JCObject val = (JCObject)classType.Get("PrimaryScreen");
             return new Screen(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public final Screen[] getAllScreens() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public final static Screen[] getAllScreens() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Screen> resultingArrayList = new ArrayList<Screen>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AllScreens");
+            JCObject resultingObjects = (JCObject)classType.Get("AllScreens");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Screen(resultingObject));
             }

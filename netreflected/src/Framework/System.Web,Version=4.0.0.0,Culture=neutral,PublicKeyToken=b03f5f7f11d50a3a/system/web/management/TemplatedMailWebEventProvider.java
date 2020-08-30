@@ -150,11 +150,11 @@ public class TemplatedMailWebEventProvider extends MailWebEventProvider  {
     
     // Properties section
     
-    public MailEventNotificationInfo getCurrentNotification() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MailEventNotificationInfo getCurrentNotification() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentNotification");
+            JCObject val = (JCObject)classType.Get("CurrentNotification");
             return new MailEventNotificationInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

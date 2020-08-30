@@ -260,33 +260,33 @@ public class DataGridLength extends ValueType  {
         }
     }
 
-    public DataGridLength getAuto() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DataGridLength getAuto() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Auto");
+            JCObject val = (JCObject)classType.Get("Auto");
             return new DataGridLength(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DataGridLength getSizeToCells() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DataGridLength getSizeToCells() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeToCells");
+            JCObject val = (JCObject)classType.Get("SizeToCells");
             return new DataGridLength(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DataGridLength getSizeToHeader() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DataGridLength getSizeToHeader() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeToHeader");
+            JCObject val = (JCObject)classType.Get("SizeToHeader");
             return new DataGridLength(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

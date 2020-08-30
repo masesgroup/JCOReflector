@@ -167,22 +167,22 @@ public class TaskScheduler extends NetObject  {
         }
     }
 
-    public TaskScheduler getCurrent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TaskScheduler getCurrent() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
+            JCObject val = (JCObject)classType.Get("Current");
             return new TaskScheduler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TaskScheduler getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TaskScheduler getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new TaskScheduler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

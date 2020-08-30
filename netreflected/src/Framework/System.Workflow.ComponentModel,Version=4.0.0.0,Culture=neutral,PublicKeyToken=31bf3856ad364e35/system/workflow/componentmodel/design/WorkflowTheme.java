@@ -248,21 +248,21 @@ public class WorkflowTheme extends NetObject  {
     
     // Properties section
     
-    public boolean getEnableChangeNotification() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getEnableChangeNotification() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("EnableChangeNotification");
+            return (boolean)classType.Get("EnableChangeNotification");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEnableChangeNotification(boolean EnableChangeNotification) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setEnableChangeNotification(boolean EnableChangeNotification) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("EnableChangeNotification", EnableChangeNotification);
+            classType.Set("EnableChangeNotification", EnableChangeNotification);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,11 +349,11 @@ public class WorkflowTheme extends NetObject  {
         }
     }
 
-    public java.lang.String getLookupPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getLookupPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("LookupPath");
+            return (java.lang.String)classType.Get("LookupPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,11 +379,11 @@ public class WorkflowTheme extends NetObject  {
         }
     }
 
-    public java.lang.String getRegistryKeyPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getRegistryKeyPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.AccessViolationException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("RegistryKeyPath");
+            return (java.lang.String)classType.Get("RegistryKeyPath");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,22 +431,22 @@ public class WorkflowTheme extends NetObject  {
         }
     }
 
-    public WorkflowTheme getCurrentTheme() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MemberAccessException, system.runtime.interopservices.ExternalException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static WorkflowTheme getCurrentTheme() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MemberAccessException, system.runtime.interopservices.ExternalException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentTheme");
+            JCObject val = (JCObject)classType.Get("CurrentTheme");
             return new WorkflowTheme(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCurrentTheme(WorkflowTheme CurrentTheme) throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCurrentTheme(WorkflowTheme CurrentTheme) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CurrentTheme", CurrentTheme == null ? null : CurrentTheme.getJCOInstance());
+            classType.Set("CurrentTheme", CurrentTheme == null ? null : CurrentTheme.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -136,33 +136,33 @@ public class FontStyles extends NetObject  {
     
     // Properties section
     
-    public FontStyle getItalic() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static FontStyle getItalic() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Italic");
+            JCObject val = (JCObject)classType.Get("Italic");
             return new FontStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FontStyle getNormal() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static FontStyle getNormal() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Normal");
+            JCObject val = (JCObject)classType.Get("Normal");
             return new FontStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FontStyle getOblique() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static FontStyle getOblique() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Oblique");
+            JCObject val = (JCObject)classType.Get("Oblique");
             return new FontStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

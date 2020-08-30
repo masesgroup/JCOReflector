@@ -188,106 +188,106 @@ public class SystemCommands extends NetObject  {
     
     // Properties section
     
-    public RoutedCommand getCloseWindowCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getCloseWindowCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CloseWindowCommand");
+            JCObject val = (JCObject)classType.Get("CloseWindowCommand");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCloseWindowCommand(RoutedCommand CloseWindowCommand) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCloseWindowCommand(RoutedCommand CloseWindowCommand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CloseWindowCommand", CloseWindowCommand == null ? null : CloseWindowCommand.getJCOInstance());
+            classType.Set("CloseWindowCommand", CloseWindowCommand == null ? null : CloseWindowCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getMaximizeWindowCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getMaximizeWindowCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximizeWindowCommand");
+            JCObject val = (JCObject)classType.Get("MaximizeWindowCommand");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMaximizeWindowCommand(RoutedCommand MaximizeWindowCommand) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setMaximizeWindowCommand(RoutedCommand MaximizeWindowCommand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("MaximizeWindowCommand", MaximizeWindowCommand == null ? null : MaximizeWindowCommand.getJCOInstance());
+            classType.Set("MaximizeWindowCommand", MaximizeWindowCommand == null ? null : MaximizeWindowCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getMinimizeWindowCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getMinimizeWindowCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MinimizeWindowCommand");
+            JCObject val = (JCObject)classType.Get("MinimizeWindowCommand");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setMinimizeWindowCommand(RoutedCommand MinimizeWindowCommand) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setMinimizeWindowCommand(RoutedCommand MinimizeWindowCommand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("MinimizeWindowCommand", MinimizeWindowCommand == null ? null : MinimizeWindowCommand.getJCOInstance());
+            classType.Set("MinimizeWindowCommand", MinimizeWindowCommand == null ? null : MinimizeWindowCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getRestoreWindowCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getRestoreWindowCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RestoreWindowCommand");
+            JCObject val = (JCObject)classType.Get("RestoreWindowCommand");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRestoreWindowCommand(RoutedCommand RestoreWindowCommand) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setRestoreWindowCommand(RoutedCommand RestoreWindowCommand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("RestoreWindowCommand", RestoreWindowCommand == null ? null : RestoreWindowCommand.getJCOInstance());
+            classType.Set("RestoreWindowCommand", RestoreWindowCommand == null ? null : RestoreWindowCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedCommand getShowSystemMenuCommand() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedCommand getShowSystemMenuCommand() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ShowSystemMenuCommand");
+            JCObject val = (JCObject)classType.Get("ShowSystemMenuCommand");
             return new RoutedCommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setShowSystemMenuCommand(RoutedCommand ShowSystemMenuCommand) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setShowSystemMenuCommand(RoutedCommand ShowSystemMenuCommand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ShowSystemMenuCommand", ShowSystemMenuCommand == null ? null : ShowSystemMenuCommand.getJCOInstance());
+            classType.Set("ShowSystemMenuCommand", ShowSystemMenuCommand == null ? null : ShowSystemMenuCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

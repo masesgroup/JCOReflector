@@ -139,11 +139,11 @@ public class SafeAccessTokenHandle extends SafeHandle  {
     
     // Properties section
     
-    public SafeAccessTokenHandle getInvalidHandle() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SafeAccessTokenHandle getInvalidHandle() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InvalidHandle");
+            JCObject val = (JCObject)classType.Get("InvalidHandle");
             return new SafeAccessTokenHandle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

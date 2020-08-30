@@ -149,33 +149,33 @@ public class RedirectionScope extends NetObject  {
     
     // Properties section
     
-    public RedirectionScope getEndpoint() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RedirectionScope getEndpoint() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Endpoint");
+            JCObject val = (JCObject)classType.Get("Endpoint");
             return new RedirectionScope(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RedirectionScope getMessage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RedirectionScope getMessage() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Message");
+            JCObject val = (JCObject)classType.Get("Message");
             return new RedirectionScope(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RedirectionScope getSession() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RedirectionScope getSession() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Session");
+            JCObject val = (JCObject)classType.Get("Session");
             return new RedirectionScope(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

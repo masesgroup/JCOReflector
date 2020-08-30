@@ -244,21 +244,21 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public int getIPv6LoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getIPv6LoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("IPv6LoopbackInterfaceIndex");
+            return (int)classType.Get("IPv6LoopbackInterfaceIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getLoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getLoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("LoopbackInterfaceIndex");
+            return (int)classType.Get("LoopbackInterfaceIndex");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

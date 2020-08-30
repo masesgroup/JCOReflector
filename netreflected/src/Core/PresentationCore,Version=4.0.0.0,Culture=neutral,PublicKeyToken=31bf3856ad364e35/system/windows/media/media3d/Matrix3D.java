@@ -770,11 +770,11 @@ public class Matrix3D extends ValueType  {
         }
     }
 
-    public Matrix3D getIdentity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Matrix3D getIdentity() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Identity");
+            JCObject val = (JCObject)classType.Get("Identity");
             return new Matrix3D(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

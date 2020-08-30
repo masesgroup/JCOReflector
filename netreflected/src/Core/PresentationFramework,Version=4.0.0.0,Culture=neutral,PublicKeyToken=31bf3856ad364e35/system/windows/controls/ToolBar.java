@@ -260,88 +260,88 @@ public class ToolBar extends HeaderedItemsControl  {
         }
     }
 
-    public ResourceKey getButtonStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getButtonStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ButtonStyleKey");
+            JCObject val = (JCObject)classType.Get("ButtonStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ResourceKey getCheckBoxStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getCheckBoxStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckBoxStyleKey");
+            JCObject val = (JCObject)classType.Get("CheckBoxStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ResourceKey getComboBoxStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getComboBoxStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ComboBoxStyleKey");
+            JCObject val = (JCObject)classType.Get("ComboBoxStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ResourceKey getMenuStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getMenuStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuStyleKey");
+            JCObject val = (JCObject)classType.Get("MenuStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ResourceKey getRadioButtonStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getRadioButtonStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RadioButtonStyleKey");
+            JCObject val = (JCObject)classType.Get("RadioButtonStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ResourceKey getSeparatorStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getSeparatorStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorStyleKey");
+            JCObject val = (JCObject)classType.Get("SeparatorStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ResourceKey getTextBoxStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getTextBoxStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TextBoxStyleKey");
+            JCObject val = (JCObject)classType.Get("TextBoxStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ResourceKey getToggleButtonStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getToggleButtonStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ToggleButtonStyleKey");
+            JCObject val = (JCObject)classType.Get("ToggleButtonStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

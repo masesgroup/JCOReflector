@@ -214,11 +214,11 @@ public class SessionIDManager extends NetObject  {
     
     // Properties section
     
-    public int getSessionIDMaxLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getSessionIDMaxLength() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("SessionIDMaxLength");
+            return (int)classType.Get("SessionIDMaxLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

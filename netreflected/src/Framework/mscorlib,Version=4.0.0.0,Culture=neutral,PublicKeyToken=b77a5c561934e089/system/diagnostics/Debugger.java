@@ -193,11 +193,11 @@ public class Debugger extends NetObject  {
     
     // Properties section
     
-    public boolean getIsAttached() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsAttached() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsAttached");
+            return (boolean)classType.Get("IsAttached");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

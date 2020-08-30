@@ -465,11 +465,11 @@ public class StringPrototype extends StringObject  {
     
     // Properties section
     
-    public StringConstructor getconstructor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringConstructor getconstructor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("constructor");
+            JCObject val = (JCObject)classType.Get("constructor");
             return new StringConstructor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

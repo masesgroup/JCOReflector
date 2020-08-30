@@ -186,11 +186,11 @@ public class RuntimeEnvironment extends NetObject  {
     
     // Properties section
     
-    public java.lang.String getSystemConfigurationFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getSystemConfigurationFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("SystemConfigurationFile");
+            return (java.lang.String)classType.Get("SystemConfigurationFile");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

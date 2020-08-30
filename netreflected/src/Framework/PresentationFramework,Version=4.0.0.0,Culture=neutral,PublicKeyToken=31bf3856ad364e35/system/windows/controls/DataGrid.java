@@ -765,11 +765,11 @@ public class DataGrid extends MultiSelector  {
         }
     }
 
-    public ComponentResourceKey getFocusBorderBrushKey() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ComponentResourceKey getFocusBorderBrushKey() throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("FocusBorderBrushKey");
+            JCObject val = (JCObject)classType.Get("FocusBorderBrushKey");
             return new ComponentResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1091,22 +1091,22 @@ public class DataGrid extends MultiSelector  {
         }
     }
 
-    public IValueConverter getHeadersVisibilityConverter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IValueConverter getHeadersVisibilityConverter() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("HeadersVisibilityConverter");
+            JCObject val = (JCObject)classType.Get("HeadersVisibilityConverter");
             return new IValueConverterImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IValueConverter getRowDetailsScrollingConverter() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IValueConverter getRowDetailsScrollingConverter() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RowDetailsScrollingConverter");
+            JCObject val = (JCObject)classType.Get("RowDetailsScrollingConverter");
             return new IValueConverterImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1155,22 +1155,22 @@ public class DataGrid extends MultiSelector  {
         }
     }
 
-    public RoutedUICommand getDeleteCommand() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedUICommand getDeleteCommand() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteCommand");
+            JCObject val = (JCObject)classType.Get("DeleteCommand");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RoutedUICommand getSelectAllCommand() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RoutedUICommand getSelectAllCommand() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectAllCommand");
+            JCObject val = (JCObject)classType.Get("SelectAllCommand");
             return new RoutedUICommand(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

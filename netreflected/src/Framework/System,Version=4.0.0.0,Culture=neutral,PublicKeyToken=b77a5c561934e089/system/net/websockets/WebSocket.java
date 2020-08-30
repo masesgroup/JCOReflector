@@ -235,11 +235,11 @@ public class WebSocket extends NetObject  {
         }
     }
 
-    public TimeSpan getDefaultKeepAliveInterval() throws Throwable, system.ArgumentException, system.OverflowException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeSpan getDefaultKeepAliveInterval() throws Throwable, system.ArgumentException, system.OverflowException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultKeepAliveInterval");
+            JCObject val = (JCObject)classType.Get("DefaultKeepAliveInterval");
             return new TimeSpan(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

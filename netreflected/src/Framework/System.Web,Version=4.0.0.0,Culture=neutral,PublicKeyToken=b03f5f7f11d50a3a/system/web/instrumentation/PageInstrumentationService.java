@@ -143,21 +143,21 @@ public class PageInstrumentationService extends NetObject  {
     
     // Properties section
     
-    public boolean getIsEnabled() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsEnabled() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsEnabled");
+            return (boolean)classType.Get("IsEnabled");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsEnabled(boolean IsEnabled) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setIsEnabled(boolean IsEnabled) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("IsEnabled", IsEnabled);
+            classType.Set("IsEnabled", IsEnabled);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -150,22 +150,22 @@ public class ApplicationSecurityManager extends NetObject  {
     
     // Properties section
     
-    public ApplicationTrustCollection getUserApplicationTrusts() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ApplicationTrustCollection getUserApplicationTrusts() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UserApplicationTrusts");
+            JCObject val = (JCObject)classType.Get("UserApplicationTrusts");
             return new ApplicationTrustCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IApplicationTrustManager getApplicationTrustManager() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.OutOfMemoryException, system.security.XmlSyntaxException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.policy.PolicyException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IApplicationTrustManager getApplicationTrustManager() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.OutOfMemoryException, system.security.XmlSyntaxException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.policy.PolicyException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationTrustManager");
+            JCObject val = (JCObject)classType.Get("ApplicationTrustManager");
             return new IApplicationTrustManagerImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

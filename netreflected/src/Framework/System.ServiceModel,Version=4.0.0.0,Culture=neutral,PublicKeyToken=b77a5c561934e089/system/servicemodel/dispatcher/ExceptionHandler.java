@@ -146,54 +146,54 @@ public class ExceptionHandler extends NetObject  {
     
     // Properties section
     
-    public ExceptionHandler getAlwaysHandle() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ExceptionHandler getAlwaysHandle() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AlwaysHandle");
+            JCObject val = (JCObject)classType.Get("AlwaysHandle");
             return new ExceptionHandler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ExceptionHandler getAsynchronousThreadExceptionHandler() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ExceptionHandler getAsynchronousThreadExceptionHandler() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AsynchronousThreadExceptionHandler");
+            JCObject val = (JCObject)classType.Get("AsynchronousThreadExceptionHandler");
             return new ExceptionHandler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAsynchronousThreadExceptionHandler(ExceptionHandler AsynchronousThreadExceptionHandler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setAsynchronousThreadExceptionHandler(ExceptionHandler AsynchronousThreadExceptionHandler) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("AsynchronousThreadExceptionHandler", AsynchronousThreadExceptionHandler == null ? null : AsynchronousThreadExceptionHandler.getJCOInstance());
+            classType.Set("AsynchronousThreadExceptionHandler", AsynchronousThreadExceptionHandler == null ? null : AsynchronousThreadExceptionHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ExceptionHandler getTransportExceptionHandler() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ExceptionHandler getTransportExceptionHandler() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("TransportExceptionHandler");
+            JCObject val = (JCObject)classType.Get("TransportExceptionHandler");
             return new ExceptionHandler(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setTransportExceptionHandler(ExceptionHandler TransportExceptionHandler) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setTransportExceptionHandler(ExceptionHandler TransportExceptionHandler) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("TransportExceptionHandler", TransportExceptionHandler == null ? null : TransportExceptionHandler.getJCOInstance());
+            classType.Set("TransportExceptionHandler", TransportExceptionHandler == null ? null : TransportExceptionHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

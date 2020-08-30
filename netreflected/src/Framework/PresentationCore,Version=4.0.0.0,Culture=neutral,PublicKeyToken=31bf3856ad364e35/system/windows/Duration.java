@@ -234,22 +234,22 @@ public class Duration extends ValueType  {
         }
     }
 
-    public Duration getAutomatic() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Duration getAutomatic() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Automatic");
+            JCObject val = (JCObject)classType.Get("Automatic");
             return new Duration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Duration getForever() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Duration getForever() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Forever");
+            JCObject val = (JCObject)classType.Get("Forever");
             return new Duration(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

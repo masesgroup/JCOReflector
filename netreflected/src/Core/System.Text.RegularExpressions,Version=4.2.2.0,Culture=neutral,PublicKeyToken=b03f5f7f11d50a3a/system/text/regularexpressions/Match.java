@@ -183,11 +183,11 @@ public class Match extends Group  {
         }
     }
 
-    public Match getEmpty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Match getEmpty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Empty");
+            JCObject val = (JCObject)classType.Get("Empty");
             return new Match(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

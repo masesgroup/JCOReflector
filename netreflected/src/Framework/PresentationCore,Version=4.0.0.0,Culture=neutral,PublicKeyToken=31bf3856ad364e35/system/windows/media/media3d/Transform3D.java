@@ -259,11 +259,11 @@ public class Transform3D extends GeneralTransform3D  {
         }
     }
 
-    public Transform3D getIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Transform3D getIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Identity");
+            JCObject val = (JCObject)classType.Get("Identity");
             return new Transform3D(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

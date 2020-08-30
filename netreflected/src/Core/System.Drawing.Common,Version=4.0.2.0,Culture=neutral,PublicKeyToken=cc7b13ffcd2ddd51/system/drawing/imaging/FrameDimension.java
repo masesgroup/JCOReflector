@@ -149,33 +149,33 @@ public class FrameDimension extends NetObject  {
     
     // Properties section
     
-    public FrameDimension getPage() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static FrameDimension getPage() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Page");
+            JCObject val = (JCObject)classType.Get("Page");
             return new FrameDimension(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FrameDimension getResolution() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static FrameDimension getResolution() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Resolution");
+            JCObject val = (JCObject)classType.Get("Resolution");
             return new FrameDimension(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public FrameDimension getTime() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static FrameDimension getTime() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Time");
+            JCObject val = (JCObject)classType.Get("Time");
             return new FrameDimension(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

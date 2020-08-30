@@ -157,33 +157,33 @@ public class EnvelopeVersion extends NetObject  {
     
     // Properties section
     
-    public EnvelopeVersion getNone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static EnvelopeVersion getNone() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("None");
+            JCObject val = (JCObject)classType.Get("None");
             return new EnvelopeVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EnvelopeVersion getSoap11() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static EnvelopeVersion getSoap11() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Soap11");
+            JCObject val = (JCObject)classType.Get("Soap11");
             return new EnvelopeVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EnvelopeVersion getSoap12() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static EnvelopeVersion getSoap12() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Soap12");
+            JCObject val = (JCObject)classType.Get("Soap12");
             return new EnvelopeVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

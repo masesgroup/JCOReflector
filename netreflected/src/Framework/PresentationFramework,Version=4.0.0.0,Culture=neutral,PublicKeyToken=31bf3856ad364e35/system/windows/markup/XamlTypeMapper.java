@@ -190,11 +190,11 @@ public class XamlTypeMapper extends NetObject  {
     
     // Properties section
     
-    public XamlTypeMapper getDefaultMapper() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XamlTypeMapper getDefaultMapper() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultMapper");
+            JCObject val = (JCObject)classType.Get("DefaultMapper");
             return new XamlTypeMapper(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

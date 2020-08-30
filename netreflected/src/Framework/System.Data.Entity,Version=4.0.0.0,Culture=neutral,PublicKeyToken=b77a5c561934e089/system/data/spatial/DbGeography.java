@@ -613,11 +613,11 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public int getDefaultCoordinateSystemId() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getDefaultCoordinateSystemId() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("DefaultCoordinateSystemId");
+            return (int)classType.Get("DefaultCoordinateSystemId");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

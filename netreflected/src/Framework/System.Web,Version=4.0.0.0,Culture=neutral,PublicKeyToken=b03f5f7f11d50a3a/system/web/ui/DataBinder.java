@@ -227,21 +227,21 @@ public class DataBinder extends NetObject  {
     
     // Properties section
     
-    public boolean getEnableCaching() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getEnableCaching() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("EnableCaching");
+            return (boolean)classType.Get("EnableCaching");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setEnableCaching(boolean EnableCaching) throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setEnableCaching(boolean EnableCaching) throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("EnableCaching", EnableCaching);
+            classType.Set("EnableCaching", EnableCaching);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -183,11 +183,11 @@ public class ExtendedProtectionPolicy extends NetObject  {
     
     // Properties section
     
-    public boolean getOSSupportsExtendedProtection() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getOSSupportsExtendedProtection() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("OSSupportsExtendedProtection");
+            return (boolean)classType.Get("OSSupportsExtendedProtection");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

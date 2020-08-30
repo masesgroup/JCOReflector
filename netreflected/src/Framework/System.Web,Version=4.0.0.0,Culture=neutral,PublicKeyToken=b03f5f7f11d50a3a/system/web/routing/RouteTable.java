@@ -144,11 +144,11 @@ public class RouteTable extends NetObject  {
     
     // Properties section
     
-    public RouteCollection getRoutes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RouteCollection getRoutes() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Routes");
+            JCObject val = (JCObject)classType.Get("Routes");
             return new RouteCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

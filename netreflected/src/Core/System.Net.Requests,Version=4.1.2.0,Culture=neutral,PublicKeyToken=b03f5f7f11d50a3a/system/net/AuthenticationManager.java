@@ -198,44 +198,44 @@ public class AuthenticationManager extends NetObject  {
     
     // Properties section
     
-    public IEnumerator getRegisteredModules() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IEnumerator getRegisteredModules() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RegisteredModules");
+            JCObject val = (JCObject)classType.Get("RegisteredModules");
             return new IEnumeratorImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public StringDictionary getCustomTargetNameDictionary() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static StringDictionary getCustomTargetNameDictionary() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomTargetNameDictionary");
+            JCObject val = (JCObject)classType.Get("CustomTargetNameDictionary");
             return new StringDictionary(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICredentialPolicy getCredentialPolicy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ICredentialPolicy getCredentialPolicy() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CredentialPolicy");
+            JCObject val = (JCObject)classType.Get("CredentialPolicy");
             return new ICredentialPolicyImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCredentialPolicy(ICredentialPolicy CredentialPolicy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCredentialPolicy(ICredentialPolicy CredentialPolicy) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CredentialPolicy", CredentialPolicy == null ? null : CredentialPolicy.getJCOInstance());
+            classType.Set("CredentialPolicy", CredentialPolicy == null ? null : CredentialPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

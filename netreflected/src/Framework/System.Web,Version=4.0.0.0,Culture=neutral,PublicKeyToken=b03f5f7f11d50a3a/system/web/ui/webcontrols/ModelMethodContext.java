@@ -161,11 +161,11 @@ public class ModelMethodContext extends NetObject  {
         }
     }
 
-    public ModelMethodContext getCurrent() throws Throwable, system.ArgumentNullException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ModelMethodContext getCurrent() throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
+            JCObject val = (JCObject)classType.Get("Current");
             return new ModelMethodContext(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

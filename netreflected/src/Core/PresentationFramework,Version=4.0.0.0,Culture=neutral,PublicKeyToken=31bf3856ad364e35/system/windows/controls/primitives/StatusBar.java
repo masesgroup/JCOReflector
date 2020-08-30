@@ -187,11 +187,11 @@ public class StatusBar extends ItemsControl  {
         }
     }
 
-    public ResourceKey getSeparatorStyleKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ResourceKey getSeparatorStyleKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SeparatorStyleKey");
+            JCObject val = (JCObject)classType.Get("SeparatorStyleKey");
             return new ResourceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

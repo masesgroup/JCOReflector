@@ -500,41 +500,41 @@ public class HttpWebRequest extends WebRequest  {
         }
     }
 
-    public int getDefaultMaximumErrorResponseLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getDefaultMaximumErrorResponseLength() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("DefaultMaximumErrorResponseLength");
+            return (int)classType.Get("DefaultMaximumErrorResponseLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefaultMaximumErrorResponseLength(int DefaultMaximumErrorResponseLength) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDefaultMaximumErrorResponseLength(int DefaultMaximumErrorResponseLength) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DefaultMaximumErrorResponseLength", DefaultMaximumErrorResponseLength);
+            classType.Set("DefaultMaximumErrorResponseLength", DefaultMaximumErrorResponseLength);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getDefaultMaximumResponseHeadersLength() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getDefaultMaximumResponseHeadersLength() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("DefaultMaximumResponseHeadersLength");
+            return (int)classType.Get("DefaultMaximumResponseHeadersLength");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefaultMaximumResponseHeadersLength(int DefaultMaximumResponseHeadersLength) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDefaultMaximumResponseHeadersLength(int DefaultMaximumResponseHeadersLength) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DefaultMaximumResponseHeadersLength", DefaultMaximumResponseHeadersLength);
+            classType.Set("DefaultMaximumResponseHeadersLength", DefaultMaximumResponseHeadersLength);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,22 +642,22 @@ public class HttpWebRequest extends WebRequest  {
         }
     }
 
-    public RequestCachePolicy getDefaultCachePolicy() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RequestCachePolicy getDefaultCachePolicy() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultCachePolicy");
+            JCObject val = (JCObject)classType.Get("DefaultCachePolicy");
             return new RequestCachePolicy(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
+            classType.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

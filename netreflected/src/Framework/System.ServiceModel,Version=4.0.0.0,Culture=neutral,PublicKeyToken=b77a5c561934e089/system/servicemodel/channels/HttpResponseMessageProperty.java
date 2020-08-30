@@ -217,11 +217,11 @@ public class HttpResponseMessageProperty extends NetObject  {
         }
     }
 
-    public java.lang.String getName() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getName() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            return (java.lang.String)classType.Get("Name");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

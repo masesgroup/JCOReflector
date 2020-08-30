@@ -188,11 +188,11 @@ public class PrintQueueCollection extends PrintSystemObjects  {
     
     // Properties section
     
-    public NetObject getSyncRoot() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static NetObject getSyncRoot() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)classType.Get("SyncRoot");
             return new NetObject(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

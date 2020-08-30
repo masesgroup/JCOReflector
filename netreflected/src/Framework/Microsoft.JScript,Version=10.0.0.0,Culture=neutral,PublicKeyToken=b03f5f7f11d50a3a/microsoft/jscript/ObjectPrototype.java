@@ -200,11 +200,11 @@ public class ObjectPrototype extends JSObject  {
     
     // Properties section
     
-    public ObjectConstructor getconstructor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ObjectConstructor getconstructor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("constructor");
+            JCObject val = (JCObject)classType.Get("constructor");
             return new ObjectConstructor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

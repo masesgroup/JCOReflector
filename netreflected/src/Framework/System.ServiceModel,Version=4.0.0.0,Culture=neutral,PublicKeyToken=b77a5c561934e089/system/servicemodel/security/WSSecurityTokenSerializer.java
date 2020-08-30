@@ -255,11 +255,11 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
         }
     }
 
-    public WSSecurityTokenSerializer getDefaultInstance() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static WSSecurityTokenSerializer getDefaultInstance() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultInstance");
+            JCObject val = (JCObject)classType.Get("DefaultInstance");
             return new WSSecurityTokenSerializer(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

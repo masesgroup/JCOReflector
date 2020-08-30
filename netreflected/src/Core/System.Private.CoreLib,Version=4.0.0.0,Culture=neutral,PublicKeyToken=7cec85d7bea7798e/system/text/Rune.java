@@ -469,11 +469,11 @@ public class Rune extends ValueType  {
         }
     }
 
-    public Rune getReplacementChar() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Rune getReplacementChar() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ReplacementChar");
+            JCObject val = (JCObject)classType.Get("ReplacementChar");
             return new Rune(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

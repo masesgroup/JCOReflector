@@ -204,11 +204,11 @@ public class Range extends ValueType  {
         }
     }
 
-    public Range getAll() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Range getAll() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("All");
+            JCObject val = (JCObject)classType.Get("All");
             return new Range(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

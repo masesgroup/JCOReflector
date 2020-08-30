@@ -268,11 +268,11 @@ public class ArrayPrototype extends ArrayObject  {
     
     // Properties section
     
-    public ArrayConstructor getconstructor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ArrayConstructor getconstructor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("constructor");
+            JCObject val = (JCObject)classType.Get("constructor");
             return new ArrayConstructor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

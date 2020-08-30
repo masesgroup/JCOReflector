@@ -196,11 +196,11 @@ public class PresentationSource extends DispatcherObject  {
         }
     }
 
-    public IEnumerable getCurrentSources() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static IEnumerable getCurrentSources() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentSources");
+            JCObject val = (JCObject)classType.Get("CurrentSources");
             return new IEnumerableImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

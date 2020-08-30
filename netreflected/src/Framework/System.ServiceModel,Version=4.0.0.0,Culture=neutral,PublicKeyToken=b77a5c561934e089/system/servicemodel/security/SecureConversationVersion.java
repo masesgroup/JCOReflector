@@ -137,33 +137,33 @@ public class SecureConversationVersion extends NetObject  {
     
     // Properties section
     
-    public SecureConversationVersion getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SecureConversationVersion getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new SecureConversationVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecureConversationVersion getWSSecureConversation13() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SecureConversationVersion getWSSecureConversation13() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSSecureConversation13");
+            JCObject val = (JCObject)classType.Get("WSSecureConversation13");
             return new SecureConversationVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public SecureConversationVersion getWSSecureConversationFeb2005() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static SecureConversationVersion getWSSecureConversationFeb2005() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSSecureConversationFeb2005");
+            JCObject val = (JCObject)classType.Get("WSSecureConversationFeb2005");
             return new SecureConversationVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

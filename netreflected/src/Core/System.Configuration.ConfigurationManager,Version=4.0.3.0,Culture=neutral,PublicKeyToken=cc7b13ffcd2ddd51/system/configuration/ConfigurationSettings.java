@@ -149,11 +149,11 @@ public class ConfigurationSettings extends NetObject  {
     
     // Properties section
     
-    public NameValueCollection getAppSettings() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static NameValueCollection getAppSettings() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("AppSettings");
+            JCObject val = (JCObject)classType.Get("AppSettings");
             return new NameValueCollection(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

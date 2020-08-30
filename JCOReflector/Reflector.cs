@@ -1522,11 +1522,14 @@ namespace MASES.C2JReflector
             return false;
         }
 
-        static void searchProperties(Type type, BindingFlags flags, IList<Tuple<bool, PropertyInfo>> allProperties, bool isInterface)
+        static void searchProperties(Type type,  IList<Tuple<bool, PropertyInfo>> allProperties, bool staticSearch, bool isInterface)
         {
+            BindingFlags flags = BindingFlags.Public;
+            flags |= staticSearch ? BindingFlags.Static : BindingFlags.Instance;
+
             foreach (var item in type.GetProperties(flags))
             {
-                allProperties.Add(new Tuple<bool, PropertyInfo>(false, item));
+                allProperties.Add(new Tuple<bool, PropertyInfo>(staticSearch, item));
             }
 
             if (isInterface)
@@ -1534,13 +1537,13 @@ namespace MASES.C2JReflector
                 foreach (var item in type.GetInterfaces())
                 {
                     if (!isManagedType(item, 0, 1)) continue;
-                    searchProperties(item, flags, allProperties, isInterface);
+                    searchProperties(item, allProperties, staticSearch, isInterface);
                 }
             }
             else if (type.BaseType != null)
             {
                 if (!isManagedType(type.BaseType, 0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
-                searchProperties(type.BaseType, flags, allProperties, isInterface);
+                searchProperties(type.BaseType, allProperties, staticSearch, isInterface);
             }
         }
 
@@ -1555,8 +1558,8 @@ namespace MASES.C2JReflector
                 isInterface = true;
             }
 
-            searchProperties(type, BindingFlags.Public | BindingFlags.Instance, properties, isInterface);
-            searchProperties(type, BindingFlags.Public | BindingFlags.Static, properties, isInterface);
+            searchProperties(type, properties, false, isInterface);
+            searchProperties(type, properties, true, isInterface);
 
             if (properties.Count == 0) return string.Empty;
 

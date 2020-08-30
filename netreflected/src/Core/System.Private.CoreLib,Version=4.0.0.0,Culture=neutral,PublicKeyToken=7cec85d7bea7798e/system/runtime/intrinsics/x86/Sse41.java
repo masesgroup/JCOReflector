@@ -138,11 +138,11 @@ public class Sse41 extends Ssse3  {
     
     // Properties section
     
-    public boolean getIsSupported() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsSupported() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsSupported");
+            return (boolean)classType.Get("IsSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -480,22 +480,22 @@ public class TimeZoneInfo extends NetObject  {
         }
     }
 
-    public TimeZoneInfo getLocal() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeZoneInfo getLocal() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Local");
+            JCObject val = (JCObject)classType.Get("Local");
             return new TimeZoneInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TimeZoneInfo getUtc() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeZoneInfo getUtc() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Utc");
+            JCObject val = (JCObject)classType.Get("Utc");
             return new TimeZoneInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

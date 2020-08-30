@@ -136,33 +136,33 @@ public class ReliableMessagingVersion extends NetObject  {
     
     // Properties section
     
-    public ReliableMessagingVersion getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ReliableMessagingVersion getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new ReliableMessagingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ReliableMessagingVersion getWSReliableMessaging11() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ReliableMessagingVersion getWSReliableMessaging11() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSReliableMessaging11");
+            JCObject val = (JCObject)classType.Get("WSReliableMessaging11");
             return new ReliableMessagingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ReliableMessagingVersion getWSReliableMessagingFebruary2005() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ReliableMessagingVersion getWSReliableMessagingFebruary2005() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSReliableMessagingFebruary2005");
+            JCObject val = (JCObject)classType.Get("WSReliableMessagingFebruary2005");
             return new ReliableMessagingVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

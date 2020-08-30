@@ -885,21 +885,21 @@ public class Control extends Component  {
         }
     }
 
-    public boolean getCheckForIllegalCrossThreadCalls() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getCheckForIllegalCrossThreadCalls() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("CheckForIllegalCrossThreadCalls");
+            return (boolean)classType.Get("CheckForIllegalCrossThreadCalls");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCheckForIllegalCrossThreadCalls(boolean CheckForIllegalCrossThreadCalls) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCheckForIllegalCrossThreadCalls(boolean CheckForIllegalCrossThreadCalls) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("CheckForIllegalCrossThreadCalls", CheckForIllegalCrossThreadCalls);
+            classType.Set("CheckForIllegalCrossThreadCalls", CheckForIllegalCrossThreadCalls);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1256,22 +1256,22 @@ public class Control extends Component  {
         }
     }
 
-    public Color getDefaultBackColor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Color getDefaultBackColor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultBackColor");
+            JCObject val = (JCObject)classType.Get("DefaultBackColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Color getDefaultForeColor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Color getDefaultForeColor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultForeColor");
+            JCObject val = (JCObject)classType.Get("DefaultForeColor");
             return new Color(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1299,11 +1299,11 @@ public class Control extends Component  {
         }
     }
 
-    public Font getDefaultFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Font getDefaultFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultFont");
+            JCObject val = (JCObject)classType.Get("DefaultFont");
             return new Font(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1394,11 +1394,11 @@ public class Control extends Component  {
         }
     }
 
-    public Point getMousePosition() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Point getMousePosition() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MousePosition");
+            JCObject val = (JCObject)classType.Get("MousePosition");
             return new Point(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1979,11 +1979,11 @@ public class Control extends Component  {
         }
     }
 
-    public Keys getModifierKeys() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Keys getModifierKeys() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ModifierKeys");
+            JCObject val = (JCObject)classType.Get("ModifierKeys");
             return new Keys(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2001,11 +2001,11 @@ public class Control extends Component  {
         }
     }
 
-    public MouseButtons getMouseButtons() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MouseButtons getMouseButtons() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MouseButtons");
+            JCObject val = (JCObject)classType.Get("MouseButtons");
             return new MouseButtons(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

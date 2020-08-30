@@ -135,21 +135,21 @@ public class CoreCompatibilityPreferences extends NetObject  {
     
     // Properties section
     
-    public boolean getIsAltKeyRequiredInAccessKeyDefaultScope() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsAltKeyRequiredInAccessKeyDefaultScope() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsAltKeyRequiredInAccessKeyDefaultScope");
+            return (boolean)classType.Get("IsAltKeyRequiredInAccessKeyDefaultScope");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIsAltKeyRequiredInAccessKeyDefaultScope(boolean IsAltKeyRequiredInAccessKeyDefaultScope) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setIsAltKeyRequiredInAccessKeyDefaultScope(boolean IsAltKeyRequiredInAccessKeyDefaultScope) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("IsAltKeyRequiredInAccessKeyDefaultScope", IsAltKeyRequiredInAccessKeyDefaultScope);
+            classType.Set("IsAltKeyRequiredInAccessKeyDefaultScope", IsAltKeyRequiredInAccessKeyDefaultScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

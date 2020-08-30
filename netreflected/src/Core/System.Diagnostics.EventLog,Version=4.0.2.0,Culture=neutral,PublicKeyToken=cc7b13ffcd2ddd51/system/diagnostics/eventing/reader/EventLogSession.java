@@ -260,11 +260,11 @@ public class EventLogSession extends NetObject  {
     
     // Properties section
     
-    public EventLogSession getGlobalSession() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static EventLogSession getGlobalSession() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("GlobalSession");
+            JCObject val = (JCObject)classType.Get("GlobalSession");
             return new EventLogSession(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

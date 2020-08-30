@@ -223,11 +223,11 @@ public class TimeZone extends NetObject  {
         }
     }
 
-    public TimeZone getCurrentTimeZone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TimeZone getCurrentTimeZone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentTimeZone");
+            JCObject val = (JCObject)classType.Get("CurrentTimeZone");
             return new TimeZone(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

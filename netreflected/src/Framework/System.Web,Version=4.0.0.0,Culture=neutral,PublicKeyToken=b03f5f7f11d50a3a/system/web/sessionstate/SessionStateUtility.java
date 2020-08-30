@@ -214,22 +214,22 @@ public class SessionStateUtility extends NetObject  {
     
     // Properties section
     
-    public ISurrogateSelector getSerializationSurrogateSelector() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ISurrogateSelector getSerializationSurrogateSelector() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("SerializationSurrogateSelector");
+            JCObject val = (JCObject)classType.Get("SerializationSurrogateSelector");
             return new ISurrogateSelectorImplementation(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setSerializationSurrogateSelector(ISurrogateSelector SerializationSurrogateSelector) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setSerializationSurrogateSelector(ISurrogateSelector SerializationSurrogateSelector) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("SerializationSurrogateSelector", SerializationSurrogateSelector == null ? null : SerializationSurrogateSelector.getJCOInstance());
+            classType.Set("SerializationSurrogateSelector", SerializationSurrogateSelector == null ? null : SerializationSurrogateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -136,44 +136,44 @@ public class TransactionProtocol extends NetObject  {
     
     // Properties section
     
-    public TransactionProtocol getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TransactionProtocol getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new TransactionProtocol(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TransactionProtocol getOleTransactions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TransactionProtocol getOleTransactions() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OleTransactions");
+            JCObject val = (JCObject)classType.Get("OleTransactions");
             return new TransactionProtocol(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TransactionProtocol getWSAtomicTransaction11() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TransactionProtocol getWSAtomicTransaction11() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSAtomicTransaction11");
+            JCObject val = (JCObject)classType.Get("WSAtomicTransaction11");
             return new TransactionProtocol(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TransactionProtocol getWSAtomicTransactionOctober2004() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TransactionProtocol getWSAtomicTransactionOctober2004() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSAtomicTransactionOctober2004");
+            JCObject val = (JCObject)classType.Get("WSAtomicTransactionOctober2004");
             return new TransactionProtocol(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

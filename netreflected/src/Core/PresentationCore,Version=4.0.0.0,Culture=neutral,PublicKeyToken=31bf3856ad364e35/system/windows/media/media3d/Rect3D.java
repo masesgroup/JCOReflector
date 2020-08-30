@@ -501,11 +501,11 @@ public class Rect3D extends ValueType  {
         }
     }
 
-    public Rect3D getEmpty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Rect3D getEmpty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Empty");
+            JCObject val = (JCObject)classType.Get("Empty");
             return new Rect3D(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

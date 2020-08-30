@@ -265,22 +265,22 @@ public class RenderOptions extends NetObject  {
     
     // Properties section
     
-    public RenderMode getProcessRenderMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static RenderMode getProcessRenderMode() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ProcessRenderMode");
+            JCObject val = (JCObject)classType.Get("ProcessRenderMode");
             return new RenderMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setProcessRenderMode(RenderMode ProcessRenderMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setProcessRenderMode(RenderMode ProcessRenderMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ProcessRenderMode", ProcessRenderMode == null ? null : ProcessRenderMode.getJCOInstance());
+            classType.Set("ProcessRenderMode", ProcessRenderMode == null ? null : ProcessRenderMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

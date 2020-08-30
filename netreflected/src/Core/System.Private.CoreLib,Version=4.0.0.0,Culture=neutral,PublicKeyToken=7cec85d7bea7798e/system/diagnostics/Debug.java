@@ -437,61 +437,61 @@ public class Debug extends NetObject  {
     
     // Properties section
     
-    public boolean getAutoFlush() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getAutoFlush() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("AutoFlush");
+            return (boolean)classType.Get("AutoFlush");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAutoFlush(boolean AutoFlush) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setAutoFlush(boolean AutoFlush) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("AutoFlush", AutoFlush);
+            classType.Set("AutoFlush", AutoFlush);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getIndentLevel() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getIndentLevel() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("IndentLevel");
+            return (int)classType.Get("IndentLevel");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIndentLevel(int IndentLevel) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setIndentLevel(int IndentLevel) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("IndentLevel", IndentLevel);
+            classType.Set("IndentLevel", IndentLevel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int getIndentSize() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getIndentSize() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("IndentSize");
+            return (int)classType.Get("IndentSize");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIndentSize(int IndentSize) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setIndentSize(int IndentSize) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("IndentSize", IndentSize);
+            classType.Set("IndentSize", IndentSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

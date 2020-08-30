@@ -380,11 +380,11 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public Matrix3x2 getIdentity() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Matrix3x2 getIdentity() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Identity");
+            JCObject val = (JCObject)classType.Get("Identity");
             return new Matrix3x2(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -161,22 +161,22 @@ public class JavaScriptEncoder extends TextEncoder  {
     
     // Properties section
     
-    public JavaScriptEncoder getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static JavaScriptEncoder getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new JavaScriptEncoder(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public JavaScriptEncoder getUnsafeRelaxedJsonEscaping() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static JavaScriptEncoder getUnsafeRelaxedJsonEscaping() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UnsafeRelaxedJsonEscaping");
+            JCObject val = (JCObject)classType.Get("UnsafeRelaxedJsonEscaping");
             return new JavaScriptEncoder(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

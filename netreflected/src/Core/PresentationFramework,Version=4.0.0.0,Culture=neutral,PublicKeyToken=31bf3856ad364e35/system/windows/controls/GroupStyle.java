@@ -230,11 +230,11 @@ public class GroupStyle extends NetObject  {
         }
     }
 
-    public GroupStyle getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static GroupStyle getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new GroupStyle(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

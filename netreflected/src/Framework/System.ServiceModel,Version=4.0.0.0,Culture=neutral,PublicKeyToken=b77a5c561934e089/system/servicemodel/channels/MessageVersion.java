@@ -173,88 +173,88 @@ public class MessageVersion extends NetObject  {
         }
     }
 
-    public MessageVersion getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageVersion getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MessageVersion getNone() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageVersion getNone() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("None");
+            JCObject val = (JCObject)classType.Get("None");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MessageVersion getSoap11() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageVersion getSoap11() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Soap11");
+            JCObject val = (JCObject)classType.Get("Soap11");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MessageVersion getSoap11WSAddressing10() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageVersion getSoap11WSAddressing10() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Soap11WSAddressing10");
+            JCObject val = (JCObject)classType.Get("Soap11WSAddressing10");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MessageVersion getSoap11WSAddressingAugust2004() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageVersion getSoap11WSAddressingAugust2004() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Soap11WSAddressingAugust2004");
+            JCObject val = (JCObject)classType.Get("Soap11WSAddressingAugust2004");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MessageVersion getSoap12() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageVersion getSoap12() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Soap12");
+            JCObject val = (JCObject)classType.Get("Soap12");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MessageVersion getSoap12WSAddressing10() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageVersion getSoap12WSAddressing10() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Soap12WSAddressing10");
+            JCObject val = (JCObject)classType.Get("Soap12WSAddressing10");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MessageVersion getSoap12WSAddressingAugust2004() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessageVersion getSoap12WSAddressingAugust2004() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Soap12WSAddressingAugust2004");
+            JCObject val = (JCObject)classType.Get("Soap12WSAddressingAugust2004");
             return new MessageVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -147,43 +147,43 @@ public class RuntimeInformation extends NetObject  {
     
     // Properties section
     
-    public Architecture getOSArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Architecture getOSArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("OSArchitecture");
+            JCObject val = (JCObject)classType.Get("OSArchitecture");
             return new Architecture(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Architecture getProcessArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Architecture getProcessArchitecture() throws Throwable, system.ArgumentException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ProcessArchitecture");
+            JCObject val = (JCObject)classType.Get("ProcessArchitecture");
             return new Architecture(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getFrameworkDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getFrameworkDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("FrameworkDescription");
+            return (java.lang.String)classType.Get("FrameworkDescription");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getOSDescription() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getOSDescription() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("OSDescription");
+            return (java.lang.String)classType.Get("OSDescription");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

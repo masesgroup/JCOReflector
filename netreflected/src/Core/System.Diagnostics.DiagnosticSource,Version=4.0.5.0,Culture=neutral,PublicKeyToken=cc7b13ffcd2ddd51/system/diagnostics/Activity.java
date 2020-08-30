@@ -262,21 +262,21 @@ public class Activity extends NetObject  {
     
     // Properties section
     
-    public boolean getForceDefaultIdFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getForceDefaultIdFormat() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("ForceDefaultIdFormat");
+            return (boolean)classType.Get("ForceDefaultIdFormat");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setForceDefaultIdFormat(boolean ForceDefaultIdFormat) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setForceDefaultIdFormat(boolean ForceDefaultIdFormat) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ForceDefaultIdFormat", ForceDefaultIdFormat);
+            classType.Set("ForceDefaultIdFormat", ForceDefaultIdFormat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,22 +313,22 @@ public class Activity extends NetObject  {
         }
     }
 
-    public Activity getCurrent() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Activity getCurrent() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
+            JCObject val = (JCObject)classType.Get("Current");
             return new Activity(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setCurrent(Activity Current) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setCurrent(Activity Current) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("Current", Current == null ? null : Current.getJCOInstance());
+            classType.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,22 +355,22 @@ public class Activity extends NetObject  {
         }
     }
 
-    public ActivityIdFormat getDefaultIdFormat() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ActivityIdFormat getDefaultIdFormat() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultIdFormat");
+            JCObject val = (JCObject)classType.Get("DefaultIdFormat");
             return new ActivityIdFormat(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefaultIdFormat(ActivityIdFormat DefaultIdFormat) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDefaultIdFormat(ActivityIdFormat DefaultIdFormat) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DefaultIdFormat", DefaultIdFormat == null ? null : DefaultIdFormat.getJCOInstance());
+            classType.Set("DefaultIdFormat", DefaultIdFormat == null ? null : DefaultIdFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -611,33 +611,33 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public BigInteger getMinusOne() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static BigInteger getMinusOne() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("MinusOne");
+            JCObject val = (JCObject)classType.Get("MinusOne");
             return new BigInteger(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public BigInteger getOne() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static BigInteger getOne() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("One");
+            JCObject val = (JCObject)classType.Get("One");
             return new BigInteger(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public BigInteger getZero() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static BigInteger getZero() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Zero");
+            JCObject val = (JCObject)classType.Get("Zero");
             return new BigInteger(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

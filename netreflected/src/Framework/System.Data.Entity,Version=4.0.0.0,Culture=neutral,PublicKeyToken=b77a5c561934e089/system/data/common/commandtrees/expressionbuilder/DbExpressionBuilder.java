@@ -1083,22 +1083,22 @@ public class DbExpressionBuilder extends NetObject  {
     
     // Properties section
     
-    public DbConstantExpression getFalse() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DbConstantExpression getFalse() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("False");
+            JCObject val = (JCObject)classType.Get("False");
             return new DbConstantExpression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DbConstantExpression getTrue() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DbConstantExpression getTrue() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("True");
+            JCObject val = (JCObject)classType.Get("True");
             return new DbConstantExpression(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

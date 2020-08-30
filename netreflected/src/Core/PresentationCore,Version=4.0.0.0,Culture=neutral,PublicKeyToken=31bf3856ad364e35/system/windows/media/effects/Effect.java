@@ -160,22 +160,22 @@ public class Effect extends Animatable  {
     
     // Properties section
     
-    public Brush getImplicitInput() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Brush getImplicitInput() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ImplicitInput");
+            JCObject val = (JCObject)classType.Get("ImplicitInput");
             return new Brush(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setImplicitInput(Brush ImplicitInput) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setImplicitInput(Brush ImplicitInput) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ImplicitInput", ImplicitInput == null ? null : ImplicitInput.getJCOInstance());
+            classType.Set("ImplicitInput", ImplicitInput == null ? null : ImplicitInput.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

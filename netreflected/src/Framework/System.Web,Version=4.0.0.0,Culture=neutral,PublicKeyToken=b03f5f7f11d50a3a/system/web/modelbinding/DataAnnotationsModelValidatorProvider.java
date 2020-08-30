@@ -226,21 +226,21 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
     
     // Properties section
     
-    public boolean getAddImplicitRequiredAttributeForValueTypes() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getAddImplicitRequiredAttributeForValueTypes() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("AddImplicitRequiredAttributeForValueTypes");
+            return (boolean)classType.Get("AddImplicitRequiredAttributeForValueTypes");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAddImplicitRequiredAttributeForValueTypes(boolean AddImplicitRequiredAttributeForValueTypes) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setAddImplicitRequiredAttributeForValueTypes(boolean AddImplicitRequiredAttributeForValueTypes) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("AddImplicitRequiredAttributeForValueTypes", AddImplicitRequiredAttributeForValueTypes);
+            classType.Set("AddImplicitRequiredAttributeForValueTypes", AddImplicitRequiredAttributeForValueTypes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

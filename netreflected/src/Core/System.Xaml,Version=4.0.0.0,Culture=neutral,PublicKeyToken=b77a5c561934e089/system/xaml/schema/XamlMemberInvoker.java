@@ -205,11 +205,11 @@ public class XamlMemberInvoker extends NetObject  {
         }
     }
 
-    public XamlMemberInvoker getUnknownInvoker() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XamlMemberInvoker getUnknownInvoker() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("UnknownInvoker");
+            JCObject val = (JCObject)classType.Get("UnknownInvoker");
             return new XamlMemberInvoker(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -149,11 +149,11 @@ public class MetadataStringDecoder extends NetObject  {
     
     // Properties section
     
-    public MetadataStringDecoder getDefaultUTF8() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MetadataStringDecoder getDefaultUTF8() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultUTF8");
+            JCObject val = (JCObject)classType.Get("DefaultUTF8");
             return new MetadataStringDecoder(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

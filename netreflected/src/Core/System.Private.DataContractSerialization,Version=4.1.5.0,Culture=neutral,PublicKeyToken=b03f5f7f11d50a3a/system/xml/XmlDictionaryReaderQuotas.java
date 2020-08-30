@@ -255,11 +255,11 @@ public class XmlDictionaryReaderQuotas extends NetObject  {
         }
     }
 
-    public XmlDictionaryReaderQuotas getMax() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XmlDictionaryReaderQuotas getMax() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Max");
+            JCObject val = (JCObject)classType.Get("Max");
             return new XmlDictionaryReaderQuotas(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

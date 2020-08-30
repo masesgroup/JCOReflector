@@ -215,22 +215,22 @@ public class ManagementPath extends NetObject  {
         }
     }
 
-    public ManagementPath getDefaultPath() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ManagementPath getDefaultPath() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultPath");
+            JCObject val = (JCObject)classType.Get("DefaultPath");
             return new ManagementPath(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefaultPath(ManagementPath DefaultPath) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDefaultPath(ManagementPath DefaultPath) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DefaultPath", DefaultPath == null ? null : DefaultPath.getJCOInstance());
+            classType.Set("DefaultPath", DefaultPath == null ? null : DefaultPath.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

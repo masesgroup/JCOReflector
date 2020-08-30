@@ -135,11 +135,11 @@ public class Vector extends NetObject  {
     
     // Properties section
     
-    public boolean getIsHardwareAccelerated() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsHardwareAccelerated() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsHardwareAccelerated");
+            return (boolean)classType.Get("IsHardwareAccelerated");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

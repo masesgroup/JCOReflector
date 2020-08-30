@@ -189,21 +189,21 @@ public class HwndSource extends PresentationSource  {
         }
     }
 
-    public boolean getDefaultAcquireHwndFocusInMenuMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getDefaultAcquireHwndFocusInMenuMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("DefaultAcquireHwndFocusInMenuMode");
+            return (boolean)classType.Get("DefaultAcquireHwndFocusInMenuMode");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setDefaultAcquireHwndFocusInMenuMode(boolean DefaultAcquireHwndFocusInMenuMode) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setDefaultAcquireHwndFocusInMenuMode(boolean DefaultAcquireHwndFocusInMenuMode) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("DefaultAcquireHwndFocusInMenuMode", DefaultAcquireHwndFocusInMenuMode);
+            classType.Set("DefaultAcquireHwndFocusInMenuMode", DefaultAcquireHwndFocusInMenuMode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

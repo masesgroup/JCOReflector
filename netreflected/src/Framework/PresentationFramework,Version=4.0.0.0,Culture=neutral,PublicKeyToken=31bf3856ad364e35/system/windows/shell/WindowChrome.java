@@ -296,11 +296,11 @@ public class WindowChrome extends Freezable  {
         }
     }
 
-    public Thickness getGlassFrameCompleteThickness() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Thickness getGlassFrameCompleteThickness() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("GlassFrameCompleteThickness");
+            JCObject val = (JCObject)classType.Get("GlassFrameCompleteThickness");
             return new Thickness(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

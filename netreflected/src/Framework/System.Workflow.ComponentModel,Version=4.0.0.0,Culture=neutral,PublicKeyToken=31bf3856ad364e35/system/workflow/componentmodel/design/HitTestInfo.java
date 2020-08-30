@@ -207,11 +207,11 @@ public class HitTestInfo extends NetObject  {
         }
     }
 
-    public HitTestInfo getNowhere() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HitTestInfo getNowhere() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Nowhere");
+            JCObject val = (JCObject)classType.Get("Nowhere");
             return new HitTestInfo(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

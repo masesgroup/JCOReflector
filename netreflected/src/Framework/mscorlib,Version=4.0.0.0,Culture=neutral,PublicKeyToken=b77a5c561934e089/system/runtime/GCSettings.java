@@ -137,53 +137,53 @@ public class GCSettings extends NetObject  {
     
     // Properties section
     
-    public boolean getIsServerGC() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getIsServerGC() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("IsServerGC");
+            return (boolean)classType.Get("IsServerGC");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public GCLargeObjectHeapCompactionMode getLargeObjectHeapCompactionMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static GCLargeObjectHeapCompactionMode getLargeObjectHeapCompactionMode() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LargeObjectHeapCompactionMode");
+            JCObject val = (JCObject)classType.Get("LargeObjectHeapCompactionMode");
             return new GCLargeObjectHeapCompactionMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setLargeObjectHeapCompactionMode(GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode) throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setLargeObjectHeapCompactionMode(GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("LargeObjectHeapCompactionMode", LargeObjectHeapCompactionMode == null ? null : LargeObjectHeapCompactionMode.getJCOInstance());
+            classType.Set("LargeObjectHeapCompactionMode", LargeObjectHeapCompactionMode == null ? null : LargeObjectHeapCompactionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public GCLatencyMode getLatencyMode() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static GCLatencyMode getLatencyMode() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("LatencyMode");
+            JCObject val = (JCObject)classType.Get("LatencyMode");
             return new GCLatencyMode(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setLatencyMode(GCLatencyMode LatencyMode) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setLatencyMode(GCLatencyMode LatencyMode) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("LatencyMode", LatencyMode == null ? null : LatencyMode.getJCOInstance());
+            classType.Set("LatencyMode", LatencyMode == null ? null : LatencyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

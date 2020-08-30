@@ -251,41 +251,41 @@ public class MetadataSection extends NetObject  {
         }
     }
 
-    public java.lang.String getMetadataExchangeDialect() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getMetadataExchangeDialect() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("MetadataExchangeDialect");
+            return (java.lang.String)classType.Get("MetadataExchangeDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getPolicyDialect() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getPolicyDialect() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("PolicyDialect");
+            return (java.lang.String)classType.Get("PolicyDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getServiceDescriptionDialect() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getServiceDescriptionDialect() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("ServiceDescriptionDialect");
+            return (java.lang.String)classType.Get("ServiceDescriptionDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String getXmlSchemaDialect() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String getXmlSchemaDialect() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Get("XmlSchemaDialect");
+            return (java.lang.String)classType.Get("XmlSchemaDialect");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

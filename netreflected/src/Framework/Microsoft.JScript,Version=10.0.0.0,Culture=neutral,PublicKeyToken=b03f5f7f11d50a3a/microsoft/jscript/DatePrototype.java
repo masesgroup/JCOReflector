@@ -590,11 +590,11 @@ public class DatePrototype extends DateObject  {
     
     // Properties section
     
-    public DateConstructor getconstructor() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static DateConstructor getconstructor() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("constructor");
+            JCObject val = (JCObject)classType.Get("constructor");
             return new DateConstructor(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

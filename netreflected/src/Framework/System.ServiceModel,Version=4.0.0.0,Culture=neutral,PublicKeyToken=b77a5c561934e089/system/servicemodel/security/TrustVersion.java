@@ -137,33 +137,33 @@ public class TrustVersion extends NetObject  {
     
     // Properties section
     
-    public TrustVersion getDefault() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TrustVersion getDefault() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            JCObject val = (JCObject)classType.Get("Default");
             return new TrustVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TrustVersion getWSTrust13() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TrustVersion getWSTrust13() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrust13");
+            JCObject val = (JCObject)classType.Get("WSTrust13");
             return new TrustVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public TrustVersion getWSTrustFeb2005() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static TrustVersion getWSTrustFeb2005() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrustFeb2005");
+            JCObject val = (JCObject)classType.Get("WSTrustFeb2005");
             return new TrustVersion(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -548,11 +548,11 @@ public class SerializationInfo extends NetObject  {
     
     // Properties section
     
-    public boolean getDeserializationInProgress() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getDeserializationInProgress() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("DeserializationInProgress");
+            return (boolean)classType.Get("DeserializationInProgress");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

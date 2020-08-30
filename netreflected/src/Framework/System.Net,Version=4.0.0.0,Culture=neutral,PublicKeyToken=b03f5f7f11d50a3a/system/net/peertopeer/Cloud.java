@@ -182,11 +182,11 @@ public class Cloud extends NetObject  {
         }
     }
 
-    public Cloud getGlobal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.net.peertopeer.PeerToPeerException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Cloud getGlobal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.net.peertopeer.PeerToPeerException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Global");
+            JCObject val = (JCObject)classType.Get("Global");
             return new Cloud(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

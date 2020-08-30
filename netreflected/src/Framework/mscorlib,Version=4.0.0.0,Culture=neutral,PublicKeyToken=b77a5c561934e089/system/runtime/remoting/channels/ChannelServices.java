@@ -261,12 +261,12 @@ public class ChannelServices extends NetObject  {
     
     // Properties section
     
-    public final IChannel[] getRegisteredChannels() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public final static IChannel[] getRegisteredChannels() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<IChannel> resultingArrayList = new ArrayList<IChannel>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("RegisteredChannels");
+            JCObject resultingObjects = (JCObject)classType.Get("RegisteredChannels");
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IChannelImplementation(resultingObject));
             }

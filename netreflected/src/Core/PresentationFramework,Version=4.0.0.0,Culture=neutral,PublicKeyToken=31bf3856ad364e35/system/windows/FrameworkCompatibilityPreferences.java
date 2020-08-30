@@ -135,61 +135,61 @@ public class FrameworkCompatibilityPreferences extends NetObject  {
     
     // Properties section
     
-    public boolean getAreInactiveSelectionHighlightBrushKeysSupported() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getAreInactiveSelectionHighlightBrushKeysSupported() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("AreInactiveSelectionHighlightBrushKeysSupported");
+            return (boolean)classType.Get("AreInactiveSelectionHighlightBrushKeysSupported");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setAreInactiveSelectionHighlightBrushKeysSupported(boolean AreInactiveSelectionHighlightBrushKeysSupported) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setAreInactiveSelectionHighlightBrushKeysSupported(boolean AreInactiveSelectionHighlightBrushKeysSupported) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("AreInactiveSelectionHighlightBrushKeysSupported", AreInactiveSelectionHighlightBrushKeysSupported);
+            classType.Set("AreInactiveSelectionHighlightBrushKeysSupported", AreInactiveSelectionHighlightBrushKeysSupported);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getKeepTextBoxDisplaySynchronizedWithTextProperty() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getKeepTextBoxDisplaySynchronizedWithTextProperty() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("KeepTextBoxDisplaySynchronizedWithTextProperty");
+            return (boolean)classType.Get("KeepTextBoxDisplaySynchronizedWithTextProperty");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setKeepTextBoxDisplaySynchronizedWithTextProperty(boolean KeepTextBoxDisplaySynchronizedWithTextProperty) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setKeepTextBoxDisplaySynchronizedWithTextProperty(boolean KeepTextBoxDisplaySynchronizedWithTextProperty) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("KeepTextBoxDisplaySynchronizedWithTextProperty", KeepTextBoxDisplaySynchronizedWithTextProperty);
+            classType.Set("KeepTextBoxDisplaySynchronizedWithTextProperty", KeepTextBoxDisplaySynchronizedWithTextProperty);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean getShouldThrowOnCopyOrCutFailure() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean getShouldThrowOnCopyOrCutFailure() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Get("ShouldThrowOnCopyOrCutFailure");
+            return (boolean)classType.Get("ShouldThrowOnCopyOrCutFailure");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setShouldThrowOnCopyOrCutFailure(boolean ShouldThrowOnCopyOrCutFailure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static void setShouldThrowOnCopyOrCutFailure(boolean ShouldThrowOnCopyOrCutFailure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("ShouldThrowOnCopyOrCutFailure", ShouldThrowOnCopyOrCutFailure);
+            classType.Set("ShouldThrowOnCopyOrCutFailure", ShouldThrowOnCopyOrCutFailure);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

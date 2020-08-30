@@ -242,11 +242,11 @@ public class PrintTicketConverter extends NetObject  {
     
     // Properties section
     
-    public int getMaxPrintSchemaVersion() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static int getMaxPrintSchemaVersion() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classInstance.Get("MaxPrintSchemaVersion");
+            return (int)classType.Get("MaxPrintSchemaVersion");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

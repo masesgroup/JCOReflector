@@ -266,11 +266,11 @@ public class Monitor extends NetObject  {
     
     // Properties section
     
-    public long getLockContentionCount() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static long getLockContentionCount() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classInstance.Get("LockContentionCount");
+            return (long)classType.Get("LockContentionCount");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

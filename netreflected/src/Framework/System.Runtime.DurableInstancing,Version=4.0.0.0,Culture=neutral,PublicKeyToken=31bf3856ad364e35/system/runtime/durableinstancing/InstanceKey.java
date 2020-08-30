@@ -180,11 +180,11 @@ public class InstanceKey extends NetObject  {
         }
     }
 
-    public InstanceKey getInvalidKey() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static InstanceKey getInvalidKey() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("InvalidKey");
+            JCObject val = (JCObject)classType.Get("InvalidKey");
             return new InstanceKey(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

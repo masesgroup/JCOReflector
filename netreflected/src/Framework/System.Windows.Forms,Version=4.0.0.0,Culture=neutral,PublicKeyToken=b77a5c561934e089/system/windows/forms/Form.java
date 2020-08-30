@@ -879,11 +879,11 @@ public class Form extends ContainerControl  {
         }
     }
 
-    public Form getActiveForm() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Form getActiveForm() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveForm");
+            JCObject val = (JCObject)classType.Get("ActiveForm");
             return new Form(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

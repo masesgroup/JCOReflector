@@ -235,11 +235,11 @@ public class MessagePartSpecification extends NetObject  {
         }
     }
 
-    public MessagePartSpecification getNoParts() throws Throwable, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MessagePartSpecification getNoParts() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("NoParts");
+            JCObject val = (JCObject)classType.Get("NoParts");
             return new MessagePartSpecification(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

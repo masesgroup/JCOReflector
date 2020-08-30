@@ -169,11 +169,11 @@ public class ValidationResult extends NetObject  {
         }
     }
 
-    public ValidationResult getValidResult() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static ValidationResult getValidResult() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidResult");
+            JCObject val = (JCObject)classType.Get("ValidResult");
             return new ValidationResult(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

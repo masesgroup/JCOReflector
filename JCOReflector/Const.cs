@@ -77,9 +77,11 @@ namespace MASES.C2JReflector
             public const string NativeStringType = "java.lang.String";
             public const string IJCOBridgeReflected = "IJCOBridgeReflected";
             public const string NetObject = "NetObject";
+            public const string NetObjectAutoCloseable = "NetObjectAutoCloseable";
             public const string NetType = "NetType";
             public const string NetException = "NetException";
             public const string NetArrayList = "NetArrayList";
+            public const string NetIDisposable = "IDisposable";
             public const string NetIEnumerable = "IEnumerable";
             public const string NetIEnumerator = "IEnumerator";
             public const string StringEnumerator = "System.Collections.Specialized.StringEnumerator";

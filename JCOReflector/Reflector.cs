@@ -769,7 +769,14 @@ namespace MASES.C2JReflector
             else
             {
                 reflectorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassTemplate);
-                packageBaseClass = Const.SpecialNames.NetObject;
+                if (item.GetInterface(Const.SpecialNames.NetIDisposable) != null)
+                {
+                    packageBaseClass = Const.SpecialNames.NetObjectAutoCloseable;
+                }
+                else
+                {
+                    packageBaseClass = Const.SpecialNames.NetObject;
+                }
             }
 
             IList<Type> imports = new List<Type>();

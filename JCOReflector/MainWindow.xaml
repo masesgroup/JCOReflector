@@ -76,7 +76,11 @@
                                     <GroupBox DockPanel.Dock="Top" Header="Classes">
                                         <DockPanel  Height="30">
                                             <CheckBox Name="cbExportAbstract" Content="Abstract" IsChecked="{Binding ElementName=mainWindow, Path=EnableAbstract, Mode=TwoWay}" VerticalContentAlignment="Center" ToolTip="Enable abstract classes export" />
-                                            <CheckBox Name="cbEnableInheritance" Content="Inheritance" IsChecked="True" IsEnabled="{Binding ElementName=mainWindow, Path=EnableAbstract, Mode=OneWay}" VerticalContentAlignment="Center" ToolTip="Enable inheritance"/>
+                                            <CheckBox Name="cbEnableInheritance" Content="Inheritance" 
+                                                      IsChecked="{Binding ElementName=mainWindow, Path=EnableInheritance, Mode=TwoWay}" 
+                                                      IsEnabled="{Binding ElementName=mainWindow, Path=EnableAbstract, Mode=OneWay}" 
+                                                      VerticalContentAlignment="Center" ToolTip="Enable inheritance"/>
+                                            <CheckBox Name="cbEnableInterfaceInheritance" Content="Interface Inheritance" IsChecked="False" IsEnabled="{Binding ElementName=mainWindow, Path=EnableInheritance, Mode=OneWay}" VerticalContentAlignment="Center" ToolTip="Enable interface inheritance"/>
                                         </DockPanel>
                                     </GroupBox>
                                 </DockPanel>

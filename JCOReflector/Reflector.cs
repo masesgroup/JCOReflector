@@ -51,6 +51,7 @@ namespace MASES.C2JReflector
         public bool EnableArray { get; set; }
         public bool EnableDuplicateMethodNativeArrayWithJCRefOut { get; set; }
         public bool EnableInheritance { get; set; }
+        public bool EnableInterfaceInheritance { get; set; }
         public bool DryRun { get; set; }
     }
 
@@ -86,6 +87,7 @@ namespace MASES.C2JReflector
         static bool EnableArray = true;
         static bool EnableDuplicateMethodNativeArrayWithJCRefOut = true;
         static bool EnableInheritance = false;
+        static bool EnableInterfaceInheritance = false;
 
         static LogLevel LogLevel;
         static string RootDestinationFolder;
@@ -339,6 +341,7 @@ namespace MASES.C2JReflector
             EnableArray = args.EnableArray;
             EnableDuplicateMethodNativeArrayWithJCRefOut = args.EnableDuplicateMethodNativeArrayWithJCRefOut;
             EnableInheritance = args.EnableInheritance;
+            // EnableInterfaceInheritance = args.EnableInterfaceInheritance; -- disabled due to issues in reflector engines (see https://github.com/masesgroup/JCOReflector/issues/6#issuecomment-686596662)
             EnableWrite = !args.DryRun;
 
             string reportStr = string.Empty;
@@ -781,6 +784,7 @@ namespace MASES.C2JReflector
                 }
             }
 
+            string implementsStr = string.Empty;
             IList<Type> imports = new List<Type>();
             bool withInheritance = false;
             if (EnableInheritance)
@@ -791,9 +795,28 @@ namespace MASES.C2JReflector
                     packageBaseClass = item.BaseType.Name;
                     imports.Add(item.BaseType);
                 }
+
+                if (EnableInterfaceInheritance)
+                {
+                    foreach (var interfaceType in item.GetInterfaces())
+                    {
+                        if (isManagedType(interfaceType, 0, 1) && typeof(IEnumerable) != interfaceType)
+                        {
+                            if (string.IsNullOrEmpty(implementsStr))
+                            {
+                                implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + interfaceType.Name;
+                            }
+                            else
+                            {
+                                implementsStr += ", " + interfaceType.Name;
+                            }
+
+                            imports.Add(interfaceType);
+                        }
+                    }
+                }
             }
 
-            string implementsStr = string.Empty;
             var packageName = item.Namespace.ToLowerInvariant();
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                            .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseClass)
@@ -1531,7 +1554,7 @@ namespace MASES.C2JReflector
             return false;
         }
 
-        static void searchProperties(Type type,  IList<Tuple<bool, PropertyInfo>> allProperties, bool staticSearch, bool isInterface)
+        static void searchProperties(Type type, IList<Tuple<bool, PropertyInfo>> allProperties, bool staticSearch, bool isInterface)
         {
             BindingFlags flags = BindingFlags.Public;
             flags |= staticSearch ? BindingFlags.Static : BindingFlags.Instance;

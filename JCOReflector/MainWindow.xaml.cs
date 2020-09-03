@@ -79,6 +79,16 @@ namespace MASES.C2JReflector
         public static readonly DependencyProperty EnableAbstractProperty =
             DependencyProperty.Register("EnableAbstract", typeof(bool), typeof(MainWindow), new PropertyMetadata(true));
 
+        public bool EnableInheritance
+        {
+            get { return (bool)GetValue(EnableInheritanceProperty); }
+            set { SetValue(EnableInheritanceProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for EnableAbstract.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty EnableInheritanceProperty =
+            DependencyProperty.Register("EnableInheritance", typeof(bool), typeof(MainWindow), new PropertyMetadata(true));
+
         public MainWindow()
         {
             InitializeComponent();
@@ -145,6 +155,7 @@ namespace MASES.C2JReflector
             args.EnableArray = cbExportArray.IsChecked.Value;
             args.EnableDuplicateMethodNativeArrayWithJCRefOut = cbDuplicateMethodNativeArray.IsChecked.Value;
             args.EnableInheritance = cbEnableInheritance.IsChecked.Value;
+            args.EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value;
             args.DryRun = cbDryRun.IsChecked.Value;
 
             Task.Factory.StartNew(Reflector.ExportAssembly, args);

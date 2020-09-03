@@ -118,6 +118,9 @@ public class DesignerActionHeaderItem extends DesignerActionTextItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerActionHeaderItem}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DesignerActionHeaderItem} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DesignerActionHeaderItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

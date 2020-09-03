@@ -112,6 +112,9 @@ public class IMessageCtrlImplementation extends NetObject implements IMessageCtr
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMessageCtrl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMessageCtrl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMessageCtrl ToIMessageCtrl(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

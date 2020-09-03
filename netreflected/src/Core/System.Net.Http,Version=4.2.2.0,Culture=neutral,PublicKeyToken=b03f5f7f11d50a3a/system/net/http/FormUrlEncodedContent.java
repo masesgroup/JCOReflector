@@ -118,6 +118,9 @@ public class FormUrlEncodedContent extends ByteArrayContent  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FormUrlEncodedContent}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FormUrlEncodedContent} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FormUrlEncodedContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

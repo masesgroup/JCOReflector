@@ -121,6 +121,9 @@ public class DebugDirectoryEntry extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DebugDirectoryEntry}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DebugDirectoryEntry} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DebugDirectoryEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

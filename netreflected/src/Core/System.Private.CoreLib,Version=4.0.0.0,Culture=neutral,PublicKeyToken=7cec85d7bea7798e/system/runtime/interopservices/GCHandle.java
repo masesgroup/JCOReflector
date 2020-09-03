@@ -120,6 +120,9 @@ public class GCHandle extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GCHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link GCHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GCHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

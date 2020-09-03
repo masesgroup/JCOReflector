@@ -128,6 +128,9 @@ public class BlobBuilder extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BlobBuilder}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BlobBuilder} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BlobBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

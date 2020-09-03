@@ -130,6 +130,9 @@ public class XmlValidatingReader extends XmlReader  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlValidatingReader}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlValidatingReader} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlValidatingReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

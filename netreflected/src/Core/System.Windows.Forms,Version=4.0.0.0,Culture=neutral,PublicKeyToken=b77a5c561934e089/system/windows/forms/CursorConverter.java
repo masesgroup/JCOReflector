@@ -121,6 +121,9 @@ public class CursorConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CursorConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CursorConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CursorConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

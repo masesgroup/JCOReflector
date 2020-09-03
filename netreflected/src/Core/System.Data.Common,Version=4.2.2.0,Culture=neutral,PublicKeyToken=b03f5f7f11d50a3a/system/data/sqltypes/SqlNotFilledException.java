@@ -138,6 +138,9 @@ public class SqlNotFilledException extends SqlTypeException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlNotFilledException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SqlNotFilledException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlNotFilledException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

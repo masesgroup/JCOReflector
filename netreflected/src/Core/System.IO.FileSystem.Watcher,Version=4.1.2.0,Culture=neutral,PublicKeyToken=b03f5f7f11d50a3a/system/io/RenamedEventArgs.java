@@ -119,6 +119,9 @@ public class RenamedEventArgs extends FileSystemEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RenamedEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RenamedEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RenamedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -117,6 +117,9 @@ public class InputScopePhrase extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InputScopePhrase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link InputScopePhrase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InputScopePhrase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

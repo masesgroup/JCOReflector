@@ -120,6 +120,9 @@ public class Int32RectValueSerializer extends ValueSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int32RectValueSerializer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Int32RectValueSerializer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Int32RectValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

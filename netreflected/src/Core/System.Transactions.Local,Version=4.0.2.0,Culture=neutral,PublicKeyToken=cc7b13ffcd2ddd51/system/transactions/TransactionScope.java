@@ -52,7 +52,7 @@ import system.transactions.TransactionOptions;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope</a>
  */
-public class TransactionScope extends NetObject  {
+public class TransactionScope extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -123,6 +123,9 @@ public class TransactionScope extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionScope}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TransactionScope} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransactionScope cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

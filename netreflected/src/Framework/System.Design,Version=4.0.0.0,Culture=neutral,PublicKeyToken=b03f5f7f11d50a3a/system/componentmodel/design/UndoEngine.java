@@ -47,7 +47,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.UndoEngine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.UndoEngine</a>
  */
-public class UndoEngine extends NetObject  {
+public class UndoEngine extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

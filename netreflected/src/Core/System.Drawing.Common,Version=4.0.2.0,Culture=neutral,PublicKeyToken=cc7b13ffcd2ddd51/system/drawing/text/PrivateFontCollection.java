@@ -118,6 +118,9 @@ public class PrivateFontCollection extends FontCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrivateFontCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PrivateFontCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrivateFontCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

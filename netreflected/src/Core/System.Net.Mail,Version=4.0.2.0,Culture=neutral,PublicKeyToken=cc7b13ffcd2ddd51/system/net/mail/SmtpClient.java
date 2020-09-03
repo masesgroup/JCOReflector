@@ -55,7 +55,7 @@ import system.net.mail.SendCompletedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpClient</a>
  */
-public class SmtpClient extends NetObject  {
+public class SmtpClient extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -126,6 +126,9 @@ public class SmtpClient extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SmtpClient}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SmtpClient} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SmtpClient cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

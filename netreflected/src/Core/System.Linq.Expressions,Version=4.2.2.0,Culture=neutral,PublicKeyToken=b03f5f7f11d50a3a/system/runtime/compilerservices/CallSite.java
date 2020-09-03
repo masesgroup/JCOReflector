@@ -119,6 +119,9 @@ public class CallSite extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CallSite}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CallSite} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CallSite cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

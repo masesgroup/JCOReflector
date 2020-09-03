@@ -137,6 +137,9 @@ public class DomainController extends DirectoryServer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DomainController}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DomainController} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DomainController cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

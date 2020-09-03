@@ -119,6 +119,9 @@ public class MemoryMappedViewStream extends UnmanagedMemoryStream  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemoryMappedViewStream}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MemoryMappedViewStream} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MemoryMappedViewStream cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

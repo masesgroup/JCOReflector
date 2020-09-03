@@ -47,7 +47,7 @@ import system.diagnostics.tracing.EventSource;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.DiagnosticCounter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.DiagnosticCounter</a>
  */
-public class DiagnosticCounter extends NetObject  {
+public class DiagnosticCounter extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -118,6 +118,9 @@ public class DiagnosticCounter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiagnosticCounter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DiagnosticCounter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiagnosticCounter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

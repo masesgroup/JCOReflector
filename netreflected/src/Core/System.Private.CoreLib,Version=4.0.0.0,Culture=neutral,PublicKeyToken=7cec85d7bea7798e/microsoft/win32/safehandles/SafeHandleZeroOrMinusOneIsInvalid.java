@@ -118,6 +118,9 @@ public class SafeHandleZeroOrMinusOneIsInvalid extends SafeHandle  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SafeHandleZeroOrMinusOneIsInvalid}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SafeHandleZeroOrMinusOneIsInvalid} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SafeHandleZeroOrMinusOneIsInvalid cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

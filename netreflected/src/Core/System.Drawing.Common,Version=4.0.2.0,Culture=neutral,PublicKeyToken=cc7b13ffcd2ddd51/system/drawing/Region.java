@@ -128,6 +128,9 @@ public class Region extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Region}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Region} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Region cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

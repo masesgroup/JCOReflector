@@ -121,6 +121,9 @@ public class ResultPropertyCollection extends DictionaryBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResultPropertyCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ResultPropertyCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResultPropertyCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

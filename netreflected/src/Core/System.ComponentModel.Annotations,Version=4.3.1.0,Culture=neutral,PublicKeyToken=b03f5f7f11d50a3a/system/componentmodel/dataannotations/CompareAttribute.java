@@ -118,6 +118,9 @@ public class CompareAttribute extends ValidationAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompareAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CompareAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CompareAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -117,6 +117,9 @@ public class HostedWindowWrapper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HostedWindowWrapper}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HostedWindowWrapper} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HostedWindowWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

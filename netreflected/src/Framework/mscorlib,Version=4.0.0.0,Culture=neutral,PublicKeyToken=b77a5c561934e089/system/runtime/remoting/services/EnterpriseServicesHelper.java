@@ -123,6 +123,9 @@ public class EnterpriseServicesHelper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EnterpriseServicesHelper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EnterpriseServicesHelper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EnterpriseServicesHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -123,6 +123,9 @@ public class XDocumentType extends XNode  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XDocumentType}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XDocumentType} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XDocumentType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -138,6 +138,9 @@ public class XamlXmlWriterException extends XamlException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlXmlWriterException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XamlXmlWriterException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlXmlWriterException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

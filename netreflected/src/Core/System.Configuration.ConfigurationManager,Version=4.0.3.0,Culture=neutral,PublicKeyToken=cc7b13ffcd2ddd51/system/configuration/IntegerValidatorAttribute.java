@@ -119,6 +119,9 @@ public class IntegerValidatorAttribute extends ConfigurationValidatorAttribute  
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IntegerValidatorAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link IntegerValidatorAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IntegerValidatorAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

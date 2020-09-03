@@ -120,6 +120,9 @@ public class LinearColorKeyFrame extends ColorKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinearColorKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LinearColorKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LinearColorKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

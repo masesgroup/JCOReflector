@@ -120,6 +120,9 @@ public class RangeConditionHeaderValue extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RangeConditionHeaderValue}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RangeConditionHeaderValue} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RangeConditionHeaderValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class VectorAnimationBase extends AnimationTimeline  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link VectorAnimationBase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link VectorAnimationBase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static VectorAnimationBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

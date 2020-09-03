@@ -117,6 +117,9 @@ public class DesignerOptionService extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerOptionService}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DesignerOptionService} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DesignerOptionService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

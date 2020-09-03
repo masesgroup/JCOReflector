@@ -117,6 +117,9 @@ public class IPv4InterfaceStatistics extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPv4InterfaceStatistics}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link IPv4InterfaceStatistics} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPv4InterfaceStatistics cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

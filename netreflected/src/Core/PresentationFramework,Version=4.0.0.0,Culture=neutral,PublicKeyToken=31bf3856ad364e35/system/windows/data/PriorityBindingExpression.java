@@ -119,6 +119,9 @@ public class PriorityBindingExpression extends BindingExpressionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PriorityBindingExpression}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PriorityBindingExpression} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PriorityBindingExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

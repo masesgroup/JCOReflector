@@ -120,6 +120,9 @@ public class RijndaelManaged extends Rijndael  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RijndaelManaged}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RijndaelManaged} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RijndaelManaged cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

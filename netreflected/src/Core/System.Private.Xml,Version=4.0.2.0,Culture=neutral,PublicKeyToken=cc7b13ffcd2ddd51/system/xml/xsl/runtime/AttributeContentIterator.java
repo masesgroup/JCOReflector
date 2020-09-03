@@ -119,6 +119,9 @@ public class AttributeContentIterator extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AttributeContentIterator}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AttributeContentIterator} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AttributeContentIterator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

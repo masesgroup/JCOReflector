@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.CryptoProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.CryptoProvider</a>
  */
-public class CryptoProvider extends NetObject  {
+public class CryptoProvider extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -117,6 +117,9 @@ public class CryptoProvider extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CryptoProvider}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CryptoProvider} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CryptoProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

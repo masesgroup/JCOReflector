@@ -121,6 +121,9 @@ public class DiffuseMaterial extends Material  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiffuseMaterial}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DiffuseMaterial} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiffuseMaterial cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

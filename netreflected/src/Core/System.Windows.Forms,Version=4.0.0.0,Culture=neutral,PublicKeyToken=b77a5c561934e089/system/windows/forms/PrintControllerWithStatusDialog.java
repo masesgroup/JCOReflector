@@ -122,6 +122,9 @@ public class PrintControllerWithStatusDialog extends PrintController  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintControllerWithStatusDialog}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PrintControllerWithStatusDialog} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintControllerWithStatusDialog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

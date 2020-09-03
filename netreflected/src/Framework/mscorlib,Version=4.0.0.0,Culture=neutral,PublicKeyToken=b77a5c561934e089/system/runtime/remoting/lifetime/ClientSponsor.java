@@ -121,6 +121,9 @@ public class ClientSponsor extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClientSponsor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ClientSponsor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ClientSponsor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

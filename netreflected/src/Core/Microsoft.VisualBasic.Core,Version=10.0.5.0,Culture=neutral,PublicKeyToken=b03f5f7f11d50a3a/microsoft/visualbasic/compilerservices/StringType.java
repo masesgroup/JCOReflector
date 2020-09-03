@@ -122,6 +122,9 @@ public class StringType extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringType}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link StringType} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StringType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

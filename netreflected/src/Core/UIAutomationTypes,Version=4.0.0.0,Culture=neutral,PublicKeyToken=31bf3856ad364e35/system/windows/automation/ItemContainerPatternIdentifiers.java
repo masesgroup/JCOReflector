@@ -117,6 +117,9 @@ public class ItemContainerPatternIdentifiers extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ItemContainerPatternIdentifiers}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ItemContainerPatternIdentifiers} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ItemContainerPatternIdentifiers cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

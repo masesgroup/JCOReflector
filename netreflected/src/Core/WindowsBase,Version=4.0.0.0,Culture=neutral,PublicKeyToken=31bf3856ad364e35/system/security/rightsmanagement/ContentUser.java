@@ -119,6 +119,9 @@ public class ContentUser extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContentUser}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ContentUser} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContentUser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

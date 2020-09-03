@@ -51,7 +51,7 @@ import system.io.compression.CompressionLevel;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive</a>
  */
-public class ZipArchive extends NetObject  {
+public class ZipArchive extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.IO.Compression, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -122,6 +122,9 @@ public class ZipArchive extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ZipArchive}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ZipArchive} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ZipArchive cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

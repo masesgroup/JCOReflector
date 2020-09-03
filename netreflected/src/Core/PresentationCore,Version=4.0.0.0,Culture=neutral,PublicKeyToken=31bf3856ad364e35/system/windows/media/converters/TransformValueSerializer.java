@@ -120,6 +120,9 @@ public class TransformValueSerializer extends ValueSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransformValueSerializer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TransformValueSerializer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransformValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class ModuleHandle extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModuleHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ModuleHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ModuleHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class RangeBaseAutomationPeer extends FrameworkElementAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RangeBaseAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RangeBaseAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RangeBaseAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

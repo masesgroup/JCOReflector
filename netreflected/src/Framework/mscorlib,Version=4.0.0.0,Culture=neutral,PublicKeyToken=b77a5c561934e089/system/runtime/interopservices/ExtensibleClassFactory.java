@@ -117,6 +117,9 @@ public class ExtensibleClassFactory extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExtensibleClassFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ExtensibleClassFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExtensibleClassFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

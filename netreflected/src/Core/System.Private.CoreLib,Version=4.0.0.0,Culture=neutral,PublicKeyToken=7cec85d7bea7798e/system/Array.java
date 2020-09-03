@@ -120,6 +120,9 @@ public class Array extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Array}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Array} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Array cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

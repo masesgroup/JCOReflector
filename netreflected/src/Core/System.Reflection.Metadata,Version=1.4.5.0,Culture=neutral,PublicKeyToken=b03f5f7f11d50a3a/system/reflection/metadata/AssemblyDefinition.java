@@ -126,6 +126,9 @@ public class AssemblyDefinition extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyDefinition}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AssemblyDefinition} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AssemblyDefinition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

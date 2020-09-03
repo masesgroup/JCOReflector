@@ -120,6 +120,9 @@ public class HwndDpiChangedEventArgs extends HandledEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HwndDpiChangedEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HwndDpiChangedEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HwndDpiChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

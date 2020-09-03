@@ -124,6 +124,9 @@ public class AnchoredBlock extends Inline  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnchoredBlock}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AnchoredBlock} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AnchoredBlock cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

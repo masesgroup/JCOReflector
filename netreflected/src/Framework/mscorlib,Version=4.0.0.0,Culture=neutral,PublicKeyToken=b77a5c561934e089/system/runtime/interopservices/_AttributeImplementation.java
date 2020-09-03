@@ -113,6 +113,9 @@ public class _AttributeImplementation extends NetObject implements _Attribute {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _Attribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _Attribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _Attribute To_Attribute(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -50,7 +50,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy</a>
  */
-public class BasePackagingPolicy extends NetObject  {
+public class BasePackagingPolicy extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -121,6 +121,9 @@ public class BasePackagingPolicy extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BasePackagingPolicy}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BasePackagingPolicy} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BasePackagingPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

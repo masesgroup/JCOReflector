@@ -50,7 +50,7 @@ import system.directoryservices.activedirectory.ActiveDirectorySite;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet</a>
  */
-public class ActiveDirectorySubnet extends NetObject  {
+public class ActiveDirectorySubnet extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

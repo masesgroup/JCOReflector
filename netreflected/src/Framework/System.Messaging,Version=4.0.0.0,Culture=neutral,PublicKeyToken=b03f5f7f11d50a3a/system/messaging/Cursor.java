@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.Cursor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.Cursor</a>
  */
-public class Cursor extends NetObject  {
+public class Cursor extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

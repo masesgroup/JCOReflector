@@ -119,6 +119,9 @@ public class TabItemAutomationPeer extends SelectorItemAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TabItemAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TabItemAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TabItemAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

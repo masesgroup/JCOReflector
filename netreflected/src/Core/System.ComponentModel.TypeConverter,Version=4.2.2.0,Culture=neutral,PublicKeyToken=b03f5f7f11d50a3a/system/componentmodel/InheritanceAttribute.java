@@ -119,6 +119,9 @@ public class InheritanceAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InheritanceAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link InheritanceAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InheritanceAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

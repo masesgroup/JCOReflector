@@ -120,6 +120,9 @@ public class GenericSecurityDescriptor extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GenericSecurityDescriptor}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link GenericSecurityDescriptor} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GenericSecurityDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

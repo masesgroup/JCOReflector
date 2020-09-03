@@ -61,7 +61,7 @@ import system.security.cryptography.CngUIPolicy;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKey</a>
  */
-public class CngKey extends NetObject  {
+public class CngKey extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

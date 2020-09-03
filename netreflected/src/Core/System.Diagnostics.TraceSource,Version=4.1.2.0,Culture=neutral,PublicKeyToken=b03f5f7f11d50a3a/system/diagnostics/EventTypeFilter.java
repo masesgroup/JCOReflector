@@ -121,6 +121,9 @@ public class EventTypeFilter extends TraceFilter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventTypeFilter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EventTypeFilter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventTypeFilter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

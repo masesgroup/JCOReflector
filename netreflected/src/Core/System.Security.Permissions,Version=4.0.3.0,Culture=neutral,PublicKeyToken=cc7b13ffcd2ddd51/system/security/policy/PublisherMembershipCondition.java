@@ -123,6 +123,9 @@ public class PublisherMembershipCondition extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PublisherMembershipCondition}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PublisherMembershipCondition} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PublisherMembershipCondition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

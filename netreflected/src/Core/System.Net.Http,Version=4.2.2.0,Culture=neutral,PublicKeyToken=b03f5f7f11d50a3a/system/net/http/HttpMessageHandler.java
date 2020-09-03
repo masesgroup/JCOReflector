@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpMessageHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpMessageHandler</a>
  */
-public class HttpMessageHandler extends NetObject  {
+public class HttpMessageHandler extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -117,6 +117,9 @@ public class HttpMessageHandler extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpMessageHandler}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HttpMessageHandler} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpMessageHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -126,6 +126,9 @@ public class TextureBrush extends Brush  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextureBrush}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TextureBrush} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextureBrush cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

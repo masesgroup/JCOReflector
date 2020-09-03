@@ -125,6 +125,9 @@ public class Activator extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Activator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Activator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Activator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

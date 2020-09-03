@@ -115,6 +115,9 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeInfo2}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITypeInfo2} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITypeInfo2 ToITypeInfo2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -114,6 +114,9 @@ public class ITypeLibImplementation extends NetObject implements ITypeLib {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeLib}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITypeLib} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITypeLib ToITypeLib(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class MethodSignatureEncoder extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodSignatureEncoder}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MethodSignatureEncoder} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MethodSignatureEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

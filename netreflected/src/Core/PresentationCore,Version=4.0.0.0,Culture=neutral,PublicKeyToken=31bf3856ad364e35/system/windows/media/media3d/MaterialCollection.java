@@ -120,6 +120,9 @@ public class MaterialCollection extends Animatable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MaterialCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MaterialCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MaterialCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

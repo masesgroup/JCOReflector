@@ -55,7 +55,7 @@ import system.UInt64;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.BinaryWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.BinaryWriter</a>
  */
-public class BinaryWriter extends NetObject  {
+public class BinaryWriter extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -126,6 +126,9 @@ public class BinaryWriter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BinaryWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BinaryWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BinaryWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

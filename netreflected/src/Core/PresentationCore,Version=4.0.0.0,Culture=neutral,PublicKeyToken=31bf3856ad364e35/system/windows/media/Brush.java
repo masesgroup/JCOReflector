@@ -122,6 +122,9 @@ public class Brush extends Animatable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Brush}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Brush} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Brush cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

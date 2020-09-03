@@ -50,7 +50,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentPage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentPage</a>
  */
-public class DocumentPage extends NetObject  {
+public class DocumentPage extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

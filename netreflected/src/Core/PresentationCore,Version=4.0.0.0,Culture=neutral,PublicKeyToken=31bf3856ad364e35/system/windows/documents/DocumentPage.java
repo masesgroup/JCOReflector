@@ -50,7 +50,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentPage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentPage</a>
  */
-public class DocumentPage extends NetObject  {
+public class DocumentPage extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -121,6 +121,9 @@ public class DocumentPage extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DocumentPage}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DocumentPage} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DocumentPage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

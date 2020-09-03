@@ -51,7 +51,7 @@ import system.windows.annotations.storage.StoreContentChangedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore</a>
  */
-public class AnnotationStore extends NetObject  {
+public class AnnotationStore extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

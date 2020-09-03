@@ -121,6 +121,9 @@ public class TableLayoutSettingsTypeConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableLayoutSettingsTypeConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TableLayoutSettingsTypeConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TableLayoutSettingsTypeConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

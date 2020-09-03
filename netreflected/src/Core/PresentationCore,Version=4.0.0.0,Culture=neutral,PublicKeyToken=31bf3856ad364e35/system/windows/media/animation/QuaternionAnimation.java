@@ -124,6 +124,9 @@ public class QuaternionAnimation extends QuaternionAnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link QuaternionAnimation}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link QuaternionAnimation} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static QuaternionAnimation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

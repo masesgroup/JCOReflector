@@ -120,6 +120,9 @@ public class PointHitTestResult extends HitTestResult  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PointHitTestResult}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PointHitTestResult} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PointHitTestResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

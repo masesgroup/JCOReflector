@@ -52,7 +52,7 @@ import system.xaml.XamlType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlObjectReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlObjectReader</a>
  */
-public class XamlObjectReader extends NetObject  {
+public class XamlObjectReader extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

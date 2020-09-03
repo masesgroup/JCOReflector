@@ -124,6 +124,9 @@ public class DrawListViewSubItemEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DrawListViewSubItemEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DrawListViewSubItemEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DrawListViewSubItemEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

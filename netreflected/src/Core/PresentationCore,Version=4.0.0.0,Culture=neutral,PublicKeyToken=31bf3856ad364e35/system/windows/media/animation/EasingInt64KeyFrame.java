@@ -121,6 +121,9 @@ public class EasingInt64KeyFrame extends Int64KeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EasingInt64KeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EasingInt64KeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EasingInt64KeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

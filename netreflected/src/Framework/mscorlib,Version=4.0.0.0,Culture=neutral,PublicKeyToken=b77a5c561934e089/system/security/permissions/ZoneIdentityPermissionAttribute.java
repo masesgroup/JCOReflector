@@ -122,6 +122,9 @@ public class ZoneIdentityPermissionAttribute extends CodeAccessSecurityAttribute
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ZoneIdentityPermissionAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ZoneIdentityPermissionAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ZoneIdentityPermissionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -138,6 +138,9 @@ public class NullReferenceException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NullReferenceException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link NullReferenceException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NullReferenceException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

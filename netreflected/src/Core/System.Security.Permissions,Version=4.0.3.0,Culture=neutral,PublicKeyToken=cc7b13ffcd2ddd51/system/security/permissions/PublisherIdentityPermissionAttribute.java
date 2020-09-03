@@ -121,6 +121,9 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PublisherIdentityPermissionAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PublisherIdentityPermissionAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PublisherIdentityPermissionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

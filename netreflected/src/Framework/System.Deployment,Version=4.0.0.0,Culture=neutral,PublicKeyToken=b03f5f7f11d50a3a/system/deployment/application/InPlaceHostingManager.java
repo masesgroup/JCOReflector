@@ -48,7 +48,7 @@ import system.runtime.remoting.ObjectHandle;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.InPlaceHostingManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.InPlaceHostingManager</a>
  */
-public class InPlaceHostingManager extends NetObject  {
+public class InPlaceHostingManager extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

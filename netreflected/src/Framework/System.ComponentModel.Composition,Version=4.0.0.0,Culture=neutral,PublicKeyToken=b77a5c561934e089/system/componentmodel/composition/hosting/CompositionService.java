@@ -47,7 +47,7 @@ import system.componentmodel.composition.primitives.ComposablePart;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionService</a>
  */
-public class CompositionService extends NetObject  {
+public class CompositionService extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

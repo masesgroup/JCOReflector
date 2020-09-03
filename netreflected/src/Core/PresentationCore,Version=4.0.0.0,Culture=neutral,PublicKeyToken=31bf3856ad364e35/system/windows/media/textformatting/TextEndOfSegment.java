@@ -120,6 +120,9 @@ public class TextEndOfSegment extends TextRun  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextEndOfSegment}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TextEndOfSegment} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextEndOfSegment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

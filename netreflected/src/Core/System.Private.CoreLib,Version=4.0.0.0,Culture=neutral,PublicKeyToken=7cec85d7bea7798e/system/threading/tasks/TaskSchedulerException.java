@@ -137,6 +137,9 @@ public class TaskSchedulerException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TaskSchedulerException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TaskSchedulerException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TaskSchedulerException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

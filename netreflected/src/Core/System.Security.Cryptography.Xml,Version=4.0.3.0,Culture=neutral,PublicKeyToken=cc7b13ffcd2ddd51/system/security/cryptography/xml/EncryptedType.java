@@ -123,6 +123,9 @@ public class EncryptedType extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncryptedType}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EncryptedType} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EncryptedType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

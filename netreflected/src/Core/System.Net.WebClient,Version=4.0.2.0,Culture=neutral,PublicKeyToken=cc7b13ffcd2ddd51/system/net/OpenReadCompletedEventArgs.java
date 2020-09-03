@@ -119,6 +119,9 @@ public class OpenReadCompletedEventArgs extends AsyncCompletedEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OpenReadCompletedEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link OpenReadCompletedEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OpenReadCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

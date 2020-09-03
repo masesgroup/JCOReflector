@@ -123,6 +123,9 @@ public class CollectionConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CollectionConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CollectionConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CollectionConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -68,7 +68,7 @@ import system.net.sockets.LingerOption;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.Socket" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.Socket</a>
  */
-public class Socket extends NetObject  {
+public class Socket extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

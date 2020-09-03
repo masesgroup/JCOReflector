@@ -119,6 +119,9 @@ public class Pkcs12Info extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs12Info}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Pkcs12Info} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Pkcs12Info cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

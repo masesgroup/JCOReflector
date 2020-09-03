@@ -54,7 +54,7 @@ import system.directoryservices.activedirectory.ReplicationSpan;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationConnection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationConnection</a>
  */
-public class ReplicationConnection extends NetObject  {
+public class ReplicationConnection extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -125,6 +125,9 @@ public class ReplicationConnection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReplicationConnection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ReplicationConnection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ReplicationConnection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

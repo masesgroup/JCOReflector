@@ -120,6 +120,9 @@ public class TransactionOptions extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionOptions}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TransactionOptions} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransactionOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

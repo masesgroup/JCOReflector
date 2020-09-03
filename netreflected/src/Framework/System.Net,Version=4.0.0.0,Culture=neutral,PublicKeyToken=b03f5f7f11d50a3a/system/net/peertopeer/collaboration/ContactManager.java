@@ -52,7 +52,7 @@ import system.componentmodel.ISynchronizeInvokeImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.ContactManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.Collaboration.ContactManager</a>
  */
-public class ContactManager extends NetObject  {
+public class ContactManager extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

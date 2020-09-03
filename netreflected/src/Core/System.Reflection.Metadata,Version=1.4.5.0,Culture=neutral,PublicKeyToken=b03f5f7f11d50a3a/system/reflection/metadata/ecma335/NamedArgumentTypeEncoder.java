@@ -121,6 +121,9 @@ public class NamedArgumentTypeEncoder extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NamedArgumentTypeEncoder}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link NamedArgumentTypeEncoder} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NamedArgumentTypeEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

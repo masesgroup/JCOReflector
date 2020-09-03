@@ -121,6 +121,9 @@ public class QueryCursorEventArgs extends MouseEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link QueryCursorEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link QueryCursorEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static QueryCursorEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

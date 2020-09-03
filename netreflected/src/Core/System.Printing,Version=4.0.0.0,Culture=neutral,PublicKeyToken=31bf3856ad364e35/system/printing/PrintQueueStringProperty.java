@@ -118,6 +118,9 @@ public class PrintQueueStringProperty extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintQueueStringProperty}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PrintQueueStringProperty} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintQueueStringProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

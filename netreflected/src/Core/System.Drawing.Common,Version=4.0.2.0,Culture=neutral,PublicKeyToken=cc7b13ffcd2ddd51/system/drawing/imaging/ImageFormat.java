@@ -119,6 +119,9 @@ public class ImageFormat extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImageFormat}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ImageFormat} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ImageFormat cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

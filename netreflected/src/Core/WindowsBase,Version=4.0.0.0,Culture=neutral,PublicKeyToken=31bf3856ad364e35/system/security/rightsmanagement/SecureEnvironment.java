@@ -50,7 +50,7 @@ import system.security.rightsmanagement.UserActivationMode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.SecureEnvironment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.SecureEnvironment</a>
  */
-public class SecureEnvironment extends NetObject  {
+public class SecureEnvironment extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -121,6 +121,9 @@ public class SecureEnvironment extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecureEnvironment}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SecureEnvironment} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecureEnvironment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

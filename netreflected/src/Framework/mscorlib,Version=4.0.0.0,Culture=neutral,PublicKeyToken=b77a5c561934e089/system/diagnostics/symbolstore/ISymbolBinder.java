@@ -62,6 +62,9 @@ public interface ISymbolBinder extends IJCOBridgeReflected {
     public static final String className = "System.Diagnostics.SymbolStore.ISymbolBinder";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolBinder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISymbolBinder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISymbolBinder ToISymbolBinder(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

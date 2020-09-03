@@ -47,7 +47,7 @@ import system.threading.HostExecutionContext;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.HostExecutionContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.HostExecutionContext</a>
  */
-public class HostExecutionContext extends NetObject  {
+public class HostExecutionContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -118,6 +118,9 @@ public class HostExecutionContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HostExecutionContext}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HostExecutionContext} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HostExecutionContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

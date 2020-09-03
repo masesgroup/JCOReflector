@@ -120,6 +120,9 @@ public class ObjectAnimationUsingKeyFrames extends ObjectAnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectAnimationUsingKeyFrames}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ObjectAnimationUsingKeyFrames} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectAnimationUsingKeyFrames cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

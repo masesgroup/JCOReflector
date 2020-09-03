@@ -121,6 +121,9 @@ public class EventLogTraceListener extends TraceListener  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLogTraceListener}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EventLogTraceListener} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventLogTraceListener cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

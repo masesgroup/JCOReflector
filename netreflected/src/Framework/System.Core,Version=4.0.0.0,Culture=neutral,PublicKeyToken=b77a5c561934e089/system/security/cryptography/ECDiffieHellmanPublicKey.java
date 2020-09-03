@@ -47,7 +47,7 @@ import system.security.cryptography.ECParameters;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECDiffieHellmanPublicKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECDiffieHellmanPublicKey</a>
  */
-public class ECDiffieHellmanPublicKey extends NetObject  {
+public class ECDiffieHellmanPublicKey extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

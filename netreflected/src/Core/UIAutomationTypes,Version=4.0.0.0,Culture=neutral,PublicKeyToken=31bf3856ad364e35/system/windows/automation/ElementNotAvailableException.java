@@ -140,6 +140,9 @@ public class ElementNotAvailableException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ElementNotAvailableException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ElementNotAvailableException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ElementNotAvailableException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

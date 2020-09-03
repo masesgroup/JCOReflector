@@ -120,6 +120,9 @@ public class AuthorizationRule extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AuthorizationRule}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AuthorizationRule} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AuthorizationRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class SoapMonthDay extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapMonthDay}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SoapMonthDay} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SoapMonthDay cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

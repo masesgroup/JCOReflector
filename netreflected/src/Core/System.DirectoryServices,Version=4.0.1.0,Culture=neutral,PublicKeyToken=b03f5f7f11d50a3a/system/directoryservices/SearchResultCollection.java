@@ -119,6 +119,9 @@ public class SearchResultCollection extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SearchResultCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SearchResultCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SearchResultCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

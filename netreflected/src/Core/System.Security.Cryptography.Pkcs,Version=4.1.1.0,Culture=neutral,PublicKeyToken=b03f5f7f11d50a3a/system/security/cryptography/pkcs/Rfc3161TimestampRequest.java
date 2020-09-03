@@ -123,6 +123,9 @@ public class Rfc3161TimestampRequest extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rfc3161TimestampRequest}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Rfc3161TimestampRequest} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Rfc3161TimestampRequest cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

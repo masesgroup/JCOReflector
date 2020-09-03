@@ -118,6 +118,9 @@ public class BrowsableAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BrowsableAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BrowsableAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BrowsableAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

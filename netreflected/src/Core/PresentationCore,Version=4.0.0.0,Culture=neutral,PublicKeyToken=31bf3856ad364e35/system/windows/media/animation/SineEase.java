@@ -118,6 +118,9 @@ public class SineEase extends EasingFunctionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SineEase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SineEase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SineEase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

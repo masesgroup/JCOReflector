@@ -68,6 +68,9 @@ public interface IMethodCallMessage extends IJCOBridgeReflected, IMethodMessage,
     public static final String className = "System.Runtime.Remoting.Messaging.IMethodCallMessage";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMethodCallMessage}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMethodCallMessage} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMethodCallMessage ToIMethodCallMessage(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

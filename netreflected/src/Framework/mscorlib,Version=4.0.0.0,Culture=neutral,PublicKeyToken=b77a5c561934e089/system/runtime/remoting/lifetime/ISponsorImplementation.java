@@ -115,6 +115,9 @@ public class ISponsorImplementation extends NetObject implements ISponsor {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISponsor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISponsor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISponsor ToISponsor(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

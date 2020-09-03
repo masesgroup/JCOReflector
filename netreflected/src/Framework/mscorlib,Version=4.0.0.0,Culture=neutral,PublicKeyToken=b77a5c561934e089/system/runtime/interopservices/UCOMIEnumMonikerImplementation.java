@@ -114,6 +114,9 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UCOMIEnumMoniker}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UCOMIEnumMoniker} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UCOMIEnumMoniker ToUCOMIEnumMoniker(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

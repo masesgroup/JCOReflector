@@ -140,6 +140,9 @@ public class PrivilegeNotHeldException extends UnauthorizedAccessException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrivilegeNotHeldException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrivilegeNotHeldException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrivilegeNotHeldException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

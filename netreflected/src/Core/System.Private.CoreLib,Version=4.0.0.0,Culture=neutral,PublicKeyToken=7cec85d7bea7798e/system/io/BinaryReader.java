@@ -54,7 +54,7 @@ import system.UInt64;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.BinaryReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.BinaryReader</a>
  */
-public class BinaryReader extends NetObject  {
+public class BinaryReader extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -125,6 +125,9 @@ public class BinaryReader extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BinaryReader}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BinaryReader} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BinaryReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

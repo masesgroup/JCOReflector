@@ -120,6 +120,9 @@ public class PointKeyFrameCollection extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PointKeyFrameCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PointKeyFrameCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PointKeyFrameCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

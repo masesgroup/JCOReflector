@@ -123,6 +123,9 @@ public class XamlServices extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlServices}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XamlServices} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

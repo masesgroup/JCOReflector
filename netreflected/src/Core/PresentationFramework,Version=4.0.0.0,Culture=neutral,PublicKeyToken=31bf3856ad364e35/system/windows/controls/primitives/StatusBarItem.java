@@ -118,6 +118,9 @@ public class StatusBarItem extends ContentControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StatusBarItem}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link StatusBarItem} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StatusBarItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

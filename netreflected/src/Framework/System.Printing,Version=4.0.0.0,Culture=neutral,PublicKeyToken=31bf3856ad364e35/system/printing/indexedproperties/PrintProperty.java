@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.IndexedProperties.PrintProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.IndexedProperties.PrintProperty</a>
  */
-public class PrintProperty extends NetObject  {
+public class PrintProperty extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

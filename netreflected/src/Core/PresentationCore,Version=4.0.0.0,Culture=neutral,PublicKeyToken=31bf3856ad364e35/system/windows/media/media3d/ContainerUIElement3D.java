@@ -119,6 +119,9 @@ public class ContainerUIElement3D extends UIElement3D  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContainerUIElement3D}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ContainerUIElement3D} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContainerUIElement3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

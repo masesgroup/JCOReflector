@@ -118,6 +118,9 @@ public class PauseStoryboard extends ControllableStoryboardAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PauseStoryboard}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PauseStoryboard} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PauseStoryboard cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

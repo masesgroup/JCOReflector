@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserSiteBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserSiteBase</a>
  */
-public class WebBrowserSiteBase extends NetObject  {
+public class WebBrowserSiteBase extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -117,6 +117,9 @@ public class WebBrowserSiteBase extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebBrowserSiteBase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link WebBrowserSiteBase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebBrowserSiteBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

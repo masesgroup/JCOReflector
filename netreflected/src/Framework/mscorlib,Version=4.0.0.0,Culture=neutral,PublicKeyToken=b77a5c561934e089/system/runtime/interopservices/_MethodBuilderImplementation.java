@@ -113,6 +113,9 @@ public class _MethodBuilderImplementation extends NetObject implements _MethodBu
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _MethodBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _MethodBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _MethodBuilder To_MethodBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

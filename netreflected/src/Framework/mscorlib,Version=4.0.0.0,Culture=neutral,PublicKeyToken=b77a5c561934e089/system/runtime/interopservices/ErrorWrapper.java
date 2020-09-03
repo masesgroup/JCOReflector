@@ -117,6 +117,9 @@ public class ErrorWrapper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ErrorWrapper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ErrorWrapper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ErrorWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

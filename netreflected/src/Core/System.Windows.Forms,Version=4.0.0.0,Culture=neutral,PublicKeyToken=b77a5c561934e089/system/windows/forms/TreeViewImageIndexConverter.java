@@ -121,6 +121,9 @@ public class TreeViewImageIndexConverter extends ImageIndexConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TreeViewImageIndexConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TreeViewImageIndexConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TreeViewImageIndexConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

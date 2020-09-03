@@ -54,7 +54,7 @@ import system.windows.media.textformatting.TextLineBreak;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter</a>
  */
-public class TextFormatter extends NetObject  {
+public class TextFormatter extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -119,6 +119,9 @@ public class DataGridCellAutomationPeer extends FrameworkElementAutomationPeer  
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridCellAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataGridCellAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridCellAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

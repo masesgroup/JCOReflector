@@ -112,6 +112,9 @@ public class IDeserializationCallbackImplementation extends NetObject implements
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDeserializationCallback}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDeserializationCallback} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDeserializationCallback ToIDeserializationCallback(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

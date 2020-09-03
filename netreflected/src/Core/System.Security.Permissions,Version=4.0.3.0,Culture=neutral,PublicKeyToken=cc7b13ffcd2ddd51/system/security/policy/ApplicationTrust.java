@@ -122,6 +122,9 @@ public class ApplicationTrust extends EvidenceBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationTrust}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ApplicationTrust} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ApplicationTrust cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

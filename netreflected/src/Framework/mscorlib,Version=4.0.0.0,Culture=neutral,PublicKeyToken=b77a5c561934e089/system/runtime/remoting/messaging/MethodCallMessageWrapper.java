@@ -124,6 +124,9 @@ public class MethodCallMessageWrapper extends InternalMessageWrapper  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodCallMessageWrapper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MethodCallMessageWrapper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MethodCallMessageWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

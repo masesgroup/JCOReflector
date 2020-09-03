@@ -128,6 +128,9 @@ public class Convert extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Convert}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Convert} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Convert cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

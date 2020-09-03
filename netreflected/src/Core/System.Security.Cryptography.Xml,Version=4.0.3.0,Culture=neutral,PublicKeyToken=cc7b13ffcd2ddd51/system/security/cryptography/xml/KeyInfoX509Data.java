@@ -121,6 +121,9 @@ public class KeyInfoX509Data extends KeyInfoClause  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyInfoX509Data}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link KeyInfoX509Data} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static KeyInfoX509Data cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

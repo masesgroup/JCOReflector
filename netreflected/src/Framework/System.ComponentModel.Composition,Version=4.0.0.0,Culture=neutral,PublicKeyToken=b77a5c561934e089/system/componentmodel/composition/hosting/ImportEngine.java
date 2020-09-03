@@ -50,7 +50,7 @@ import system.componentmodel.composition.hosting.AtomicComposition;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ImportEngine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ImportEngine</a>
  */
-public class ImportEngine extends NetObject  {
+public class ImportEngine extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

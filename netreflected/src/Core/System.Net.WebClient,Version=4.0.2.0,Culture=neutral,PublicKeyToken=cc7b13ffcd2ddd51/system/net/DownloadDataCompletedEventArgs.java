@@ -118,6 +118,9 @@ public class DownloadDataCompletedEventArgs extends AsyncCompletedEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DownloadDataCompletedEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DownloadDataCompletedEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DownloadDataCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

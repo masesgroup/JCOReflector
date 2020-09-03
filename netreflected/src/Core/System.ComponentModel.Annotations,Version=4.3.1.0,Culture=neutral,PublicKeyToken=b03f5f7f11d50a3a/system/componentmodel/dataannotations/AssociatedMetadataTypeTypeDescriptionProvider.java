@@ -120,6 +120,9 @@ public class AssociatedMetadataTypeTypeDescriptionProvider extends TypeDescripti
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssociatedMetadataTypeTypeDescriptionProvider}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AssociatedMetadataTypeTypeDescriptionProvider} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AssociatedMetadataTypeTypeDescriptionProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

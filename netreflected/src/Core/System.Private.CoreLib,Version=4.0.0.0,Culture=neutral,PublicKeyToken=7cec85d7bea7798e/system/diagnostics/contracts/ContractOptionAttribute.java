@@ -118,6 +118,9 @@ public class ContractOptionAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContractOptionAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ContractOptionAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContractOptionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

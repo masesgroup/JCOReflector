@@ -119,6 +119,9 @@ public class CallSiteBinder extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CallSiteBinder}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CallSiteBinder} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CallSiteBinder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

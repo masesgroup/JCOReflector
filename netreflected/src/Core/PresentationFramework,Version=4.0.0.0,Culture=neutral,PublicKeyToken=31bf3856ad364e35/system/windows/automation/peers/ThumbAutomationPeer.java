@@ -119,6 +119,9 @@ public class ThumbAutomationPeer extends FrameworkElementAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ThumbAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ThumbAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ThumbAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

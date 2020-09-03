@@ -120,6 +120,9 @@ public class SeekStoryboard extends ControllableStoryboardAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SeekStoryboard}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SeekStoryboard} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SeekStoryboard cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

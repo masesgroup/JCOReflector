@@ -141,6 +141,9 @@ public class FileFormatException extends FormatException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileFormatException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FileFormatException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileFormatException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

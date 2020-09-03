@@ -52,7 +52,7 @@ import system.workflow.componentmodel.design.FreeformActivityDesigner;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.Connector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.Connector</a>
  */
-public class Connector extends NetObject  {
+public class Connector extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

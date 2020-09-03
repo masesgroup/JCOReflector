@@ -117,6 +117,9 @@ public class ValuePatternIdentifiers extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValuePatternIdentifiers}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ValuePatternIdentifiers} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ValuePatternIdentifiers cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

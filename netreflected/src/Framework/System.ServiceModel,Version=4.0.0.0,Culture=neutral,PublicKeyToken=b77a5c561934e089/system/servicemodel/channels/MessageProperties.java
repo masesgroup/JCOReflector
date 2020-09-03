@@ -50,7 +50,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.MessageProperties" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.MessageProperties</a>
  */
-public class MessageProperties extends NetObject  {
+public class MessageProperties extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

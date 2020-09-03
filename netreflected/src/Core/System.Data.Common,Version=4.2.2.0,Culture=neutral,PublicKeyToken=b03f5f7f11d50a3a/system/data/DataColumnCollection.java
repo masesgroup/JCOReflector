@@ -120,6 +120,9 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataColumnCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataColumnCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataColumnCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

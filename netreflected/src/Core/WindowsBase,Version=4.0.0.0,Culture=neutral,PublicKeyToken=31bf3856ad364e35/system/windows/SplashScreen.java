@@ -119,6 +119,9 @@ public class SplashScreen extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SplashScreen}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SplashScreen} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SplashScreen cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

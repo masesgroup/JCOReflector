@@ -118,6 +118,9 @@ public class ManagedToNativeComInteropStubAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManagedToNativeComInteropStubAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ManagedToNativeComInteropStubAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ManagedToNativeComInteropStubAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

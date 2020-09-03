@@ -127,6 +127,9 @@ public class BitmapFrame extends BitmapSource  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BitmapFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BitmapFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BitmapFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

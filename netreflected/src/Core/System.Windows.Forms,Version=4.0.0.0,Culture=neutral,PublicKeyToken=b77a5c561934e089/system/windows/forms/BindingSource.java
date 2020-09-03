@@ -133,6 +133,9 @@ public class BindingSource extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindingSource}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BindingSource} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BindingSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

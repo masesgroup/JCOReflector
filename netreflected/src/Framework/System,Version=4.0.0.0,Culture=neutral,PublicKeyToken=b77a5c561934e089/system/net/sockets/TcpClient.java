@@ -56,7 +56,7 @@ import system.net.sockets.Socket;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.TcpClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.TcpClient</a>
  */
-public class TcpClient extends NetObject  {
+public class TcpClient extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

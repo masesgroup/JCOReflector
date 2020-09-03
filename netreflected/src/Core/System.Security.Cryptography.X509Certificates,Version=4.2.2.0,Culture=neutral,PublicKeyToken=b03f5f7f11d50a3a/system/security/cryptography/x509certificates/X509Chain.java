@@ -52,7 +52,7 @@ import system.security.cryptography.x509certificates.X509ChainStatus;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Chain" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Chain</a>
  */
-public class X509Chain extends NetObject  {
+public class X509Chain extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -123,6 +123,9 @@ public class X509Chain extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509Chain}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link X509Chain} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509Chain cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

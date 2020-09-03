@@ -50,7 +50,7 @@ import system.drawing.Size;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BufferedGraphicsContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BufferedGraphicsContext</a>
  */
-public class BufferedGraphicsContext extends NetObject  {
+public class BufferedGraphicsContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

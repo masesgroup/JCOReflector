@@ -120,6 +120,9 @@ public class InvocationExpression extends Expression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InvocationExpression}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link InvocationExpression} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InvocationExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

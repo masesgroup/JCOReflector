@@ -138,6 +138,9 @@ public class MissingManifestResourceException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MissingManifestResourceException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MissingManifestResourceException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MissingManifestResourceException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

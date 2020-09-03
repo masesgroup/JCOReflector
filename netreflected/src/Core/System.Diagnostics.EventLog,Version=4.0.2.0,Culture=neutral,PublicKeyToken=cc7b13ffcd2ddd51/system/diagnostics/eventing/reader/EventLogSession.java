@@ -52,7 +52,7 @@ import system.diagnostics.eventing.reader.EventLogSession;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogSession" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogSession</a>
  */
-public class EventLogSession extends NetObject  {
+public class EventLogSession extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -123,6 +123,9 @@ public class EventLogSession extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLogSession}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EventLogSession} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventLogSession cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -125,6 +125,9 @@ public class FormatterConverter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FormatterConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FormatterConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FormatterConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

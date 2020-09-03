@@ -120,6 +120,9 @@ public class FormattableString extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FormattableString}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FormattableString} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FormattableString cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

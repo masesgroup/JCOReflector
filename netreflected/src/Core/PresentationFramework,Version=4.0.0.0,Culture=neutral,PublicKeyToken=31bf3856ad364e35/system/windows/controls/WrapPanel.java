@@ -119,6 +119,9 @@ public class WrapPanel extends Panel  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WrapPanel}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link WrapPanel} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WrapPanel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

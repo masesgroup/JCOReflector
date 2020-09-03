@@ -120,6 +120,9 @@ public class Vector3DValueSerializer extends ValueSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector3DValueSerializer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Vector3DValueSerializer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Vector3DValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

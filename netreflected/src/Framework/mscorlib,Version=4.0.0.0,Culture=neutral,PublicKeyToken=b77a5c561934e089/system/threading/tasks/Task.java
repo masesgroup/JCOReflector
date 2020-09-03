@@ -58,7 +58,7 @@ import system.threading.tasks.TaskStatus;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task</a>
  */
-public class Task extends NetObject  {
+public class Task extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -129,6 +129,9 @@ public class Task extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Task}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Task} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Task cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class StrokeHitEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StrokeHitEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link StrokeHitEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StrokeHitEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

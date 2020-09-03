@@ -120,6 +120,9 @@ public class LicFileLicenseProvider extends LicenseProvider  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LicFileLicenseProvider}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LicFileLicenseProvider} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LicFileLicenseProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

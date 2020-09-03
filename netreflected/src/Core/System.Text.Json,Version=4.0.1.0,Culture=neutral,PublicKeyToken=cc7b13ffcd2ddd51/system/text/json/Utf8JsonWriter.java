@@ -59,7 +59,7 @@ import system.Guid;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Utf8JsonWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Utf8JsonWriter</a>
  */
-public class Utf8JsonWriter extends NetObject  {
+public class Utf8JsonWriter extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -130,6 +130,9 @@ public class Utf8JsonWriter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Utf8JsonWriter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Utf8JsonWriter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Utf8JsonWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

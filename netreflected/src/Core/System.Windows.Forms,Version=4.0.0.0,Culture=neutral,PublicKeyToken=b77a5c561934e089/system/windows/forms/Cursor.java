@@ -52,7 +52,7 @@ import system.windows.forms.Cursor;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Cursor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Cursor</a>
  */
-public class Cursor extends NetObject  {
+public class Cursor extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -123,6 +123,9 @@ public class Cursor extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Cursor}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Cursor} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Cursor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -140,6 +140,9 @@ public class NotFiniteNumberException extends ArithmeticException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NotFiniteNumberException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link NotFiniteNumberException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NotFiniteNumberException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

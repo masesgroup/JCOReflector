@@ -112,6 +112,9 @@ public class IActivationFactoryImplementation extends NetObject implements IActi
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IActivationFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IActivationFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IActivationFactory ToIActivationFactory(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

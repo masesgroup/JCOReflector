@@ -117,6 +117,9 @@ public class TypeLoadExceptionHolder extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeLoadExceptionHolder}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TypeLoadExceptionHolder} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TypeLoadExceptionHolder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

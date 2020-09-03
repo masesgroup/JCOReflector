@@ -118,6 +118,9 @@ public class DirectoryServicesPermissionEntry extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryServicesPermissionEntry}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DirectoryServicesPermissionEntry} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectoryServicesPermissionEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

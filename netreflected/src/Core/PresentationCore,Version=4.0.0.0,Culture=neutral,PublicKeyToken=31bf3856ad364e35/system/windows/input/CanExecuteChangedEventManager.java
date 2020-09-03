@@ -120,6 +120,9 @@ public class CanExecuteChangedEventManager extends WeakEventManager  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CanExecuteChangedEventManager}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CanExecuteChangedEventManager} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CanExecuteChangedEventManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

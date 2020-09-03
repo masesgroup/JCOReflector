@@ -117,6 +117,9 @@ public class Sha256 extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Sha256}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Sha256} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Sha256 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

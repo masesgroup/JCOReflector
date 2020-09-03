@@ -48,7 +48,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ApplicationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ApplicationContext</a>
  */
-public class ApplicationContext extends NetObject  {
+public class ApplicationContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -119,6 +119,9 @@ public class ApplicationContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationContext}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ApplicationContext} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ApplicationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

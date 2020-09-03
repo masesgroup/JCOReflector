@@ -47,7 +47,7 @@ import system.io.Stream;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceReader</a>
  */
-public class ResourceReader extends NetObject  {
+public class ResourceReader extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -118,6 +118,9 @@ public class ResourceReader extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ResourceReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResourceReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

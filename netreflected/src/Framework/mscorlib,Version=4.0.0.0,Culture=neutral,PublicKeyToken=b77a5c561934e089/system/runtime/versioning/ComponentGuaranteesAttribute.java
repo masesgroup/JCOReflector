@@ -119,6 +119,9 @@ public class ComponentGuaranteesAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComponentGuaranteesAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComponentGuaranteesAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComponentGuaranteesAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

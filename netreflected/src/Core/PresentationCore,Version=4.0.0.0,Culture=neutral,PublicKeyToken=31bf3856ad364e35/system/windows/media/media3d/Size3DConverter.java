@@ -121,6 +121,9 @@ public class Size3DConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Size3DConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Size3DConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Size3DConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class DataGridViewAutoSizeColumnModeEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewAutoSizeColumnModeEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataGridViewAutoSizeColumnModeEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewAutoSizeColumnModeEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

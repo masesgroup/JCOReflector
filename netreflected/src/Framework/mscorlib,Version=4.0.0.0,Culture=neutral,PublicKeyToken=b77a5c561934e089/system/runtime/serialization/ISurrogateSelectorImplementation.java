@@ -117,6 +117,9 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISurrogateSelector}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISurrogateSelector} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISurrogateSelector ToISurrogateSelector(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -52,7 +52,7 @@ import system.security.cryptography.x509certificates.X509ChainStatus;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Chain" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Chain</a>
  */
-public class X509Chain extends NetObject  {
+public class X509Chain extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

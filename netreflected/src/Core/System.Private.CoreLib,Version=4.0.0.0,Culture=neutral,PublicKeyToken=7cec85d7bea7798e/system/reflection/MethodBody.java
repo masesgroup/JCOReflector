@@ -117,6 +117,9 @@ public class MethodBody extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodBody}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MethodBody} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MethodBody cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class TreeNodeMouseHoverEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TreeNodeMouseHoverEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TreeNodeMouseHoverEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TreeNodeMouseHoverEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

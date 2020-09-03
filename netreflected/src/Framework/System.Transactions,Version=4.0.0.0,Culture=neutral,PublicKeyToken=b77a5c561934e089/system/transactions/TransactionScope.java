@@ -52,7 +52,7 @@ import system.transactions.TransactionOptions;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope</a>
  */
-public class TransactionScope extends NetObject  {
+public class TransactionScope extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

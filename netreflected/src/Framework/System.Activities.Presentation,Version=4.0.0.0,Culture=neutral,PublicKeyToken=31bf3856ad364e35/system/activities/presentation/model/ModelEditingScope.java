@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.ModelEditingScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.ModelEditingScope</a>
  */
-public class ModelEditingScope extends NetObject  {
+public class ModelEditingScope extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

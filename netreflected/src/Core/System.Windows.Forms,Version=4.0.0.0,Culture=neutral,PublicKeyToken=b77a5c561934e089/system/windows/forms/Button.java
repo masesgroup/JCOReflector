@@ -122,6 +122,9 @@ public class Button extends ButtonBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Button}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Button} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Button cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

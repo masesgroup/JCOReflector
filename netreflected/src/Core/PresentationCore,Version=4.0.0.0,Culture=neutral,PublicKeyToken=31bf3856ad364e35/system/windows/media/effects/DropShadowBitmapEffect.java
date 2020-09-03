@@ -120,6 +120,9 @@ public class DropShadowBitmapEffect extends BitmapEffect  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DropShadowBitmapEffect}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DropShadowBitmapEffect} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DropShadowBitmapEffect cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

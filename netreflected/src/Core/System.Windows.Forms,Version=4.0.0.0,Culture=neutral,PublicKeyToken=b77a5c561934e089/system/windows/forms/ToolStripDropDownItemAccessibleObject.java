@@ -120,6 +120,9 @@ public class ToolStripDropDownItemAccessibleObject extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripDropDownItemAccessibleObject}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ToolStripDropDownItemAccessibleObject} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolStripDropDownItemAccessibleObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

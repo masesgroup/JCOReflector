@@ -118,6 +118,9 @@ public class SinglePhaseEnlistment extends Enlistment  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SinglePhaseEnlistment}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SinglePhaseEnlistment} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SinglePhaseEnlistment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

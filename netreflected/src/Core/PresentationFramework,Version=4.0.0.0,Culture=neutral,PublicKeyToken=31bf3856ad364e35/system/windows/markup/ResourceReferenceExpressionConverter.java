@@ -121,6 +121,9 @@ public class ResourceReferenceExpressionConverter extends ExpressionConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceReferenceExpressionConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ResourceReferenceExpressionConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResourceReferenceExpressionConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

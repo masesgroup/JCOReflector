@@ -118,6 +118,9 @@ public class ObjectHandle extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ObjectHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

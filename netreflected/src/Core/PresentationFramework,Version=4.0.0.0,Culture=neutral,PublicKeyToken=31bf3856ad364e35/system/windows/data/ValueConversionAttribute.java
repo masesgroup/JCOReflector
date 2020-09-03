@@ -118,6 +118,9 @@ public class ValueConversionAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValueConversionAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ValueConversionAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ValueConversionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

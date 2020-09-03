@@ -55,7 +55,7 @@ import system.diagnostics.tracing.EventSourceOptions;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventSource</a>
  */
-public class EventSource extends NetObject  {
+public class EventSource extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -126,6 +126,9 @@ public class EventSource extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventSource}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EventSource} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

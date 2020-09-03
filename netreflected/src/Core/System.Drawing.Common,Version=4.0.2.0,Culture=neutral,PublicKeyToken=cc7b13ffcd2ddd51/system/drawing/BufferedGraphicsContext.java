@@ -50,7 +50,7 @@ import system.drawing.Size;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BufferedGraphicsContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BufferedGraphicsContext</a>
  */
-public class BufferedGraphicsContext extends NetObject  {
+public class BufferedGraphicsContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -121,6 +121,9 @@ public class BufferedGraphicsContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BufferedGraphicsContext}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BufferedGraphicsContext} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BufferedGraphicsContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

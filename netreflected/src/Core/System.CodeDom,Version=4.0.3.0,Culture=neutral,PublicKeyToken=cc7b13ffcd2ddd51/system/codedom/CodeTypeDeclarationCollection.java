@@ -120,6 +120,9 @@ public class CodeTypeDeclarationCollection extends CollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeTypeDeclarationCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CodeTypeDeclarationCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeTypeDeclarationCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

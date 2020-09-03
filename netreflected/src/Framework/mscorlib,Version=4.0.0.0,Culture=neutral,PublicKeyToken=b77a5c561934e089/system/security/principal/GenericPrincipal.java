@@ -120,6 +120,9 @@ public class GenericPrincipal extends ClaimsPrincipal  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GenericPrincipal}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GenericPrincipal} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GenericPrincipal cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class SHA384 extends HashAlgorithm  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SHA384}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SHA384} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SHA384 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

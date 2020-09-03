@@ -128,6 +128,9 @@ public class AutomationPeer extends DispatcherObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

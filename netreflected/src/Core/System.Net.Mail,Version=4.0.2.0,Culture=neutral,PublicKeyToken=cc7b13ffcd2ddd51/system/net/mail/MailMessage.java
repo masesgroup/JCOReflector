@@ -55,7 +55,7 @@ import system.text.Encoding;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.MailMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.MailMessage</a>
  */
-public class MailMessage extends NetObject  {
+public class MailMessage extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -126,6 +126,9 @@ public class MailMessage extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MailMessage}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MailMessage} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MailMessage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

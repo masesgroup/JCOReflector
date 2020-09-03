@@ -119,6 +119,9 @@ public class SoundPlayerAction extends TriggerAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoundPlayerAction}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SoundPlayerAction} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SoundPlayerAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

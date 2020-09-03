@@ -121,6 +121,9 @@ public class OrthographicCamera extends ProjectionCamera  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OrthographicCamera}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link OrthographicCamera} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OrthographicCamera cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

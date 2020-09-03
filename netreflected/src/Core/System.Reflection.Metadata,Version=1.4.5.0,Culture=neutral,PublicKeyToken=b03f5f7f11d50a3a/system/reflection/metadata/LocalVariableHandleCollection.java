@@ -118,6 +118,9 @@ public class LocalVariableHandleCollection extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LocalVariableHandleCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LocalVariableHandleCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LocalVariableHandleCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

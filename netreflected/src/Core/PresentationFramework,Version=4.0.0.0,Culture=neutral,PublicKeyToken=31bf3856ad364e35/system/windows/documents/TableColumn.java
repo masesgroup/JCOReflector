@@ -120,6 +120,9 @@ public class TableColumn extends FrameworkContentElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableColumn}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TableColumn} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TableColumn cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

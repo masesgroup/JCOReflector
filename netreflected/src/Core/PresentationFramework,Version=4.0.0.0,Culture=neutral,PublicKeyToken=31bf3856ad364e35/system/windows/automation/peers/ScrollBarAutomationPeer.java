@@ -119,6 +119,9 @@ public class ScrollBarAutomationPeer extends RangeBaseAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ScrollBarAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ScrollBarAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ScrollBarAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

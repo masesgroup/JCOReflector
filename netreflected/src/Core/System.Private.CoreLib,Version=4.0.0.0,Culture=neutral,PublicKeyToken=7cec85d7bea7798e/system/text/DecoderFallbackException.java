@@ -138,6 +138,9 @@ public class DecoderFallbackException extends ArgumentException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DecoderFallbackException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DecoderFallbackException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DecoderFallbackException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

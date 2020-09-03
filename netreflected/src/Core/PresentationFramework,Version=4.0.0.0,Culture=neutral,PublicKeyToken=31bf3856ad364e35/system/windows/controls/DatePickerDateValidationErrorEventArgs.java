@@ -118,6 +118,9 @@ public class DatePickerDateValidationErrorEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DatePickerDateValidationErrorEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DatePickerDateValidationErrorEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DatePickerDateValidationErrorEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

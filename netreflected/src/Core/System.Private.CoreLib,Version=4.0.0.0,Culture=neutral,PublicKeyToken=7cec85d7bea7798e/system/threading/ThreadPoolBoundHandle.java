@@ -48,7 +48,7 @@ import system.runtime.interopservices.SafeHandle;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadPoolBoundHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadPoolBoundHandle</a>
  */
-public class ThreadPoolBoundHandle extends NetObject  {
+public class ThreadPoolBoundHandle extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -119,6 +119,9 @@ public class ThreadPoolBoundHandle extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ThreadPoolBoundHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ThreadPoolBoundHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ThreadPoolBoundHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

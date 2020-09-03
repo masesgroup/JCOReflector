@@ -122,6 +122,9 @@ public class OraclePermissionAttribute extends CodeAccessSecurityAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OraclePermissionAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link OraclePermissionAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OraclePermissionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

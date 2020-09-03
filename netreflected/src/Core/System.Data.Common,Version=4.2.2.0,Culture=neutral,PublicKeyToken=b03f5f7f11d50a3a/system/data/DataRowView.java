@@ -122,6 +122,9 @@ public class DataRowView extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataRowView}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataRowView} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataRowView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

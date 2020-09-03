@@ -117,6 +117,9 @@ public class ConfigurationLockCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationLockCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ConfigurationLockCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConfigurationLockCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

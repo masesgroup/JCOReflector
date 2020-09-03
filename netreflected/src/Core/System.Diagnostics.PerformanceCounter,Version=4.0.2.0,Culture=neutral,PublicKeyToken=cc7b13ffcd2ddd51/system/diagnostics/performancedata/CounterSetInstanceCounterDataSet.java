@@ -47,7 +47,7 @@ import system.diagnostics.performancedata.CounterData;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet</a>
  */
-public class CounterSetInstanceCounterDataSet extends NetObject  {
+public class CounterSetInstanceCounterDataSet extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -118,6 +118,9 @@ public class CounterSetInstanceCounterDataSet extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CounterSetInstanceCounterDataSet}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CounterSetInstanceCounterDataSet} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CounterSetInstanceCounterDataSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

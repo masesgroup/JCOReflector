@@ -122,6 +122,9 @@ public class EasingVector3DKeyFrame extends Vector3DKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EasingVector3DKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EasingVector3DKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EasingVector3DKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

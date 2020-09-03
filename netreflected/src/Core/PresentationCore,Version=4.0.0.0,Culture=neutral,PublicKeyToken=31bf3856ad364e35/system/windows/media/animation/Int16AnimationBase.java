@@ -120,6 +120,9 @@ public class Int16AnimationBase extends AnimationTimeline  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int16AnimationBase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Int16AnimationBase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Int16AnimationBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

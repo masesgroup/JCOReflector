@@ -125,6 +125,9 @@ public class XpsPackagingPolicy extends BasePackagingPolicy  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XpsPackagingPolicy}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XpsPackagingPolicy} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XpsPackagingPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

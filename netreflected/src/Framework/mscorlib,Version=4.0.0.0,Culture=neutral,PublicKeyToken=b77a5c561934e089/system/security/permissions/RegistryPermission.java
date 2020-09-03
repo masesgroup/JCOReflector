@@ -124,6 +124,9 @@ public class RegistryPermission extends CodeAccessPermission  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegistryPermission}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RegistryPermission} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegistryPermission cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

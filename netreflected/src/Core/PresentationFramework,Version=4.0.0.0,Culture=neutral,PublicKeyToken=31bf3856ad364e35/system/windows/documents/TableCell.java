@@ -125,6 +125,9 @@ public class TableCell extends TextElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableCell}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TableCell} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TableCell cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

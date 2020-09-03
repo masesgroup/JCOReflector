@@ -49,7 +49,7 @@ import system.resources.IResourceReaderImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceSet</a>
  */
-public class ResourceSet extends NetObject  {
+public class ResourceSet extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -120,6 +120,9 @@ public class ResourceSet extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceSet}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ResourceSet} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResourceSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

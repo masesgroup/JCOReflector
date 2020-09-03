@@ -112,6 +112,9 @@ public class IServiceProviderImplementation extends NetObject implements IServic
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IServiceProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IServiceProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IServiceProvider ToIServiceProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

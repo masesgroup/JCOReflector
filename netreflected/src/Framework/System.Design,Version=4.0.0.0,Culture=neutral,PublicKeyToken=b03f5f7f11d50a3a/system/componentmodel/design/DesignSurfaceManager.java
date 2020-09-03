@@ -53,7 +53,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignSurfaceManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignSurfaceManager</a>
  */
-public class DesignSurfaceManager extends NetObject  {
+public class DesignSurfaceManager extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

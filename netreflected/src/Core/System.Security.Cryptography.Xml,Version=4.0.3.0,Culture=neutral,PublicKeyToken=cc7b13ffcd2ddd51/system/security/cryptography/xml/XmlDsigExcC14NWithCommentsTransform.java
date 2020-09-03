@@ -118,6 +118,9 @@ public class XmlDsigExcC14NWithCommentsTransform extends XmlDsigExcC14NTransform
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDsigExcC14NWithCommentsTransform}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlDsigExcC14NWithCommentsTransform} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlDsigExcC14NWithCommentsTransform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

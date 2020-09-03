@@ -140,6 +140,9 @@ public class SwitchExpressionException extends InvalidOperationException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SwitchExpressionException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SwitchExpressionException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SwitchExpressionException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

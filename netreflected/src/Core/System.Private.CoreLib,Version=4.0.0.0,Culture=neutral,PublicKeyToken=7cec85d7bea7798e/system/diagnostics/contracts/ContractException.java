@@ -140,6 +140,9 @@ public class ContractException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContractException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ContractException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContractException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

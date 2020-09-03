@@ -120,6 +120,9 @@ public class DataTypeAttribute extends ValidationAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataTypeAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataTypeAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataTypeAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

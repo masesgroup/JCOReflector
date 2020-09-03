@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.PreAllocatedOverlapped" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.PreAllocatedOverlapped</a>
  */
-public class PreAllocatedOverlapped extends NetObject  {
+public class PreAllocatedOverlapped extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -117,6 +117,9 @@ public class PreAllocatedOverlapped extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PreAllocatedOverlapped}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PreAllocatedOverlapped} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PreAllocatedOverlapped cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

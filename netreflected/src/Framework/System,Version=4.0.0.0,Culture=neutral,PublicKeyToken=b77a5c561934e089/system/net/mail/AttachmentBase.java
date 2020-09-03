@@ -49,7 +49,7 @@ import system.net.mime.TransferEncoding;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentBase</a>
  */
-public class AttachmentBase extends NetObject  {
+public class AttachmentBase extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

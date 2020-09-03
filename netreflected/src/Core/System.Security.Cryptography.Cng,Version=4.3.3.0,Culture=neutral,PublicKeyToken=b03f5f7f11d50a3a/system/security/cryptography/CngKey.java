@@ -61,7 +61,7 @@ import system.security.cryptography.CngUIPolicy;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngKey</a>
  */
-public class CngKey extends NetObject  {
+public class CngKey extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Cng, Version=4.3.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -132,6 +132,9 @@ public class CngKey extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CngKey}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CngKey} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CngKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

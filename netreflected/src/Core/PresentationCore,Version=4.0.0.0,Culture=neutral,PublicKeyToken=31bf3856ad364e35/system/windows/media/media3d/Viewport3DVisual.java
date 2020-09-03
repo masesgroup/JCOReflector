@@ -133,6 +133,9 @@ public class Viewport3DVisual extends Visual  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Viewport3DVisual}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Viewport3DVisual} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Viewport3DVisual cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

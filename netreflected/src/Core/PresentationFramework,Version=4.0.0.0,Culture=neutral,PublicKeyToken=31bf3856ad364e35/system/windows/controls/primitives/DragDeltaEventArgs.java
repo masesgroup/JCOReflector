@@ -118,6 +118,9 @@ public class DragDeltaEventArgs extends RoutedEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DragDeltaEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DragDeltaEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DragDeltaEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

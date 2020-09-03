@@ -124,6 +124,9 @@ public class StatusStrip extends ToolStrip  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StatusStrip}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link StatusStrip} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StatusStrip cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

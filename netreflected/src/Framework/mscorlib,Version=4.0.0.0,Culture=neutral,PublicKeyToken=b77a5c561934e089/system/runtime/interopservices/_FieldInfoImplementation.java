@@ -120,6 +120,9 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _FieldInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _FieldInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _FieldInfo To_FieldInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

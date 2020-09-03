@@ -120,6 +120,9 @@ public class CultureAwareComparer extends StringComparer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CultureAwareComparer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CultureAwareComparer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CultureAwareComparer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

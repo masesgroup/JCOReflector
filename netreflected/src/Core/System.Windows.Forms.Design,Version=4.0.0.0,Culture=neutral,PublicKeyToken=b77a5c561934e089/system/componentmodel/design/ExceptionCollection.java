@@ -139,6 +139,9 @@ public class ExceptionCollection extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExceptionCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ExceptionCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExceptionCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class MenuCommand extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MenuCommand}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MenuCommand} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MenuCommand cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

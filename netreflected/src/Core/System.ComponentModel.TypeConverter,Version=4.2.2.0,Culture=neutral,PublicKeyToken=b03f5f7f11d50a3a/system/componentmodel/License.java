@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.License" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.License</a>
  */
-public class License extends NetObject  {
+public class License extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -117,6 +117,9 @@ public class License extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link License}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link License} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static License cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

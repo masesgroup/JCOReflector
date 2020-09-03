@@ -120,6 +120,9 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RSAPKCS1KeyExchangeFormatter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RSAPKCS1KeyExchangeFormatter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RSAPKCS1KeyExchangeFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

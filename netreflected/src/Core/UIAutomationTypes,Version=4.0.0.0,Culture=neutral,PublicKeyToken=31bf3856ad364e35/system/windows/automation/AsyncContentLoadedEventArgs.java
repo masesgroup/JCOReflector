@@ -119,6 +119,9 @@ public class AsyncContentLoadedEventArgs extends AutomationEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncContentLoadedEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AsyncContentLoadedEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsyncContentLoadedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -115,6 +115,9 @@ public class IContextAttributeImplementation extends NetObject implements IConte
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContextAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IContextAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IContextAttribute ToIContextAttribute(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

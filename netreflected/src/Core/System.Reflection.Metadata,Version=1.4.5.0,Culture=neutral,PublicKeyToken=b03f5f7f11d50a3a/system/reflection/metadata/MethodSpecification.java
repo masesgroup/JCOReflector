@@ -121,6 +121,9 @@ public class MethodSpecification extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodSpecification}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MethodSpecification} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MethodSpecification cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

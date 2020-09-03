@@ -123,6 +123,9 @@ public class RenderOptions extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RenderOptions}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RenderOptions} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RenderOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

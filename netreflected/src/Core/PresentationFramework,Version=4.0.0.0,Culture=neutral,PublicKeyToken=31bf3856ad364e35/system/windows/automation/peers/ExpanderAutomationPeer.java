@@ -120,6 +120,9 @@ public class ExpanderAutomationPeer extends FrameworkElementAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExpanderAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ExpanderAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExpanderAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

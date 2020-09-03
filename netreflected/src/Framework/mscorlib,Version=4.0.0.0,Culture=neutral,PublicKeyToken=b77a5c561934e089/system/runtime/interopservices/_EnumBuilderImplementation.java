@@ -113,6 +113,9 @@ public class _EnumBuilderImplementation extends NetObject implements _EnumBuilde
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _EnumBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _EnumBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _EnumBuilder To_EnumBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

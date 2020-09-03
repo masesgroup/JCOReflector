@@ -128,6 +128,9 @@ public class HwndSource extends PresentationSource  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HwndSource}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HwndSource} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HwndSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

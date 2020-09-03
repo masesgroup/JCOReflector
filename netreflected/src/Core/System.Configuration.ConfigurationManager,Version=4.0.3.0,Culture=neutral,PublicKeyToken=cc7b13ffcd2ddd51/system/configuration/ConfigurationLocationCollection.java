@@ -119,6 +119,9 @@ public class ConfigurationLocationCollection extends ReadOnlyCollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationLocationCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ConfigurationLocationCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConfigurationLocationCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

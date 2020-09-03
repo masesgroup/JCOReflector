@@ -118,6 +118,9 @@ public class AssemblyMetadataAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyMetadataAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AssemblyMetadataAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AssemblyMetadataAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

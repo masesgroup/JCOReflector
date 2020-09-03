@@ -118,6 +118,9 @@ public class XmlSchemaLengthFacet extends XmlSchemaNumericFacet  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaLengthFacet}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlSchemaLengthFacet} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaLengthFacet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

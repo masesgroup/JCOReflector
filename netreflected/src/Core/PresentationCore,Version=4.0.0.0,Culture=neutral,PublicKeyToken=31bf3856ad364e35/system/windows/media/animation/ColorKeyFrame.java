@@ -120,6 +120,9 @@ public class ColorKeyFrame extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ColorKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ColorKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ColorKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

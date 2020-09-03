@@ -119,6 +119,9 @@ public class DataTableNewRowEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataTableNewRowEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataTableNewRowEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataTableNewRowEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

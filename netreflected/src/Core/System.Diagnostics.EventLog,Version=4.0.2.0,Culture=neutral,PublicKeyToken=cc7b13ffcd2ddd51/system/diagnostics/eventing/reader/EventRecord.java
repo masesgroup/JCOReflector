@@ -48,7 +48,7 @@ import system.security.principal.SecurityIdentifier;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord</a>
  */
-public class EventRecord extends NetObject  {
+public class EventRecord extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -119,6 +119,9 @@ public class EventRecord extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventRecord}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EventRecord} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

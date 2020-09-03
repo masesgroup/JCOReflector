@@ -126,6 +126,9 @@ public class ClientChannelSinkStack extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClientChannelSinkStack}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ClientChannelSinkStack} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ClientChannelSinkStack cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

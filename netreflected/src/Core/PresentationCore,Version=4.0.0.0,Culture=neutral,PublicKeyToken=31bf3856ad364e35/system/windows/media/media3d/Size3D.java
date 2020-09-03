@@ -121,6 +121,9 @@ public class Size3D extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Size3D}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Size3D} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Size3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

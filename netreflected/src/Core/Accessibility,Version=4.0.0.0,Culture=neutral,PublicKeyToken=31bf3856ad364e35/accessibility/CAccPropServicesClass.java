@@ -118,6 +118,9 @@ public class CAccPropServicesClass extends __ComObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CAccPropServicesClass}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CAccPropServicesClass} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CAccPropServicesClass cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -50,7 +50,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.ProviderMetadata" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.ProviderMetadata</a>
  */
-public class ProviderMetadata extends NetObject  {
+public class ProviderMetadata extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

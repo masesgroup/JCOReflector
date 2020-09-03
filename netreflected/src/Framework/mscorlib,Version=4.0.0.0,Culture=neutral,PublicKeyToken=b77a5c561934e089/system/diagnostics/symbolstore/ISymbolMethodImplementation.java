@@ -121,6 +121,9 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolMethod}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISymbolMethod} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISymbolMethod ToISymbolMethod(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

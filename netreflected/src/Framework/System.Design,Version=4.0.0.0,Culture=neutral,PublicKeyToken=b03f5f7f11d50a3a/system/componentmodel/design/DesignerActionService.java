@@ -54,7 +54,7 @@ import system.componentmodel.design.DesignerActionListsChangedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionService</a>
  */
-public class DesignerActionService extends NetObject  {
+public class DesignerActionService extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

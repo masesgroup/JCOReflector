@@ -118,6 +118,9 @@ public class Pkcs12ShroudedKeyBag extends Pkcs12SafeBag  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs12ShroudedKeyBag}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Pkcs12ShroudedKeyBag} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Pkcs12ShroudedKeyBag cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

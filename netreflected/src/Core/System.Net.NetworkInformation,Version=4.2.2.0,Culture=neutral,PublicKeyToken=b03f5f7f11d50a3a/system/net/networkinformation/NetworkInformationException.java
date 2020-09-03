@@ -138,6 +138,9 @@ public class NetworkInformationException extends Win32Exception {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetworkInformationException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link NetworkInformationException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NetworkInformationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

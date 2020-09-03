@@ -50,7 +50,7 @@ import system.net.http.headers.HttpContentHeaders;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpContent</a>
  */
-public class HttpContent extends NetObject  {
+public class HttpContent extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

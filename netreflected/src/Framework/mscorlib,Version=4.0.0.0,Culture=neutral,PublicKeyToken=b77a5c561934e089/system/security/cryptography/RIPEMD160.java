@@ -119,6 +119,9 @@ public class RIPEMD160 extends HashAlgorithm  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RIPEMD160}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RIPEMD160} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RIPEMD160 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

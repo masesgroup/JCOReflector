@@ -124,6 +124,9 @@ public class Point3DAnimation extends Point3DAnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Point3DAnimation}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Point3DAnimation} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Point3DAnimation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

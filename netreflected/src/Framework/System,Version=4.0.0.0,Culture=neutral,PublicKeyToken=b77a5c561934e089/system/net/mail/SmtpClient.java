@@ -55,7 +55,7 @@ import system.net.mail.SendCompletedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpClient</a>
  */
-public class SmtpClient extends NetObject  {
+public class SmtpClient extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

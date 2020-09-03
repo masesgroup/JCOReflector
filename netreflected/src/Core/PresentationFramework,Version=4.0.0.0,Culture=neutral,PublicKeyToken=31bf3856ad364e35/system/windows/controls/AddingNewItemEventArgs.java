@@ -118,6 +118,9 @@ public class AddingNewItemEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AddingNewItemEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AddingNewItemEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AddingNewItemEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

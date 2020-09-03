@@ -120,6 +120,9 @@ public class CodeMethodReferenceExpression extends CodeExpression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeMethodReferenceExpression}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CodeMethodReferenceExpression} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeMethodReferenceExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

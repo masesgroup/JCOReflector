@@ -125,6 +125,9 @@ public class EventsTab extends PropertyTab  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventsTab}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EventsTab} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventsTab cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

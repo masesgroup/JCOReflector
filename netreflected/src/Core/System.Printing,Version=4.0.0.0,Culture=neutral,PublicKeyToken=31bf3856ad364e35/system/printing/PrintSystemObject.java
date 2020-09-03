@@ -48,7 +48,7 @@ import system.printing.PrintSystemObject;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintSystemObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintSystemObject</a>
  */
-public class PrintSystemObject extends NetObject  {
+public class PrintSystemObject extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -119,6 +119,9 @@ public class PrintSystemObject extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintSystemObject}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PrintSystemObject} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintSystemObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

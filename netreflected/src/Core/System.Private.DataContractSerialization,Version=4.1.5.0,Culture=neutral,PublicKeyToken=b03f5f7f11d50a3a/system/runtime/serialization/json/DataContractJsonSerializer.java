@@ -127,6 +127,9 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataContractJsonSerializer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataContractJsonSerializer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataContractJsonSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

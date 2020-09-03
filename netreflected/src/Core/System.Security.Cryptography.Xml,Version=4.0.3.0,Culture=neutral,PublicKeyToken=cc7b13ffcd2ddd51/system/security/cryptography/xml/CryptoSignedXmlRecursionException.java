@@ -138,6 +138,9 @@ public class CryptoSignedXmlRecursionException extends XmlException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CryptoSignedXmlRecursionException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CryptoSignedXmlRecursionException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CryptoSignedXmlRecursionException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

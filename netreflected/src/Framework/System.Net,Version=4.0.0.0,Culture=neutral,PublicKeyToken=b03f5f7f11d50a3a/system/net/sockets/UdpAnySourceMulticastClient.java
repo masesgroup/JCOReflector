@@ -51,7 +51,7 @@ import system.net.IPEndPoint;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpAnySourceMulticastClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpAnySourceMulticastClient</a>
  */
-public class UdpAnySourceMulticastClient extends NetObject  {
+public class UdpAnySourceMulticastClient extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

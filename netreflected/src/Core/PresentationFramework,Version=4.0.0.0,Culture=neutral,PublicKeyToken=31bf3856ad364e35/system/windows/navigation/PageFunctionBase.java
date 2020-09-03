@@ -118,6 +118,9 @@ public class PageFunctionBase extends Page  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageFunctionBase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PageFunctionBase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PageFunctionBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

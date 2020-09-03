@@ -119,6 +119,9 @@ public class Int32KeyFrame extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int32KeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Int32KeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Int32KeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

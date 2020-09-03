@@ -118,6 +118,9 @@ public class FontWeights extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontWeights}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FontWeights} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FontWeights cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

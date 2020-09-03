@@ -119,6 +119,9 @@ public class TableLayoutRowStyleCollection extends TableLayoutStyleCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableLayoutRowStyleCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TableLayoutRowStyleCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TableLayoutRowStyleCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

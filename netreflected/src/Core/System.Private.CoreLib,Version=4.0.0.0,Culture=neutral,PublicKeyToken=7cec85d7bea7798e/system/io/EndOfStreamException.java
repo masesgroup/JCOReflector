@@ -138,6 +138,9 @@ public class EndOfStreamException extends IOException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EndOfStreamException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EndOfStreamException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EndOfStreamException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

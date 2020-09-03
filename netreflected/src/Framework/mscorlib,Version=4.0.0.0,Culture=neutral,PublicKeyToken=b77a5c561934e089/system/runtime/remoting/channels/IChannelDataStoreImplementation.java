@@ -112,6 +112,9 @@ public class IChannelDataStoreImplementation extends NetObject implements IChann
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IChannelDataStore}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IChannelDataStore} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IChannelDataStore ToIChannelDataStore(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

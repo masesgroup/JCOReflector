@@ -47,7 +47,7 @@ import system.messaging.MessageQueueTransactionStatus;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueTransaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueTransaction</a>
  */
-public class MessageQueueTransaction extends NetObject  {
+public class MessageQueueTransaction extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

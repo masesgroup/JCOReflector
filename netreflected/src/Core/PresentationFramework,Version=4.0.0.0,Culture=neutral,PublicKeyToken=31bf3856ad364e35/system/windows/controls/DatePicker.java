@@ -124,6 +124,9 @@ public class DatePicker extends Control  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DatePicker}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DatePicker} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DatePicker cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

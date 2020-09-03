@@ -124,6 +124,9 @@ public class AsyncResult extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncResult}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AsyncResult} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsyncResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

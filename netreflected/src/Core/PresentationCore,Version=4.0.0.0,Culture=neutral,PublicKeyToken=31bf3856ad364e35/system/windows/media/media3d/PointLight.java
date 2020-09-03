@@ -121,6 +121,9 @@ public class PointLight extends PointLightBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PointLight}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PointLight} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PointLight cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

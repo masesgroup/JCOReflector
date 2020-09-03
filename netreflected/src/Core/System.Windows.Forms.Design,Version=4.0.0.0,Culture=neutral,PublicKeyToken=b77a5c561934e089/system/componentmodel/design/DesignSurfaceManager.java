@@ -53,7 +53,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignSurfaceManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignSurfaceManager</a>
  */
-public class DesignSurfaceManager extends NetObject  {
+public class DesignSurfaceManager extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -124,6 +124,9 @@ public class DesignSurfaceManager extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignSurfaceManager}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DesignSurfaceManager} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DesignSurfaceManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

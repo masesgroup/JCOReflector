@@ -145,6 +145,9 @@ public class ToolStripDropDown extends ToolStrip  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripDropDown}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ToolStripDropDown} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolStripDropDown cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -138,6 +138,9 @@ public class ArgumentNullException extends ArgumentException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ArgumentNullException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ArgumentNullException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ArgumentNullException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

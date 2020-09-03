@@ -138,6 +138,9 @@ public class DirectoryNotFoundException extends IOException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryNotFoundException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DirectoryNotFoundException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectoryNotFoundException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

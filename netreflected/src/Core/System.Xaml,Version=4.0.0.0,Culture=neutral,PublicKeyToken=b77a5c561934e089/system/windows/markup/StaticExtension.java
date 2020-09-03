@@ -120,6 +120,9 @@ public class StaticExtension extends MarkupExtension  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StaticExtension}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link StaticExtension} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StaticExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

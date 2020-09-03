@@ -113,6 +113,9 @@ public class IContextPropertyImplementation extends NetObject implements IContex
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContextProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IContextProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IContextProperty ToIContextProperty(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class CharConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CharConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CharConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CharConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

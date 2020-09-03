@@ -125,6 +125,9 @@ public class TileBrush extends Brush  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TileBrush}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TileBrush} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TileBrush cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

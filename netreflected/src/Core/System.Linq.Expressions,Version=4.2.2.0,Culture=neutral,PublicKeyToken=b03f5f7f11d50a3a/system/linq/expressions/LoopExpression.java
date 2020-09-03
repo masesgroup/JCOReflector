@@ -121,6 +121,9 @@ public class LoopExpression extends Expression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LoopExpression}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LoopExpression} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LoopExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

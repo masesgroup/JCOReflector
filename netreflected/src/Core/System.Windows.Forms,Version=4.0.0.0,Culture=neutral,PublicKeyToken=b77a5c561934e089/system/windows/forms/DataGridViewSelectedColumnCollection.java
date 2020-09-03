@@ -119,6 +119,9 @@ public class DataGridViewSelectedColumnCollection extends BaseCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewSelectedColumnCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataGridViewSelectedColumnCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewSelectedColumnCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

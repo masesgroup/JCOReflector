@@ -122,6 +122,9 @@ public class XmlText extends XmlCharacterData  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlText}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlText} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlText cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

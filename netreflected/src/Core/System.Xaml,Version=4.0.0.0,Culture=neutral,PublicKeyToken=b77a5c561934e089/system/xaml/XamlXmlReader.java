@@ -55,7 +55,7 @@ import system.xaml.XamlType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlXmlReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlXmlReader</a>
  */
-public class XamlXmlReader extends NetObject  {
+public class XamlXmlReader extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -126,6 +126,9 @@ public class XamlXmlReader extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlXmlReader}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XamlXmlReader} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlXmlReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -140,6 +140,9 @@ public class ReflectionTypeLoadException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReflectionTypeLoadException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ReflectionTypeLoadException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ReflectionTypeLoadException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

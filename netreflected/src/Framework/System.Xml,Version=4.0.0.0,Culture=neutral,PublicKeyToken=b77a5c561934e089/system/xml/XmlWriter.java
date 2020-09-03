@@ -60,7 +60,7 @@ import system.xml.XmlSpace;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter</a>
  */
-public class XmlWriter extends NetObject  {
+public class XmlWriter extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

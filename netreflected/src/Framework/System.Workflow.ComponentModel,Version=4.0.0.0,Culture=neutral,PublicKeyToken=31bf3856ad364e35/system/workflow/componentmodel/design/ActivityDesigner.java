@@ -59,7 +59,7 @@ import system.workflow.componentmodel.design.ActivityDesignerTheme;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner</a>
  */
-public class ActivityDesigner extends NetObject  {
+public class ActivityDesigner extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

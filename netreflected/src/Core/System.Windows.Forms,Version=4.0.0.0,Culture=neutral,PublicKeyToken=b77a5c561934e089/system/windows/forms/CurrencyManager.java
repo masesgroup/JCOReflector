@@ -124,6 +124,9 @@ public class CurrencyManager extends BindingManagerBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CurrencyManager}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CurrencyManager} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CurrencyManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

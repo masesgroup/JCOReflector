@@ -126,6 +126,9 @@ public class NameValueCollection extends NameObjectCollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NameValueCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link NameValueCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NameValueCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

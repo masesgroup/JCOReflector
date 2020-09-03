@@ -119,6 +119,9 @@ public class CspKeyContainerInfo extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CspKeyContainerInfo}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CspKeyContainerInfo} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CspKeyContainerInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class XmlnsPrefixAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlnsPrefixAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlnsPrefixAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlnsPrefixAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

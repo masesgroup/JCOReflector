@@ -60,7 +60,7 @@ import system.xml.XmlSpace;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter</a>
  */
-public class XmlWriter extends NetObject  {
+public class XmlWriter extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -131,6 +131,9 @@ public class XmlWriter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlWriter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlWriter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

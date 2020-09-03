@@ -117,6 +117,9 @@ public class LightLambda extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LightLambda}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LightLambda} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LightLambda cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

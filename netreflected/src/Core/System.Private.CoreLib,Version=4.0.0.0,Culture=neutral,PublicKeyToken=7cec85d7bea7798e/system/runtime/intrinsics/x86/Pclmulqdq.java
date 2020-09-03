@@ -118,6 +118,9 @@ public class Pclmulqdq extends Sse2  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pclmulqdq}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Pclmulqdq} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Pclmulqdq cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

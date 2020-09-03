@@ -118,6 +118,9 @@ public class ComUnregisterFunctionAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComUnregisterFunctionAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComUnregisterFunctionAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComUnregisterFunctionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

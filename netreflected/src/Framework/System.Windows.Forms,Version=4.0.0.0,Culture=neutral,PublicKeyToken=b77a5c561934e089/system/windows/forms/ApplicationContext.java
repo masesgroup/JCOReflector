@@ -48,7 +48,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ApplicationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ApplicationContext</a>
  */
-public class ApplicationContext extends NetObject  {
+public class ApplicationContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -120,6 +120,9 @@ public class MultiDataTrigger extends TriggerBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MultiDataTrigger}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MultiDataTrigger} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MultiDataTrigger cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class CustomLineCap extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CustomLineCap}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CustomLineCap} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CustomLineCap cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -124,6 +124,9 @@ public class SslServerAuthenticationOptions extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SslServerAuthenticationOptions}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SslServerAuthenticationOptions} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SslServerAuthenticationOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

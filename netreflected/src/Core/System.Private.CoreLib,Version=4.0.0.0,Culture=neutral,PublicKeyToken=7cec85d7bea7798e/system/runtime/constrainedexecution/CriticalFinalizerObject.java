@@ -117,6 +117,9 @@ public class CriticalFinalizerObject extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CriticalFinalizerObject}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CriticalFinalizerObject} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CriticalFinalizerObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

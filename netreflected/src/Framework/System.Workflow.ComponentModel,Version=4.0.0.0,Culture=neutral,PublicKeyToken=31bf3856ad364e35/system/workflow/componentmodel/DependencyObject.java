@@ -53,7 +53,7 @@ import system.componentmodel.ISiteImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyObject</a>
  */
-public class DependencyObject extends NetObject  {
+public class DependencyObject extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

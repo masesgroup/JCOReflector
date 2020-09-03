@@ -59,7 +59,7 @@ import system.io.packaging.PackageProperties;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.Package" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.Package</a>
  */
-public class Package extends NetObject  {
+public class Package extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

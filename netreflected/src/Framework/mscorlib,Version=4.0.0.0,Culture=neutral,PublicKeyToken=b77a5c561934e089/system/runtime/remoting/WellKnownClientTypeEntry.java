@@ -118,6 +118,9 @@ public class WellKnownClientTypeEntry extends TypeEntry  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WellKnownClientTypeEntry}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WellKnownClientTypeEntry} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WellKnownClientTypeEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

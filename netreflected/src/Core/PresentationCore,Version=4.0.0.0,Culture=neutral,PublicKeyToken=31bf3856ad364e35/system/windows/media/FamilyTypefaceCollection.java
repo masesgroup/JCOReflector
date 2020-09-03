@@ -118,6 +118,9 @@ public class FamilyTypefaceCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FamilyTypefaceCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FamilyTypefaceCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FamilyTypefaceCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

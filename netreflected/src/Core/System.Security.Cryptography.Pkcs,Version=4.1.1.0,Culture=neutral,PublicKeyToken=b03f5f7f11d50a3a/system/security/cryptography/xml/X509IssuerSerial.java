@@ -118,6 +118,9 @@ public class X509IssuerSerial extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509IssuerSerial}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link X509IssuerSerial} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509IssuerSerial cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

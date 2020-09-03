@@ -117,6 +117,9 @@ public class DataflowBlock extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataflowBlock}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataflowBlock} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataflowBlock cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

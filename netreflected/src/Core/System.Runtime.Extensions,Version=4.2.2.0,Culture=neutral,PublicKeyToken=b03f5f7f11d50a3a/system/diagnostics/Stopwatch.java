@@ -119,6 +119,9 @@ public class Stopwatch extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Stopwatch}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Stopwatch} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Stopwatch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class IPAddressCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPAddressCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link IPAddressCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPAddressCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

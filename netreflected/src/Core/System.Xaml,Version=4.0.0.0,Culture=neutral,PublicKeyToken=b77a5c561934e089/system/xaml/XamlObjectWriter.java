@@ -125,6 +125,9 @@ public class XamlObjectWriter extends XamlWriter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlObjectWriter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XamlObjectWriter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlObjectWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class HMACSHA256 extends HMAC  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HMACSHA256}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HMACSHA256} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HMACSHA256 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

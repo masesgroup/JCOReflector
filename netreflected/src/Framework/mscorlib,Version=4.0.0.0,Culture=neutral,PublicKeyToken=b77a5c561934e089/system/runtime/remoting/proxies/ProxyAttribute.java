@@ -124,6 +124,9 @@ public class ProxyAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProxyAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ProxyAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ProxyAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

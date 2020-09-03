@@ -119,6 +119,9 @@ public class AsyncFlowControl extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncFlowControl}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AsyncFlowControl} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsyncFlowControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

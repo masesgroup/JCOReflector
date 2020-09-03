@@ -126,6 +126,9 @@ public class SignerInfo extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SignerInfo}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SignerInfo} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SignerInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

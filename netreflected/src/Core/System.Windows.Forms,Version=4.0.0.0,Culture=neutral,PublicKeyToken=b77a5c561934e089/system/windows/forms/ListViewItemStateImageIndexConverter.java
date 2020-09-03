@@ -118,6 +118,9 @@ public class ListViewItemStateImageIndexConverter extends ImageIndexConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListViewItemStateImageIndexConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ListViewItemStateImageIndexConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ListViewItemStateImageIndexConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

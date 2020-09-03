@@ -119,6 +119,9 @@ public class ConfigurationValidatorAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationValidatorAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ConfigurationValidatorAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConfigurationValidatorAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

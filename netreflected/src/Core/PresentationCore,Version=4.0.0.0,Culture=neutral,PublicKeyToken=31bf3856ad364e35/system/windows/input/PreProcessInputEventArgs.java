@@ -118,6 +118,9 @@ public class PreProcessInputEventArgs extends ProcessInputEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PreProcessInputEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PreProcessInputEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PreProcessInputEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

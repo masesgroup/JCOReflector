@@ -118,6 +118,9 @@ public class RootDesignerSerializerAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RootDesignerSerializerAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RootDesignerSerializerAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RootDesignerSerializerAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

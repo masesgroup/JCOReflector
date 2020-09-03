@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.TempFileCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.TempFileCollection</a>
  */
-public class TempFileCollection extends NetObject  {
+public class TempFileCollection extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -117,6 +117,9 @@ public class TempFileCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TempFileCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TempFileCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TempFileCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

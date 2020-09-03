@@ -120,6 +120,9 @@ public class Rotation3DKeyFrameCollection extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rotation3DKeyFrameCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Rotation3DKeyFrameCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Rotation3DKeyFrameCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class FileDialogCustomPlacesCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileDialogCustomPlacesCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FileDialogCustomPlacesCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileDialogCustomPlacesCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

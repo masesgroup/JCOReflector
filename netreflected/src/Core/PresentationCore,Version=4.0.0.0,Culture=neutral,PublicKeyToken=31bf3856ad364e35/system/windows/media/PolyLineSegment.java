@@ -120,6 +120,9 @@ public class PolyLineSegment extends PathSegment  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PolyLineSegment}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PolyLineSegment} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PolyLineSegment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

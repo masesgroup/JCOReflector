@@ -48,7 +48,7 @@ import system.printing.PrintSystemObject;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintSystemObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintSystemObject</a>
  */
-public class PrintSystemObject extends NetObject  {
+public class PrintSystemObject extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -118,6 +118,9 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExeConfigurationFileMap}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ExeConfigurationFileMap} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExeConfigurationFileMap cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

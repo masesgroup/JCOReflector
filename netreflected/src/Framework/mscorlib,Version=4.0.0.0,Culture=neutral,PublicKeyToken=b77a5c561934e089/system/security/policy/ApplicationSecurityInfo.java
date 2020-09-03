@@ -121,6 +121,9 @@ public class ApplicationSecurityInfo extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationSecurityInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ApplicationSecurityInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ApplicationSecurityInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

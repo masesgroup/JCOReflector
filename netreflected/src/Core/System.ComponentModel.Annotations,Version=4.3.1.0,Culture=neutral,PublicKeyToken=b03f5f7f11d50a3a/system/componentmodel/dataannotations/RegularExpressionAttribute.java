@@ -118,6 +118,9 @@ public class RegularExpressionAttribute extends ValidationAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegularExpressionAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RegularExpressionAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegularExpressionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -123,6 +123,9 @@ public class TransactionManager extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionManager}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TransactionManager} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransactionManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -55,7 +55,7 @@ import system.drawing.drawing2d.WrapMode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.ImageAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.ImageAttributes</a>
  */
-public class ImageAttributes extends NetObject  {
+public class ImageAttributes extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -126,6 +126,9 @@ public class ImageAttributes extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImageAttributes}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ImageAttributes} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ImageAttributes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

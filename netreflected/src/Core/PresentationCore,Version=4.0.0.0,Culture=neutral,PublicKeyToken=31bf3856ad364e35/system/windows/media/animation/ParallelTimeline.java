@@ -120,6 +120,9 @@ public class ParallelTimeline extends TimelineGroup  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParallelTimeline}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ParallelTimeline} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ParallelTimeline cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

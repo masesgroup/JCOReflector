@@ -122,6 +122,9 @@ public class EasingRotation3DKeyFrame extends Rotation3DKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EasingRotation3DKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EasingRotation3DKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EasingRotation3DKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

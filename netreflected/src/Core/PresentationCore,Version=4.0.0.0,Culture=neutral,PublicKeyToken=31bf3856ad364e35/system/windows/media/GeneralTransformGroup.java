@@ -122,6 +122,9 @@ public class GeneralTransformGroup extends GeneralTransform  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GeneralTransformGroup}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link GeneralTransformGroup} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GeneralTransformGroup cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

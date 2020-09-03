@@ -55,7 +55,7 @@ import system.windows.forms.design.behavior.BehaviorDragDropEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorService</a>
  */
-public class BehaviorService extends NetObject  {
+public class BehaviorService extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

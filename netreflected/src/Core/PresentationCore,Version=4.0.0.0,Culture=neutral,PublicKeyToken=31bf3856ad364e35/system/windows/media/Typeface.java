@@ -122,6 +122,9 @@ public class Typeface extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Typeface}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Typeface} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Typeface cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

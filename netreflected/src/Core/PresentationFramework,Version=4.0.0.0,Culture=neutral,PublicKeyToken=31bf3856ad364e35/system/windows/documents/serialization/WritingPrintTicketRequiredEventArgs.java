@@ -120,6 +120,9 @@ public class WritingPrintTicketRequiredEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WritingPrintTicketRequiredEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link WritingPrintTicketRequiredEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WritingPrintTicketRequiredEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

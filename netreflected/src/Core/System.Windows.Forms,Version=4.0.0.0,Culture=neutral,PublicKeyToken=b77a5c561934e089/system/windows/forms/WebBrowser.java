@@ -132,6 +132,9 @@ public class WebBrowser extends WebBrowserBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebBrowser}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link WebBrowser} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebBrowser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

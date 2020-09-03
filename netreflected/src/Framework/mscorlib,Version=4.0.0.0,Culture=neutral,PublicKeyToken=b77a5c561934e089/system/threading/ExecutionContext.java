@@ -51,7 +51,7 @@ import system.threading.ContextCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ExecutionContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ExecutionContext</a>
  */
-public class ExecutionContext extends NetObject  {
+public class ExecutionContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -122,6 +122,9 @@ public class ExecutionContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExecutionContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ExecutionContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExecutionContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

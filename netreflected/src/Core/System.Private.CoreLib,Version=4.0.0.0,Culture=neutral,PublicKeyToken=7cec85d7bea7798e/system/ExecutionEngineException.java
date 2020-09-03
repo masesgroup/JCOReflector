@@ -138,6 +138,9 @@ public class ExecutionEngineException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExecutionEngineException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ExecutionEngineException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExecutionEngineException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

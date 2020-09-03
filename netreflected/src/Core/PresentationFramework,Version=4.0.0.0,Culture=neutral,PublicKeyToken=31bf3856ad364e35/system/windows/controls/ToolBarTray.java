@@ -121,6 +121,9 @@ public class ToolBarTray extends FrameworkElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolBarTray}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ToolBarTray} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolBarTray cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

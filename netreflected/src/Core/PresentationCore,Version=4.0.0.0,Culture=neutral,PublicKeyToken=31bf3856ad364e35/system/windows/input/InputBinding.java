@@ -123,6 +123,9 @@ public class InputBinding extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InputBinding}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link InputBinding} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InputBinding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class XmlQueryContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlQueryContext}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlQueryContext} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlQueryContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

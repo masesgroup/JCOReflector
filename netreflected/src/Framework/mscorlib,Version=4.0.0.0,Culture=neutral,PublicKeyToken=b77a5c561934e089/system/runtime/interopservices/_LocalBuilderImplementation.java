@@ -113,6 +113,9 @@ public class _LocalBuilderImplementation extends NetObject implements _LocalBuil
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _LocalBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _LocalBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _LocalBuilder To_LocalBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

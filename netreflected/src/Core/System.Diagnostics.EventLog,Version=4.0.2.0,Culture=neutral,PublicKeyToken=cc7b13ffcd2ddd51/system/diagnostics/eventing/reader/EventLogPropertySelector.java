@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogPropertySelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogPropertySelector</a>
  */
-public class EventLogPropertySelector extends NetObject  {
+public class EventLogPropertySelector extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -117,6 +117,9 @@ public class EventLogPropertySelector extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLogPropertySelector}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EventLogPropertySelector} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventLogPropertySelector cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

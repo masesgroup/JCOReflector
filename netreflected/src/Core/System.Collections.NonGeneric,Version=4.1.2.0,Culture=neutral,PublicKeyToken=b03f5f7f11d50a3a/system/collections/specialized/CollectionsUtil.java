@@ -121,6 +121,9 @@ public class CollectionsUtil extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CollectionsUtil}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CollectionsUtil} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CollectionsUtil cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

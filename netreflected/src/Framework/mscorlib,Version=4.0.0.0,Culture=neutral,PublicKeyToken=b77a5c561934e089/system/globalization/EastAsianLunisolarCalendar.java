@@ -121,6 +121,9 @@ public class EastAsianLunisolarCalendar extends Calendar  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EastAsianLunisolarCalendar}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EastAsianLunisolarCalendar} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EastAsianLunisolarCalendar cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class GregorianCalendar extends Calendar  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GregorianCalendar}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link GregorianCalendar} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GregorianCalendar cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

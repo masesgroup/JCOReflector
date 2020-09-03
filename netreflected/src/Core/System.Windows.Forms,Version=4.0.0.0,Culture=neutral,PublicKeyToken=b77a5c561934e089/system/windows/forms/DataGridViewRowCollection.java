@@ -121,6 +121,9 @@ public class DataGridViewRowCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewRowCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataGridViewRowCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewRowCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

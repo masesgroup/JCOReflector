@@ -120,6 +120,9 @@ public class CacheModeValueSerializer extends ValueSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CacheModeValueSerializer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CacheModeValueSerializer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CacheModeValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

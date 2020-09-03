@@ -112,6 +112,9 @@ public class IComparableImplementation extends NetObject implements IComparable 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IComparable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IComparable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IComparable ToIComparable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

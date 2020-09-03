@@ -50,7 +50,7 @@ import system.diagnostics.performancedata.CounterType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSet</a>
  */
-public class CounterSet extends NetObject  {
+public class CounterSet extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

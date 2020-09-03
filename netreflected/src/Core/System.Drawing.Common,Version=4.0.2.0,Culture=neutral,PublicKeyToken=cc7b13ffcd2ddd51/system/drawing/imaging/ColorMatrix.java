@@ -118,6 +118,9 @@ public class ColorMatrix extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ColorMatrix}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ColorMatrix} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ColorMatrix cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

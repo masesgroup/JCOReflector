@@ -122,6 +122,9 @@ public class _ConstructorInfoImplementation extends NetObject implements _Constr
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _ConstructorInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _ConstructorInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _ConstructorInfo To_ConstructorInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

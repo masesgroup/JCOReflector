@@ -53,7 +53,7 @@ import system.windows.media.textformatting.InvertAxes;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextLine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextLine</a>
  */
-public class TextLine extends NetObject  {
+public class TextLine extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

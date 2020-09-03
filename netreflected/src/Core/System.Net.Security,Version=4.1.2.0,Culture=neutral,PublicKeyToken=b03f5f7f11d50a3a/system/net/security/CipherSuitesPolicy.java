@@ -117,6 +117,9 @@ public class CipherSuitesPolicy extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CipherSuitesPolicy}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CipherSuitesPolicy} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CipherSuitesPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

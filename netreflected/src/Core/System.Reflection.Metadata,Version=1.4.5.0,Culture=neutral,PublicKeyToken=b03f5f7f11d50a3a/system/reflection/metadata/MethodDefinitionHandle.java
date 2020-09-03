@@ -120,6 +120,9 @@ public class MethodDefinitionHandle extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodDefinitionHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MethodDefinitionHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MethodDefinitionHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

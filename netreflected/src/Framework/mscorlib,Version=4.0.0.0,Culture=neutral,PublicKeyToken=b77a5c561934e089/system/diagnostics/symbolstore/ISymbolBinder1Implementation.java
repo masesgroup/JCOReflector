@@ -114,6 +114,9 @@ public class ISymbolBinder1Implementation extends NetObject implements ISymbolBi
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolBinder1}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISymbolBinder1} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISymbolBinder1 ToISymbolBinder1(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

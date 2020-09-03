@@ -122,6 +122,9 @@ public class ResXDataNode extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResXDataNode}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ResXDataNode} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResXDataNode cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

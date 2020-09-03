@@ -58,7 +58,7 @@ import system.directoryservices.activedirectory.ReadOnlySiteLinkCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySite</a>
  */
-public class ActiveDirectorySite extends NetObject  {
+public class ActiveDirectorySite extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

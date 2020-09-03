@@ -120,6 +120,9 @@ public class CommonAcl extends GenericAcl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommonAcl}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CommonAcl} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CommonAcl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

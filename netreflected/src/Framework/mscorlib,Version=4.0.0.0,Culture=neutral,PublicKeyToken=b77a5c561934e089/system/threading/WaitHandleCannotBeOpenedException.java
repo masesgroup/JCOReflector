@@ -138,6 +138,9 @@ public class WaitHandleCannotBeOpenedException extends ApplicationException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WaitHandleCannotBeOpenedException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WaitHandleCannotBeOpenedException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WaitHandleCannotBeOpenedException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

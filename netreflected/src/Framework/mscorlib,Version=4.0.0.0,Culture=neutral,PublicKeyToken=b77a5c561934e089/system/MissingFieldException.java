@@ -138,6 +138,9 @@ public class MissingFieldException extends MissingMemberException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MissingFieldException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MissingFieldException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MissingFieldException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class StrongNameKeyPair extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StrongNameKeyPair}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StrongNameKeyPair} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StrongNameKeyPair cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

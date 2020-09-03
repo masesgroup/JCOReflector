@@ -118,6 +118,9 @@ public class ParamArrayAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParamArrayAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ParamArrayAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ParamArrayAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class DBDataPermission extends CodeAccessPermission  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DBDataPermission}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DBDataPermission} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DBDataPermission cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

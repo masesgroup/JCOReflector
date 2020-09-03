@@ -50,7 +50,7 @@ import system.AsyncCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient</a>
  */
-public class UdpSingleSourceMulticastClient extends NetObject  {
+public class UdpSingleSourceMulticastClient extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

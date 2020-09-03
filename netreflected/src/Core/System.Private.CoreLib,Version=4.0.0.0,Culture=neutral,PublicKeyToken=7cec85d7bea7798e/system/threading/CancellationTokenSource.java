@@ -49,7 +49,7 @@ import system.threading.CancellationToken;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenSource</a>
  */
-public class CancellationTokenSource extends NetObject  {
+public class CancellationTokenSource extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -120,6 +120,9 @@ public class CancellationTokenSource extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CancellationTokenSource}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CancellationTokenSource} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CancellationTokenSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

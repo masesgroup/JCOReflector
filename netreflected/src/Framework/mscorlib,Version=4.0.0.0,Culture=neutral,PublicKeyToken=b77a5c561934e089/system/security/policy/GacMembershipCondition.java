@@ -122,6 +122,9 @@ public class GacMembershipCondition extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GacMembershipCondition}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GacMembershipCondition} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GacMembershipCondition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -51,7 +51,7 @@ import system.windows.annotations.storage.StoreContentChangedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore</a>
  */
-public class AnnotationStore extends NetObject  {
+public class AnnotationStore extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -122,6 +122,9 @@ public class AnnotationStore extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnnotationStore}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AnnotationStore} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AnnotationStore cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

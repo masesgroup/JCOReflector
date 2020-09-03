@@ -128,6 +128,9 @@ public class DbDataReader extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbDataReader}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DbDataReader} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbDataReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

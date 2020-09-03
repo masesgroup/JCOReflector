@@ -119,6 +119,9 @@ public class PropertyAccessors extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyAccessors}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PropertyAccessors} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PropertyAccessors cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

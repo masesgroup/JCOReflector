@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.LinkedResourceCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.LinkedResourceCollection</a>
  */
-public class LinkedResourceCollection extends NetObject  {
+public class LinkedResourceCollection extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -117,6 +117,9 @@ public class LinkedResourceCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinkedResourceCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LinkedResourceCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LinkedResourceCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

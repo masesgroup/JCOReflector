@@ -121,6 +121,9 @@ public class FontSizeConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontSizeConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FontSizeConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FontSizeConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

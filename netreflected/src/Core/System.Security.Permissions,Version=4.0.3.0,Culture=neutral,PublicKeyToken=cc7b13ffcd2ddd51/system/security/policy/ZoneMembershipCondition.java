@@ -123,6 +123,9 @@ public class ZoneMembershipCondition extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ZoneMembershipCondition}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ZoneMembershipCondition} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ZoneMembershipCondition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

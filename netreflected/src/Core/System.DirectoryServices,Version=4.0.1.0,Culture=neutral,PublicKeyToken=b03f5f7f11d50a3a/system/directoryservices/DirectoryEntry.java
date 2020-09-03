@@ -125,6 +125,9 @@ public class DirectoryEntry extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryEntry}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DirectoryEntry} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectoryEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

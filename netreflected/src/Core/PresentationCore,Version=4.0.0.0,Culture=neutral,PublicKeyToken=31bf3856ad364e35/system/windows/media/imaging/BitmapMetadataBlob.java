@@ -117,6 +117,9 @@ public class BitmapMetadataBlob extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BitmapMetadataBlob}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BitmapMetadataBlob} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BitmapMetadataBlob cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

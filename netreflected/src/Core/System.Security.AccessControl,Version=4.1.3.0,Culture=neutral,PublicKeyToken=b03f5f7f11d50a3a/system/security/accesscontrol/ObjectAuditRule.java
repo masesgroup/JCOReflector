@@ -120,6 +120,9 @@ public class ObjectAuditRule extends AuditRule  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectAuditRule}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ObjectAuditRule} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectAuditRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class IServerChannelSinkProviderImplementation extends NetObject implemen
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IServerChannelSinkProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IServerChannelSinkProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IServerChannelSinkProvider ToIServerChannelSinkProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class XamlDesignerSerializationManager extends ServiceProviders  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlDesignerSerializationManager}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XamlDesignerSerializationManager} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlDesignerSerializationManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

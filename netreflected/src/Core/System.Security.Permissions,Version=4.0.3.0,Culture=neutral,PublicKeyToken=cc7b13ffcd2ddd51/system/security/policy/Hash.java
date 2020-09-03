@@ -123,6 +123,9 @@ public class Hash extends EvidenceBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Hash}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Hash} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Hash cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

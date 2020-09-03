@@ -56,7 +56,7 @@ import microsoft.win32.safehandles.SafeMemoryMappedFileHandle;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile</a>
  */
-public class MemoryMappedFile extends NetObject  {
+public class MemoryMappedFile extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.IO.MemoryMappedFiles, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -127,6 +127,9 @@ public class MemoryMappedFile extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemoryMappedFile}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MemoryMappedFile} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MemoryMappedFile cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

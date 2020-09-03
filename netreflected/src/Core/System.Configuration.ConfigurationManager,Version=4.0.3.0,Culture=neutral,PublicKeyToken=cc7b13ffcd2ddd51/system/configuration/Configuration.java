@@ -127,6 +127,9 @@ public class Configuration extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Configuration}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Configuration} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Configuration cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

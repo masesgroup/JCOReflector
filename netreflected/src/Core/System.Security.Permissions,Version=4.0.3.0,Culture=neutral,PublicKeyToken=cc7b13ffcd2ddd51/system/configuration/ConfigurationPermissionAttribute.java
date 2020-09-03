@@ -121,6 +121,9 @@ public class ConfigurationPermissionAttribute extends CodeAccessSecurityAttribut
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationPermissionAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ConfigurationPermissionAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConfigurationPermissionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class SoapIdrefs extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapIdrefs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SoapIdrefs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SoapIdrefs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

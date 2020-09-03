@@ -118,6 +118,9 @@ public class FilterEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FilterEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FilterEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FilterEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

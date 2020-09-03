@@ -119,6 +119,9 @@ public class NamespaceDefinitionHandle extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NamespaceDefinitionHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link NamespaceDefinitionHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NamespaceDefinitionHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

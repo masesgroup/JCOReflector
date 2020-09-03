@@ -138,6 +138,9 @@ public class Thread extends CriticalFinalizerObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Thread}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Thread} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Thread cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

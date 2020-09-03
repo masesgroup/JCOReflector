@@ -117,6 +117,9 @@ public class MemoryMarshal extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemoryMarshal}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MemoryMarshal} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MemoryMarshal cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

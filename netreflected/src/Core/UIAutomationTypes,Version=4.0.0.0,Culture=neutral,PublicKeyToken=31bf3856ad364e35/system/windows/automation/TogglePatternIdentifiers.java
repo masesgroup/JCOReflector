@@ -117,6 +117,9 @@ public class TogglePatternIdentifiers extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TogglePatternIdentifiers}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TogglePatternIdentifiers} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TogglePatternIdentifiers cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

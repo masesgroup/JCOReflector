@@ -134,6 +134,9 @@ public class DataGridViewCell extends DataGridViewElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewCell}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataGridViewCell} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewCell cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

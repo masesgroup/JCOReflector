@@ -121,6 +121,9 @@ public class TypeNameConverter extends ConfigurationConverterBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeNameConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TypeNameConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TypeNameConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

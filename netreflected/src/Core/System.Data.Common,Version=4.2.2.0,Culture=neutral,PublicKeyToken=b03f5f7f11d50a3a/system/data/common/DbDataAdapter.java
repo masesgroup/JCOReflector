@@ -125,6 +125,9 @@ public class DbDataAdapter extends DataAdapter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbDataAdapter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DbDataAdapter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbDataAdapter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

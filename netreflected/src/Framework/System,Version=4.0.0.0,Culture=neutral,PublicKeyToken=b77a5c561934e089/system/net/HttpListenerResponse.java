@@ -53,7 +53,7 @@ import system.Version;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerResponse" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerResponse</a>
  */
-public class HttpListenerResponse extends NetObject  {
+public class HttpListenerResponse extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -119,6 +119,9 @@ public class TripleDES extends SymmetricAlgorithm  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TripleDES}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TripleDES} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TripleDES cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

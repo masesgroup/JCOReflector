@@ -138,6 +138,9 @@ public class XpsPackagingException extends XpsException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XpsPackagingException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XpsPackagingException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XpsPackagingException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

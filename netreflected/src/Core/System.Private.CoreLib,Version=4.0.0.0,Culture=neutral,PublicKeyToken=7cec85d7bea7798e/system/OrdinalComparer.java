@@ -118,6 +118,9 @@ public class OrdinalComparer extends StringComparer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OrdinalComparer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link OrdinalComparer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OrdinalComparer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

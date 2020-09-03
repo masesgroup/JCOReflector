@@ -122,6 +122,9 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataTableMappingCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataTableMappingCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataTableMappingCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

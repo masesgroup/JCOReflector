@@ -116,6 +116,9 @@ public class _EventInfoImplementation extends NetObject implements _EventInfo {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _EventInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _EventInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _EventInfo To_EventInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

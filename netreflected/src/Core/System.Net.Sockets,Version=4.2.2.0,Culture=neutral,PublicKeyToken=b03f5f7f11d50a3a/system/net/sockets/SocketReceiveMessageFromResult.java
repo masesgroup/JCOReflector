@@ -118,6 +118,9 @@ public class SocketReceiveMessageFromResult extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SocketReceiveMessageFromResult}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SocketReceiveMessageFromResult} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SocketReceiveMessageFromResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

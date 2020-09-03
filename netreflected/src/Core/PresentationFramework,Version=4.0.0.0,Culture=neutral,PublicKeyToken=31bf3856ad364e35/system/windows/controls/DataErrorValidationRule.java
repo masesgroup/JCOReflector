@@ -120,6 +120,9 @@ public class DataErrorValidationRule extends ValidationRule  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataErrorValidationRule}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataErrorValidationRule} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataErrorValidationRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

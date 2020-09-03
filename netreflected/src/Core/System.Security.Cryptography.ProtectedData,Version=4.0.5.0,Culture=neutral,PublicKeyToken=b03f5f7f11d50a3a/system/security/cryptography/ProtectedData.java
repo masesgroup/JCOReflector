@@ -118,6 +118,9 @@ public class ProtectedData extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProtectedData}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ProtectedData} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ProtectedData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

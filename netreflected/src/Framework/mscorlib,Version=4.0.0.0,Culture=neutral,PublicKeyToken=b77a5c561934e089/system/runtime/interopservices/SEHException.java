@@ -138,6 +138,9 @@ public class SEHException extends ExternalException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SEHException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SEHException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SEHException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

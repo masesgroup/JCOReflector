@@ -47,7 +47,7 @@ import system.io.Stream;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Cursor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Cursor</a>
  */
-public class Cursor extends NetObject  {
+public class Cursor extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

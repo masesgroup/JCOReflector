@@ -121,6 +121,9 @@ public class PrintPropertyDictionary extends Hashtable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintPropertyDictionary}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PrintPropertyDictionary} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintPropertyDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -47,7 +47,7 @@ import system.drawing.imaging.EncoderParameter;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.EncoderParameters" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.EncoderParameters</a>
  */
-public class EncoderParameters extends NetObject  {
+public class EncoderParameters extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -118,6 +118,9 @@ public class EncoderParameters extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncoderParameters}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EncoderParameters} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EncoderParameters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

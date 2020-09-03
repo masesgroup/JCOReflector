@@ -118,6 +118,9 @@ public class WindowInteropHelper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WindowInteropHelper}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link WindowInteropHelper} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WindowInteropHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

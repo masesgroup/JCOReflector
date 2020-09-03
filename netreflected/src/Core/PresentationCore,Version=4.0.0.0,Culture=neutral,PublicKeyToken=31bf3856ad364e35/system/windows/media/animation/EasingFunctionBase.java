@@ -119,6 +119,9 @@ public class EasingFunctionBase extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EasingFunctionBase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EasingFunctionBase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EasingFunctionBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

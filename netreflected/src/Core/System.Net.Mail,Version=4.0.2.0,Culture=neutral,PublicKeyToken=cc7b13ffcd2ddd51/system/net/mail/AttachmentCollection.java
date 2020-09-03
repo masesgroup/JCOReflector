@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentCollection</a>
  */
-public class AttachmentCollection extends NetObject  {
+public class AttachmentCollection extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -117,6 +117,9 @@ public class AttachmentCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AttachmentCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AttachmentCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AttachmentCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

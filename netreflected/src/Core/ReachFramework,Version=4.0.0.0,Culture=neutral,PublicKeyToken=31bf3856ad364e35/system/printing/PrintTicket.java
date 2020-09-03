@@ -123,6 +123,9 @@ public class PrintTicket extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintTicket}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PrintTicket} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintTicket cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

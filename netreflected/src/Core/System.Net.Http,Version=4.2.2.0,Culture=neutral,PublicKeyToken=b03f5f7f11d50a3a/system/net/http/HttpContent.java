@@ -50,7 +50,7 @@ import system.net.http.headers.HttpContentHeaders;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpContent</a>
  */
-public class HttpContent extends NetObject  {
+public class HttpContent extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -121,6 +121,9 @@ public class HttpContent extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpContent}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HttpContent} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

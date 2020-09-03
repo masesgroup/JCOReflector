@@ -47,7 +47,7 @@ import system.security.cryptography.FromBase64TransformMode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.FromBase64Transform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.FromBase64Transform</a>
  */
-public class FromBase64Transform extends NetObject  {
+public class FromBase64Transform extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -118,6 +118,9 @@ public class FromBase64Transform extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FromBase64Transform}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FromBase64Transform} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FromBase64Transform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

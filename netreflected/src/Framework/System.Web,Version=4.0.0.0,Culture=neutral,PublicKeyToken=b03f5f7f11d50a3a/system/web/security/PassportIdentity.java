@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.PassportIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.PassportIdentity</a>
  */
-public class PassportIdentity extends NetObject  {
+public class PassportIdentity extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

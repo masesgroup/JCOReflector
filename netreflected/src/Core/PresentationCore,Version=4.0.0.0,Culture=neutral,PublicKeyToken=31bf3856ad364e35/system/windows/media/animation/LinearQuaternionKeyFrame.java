@@ -120,6 +120,9 @@ public class LinearQuaternionKeyFrame extends QuaternionKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinearQuaternionKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LinearQuaternionKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LinearQuaternionKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

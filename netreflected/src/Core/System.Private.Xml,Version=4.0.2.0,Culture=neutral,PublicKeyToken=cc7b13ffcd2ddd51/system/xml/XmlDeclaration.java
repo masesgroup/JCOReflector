@@ -121,6 +121,9 @@ public class XmlDeclaration extends XmlLinkedNode  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDeclaration}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlDeclaration} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlDeclaration cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

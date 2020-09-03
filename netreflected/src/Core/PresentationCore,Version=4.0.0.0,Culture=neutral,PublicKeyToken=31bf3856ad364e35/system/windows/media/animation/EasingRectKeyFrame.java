@@ -122,6 +122,9 @@ public class EasingRectKeyFrame extends RectKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EasingRectKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EasingRectKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EasingRectKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

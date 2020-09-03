@@ -125,6 +125,9 @@ public class XmlSchemaComplexType extends XmlSchemaType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaComplexType}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlSchemaComplexType} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaComplexType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

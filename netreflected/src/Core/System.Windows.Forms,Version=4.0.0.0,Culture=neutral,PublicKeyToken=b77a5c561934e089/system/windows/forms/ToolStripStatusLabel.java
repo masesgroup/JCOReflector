@@ -125,6 +125,9 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripStatusLabel}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ToolStripStatusLabel} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolStripStatusLabel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

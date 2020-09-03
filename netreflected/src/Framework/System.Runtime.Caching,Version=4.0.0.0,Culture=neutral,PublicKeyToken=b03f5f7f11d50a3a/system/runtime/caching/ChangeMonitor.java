@@ -47,7 +47,7 @@ import system.runtime.caching.OnChangedCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.ChangeMonitor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.ChangeMonitor</a>
  */
-public class ChangeMonitor extends NetObject  {
+public class ChangeMonitor extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

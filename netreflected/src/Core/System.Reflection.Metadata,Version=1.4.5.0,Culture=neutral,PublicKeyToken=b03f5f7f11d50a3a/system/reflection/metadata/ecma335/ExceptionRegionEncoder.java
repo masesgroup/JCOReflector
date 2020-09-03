@@ -122,6 +122,9 @@ public class ExceptionRegionEncoder extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExceptionRegionEncoder}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ExceptionRegionEncoder} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExceptionRegionEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

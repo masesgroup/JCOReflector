@@ -117,6 +117,9 @@ public class SymLanguageVendor extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SymLanguageVendor}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SymLanguageVendor} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SymLanguageVendor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

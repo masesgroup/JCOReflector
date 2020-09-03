@@ -118,6 +118,9 @@ public class QuinticEase extends EasingFunctionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link QuinticEase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link QuinticEase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static QuinticEase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

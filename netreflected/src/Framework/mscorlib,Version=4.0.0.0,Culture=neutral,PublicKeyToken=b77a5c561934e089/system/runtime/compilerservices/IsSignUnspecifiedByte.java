@@ -117,6 +117,9 @@ public class IsSignUnspecifiedByte extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IsSignUnspecifiedByte}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IsSignUnspecifiedByte} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IsSignUnspecifiedByte cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -48,7 +48,7 @@ import system.TimeSpan;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ReaderWriterLockSlim" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ReaderWriterLockSlim</a>
  */
-public class ReaderWriterLockSlim extends NetObject  {
+public class ReaderWriterLockSlim extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

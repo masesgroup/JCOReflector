@@ -120,6 +120,9 @@ public class HybridDictionary extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HybridDictionary}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HybridDictionary} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HybridDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

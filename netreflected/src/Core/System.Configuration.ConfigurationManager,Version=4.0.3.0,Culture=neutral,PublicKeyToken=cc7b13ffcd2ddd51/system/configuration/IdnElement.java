@@ -119,6 +119,9 @@ public class IdnElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IdnElement}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link IdnElement} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IdnElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

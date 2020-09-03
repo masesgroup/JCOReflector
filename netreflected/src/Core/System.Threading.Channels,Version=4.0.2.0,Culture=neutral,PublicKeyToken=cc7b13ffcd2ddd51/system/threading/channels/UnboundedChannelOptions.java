@@ -118,6 +118,9 @@ public class UnboundedChannelOptions extends ChannelOptions  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnboundedChannelOptions}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link UnboundedChannelOptions} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UnboundedChannelOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

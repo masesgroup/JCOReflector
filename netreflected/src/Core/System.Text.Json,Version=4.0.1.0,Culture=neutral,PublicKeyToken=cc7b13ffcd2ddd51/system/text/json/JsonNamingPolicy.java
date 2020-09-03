@@ -118,6 +118,9 @@ public class JsonNamingPolicy extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonNamingPolicy}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link JsonNamingPolicy} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static JsonNamingPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

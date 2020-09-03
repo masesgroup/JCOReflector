@@ -47,7 +47,7 @@ import system.directoryservices.DirectoryEntry;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition</a>
  */
-public class ActiveDirectoryPartition extends NetObject  {
+public class ActiveDirectoryPartition extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -118,6 +118,9 @@ public class ActiveDirectoryPartition extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectoryPartition}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ActiveDirectoryPartition} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActiveDirectoryPartition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

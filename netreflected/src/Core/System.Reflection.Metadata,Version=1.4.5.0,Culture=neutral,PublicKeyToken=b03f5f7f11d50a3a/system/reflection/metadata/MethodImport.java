@@ -121,6 +121,9 @@ public class MethodImport extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MethodImport}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MethodImport} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MethodImport cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

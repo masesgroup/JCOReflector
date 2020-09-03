@@ -123,6 +123,9 @@ public class Guid extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Guid}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Guid} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Guid cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

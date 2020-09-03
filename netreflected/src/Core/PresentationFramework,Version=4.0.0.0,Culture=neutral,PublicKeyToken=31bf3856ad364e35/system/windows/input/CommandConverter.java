@@ -121,6 +121,9 @@ public class CommandConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommandConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CommandConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CommandConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class PropertyFilterAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyFilterAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PropertyFilterAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PropertyFilterAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

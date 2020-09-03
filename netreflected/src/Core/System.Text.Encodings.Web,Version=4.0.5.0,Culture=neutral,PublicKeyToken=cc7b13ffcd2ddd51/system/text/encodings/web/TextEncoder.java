@@ -119,6 +119,9 @@ public class TextEncoder extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextEncoder}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TextEncoder} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class EasingDecimalKeyFrame extends DecimalKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EasingDecimalKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EasingDecimalKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EasingDecimalKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

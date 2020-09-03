@@ -113,6 +113,9 @@ public class _ThreadImplementation extends NetObject implements _Thread {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _Thread}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _Thread} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _Thread To_Thread(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

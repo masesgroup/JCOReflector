@@ -121,6 +121,9 @@ public class ValueSerializer extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValueSerializer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ValueSerializer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

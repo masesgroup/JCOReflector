@@ -118,6 +118,9 @@ public class ForestTrustDomainInformation extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ForestTrustDomainInformation}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ForestTrustDomainInformation} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ForestTrustDomainInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

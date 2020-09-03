@@ -138,6 +138,9 @@ public class DataException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

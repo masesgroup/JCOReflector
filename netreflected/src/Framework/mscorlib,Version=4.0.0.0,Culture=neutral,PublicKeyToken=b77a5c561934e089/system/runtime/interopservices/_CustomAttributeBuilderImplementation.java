@@ -113,6 +113,9 @@ public class _CustomAttributeBuilderImplementation extends NetObject implements 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _CustomAttributeBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _CustomAttributeBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _CustomAttributeBuilder To_CustomAttributeBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

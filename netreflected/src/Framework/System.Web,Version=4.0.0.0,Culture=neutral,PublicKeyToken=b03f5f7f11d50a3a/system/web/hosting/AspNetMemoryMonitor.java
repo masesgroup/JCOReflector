@@ -48,7 +48,7 @@ import system.IDisposableImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor</a>
  */
-public class AspNetMemoryMonitor extends NetObject  {
+public class AspNetMemoryMonitor extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

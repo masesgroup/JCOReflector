@@ -118,6 +118,9 @@ public class SoapAnyUri extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapAnyUri}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SoapAnyUri} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SoapAnyUri cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

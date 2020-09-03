@@ -80,6 +80,9 @@ public interface _AppDomain extends IJCOBridgeReflected {
     public static final String className = "System._AppDomain";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _AppDomain}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _AppDomain} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _AppDomain To_AppDomain(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

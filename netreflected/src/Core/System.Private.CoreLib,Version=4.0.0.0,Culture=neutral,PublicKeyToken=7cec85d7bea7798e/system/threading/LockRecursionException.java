@@ -137,6 +137,9 @@ public class LockRecursionException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LockRecursionException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LockRecursionException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LockRecursionException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

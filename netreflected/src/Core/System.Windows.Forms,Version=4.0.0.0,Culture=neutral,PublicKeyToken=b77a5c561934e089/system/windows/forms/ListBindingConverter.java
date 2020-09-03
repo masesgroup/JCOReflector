@@ -123,6 +123,9 @@ public class ListBindingConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListBindingConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ListBindingConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ListBindingConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

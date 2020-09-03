@@ -139,6 +139,9 @@ public class JsonException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link JsonException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static JsonException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

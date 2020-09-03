@@ -113,6 +113,9 @@ public class _ParameterBuilderImplementation extends NetObject implements _Param
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _ParameterBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _ParameterBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _ParameterBuilder To_ParameterBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

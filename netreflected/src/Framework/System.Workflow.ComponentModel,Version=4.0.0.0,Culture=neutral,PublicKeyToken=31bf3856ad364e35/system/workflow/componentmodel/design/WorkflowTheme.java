@@ -55,7 +55,7 @@ import system.workflow.componentmodel.design.AmbientTheme;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowTheme" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowTheme</a>
  */
-public class WorkflowTheme extends NetObject  {
+public class WorkflowTheme extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

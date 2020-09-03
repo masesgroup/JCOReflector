@@ -118,6 +118,9 @@ public class AssemblyVersionAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyVersionAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AssemblyVersionAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AssemblyVersionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

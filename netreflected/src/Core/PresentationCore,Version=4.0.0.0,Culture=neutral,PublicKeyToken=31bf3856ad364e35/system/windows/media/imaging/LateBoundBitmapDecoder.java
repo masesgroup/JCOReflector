@@ -121,6 +121,9 @@ public class LateBoundBitmapDecoder extends BitmapDecoder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LateBoundBitmapDecoder}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LateBoundBitmapDecoder} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LateBoundBitmapDecoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

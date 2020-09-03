@@ -121,6 +121,9 @@ public class DrawingImage extends ImageSource  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DrawingImage}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DrawingImage} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DrawingImage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

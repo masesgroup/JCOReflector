@@ -121,6 +121,9 @@ public class Span extends Inline  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Span}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Span} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Span cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

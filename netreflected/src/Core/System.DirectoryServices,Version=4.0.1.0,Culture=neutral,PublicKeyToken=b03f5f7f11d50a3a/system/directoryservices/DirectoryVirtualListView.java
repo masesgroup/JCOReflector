@@ -118,6 +118,9 @@ public class DirectoryVirtualListView extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryVirtualListView}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DirectoryVirtualListView} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectoryVirtualListView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

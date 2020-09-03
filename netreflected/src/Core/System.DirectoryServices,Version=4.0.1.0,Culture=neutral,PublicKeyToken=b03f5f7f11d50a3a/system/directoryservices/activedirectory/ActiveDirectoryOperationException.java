@@ -139,6 +139,9 @@ public class ActiveDirectoryOperationException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectoryOperationException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ActiveDirectoryOperationException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActiveDirectoryOperationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

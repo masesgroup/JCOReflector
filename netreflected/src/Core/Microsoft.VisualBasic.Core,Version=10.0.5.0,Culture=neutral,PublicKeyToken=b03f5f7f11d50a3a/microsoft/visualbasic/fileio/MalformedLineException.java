@@ -139,6 +139,9 @@ public class MalformedLineException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MalformedLineException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MalformedLineException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MalformedLineException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -50,7 +50,7 @@ import system.globalization.CultureInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider</a>
  */
-public class CodeDomLocalizationProvider extends NetObject  {
+public class CodeDomLocalizationProvider extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -118,6 +118,9 @@ public class SafeHandle extends CriticalFinalizerObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SafeHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SafeHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SafeHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

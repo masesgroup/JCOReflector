@@ -121,6 +121,9 @@ public class DistributedTransactionPermissionAttribute extends CodeAccessSecurit
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DistributedTransactionPermissionAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DistributedTransactionPermissionAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DistributedTransactionPermissionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

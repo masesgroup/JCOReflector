@@ -121,6 +121,9 @@ public class BackgroundWorker extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BackgroundWorker}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BackgroundWorker} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BackgroundWorker cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class DynamicILInfo extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicILInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DynamicILInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DynamicILInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

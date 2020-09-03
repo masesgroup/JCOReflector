@@ -119,6 +119,9 @@ public class PipesAclExtensions extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PipesAclExtensions}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PipesAclExtensions} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PipesAclExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

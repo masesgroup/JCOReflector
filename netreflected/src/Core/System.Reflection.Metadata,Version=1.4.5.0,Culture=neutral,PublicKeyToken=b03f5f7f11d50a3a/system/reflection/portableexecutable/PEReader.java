@@ -54,7 +54,7 @@ import system.reflection.portableexecutable.PEHeaders;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.PEReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.PortableExecutable.PEReader</a>
  */
-public class PEReader extends NetObject  {
+public class PEReader extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -125,6 +125,9 @@ public class PEReader extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PEReader}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PEReader} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PEReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

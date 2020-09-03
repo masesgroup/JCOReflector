@@ -131,6 +131,9 @@ public class MonthCalendar extends Control  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MonthCalendar}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MonthCalendar} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MonthCalendar cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

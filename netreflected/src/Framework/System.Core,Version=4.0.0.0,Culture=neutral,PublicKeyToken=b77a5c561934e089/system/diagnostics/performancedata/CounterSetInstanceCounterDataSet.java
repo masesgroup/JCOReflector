@@ -47,7 +47,7 @@ import system.diagnostics.performancedata.CounterData;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet</a>
  */
-public class CounterSetInstanceCounterDataSet extends NetObject  {
+public class CounterSetInstanceCounterDataSet extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

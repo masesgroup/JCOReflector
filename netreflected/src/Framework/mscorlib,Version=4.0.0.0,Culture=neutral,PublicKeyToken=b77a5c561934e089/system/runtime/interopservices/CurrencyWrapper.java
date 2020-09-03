@@ -118,6 +118,9 @@ public class CurrencyWrapper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CurrencyWrapper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CurrencyWrapper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CurrencyWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -123,6 +123,9 @@ public class TouchEventArgs extends InputEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TouchEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TouchEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TouchEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

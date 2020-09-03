@@ -117,6 +117,9 @@ public class IsExplicitlyDereferenced extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IsExplicitlyDereferenced}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link IsExplicitlyDereferenced} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IsExplicitlyDereferenced cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

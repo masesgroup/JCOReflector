@@ -51,7 +51,7 @@ import system.text.json.JsonElement;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonDocument</a>
  */
-public class JsonDocument extends NetObject  {
+public class JsonDocument extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -122,6 +122,9 @@ public class JsonDocument extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonDocument}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link JsonDocument} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static JsonDocument cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

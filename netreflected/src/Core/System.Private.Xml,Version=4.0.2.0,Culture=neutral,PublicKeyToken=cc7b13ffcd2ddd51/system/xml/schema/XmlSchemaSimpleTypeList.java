@@ -120,6 +120,9 @@ public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaSimpleTypeList}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlSchemaSimpleTypeList} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaSimpleTypeList cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

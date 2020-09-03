@@ -118,6 +118,9 @@ public class BitmapSuffixInSameAssemblyAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BitmapSuffixInSameAssemblyAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BitmapSuffixInSameAssemblyAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BitmapSuffixInSameAssemblyAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

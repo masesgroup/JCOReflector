@@ -120,6 +120,9 @@ public class Bold extends Span  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Bold}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Bold} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Bold cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

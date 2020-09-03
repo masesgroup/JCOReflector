@@ -66,6 +66,9 @@ public interface IApplicationTrustManager extends IJCOBridgeReflected, ISecurity
     public static final String className = "System.Security.Policy.IApplicationTrustManager";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IApplicationTrustManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IApplicationTrustManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IApplicationTrustManager ToIApplicationTrustManager(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

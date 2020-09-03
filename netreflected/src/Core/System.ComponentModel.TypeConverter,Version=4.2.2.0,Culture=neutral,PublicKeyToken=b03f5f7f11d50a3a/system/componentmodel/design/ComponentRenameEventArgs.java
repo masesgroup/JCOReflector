@@ -118,6 +118,9 @@ public class ComponentRenameEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComponentRenameEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ComponentRenameEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComponentRenameEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

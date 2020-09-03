@@ -118,6 +118,9 @@ public class ContractHelper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContractHelper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ContractHelper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContractHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

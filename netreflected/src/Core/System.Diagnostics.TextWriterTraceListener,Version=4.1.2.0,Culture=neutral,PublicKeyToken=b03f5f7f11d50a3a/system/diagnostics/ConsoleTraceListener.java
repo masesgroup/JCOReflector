@@ -118,6 +118,9 @@ public class ConsoleTraceListener extends TextWriterTraceListener  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConsoleTraceListener}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ConsoleTraceListener} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConsoleTraceListener cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

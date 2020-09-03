@@ -118,6 +118,9 @@ public class BindingManagerDataErrorEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindingManagerDataErrorEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BindingManagerDataErrorEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BindingManagerDataErrorEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

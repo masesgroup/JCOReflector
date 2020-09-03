@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ToBase64Transform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ToBase64Transform</a>
  */
-public class ToBase64Transform extends NetObject  {
+public class ToBase64Transform extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -117,6 +117,9 @@ public class ToBase64Transform extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToBase64Transform}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ToBase64Transform} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToBase64Transform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

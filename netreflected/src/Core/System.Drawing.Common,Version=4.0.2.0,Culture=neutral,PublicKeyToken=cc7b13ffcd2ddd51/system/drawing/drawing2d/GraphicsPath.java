@@ -132,6 +132,9 @@ public class GraphicsPath extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GraphicsPath}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link GraphicsPath} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GraphicsPath cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

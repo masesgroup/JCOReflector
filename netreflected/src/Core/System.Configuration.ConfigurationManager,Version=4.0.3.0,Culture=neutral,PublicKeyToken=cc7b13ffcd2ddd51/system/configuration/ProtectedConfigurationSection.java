@@ -119,6 +119,9 @@ public class ProtectedConfigurationSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProtectedConfigurationSection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ProtectedConfigurationSection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ProtectedConfigurationSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

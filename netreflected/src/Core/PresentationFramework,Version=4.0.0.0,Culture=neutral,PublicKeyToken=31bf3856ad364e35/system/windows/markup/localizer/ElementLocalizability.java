@@ -118,6 +118,9 @@ public class ElementLocalizability extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ElementLocalizability}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ElementLocalizability} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ElementLocalizability cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

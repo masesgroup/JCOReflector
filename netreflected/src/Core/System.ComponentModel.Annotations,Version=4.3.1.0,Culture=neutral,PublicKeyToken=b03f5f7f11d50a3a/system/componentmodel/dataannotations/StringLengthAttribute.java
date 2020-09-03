@@ -118,6 +118,9 @@ public class StringLengthAttribute extends ValidationAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringLengthAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link StringLengthAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StringLengthAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

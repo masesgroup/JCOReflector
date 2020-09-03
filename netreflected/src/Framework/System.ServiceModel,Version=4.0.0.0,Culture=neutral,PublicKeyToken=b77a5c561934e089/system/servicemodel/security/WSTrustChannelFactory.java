@@ -56,7 +56,7 @@ import system.servicemodel.security.TrustVersion;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustChannelFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustChannelFactory</a>
  */
-public class WSTrustChannelFactory extends NetObject  {
+public class WSTrustChannelFactory extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

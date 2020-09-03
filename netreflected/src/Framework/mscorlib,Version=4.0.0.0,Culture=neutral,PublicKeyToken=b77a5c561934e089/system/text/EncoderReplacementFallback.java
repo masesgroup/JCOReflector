@@ -119,6 +119,9 @@ public class EncoderReplacementFallback extends EncoderFallback  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncoderReplacementFallback}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EncoderReplacementFallback} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EncoderReplacementFallback cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

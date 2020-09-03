@@ -122,6 +122,9 @@ public class TouchPoint extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TouchPoint}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TouchPoint} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TouchPoint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

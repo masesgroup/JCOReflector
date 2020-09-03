@@ -117,6 +117,9 @@ public class MemberDefinition extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemberDefinition}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MemberDefinition} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MemberDefinition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class XmlSchemaAttribute extends XmlSchemaAnnotated  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlSchemaAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -152,6 +152,9 @@ public class ToolStrip extends ScrollableControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStrip}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ToolStrip} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolStrip cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

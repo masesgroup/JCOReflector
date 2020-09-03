@@ -120,6 +120,9 @@ public class _PropertyInfoImplementation extends NetObject implements _PropertyI
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _PropertyInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _PropertyInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _PropertyInfo To_PropertyInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

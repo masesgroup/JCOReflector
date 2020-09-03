@@ -49,7 +49,7 @@ import system.workflow.componentmodel.ActivityExecutionContextManager;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.ActivityExecutionContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.ActivityExecutionContext</a>
  */
-public class ActivityExecutionContext extends NetObject  {
+public class ActivityExecutionContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

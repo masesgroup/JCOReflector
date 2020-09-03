@@ -119,6 +119,9 @@ public class GridViewCellAutomationPeer extends FrameworkElementAutomationPeer  
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GridViewCellAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link GridViewCellAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GridViewCellAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

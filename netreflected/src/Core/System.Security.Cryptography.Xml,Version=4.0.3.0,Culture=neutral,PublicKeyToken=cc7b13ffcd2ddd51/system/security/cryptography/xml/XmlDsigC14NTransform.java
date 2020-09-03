@@ -120,6 +120,9 @@ public class XmlDsigC14NTransform extends Transform  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDsigC14NTransform}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlDsigC14NTransform} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlDsigC14NTransform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

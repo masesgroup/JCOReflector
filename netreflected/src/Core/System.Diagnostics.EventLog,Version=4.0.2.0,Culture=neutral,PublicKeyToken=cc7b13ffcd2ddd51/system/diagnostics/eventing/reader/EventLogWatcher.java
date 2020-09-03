@@ -48,7 +48,7 @@ import system.diagnostics.eventing.reader.EventBookmark;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogWatcher" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogWatcher</a>
  */
-public class EventLogWatcher extends NetObject  {
+public class EventLogWatcher extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -119,6 +119,9 @@ public class EventLogWatcher extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLogWatcher}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EventLogWatcher} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventLogWatcher cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

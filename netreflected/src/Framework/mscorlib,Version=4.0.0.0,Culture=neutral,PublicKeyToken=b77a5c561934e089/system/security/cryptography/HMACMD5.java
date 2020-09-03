@@ -118,6 +118,9 @@ public class HMACMD5 extends HMAC  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HMACMD5}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HMACMD5} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HMACMD5 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

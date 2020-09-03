@@ -48,7 +48,7 @@ import system.windows.markup.XamlDesignerSerializationManager;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Primitives.MarkupWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Primitives.MarkupWriter</a>
  */
-public class MarkupWriter extends NetObject  {
+public class MarkupWriter extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -119,6 +119,9 @@ public class MarkupWriter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MarkupWriter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MarkupWriter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MarkupWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

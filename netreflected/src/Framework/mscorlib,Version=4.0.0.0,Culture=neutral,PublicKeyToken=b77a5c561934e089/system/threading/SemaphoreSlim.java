@@ -50,7 +50,7 @@ import system.threading.WaitHandle;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SemaphoreSlim" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SemaphoreSlim</a>
  */
-public class SemaphoreSlim extends NetObject  {
+public class SemaphoreSlim extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -121,6 +121,9 @@ public class SemaphoreSlim extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SemaphoreSlim}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SemaphoreSlim} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SemaphoreSlim cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

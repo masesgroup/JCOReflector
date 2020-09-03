@@ -121,6 +121,9 @@ public class SplinePoint3DKeyFrame extends Point3DKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SplinePoint3DKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SplinePoint3DKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SplinePoint3DKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

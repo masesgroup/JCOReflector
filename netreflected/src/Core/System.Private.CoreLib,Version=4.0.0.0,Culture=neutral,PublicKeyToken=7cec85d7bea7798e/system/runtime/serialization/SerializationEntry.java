@@ -118,6 +118,9 @@ public class SerializationEntry extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SerializationEntry}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SerializationEntry} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SerializationEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

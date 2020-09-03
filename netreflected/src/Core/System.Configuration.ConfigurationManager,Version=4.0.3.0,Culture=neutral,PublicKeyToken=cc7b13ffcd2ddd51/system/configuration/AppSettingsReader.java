@@ -117,6 +117,9 @@ public class AppSettingsReader extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AppSettingsReader}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AppSettingsReader} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AppSettingsReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

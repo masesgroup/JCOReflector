@@ -122,6 +122,9 @@ public class AppDomainSetup extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AppDomainSetup}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AppDomainSetup} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AppDomainSetup cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

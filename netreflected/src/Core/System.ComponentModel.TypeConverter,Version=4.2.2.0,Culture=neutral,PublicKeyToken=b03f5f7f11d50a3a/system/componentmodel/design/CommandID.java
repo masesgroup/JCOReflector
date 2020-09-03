@@ -118,6 +118,9 @@ public class CommandID extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommandID}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CommandID} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CommandID cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

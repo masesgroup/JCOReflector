@@ -120,6 +120,9 @@ public class DesignerActionPropertyItem extends DesignerActionItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerActionPropertyItem}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DesignerActionPropertyItem} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DesignerActionPropertyItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

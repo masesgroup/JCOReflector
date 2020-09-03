@@ -119,6 +119,9 @@ public class X509BasicConstraintsExtension extends X509Extension  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509BasicConstraintsExtension}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link X509BasicConstraintsExtension} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509BasicConstraintsExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

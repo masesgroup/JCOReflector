@@ -117,6 +117,9 @@ public class Vector256 extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector256}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Vector256} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Vector256 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

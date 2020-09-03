@@ -138,6 +138,9 @@ public class RankException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RankException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RankException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RankException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

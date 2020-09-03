@@ -139,6 +139,9 @@ public class RuntimeWrappedException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuntimeWrappedException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RuntimeWrappedException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RuntimeWrappedException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

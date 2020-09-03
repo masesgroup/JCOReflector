@@ -120,6 +120,9 @@ public class ObjectAccessRule extends AccessRule  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectAccessRule}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ObjectAccessRule} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectAccessRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

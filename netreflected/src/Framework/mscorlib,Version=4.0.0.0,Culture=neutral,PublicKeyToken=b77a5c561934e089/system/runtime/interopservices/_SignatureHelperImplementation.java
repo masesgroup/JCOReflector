@@ -113,6 +113,9 @@ public class _SignatureHelperImplementation extends NetObject implements _Signat
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _SignatureHelper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _SignatureHelper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _SignatureHelper To_SignatureHelper(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

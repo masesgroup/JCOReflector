@@ -47,7 +47,7 @@ import system.workflow.componentmodel.design.AmbientProperty;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.DesignerTheme" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.DesignerTheme</a>
  */
-public class DesignerTheme extends NetObject  {
+public class DesignerTheme extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

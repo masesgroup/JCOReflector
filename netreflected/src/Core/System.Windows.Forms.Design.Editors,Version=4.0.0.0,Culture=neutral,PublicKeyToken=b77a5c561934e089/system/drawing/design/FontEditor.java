@@ -123,6 +123,9 @@ public class FontEditor extends UITypeEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontEditor}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FontEditor} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FontEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

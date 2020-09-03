@@ -138,6 +138,9 @@ public class XamlObjectReaderException extends XamlException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlObjectReaderException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XamlObjectReaderException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlObjectReaderException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

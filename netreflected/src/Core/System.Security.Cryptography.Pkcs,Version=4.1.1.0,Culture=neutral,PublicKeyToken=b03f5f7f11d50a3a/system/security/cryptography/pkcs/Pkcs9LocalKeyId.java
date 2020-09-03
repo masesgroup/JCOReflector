@@ -119,6 +119,9 @@ public class Pkcs9LocalKeyId extends Pkcs9AttributeObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs9LocalKeyId}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Pkcs9LocalKeyId} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Pkcs9LocalKeyId cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

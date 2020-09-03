@@ -119,6 +119,9 @@ public class DataGridColumnHeaderAutomationPeer extends ButtonBaseAutomationPeer
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridColumnHeaderAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataGridColumnHeaderAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridColumnHeaderAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

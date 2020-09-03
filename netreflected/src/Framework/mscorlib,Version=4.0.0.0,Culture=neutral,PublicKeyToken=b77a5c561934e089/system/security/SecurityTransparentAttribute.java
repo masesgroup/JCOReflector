@@ -118,6 +118,9 @@ public class SecurityTransparentAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityTransparentAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SecurityTransparentAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecurityTransparentAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

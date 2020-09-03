@@ -56,7 +56,7 @@ import system.io.packaging.StorageInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.EncryptedPackageEnvelope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.EncryptedPackageEnvelope</a>
  */
-public class EncryptedPackageEnvelope extends NetObject  {
+public class EncryptedPackageEnvelope extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

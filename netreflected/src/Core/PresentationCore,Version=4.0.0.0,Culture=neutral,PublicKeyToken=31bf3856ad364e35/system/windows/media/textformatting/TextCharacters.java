@@ -120,6 +120,9 @@ public class TextCharacters extends TextRun  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextCharacters}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TextCharacters} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextCharacters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

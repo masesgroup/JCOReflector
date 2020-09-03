@@ -119,6 +119,9 @@ public class ReadOnlyPermissionSet extends PermissionSet  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReadOnlyPermissionSet}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ReadOnlyPermissionSet} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ReadOnlyPermissionSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

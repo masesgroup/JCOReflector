@@ -56,7 +56,7 @@ import system.io.packaging.StorageInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.EncryptedPackageEnvelope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.EncryptedPackageEnvelope</a>
  */
-public class EncryptedPackageEnvelope extends NetObject  {
+public class EncryptedPackageEnvelope extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -127,6 +127,9 @@ public class EncryptedPackageEnvelope extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncryptedPackageEnvelope}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EncryptedPackageEnvelope} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EncryptedPackageEnvelope cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

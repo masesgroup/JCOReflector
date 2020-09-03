@@ -118,6 +118,9 @@ public class BoolIListConverter extends BaseIListConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BoolIListConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BoolIListConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BoolIListConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

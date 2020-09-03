@@ -112,6 +112,9 @@ public class IObjectHandleImplementation extends NetObject implements IObjectHan
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IObjectHandle}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IObjectHandle} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IObjectHandle ToIObjectHandle(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -125,6 +125,9 @@ public class ClientWebSocket extends WebSocket  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClientWebSocket}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ClientWebSocket} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ClientWebSocket cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

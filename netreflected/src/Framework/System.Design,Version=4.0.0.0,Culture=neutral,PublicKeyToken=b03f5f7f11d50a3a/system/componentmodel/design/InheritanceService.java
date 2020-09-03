@@ -51,7 +51,7 @@ import system.componentmodel.IContainerImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.InheritanceService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.InheritanceService</a>
  */
-public class InheritanceService extends NetObject  {
+public class InheritanceService extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

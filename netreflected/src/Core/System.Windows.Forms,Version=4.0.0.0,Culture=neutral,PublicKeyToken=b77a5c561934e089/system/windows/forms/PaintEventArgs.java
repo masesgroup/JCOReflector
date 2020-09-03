@@ -120,6 +120,9 @@ public class PaintEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PaintEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PaintEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PaintEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

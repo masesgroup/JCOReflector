@@ -127,6 +127,9 @@ public class Console extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Console}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Console} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Console cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

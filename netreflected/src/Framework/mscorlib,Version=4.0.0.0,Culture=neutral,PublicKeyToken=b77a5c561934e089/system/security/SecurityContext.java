@@ -49,7 +49,7 @@ import system.threading.ContextCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityContext</a>
  */
-public class SecurityContext extends NetObject  {
+public class SecurityContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -120,6 +120,9 @@ public class SecurityContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SecurityContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecurityContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -50,7 +50,7 @@ import system.xaml.XamlSchemaContext;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter</a>
  */
-public class XamlWriter extends NetObject  {
+public class XamlWriter extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

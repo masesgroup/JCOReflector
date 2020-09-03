@@ -120,6 +120,9 @@ public class CodeTypeParameter extends CodeObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeTypeParameter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CodeTypeParameter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeTypeParameter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

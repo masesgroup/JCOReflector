@@ -119,6 +119,9 @@ public class XmlMembersMapping extends XmlMapping  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlMembersMapping}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlMembersMapping} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlMembersMapping cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

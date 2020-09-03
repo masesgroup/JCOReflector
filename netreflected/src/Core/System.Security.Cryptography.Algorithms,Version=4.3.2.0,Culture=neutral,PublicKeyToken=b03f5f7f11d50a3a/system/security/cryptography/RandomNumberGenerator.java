@@ -47,7 +47,7 @@ import system.security.cryptography.RandomNumberGenerator;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RandomNumberGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RandomNumberGenerator</a>
  */
-public class RandomNumberGenerator extends NetObject  {
+public class RandomNumberGenerator extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -118,6 +118,9 @@ public class RandomNumberGenerator extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RandomNumberGenerator}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RandomNumberGenerator} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RandomNumberGenerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

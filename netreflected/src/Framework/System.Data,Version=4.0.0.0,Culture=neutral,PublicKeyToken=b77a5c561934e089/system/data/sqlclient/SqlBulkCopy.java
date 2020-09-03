@@ -59,7 +59,7 @@ import system.data.sqlclient.SqlRowsCopiedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlBulkCopy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlBulkCopy</a>
  */
-public class SqlBulkCopy extends NetObject  {
+public class SqlBulkCopy extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

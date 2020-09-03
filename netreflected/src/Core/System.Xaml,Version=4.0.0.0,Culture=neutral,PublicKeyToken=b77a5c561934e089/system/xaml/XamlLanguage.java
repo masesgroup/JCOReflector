@@ -119,6 +119,9 @@ public class XamlLanguage extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlLanguage}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XamlLanguage} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlLanguage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

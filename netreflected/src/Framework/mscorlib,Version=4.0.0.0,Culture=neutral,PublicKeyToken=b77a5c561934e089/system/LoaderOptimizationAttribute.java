@@ -119,6 +119,9 @@ public class LoaderOptimizationAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LoaderOptimizationAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LoaderOptimizationAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LoaderOptimizationAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

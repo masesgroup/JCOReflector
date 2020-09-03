@@ -121,6 +121,9 @@ public class SizeAnimationBase extends AnimationTimeline  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SizeAnimationBase}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SizeAnimationBase} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SizeAnimationBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

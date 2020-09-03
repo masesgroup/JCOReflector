@@ -119,6 +119,9 @@ public class RoutedUICommand extends RoutedCommand  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RoutedUICommand}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RoutedUICommand} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RoutedUICommand cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

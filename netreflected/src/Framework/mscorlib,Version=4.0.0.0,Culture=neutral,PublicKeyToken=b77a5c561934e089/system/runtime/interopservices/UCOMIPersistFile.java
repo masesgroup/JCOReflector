@@ -60,6 +60,9 @@ public interface UCOMIPersistFile extends IJCOBridgeReflected {
     public static final String className = "System.Runtime.InteropServices.UCOMIPersistFile";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UCOMIPersistFile}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UCOMIPersistFile} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UCOMIPersistFile ToUCOMIPersistFile(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

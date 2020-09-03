@@ -118,6 +118,9 @@ public class EventDefinitionHandleCollection extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventDefinitionHandleCollection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EventDefinitionHandleCollection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventDefinitionHandleCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

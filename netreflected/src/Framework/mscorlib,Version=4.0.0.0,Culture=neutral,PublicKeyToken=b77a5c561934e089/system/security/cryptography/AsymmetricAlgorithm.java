@@ -48,7 +48,7 @@ import system.security.cryptography.KeySizes;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsymmetricAlgorithm" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsymmetricAlgorithm</a>
  */
-public class AsymmetricAlgorithm extends NetObject  {
+public class AsymmetricAlgorithm extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -119,6 +119,9 @@ public class AsymmetricAlgorithm extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricAlgorithm}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AsymmetricAlgorithm} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsymmetricAlgorithm cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -116,6 +116,9 @@ public class IChannelSenderImplementation extends NetObject implements IChannelS
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IChannelSender}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IChannelSender} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IChannelSender ToIChannelSender(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

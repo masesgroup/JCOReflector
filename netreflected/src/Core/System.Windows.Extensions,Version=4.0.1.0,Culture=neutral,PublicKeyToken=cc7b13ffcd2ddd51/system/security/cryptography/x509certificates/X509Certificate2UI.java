@@ -120,6 +120,9 @@ public class X509Certificate2UI extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509Certificate2UI}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link X509Certificate2UI} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509Certificate2UI cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

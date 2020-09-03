@@ -48,7 +48,7 @@ import system.Action;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.AtomicComposition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.AtomicComposition</a>
  */
-public class AtomicComposition extends NetObject  {
+public class AtomicComposition extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

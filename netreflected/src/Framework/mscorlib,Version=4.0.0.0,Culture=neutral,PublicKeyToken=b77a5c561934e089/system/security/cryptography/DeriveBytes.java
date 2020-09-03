@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DeriveBytes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DeriveBytes</a>
  */
-public class DeriveBytes extends NetObject  {
+public class DeriveBytes extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -117,6 +117,9 @@ public class DeriveBytes extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DeriveBytes}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DeriveBytes} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DeriveBytes cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

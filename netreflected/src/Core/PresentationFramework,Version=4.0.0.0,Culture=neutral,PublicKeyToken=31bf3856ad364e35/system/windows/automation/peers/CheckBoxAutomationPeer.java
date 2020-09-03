@@ -119,6 +119,9 @@ public class CheckBoxAutomationPeer extends ToggleButtonAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CheckBoxAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link CheckBoxAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CheckBoxAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

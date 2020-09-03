@@ -47,7 +47,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlHistory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlHistory</a>
  */
-public class HtmlHistory extends NetObject  {
+public class HtmlHistory extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -118,6 +118,9 @@ public class ReadOnlyMemoryContent extends HttpContent  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReadOnlyMemoryContent}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ReadOnlyMemoryContent} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ReadOnlyMemoryContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

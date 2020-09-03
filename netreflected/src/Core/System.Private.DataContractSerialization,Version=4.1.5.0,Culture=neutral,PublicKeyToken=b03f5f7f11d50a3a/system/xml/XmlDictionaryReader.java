@@ -135,6 +135,9 @@ public class XmlDictionaryReader extends XmlReader  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDictionaryReader}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlDictionaryReader} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlDictionaryReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

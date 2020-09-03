@@ -118,6 +118,9 @@ public class MSG extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MSG}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MSG} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MSG cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

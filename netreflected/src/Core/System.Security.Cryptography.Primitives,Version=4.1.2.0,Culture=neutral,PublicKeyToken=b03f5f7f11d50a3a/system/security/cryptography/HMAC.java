@@ -119,6 +119,9 @@ public class HMAC extends KeyedHashAlgorithm  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HMAC}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HMAC} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HMAC cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class InterfaceImplementationHandle extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InterfaceImplementationHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link InterfaceImplementationHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InterfaceImplementationHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

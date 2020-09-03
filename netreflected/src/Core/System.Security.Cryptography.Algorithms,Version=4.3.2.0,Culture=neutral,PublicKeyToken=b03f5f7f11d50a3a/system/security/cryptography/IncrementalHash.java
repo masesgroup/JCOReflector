@@ -48,7 +48,7 @@ import system.security.cryptography.HashAlgorithmName;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.IncrementalHash" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.IncrementalHash</a>
  */
-public class IncrementalHash extends NetObject  {
+public class IncrementalHash extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -119,6 +119,9 @@ public class IncrementalHash extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IncrementalHash}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link IncrementalHash} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IncrementalHash cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

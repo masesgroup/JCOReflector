@@ -127,6 +127,9 @@ public class AppDomainManager extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AppDomainManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AppDomainManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AppDomainManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -123,6 +123,9 @@ public class XamlSetTypeConverterEventArgs extends XamlSetValueEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlSetTypeConverterEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XamlSetTypeConverterEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlSetTypeConverterEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

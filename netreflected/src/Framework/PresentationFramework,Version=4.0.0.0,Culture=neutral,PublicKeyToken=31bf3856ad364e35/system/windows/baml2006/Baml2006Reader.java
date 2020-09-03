@@ -53,7 +53,7 @@ import system.xaml.XamlType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Baml2006.Baml2006Reader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Baml2006.Baml2006Reader</a>
  */
-public class Baml2006Reader extends NetObject  {
+public class Baml2006Reader extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

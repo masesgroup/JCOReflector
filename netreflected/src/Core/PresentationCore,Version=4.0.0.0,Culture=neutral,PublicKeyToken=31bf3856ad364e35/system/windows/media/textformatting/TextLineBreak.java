@@ -47,7 +47,7 @@ import system.windows.media.textformatting.TextLineBreak;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextLineBreak" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextLineBreak</a>
  */
-public class TextLineBreak extends NetObject  {
+public class TextLineBreak extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -118,6 +118,9 @@ public class TextLineBreak extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextLineBreak}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TextLineBreak} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextLineBreak cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

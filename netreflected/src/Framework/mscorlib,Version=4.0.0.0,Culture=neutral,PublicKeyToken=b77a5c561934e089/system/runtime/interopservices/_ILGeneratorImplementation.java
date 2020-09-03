@@ -113,6 +113,9 @@ public class _ILGeneratorImplementation extends NetObject implements _ILGenerato
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _ILGenerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _ILGenerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _ILGenerator To_ILGenerator(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

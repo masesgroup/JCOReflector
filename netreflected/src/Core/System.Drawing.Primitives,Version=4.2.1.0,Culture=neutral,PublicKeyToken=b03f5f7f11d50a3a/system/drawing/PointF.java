@@ -122,6 +122,9 @@ public class PointF extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PointF}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PointF} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PointF cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

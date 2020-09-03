@@ -138,6 +138,9 @@ public class ControlPaint extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ControlPaint}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ControlPaint} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ControlPaint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

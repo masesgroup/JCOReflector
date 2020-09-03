@@ -119,6 +119,9 @@ public class ImageAnimator extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImageAnimator}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ImageAnimator} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ImageAnimator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

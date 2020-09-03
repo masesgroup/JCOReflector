@@ -118,6 +118,9 @@ public class InputGesture extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InputGesture}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link InputGesture} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InputGesture cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

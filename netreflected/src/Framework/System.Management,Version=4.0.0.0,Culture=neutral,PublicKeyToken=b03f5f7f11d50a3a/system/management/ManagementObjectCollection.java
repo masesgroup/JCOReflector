@@ -48,7 +48,7 @@ import system.management.ManagementBaseObject;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementObjectCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementObjectCollection</a>
  */
-public class ManagementObjectCollection extends NetObject  {
+public class ManagementObjectCollection extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

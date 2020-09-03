@@ -123,6 +123,9 @@ public class UInt64 extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UInt64}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link UInt64} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UInt64 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

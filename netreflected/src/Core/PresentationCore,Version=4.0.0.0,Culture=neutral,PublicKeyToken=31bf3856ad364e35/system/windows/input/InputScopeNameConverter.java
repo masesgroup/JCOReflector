@@ -121,6 +121,9 @@ public class InputScopeNameConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InputScopeNameConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link InputScopeNameConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InputScopeNameConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

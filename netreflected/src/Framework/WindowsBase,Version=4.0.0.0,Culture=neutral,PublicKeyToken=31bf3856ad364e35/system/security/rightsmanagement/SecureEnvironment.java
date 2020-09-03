@@ -50,7 +50,7 @@ import system.security.rightsmanagement.UserActivationMode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.SecureEnvironment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.SecureEnvironment</a>
  */
-public class SecureEnvironment extends NetObject  {
+public class SecureEnvironment extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -117,6 +117,9 @@ public class BStrWrapper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BStrWrapper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BStrWrapper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BStrWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

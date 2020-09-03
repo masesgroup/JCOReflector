@@ -114,6 +114,9 @@ public class IChannelSinkBaseImplementation extends NetObject implements IChanne
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IChannelSinkBase}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IChannelSinkBase} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IChannelSinkBase ToIChannelSinkBase(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class AsymmetricSignatureFormatter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricSignatureFormatter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AsymmetricSignatureFormatter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsymmetricSignatureFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

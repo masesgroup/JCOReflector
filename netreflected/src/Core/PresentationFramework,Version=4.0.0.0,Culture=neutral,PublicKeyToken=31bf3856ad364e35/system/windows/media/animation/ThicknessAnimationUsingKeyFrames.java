@@ -120,6 +120,9 @@ public class ThicknessAnimationUsingKeyFrames extends ThicknessAnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ThicknessAnimationUsingKeyFrames}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ThicknessAnimationUsingKeyFrames} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ThicknessAnimationUsingKeyFrames cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

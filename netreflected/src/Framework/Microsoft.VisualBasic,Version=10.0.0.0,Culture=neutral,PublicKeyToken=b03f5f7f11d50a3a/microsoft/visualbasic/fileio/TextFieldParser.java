@@ -50,7 +50,7 @@ import microsoft.visualbasic.fileio.FieldType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.FileIO.TextFieldParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.FileIO.TextFieldParser</a>
  */
-public class TextFieldParser extends NetObject  {
+public class TextFieldParser extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

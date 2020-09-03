@@ -123,6 +123,9 @@ public class Slider extends RangeBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Slider}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Slider} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Slider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class MultipartContent extends HttpContent  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MultipartContent}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MultipartContent} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MultipartContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

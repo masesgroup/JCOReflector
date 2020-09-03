@@ -125,6 +125,9 @@ public class Typography extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Typography}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Typography} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Typography cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

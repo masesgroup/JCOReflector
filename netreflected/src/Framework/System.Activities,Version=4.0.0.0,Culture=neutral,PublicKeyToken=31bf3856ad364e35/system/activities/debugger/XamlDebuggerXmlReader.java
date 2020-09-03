@@ -52,7 +52,7 @@ import system.xaml.XamlType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.XamlDebuggerXmlReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.XamlDebuggerXmlReader</a>
  */
-public class XamlDebuggerXmlReader extends NetObject  {
+public class XamlDebuggerXmlReader extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

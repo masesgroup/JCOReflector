@@ -61,7 +61,7 @@ import system.transactions.TransactionCompletedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.Transaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.Transaction</a>
  */
-public class Transaction extends NetObject  {
+public class Transaction extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -132,6 +132,9 @@ public class Transaction extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Transaction}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Transaction} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Transaction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

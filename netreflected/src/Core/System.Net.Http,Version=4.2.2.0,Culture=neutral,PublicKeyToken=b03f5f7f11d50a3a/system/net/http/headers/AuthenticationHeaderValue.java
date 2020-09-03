@@ -118,6 +118,9 @@ public class AuthenticationHeaderValue extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AuthenticationHeaderValue}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AuthenticationHeaderValue} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AuthenticationHeaderValue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

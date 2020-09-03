@@ -121,6 +121,9 @@ public class Int32CollectionConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int32CollectionConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Int32CollectionConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Int32CollectionConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

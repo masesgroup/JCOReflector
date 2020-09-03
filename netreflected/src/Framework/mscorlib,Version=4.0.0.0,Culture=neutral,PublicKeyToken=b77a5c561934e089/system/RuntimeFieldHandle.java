@@ -121,6 +121,9 @@ public class RuntimeFieldHandle extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuntimeFieldHandle}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RuntimeFieldHandle} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RuntimeFieldHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

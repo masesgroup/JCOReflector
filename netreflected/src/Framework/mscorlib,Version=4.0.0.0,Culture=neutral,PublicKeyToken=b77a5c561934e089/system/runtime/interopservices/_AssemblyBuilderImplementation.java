@@ -113,6 +113,9 @@ public class _AssemblyBuilderImplementation extends NetObject implements _Assemb
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link _AssemblyBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link _AssemblyBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static _AssemblyBuilder To_AssemblyBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

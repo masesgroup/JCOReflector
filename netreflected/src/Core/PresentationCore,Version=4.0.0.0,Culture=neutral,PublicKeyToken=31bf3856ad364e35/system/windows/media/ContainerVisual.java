@@ -135,6 +135,9 @@ public class ContainerVisual extends Visual  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContainerVisual}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ContainerVisual} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContainerVisual cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

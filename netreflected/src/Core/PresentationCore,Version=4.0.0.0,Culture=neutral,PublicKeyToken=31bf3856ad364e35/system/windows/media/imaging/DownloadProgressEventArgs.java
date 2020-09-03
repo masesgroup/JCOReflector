@@ -118,6 +118,9 @@ public class DownloadProgressEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DownloadProgressEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DownloadProgressEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DownloadProgressEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

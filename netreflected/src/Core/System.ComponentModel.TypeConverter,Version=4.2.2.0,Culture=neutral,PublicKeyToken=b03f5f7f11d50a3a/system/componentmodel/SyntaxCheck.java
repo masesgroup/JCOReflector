@@ -117,6 +117,9 @@ public class SyntaxCheck extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SyntaxCheck}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SyntaxCheck} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SyntaxCheck cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

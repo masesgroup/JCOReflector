@@ -120,6 +120,9 @@ public class DescendantIterator extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DescendantIterator}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DescendantIterator} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DescendantIterator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

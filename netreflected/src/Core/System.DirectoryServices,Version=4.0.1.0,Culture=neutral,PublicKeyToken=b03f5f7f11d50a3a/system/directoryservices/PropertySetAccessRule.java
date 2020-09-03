@@ -123,6 +123,9 @@ public class PropertySetAccessRule extends ActiveDirectoryAccessRule  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertySetAccessRule}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link PropertySetAccessRule} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PropertySetAccessRule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

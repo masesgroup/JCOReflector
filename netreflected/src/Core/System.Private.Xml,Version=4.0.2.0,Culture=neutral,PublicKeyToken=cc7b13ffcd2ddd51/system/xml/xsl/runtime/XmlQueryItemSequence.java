@@ -119,6 +119,9 @@ public class XmlQueryItemSequence extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlQueryItemSequence}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlQueryItemSequence} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlQueryItemSequence cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

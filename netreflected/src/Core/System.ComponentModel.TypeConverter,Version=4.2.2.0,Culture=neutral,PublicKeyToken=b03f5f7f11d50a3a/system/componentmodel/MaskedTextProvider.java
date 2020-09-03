@@ -119,6 +119,9 @@ public class MaskedTextProvider extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MaskedTextProvider}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MaskedTextProvider} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MaskedTextProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

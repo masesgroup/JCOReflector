@@ -122,6 +122,9 @@ public class HwndTarget extends CompositionTarget  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HwndTarget}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HwndTarget} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HwndTarget cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

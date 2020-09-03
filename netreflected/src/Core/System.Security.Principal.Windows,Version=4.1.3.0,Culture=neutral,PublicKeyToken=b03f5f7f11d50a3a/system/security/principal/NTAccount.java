@@ -118,6 +118,9 @@ public class NTAccount extends IdentityReference  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NTAccount}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link NTAccount} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NTAccount cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

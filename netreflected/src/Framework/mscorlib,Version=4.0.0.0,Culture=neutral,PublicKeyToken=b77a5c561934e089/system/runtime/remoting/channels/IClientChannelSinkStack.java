@@ -69,6 +69,9 @@ public interface IClientChannelSinkStack extends IJCOBridgeReflected, IClientRes
     public static final String className = "System.Runtime.Remoting.Channels.IClientChannelSinkStack";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IClientChannelSinkStack}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IClientChannelSinkStack} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IClientChannelSinkStack ToIClientChannelSinkStack(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

@@ -53,7 +53,7 @@ import system.TimeSpan;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink</a>
  */
-public class ActiveDirectorySiteLink extends NetObject  {
+public class ActiveDirectorySiteLink extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

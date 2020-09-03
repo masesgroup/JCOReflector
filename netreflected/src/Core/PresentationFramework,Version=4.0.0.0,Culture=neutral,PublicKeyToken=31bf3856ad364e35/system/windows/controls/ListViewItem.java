@@ -118,6 +118,9 @@ public class ListViewItem extends ListBoxItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListViewItem}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ListViewItem} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ListViewItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

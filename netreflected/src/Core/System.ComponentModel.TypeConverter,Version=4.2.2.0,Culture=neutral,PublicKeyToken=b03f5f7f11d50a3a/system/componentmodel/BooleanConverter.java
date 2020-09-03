@@ -121,6 +121,9 @@ public class BooleanConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BooleanConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BooleanConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BooleanConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

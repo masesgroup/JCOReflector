@@ -118,6 +118,9 @@ public class SortKey extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SortKey}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SortKey} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SortKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

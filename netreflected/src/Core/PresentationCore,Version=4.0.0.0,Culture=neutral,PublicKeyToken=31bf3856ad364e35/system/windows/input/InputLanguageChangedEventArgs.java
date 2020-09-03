@@ -119,6 +119,9 @@ public class InputLanguageChangedEventArgs extends InputLanguageEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InputLanguageChangedEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link InputLanguageChangedEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InputLanguageChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

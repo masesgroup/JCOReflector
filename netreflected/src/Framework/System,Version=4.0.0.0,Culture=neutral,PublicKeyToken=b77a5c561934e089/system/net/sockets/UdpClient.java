@@ -53,7 +53,7 @@ import system.net.sockets.Socket;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.UdpClient</a>
  */
-public class UdpClient extends NetObject  {
+public class UdpClient extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

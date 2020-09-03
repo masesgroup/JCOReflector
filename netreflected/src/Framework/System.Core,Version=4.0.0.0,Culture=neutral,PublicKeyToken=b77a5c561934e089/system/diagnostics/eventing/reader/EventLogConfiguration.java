@@ -50,7 +50,7 @@ import system.diagnostics.eventing.reader.EventLogType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogConfiguration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogConfiguration</a>
  */
-public class EventLogConfiguration extends NetObject  {
+public class EventLogConfiguration extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

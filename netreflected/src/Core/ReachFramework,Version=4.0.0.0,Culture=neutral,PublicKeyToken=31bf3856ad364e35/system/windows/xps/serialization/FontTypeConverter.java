@@ -123,6 +123,9 @@ public class FontTypeConverter extends ExpandableObjectConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontTypeConverter}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FontTypeConverter} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FontTypeConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

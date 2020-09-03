@@ -118,6 +118,9 @@ public class MemoryHandle extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemoryHandle}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MemoryHandle} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MemoryHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

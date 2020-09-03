@@ -118,6 +118,9 @@ public class AutoResetEvent extends EventWaitHandle  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AutoResetEvent}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AutoResetEvent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AutoResetEvent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -124,6 +124,9 @@ public class GroupBoxRenderer extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GroupBoxRenderer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link GroupBoxRenderer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GroupBoxRenderer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

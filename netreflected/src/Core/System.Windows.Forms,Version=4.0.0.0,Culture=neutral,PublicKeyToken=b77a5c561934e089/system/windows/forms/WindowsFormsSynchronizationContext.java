@@ -119,6 +119,9 @@ public class WindowsFormsSynchronizationContext extends SynchronizationContext  
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WindowsFormsSynchronizationContext}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link WindowsFormsSynchronizationContext} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WindowsFormsSynchronizationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

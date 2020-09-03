@@ -120,6 +120,9 @@ public class FixedDocumentSequence extends FrameworkContentElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FixedDocumentSequence}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link FixedDocumentSequence} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FixedDocumentSequence cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

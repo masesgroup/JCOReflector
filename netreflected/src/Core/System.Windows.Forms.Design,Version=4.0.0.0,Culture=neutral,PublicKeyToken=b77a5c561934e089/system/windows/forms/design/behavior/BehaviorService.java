@@ -55,7 +55,7 @@ import system.windows.forms.design.behavior.BehaviorDragDropEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorService</a>
  */
-public class BehaviorService extends NetObject  {
+public class BehaviorService extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -126,6 +126,9 @@ public class BehaviorService extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BehaviorService}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link BehaviorService} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BehaviorService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

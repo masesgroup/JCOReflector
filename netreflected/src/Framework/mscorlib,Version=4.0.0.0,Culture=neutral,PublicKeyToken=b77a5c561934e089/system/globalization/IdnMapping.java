@@ -117,6 +117,9 @@ public class IdnMapping extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IdnMapping}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IdnMapping} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IdnMapping cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptoAPITransform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptoAPITransform</a>
  */
-public class CryptoAPITransform extends NetObject  {
+public class CryptoAPITransform extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -117,6 +117,9 @@ public class CryptoAPITransform extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CryptoAPITransform}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CryptoAPITransform} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CryptoAPITransform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

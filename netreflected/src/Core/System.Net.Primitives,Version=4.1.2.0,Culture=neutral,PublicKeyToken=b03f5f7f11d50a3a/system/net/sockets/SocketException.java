@@ -139,6 +139,9 @@ public class SocketException extends Win32Exception {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SocketException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SocketException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SocketException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

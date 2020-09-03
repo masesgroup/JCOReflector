@@ -121,6 +121,9 @@ public class LocalPrintServer extends PrintServer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LocalPrintServer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LocalPrintServer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LocalPrintServer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

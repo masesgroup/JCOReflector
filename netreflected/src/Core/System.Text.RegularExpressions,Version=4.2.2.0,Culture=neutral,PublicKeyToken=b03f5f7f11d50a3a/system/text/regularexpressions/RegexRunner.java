@@ -117,6 +117,9 @@ public class RegexRunner extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegexRunner}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RegexRunner} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegexRunner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

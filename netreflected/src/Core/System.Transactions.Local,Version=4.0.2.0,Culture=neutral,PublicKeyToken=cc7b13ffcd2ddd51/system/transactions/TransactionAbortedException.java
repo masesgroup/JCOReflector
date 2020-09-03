@@ -138,6 +138,9 @@ public class TransactionAbortedException extends TransactionException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionAbortedException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TransactionAbortedException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransactionAbortedException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

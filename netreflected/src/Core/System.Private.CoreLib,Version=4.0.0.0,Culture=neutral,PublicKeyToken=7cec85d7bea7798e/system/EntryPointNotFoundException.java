@@ -138,6 +138,9 @@ public class EntryPointNotFoundException extends TypeLoadException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntryPointNotFoundException}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link EntryPointNotFoundException} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EntryPointNotFoundException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

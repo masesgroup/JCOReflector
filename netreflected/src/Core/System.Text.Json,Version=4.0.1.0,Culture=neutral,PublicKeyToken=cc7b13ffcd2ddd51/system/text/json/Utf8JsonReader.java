@@ -130,6 +130,9 @@ public class Utf8JsonReader extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Utf8JsonReader}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Utf8JsonReader} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Utf8JsonReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

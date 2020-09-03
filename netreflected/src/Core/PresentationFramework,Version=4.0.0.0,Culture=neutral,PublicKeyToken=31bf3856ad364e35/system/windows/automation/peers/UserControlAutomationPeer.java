@@ -119,6 +119,9 @@ public class UserControlAutomationPeer extends FrameworkElementAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UserControlAutomationPeer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link UserControlAutomationPeer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UserControlAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

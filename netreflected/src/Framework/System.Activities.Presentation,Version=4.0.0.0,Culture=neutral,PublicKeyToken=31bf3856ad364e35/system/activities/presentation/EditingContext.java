@@ -49,7 +49,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.EditingContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.EditingContext</a>
  */
-public class EditingContext extends NetObject  {
+public class EditingContext extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

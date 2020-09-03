@@ -127,6 +127,9 @@ public class IsolatedStorageFile extends IsolatedStorage  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IsolatedStorageFile}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IsolatedStorageFile} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IsolatedStorageFile cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

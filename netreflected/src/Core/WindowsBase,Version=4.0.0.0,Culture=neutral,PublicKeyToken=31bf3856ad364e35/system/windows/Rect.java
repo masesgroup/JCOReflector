@@ -125,6 +125,9 @@ public class Rect extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rect}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Rect} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Rect cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

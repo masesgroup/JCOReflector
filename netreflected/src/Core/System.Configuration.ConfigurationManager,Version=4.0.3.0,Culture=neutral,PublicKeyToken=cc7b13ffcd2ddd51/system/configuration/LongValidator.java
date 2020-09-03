@@ -118,6 +118,9 @@ public class LongValidator extends ConfigurationValidatorBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LongValidator}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link LongValidator} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LongValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

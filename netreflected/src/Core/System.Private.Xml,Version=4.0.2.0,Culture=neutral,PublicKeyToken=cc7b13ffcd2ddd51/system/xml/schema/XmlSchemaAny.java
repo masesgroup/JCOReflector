@@ -119,6 +119,9 @@ public class XmlSchemaAny extends XmlSchemaParticle  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaAny}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlSchemaAny} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaAny cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

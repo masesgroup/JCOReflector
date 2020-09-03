@@ -118,6 +118,9 @@ public class TextElementEditingBehaviorAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextElementEditingBehaviorAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link TextElementEditingBehaviorAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextElementEditingBehaviorAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

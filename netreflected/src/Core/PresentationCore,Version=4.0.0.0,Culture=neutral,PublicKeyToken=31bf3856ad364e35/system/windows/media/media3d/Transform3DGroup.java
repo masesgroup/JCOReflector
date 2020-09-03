@@ -121,6 +121,9 @@ public class Transform3DGroup extends Transform3D  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Transform3DGroup}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link Transform3DGroup} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Transform3DGroup cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

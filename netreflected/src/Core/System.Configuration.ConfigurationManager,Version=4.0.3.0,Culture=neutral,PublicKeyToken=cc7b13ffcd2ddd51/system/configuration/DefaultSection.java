@@ -118,6 +118,9 @@ public class DefaultSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultSection}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DefaultSection} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DefaultSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

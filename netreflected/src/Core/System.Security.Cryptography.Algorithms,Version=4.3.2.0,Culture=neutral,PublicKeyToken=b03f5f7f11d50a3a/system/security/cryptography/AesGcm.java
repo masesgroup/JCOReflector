@@ -47,7 +47,7 @@ import system.security.cryptography.KeySizes;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AesGcm" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AesGcm</a>
  */
-public class AesGcm extends NetObject  {
+public class AesGcm extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -118,6 +118,9 @@ public class AesGcm extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AesGcm}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link AesGcm} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AesGcm cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

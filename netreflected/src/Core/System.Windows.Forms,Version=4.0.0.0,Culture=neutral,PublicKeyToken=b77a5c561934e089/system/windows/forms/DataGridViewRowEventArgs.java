@@ -119,6 +119,9 @@ public class DataGridViewRowEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewRowEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link DataGridViewRowEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewRowEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

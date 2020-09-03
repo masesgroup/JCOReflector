@@ -122,6 +122,9 @@ public class NumericUpDown extends UpDownBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NumericUpDown}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link NumericUpDown} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NumericUpDown cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

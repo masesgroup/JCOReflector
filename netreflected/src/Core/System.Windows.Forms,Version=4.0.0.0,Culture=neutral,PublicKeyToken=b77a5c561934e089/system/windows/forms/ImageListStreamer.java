@@ -48,7 +48,7 @@ import system.runtime.serialization.StreamingContext;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ImageListStreamer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ImageListStreamer</a>
  */
-public class ImageListStreamer extends NetObject  {
+public class ImageListStreamer extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -119,6 +119,9 @@ public class ImageListStreamer extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImageListStreamer}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ImageListStreamer} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ImageListStreamer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

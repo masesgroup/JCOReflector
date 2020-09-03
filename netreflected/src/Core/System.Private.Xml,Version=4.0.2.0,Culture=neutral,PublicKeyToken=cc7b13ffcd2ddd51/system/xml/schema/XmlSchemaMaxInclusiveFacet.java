@@ -118,6 +118,9 @@ public class XmlSchemaMaxInclusiveFacet extends XmlSchemaFacet  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaMaxInclusiveFacet}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link XmlSchemaMaxInclusiveFacet} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaMaxInclusiveFacet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

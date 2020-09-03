@@ -121,6 +121,9 @@ public class SourceChangedEventArgs extends RoutedEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SourceChangedEventArgs}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link SourceChangedEventArgs} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SourceChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

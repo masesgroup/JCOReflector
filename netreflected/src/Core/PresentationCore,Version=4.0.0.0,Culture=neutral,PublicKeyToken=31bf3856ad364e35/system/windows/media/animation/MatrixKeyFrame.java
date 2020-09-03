@@ -120,6 +120,9 @@ public class MatrixKeyFrame extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MatrixKeyFrame}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link MatrixKeyFrame} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MatrixKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

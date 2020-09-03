@@ -117,6 +117,9 @@ public class RegionData extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegionData}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link RegionData} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegionData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

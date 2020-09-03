@@ -118,6 +118,9 @@ public class AsyncStateMachineAttribute extends StateMachineAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncStateMachineAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AsyncStateMachineAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsyncStateMachineAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

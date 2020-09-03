@@ -118,6 +118,9 @@ public class ThreadStaticAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ThreadStaticAttribute}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link ThreadStaticAttribute} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ThreadStaticAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

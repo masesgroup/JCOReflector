@@ -52,7 +52,7 @@ import system.Version;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpResponseMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpResponseMessage</a>
  */
-public class HttpResponseMessage extends NetObject  {
+public class HttpResponseMessage extends NetObjectAutoCloseable  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -123,6 +123,9 @@ public class HttpResponseMessage extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpResponseMessage}, a cast assert is made to check if types are compatible.
+	 * @param {@link IJCOBridgeReflected} instance to be casted
+	 * @return {@link HttpResponseMessage} instance
+	 * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpResponseMessage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

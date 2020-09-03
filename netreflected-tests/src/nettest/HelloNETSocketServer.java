@@ -40,15 +40,6 @@ public class HelloNETSocketServer {
     // Incoming data from the client.
     public static String data = null;
 
-    static int Receive(Socket sender, JCRefOut ref) throws JCNativeException, Throwable {
-        // from
-        // https://github.com/masesgroup/JCOReflector/issues/10#issuecomment-652572559
-        JCObject jco = (JCObject) sender.getJCOInstance();
-        int bytesRec = (int) jco.Invoke("Receive", ref, sender.getAvailable(), SocketFlags.None.getJCOInstance());
-
-        return bytesRec;
-    }
-
     public static void StartListening(boolean asyncMode, String address, int port) {
         // Data buffer for incoming data.
         byte[] bytes = new byte[1024];
@@ -101,7 +92,7 @@ public class HelloNETSocketServer {
                         }
                         dataNew = Encoding.getASCII().GetString(asea.getBuffer(), 0, asea.getBytesTransferred());
                     } else {
-                        int recBytes = Receive(handler, JCRefOut.Create(bytes));
+                        int recBytes = handler.Receive(JCRefOut.Create(bytes));
                         dataNew = Encoding.getASCII().GetString(bytes, 0, recBytes);
                     }
 
@@ -126,8 +117,8 @@ public class HelloNETSocketServer {
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close(10);
             }
-        } catch (Exception | PlatformNotSupportedException | ArgumentOutOfRangeException | ArgumentNullException
-                | ArgumentException | InvalidOperationException | ObjectDisposedException
+        } catch (Exception | PlatformNotSupportedException 
+                | ArgumentException | InvalidOperationException 
                 | ArrayTypeMismatchException e) {
             e.printStackTrace();
         } catch (Throwable e) {

@@ -46,14 +46,6 @@ public class HelloNETSocketClient {
     // Incoming data from the client.
     public static String data = null;
 
-    static int Receive(Socket sender, JCRefOut ref) throws JCNativeException, Throwable {
-        // from https://github.com/masesgroup/JCOReflector/issues/10#issuecomment-652572559
-        JCObject jco = (JCObject) sender.getJCOInstance();
-        int bytesRec = (int) jco.Invoke("Receive", ref, sender.getAvailable(), SocketFlags.None.getJCOInstance());
-
-        return bytesRec;
-    }
-
     public static void StartClient(boolean asyncMode, String address, int port) {
         // Data buffer for incoming data.
         byte[] bytes = new byte[1024];
@@ -112,7 +104,7 @@ public class HelloNETSocketClient {
                         String message = Encoding.getASCII().GetString(asea.getBuffer(), 0, asea.getBytesTransferred());
                         Console.WriteLine("Client data received {0}", new NetObject(message));
                     } else {
-                        int recBytes = Receive(sender, JCRefOut.Create(bytes));
+                        int recBytes = sender.Receive(JCRefOut.Create(bytes));
                         String message = Encoding.getASCII().GetString(bytes, 0, recBytes);
                         Console.WriteLine("Client data received {0}", new NetObject(message));
                     }
@@ -123,9 +115,9 @@ public class HelloNETSocketClient {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } catch (ArgumentException | ArgumentOutOfRangeException | ArgumentNullException | InvalidOperationException
-                | PlatformNotSupportedException | IndexOutOfRangeException | NotSupportedException
-                | MissingManifestResourceException | ObjectDisposedException | FormatException
+        } catch (ArgumentException | InvalidOperationException
+                 | IndexOutOfRangeException | NotSupportedException
+                | MissingManifestResourceException  | FormatException
                 | EventSourceException e) {
             e.printStackTrace();
         } catch (Throwable e) {

@@ -112,6 +112,9 @@ public class PACKAGE_CLASS_NAMEImplementation extends PACKAGE_CLASS_BASE_CLASS i
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PACKAGE_CLASS_NAME}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PACKAGE_CLASS_NAME} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PACKAGE_CLASS_NAME ToPACKAGE_CLASS_NAME(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

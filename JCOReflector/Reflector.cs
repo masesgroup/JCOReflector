@@ -39,7 +39,7 @@ namespace MASES.C2JReflector
     {
         public CancellationToken CancellationToken { get; set; }
         public LogLevel LogLevel { get; set; }
-        public string AssemblyName { get; set; }
+        public string[] AssemblyNames { get; set; }
         public string RootDestinationFolder { get; set; }
         public string CsvDestinationFolder { get; set; }
         public bool SplitFolderByAssembly { get; set; }
@@ -88,7 +88,6 @@ namespace MASES.C2JReflector
         static bool EnableInheritance = false;
 
         static LogLevel LogLevel;
-        static string RootAssemblyName;
         static string RootDestinationFolder;
         static string CsvDestinationFolder;
         static bool SplitByAssembly;
@@ -331,7 +330,6 @@ namespace MASES.C2JReflector
             LogLevel = args.LogLevel;
             RootDestinationFolder = args.RootDestinationFolder;
             CsvDestinationFolder = args.CsvDestinationFolder;
-            RootAssemblyName = args.AssemblyName;
             SplitByAssembly = args.SplitFolderByAssembly;
             ForceRebuild = args.ForceRebuild;
             UseParallelBuild = args.UseParallelBuild;
@@ -347,19 +345,23 @@ namespace MASES.C2JReflector
             string statisticsCsv = string.Empty;
             try
             {
-                Assembly assembly = null;
-                if (File.Exists(RootAssemblyName))
+                foreach (var item in args.AssemblyNames)
                 {
-                    AppendToConsole(LogLevel.Info, "Loading assembly from path {0}", RootAssemblyName);
-                    assembly = Assembly.LoadFrom(RootAssemblyName);
-                }
-                else
-                {
-                    AppendToConsole(LogLevel.Info, "Loading assembly {0}", RootAssemblyName);
-                    assembly = Assembly.Load(RootAssemblyName);
+                    Assembly assembly = null;
+                    if (File.Exists(item))
+                    {
+                        AppendToConsole(LogLevel.Info, "Loading assembly from path {0}", item);
+                        assembly = Assembly.LoadFrom(item);
+                    }
+                    else
+                    {
+                        AppendToConsole(LogLevel.Info, "Loading assembly {0}", item);
+                        assembly = Assembly.Load(item);
+                    }
+
+                    await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), RootDestinationFolder, SplitByAssembly, ForceRebuild);
                 }
 
-                await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), RootDestinationFolder, SplitByAssembly, ForceRebuild);
                 reportStr = GetReport();
                 string statisticsError;
                 statisticsCsv = GetStatisticsCsv(out statisticsError);

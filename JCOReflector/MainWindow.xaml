@@ -53,8 +53,8 @@
                                 <TextBox Name="tbDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" />
                             </DockPanel>
                             <DockPanel DockPanel.Dock="Top" MinHeight="30">
-                                <Label Content="Assembly name" VerticalAlignment="Center" MinWidth="120"/>
-                                <TextBox Name="tbAssembly" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+                                <Label Content="Assembly names" VerticalAlignment="Center" MinWidth="120"/>
+                                <TextBox Name="tbAssemblyNames" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
                             </DockPanel>
                             <GroupBox DockPanel.Dock="Top" Header="Options">
                                 <DockPanel LastChildFill="False">

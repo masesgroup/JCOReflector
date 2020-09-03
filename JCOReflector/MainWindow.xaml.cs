@@ -133,7 +133,7 @@ namespace MASES.C2JReflector
             cts = new CancellationTokenSource();
             args.CancellationToken = cts.Token;
             args.LogLevel = (LogLevel)cbLogLevel.SelectedValue;
-            args.AssemblyName = tbAssembly.Text;
+            args.AssemblyNames = string.IsNullOrEmpty(tbAssemblyNames.Text) ? new List<string>().ToArray() : tbAssemblyNames.Text.Replace("\r", "").Split('\n');
             args.RootDestinationFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.SourceDirectory));
             args.CsvDestinationFolder = Path.GetFullPath(Path.Combine(tbDestinationFolder.Text, Const.FileNameAndDirectory.StatsDirectory));
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;

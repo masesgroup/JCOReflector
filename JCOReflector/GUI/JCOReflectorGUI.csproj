@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>JCOReflectorGUI</AssemblyName>
+    <RootNamespace>MASES.C2JReflector</RootNamespace>
+    <Title>JCOReflector - Java class generator based on JCOBridge</Title>
+    <Description>JCOReflector - Java class generator based on JCOBridge</Description>
+    <Copyright>Copyright ©  MASES s.r.l. 2020</Copyright>
+    <Company>MASES s.r.l.</Company>
+    <Version>1.2.1.0</Version>
+    <Product>JCOReflectorGUI</Product>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <TargetFrameworks>net461;netcoreapp3.1</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <OutputPath>..\..\bin\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+    <DefineConstants>$(DefineConstants);NET_CORE;</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+	<ProjectReference Include="..\engine\JCOReflectorEngine.csproj" />
+  </ItemGroup>
+</Project>

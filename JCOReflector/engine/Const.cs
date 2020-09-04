@@ -49,7 +49,7 @@ namespace MASES.C2JReflector
         Version14
     }
 
-    class Const
+    public class Const
     {
         public static string[] KeyWords = new string[]
         {

@@ -117,7 +117,7 @@ namespace MASES.C2JReflector
     }
     #endregion
 
-    #region UserNodeIdCollection Class
+    #region AssemblyDataCollection Class
     /// <summary>
     /// A collection of Manager objects.
     /// </summary>

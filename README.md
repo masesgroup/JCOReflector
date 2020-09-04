@@ -104,15 +104,21 @@ In all cases [JCOBridge](https://www.jcobridge.com) superside these limitations,
 
 In the root folder execute:
 
-> dotnet build JCOReflector\JCOReflectorCore.csproj
+> dotnet build JCOReflector\JCOReflector.sln
 
-For .NET Core it is possible to execute:
+or
 
-> dotnet run --framework netcoreapp3.1 --project JCOReflector\JCOReflectorCore.csproj
+> dotnet build JCOReflector\JCOReflectorCLI.sln
 
-For .NET Framework it is possible to execute:
+Within the folder bin you will find two subfolders:
 
-> dotnet run --framework net461 --project JCOReflector\JCOReflectorCore.csproj
+- **net461** (available only on Windows platform)
+- **netcoreapp3.1** (available on .NET Core supported platform)
+
+in each subfolder will be available two executables:
+
+- **JCOReflectorCLI** the CLI tool (under development: see issue #18);
+- **JCOReflectorGUI** the GUI tool, below some screenshot:
 
 ![JCOReflector](/assets/images/jcoreflector.png?raw=true "JCOReflector screenshot")
 ![JCOReflector](/assets/images/jcoreflector2.png?raw=true "JCOReflector screenshot")

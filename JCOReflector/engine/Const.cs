@@ -131,7 +131,7 @@ namespace MASES.C2JReflector
             public const string RuntimeFolder = "netcoreapp3.1";
 #else
             public const string Runtime = ".NET Framework";
-            public const string RuntimeFolder = "Framework";
+            public const string RuntimeFolder = "net461";
 #endif
         }
 

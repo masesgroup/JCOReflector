@@ -1,6 +1,6 @@
-[submodule "netreflected/docs/Core"]
-	path = netreflected/docs/Core
+[submodule "netreflected/docs/netcoreapp3.1"]
+	path = netreflected/docs/netcoreapp3.1
 	url = https://github.com/masesgroup/CoreDocs.git
-[submodule "netreflected/docs/Framework"]
-	path = netreflected/docs/Framework
+[submodule "netreflected/docs/net461"]
+	path = netreflected/docs/net461
 	url = https://github.com/masesgroup/FrameworkDocs.git

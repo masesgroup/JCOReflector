@@ -2,12 +2,12 @@
 
 The available reflected classes are generated starting from root assemblies, generation is done using up to 10 recursions to explore for exportable Exceptions.
 There are two main folders:
-* **Framework** contains the reflected classes generated from .NET Framework, divided by the containing assembly
-* **Core** contains the reflected classes generated from .NET Core 3.1, divided by the containing assembly
+* **_net461_** contains the reflected classes generated from .NET Framework, divided by the containing assembly
+* **_netcoreapp3.1_** contains the reflected classes generated from .NET Core 3.1, divided by the containing assembly
 
-**JCOReflector** is the folder of common classes for both **Framework** and **Core**
+**JCOReflector** is the folder of common classes for both **.NET** **Framework** and **Core**
 
-## Framework
+## .NET Framework
 ![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1238429091&format=image)
 
 ![FrameworkStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=485555819&format=image)
@@ -105,7 +105,7 @@ Parsed assemblies are:
 >   * Total Properties: Analyzed 31911 - Implemented = 29770
 >   * Total Events: Analyzed 2391 - Implemented = 2185
 
-## CoreCLR (reference is .NET Core 3.1)
+## .NET Core (reference is .NET Core 3.1)
 
 ![NetcoreStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=964222969&format=image)
 

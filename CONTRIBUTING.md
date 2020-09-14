@@ -16,14 +16,26 @@ The project is organized in this folder structure:
     * net461 (folder for .NET Framework output)
     * netcoreapp3.1 (folder for .NET Core 3.1 output)
 * **JCOReflector** (The folder containing the source of the reflection engine)
+    * **CLI** (command line interface)
+    * **GUI** (graphical interface)
+    * **engine** (common reflection engine)
 * **netreflected** (container of Java classes)
     * **src** (a standard folder used in any Java IDE)
         * **JCOReflector** (contains the base classes used from JCOReflector to build reflected classes)
-        * **Core** (contains, sepearated in folders, the sets of reflected classes of .NET Core generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-        * **Framework** (contains, sepearated in folders, the sets of reflected classes of .NET Framework generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+        * **netcoreapp3.1** (contains, sepearated in folders, the sets of reflected classes of .NET Core generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+        * **net461** (contains, sepearated in folders, the sets of reflected classes of .NET Framework generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+    * **docs**
+        * **netcoreapp3.1** (contains the generated documentation related to .NET Core: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+        * **net461** (contains the generated documentation related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+    * **statistics**
+        * **netcoreapp3.1** (contains the generated statistics related to .NET Core: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+        * **net461** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+
 * **netreflected-tests** (container of Java test classes)
     * **src** (a standard folder used in any Java IDE)
         * **mscorlib** (contains an example class which use mscorlib API)
+		* **nettest** (contains an example class which use network API)
+		* **hierarchy** (contains an example class which use hierarchy)
 
 # How Can I Contribute?
 
@@ -41,8 +53,8 @@ The basic and simple rules for the project are:
     * *netreflected/src/JCOReflector*
 * **Unit test**: contibution can be made in the testing code section under *netreflected-tests* folder
 * **Reflected classes**: the following folders and subsolders are generated code from JCOReflector, to change them a developer shall modify the templates; the code will be updated from mantairners after the validation of JCOReflector engine:
-    * *netreflected/src/Core*
-    * *netreflected/src/Framework*
+    * *netreflected/src/netcoreapp3.1*
+    * *netreflected/src/net461*
 
 ## Suggesting Enhancements
 

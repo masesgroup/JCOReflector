@@ -68,7 +68,7 @@ From the point of view of .NET it is very simple to use Java classes and it is n
 
 The project is at its first stages. A graphical UI helps to manages reflection and all other operations to finally build JARs.
 JCOReflector uses templates so it is not necessary to manually manages the output.
-The reflector executable, available for both Framework and CoreCLR, is limited in the following features:
+The reflector executables, available for both Framework and CoreCLR, is limited in the following features:
 
 ### Implemented in the reflector
 
@@ -125,7 +125,7 @@ in each subfolder will be available two executables:
 
 ## Reflected Assemblies
 
-The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** and **Core**. Below the coverage statistics and the list of analyzed and reflected assemblies:
+The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** (_net461_) and **Core** (_netcoreapp3.1_). Below the coverage statistics and the list of analyzed and reflected assemblies:
 
 ### Statistics
 ![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1238429091&format=image)
@@ -137,7 +137,7 @@ The folder [netreflected](/netreflected/src) contains all reflected classes gene
 ![NetcoreStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=857533338&format=image)
 
 
-### Framework list of analyzed and reflected assemblies
+### .NET Framework list of analyzed and reflected assemblies
 
 > * PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -212,7 +212,7 @@ The folder [netreflected](/netreflected/src) contains all reflected classes gene
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-### CoreCLR list of analyzed and reflected assemblies (reference is .NET Core 3.1)
+### .NET Core list of analyzed and reflected assemblies (reference is .NET Core 3.1)
 
 > * PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Runtime, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a

@@ -37,6 +37,7 @@ namespace MASES.C2JReflector
             if (args.Length < 2)
             {
                 showHelp();
+                Environment.ExitCode = 1;
                 return;
             }
 
@@ -175,14 +176,14 @@ namespace MASES.C2JReflector
                         break;
                     default:
                         showHelp();
+                        Environment.ExitCode = 0;
                         return;
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Console.WriteLine("Press any key.");
-                Console.ReadKey();
+                Environment.ExitCode = 1;
             }
         }
 

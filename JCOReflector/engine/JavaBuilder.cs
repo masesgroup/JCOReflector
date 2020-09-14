@@ -24,8 +24,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -33,131 +31,6 @@ using System.Threading;
 
 namespace MASES.C2JReflector
 {
-    #region AssemblyData Class
-    /// <summary>
-    /// The single AssemblyData.
-    /// </summary>
-    public class AssemblyData : INotifyPropertyChanged
-    {
-        #region Constructors
-        /// <summary>
-        /// The default constructor.
-        /// </summary>
-        public AssemblyData()
-        {
-            Initialize();
-        }
-
-        /// <summary>
-        /// The default constructor.
-        /// </summary>
-        public AssemblyData(string folderName)
-        {
-            Initialize();
-
-        }
-
-        /// <summary>
-        /// Sets private members to default values.
-        /// </summary>
-        private void Initialize()
-        {
-        }
-        #endregion
-
-        #region Persistent Properties
-        bool isSelected;
-        /// <summary>
-        /// The IsSelected
-        /// </summary>
-        public bool IsSelected
-        {
-            get { return isSelected; }
-            set
-            {
-                isSelected = value;
-                if (AssemblyFullName == Const.FileNameAndDirectory.CommonDirectory) isSelected = true;
-                EmitPropertyChanged("IsSelected");
-            }
-        }
-        string framework;
-        /// <summary>
-        /// The Framework
-        /// </summary>
-        public string Framework { get { return framework; } set { framework = value; EmitPropertyChanged("Framework"); } }
-        string assemblyFullName;
-        /// <summary>
-        /// The AssemblyFullName
-        /// </summary>
-        public string AssemblyFullName { get { return assemblyFullName; } set { assemblyFullName = value; EmitPropertyChanged("AssemblyFullName"); } }
-        string folderName;
-        /// <summary>
-        /// The FolderName
-        /// </summary>
-        public string FolderName { get { return folderName; } set { folderName = value; EmitPropertyChanged("FolderName"); } }
-        IList<string> referencedAssemblies = null;
-        /// <summary>
-        /// The ReferencedAssemblies
-        /// </summary>
-        public IList<string> ReferencedAssemblies { get { return referencedAssemblies; } set { referencedAssemblies = value; EmitPropertyChanged("ReferencedAssemblies"); } }
-        #endregion
-
-        #region Private Fields
-        #endregion
-
-        protected void EmitPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-    }
-    #endregion
-
-    #region AssemblyDataCollection Class
-    /// <summary>
-    /// A collection of Manager objects.
-    /// </summary>
-    public partial class AssemblyDataCollection : ObservableCollection<AssemblyData>
-    {
-        /// <summary>
-        /// Initializes an empty collection.
-        /// </summary>
-        public AssemblyDataCollection() { }
-
-        /// <summary>
-        /// Initializes the collection from another collection.
-        /// </summary>
-        /// <param name="collection">A collection of values to add to this new collection</param>
-        /// <exception cref="T:System.ArgumentNullException">
-        /// 	<paramref name="collection"/> is null.
-        /// </exception>
-        public AssemblyDataCollection(IEnumerable<AssemblyData> collection) : base(collection) { }
-
-        /// <summary>
-        /// Initializes the collection with the specified capacity.
-        /// </summary>
-        /// <param name="capacity">The capacity.</param>
-        public AssemblyDataCollection(List<AssemblyData> capacity) : base(capacity) { }
-    }
-    #endregion
-
-    public class JavaBuilderEventArgs : EventArgs
-    {
-        public CancellationToken CancellationToken { get; set; }
-        public LogLevel LogLevel { get; set; }
-        public string JDKFolder { get; set; }
-        public JDKVersion JDKTarget { get; set; }
-        public string OriginFolder { get; set; }
-        public string DestinationFolder { get; set; }
-        public bool SplitFolderByAssembly { get; set; }
-        public bool WithJARSource { get; set; }
-        public IList<string> AssembliesToUse { get; set; }
-    }
-
     public static class JavaBuilder
     {
         enum JarType
@@ -196,7 +69,18 @@ namespace MASES.C2JReflector
             string reportStr = string.Empty;
             try
             {
-                var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.OriginFolder, (args.AssembliesToUse == null) ? CreateFolderList(args.OriginFolder) : args.AssembliesToUse, Timeout.Infinite);
+                if (!Path.IsPathRooted(args.SourceFolder))
+                {
+                    args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
+                }
+
+                if (!Path.IsPathRooted(args.JDKFolder))
+                {
+                    args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
+                }
+
+                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Compilation of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (Exception ex)
@@ -219,7 +103,18 @@ namespace MASES.C2JReflector
             string reportStr = string.Empty;
             try
             {
-                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.OriginFolder, args.DestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(args.OriginFolder) : args.AssembliesToUse, Timeout.Infinite);
+                if (!Path.IsPathRooted(args.SourceFolder))
+                {
+                    args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
+                }
+
+                if (!Path.IsPathRooted(args.JDKFolder))
+                {
+                    args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
+                }
+
+                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (Exception ex)
@@ -235,47 +130,44 @@ namespace MASES.C2JReflector
 
         public static AssemblyDataCollection CreateFolderList(object o)
         {
-            JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
+            FolderBuilderEventArgs args = o as FolderBuilderEventArgs;
             CancellationToken = args.CancellationToken;
             logLevel = args.LogLevel;
 
-            string jdkFolder = args.JDKFolder;
-            string originFolder = args.OriginFolder;
+            if (!Path.IsPathRooted(args.SourceFolder))
+            {
+                args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
+            }
+
+            string originFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
 
             try
             {
-                var folders = CreateFolderList(args.OriginFolder);
+                var folders = CreateFolderList(originFolder);
                 AssemblyDataCollection coll = new AssemblyDataCollection();
+                AssemblyData data = new AssemblyData();
+                data.IsSelected = true;
+                data.Framework = Const.Framework.All;
+                data.AssemblyFullName = Const.FileNameAndDirectory.CommonDirectory;
+                data.FolderName = Const.FileNameAndDirectory.CommonDirectory;
+                coll.Add(data);
                 foreach (var folder in folders)
                 {
-                    AssemblyData data = new AssemblyData();
-                    if (folder.Equals(Const.FileNameAndDirectory.CommonDirectory))
-                    {
-                        data.IsSelected = true;
-                        data.Framework = Const.Framework.All;
-                        data.AssemblyFullName = folder;
-                        data.FolderName = folder;
-                    }
-                    else
-                    {
-#if NET_CORE
-                        var relFolder = Const.Framework.NETCoreFolder;
-#else
-                        var relFolder = Const.Framework.NETFrameworkFolder;
-#endif
-                        data.AssemblyFullName = folder;
-                        data.FolderName = Path.Combine(relFolder, folder);
-#if NET_CORE
-                        data.Framework = Const.Framework.NETCore;
-#else
-                        data.Framework = Const.Framework.NETFramework;
-#endif
+                    data = new AssemblyData();
+                    if (folder.Equals(Const.FileNameAndDirectory.CommonDirectory)) continue;
+
+                    var relFolder = Const.Framework.RuntimeFolder;
+                    data.AssemblyFullName = folder;
+                    data.FolderName = Path.Combine(relFolder, folder);
+
+                    data.Framework = Const.Framework.Runtime;
+
 #if ENABLE_REFERENCE_BUILDER
-                        var refPath = Path.Combine(args.OriginFolder, relFolder, folder, Const.FileNameAndDirectory.ReferencesFile);
-                        var refData = File.ReadAllLines(refPath);
-                        data.ReferencedAssemblies = new List<string>(refData);
+                    var refPath = Path.Combine(args.OriginFolder, relFolder, folder, Const.FileNameAndDirectory.ReferencesFile);
+                    var refData = File.ReadAllLines(refPath);
+                    data.ReferencedAssemblies = new List<string>(refData);
 #endif
-                    }
+
                     coll.Add(data);
                 }
                 return coll;
@@ -296,11 +188,8 @@ namespace MASES.C2JReflector
             originFolder = Path.GetFullPath(originFolder);
             List<string> dirs = new List<string>();
             dirs.Add(Const.FileNameAndDirectory.CommonDirectory);
-#if NET_CORE
-            originFolder = Path.Combine(originFolder, Const.Framework.NETCoreFolder);
-#else
-            originFolder = Path.Combine(originFolder, Const.Framework.NETFrameworkFolder);
-#endif
+
+            originFolder = Path.Combine(originFolder, Const.Framework.RuntimeFolder);
             foreach (var item in Directory.EnumerateDirectories(originFolder))
             {
                 var path = Path.GetFullPath(item);
@@ -312,7 +201,7 @@ namespace MASES.C2JReflector
             return dirs;
         }
 
-        static int CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string originFolder, IEnumerable<string> assemblies, int timeout)
+        static int CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
             var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
@@ -320,7 +209,13 @@ namespace MASES.C2JReflector
             StringBuilder sb = new StringBuilder();
             foreach (var assembly in assemblies)
             {
-                foreach (var item in Directory.EnumerateFiles(Path.Combine(originFolder, assembly), "*.java", SearchOption.AllDirectories))
+                var folder = Path.Combine(originFolder, assembly);
+                if (assembly == Const.FileNameAndDirectory.CommonDirectory)
+                {
+                    folder = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory, Const.FileNameAndDirectory.SourceDirectory, Const.FileNameAndDirectory.CommonDirectory);
+                }
+
+                foreach (var item in Directory.EnumerateFiles(folder, "*.java", SearchOption.AllDirectories))
                 {
                     sb.AppendLine(item);
                     counter++;
@@ -342,15 +237,23 @@ namespace MASES.C2JReflector
             return counter;
         }
 
-        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string originFolder, string destinationFolder, IEnumerable<string> assemblies, int timeout)
+        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
         {
+            string destinationFolder = Path.Combine(originFolder, Const.FileNameAndDirectory.DocsDirectory);
+
             int counter = 0;
             var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
 
             StringBuilder sb = new StringBuilder();
             foreach (var assembly in assemblies)
             {
-                foreach (var item in Directory.EnumerateFiles(Path.Combine(originFolder, assembly), "*.java", SearchOption.AllDirectories))
+                var folder = Path.Combine(originFolder, assembly);
+                if (assembly == Const.FileNameAndDirectory.CommonDirectory)
+                {
+                    folder = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory, Const.FileNameAndDirectory.SourceDirectory, Const.FileNameAndDirectory.CommonDirectory);
+                }
+
+                foreach (var item in Directory.EnumerateFiles(folder, "*.java", SearchOption.AllDirectories))
                 {
                     sb.AppendLine(item);
                     counter++;
@@ -361,11 +264,7 @@ namespace MASES.C2JReflector
             var jcoBridgePath = Path.GetDirectoryName(typeof(JavaBuilder).Assembly.Location);
             var jcoBridgeCp = Path.Combine(jcoBridgePath, "JCOBridge.jar");
 
-#if NET_CORE
-            destinationFolder = Path.Combine(destinationFolder, Const.Framework.NETCoreFolder);
-#else
-            destinationFolder = Path.Combine(destinationFolder, Const.Framework.NETFrameworkFolder);
-#endif
+            destinationFolder = Path.Combine(destinationFolder, Const.Framework.RuntimeFolder);
             destinationFolder = destinationFolder.Replace('\\', '/');
 
             launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + Const.Documentation.DOCS_HEADER + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
@@ -379,10 +278,26 @@ namespace MASES.C2JReflector
             string reportStr = string.Empty;
             try
             {
-                JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
+                JARBuilderEventArgs args = o as JARBuilderEventArgs;
                 logLevel = args.LogLevel;
 
-                var jars = CreateJars(args.JDKFolder, args.OriginFolder, args.DestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(args.OriginFolder) : args.AssembliesToUse, args.WithJARSource);
+                if (!Path.IsPathRooted(args.SourceFolder))
+                {
+                    args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
+                }
+
+                if (!Path.IsPathRooted(args.JDKFolder))
+                {
+                    args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
+                }
+
+                if (!Path.IsPathRooted(args.JarDestinationFolder))
+                {
+                    args.JarDestinationFolder = Path.Combine(args.RootFolder, args.JarDestinationFolder);
+                }
+
+                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var jars = CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource);
                 reportStr = string.Format("{0} Jars created in {1}.", jars, DateTime.Now - dtStart);
             }
             catch (Exception ex)
@@ -396,7 +311,7 @@ namespace MASES.C2JReflector
             }
         }
 
-        public static int CreateJars(string jdkFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, int timeout = Timeout.Infinite)
+        public static int CreateJars(string jdkFolder, string rootFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, int timeout = Timeout.Infinite)
         {
             var counter = 0;
             var manifestTemplate = Const.Templates.GetTemplate(Const.Templates.ManifestTemplate);
@@ -424,11 +339,13 @@ namespace MASES.C2JReflector
             var manifestFileName = Path.Combine(originFolder, Const.FileNameAndDirectory.ManifestFile);
             File.WriteAllText(manifestFileName, manifestStr);
 
-            CreateSingleJar(jdkFolder, originFolder, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, manifestFileName);
+            var reflectorPath = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory, Const.FileNameAndDirectory.SourceDirectory);
+
+            CreateSingleJar(jdkFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, manifestFileName);
             counter++;
             if (withSource)
             {
-                CreateSingleJar(jdkFolder, originFolder, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout);
+                CreateSingleJar(jdkFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout);
                 counter++;
             }
             return counter;
@@ -454,11 +371,7 @@ namespace MASES.C2JReflector
                 default: throw new InvalidOperationException();
             }
 
-#if NET_CORE
-            var assemblyName = pathName.Replace(Const.Framework.NETCoreFolder, string.Empty);
-#else
-            var assemblyName = pathName.Replace(Const.Framework.NETFrameworkFolder, string.Empty);
-#endif
+            var assemblyName = pathName.Replace(Const.Framework.RuntimeFolder, string.Empty);
             assemblyName = assemblyName.Replace("\\", string.Empty);
             var destinationJar = string.Format(patternName, assemblyName);
             destinationJar = Path.Combine(destinationFolder, destinationJar);

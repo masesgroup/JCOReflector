@@ -94,6 +94,17 @@ namespace MASES.C2JReflector
 
         public class FileNameAndDirectory
         {
+            public static string GetRelativePath(string filespec, string folder)
+            {
+                Uri pathUri = new Uri(filespec);
+                if (!folder.EndsWith(Path.DirectorySeparatorChar.ToString()))
+                {
+                    folder += Path.DirectorySeparatorChar;
+                }
+                Uri folderUri = new Uri(folder);
+                return Uri.UnescapeDataString(folderUri.MakeRelativeUri(pathUri).ToString().Replace('/', Path.DirectorySeparatorChar));
+            }
+
             public const string RootDirectory = "netreflected";
             public const string SourceDirectory = "src";
             public const string StatsDirectory = "statistics";
@@ -115,10 +126,13 @@ namespace MASES.C2JReflector
         public class Framework
         {
             public const string All = "All";
-            public const string NETCore = ".NET Core";
-            public const string NETCoreFolder = "Core";
-            public const string NETFramework = ".NET Framework";
-            public const string NETFrameworkFolder = "Framework";
+#if NET_CORE
+            public const string Runtime = ".NET Core";
+            public const string RuntimeFolder = "Core";
+#else
+            public const string Runtime = ".NET Framework";
+            public const string RuntimeFolder = "Framework";
+#endif
         }
 
         public class Templates

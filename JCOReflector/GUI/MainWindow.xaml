@@ -39,8 +39,15 @@
                         <Label Content="Log Level" VerticalAlignment="Center" />
                         <ComboBox Name="cbLogLevel" VerticalContentAlignment="Center"/>
                         <ComboBox Name="cbTarget" ToolTip="Java version to use; NotSet means the same as JDK in JDK Folder" VerticalContentAlignment="Center"/>
+                        <CheckBox Name="cbExportToFile" Content="Export configuration" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Export configuration into a text file"/>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top" MinHeight="30">
                         <Label Content="JDK folder" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
                         <TextBox Name="tbJDKFolder" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top" MinHeight="30">
+                        <Label Content="Source destination folder" VerticalAlignment="Stretch" MinWidth="120"/>
+                        <TextBox Name="tbDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" />
                     </DockPanel>
                 </DockPanel>
             </GroupBox>
@@ -48,10 +55,6 @@
                 <TabItem Header="Reflection generation">
                     <DockPanel DockPanel.Dock="Top" LastChildFill="False">
                         <DockPanel DockPanel.Dock="Left" LastChildFill="False">
-                            <DockPanel DockPanel.Dock="Top" MinHeight="30">
-                                <Label Content="Source destination folder" VerticalAlignment="Stretch" MinWidth="120"/>
-                                <TextBox Name="tbDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" />
-                            </DockPanel>
                             <DockPanel DockPanel.Dock="Top" MinHeight="30">
                                 <Label Content="Assembly names" VerticalAlignment="Center" MinWidth="120"/>
                                 <TextBox Name="tbAssemblyNames" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>

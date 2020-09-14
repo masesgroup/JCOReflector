@@ -33,45 +33,6 @@ using System.Threading.Tasks;
 
 namespace MASES.C2JReflector
 {
-    public delegate void appendToConsoleHandler(string format, params object[] args);
-
-    public class ReflectorEventArgs : EventArgs
-    {
-        public CancellationToken CancellationToken { get; set; }
-        public LogLevel LogLevel { get; set; }
-        public string[] AssemblyNames { get; set; }
-        public string RootDestinationFolder { get; set; }
-        public string CsvDestinationFolder { get; set; }
-        public bool SplitFolderByAssembly { get; set; }
-        public bool ForceRebuild { get; set; }
-        public bool UseParallelBuild { get; set; }
-        public bool CreateExceptionThrownClause { get; set; }
-        public int ExceptionThrownClauseDepth { get; set; }
-        public bool EnableAbstract { get; set; }
-        public bool EnableArray { get; set; }
-        public bool EnableDuplicateMethodNativeArrayWithJCRefOut { get; set; }
-        public bool EnableInheritance { get; set; }
-        public bool EnableInterfaceInheritance { get; set; }
-        public bool DryRun { get; set; }
-    }
-
-    public class EndOperationEventArgs : EventArgs
-    {
-        public EndOperationEventArgs(string report)
-        {
-            Report = report;
-        }
-
-        public EndOperationEventArgs(string report, string statisticsCsv)
-        {
-            Report = report;
-            StatisticsCsv = statisticsCsv;
-        }
-
-        public string Report { get; private set; }
-        public string StatisticsCsv { get; private set; }
-    }
-
     public static class Reflector
     {
         static List<string> assemblyReferenced = new List<string>();
@@ -90,7 +51,7 @@ namespace MASES.C2JReflector
         static bool EnableInterfaceInheritance = false;
 
         static LogLevel LogLevel;
-        static string RootDestinationFolder;
+        static string SrcDestinationFolder;
         static string CsvDestinationFolder;
         static bool SplitByAssembly;
         static bool ForceRebuild;
@@ -185,11 +146,7 @@ namespace MASES.C2JReflector
                     string csvFileName = string.Empty;
 
                     if (!Directory.Exists(CsvDestinationFolder)) Directory.CreateDirectory(CsvDestinationFolder);
-#if NET_CORE
-                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.NETCoreFolder, Const.FileNameAndDirectory.StatisticsFilename));
-#else
-                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.NETFrameworkFolder, Const.FileNameAndDirectory.StatisticsFilename));
-#endif
+                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.RuntimeFolder, Const.FileNameAndDirectory.StatisticsFilename));
                     File.WriteAllText(csvFileName, csvString);
                 }
             }
@@ -328,10 +285,15 @@ namespace MASES.C2JReflector
             location = Path.GetDirectoryName(location);
             Environment.CurrentDirectory = location;
 
+            if (!Path.IsPathRooted(args.SrcDestinationFolder))
+            {
+                args.SrcDestinationFolder = Path.Combine(args.RootFolder, args.SrcDestinationFolder);
+            }
+
             CancellationToken = args.CancellationToken;
             LogLevel = args.LogLevel;
-            RootDestinationFolder = args.RootDestinationFolder;
-            CsvDestinationFolder = args.CsvDestinationFolder;
+            SrcDestinationFolder = Path.GetFullPath(Path.Combine(args.SrcDestinationFolder, Const.FileNameAndDirectory.SourceDirectory));
+            CsvDestinationFolder = Path.GetFullPath(Path.Combine(args.SrcDestinationFolder, Const.FileNameAndDirectory.StatsDirectory));
             SplitByAssembly = args.SplitFolderByAssembly;
             ForceRebuild = args.ForceRebuild;
             UseParallelBuild = args.UseParallelBuild;
@@ -362,7 +324,7 @@ namespace MASES.C2JReflector
                         assembly = Assembly.Load(item);
                     }
 
-                    await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), RootDestinationFolder, SplitByAssembly, ForceRebuild);
+                    await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), SrcDestinationFolder, SplitByAssembly, ForceRebuild);
                 }
 
                 reportStr = GetReport();
@@ -406,11 +368,7 @@ namespace MASES.C2JReflector
 
         static string assemblyDestinationFolder(string rootFolder, AssemblyName assemblyName, bool splitByAssembly)
         {
-#if NET_CORE
-            return Path.Combine(rootFolder, Const.Framework.NETCoreFolder, splitByAssembly ? string.Concat(assemblyName.FullName.Split(' ')) : string.Empty);
-#else
-            return Path.Combine(rootFolder, Const.Framework.NETFrameworkFolder, splitByAssembly ? string.Concat(assemblyName.FullName.Split(' ')) : string.Empty);
-#endif
+            return Path.Combine(rootFolder, Const.Framework.RuntimeFolder, splitByAssembly ? string.Concat(assemblyName.FullName.Split(' ')) : string.Empty);
         }
 
         static bool typePrefilter(Type type)
@@ -549,7 +507,7 @@ namespace MASES.C2JReflector
             try
             {
                 string assemblyname = typeToExport.Assembly.FullName;
-                string destFolder = assemblyDestinationFolder(RootDestinationFolder, new AssemblyName(assemblyname), SplitByAssembly);
+                string destFolder = assemblyDestinationFolder(SrcDestinationFolder, new AssemblyName(assemblyname), SplitByAssembly);
                 exportingPublicType(typeToExport, destFolder, assemblyname);
             }
             catch (OperationCanceledException)

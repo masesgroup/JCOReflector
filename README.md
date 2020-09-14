@@ -113,11 +113,11 @@ or
 Within the folder bin you will find two subfolders:
 
 - **net461** (available only on Windows platform)
-- **netcoreapp3.1** (available on .NET Core supported platform)
+- **netcoreapp3.1** (available on .NET Core supported platforms)
 
 in each subfolder will be available two executables:
 
-- **JCOReflectorCLI** the CLI tool (under development: see issue #18);
+- **JCOReflectorCLI** the CLI tool;
 - **JCOReflectorGUI** the GUI tool, below some screenshot:
 
 ![JCOReflector](/assets/images/jcoreflector.png?raw=true "JCOReflector screenshot")

@@ -143,7 +143,7 @@ namespace MASES.C2JReflector
             cts = new CancellationTokenSource();
             args.CancellationToken = cts.Token;
             args.AssemblyNames = string.IsNullOrEmpty(tbAssemblyNames.Text) ? new List<string>().ToArray() : tbAssemblyNames.Text.Replace("\r", "").Split('\n');
-            args.SrcDestinationFolder = Path.GetFullPath(tbDestinationFolder.Text);
+            args.SrcDestinationFolder = tbDestinationFolder.Text;
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
             args.ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value;
             args.UseParallelBuild = cbUseParallel.IsChecked.Value;
@@ -171,7 +171,7 @@ namespace MASES.C2JReflector
             btnStop.Visibility = Visibility.Visible;
 
             FolderBuilderEventArgs args = new FolderBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-            args.SourceFolder = Path.GetFullPath(tbDestinationFolder.Text);
+            args.SourceFolder = tbDestinationFolder.Text;
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
 
             if (cbExportToFile.IsChecked.Value)
@@ -194,7 +194,7 @@ namespace MASES.C2JReflector
                 args.CancellationToken = cts.Token;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
-                args.SourceFolder = Path.GetFullPath(tbDestinationFolder.Text);
+                args.SourceFolder = tbDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
 
@@ -223,7 +223,7 @@ namespace MASES.C2JReflector
                 args.CancellationToken = cts.Token;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
-                args.SourceFolder = Path.GetFullPath(tbDestinationFolder.Text);
+                args.SourceFolder = tbDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
 
@@ -251,7 +251,7 @@ namespace MASES.C2JReflector
                 cts = new CancellationTokenSource();
                 args.CancellationToken = cts.Token;
                 args.JDKFolder = tbJDKFolder.Text;
-                args.SourceFolder = Path.GetFullPath(tbDestinationFolder.Text);
+                args.SourceFolder = tbDestinationFolder.Text;
                 args.JarDestinationFolder = tbJarDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.WithJARSource = cbWithSource.IsChecked.Value;

@@ -388,6 +388,10 @@ Parsed assemblies are:
 
 ## .NET Core (reference is .NET v5.0.0-rc.1)
 
+![Net5Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=212559398&format=image)
+
+![Net5StatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1162005117&format=image)
+
 Parsed assemblies are:
 * PresentationFramework
 

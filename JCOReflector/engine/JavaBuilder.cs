@@ -114,7 +114,8 @@ namespace MASES.C2JReflector
                 }
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
-                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
+                string destinationFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.DocsDirectory);
+                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, destinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (Exception ex)
@@ -237,10 +238,8 @@ namespace MASES.C2JReflector
             return counter;
         }
 
-        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
+        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string rootFolder, string originFolder, string destinationFolder, IEnumerable<string> assemblies, int timeout)
         {
-            string destinationFolder = Path.Combine(originFolder, Const.FileNameAndDirectory.DocsDirectory);
-
             int counter = 0;
             var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
 

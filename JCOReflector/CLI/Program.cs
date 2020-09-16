@@ -224,9 +224,13 @@ namespace MASES.C2JReflector
             var assembly = typeof(Program).Assembly;
 
 #if !NET_CORE
-            var title = "JCOReflector Builder - CLR to JVM reflection class generator (Framework)";
+            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Framework)";
 #else
-            var title = "JCOReflector Builder - CLR to JVM reflection class generator (CoreCLR)";
+#if NET5_0
+            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 5)";
+#else
+            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Core)";
+#endif
 #endif
 
             Console.WriteLine(title + " - Version " + assembly.GetName().Version.ToString());

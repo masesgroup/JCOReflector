@@ -4,3 +4,6 @@
 [submodule "netreflected/docs/net461"]
 	path = netreflected/docs/net461
 	url = https://github.com/masesgroup/FrameworkDocs.git
+[submodule "netreflected/docs/net5.0"]
+	path = netreflected/docs/net5.0
+	url = https://github.com/masesgroup/NET5Docs.git

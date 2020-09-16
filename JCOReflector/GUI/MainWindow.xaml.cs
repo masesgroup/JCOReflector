@@ -94,9 +94,24 @@ namespace MASES.C2JReflector
         {
             InitializeComponent();
 #if !NET_CORE
-            Title = "JCOReflector Builder - CLR to JVM reflection class generator (Framework)";
+            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Framework)";
+
+            tbAssemblyNames.Text += "PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35" + Environment.NewLine +
+                                    "System.ServiceModel, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089" + Environment.NewLine +
+                                    "System.Data.Entity, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089" + Environment.NewLine +
+                                    "System.Activities.Presentation, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35" + Environment.NewLine +
+                                    "System.Net, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a" + Environment.NewLine +
+                                    "System.Workflow.Runtime, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35";
 #else
-            Title = "JCOReflector Builder - CLR to JVM reflection class generator (CoreCLR)";
+#if NET5_0
+            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 5)";
+
+            tbAssemblyNames.Text += "PresentationFramework";
+#else
+            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Core)";
+
+            tbAssemblyNames.Text += "PresentationFramework";
+#endif
 #endif
 
             Title += " Version " + typeof(MainWindow).Assembly.GetName().Version.ToString();

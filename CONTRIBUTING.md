@@ -24,12 +24,15 @@ The project is organized in this folder structure:
         * **JCOReflector** (contains the base classes used from JCOReflector to build reflected classes)
         * **netcoreapp3.1** (contains, sepearated in folders, the sets of reflected classes of .NET Core generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
         * **net461** (contains, sepearated in folders, the sets of reflected classes of .NET Framework generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+		* **net5.0** (contains, sepearated in folders, the sets of reflected classes of .NET 5 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **docs**
         * **netcoreapp3.1** (contains the generated documentation related to .NET Core: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
         * **net461** (contains the generated documentation related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+		* **net5.0** (contains the generated documentation related to .NET 5: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **statistics**
         * **netcoreapp3.1** (contains the generated statistics related to .NET Core: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
         * **net461** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+		* **net5.0** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 
 * **netreflected-tests** (container of Java test classes)
     * **src** (a standard folder used in any Java IDE)

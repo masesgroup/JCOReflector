@@ -77,7 +77,7 @@ namespace MASES.C2JReflector
             public const string NativeStringType = "java.lang.String";
             public const string IJCOBridgeReflected = "IJCOBridgeReflected";
             public const string NetObject = "NetObject";
-            public const string NetObjectAutoCloseable = "NetObjectAutoCloseable";
+            public const string AutoCloseable = "AutoCloseable";
             public const string NetType = "NetType";
             public const string NetException = "NetException";
             public const string NetArrayList = "NetArrayList";
@@ -327,6 +327,21 @@ namespace MASES.C2JReflector
 
             public const string DUPLICATED_PARAMETER_PROTO = "dupParam{0}";
             public const string NEW_MODIFIER_PROTO = "{0}New{1}";
+
+            public static string AUTOCLOSEABLE_CLOSE_METHOD =   "    public void close() throws Exception {" + Environment.NewLine +
+                                                                "        try {" + Environment.NewLine +
+                                                                "            if (classInstance == null)" + Environment.NewLine +
+                                                                "                throw new UnsupportedOperationException(\"classInstance is null.\");" + Environment.NewLine +
+                                                                "            try {" + Environment.NewLine +
+                                                                "                classInstance.Invoke(\"Dispose\");" + Environment.NewLine +
+                                                                "            }" + Environment.NewLine +
+                                                                "            catch (JCNativeException jcne) {" + Environment.NewLine +
+                                                                "                throw translateException(jcne);" + Environment.NewLine +
+                                                                "            }" + Environment.NewLine +
+                                                                "        } catch (Throwable t) {" + Environment.NewLine +
+                                                                "            throw new Exception(t);" + Environment.NewLine +
+                                                                "        }" + Environment.NewLine +
+                                                                "    }" ;
         }
 
         public class Properties

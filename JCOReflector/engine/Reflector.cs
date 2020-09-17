@@ -678,10 +678,11 @@ namespace MASES.C2JReflector
 
             var typeName = item.Name;
 
+            bool isDisposable = false;
             string returnEnumerableType = string.Empty;
             string returnInterfaceSection = string.Empty;
             AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
-            var methodsStr = exportingMethods(item, imports, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
+            var methodsStr = exportingMethods(item, imports, withInheritance, destFolder, assemblyname, out isDisposable, out returnEnumerableType, out returnInterfaceSection);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.METHODS_SECTION, returnInterfaceSection);
 
@@ -732,14 +733,7 @@ namespace MASES.C2JReflector
             else
             {
                 reflectorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassTemplate);
-                if (item.GetInterface(Const.SpecialNames.NetIDisposable) != null)
-                {
-                    packageBaseClass = Const.SpecialNames.NetObjectAutoCloseable;
-                }
-                else
-                {
-                    packageBaseClass = Const.SpecialNames.NetObject;
-                }
+                packageBaseClass = Const.SpecialNames.NetObject;
             }
 
             string implementsStr = string.Empty;
@@ -797,10 +791,15 @@ namespace MASES.C2JReflector
             }
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.CONSTRUCTORS_SECTION, ctorStr);
 
+            bool isDisposable = false;
             string returnEnumerableType = string.Empty;
             string returnInterfaceSection = string.Empty;
             AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
-            var methodsStr = exportingMethods(item, imports, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
+            var methodsStr = exportingMethods(item, imports, withInheritance, destFolder, assemblyname, out isDisposable, out returnEnumerableType, out returnInterfaceSection);
+            if (isDisposable)
+            {
+                methodsStr += Const.Methods.AUTOCLOSEABLE_CLOSE_METHOD;
+            }
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
 
             AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
@@ -823,6 +822,12 @@ namespace MASES.C2JReflector
 
                 if (string.IsNullOrEmpty(implementsStr)) implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + implStr;
                 else implementsStr += ", " + implStr; // proto for other interface
+            }
+
+            if (isDisposable)
+            {
+                if (string.IsNullOrEmpty(implementsStr)) implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + Const.SpecialNames.AutoCloseable;
+                else implementsStr += ", " + Const.SpecialNames.AutoCloseable; // proto for other interface
             }
 
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_IMPLEMENTS_SECTION, implementsStr)
@@ -1138,8 +1143,9 @@ namespace MASES.C2JReflector
             return false;
         }
 
-        static string exportingMethods(Type type, IList<Type> imports, bool withInheritance, string destFolder, string assemblyname, out string returnEnumeratorType, out string returnInterfaceSection)
+        static string exportingMethods(Type type, IList<Type> imports, bool withInheritance, string destFolder, string assemblyname, out bool isDisposable, out string returnEnumeratorType, out string returnInterfaceSection)
         {
+            isDisposable = false;
             bool isInterface = false;
             returnInterfaceSection = string.Empty;
 
@@ -1176,6 +1182,7 @@ namespace MASES.C2JReflector
             string templateToUse = string.Empty;
 
             bool hasEnumerable = typeof(IEnumerable).IsAssignableFrom(type);
+            bool hasDisposable = typeof(IDisposable).IsAssignableFrom(type);
 
             StringBuilder methodInterfaceBuilder = new StringBuilder();
             StringBuilder methodBuilder = new StringBuilder();
@@ -1230,6 +1237,7 @@ namespace MASES.C2JReflector
                 if (methodName == "GetHashCode" && parameters.Length == 0) continue;
                 if (methodName == "GetType" && parameters.Length == 0) continue;
                 if (methodName == "Equals" && parameters.Length == 1 && parameters[0].ParameterType == typeof(object)) continue;
+                if (hasDisposable && methodName == "Dispose" && parameters.Length == 0) isDisposable = true;
 
                 string methodInterfaceStr = string.Empty;
                 string dupMethodInterfaceStr = string.Empty;

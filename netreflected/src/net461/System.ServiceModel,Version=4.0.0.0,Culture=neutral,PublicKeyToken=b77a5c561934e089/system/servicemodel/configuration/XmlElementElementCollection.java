@@ -117,6 +117,9 @@ public class XmlElementElementCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlElementElementCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlElementElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlElementElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

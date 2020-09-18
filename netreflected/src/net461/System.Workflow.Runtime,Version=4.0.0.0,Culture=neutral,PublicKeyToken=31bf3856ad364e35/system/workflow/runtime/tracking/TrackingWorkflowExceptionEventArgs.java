@@ -119,6 +119,9 @@ public class TrackingWorkflowExceptionEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TrackingWorkflowExceptionEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TrackingWorkflowExceptionEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TrackingWorkflowExceptionEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

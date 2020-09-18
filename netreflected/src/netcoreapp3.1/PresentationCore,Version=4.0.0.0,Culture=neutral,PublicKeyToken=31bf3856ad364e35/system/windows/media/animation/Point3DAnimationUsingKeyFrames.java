@@ -120,9 +120,9 @@ public class Point3DAnimationUsingKeyFrames extends Point3DAnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Point3DAnimationUsingKeyFrames}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Point3DAnimationUsingKeyFrames} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Point3DAnimationUsingKeyFrames} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Point3DAnimationUsingKeyFrames cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

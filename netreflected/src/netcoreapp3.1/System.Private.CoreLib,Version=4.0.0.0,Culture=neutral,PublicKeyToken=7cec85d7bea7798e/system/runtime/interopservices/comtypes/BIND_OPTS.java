@@ -118,9 +118,9 @@ public class BIND_OPTS extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BIND_OPTS}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link BIND_OPTS} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BIND_OPTS} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BIND_OPTS cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -124,6 +124,9 @@ public class WebPartZoneDesigner extends WebPartZoneBaseDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebPartZoneDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebPartZoneDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebPartZoneDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

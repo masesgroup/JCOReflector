@@ -117,6 +117,9 @@ public class WorkflowTrackPointCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowTrackPointCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowTrackPointCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowTrackPointCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

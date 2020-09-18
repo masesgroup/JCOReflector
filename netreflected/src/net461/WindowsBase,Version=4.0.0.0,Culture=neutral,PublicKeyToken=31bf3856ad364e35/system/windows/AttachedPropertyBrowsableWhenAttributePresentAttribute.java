@@ -118,6 +118,9 @@ public class AttachedPropertyBrowsableWhenAttributePresentAttribute extends Atta
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AttachedPropertyBrowsableWhenAttributePresentAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AttachedPropertyBrowsableWhenAttributePresentAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AttachedPropertyBrowsableWhenAttributePresentAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

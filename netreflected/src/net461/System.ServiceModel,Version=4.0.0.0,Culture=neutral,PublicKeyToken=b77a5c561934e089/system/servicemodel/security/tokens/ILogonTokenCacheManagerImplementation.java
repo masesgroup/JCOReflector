@@ -112,6 +112,9 @@ public class ILogonTokenCacheManagerImplementation extends NetObject implements 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ILogonTokenCacheManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ILogonTokenCacheManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ILogonTokenCacheManager ToILogonTokenCacheManager(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

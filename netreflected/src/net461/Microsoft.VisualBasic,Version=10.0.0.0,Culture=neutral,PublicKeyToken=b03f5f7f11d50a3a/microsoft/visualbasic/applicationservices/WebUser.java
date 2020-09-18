@@ -118,6 +118,9 @@ public class WebUser extends User  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebUser}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebUser} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebUser cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

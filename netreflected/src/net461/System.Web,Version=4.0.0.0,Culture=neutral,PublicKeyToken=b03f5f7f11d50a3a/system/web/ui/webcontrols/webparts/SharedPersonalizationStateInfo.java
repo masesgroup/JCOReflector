@@ -119,6 +119,9 @@ public class SharedPersonalizationStateInfo extends PersonalizationStateInfo  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SharedPersonalizationStateInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SharedPersonalizationStateInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SharedPersonalizationStateInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

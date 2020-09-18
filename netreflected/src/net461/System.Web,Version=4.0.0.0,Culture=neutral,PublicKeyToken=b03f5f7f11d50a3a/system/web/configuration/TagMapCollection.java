@@ -119,6 +119,9 @@ public class TagMapCollection extends ConfigurationElementCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TagMapCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TagMapCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TagMapCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

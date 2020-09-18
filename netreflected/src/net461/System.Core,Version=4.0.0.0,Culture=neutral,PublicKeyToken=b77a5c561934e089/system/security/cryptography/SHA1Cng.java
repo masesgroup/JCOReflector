@@ -118,6 +118,9 @@ public class SHA1Cng extends SHA1  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SHA1Cng}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SHA1Cng} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SHA1Cng cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

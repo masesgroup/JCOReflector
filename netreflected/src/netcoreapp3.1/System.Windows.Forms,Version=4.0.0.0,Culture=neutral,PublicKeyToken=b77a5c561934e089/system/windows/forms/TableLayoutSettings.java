@@ -123,9 +123,9 @@ public class TableLayoutSettings extends LayoutSettings  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableLayoutSettings}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TableLayoutSettings} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TableLayoutSettings} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TableLayoutSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

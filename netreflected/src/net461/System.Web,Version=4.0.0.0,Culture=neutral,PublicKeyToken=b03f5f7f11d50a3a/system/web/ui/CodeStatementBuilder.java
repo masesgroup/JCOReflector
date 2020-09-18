@@ -120,6 +120,9 @@ public class CodeStatementBuilder extends ControlBuilder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeStatementBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CodeStatementBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeStatementBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

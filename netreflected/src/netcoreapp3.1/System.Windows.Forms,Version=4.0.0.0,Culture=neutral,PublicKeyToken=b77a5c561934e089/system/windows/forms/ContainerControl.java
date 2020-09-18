@@ -126,9 +126,9 @@ public class ContainerControl extends ScrollableControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContainerControl}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ContainerControl} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ContainerControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContainerControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

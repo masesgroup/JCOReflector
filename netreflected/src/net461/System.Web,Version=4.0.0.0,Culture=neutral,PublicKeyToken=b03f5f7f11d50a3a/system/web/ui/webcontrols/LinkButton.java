@@ -120,6 +120,9 @@ public class LinkButton extends WebControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinkButton}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LinkButton} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LinkButton cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

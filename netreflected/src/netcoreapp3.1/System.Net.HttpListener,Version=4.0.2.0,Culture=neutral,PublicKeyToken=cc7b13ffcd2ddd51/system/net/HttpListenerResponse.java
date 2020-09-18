@@ -53,7 +53,7 @@ import system.Version;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerResponse" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerResponse</a>
  */
-public class HttpListenerResponse extends NetObjectAutoCloseable  {
+public class HttpListenerResponse extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.HttpListener, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -124,9 +124,9 @@ public class HttpListenerResponse extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpListenerResponse}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link HttpListenerResponse} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpListenerResponse} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpListenerResponse cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

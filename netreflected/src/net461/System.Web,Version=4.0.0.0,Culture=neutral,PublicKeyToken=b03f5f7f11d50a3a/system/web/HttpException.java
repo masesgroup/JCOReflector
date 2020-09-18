@@ -141,6 +141,9 @@ public class HttpException extends ExternalException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

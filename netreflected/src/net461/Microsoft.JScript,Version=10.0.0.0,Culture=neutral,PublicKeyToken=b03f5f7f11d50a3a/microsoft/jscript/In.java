@@ -118,6 +118,9 @@ public class In extends BinaryOp  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link In}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link In} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static In cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

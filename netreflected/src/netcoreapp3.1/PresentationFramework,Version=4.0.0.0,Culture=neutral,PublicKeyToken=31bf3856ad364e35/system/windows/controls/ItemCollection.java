@@ -122,9 +122,9 @@ public class ItemCollection extends CollectionView  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ItemCollection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ItemCollection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ItemCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ItemCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

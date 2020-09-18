@@ -130,6 +130,9 @@ public class GlobalObject extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GlobalObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GlobalObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GlobalObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

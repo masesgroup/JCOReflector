@@ -126,6 +126,9 @@ public class WindowsFormsHost extends HwndHost  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WindowsFormsHost}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WindowsFormsHost} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WindowsFormsHost cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

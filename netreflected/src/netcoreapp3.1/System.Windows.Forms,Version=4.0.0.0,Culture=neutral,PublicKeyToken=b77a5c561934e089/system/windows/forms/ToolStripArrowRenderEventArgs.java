@@ -123,9 +123,9 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripArrowRenderEventArgs}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ToolStripArrowRenderEventArgs} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ToolStripArrowRenderEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolStripArrowRenderEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

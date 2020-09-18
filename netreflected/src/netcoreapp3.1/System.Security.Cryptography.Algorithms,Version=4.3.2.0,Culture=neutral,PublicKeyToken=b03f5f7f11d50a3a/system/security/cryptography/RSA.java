@@ -124,9 +124,9 @@ public class RSA extends AsymmetricAlgorithm  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RSA}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link RSA} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RSA} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RSA cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

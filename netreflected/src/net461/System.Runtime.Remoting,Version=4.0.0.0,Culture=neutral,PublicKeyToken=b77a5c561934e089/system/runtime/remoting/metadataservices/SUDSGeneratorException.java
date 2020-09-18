@@ -137,6 +137,9 @@ public class SUDSGeneratorException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SUDSGeneratorException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SUDSGeneratorException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SUDSGeneratorException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

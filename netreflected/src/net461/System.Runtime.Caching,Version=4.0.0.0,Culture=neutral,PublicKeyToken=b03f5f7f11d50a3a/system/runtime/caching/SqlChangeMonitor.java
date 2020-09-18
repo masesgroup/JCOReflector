@@ -119,6 +119,9 @@ public class SqlChangeMonitor extends ChangeMonitor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlChangeMonitor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlChangeMonitor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlChangeMonitor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

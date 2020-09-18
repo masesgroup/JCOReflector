@@ -120,6 +120,9 @@ public class SqlTransaction extends DbTransaction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlTransaction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlTransaction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlTransaction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

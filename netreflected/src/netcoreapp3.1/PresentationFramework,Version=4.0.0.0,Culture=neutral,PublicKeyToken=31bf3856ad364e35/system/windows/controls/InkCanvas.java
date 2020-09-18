@@ -138,9 +138,9 @@ public class InkCanvas extends FrameworkElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InkCanvas}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link InkCanvas} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InkCanvas} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InkCanvas cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

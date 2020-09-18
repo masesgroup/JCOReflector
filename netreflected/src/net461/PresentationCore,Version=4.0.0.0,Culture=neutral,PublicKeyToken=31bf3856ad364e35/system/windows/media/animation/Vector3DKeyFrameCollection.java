@@ -120,6 +120,9 @@ public class Vector3DKeyFrameCollection extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector3DKeyFrameCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Vector3DKeyFrameCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Vector3DKeyFrameCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

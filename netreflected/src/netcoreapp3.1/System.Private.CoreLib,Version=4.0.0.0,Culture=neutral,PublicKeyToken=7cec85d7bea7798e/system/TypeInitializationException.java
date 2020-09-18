@@ -140,9 +140,9 @@ public class TypeInitializationException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeInitializationException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TypeInitializationException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TypeInitializationException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TypeInitializationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

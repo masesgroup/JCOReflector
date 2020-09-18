@@ -125,6 +125,9 @@ public class X509SecurityTokenHandler extends SecurityTokenHandler  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509SecurityTokenHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509SecurityTokenHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509SecurityTokenHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

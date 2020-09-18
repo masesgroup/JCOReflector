@@ -124,6 +124,9 @@ public class QueuePathDialog extends Form  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link QueuePathDialog}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link QueuePathDialog} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static QueuePathDialog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

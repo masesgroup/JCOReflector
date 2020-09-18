@@ -120,6 +120,9 @@ public class StandardBindingReliableSessionElement extends ServiceModelConfigura
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StandardBindingReliableSessionElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StandardBindingReliableSessionElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StandardBindingReliableSessionElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

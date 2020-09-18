@@ -55,7 +55,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner</a>
  */
-public class WebFormsRootDesigner extends NetObjectAutoCloseable  {
+public class WebFormsRootDesigner extends NetObject  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -126,6 +126,9 @@ public class WebFormsRootDesigner extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebFormsRootDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebFormsRootDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebFormsRootDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

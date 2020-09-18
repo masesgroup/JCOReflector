@@ -120,6 +120,9 @@ public class Workspace extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Workspace}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Workspace} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Workspace cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

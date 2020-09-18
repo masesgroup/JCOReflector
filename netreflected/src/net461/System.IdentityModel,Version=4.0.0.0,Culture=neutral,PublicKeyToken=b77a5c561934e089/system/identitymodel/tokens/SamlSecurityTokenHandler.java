@@ -127,6 +127,9 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SamlSecurityTokenHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SamlSecurityTokenHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SamlSecurityTokenHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -123,6 +123,9 @@ public class MouseBinding extends InputBinding  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MouseBinding}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MouseBinding} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MouseBinding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

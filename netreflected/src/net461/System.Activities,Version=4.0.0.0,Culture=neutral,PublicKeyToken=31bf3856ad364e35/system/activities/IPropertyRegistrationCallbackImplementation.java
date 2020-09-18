@@ -113,6 +113,9 @@ public class IPropertyRegistrationCallbackImplementation extends NetObject imple
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPropertyRegistrationCallback}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPropertyRegistrationCallback} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPropertyRegistrationCallback ToIPropertyRegistrationCallback(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

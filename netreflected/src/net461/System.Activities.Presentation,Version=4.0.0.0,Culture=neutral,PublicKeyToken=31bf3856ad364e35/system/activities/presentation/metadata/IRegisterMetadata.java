@@ -60,6 +60,9 @@ public interface IRegisterMetadata extends IJCOBridgeReflected {
     public static final String className = "System.Activities.Presentation.Metadata.IRegisterMetadata";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRegisterMetadata}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRegisterMetadata} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRegisterMetadata ToIRegisterMetadata(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

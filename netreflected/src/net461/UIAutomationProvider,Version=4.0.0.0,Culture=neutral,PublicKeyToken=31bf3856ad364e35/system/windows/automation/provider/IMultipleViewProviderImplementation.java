@@ -112,6 +112,9 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMultipleViewProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMultipleViewProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMultipleViewProvider ToIMultipleViewProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

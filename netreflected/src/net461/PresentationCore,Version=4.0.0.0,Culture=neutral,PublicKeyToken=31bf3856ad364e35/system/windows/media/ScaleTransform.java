@@ -120,6 +120,9 @@ public class ScaleTransform extends Transform  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ScaleTransform}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ScaleTransform} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ScaleTransform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

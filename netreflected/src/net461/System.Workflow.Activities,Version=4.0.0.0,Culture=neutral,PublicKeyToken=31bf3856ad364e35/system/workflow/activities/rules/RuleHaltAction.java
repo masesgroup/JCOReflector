@@ -120,6 +120,9 @@ public class RuleHaltAction extends RuleAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuleHaltAction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RuleHaltAction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RuleHaltAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

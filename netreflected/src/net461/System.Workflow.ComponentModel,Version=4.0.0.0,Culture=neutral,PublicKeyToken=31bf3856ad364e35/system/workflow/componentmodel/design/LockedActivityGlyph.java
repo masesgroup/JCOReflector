@@ -120,6 +120,9 @@ public class LockedActivityGlyph extends DesignerGlyph  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LockedActivityGlyph}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LockedActivityGlyph} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LockedActivityGlyph cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

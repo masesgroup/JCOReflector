@@ -62,6 +62,9 @@ public interface ISelectionProvider extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Automation.Provider.ISelectionProvider";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISelectionProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISelectionProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISelectionProvider ToISelectionProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

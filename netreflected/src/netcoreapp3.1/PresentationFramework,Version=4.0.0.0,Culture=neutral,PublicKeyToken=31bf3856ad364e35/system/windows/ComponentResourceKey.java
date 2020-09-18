@@ -119,9 +119,9 @@ public class ComponentResourceKey extends ResourceKey  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComponentResourceKey}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ComponentResourceKey} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComponentResourceKey} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComponentResourceKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

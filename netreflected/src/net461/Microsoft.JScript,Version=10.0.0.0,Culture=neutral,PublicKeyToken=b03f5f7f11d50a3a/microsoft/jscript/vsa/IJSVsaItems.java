@@ -64,6 +64,9 @@ public interface IJSVsaItems extends IJCOBridgeReflected, IEnumerable {
     public static final String className = "Microsoft.JScript.Vsa.IJSVsaItems";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IJSVsaItems}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IJSVsaItems} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IJSVsaItems ToIJSVsaItems(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

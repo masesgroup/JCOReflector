@@ -78,6 +78,9 @@ public interface IDesignerLoaderHost extends IJCOBridgeReflected, IDesignerHost,
     public static final String className = "System.ComponentModel.Design.Serialization.IDesignerLoaderHost";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerLoaderHost}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDesignerLoaderHost} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDesignerLoaderHost ToIDesignerLoaderHost(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

@@ -122,9 +122,9 @@ public class AnnotationHelper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnnotationHelper}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link AnnotationHelper} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AnnotationHelper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AnnotationHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

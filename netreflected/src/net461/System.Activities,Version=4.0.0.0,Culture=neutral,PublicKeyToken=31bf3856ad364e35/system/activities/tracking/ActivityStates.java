@@ -117,6 +117,9 @@ public class ActivityStates extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityStates}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityStates} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityStates cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

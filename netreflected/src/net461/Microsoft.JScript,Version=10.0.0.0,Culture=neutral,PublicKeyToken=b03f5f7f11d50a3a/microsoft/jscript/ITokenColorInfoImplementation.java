@@ -113,6 +113,9 @@ public class ITokenColorInfoImplementation extends NetObject implements ITokenCo
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITokenColorInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITokenColorInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITokenColorInfo ToITokenColorInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

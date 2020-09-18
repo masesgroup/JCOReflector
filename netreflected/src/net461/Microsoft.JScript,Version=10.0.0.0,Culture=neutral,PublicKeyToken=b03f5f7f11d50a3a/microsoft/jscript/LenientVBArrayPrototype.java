@@ -118,6 +118,9 @@ public class LenientVBArrayPrototype extends VBArrayPrototype  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LenientVBArrayPrototype}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LenientVBArrayPrototype} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LenientVBArrayPrototype cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

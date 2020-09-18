@@ -61,6 +61,9 @@ public interface IEntityWithRelationships extends IJCOBridgeReflected {
     public static final String className = "System.Data.Objects.DataClasses.IEntityWithRelationships";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEntityWithRelationships}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEntityWithRelationships} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEntityWithRelationships ToIEntityWithRelationships(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

@@ -119,6 +119,9 @@ public class ClientScriptManager extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClientScriptManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ClientScriptManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ClientScriptManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

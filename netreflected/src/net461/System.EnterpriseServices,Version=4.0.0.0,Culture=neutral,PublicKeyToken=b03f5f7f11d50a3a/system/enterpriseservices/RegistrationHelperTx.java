@@ -118,6 +118,9 @@ public class RegistrationHelperTx extends ServicedComponent  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegistrationHelperTx}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RegistrationHelperTx} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegistrationHelperTx cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

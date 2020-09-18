@@ -116,6 +116,9 @@ public class ICommandSourceImplementation extends NetObject implements ICommandS
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICommandSource}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICommandSource} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICommandSource ToICommandSource(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

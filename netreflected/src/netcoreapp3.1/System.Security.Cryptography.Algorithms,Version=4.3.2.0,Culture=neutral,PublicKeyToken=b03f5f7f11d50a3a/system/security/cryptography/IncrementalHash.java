@@ -48,7 +48,7 @@ import system.security.cryptography.HashAlgorithmName;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.IncrementalHash" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.IncrementalHash</a>
  */
-public class IncrementalHash extends NetObjectAutoCloseable  {
+public class IncrementalHash extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -119,9 +119,9 @@ public class IncrementalHash extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IncrementalHash}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link IncrementalHash} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IncrementalHash} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IncrementalHash cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -240,7 +240,20 @@ public class IncrementalHash extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

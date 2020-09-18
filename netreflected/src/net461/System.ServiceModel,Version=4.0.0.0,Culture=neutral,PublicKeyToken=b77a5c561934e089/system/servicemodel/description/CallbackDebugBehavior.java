@@ -117,6 +117,9 @@ public class CallbackDebugBehavior extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CallbackDebugBehavior}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CallbackDebugBehavior} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CallbackDebugBehavior cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

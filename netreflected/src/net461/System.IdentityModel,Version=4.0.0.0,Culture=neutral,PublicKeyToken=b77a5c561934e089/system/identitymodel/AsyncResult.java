@@ -49,7 +49,7 @@ import system.threading.WaitHandle;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.AsyncResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.AsyncResult</a>
  */
-public class AsyncResult extends NetObjectAutoCloseable  {
+public class AsyncResult extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -120,6 +120,9 @@ public class AsyncResult extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsyncResult}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AsyncResult} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsyncResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -154,7 +157,20 @@ public class AsyncResult extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

@@ -122,6 +122,9 @@ public class PeerTransportElement extends BindingElementExtensionElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeerTransportElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PeerTransportElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PeerTransportElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

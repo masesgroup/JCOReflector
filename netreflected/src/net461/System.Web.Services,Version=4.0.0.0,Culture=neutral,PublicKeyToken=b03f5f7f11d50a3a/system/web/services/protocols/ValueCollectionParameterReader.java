@@ -120,6 +120,9 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValueCollectionParameterReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ValueCollectionParameterReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ValueCollectionParameterReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

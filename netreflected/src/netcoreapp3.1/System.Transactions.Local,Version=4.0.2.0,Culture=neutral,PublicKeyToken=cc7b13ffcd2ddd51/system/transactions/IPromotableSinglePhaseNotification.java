@@ -63,6 +63,9 @@ public interface IPromotableSinglePhaseNotification extends IJCOBridgeReflected,
     public static final String className = "System.Transactions.IPromotableSinglePhaseNotification";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPromotableSinglePhaseNotification}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPromotableSinglePhaseNotification} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPromotableSinglePhaseNotification ToIPromotableSinglePhaseNotification(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

@@ -124,6 +124,9 @@ public class Vector3DAnimation extends Vector3DAnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector3DAnimation}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Vector3DAnimation} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Vector3DAnimation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

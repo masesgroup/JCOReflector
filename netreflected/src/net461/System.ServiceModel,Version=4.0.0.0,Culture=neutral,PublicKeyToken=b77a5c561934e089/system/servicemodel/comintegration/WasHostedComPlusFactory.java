@@ -120,6 +120,9 @@ public class WasHostedComPlusFactory extends ServiceHostFactoryBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WasHostedComPlusFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WasHostedComPlusFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WasHostedComPlusFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -113,6 +113,9 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDefaultCommunicationTimeouts}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDefaultCommunicationTimeouts} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDefaultCommunicationTimeouts ToIDefaultCommunicationTimeouts(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

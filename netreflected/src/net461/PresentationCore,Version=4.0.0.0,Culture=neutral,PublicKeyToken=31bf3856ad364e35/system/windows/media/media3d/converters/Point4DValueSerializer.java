@@ -120,6 +120,9 @@ public class Point4DValueSerializer extends ValueSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Point4DValueSerializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Point4DValueSerializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Point4DValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

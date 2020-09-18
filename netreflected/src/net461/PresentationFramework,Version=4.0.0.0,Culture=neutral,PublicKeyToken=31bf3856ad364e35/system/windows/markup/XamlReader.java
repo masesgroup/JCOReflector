@@ -122,6 +122,9 @@ public class XamlReader extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XamlReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

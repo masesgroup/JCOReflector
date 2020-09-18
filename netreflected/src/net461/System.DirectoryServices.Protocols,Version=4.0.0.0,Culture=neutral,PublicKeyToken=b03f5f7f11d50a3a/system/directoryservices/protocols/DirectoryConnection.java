@@ -123,6 +123,9 @@ public class DirectoryConnection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryConnection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DirectoryConnection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectoryConnection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

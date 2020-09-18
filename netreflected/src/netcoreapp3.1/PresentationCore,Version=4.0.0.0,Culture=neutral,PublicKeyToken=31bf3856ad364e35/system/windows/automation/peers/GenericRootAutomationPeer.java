@@ -119,9 +119,9 @@ public class GenericRootAutomationPeer extends UIElementAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GenericRootAutomationPeer}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link GenericRootAutomationPeer} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GenericRootAutomationPeer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GenericRootAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

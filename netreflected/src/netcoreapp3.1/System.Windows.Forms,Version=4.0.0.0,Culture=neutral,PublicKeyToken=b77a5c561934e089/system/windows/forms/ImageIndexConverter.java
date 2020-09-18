@@ -121,9 +121,9 @@ public class ImageIndexConverter extends Int32Converter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImageIndexConverter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ImageIndexConverter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ImageIndexConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ImageIndexConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

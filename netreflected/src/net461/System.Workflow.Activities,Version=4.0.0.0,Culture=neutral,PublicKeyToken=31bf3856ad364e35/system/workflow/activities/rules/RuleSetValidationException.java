@@ -141,6 +141,9 @@ public class RuleSetValidationException extends RuleException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuleSetValidationException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RuleSetValidationException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RuleSetValidationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,9 +118,9 @@ public class ApplicationScopedSettingAttribute extends SettingAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationScopedSettingAttribute}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ApplicationScopedSettingAttribute} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ApplicationScopedSettingAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ApplicationScopedSettingAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

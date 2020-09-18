@@ -112,6 +112,9 @@ public class INameScopeImplementation extends NetObject implements INameScope {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link INameScope}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link INameScope} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static INameScope ToINameScope(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

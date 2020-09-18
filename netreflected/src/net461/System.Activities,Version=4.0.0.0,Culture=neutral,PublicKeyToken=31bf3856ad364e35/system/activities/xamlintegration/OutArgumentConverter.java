@@ -118,6 +118,9 @@ public class OutArgumentConverter extends TypeConverterBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OutArgumentConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OutArgumentConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OutArgumentConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

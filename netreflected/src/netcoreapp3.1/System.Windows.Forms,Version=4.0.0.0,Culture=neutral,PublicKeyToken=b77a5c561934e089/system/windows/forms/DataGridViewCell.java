@@ -63,7 +63,7 @@ import system.windows.forms.DataGridViewRow;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCell" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCell</a>
  */
-public class DataGridViewCell extends DataGridViewElement  {
+public class DataGridViewCell extends DataGridViewElement implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -134,9 +134,9 @@ public class DataGridViewCell extends DataGridViewElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewCell}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DataGridViewCell} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridViewCell} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewCell cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -342,7 +342,20 @@ public class DataGridViewCell extends DataGridViewElement  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

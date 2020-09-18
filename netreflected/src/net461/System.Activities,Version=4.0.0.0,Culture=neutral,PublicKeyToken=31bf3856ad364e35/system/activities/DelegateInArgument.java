@@ -118,6 +118,9 @@ public class DelegateInArgument extends DelegateArgument  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DelegateInArgument}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DelegateInArgument} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DelegateInArgument cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

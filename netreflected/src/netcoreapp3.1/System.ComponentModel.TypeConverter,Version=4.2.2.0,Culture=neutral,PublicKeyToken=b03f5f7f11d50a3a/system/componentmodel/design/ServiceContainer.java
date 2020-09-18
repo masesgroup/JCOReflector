@@ -49,7 +49,7 @@ import system.componentmodel.design.ServiceCreatorCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceContainer</a>
  */
-public class ServiceContainer extends NetObjectAutoCloseable  {
+public class ServiceContainer extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -120,9 +120,9 @@ public class ServiceContainer extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceContainer}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ServiceContainer} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceContainer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceContainer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -236,7 +236,20 @@ public class ServiceContainer extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

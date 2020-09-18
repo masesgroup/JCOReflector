@@ -120,9 +120,9 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RsaProtectedConfigurationProvider}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link RsaProtectedConfigurationProvider} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RsaProtectedConfigurationProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RsaProtectedConfigurationProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

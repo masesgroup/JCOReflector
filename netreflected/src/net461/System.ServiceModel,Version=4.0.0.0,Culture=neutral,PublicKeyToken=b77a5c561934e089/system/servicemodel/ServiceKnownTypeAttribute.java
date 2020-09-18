@@ -118,6 +118,9 @@ public class ServiceKnownTypeAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceKnownTypeAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceKnownTypeAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceKnownTypeAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

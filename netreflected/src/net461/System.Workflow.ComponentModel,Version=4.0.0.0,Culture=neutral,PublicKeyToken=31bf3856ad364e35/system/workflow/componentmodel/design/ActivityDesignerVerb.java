@@ -122,6 +122,9 @@ public class ActivityDesignerVerb extends DesignerVerb  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityDesignerVerb}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityDesignerVerb} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityDesignerVerb cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

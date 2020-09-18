@@ -61,6 +61,9 @@ public interface INotifyPropertyChanged extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.INotifyPropertyChanged";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyPropertyChanged}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link INotifyPropertyChanged} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static INotifyPropertyChanged ToINotifyPropertyChanged(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

@@ -117,6 +117,9 @@ public class ClaimTypeElementCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ClaimTypeElementCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ClaimTypeElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ClaimTypeElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class Blend extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Blend}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Blend} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Blend cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

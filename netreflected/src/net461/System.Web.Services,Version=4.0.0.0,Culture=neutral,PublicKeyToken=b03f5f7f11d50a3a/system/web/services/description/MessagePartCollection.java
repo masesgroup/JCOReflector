@@ -119,6 +119,9 @@ public class MessagePartCollection extends ServiceDescriptionBaseCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessagePartCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessagePartCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessagePartCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

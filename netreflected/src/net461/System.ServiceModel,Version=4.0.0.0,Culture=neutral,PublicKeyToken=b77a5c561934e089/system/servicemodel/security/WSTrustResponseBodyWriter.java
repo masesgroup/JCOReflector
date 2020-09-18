@@ -121,6 +121,9 @@ public class WSTrustResponseBodyWriter extends BodyWriter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustResponseBodyWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WSTrustResponseBodyWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WSTrustResponseBodyWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

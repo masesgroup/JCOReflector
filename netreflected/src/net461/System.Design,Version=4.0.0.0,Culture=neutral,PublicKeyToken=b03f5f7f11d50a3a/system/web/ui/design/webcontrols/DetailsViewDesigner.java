@@ -125,6 +125,9 @@ public class DetailsViewDesigner extends DataBoundControlDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DetailsViewDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DetailsViewDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DetailsViewDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

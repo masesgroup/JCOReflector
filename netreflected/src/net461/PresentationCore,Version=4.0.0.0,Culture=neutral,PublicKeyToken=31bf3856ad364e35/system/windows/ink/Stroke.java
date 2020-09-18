@@ -131,6 +131,9 @@ public class Stroke extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Stroke}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Stroke} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Stroke cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IJSVsaEngine}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IJSVsaEngine} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IJSVsaEngine ToIJSVsaEngine(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

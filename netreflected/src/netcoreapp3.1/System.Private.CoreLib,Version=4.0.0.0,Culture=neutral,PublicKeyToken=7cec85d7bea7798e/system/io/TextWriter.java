@@ -59,7 +59,7 @@ import system.text.Encoding;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.TextWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.TextWriter</a>
  */
-public class TextWriter extends MarshalByRefObject  {
+public class TextWriter extends MarshalByRefObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -130,9 +130,9 @@ public class TextWriter extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextWriter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TextWriter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TextWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -785,7 +785,20 @@ public class TextWriter extends MarshalByRefObject  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

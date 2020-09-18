@@ -120,6 +120,9 @@ public class DetailsViewUpdatedEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DetailsViewUpdatedEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DetailsViewUpdatedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DetailsViewUpdatedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

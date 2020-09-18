@@ -121,6 +121,9 @@ public class Rotation3DAnimationBase extends AnimationTimeline  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rotation3DAnimationBase}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Rotation3DAnimationBase} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Rotation3DAnimationBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

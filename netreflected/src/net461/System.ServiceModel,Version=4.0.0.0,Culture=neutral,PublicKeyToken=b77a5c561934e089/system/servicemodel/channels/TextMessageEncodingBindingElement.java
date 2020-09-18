@@ -123,6 +123,9 @@ public class TextMessageEncodingBindingElement extends MessageEncodingBindingEle
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextMessageEncodingBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TextMessageEncodingBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextMessageEncodingBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

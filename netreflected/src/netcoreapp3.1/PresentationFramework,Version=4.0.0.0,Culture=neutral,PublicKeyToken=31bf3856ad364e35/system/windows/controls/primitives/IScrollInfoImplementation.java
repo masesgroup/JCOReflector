@@ -115,6 +115,9 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IScrollInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IScrollInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IScrollInfo ToIScrollInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

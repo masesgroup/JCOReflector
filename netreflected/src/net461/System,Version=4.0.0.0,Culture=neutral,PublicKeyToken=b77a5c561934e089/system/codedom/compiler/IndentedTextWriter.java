@@ -121,6 +121,9 @@ public class IndentedTextWriter extends TextWriter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IndentedTextWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IndentedTextWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IndentedTextWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

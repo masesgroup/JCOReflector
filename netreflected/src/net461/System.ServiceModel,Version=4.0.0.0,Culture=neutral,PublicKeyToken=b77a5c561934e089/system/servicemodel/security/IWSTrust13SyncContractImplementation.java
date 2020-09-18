@@ -113,6 +113,9 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWSTrust13SyncContract}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWSTrust13SyncContract} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWSTrust13SyncContract ToIWSTrust13SyncContract(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

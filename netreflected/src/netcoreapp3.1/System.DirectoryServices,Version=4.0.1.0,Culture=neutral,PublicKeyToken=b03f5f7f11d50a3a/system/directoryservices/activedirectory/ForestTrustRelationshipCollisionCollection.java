@@ -119,9 +119,9 @@ public class ForestTrustRelationshipCollisionCollection extends ReadOnlyCollecti
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ForestTrustRelationshipCollisionCollection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ForestTrustRelationshipCollisionCollection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ForestTrustRelationshipCollisionCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ForestTrustRelationshipCollisionCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

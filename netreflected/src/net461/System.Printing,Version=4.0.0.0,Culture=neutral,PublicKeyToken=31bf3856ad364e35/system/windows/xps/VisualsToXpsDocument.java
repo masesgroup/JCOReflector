@@ -120,6 +120,9 @@ public class VisualsToXpsDocument extends SerializerWriterCollator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link VisualsToXpsDocument}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link VisualsToXpsDocument} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static VisualsToXpsDocument cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

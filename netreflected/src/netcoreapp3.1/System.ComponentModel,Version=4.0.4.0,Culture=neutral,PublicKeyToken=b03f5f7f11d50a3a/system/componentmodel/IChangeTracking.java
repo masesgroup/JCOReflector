@@ -60,6 +60,9 @@ public interface IChangeTracking extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.IChangeTracking";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IChangeTracking}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IChangeTracking} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IChangeTracking ToIChangeTracking(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

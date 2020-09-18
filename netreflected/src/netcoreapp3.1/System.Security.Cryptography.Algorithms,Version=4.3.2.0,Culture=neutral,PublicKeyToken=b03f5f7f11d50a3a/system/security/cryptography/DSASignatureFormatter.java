@@ -119,9 +119,9 @@ public class DSASignatureFormatter extends AsymmetricSignatureFormatter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DSASignatureFormatter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DSASignatureFormatter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DSASignatureFormatter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DSASignatureFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

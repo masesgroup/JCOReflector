@@ -118,6 +118,9 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerEventService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDesignerEventService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDesignerEventService ToIDesignerEventService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

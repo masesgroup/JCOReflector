@@ -118,6 +118,9 @@ public class SoapServerProtocol extends ServerProtocol  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapServerProtocol}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SoapServerProtocol} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SoapServerProtocol cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

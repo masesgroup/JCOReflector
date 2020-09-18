@@ -112,6 +112,9 @@ public class IUrlResolutionServiceImplementation extends NetObject implements IU
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IUrlResolutionService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IUrlResolutionService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IUrlResolutionService ToIUrlResolutionService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

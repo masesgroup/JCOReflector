@@ -112,6 +112,9 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IValueProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IValueProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IValueProvider ToIValueProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

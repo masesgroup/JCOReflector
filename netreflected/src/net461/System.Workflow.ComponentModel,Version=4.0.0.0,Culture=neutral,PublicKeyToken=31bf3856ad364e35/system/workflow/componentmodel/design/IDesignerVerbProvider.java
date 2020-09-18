@@ -62,6 +62,9 @@ public interface IDesignerVerbProvider extends IJCOBridgeReflected {
     public static final String className = "System.Workflow.ComponentModel.Design.IDesignerVerbProvider";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerVerbProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDesignerVerbProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDesignerVerbProvider ToIDesignerVerbProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

@@ -118,6 +118,9 @@ public class HScrollBar extends ScrollBar  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HScrollBar}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HScrollBar} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HScrollBar cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

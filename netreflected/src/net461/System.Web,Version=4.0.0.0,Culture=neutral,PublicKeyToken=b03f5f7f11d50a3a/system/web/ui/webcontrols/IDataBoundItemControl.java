@@ -66,6 +66,9 @@ public interface IDataBoundItemControl extends IJCOBridgeReflected, IDataBoundCo
     public static final String className = "System.Web.UI.WebControls.IDataBoundItemControl";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataBoundItemControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDataBoundItemControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDataBoundItemControl ToIDataBoundItemControl(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

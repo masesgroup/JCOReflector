@@ -120,6 +120,9 @@ public class Constraint extends NativeActivity  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Constraint}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Constraint} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Constraint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

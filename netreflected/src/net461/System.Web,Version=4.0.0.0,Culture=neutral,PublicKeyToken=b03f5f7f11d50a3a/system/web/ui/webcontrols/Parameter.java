@@ -120,6 +120,9 @@ public class Parameter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Parameter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Parameter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Parameter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

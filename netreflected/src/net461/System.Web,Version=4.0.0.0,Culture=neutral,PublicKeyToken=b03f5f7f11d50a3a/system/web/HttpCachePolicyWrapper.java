@@ -126,6 +126,9 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpCachePolicyWrapper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpCachePolicyWrapper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpCachePolicyWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

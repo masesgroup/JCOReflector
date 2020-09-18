@@ -118,6 +118,9 @@ public class IXmlBinaryReaderInitializerImplementation extends NetObject impleme
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlBinaryReaderInitializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXmlBinaryReaderInitializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXmlBinaryReaderInitializer ToIXmlBinaryReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

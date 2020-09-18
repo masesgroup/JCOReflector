@@ -63,6 +63,9 @@ public interface IEventActivity extends IJCOBridgeReflected {
     public static final String className = "System.Workflow.Activities.IEventActivity";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEventActivity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEventActivity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEventActivity ToIEventActivity(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

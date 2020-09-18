@@ -118,6 +118,9 @@ public class CollectionContainer extends DependencyObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CollectionContainer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CollectionContainer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CollectionContainer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

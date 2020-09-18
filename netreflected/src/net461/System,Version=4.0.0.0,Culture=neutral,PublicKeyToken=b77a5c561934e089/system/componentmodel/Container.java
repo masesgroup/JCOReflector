@@ -49,7 +49,7 @@ import system.componentmodel.ComponentCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Container" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Container</a>
  */
-public class Container extends NetObjectAutoCloseable  {
+public class Container extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -120,6 +120,9 @@ public class Container extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Container}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Container} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Container cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -182,7 +185,20 @@ public class Container extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

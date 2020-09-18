@@ -122,6 +122,9 @@ public class WebPartConnection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebPartConnection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebPartConnection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebPartConnection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -60,6 +60,9 @@ public interface ITextControl extends IJCOBridgeReflected {
     public static final String className = "System.Web.UI.ITextControl";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITextControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITextControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITextControl ToITextControl(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

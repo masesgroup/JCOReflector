@@ -118,6 +118,9 @@ public class CircleHotSpot extends HotSpot  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CircleHotSpot}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CircleHotSpot} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CircleHotSpot cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

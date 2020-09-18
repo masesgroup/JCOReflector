@@ -119,6 +119,9 @@ public class TransactedBatchingElement extends BehaviorExtensionElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactedBatchingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TransactedBatchingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransactedBatchingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

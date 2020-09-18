@@ -121,6 +121,9 @@ public class ViewDesigner extends ContainerControlDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ViewDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ViewDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ViewDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

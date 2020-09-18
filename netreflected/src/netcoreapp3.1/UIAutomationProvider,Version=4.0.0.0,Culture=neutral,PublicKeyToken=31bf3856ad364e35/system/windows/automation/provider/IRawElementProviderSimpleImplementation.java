@@ -115,6 +115,9 @@ public class IRawElementProviderSimpleImplementation extends NetObject implement
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRawElementProviderSimple}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRawElementProviderSimple} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRawElementProviderSimple ToIRawElementProviderSimple(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

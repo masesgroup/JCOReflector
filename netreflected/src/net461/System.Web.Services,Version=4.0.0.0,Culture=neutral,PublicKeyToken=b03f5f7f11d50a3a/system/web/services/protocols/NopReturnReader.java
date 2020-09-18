@@ -121,6 +121,9 @@ public class NopReturnReader extends MimeReturnReader  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NopReturnReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NopReturnReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NopReturnReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

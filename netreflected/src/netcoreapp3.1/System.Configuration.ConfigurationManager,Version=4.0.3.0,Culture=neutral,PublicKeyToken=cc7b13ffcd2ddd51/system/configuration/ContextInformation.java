@@ -117,9 +117,9 @@ public class ContextInformation extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContextInformation}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ContextInformation} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ContextInformation} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContextInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

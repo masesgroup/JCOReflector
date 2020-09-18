@@ -61,6 +61,9 @@ public interface ITypeInfo extends IJCOBridgeReflected {
     public static final String className = "System.Runtime.InteropServices.ComTypes.ITypeInfo";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITypeInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITypeInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITypeInfo ToITypeInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");

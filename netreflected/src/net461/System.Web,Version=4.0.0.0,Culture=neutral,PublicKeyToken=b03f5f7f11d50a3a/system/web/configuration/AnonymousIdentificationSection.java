@@ -121,6 +121,9 @@ public class AnonymousIdentificationSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AnonymousIdentificationSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AnonymousIdentificationSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AnonymousIdentificationSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -124,6 +124,9 @@ public class AntiXssEncoder extends HttpEncoder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AntiXssEncoder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AntiXssEncoder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AntiXssEncoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITextProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITextProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITextProvider ToITextProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

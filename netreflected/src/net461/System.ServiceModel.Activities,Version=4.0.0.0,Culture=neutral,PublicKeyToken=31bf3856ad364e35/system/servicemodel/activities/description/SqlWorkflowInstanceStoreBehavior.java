@@ -123,6 +123,9 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlWorkflowInstanceStoreBehavior}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlWorkflowInstanceStoreBehavior} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlWorkflowInstanceStoreBehavior cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class LazyFormattedBuildEventArgs extends BuildEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LazyFormattedBuildEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LazyFormattedBuildEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LazyFormattedBuildEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

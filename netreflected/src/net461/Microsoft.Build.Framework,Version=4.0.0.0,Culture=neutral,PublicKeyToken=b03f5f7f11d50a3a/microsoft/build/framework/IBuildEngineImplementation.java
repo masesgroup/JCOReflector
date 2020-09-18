@@ -118,6 +118,9 @@ public class IBuildEngineImplementation extends NetObject implements IBuildEngin
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBuildEngine}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBuildEngine} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBuildEngine ToIBuildEngine(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

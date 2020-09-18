@@ -141,6 +141,9 @@ public class MessageQueueException extends ExternalException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageQueueException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessageQueueException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessageQueueException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

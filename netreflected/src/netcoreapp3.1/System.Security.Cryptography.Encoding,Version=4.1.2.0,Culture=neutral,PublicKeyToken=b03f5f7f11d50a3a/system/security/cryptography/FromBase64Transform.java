@@ -47,7 +47,7 @@ import system.security.cryptography.FromBase64TransformMode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.FromBase64Transform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.FromBase64Transform</a>
  */
-public class FromBase64Transform extends NetObjectAutoCloseable  {
+public class FromBase64Transform extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -118,9 +118,9 @@ public class FromBase64Transform extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FromBase64Transform}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link FromBase64Transform} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FromBase64Transform} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FromBase64Transform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -231,7 +231,20 @@ public class FromBase64Transform extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

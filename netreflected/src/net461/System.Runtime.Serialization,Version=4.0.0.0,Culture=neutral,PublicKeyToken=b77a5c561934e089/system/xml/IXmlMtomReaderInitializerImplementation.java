@@ -116,6 +116,9 @@ public class IXmlMtomReaderInitializerImplementation extends NetObject implement
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlMtomReaderInitializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXmlMtomReaderInitializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXmlMtomReaderInitializer ToIXmlMtomReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

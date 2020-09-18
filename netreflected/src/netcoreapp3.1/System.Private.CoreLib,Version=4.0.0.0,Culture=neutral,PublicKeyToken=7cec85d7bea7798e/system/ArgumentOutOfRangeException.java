@@ -140,9 +140,9 @@ public class ArgumentOutOfRangeException extends ArgumentException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ArgumentOutOfRangeException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ArgumentOutOfRangeException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ArgumentOutOfRangeException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ArgumentOutOfRangeException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

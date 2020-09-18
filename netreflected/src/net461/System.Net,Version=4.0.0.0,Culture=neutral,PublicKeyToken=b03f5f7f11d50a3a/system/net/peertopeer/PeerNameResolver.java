@@ -120,6 +120,9 @@ public class PeerNameResolver extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeerNameResolver}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PeerNameResolver} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PeerNameResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

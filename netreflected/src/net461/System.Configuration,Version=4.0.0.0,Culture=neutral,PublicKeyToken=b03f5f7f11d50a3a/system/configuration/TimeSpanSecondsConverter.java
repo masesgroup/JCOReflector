@@ -121,6 +121,9 @@ public class TimeSpanSecondsConverter extends ConfigurationConverterBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TimeSpanSecondsConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TimeSpanSecondsConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TimeSpanSecondsConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

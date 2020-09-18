@@ -56,7 +56,7 @@ import system.security.authentication.extendedprotection.ServiceNameCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListener" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListener</a>
  */
-public class HttpListener extends NetObjectAutoCloseable  {
+public class HttpListener extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.HttpListener, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

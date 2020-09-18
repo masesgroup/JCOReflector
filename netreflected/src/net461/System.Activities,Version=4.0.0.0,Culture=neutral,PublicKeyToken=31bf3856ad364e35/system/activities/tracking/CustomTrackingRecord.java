@@ -121,6 +121,9 @@ public class CustomTrackingRecord extends TrackingRecord  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CustomTrackingRecord}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CustomTrackingRecord} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CustomTrackingRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -138,6 +138,9 @@ public class PoisonMessageException extends CommunicationException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PoisonMessageException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PoisonMessageException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PoisonMessageException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

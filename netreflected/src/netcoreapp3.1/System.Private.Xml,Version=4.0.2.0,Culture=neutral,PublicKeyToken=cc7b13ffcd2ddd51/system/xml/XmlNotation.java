@@ -120,9 +120,9 @@ public class XmlNotation extends XmlNode  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlNotation}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link XmlNotation} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlNotation} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlNotation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

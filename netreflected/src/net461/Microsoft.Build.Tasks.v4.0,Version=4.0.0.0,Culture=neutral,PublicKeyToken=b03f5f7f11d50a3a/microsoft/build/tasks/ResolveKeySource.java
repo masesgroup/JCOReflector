@@ -118,6 +118,9 @@ public class ResolveKeySource extends TaskExtension  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResolveKeySource}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ResolveKeySource} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResolveKeySource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

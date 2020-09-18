@@ -120,6 +120,9 @@ public class SoapDocumentMethodAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapDocumentMethodAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SoapDocumentMethodAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SoapDocumentMethodAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

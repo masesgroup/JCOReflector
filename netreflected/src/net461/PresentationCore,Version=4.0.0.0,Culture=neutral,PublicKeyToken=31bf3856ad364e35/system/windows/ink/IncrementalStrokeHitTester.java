@@ -119,6 +119,9 @@ public class IncrementalStrokeHitTester extends IncrementalHitTester  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IncrementalStrokeHitTester}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IncrementalStrokeHitTester} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IncrementalStrokeHitTester cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

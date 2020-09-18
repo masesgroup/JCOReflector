@@ -121,6 +121,9 @@ public class SecurityKeyElement extends SecurityKey  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityKeyElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SecurityKeyElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecurityKeyElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

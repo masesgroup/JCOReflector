@@ -112,6 +112,9 @@ public class IWin32WindowImplementation extends NetObject implements IWin32Windo
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWin32Window}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWin32Window} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWin32Window ToIWin32Window(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

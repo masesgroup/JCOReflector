@@ -121,6 +121,9 @@ public class SplineSingleKeyFrame extends SingleKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SplineSingleKeyFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SplineSingleKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SplineSingleKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

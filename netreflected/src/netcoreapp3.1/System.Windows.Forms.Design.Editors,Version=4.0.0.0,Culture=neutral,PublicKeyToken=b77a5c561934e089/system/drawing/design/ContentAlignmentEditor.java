@@ -123,9 +123,9 @@ public class ContentAlignmentEditor extends UITypeEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContentAlignmentEditor}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ContentAlignmentEditor} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ContentAlignmentEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContentAlignmentEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

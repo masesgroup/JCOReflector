@@ -124,6 +124,9 @@ public class StatusBarDrawItemEventArgs extends DrawItemEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StatusBarDrawItemEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StatusBarDrawItemEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StatusBarDrawItemEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

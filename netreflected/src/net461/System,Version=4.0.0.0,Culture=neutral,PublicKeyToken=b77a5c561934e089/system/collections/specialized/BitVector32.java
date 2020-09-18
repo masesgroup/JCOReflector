@@ -119,6 +119,9 @@ public class BitVector32 extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BitVector32}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BitVector32} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BitVector32 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

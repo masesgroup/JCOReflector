@@ -120,6 +120,9 @@ public class TransportElement extends BindingElementExtensionElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransportElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TransportElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransportElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

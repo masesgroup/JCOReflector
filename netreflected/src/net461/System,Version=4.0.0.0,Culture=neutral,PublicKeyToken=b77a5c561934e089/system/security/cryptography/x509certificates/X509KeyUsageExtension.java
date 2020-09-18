@@ -120,6 +120,9 @@ public class X509KeyUsageExtension extends X509Extension  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509KeyUsageExtension}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509KeyUsageExtension} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509KeyUsageExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

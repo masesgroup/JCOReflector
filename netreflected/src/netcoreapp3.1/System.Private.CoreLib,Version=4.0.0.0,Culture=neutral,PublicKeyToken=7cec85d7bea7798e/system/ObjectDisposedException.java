@@ -140,9 +140,9 @@ public class ObjectDisposedException extends InvalidOperationException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectDisposedException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ObjectDisposedException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectDisposedException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectDisposedException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

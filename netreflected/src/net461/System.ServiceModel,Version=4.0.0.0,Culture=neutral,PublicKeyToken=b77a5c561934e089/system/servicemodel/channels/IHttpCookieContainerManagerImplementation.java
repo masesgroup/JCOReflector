@@ -113,6 +113,9 @@ public class IHttpCookieContainerManagerImplementation extends NetObject impleme
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHttpCookieContainerManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHttpCookieContainerManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHttpCookieContainerManager ToIHttpCookieContainerManager(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -112,6 +112,9 @@ public class IWorkflowCompilerOptionsServiceImplementation extends NetObject imp
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWorkflowCompilerOptionsService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWorkflowCompilerOptionsService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWorkflowCompilerOptionsService ToIWorkflowCompilerOptionsService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

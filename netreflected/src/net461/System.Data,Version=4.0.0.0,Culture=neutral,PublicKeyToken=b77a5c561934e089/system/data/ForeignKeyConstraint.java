@@ -122,6 +122,9 @@ public class ForeignKeyConstraint extends Constraint  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ForeignKeyConstraint}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ForeignKeyConstraint} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ForeignKeyConstraint cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

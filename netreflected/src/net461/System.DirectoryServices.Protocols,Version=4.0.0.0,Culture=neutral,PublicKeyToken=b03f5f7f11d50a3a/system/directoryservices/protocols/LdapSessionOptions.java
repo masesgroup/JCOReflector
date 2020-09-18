@@ -124,6 +124,9 @@ public class LdapSessionOptions extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LdapSessionOptions}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LdapSessionOptions} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LdapSessionOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

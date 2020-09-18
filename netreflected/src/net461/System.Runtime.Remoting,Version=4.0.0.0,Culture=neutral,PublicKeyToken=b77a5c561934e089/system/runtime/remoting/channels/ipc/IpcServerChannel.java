@@ -122,6 +122,9 @@ public class IpcServerChannel extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IpcServerChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IpcServerChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IpcServerChannel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

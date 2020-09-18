@@ -60,6 +60,9 @@ public interface IContainsThemedScrollbarWindows extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Forms.Design.IContainsThemedScrollbarWindows";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContainsThemedScrollbarWindows}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IContainsThemedScrollbarWindows} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IContainsThemedScrollbarWindows ToIContainsThemedScrollbarWindows(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

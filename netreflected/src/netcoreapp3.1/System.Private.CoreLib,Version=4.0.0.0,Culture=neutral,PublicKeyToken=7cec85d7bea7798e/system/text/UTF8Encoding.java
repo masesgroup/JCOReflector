@@ -120,9 +120,9 @@ public class UTF8Encoding extends Encoding  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UTF8Encoding}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link UTF8Encoding} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UTF8Encoding} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UTF8Encoding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

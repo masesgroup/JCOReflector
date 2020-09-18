@@ -114,6 +114,9 @@ public class IRedirectOutputImplementation extends NetObject implements IRedirec
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRedirectOutput}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRedirectOutput} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRedirectOutput ToIRedirectOutput(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -127,6 +127,9 @@ public class SoapClientFormatterSinkProvider extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapClientFormatterSinkProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SoapClientFormatterSinkProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SoapClientFormatterSinkProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

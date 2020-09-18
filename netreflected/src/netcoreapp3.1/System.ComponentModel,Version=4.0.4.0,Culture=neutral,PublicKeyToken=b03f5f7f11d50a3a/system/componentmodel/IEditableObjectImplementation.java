@@ -112,6 +112,9 @@ public class IEditableObjectImplementation extends NetObject implements IEditabl
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEditableObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEditableObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEditableObject ToIEditableObject(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

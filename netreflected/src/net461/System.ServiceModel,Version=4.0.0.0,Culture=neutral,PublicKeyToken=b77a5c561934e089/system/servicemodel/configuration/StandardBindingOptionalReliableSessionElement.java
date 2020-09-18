@@ -119,6 +119,9 @@ public class StandardBindingOptionalReliableSessionElement extends StandardBindi
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StandardBindingOptionalReliableSessionElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StandardBindingOptionalReliableSessionElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StandardBindingOptionalReliableSessionElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

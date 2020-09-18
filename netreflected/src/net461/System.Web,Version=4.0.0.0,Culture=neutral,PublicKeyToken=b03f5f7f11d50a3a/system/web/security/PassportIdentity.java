@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.PassportIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.PassportIdentity</a>
  */
-public class PassportIdentity extends NetObjectAutoCloseable  {
+public class PassportIdentity extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -117,6 +117,9 @@ public class PassportIdentity extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PassportIdentity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PassportIdentity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PassportIdentity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

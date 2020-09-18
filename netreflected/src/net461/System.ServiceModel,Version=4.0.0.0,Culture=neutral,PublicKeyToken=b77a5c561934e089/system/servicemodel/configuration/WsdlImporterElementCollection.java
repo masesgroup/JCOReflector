@@ -117,6 +117,9 @@ public class WsdlImporterElementCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WsdlImporterElementCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WsdlImporterElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WsdlImporterElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

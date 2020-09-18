@@ -62,6 +62,9 @@ public interface IEntityWithChangeTracker extends IJCOBridgeReflected {
     public static final String className = "System.Data.Objects.DataClasses.IEntityWithChangeTracker";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEntityWithChangeTracker}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEntityWithChangeTracker} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEntityWithChangeTracker ToIEntityWithChangeTracker(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

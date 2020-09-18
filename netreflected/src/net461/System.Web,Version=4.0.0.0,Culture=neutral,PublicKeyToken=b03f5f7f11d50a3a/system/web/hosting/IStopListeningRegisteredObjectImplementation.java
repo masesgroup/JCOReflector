@@ -114,6 +114,9 @@ public class IStopListeningRegisteredObjectImplementation extends NetObject impl
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStopListeningRegisteredObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IStopListeningRegisteredObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IStopListeningRegisteredObject ToIStopListeningRegisteredObject(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

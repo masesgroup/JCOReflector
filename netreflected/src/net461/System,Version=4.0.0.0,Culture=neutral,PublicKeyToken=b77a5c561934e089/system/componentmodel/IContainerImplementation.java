@@ -117,6 +117,9 @@ public class IContainerImplementation extends NetObject implements IContainer {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContainer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IContainer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IContainer ToIContainer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

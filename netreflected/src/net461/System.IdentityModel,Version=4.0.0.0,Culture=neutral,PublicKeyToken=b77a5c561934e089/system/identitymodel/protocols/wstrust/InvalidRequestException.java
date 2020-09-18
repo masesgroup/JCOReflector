@@ -138,6 +138,9 @@ public class InvalidRequestException extends RequestException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InvalidRequestException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InvalidRequestException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InvalidRequestException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

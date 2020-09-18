@@ -52,7 +52,7 @@ import system.workflow.componentmodel.design.FreeformActivityDesigner;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.Connector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.Connector</a>
  */
-public class Connector extends NetObjectAutoCloseable  {
+public class Connector extends NetObject  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -123,6 +123,9 @@ public class Connector extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Connector}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Connector} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Connector cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

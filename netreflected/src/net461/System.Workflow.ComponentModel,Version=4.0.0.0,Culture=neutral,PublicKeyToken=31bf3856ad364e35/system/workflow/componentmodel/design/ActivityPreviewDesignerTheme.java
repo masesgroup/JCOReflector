@@ -121,6 +121,9 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityPreviewDesignerTheme}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityPreviewDesignerTheme} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityPreviewDesignerTheme cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

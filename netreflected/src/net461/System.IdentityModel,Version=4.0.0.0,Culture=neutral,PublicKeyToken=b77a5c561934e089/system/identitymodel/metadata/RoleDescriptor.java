@@ -120,6 +120,9 @@ public class RoleDescriptor extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RoleDescriptor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RoleDescriptor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RoleDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

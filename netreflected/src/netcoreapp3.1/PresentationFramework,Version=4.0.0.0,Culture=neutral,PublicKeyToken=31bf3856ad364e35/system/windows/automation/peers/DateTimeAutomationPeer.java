@@ -119,9 +119,9 @@ public class DateTimeAutomationPeer extends AutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DateTimeAutomationPeer}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DateTimeAutomationPeer} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DateTimeAutomationPeer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DateTimeAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

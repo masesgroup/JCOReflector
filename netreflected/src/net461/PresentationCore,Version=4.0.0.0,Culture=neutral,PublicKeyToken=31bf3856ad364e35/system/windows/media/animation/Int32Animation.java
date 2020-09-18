@@ -123,6 +123,9 @@ public class Int32Animation extends Int32AnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int32Animation}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Int32Animation} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Int32Animation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

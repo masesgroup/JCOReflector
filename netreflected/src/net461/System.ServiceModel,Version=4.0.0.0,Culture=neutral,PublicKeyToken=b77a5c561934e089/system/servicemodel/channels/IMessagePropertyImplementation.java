@@ -114,6 +114,9 @@ public class IMessagePropertyImplementation extends NetObject implements IMessag
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMessageProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMessageProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMessageProperty ToIMessageProperty(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

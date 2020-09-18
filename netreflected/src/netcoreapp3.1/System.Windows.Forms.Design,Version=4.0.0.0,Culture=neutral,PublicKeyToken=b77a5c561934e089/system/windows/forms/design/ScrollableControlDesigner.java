@@ -118,9 +118,9 @@ public class ScrollableControlDesigner extends ParentControlDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ScrollableControlDesigner}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ScrollableControlDesigner} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ScrollableControlDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ScrollableControlDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

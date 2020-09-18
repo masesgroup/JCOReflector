@@ -72,6 +72,9 @@ public interface IXpsFixedPageReader extends IJCOBridgeReflected, IStoryFragment
     public static final String className = "System.Windows.Xps.Packaging.IXpsFixedPageReader";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXpsFixedPageReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXpsFixedPageReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXpsFixedPageReader ToIXpsFixedPageReader(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

@@ -117,6 +117,9 @@ public class EntityViewContainer extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityViewContainer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EntityViewContainer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EntityViewContainer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

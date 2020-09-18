@@ -117,9 +117,9 @@ public class JumpItem extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link JumpItem}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link JumpItem} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link JumpItem} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static JumpItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

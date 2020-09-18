@@ -121,6 +121,9 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricSecurityBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AsymmetricSecurityBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsymmetricSecurityBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

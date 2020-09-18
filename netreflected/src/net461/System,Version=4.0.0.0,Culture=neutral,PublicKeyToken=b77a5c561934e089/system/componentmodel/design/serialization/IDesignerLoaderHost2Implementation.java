@@ -132,6 +132,9 @@ public class IDesignerLoaderHost2Implementation extends NetObject implements IDe
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerLoaderHost2}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDesignerLoaderHost2} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDesignerLoaderHost2 ToIDesignerLoaderHost2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

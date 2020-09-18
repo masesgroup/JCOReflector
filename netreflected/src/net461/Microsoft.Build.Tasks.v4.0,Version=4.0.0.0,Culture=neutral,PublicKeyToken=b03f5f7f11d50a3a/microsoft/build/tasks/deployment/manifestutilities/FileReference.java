@@ -121,6 +121,9 @@ public class FileReference extends BaseReference  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileReference}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FileReference} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileReference cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

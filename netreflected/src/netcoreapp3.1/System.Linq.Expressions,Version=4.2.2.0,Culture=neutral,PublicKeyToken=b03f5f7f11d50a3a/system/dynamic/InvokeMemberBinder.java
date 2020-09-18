@@ -120,9 +120,9 @@ public class InvokeMemberBinder extends DynamicMetaObjectBinder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InvokeMemberBinder}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link InvokeMemberBinder} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InvokeMemberBinder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InvokeMemberBinder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

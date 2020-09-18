@@ -119,6 +119,9 @@ public class HttpCapabilitiesProvider extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpCapabilitiesProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpCapabilitiesProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpCapabilitiesProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

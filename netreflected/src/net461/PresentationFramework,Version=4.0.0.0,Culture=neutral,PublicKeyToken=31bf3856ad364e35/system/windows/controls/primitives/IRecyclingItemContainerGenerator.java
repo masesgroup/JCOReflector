@@ -69,6 +69,9 @@ public interface IRecyclingItemContainerGenerator extends IJCOBridgeReflected, I
     public static final String className = "System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRecyclingItemContainerGenerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRecyclingItemContainerGenerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRecyclingItemContainerGenerator ToIRecyclingItemContainerGenerator(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

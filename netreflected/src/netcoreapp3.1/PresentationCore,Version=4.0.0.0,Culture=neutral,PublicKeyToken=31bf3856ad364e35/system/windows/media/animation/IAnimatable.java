@@ -64,6 +64,9 @@ public interface IAnimatable extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Media.Animation.IAnimatable";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAnimatable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAnimatable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAnimatable ToIAnimatable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

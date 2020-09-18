@@ -112,6 +112,9 @@ public class IHtmlStringImplementation extends NetObject implements IHtmlString 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHtmlString}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHtmlString} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHtmlString ToIHtmlString(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

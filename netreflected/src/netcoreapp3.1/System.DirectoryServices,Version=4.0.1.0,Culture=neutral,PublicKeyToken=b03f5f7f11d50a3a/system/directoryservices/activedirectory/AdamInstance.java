@@ -132,9 +132,9 @@ public class AdamInstance extends DirectoryServer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AdamInstance}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link AdamInstance} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AdamInstance} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AdamInstance cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

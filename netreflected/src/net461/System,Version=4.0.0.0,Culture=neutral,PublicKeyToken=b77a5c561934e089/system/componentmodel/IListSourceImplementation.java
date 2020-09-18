@@ -114,6 +114,9 @@ public class IListSourceImplementation extends NetObject implements IListSource 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IListSource}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IListSource} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IListSource ToIListSource(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

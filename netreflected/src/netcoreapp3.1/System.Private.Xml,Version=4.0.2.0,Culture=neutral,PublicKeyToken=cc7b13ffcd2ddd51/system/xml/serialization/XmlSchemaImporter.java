@@ -124,9 +124,9 @@ public class XmlSchemaImporter extends SchemaImporter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaImporter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link XmlSchemaImporter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlSchemaImporter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

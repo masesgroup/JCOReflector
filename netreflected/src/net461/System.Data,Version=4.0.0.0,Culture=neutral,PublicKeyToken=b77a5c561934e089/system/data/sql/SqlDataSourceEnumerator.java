@@ -120,6 +120,9 @@ public class SqlDataSourceEnumerator extends DbDataSourceEnumerator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlDataSourceEnumerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlDataSourceEnumerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlDataSourceEnumerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

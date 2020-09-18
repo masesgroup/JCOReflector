@@ -115,6 +115,9 @@ public class IBootstrapperBuilderImplementation extends NetObject implements IBo
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBootstrapperBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBootstrapperBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBootstrapperBuilder ToIBootstrapperBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

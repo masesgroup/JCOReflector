@@ -124,6 +124,9 @@ public class Computer extends ServerComputer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Computer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Computer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Computer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

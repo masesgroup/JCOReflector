@@ -120,6 +120,9 @@ public class HostElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HostElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HostElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HostElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

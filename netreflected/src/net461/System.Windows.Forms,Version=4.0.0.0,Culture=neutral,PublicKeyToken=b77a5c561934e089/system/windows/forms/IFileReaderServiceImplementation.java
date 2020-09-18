@@ -113,6 +113,9 @@ public class IFileReaderServiceImplementation extends NetObject implements IFile
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IFileReaderService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IFileReaderService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IFileReaderService ToIFileReaderService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

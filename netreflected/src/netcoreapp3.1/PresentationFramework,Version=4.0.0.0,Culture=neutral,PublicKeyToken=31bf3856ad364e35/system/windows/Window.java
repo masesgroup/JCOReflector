@@ -132,9 +132,9 @@ public class Window extends ContentControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Window}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Window} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Window} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Window cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

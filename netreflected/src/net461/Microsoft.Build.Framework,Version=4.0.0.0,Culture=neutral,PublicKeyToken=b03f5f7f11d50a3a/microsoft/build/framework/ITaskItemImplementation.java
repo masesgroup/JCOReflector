@@ -118,6 +118,9 @@ public class ITaskItemImplementation extends NetObject implements ITaskItem {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITaskItem}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITaskItem} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITaskItem ToITaskItem(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

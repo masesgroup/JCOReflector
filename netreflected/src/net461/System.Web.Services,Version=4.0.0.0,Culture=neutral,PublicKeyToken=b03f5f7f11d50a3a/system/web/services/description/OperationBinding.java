@@ -122,6 +122,9 @@ public class OperationBinding extends NamedItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OperationBinding}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OperationBinding} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OperationBinding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

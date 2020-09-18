@@ -122,6 +122,9 @@ public class RuleStatementAction extends RuleAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuleStatementAction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RuleStatementAction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RuleStatementAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

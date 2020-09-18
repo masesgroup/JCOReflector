@@ -118,6 +118,9 @@ public class WorkflowSymbol extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowSymbol}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowSymbol} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowSymbol cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

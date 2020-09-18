@@ -121,6 +121,9 @@ public class RadioButtonList extends ListControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RadioButtonList}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RadioButtonList} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RadioButtonList cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

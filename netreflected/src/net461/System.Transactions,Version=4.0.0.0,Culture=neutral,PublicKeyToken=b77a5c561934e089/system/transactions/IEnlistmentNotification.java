@@ -62,6 +62,9 @@ public interface IEnlistmentNotification extends IJCOBridgeReflected {
     public static final String className = "System.Transactions.IEnlistmentNotification";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEnlistmentNotification}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEnlistmentNotification} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEnlistmentNotification ToIEnlistmentNotification(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

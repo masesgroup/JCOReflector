@@ -120,6 +120,9 @@ public class EditorZone extends EditorZoneBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EditorZone}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EditorZone} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EditorZone cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,9 +118,9 @@ public class SendPacketsElement extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SendPacketsElement}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SendPacketsElement} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SendPacketsElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SendPacketsElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

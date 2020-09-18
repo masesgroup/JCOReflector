@@ -130,9 +130,9 @@ public class FileStream extends Stream  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileStream}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link FileStream} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FileStream} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileStream cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

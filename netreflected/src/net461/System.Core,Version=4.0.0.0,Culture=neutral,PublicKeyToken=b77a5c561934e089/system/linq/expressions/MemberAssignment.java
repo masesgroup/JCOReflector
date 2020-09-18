@@ -120,6 +120,9 @@ public class MemberAssignment extends MemberBinding  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MemberAssignment}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MemberAssignment} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MemberAssignment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

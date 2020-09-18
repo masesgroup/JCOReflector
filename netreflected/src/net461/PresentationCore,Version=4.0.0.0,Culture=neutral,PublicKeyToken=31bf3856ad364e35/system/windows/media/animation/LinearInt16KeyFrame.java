@@ -119,6 +119,9 @@ public class LinearInt16KeyFrame extends Int16KeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinearInt16KeyFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LinearInt16KeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LinearInt16KeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

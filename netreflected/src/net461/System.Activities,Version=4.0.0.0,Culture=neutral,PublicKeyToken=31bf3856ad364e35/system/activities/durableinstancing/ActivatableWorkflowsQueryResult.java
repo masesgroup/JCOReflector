@@ -118,6 +118,9 @@ public class ActivatableWorkflowsQueryResult extends InstanceStoreQueryResult  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivatableWorkflowsQueryResult}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivatableWorkflowsQueryResult} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivatableWorkflowsQueryResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

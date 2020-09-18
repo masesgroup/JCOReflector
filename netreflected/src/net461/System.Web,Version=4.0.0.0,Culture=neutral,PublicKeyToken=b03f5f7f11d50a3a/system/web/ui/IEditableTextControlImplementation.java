@@ -115,6 +115,9 @@ public class IEditableTextControlImplementation extends NetObject implements IEd
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEditableTextControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEditableTextControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEditableTextControl ToIEditableTextControl(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

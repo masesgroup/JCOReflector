@@ -121,6 +121,9 @@ public class DispatcherSynchronizationContext extends SynchronizationContext  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DispatcherSynchronizationContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DispatcherSynchronizationContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DispatcherSynchronizationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

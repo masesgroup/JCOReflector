@@ -112,6 +112,9 @@ public class IAccPropServerImplementation extends NetObject implements IAccPropS
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAccPropServer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAccPropServer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAccPropServer ToIAccPropServer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

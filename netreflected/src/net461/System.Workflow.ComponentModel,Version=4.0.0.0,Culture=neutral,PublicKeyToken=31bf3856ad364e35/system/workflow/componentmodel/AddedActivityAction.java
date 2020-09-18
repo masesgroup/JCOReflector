@@ -120,6 +120,9 @@ public class AddedActivityAction extends ActivityChangeAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AddedActivityAction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AddedActivityAction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AddedActivityAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

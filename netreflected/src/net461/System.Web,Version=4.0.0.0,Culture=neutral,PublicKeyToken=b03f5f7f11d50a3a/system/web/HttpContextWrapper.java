@@ -144,6 +144,9 @@ public class HttpContextWrapper extends HttpContextBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpContextWrapper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpContextWrapper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpContextWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

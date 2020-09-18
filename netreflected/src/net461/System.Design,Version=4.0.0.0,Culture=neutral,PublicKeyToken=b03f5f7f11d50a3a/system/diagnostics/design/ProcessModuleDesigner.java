@@ -118,6 +118,9 @@ public class ProcessModuleDesigner extends ComponentDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProcessModuleDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ProcessModuleDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ProcessModuleDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

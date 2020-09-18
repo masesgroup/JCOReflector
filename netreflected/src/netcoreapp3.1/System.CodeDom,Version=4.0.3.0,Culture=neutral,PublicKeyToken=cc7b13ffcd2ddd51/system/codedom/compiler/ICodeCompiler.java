@@ -63,6 +63,9 @@ public interface ICodeCompiler extends IJCOBridgeReflected {
     public static final String className = "System.CodeDom.Compiler.ICodeCompiler";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICodeCompiler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICodeCompiler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICodeCompiler ToICodeCompiler(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

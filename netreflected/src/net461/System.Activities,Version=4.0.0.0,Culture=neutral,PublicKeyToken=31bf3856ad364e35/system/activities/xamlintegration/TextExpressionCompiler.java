@@ -120,6 +120,9 @@ public class TextExpressionCompiler extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextExpressionCompiler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TextExpressionCompiler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextExpressionCompiler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

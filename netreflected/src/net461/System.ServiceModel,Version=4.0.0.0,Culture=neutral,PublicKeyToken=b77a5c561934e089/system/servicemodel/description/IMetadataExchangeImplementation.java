@@ -116,6 +116,9 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMetadataExchange}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMetadataExchange} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMetadataExchange ToIMetadataExchange(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

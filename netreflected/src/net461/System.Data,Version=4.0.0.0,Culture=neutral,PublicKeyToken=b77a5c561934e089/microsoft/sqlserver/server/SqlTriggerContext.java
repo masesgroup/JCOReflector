@@ -119,6 +119,9 @@ public class SqlTriggerContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlTriggerContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlTriggerContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlTriggerContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

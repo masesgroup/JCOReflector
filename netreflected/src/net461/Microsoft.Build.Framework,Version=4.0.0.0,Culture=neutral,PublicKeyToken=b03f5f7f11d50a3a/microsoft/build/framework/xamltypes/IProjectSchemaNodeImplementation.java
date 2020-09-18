@@ -112,6 +112,9 @@ public class IProjectSchemaNodeImplementation extends NetObject implements IProj
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProjectSchemaNode}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IProjectSchemaNode} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IProjectSchemaNode ToIProjectSchemaNode(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

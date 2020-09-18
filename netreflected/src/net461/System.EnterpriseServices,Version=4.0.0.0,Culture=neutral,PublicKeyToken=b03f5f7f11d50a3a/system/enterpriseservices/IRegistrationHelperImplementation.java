@@ -112,6 +112,9 @@ public class IRegistrationHelperImplementation extends NetObject implements IReg
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRegistrationHelper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRegistrationHelper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRegistrationHelper ToIRegistrationHelper(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

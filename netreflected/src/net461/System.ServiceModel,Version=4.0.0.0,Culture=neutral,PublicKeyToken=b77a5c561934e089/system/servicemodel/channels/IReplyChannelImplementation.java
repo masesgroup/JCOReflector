@@ -124,6 +124,9 @@ public class IReplyChannelImplementation extends NetObject implements IReplyChan
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReplyChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IReplyChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IReplyChannel ToIReplyChannel(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

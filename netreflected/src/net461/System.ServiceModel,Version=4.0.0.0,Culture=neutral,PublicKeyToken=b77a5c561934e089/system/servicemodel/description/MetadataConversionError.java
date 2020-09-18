@@ -117,6 +117,9 @@ public class MetadataConversionError extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataConversionError}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MetadataConversionError} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MetadataConversionError cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

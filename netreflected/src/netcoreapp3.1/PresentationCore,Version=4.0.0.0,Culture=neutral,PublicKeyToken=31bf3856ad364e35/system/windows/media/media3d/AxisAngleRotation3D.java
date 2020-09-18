@@ -120,9 +120,9 @@ public class AxisAngleRotation3D extends Rotation3D  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AxisAngleRotation3D}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link AxisAngleRotation3D} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AxisAngleRotation3D} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AxisAngleRotation3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

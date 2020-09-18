@@ -120,9 +120,9 @@ public class Matrix3DValueSerializer extends ValueSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Matrix3DValueSerializer}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Matrix3DValueSerializer} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Matrix3DValueSerializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Matrix3DValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

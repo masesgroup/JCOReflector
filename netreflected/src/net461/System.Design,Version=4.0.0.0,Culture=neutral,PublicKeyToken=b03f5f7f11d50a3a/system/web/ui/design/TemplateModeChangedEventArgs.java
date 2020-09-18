@@ -119,6 +119,9 @@ public class TemplateModeChangedEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateModeChangedEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TemplateModeChangedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TemplateModeChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

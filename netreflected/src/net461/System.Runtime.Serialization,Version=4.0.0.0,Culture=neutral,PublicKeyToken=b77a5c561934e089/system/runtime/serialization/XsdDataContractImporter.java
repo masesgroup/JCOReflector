@@ -123,6 +123,9 @@ public class XsdDataContractImporter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XsdDataContractImporter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XsdDataContractImporter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XsdDataContractImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

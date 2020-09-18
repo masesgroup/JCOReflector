@@ -118,9 +118,9 @@ public class DebugMetadataHeader extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DebugMetadataHeader}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DebugMetadataHeader} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DebugMetadataHeader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DebugMetadataHeader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

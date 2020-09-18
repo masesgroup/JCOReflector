@@ -124,6 +124,9 @@ public class IInputChannelImplementation extends NetObject implements IInputChan
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInputChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IInputChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IInputChannel ToIInputChannel(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class LenientNumberPrototype extends NumberPrototype  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LenientNumberPrototype}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LenientNumberPrototype} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LenientNumberPrototype cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

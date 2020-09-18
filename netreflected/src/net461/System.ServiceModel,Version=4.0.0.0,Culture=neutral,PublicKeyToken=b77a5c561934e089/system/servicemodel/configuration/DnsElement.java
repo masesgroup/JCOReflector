@@ -118,6 +118,9 @@ public class DnsElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DnsElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DnsElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DnsElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

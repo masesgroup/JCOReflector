@@ -124,9 +124,9 @@ public class Matrix4x4 extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Matrix4x4}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Matrix4x4} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Matrix4x4} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Matrix4x4 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

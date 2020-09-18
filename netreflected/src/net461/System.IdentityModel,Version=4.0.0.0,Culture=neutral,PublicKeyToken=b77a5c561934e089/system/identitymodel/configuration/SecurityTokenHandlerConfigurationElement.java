@@ -125,6 +125,9 @@ public class SecurityTokenHandlerConfigurationElement extends ConfigurationEleme
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityTokenHandlerConfigurationElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SecurityTokenHandlerConfigurationElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecurityTokenHandlerConfigurationElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

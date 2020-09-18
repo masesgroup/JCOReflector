@@ -123,9 +123,9 @@ public class DataGridTextColumn extends DataGridBoundColumn  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridTextColumn}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DataGridTextColumn} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridTextColumn} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridTextColumn cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

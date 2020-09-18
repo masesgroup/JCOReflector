@@ -125,6 +125,9 @@ public class PageAdapter extends ControlAdapter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageAdapter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PageAdapter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PageAdapter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

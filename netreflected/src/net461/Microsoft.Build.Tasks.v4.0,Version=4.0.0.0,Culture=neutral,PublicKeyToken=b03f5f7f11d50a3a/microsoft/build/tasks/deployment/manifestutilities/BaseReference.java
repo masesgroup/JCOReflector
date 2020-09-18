@@ -117,6 +117,9 @@ public class BaseReference extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BaseReference}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BaseReference} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BaseReference cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

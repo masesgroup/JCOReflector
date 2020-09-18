@@ -117,6 +117,9 @@ public class QueryExtensions extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link QueryExtensions}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link QueryExtensions} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static QueryExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

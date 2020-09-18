@@ -122,6 +122,9 @@ public class DataBoundControl extends BaseDataBoundControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataBoundControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataBoundControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataBoundControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,9 +118,9 @@ public class ByteConverter extends BaseNumberConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ByteConverter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ByteConverter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ByteConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ByteConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

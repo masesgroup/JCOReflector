@@ -136,6 +136,9 @@ public class ToolStripControlHost extends ToolStripItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripControlHost}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ToolStripControlHost} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolStripControlHost cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

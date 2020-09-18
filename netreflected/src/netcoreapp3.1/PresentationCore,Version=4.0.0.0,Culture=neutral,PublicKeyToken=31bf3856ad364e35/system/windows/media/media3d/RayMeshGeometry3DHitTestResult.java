@@ -120,9 +120,9 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RayMeshGeometry3DHitTestResult}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link RayMeshGeometry3DHitTestResult} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RayMeshGeometry3DHitTestResult} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RayMeshGeometry3DHitTestResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

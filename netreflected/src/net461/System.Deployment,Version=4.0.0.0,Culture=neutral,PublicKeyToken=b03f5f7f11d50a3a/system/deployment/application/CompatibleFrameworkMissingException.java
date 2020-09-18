@@ -141,6 +141,9 @@ public class CompatibleFrameworkMissingException extends DependentPlatformMissin
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompatibleFrameworkMissingException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CompatibleFrameworkMissingException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CompatibleFrameworkMissingException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

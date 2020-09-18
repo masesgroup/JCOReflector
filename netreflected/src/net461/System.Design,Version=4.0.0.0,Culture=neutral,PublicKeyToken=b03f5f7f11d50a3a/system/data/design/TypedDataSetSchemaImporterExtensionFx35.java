@@ -118,6 +118,9 @@ public class TypedDataSetSchemaImporterExtensionFx35 extends TypedDataSetSchemaI
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypedDataSetSchemaImporterExtensionFx35}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TypedDataSetSchemaImporterExtensionFx35} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TypedDataSetSchemaImporterExtensionFx35 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

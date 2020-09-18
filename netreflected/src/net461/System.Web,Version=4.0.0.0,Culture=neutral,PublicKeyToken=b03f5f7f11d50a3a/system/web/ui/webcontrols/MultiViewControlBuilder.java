@@ -118,6 +118,9 @@ public class MultiViewControlBuilder extends ControlBuilder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MultiViewControlBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MultiViewControlBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MultiViewControlBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

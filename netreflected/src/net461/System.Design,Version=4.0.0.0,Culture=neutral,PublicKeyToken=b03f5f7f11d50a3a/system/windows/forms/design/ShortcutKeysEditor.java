@@ -123,6 +123,9 @@ public class ShortcutKeysEditor extends UITypeEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ShortcutKeysEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ShortcutKeysEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ShortcutKeysEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

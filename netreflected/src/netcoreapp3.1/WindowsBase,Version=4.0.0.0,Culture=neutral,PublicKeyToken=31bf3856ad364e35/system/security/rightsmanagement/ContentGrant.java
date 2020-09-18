@@ -120,9 +120,9 @@ public class ContentGrant extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContentGrant}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ContentGrant} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ContentGrant} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContentGrant cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

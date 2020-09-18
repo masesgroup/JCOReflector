@@ -121,6 +121,9 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEngine2}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEngine2} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEngine2 ToIEngine2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class RuleSetChangeAction extends WorkflowChangeAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuleSetChangeAction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RuleSetChangeAction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RuleSetChangeAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

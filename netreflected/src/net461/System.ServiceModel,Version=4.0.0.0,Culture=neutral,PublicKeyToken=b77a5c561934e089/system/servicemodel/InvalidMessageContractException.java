@@ -138,6 +138,9 @@ public class InvalidMessageContractException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InvalidMessageContractException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InvalidMessageContractException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InvalidMessageContractException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

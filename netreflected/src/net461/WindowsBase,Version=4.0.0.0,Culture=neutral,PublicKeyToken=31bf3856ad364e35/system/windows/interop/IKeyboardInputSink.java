@@ -65,6 +65,9 @@ public interface IKeyboardInputSink extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Interop.IKeyboardInputSink";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IKeyboardInputSink}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IKeyboardInputSink} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IKeyboardInputSink ToIKeyboardInputSink(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

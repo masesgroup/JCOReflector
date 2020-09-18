@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.PackageSerializationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.PackageSerializationManager</a>
  */
-public class PackageSerializationManager extends NetObjectAutoCloseable  {
+public class PackageSerializationManager extends NetObject  {
     /**
      * Fully assembly qualified name: ReachFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

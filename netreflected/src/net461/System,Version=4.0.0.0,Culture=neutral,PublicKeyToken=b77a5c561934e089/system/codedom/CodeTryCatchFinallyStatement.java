@@ -121,6 +121,9 @@ public class CodeTryCatchFinallyStatement extends CodeStatement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeTryCatchFinallyStatement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CodeTryCatchFinallyStatement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeTryCatchFinallyStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

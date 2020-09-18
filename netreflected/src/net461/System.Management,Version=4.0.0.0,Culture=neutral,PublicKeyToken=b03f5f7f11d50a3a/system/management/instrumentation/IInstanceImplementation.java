@@ -112,6 +112,9 @@ public class IInstanceImplementation extends NetObject implements IInstance {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInstance}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IInstance} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IInstance ToIInstance(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

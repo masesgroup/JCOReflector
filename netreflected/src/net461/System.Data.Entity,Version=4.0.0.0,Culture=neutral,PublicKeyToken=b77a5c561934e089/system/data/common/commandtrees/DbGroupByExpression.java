@@ -120,6 +120,9 @@ public class DbGroupByExpression extends DbExpression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbGroupByExpression}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbGroupByExpression} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbGroupByExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

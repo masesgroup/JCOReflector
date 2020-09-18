@@ -117,6 +117,9 @@ public class EndpointBehaviorElementCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EndpointBehaviorElementCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EndpointBehaviorElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EndpointBehaviorElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

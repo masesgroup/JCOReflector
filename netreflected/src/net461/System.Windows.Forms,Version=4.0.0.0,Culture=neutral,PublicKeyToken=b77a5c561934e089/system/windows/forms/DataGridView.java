@@ -196,6 +196,9 @@ public class DataGridView extends Control  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridView}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridView} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

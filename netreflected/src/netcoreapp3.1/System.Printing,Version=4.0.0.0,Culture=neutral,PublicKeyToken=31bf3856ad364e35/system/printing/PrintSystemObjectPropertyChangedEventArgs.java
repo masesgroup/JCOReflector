@@ -47,7 +47,7 @@ import system.EventArgs;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintSystemObjectPropertyChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintSystemObjectPropertyChangedEventArgs</a>
  */
-public class PrintSystemObjectPropertyChangedEventArgs extends EventArgs  {
+public class PrintSystemObjectPropertyChangedEventArgs extends EventArgs implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -118,9 +118,9 @@ public class PrintSystemObjectPropertyChangedEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintSystemObjectPropertyChangedEventArgs}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link PrintSystemObjectPropertyChangedEventArgs} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrintSystemObjectPropertyChangedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintSystemObjectPropertyChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -157,7 +157,20 @@ public class PrintSystemObjectPropertyChangedEventArgs extends EventArgs  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

@@ -48,7 +48,7 @@ import system.ApplicationIdentity;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ActivationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ActivationContext</a>
  */
-public class ActivationContext extends NetObjectAutoCloseable  {
+public class ActivationContext extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -181,7 +181,20 @@ public class ActivationContext extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

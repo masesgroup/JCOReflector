@@ -119,9 +119,9 @@ public class TableColumnCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TableColumnCollection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TableColumnCollection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TableColumnCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TableColumnCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

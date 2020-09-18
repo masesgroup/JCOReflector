@@ -119,6 +119,9 @@ public class FileLevelPageControlBuilder extends RootBuilder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileLevelPageControlBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FileLevelPageControlBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileLevelPageControlBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

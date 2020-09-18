@@ -66,6 +66,9 @@ public interface IPropertyValueUIService extends IJCOBridgeReflected {
     public static final String className = "System.Drawing.Design.IPropertyValueUIService";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPropertyValueUIService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPropertyValueUIService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPropertyValueUIService ToIPropertyValueUIService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

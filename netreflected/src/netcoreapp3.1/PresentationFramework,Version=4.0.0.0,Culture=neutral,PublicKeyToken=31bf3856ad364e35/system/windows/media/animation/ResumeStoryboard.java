@@ -118,9 +118,9 @@ public class ResumeStoryboard extends ControllableStoryboardAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResumeStoryboard}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ResumeStoryboard} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ResumeStoryboard} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResumeStoryboard cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

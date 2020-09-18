@@ -119,6 +119,9 @@ public class ChtmlTextWriter extends Html32TextWriter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ChtmlTextWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ChtmlTextWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ChtmlTextWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

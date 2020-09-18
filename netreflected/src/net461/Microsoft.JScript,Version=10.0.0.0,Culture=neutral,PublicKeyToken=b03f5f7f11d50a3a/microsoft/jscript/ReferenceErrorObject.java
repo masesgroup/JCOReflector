@@ -118,6 +118,9 @@ public class ReferenceErrorObject extends ErrorObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReferenceErrorObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ReferenceErrorObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ReferenceErrorObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -112,6 +112,9 @@ public class IContractBehaviorAttributeImplementation extends NetObject implemen
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContractBehaviorAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IContractBehaviorAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IContractBehaviorAttribute ToIContractBehaviorAttribute(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

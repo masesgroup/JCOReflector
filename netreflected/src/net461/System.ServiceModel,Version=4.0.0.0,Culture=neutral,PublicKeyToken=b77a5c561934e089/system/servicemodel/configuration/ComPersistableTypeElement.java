@@ -118,6 +118,9 @@ public class ComPersistableTypeElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComPersistableTypeElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComPersistableTypeElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComPersistableTypeElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

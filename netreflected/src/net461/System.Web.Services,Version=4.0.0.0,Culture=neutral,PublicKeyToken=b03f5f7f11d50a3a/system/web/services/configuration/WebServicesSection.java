@@ -129,6 +129,9 @@ public class WebServicesSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebServicesSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebServicesSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebServicesSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

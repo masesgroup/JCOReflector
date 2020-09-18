@@ -138,6 +138,9 @@ public class InstrumentationException extends InstrumentationBaseException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstrumentationException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InstrumentationException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InstrumentationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

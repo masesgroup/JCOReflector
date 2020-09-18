@@ -118,6 +118,9 @@ public class GridViewColumnsGenerator extends AutoFieldsGenerator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GridViewColumnsGenerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GridViewColumnsGenerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GridViewColumnsGenerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

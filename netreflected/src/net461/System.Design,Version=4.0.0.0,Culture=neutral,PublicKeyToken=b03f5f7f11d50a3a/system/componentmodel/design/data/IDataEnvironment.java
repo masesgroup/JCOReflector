@@ -70,6 +70,9 @@ public interface IDataEnvironment extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.Design.Data.IDataEnvironment";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataEnvironment}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDataEnvironment} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDataEnvironment ToIDataEnvironment(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

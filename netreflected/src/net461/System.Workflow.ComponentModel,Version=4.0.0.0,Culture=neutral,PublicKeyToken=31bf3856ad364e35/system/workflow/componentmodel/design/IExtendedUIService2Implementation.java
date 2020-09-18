@@ -114,6 +114,9 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExtendedUIService2}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IExtendedUIService2} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IExtendedUIService2 ToIExtendedUIService2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class TransactionScope extends NativeActivity  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionScope}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TransactionScope} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransactionScope cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

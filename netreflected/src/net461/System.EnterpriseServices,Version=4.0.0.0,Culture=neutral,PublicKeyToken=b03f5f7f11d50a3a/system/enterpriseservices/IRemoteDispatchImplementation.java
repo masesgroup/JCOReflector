@@ -112,6 +112,9 @@ public class IRemoteDispatchImplementation extends NetObject implements IRemoteD
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRemoteDispatch}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRemoteDispatch} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRemoteDispatch ToIRemoteDispatch(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

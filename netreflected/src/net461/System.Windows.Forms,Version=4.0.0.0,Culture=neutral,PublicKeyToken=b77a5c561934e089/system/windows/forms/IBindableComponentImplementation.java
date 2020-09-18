@@ -121,6 +121,9 @@ public class IBindableComponentImplementation extends NetObject implements IBind
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindableComponent}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBindableComponent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBindableComponent ToIBindableComponent(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

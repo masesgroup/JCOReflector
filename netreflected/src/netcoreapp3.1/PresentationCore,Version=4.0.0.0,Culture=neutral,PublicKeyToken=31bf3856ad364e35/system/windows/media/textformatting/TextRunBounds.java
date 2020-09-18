@@ -119,9 +119,9 @@ public class TextRunBounds extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextRunBounds}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TextRunBounds} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TextRunBounds} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextRunBounds cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

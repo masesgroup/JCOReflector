@@ -120,6 +120,9 @@ public class Assign extends CodeActivity  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Assign}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Assign} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Assign cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

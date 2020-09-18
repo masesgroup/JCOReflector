@@ -120,9 +120,9 @@ public class RayHitTestParameters extends HitTestParameters3D  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RayHitTestParameters}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link RayHitTestParameters} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RayHitTestParameters} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RayHitTestParameters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

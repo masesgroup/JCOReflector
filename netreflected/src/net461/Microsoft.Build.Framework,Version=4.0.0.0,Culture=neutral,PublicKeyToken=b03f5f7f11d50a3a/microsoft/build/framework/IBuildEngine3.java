@@ -71,6 +71,9 @@ public interface IBuildEngine3 extends IJCOBridgeReflected, IBuildEngine2, IBuil
     public static final String className = "Microsoft.Build.Framework.IBuildEngine3";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBuildEngine3}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBuildEngine3} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBuildEngine3 ToIBuildEngine3(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

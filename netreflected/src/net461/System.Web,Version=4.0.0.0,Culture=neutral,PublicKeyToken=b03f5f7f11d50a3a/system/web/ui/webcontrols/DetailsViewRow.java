@@ -120,6 +120,9 @@ public class DetailsViewRow extends TableRow  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DetailsViewRow}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DetailsViewRow} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DetailsViewRow cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class MailWebEventProvider extends BufferedWebEventProvider  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MailWebEventProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MailWebEventProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MailWebEventProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class CompositeActivityMarkupSerializer extends ActivityMarkupSerializer 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompositeActivityMarkupSerializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CompositeActivityMarkupSerializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CompositeActivityMarkupSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -112,6 +112,9 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyDataErrorInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link INotifyDataErrorInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static INotifyDataErrorInfo ToINotifyDataErrorInfo(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

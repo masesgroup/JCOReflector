@@ -118,6 +118,9 @@ public class PersistenceIOParticipant extends PersistenceParticipant  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PersistenceIOParticipant}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PersistenceIOParticipant} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PersistenceIOParticipant cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

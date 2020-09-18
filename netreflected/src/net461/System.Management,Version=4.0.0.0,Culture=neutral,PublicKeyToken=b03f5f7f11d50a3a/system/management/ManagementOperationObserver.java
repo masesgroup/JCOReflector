@@ -121,6 +121,9 @@ public class ManagementOperationObserver extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManagementOperationObserver}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ManagementOperationObserver} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ManagementOperationObserver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

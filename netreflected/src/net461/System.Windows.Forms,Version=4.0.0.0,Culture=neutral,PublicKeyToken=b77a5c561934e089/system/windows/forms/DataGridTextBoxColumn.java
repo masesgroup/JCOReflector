@@ -122,6 +122,9 @@ public class DataGridTextBoxColumn extends DataGridColumnStyle  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridTextBoxColumn}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridTextBoxColumn} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridTextBoxColumn cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class Soap12Binding extends SoapBinding  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Soap12Binding}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Soap12Binding} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Soap12Binding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

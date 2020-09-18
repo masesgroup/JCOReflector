@@ -120,6 +120,9 @@ public class SeekableXPathNavigator extends XPathNavigator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SeekableXPathNavigator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SeekableXPathNavigator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SeekableXPathNavigator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

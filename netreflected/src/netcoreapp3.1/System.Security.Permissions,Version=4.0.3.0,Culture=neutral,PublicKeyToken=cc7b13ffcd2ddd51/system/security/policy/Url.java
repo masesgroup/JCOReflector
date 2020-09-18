@@ -121,9 +121,9 @@ public class Url extends EvidenceBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Url}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Url} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Url} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Url cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

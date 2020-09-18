@@ -130,6 +130,9 @@ public class SqlInt16 extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlInt16}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlInt16} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlInt16 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

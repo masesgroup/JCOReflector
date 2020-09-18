@@ -117,6 +117,9 @@ public class IBindableTemplateImplementation extends NetObject implements IBinda
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindableTemplate}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBindableTemplate} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBindableTemplate ToIBindableTemplate(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

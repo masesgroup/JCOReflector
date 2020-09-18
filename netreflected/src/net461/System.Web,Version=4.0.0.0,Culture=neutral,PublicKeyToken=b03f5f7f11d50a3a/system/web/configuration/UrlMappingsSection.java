@@ -119,6 +119,9 @@ public class UrlMappingsSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UrlMappingsSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UrlMappingsSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UrlMappingsSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

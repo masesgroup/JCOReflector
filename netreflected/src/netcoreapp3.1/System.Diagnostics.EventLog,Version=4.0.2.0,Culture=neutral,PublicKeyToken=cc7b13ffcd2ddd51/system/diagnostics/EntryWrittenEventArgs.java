@@ -119,9 +119,9 @@ public class EntryWrittenEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntryWrittenEventArgs}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link EntryWrittenEventArgs} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EntryWrittenEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EntryWrittenEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

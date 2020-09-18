@@ -120,6 +120,9 @@ public class StreamUpgradeBindingElement extends BindingElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StreamUpgradeBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StreamUpgradeBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StreamUpgradeBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

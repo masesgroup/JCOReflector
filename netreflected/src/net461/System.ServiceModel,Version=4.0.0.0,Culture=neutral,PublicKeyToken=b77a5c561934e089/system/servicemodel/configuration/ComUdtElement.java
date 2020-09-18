@@ -118,6 +118,9 @@ public class ComUdtElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComUdtElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComUdtElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComUdtElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

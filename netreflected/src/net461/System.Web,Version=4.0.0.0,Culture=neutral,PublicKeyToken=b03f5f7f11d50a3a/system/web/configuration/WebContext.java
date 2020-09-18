@@ -118,6 +118,9 @@ public class WebContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

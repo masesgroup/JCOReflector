@@ -121,6 +121,9 @@ public class ConnectionOrientedTransportBindingElement extends TransportBindingE
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConnectionOrientedTransportBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ConnectionOrientedTransportBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConnectionOrientedTransportBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class AssemblyIdentity extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssemblyIdentity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AssemblyIdentity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AssemblyIdentity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

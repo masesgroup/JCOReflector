@@ -126,6 +126,9 @@ public class Activity extends DependencyObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Activity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Activity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Activity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

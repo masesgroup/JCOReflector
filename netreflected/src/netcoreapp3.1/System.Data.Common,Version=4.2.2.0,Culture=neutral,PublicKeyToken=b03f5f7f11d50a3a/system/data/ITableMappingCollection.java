@@ -67,6 +67,9 @@ public interface ITableMappingCollection extends IJCOBridgeReflected, IList, ICo
     public static final String className = "System.Data.ITableMappingCollection";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITableMappingCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITableMappingCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITableMappingCollection ToITableMappingCollection(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

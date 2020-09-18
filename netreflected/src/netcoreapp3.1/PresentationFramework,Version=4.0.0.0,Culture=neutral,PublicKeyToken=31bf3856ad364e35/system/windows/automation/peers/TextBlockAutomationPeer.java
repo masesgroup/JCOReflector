@@ -119,9 +119,9 @@ public class TextBlockAutomationPeer extends FrameworkElementAutomationPeer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextBlockAutomationPeer}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TextBlockAutomationPeer} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TextBlockAutomationPeer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextBlockAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

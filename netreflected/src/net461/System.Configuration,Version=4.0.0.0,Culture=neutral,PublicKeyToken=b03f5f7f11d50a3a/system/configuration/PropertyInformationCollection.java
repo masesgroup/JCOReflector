@@ -121,6 +121,9 @@ public class PropertyInformationCollection extends NameObjectCollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyInformationCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PropertyInformationCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PropertyInformationCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

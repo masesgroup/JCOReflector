@@ -116,6 +116,9 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICscHostObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICscHostObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICscHostObject ToICscHostObject(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -127,6 +127,9 @@ public class SoapCodeExporter extends CodeExporter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SoapCodeExporter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SoapCodeExporter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SoapCodeExporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

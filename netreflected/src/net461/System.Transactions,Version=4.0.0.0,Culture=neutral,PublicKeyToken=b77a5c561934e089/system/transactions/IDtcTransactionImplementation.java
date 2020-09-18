@@ -112,6 +112,9 @@ public class IDtcTransactionImplementation extends NetObject implements IDtcTran
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDtcTransaction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDtcTransaction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDtcTransaction ToIDtcTransaction(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

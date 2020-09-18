@@ -128,6 +128,9 @@ public class OleDbConnection extends DbConnection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OleDbConnection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OleDbConnection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OleDbConnection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

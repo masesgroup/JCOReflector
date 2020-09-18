@@ -121,9 +121,9 @@ public class QuaternionConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link QuaternionConverter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link QuaternionConverter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link QuaternionConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static QuaternionConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class EditorReuseAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EditorReuseAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EditorReuseAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EditorReuseAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

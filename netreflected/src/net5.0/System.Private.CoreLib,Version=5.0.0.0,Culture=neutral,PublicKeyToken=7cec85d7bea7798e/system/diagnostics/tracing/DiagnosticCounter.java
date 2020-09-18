@@ -47,7 +47,7 @@ import system.diagnostics.tracing.EventSource;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.DiagnosticCounter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.DiagnosticCounter</a>
  */
-public class DiagnosticCounter extends NetObjectAutoCloseable  {
+public class DiagnosticCounter extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -155,7 +155,20 @@ public class DiagnosticCounter extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

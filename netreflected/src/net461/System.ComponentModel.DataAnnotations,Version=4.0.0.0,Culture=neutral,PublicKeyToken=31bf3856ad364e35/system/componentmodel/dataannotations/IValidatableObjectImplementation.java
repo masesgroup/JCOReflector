@@ -112,6 +112,9 @@ public class IValidatableObjectImplementation extends NetObject implements IVali
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IValidatableObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IValidatableObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IValidatableObject ToIValidatableObject(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

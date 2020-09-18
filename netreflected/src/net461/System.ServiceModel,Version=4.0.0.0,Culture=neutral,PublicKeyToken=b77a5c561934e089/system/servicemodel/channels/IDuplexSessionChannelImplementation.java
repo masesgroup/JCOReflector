@@ -131,6 +131,9 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDuplexSessionChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDuplexSessionChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDuplexSessionChannel ToIDuplexSessionChannel(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

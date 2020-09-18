@@ -48,7 +48,7 @@ import system.runtime.serialization.StreamingContext;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ImageListStreamer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ImageListStreamer</a>
  */
-public class ImageListStreamer extends NetObjectAutoCloseable  {
+public class ImageListStreamer extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -119,6 +119,9 @@ public class ImageListStreamer extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImageListStreamer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ImageListStreamer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ImageListStreamer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -155,7 +158,20 @@ public class ImageListStreamer extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

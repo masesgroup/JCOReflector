@@ -132,6 +132,9 @@ public class OracleDataReader extends DbDataReader  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OracleDataReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OracleDataReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OracleDataReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

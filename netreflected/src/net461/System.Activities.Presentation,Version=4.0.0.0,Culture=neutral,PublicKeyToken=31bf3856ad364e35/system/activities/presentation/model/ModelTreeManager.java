@@ -119,6 +119,9 @@ public class ModelTreeManager extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelTreeManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ModelTreeManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ModelTreeManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class DbComparisonExpression extends DbBinaryExpression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbComparisonExpression}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbComparisonExpression} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbComparisonExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

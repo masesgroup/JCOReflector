@@ -113,6 +113,9 @@ public class IMetadataAwareImplementation extends NetObject implements IMetadata
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMetadataAware}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMetadataAware} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMetadataAware ToIMetadataAware(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

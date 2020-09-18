@@ -124,9 +124,9 @@ public class StringWriter extends TextWriter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringWriter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link StringWriter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StringWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StringWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

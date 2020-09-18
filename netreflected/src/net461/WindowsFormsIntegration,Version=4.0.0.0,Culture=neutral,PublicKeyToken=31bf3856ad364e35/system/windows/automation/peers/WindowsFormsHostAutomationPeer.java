@@ -119,6 +119,9 @@ public class WindowsFormsHostAutomationPeer extends FrameworkElementAutomationPe
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WindowsFormsHostAutomationPeer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WindowsFormsHostAutomationPeer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WindowsFormsHostAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

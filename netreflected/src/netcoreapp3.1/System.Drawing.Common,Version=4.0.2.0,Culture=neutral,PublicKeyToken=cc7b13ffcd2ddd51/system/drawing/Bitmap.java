@@ -129,9 +129,9 @@ public class Bitmap extends Image  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Bitmap}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Bitmap} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Bitmap} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Bitmap cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

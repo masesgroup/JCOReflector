@@ -138,9 +138,9 @@ public class InsufficientMemoryException extends OutOfMemoryException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InsufficientMemoryException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link InsufficientMemoryException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InsufficientMemoryException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InsufficientMemoryException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

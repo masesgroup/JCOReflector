@@ -113,6 +113,9 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAttachedPropertyStore}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAttachedPropertyStore} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAttachedPropertyStore ToIAttachedPropertyStore(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

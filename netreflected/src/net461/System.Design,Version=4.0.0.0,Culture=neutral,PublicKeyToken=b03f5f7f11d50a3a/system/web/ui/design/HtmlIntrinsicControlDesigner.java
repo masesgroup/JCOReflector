@@ -118,6 +118,9 @@ public class HtmlIntrinsicControlDesigner extends HtmlControlDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlIntrinsicControlDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HtmlIntrinsicControlDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HtmlIntrinsicControlDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

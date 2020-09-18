@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.TempFileCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.TempFileCollection</a>
  */
-public class TempFileCollection extends NetObjectAutoCloseable  {
+public class TempFileCollection extends NetObject  {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

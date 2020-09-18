@@ -119,9 +119,9 @@ public class ParameterHandle extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParameterHandle}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ParameterHandle} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ParameterHandle} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ParameterHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

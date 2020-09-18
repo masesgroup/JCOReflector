@@ -117,6 +117,9 @@ public class FaultContractInfo extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FaultContractInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FaultContractInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FaultContractInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class ProxyWebPart extends WebPart  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProxyWebPart}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ProxyWebPart} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ProxyWebPart cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

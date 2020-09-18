@@ -118,6 +118,9 @@ public class CancelRequestedQuery extends TrackingQuery  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CancelRequestedQuery}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CancelRequestedQuery} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CancelRequestedQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

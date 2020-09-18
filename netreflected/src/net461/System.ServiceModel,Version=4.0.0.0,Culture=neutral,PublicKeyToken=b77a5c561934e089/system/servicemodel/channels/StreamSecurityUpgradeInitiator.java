@@ -119,6 +119,9 @@ public class StreamSecurityUpgradeInitiator extends StreamUpgradeInitiator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StreamSecurityUpgradeInitiator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StreamSecurityUpgradeInitiator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StreamSecurityUpgradeInitiator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

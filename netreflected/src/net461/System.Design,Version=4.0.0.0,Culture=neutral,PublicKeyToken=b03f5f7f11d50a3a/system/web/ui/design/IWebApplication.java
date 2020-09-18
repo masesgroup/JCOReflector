@@ -65,6 +65,9 @@ public interface IWebApplication extends IJCOBridgeReflected, IServiceProvider {
     public static final String className = "System.Web.UI.Design.IWebApplication";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWebApplication}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWebApplication} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWebApplication ToIWebApplication(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

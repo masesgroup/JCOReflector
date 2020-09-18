@@ -140,6 +140,9 @@ public class PrintCommitAttributesException extends PrintSystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintCommitAttributesException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrintCommitAttributesException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintCommitAttributesException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

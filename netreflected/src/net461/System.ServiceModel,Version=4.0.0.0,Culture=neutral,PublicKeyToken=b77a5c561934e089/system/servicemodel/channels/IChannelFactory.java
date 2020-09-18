@@ -68,6 +68,9 @@ public interface IChannelFactory extends IJCOBridgeReflected, ICommunicationObje
     public static final String className = "System.ServiceModel.Channels.IChannelFactory";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IChannelFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IChannelFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IChannelFactory ToIChannelFactory(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

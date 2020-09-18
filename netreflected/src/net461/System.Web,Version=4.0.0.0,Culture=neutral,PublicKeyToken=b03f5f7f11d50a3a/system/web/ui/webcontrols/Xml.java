@@ -123,6 +123,9 @@ public class Xml extends Control  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Xml}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Xml} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Xml cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

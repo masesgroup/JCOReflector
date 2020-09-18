@@ -118,6 +118,9 @@ public class KerberosSecurityTokenAuthenticator extends WindowsSecurityTokenAuth
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link KerberosSecurityTokenAuthenticator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link KerberosSecurityTokenAuthenticator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static KerberosSecurityTokenAuthenticator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

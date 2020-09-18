@@ -117,9 +117,9 @@ public class StaticLocalInitFlag extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StaticLocalInitFlag}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link StaticLocalInitFlag} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StaticLocalInitFlag} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StaticLocalInitFlag cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

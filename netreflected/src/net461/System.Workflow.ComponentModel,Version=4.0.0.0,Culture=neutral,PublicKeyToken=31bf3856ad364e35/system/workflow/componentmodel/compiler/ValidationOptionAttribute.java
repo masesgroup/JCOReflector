@@ -119,6 +119,9 @@ public class ValidationOptionAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ValidationOptionAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ValidationOptionAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ValidationOptionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

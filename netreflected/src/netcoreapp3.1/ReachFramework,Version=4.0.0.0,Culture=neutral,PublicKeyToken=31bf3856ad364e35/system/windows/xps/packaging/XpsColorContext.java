@@ -118,9 +118,9 @@ public class XpsColorContext extends XpsResource  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XpsColorContext}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link XpsColorContext} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XpsColorContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XpsColorContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class ExpressionBuilderContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExpressionBuilderContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ExpressionBuilderContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExpressionBuilderContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

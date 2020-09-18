@@ -122,6 +122,9 @@ public class ReflectionModelServices extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReflectionModelServices}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ReflectionModelServices} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ReflectionModelServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

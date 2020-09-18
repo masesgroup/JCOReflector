@@ -121,6 +121,9 @@ public class Floater extends AnchoredBlock  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Floater}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Floater} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Floater cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

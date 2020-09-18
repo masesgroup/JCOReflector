@@ -121,6 +121,9 @@ public class BasicHttpSecurityElement extends ServiceModelConfigurationElement  
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BasicHttpSecurityElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BasicHttpSecurityElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BasicHttpSecurityElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

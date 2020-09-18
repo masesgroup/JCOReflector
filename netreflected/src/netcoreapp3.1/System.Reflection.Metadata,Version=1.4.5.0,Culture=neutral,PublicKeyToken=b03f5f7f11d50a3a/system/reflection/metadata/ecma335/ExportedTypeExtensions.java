@@ -118,9 +118,9 @@ public class ExportedTypeExtensions extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExportedTypeExtensions}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ExportedTypeExtensions} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ExportedTypeExtensions} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExportedTypeExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

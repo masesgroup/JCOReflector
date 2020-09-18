@@ -141,6 +141,9 @@ public class CmdLineException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CmdLineException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CmdLineException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CmdLineException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,9 +120,9 @@ public class SelectiveScrollingGrid extends Grid  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SelectiveScrollingGrid}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SelectiveScrollingGrid} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SelectiveScrollingGrid} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SelectiveScrollingGrid cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

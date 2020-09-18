@@ -118,6 +118,9 @@ public class UriTemplateEquivalenceComparer extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UriTemplateEquivalenceComparer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UriTemplateEquivalenceComparer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UriTemplateEquivalenceComparer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

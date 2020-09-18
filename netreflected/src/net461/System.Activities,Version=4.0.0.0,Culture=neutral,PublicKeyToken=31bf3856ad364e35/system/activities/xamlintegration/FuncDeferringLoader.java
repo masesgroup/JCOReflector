@@ -118,6 +118,9 @@ public class FuncDeferringLoader extends XamlDeferringLoader  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FuncDeferringLoader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FuncDeferringLoader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FuncDeferringLoader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

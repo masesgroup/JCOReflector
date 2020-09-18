@@ -117,6 +117,9 @@ public class AndAlso extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AndAlso}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AndAlso} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AndAlso cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

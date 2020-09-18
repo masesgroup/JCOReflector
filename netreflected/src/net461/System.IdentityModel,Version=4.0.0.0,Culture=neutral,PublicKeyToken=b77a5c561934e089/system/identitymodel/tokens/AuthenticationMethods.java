@@ -117,6 +117,9 @@ public class AuthenticationMethods extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AuthenticationMethods}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AuthenticationMethods} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AuthenticationMethods cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

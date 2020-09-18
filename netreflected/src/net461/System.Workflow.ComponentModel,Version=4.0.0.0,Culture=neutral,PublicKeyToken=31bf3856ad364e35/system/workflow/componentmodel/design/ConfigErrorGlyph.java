@@ -120,6 +120,9 @@ public class ConfigErrorGlyph extends DesignerGlyph  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigErrorGlyph}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ConfigErrorGlyph} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConfigErrorGlyph cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

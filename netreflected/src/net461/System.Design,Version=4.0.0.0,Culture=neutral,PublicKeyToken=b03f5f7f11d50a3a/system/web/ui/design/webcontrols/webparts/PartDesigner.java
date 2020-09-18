@@ -120,6 +120,9 @@ public class PartDesigner extends CompositeControlDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PartDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PartDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PartDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

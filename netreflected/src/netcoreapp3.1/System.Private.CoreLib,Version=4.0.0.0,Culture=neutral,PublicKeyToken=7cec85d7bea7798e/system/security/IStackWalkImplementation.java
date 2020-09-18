@@ -112,6 +112,9 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStackWalk}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IStackWalk} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IStackWalk ToIStackWalk(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

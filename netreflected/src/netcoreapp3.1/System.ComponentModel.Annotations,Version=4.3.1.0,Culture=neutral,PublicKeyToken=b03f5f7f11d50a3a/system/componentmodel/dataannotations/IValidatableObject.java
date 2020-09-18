@@ -60,6 +60,9 @@ public interface IValidatableObject extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.DataAnnotations.IValidatableObject";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IValidatableObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IValidatableObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IValidatableObject ToIValidatableObject(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

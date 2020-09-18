@@ -116,6 +116,9 @@ public class IHierarchyDataImplementation extends NetObject implements IHierarch
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHierarchyData}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHierarchyData} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHierarchyData ToIHierarchyData(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

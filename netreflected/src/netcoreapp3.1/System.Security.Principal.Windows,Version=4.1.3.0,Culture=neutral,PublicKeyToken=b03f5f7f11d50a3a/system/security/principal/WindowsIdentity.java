@@ -56,7 +56,7 @@ import system.security.principal.TokenImpersonationLevel;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.WindowsIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.WindowsIdentity</a>
  */
-public class WindowsIdentity extends ClaimsIdentity  {
+public class WindowsIdentity extends ClaimsIdentity implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -127,9 +127,9 @@ public class WindowsIdentity extends ClaimsIdentity  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WindowsIdentity}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link WindowsIdentity} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WindowsIdentity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WindowsIdentity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -241,7 +241,20 @@ public class WindowsIdentity extends ClaimsIdentity  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

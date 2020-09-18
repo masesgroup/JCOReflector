@@ -117,6 +117,9 @@ public class OdbcError extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OdbcError}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OdbcError} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OdbcError cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

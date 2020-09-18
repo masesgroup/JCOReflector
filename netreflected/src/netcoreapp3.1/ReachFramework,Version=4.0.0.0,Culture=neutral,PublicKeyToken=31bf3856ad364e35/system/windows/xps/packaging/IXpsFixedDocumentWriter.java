@@ -69,6 +69,9 @@ public interface IXpsFixedDocumentWriter extends IJCOBridgeReflected, IDocumentS
     public static final String className = "System.Windows.Xps.Packaging.IXpsFixedDocumentWriter";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXpsFixedDocumentWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXpsFixedDocumentWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXpsFixedDocumentWriter ToIXpsFixedDocumentWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

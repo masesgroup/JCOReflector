@@ -120,6 +120,9 @@ public class MimeReturnReader extends MimeFormatter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MimeReturnReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MimeReturnReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MimeReturnReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

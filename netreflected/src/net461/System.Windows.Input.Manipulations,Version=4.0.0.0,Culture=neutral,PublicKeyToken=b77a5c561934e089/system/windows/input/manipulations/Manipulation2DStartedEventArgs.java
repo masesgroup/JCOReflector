@@ -119,6 +119,9 @@ public class Manipulation2DStartedEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Manipulation2DStartedEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Manipulation2DStartedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Manipulation2DStartedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

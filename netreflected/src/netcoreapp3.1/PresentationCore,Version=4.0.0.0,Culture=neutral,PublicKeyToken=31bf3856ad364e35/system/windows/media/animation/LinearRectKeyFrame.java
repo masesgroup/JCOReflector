@@ -120,9 +120,9 @@ public class LinearRectKeyFrame extends RectKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinearRectKeyFrame}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link LinearRectKeyFrame} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LinearRectKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LinearRectKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

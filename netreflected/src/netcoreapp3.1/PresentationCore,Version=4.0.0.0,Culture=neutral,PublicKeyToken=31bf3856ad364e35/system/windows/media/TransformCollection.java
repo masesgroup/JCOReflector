@@ -120,9 +120,9 @@ public class TransformCollection extends Animatable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransformCollection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TransformCollection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TransformCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransformCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

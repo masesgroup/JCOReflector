@@ -112,6 +112,9 @@ public class IProcessInitializerImplementation extends NetObject implements IPro
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProcessInitializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IProcessInitializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IProcessInitializer ToIProcessInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

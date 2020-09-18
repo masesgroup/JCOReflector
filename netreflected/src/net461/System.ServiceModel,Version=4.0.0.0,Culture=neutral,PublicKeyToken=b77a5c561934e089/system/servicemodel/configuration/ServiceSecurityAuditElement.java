@@ -121,6 +121,9 @@ public class ServiceSecurityAuditElement extends BehaviorExtensionElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceSecurityAuditElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceSecurityAuditElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceSecurityAuditElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

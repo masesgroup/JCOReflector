@@ -116,6 +116,9 @@ public class IHttpSessionStateImplementation extends NetObject implements IHttpS
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHttpSessionState}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHttpSessionState} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHttpSessionState ToIHttpSessionState(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

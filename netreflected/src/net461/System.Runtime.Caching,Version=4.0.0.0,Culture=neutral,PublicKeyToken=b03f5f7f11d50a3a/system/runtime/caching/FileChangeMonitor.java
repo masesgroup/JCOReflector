@@ -119,6 +119,9 @@ public class FileChangeMonitor extends ChangeMonitor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileChangeMonitor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FileChangeMonitor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileChangeMonitor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

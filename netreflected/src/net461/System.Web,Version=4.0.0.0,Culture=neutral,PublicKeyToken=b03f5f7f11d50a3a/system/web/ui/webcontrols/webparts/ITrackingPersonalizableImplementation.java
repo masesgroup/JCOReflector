@@ -112,6 +112,9 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITrackingPersonalizable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITrackingPersonalizable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITrackingPersonalizable ToITrackingPersonalizable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

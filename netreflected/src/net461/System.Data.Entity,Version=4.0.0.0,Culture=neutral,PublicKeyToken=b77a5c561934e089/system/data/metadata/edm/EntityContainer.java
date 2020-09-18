@@ -121,6 +121,9 @@ public class EntityContainer extends GlobalItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityContainer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EntityContainer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EntityContainer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

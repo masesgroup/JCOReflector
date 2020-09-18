@@ -120,6 +120,9 @@ public class X509NTAuthChainTrustValidator extends X509CertificateValidator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509NTAuthChainTrustValidator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509NTAuthChainTrustValidator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509NTAuthChainTrustValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class UploadProgressChangedEventArgs extends ProgressChangedEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UploadProgressChangedEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UploadProgressChangedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UploadProgressChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

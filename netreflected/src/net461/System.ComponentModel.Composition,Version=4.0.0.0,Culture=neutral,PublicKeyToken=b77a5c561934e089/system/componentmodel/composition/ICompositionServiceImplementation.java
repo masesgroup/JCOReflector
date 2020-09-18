@@ -113,6 +113,9 @@ public class ICompositionServiceImplementation extends NetObject implements ICom
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICompositionService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICompositionService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICompositionService ToICompositionService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,9 +121,9 @@ public class GlyphRunDrawing extends Drawing  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GlyphRunDrawing}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link GlyphRunDrawing} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GlyphRunDrawing} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GlyphRunDrawing cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

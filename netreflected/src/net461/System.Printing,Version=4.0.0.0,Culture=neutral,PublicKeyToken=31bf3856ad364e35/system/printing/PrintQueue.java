@@ -136,6 +136,9 @@ public class PrintQueue extends PrintSystemObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintQueue}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrintQueue} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintQueue cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

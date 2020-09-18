@@ -121,6 +121,9 @@ public class TcpTransportSecurity extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TcpTransportSecurity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TcpTransportSecurity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TcpTransportSecurity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

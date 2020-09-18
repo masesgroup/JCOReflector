@@ -123,9 +123,9 @@ public class EllipseGeometry extends Geometry  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EllipseGeometry}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link EllipseGeometry} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EllipseGeometry} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EllipseGeometry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

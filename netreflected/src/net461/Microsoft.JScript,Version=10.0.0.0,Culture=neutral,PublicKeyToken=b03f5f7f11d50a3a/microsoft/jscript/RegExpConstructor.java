@@ -119,6 +119,9 @@ public class RegExpConstructor extends ScriptFunction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegExpConstructor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RegExpConstructor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegExpConstructor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

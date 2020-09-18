@@ -120,6 +120,9 @@ public class LinearSingleKeyFrame extends SingleKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinearSingleKeyFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LinearSingleKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LinearSingleKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

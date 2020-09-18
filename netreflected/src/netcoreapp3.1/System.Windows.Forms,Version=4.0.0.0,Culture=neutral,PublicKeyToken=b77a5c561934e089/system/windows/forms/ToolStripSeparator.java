@@ -129,9 +129,9 @@ public class ToolStripSeparator extends ToolStripItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripSeparator}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ToolStripSeparator} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ToolStripSeparator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolStripSeparator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

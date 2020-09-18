@@ -120,9 +120,9 @@ public class DebugInfoExpression extends Expression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DebugInfoExpression}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DebugInfoExpression} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DebugInfoExpression} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DebugInfoExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

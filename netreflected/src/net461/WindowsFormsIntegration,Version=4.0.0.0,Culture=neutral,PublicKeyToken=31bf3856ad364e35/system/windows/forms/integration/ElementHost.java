@@ -135,6 +135,9 @@ public class ElementHost extends Control  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ElementHost}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ElementHost} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ElementHost cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

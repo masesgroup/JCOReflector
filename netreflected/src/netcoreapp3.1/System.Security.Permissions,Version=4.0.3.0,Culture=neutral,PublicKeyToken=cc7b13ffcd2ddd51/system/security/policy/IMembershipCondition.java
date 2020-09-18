@@ -69,6 +69,9 @@ public interface IMembershipCondition extends IJCOBridgeReflected, ISecurityEnco
     public static final String className = "System.Security.Policy.IMembershipCondition";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMembershipCondition}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMembershipCondition} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMembershipCondition ToIMembershipCondition(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

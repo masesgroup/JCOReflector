@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.PackageSerializationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.PackageSerializationManager</a>
  */
-public class PackageSerializationManager extends NetObjectAutoCloseable  {
+public class PackageSerializationManager extends NetObject  {
     /**
      * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -117,9 +117,9 @@ public class PackageSerializationManager extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PackageSerializationManager}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link PackageSerializationManager} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PackageSerializationManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PackageSerializationManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

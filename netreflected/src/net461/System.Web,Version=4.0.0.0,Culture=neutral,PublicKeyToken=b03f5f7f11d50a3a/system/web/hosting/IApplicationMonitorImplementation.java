@@ -114,6 +114,9 @@ public class IApplicationMonitorImplementation extends NetObject implements IApp
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IApplicationMonitor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IApplicationMonitor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IApplicationMonitor ToIApplicationMonitor(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class FlowDocumentScrollViewer extends Control  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FlowDocumentScrollViewer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FlowDocumentScrollViewer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FlowDocumentScrollViewer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class ServiceTimeoutsElement extends BehaviorExtensionElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceTimeoutsElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceTimeoutsElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceTimeoutsElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

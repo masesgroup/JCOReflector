@@ -121,6 +121,9 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataAdapter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDataAdapter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDataAdapter ToIDataAdapter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

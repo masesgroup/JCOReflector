@@ -121,9 +121,9 @@ public class FocusManager extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FocusManager}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link FocusManager} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FocusManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FocusManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

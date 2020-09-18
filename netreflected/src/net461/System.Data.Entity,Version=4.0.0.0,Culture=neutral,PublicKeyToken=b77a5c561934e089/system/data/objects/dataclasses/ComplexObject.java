@@ -118,6 +118,9 @@ public class ComplexObject extends StructuralObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComplexObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComplexObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComplexObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

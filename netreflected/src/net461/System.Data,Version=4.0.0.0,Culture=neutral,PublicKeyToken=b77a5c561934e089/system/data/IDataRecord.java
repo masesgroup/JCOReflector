@@ -66,6 +66,9 @@ public interface IDataRecord extends IJCOBridgeReflected {
     public static final String className = "System.Data.IDataRecord";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataRecord}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDataRecord} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDataRecord ToIDataRecord(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

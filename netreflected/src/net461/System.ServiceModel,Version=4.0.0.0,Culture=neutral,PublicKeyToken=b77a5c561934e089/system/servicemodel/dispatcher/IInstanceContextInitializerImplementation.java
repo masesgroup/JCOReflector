@@ -114,6 +114,9 @@ public class IInstanceContextInitializerImplementation extends NetObject impleme
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInstanceContextInitializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IInstanceContextInitializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IInstanceContextInitializer ToIInstanceContextInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class LoginCancelEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LoginCancelEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LoginCancelEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LoginCancelEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

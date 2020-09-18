@@ -126,6 +126,9 @@ public class DataView extends MarshalByValueComponent  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataView}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataView} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

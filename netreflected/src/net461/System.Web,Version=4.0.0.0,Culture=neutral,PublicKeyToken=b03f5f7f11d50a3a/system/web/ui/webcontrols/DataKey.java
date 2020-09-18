@@ -120,6 +120,9 @@ public class DataKey extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataKey}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataKey} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

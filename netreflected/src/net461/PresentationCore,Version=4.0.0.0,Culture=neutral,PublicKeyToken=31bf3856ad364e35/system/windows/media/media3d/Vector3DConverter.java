@@ -121,6 +121,9 @@ public class Vector3DConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector3DConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Vector3DConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Vector3DConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

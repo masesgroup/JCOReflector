@@ -120,6 +120,9 @@ public class ObjectGetOptions extends ManagementOptions  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectGetOptions}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectGetOptions} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectGetOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

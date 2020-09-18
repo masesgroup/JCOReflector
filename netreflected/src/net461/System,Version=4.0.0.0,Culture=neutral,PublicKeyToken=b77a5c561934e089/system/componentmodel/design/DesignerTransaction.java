@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerTransaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerTransaction</a>
  */
-public class DesignerTransaction extends NetObjectAutoCloseable  {
+public class DesignerTransaction extends NetObject  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -117,6 +117,9 @@ public class DesignerTransaction extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerTransaction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DesignerTransaction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DesignerTransaction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

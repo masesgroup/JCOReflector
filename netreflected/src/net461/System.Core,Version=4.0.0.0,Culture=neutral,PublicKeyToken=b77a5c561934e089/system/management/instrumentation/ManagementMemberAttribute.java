@@ -118,6 +118,9 @@ public class ManagementMemberAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManagementMemberAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ManagementMemberAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ManagementMemberAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

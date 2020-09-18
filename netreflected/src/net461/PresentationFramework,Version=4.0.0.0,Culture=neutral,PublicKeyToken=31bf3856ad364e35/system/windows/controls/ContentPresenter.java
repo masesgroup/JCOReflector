@@ -120,6 +120,9 @@ public class ContentPresenter extends FrameworkElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContentPresenter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ContentPresenter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContentPresenter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

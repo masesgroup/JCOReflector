@@ -119,6 +119,9 @@ public class MessageBinding extends NamedItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageBinding}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessageBinding} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessageBinding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

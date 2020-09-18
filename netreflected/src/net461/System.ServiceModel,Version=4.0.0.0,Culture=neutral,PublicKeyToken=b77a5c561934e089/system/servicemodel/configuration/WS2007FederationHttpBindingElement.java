@@ -118,6 +118,9 @@ public class WS2007FederationHttpBindingElement extends WSFederationHttpBindingE
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WS2007FederationHttpBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WS2007FederationHttpBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WS2007FederationHttpBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

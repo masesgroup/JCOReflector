@@ -122,6 +122,9 @@ public class X509ClientCertificateAuthenticationElement extends ConfigurationEle
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509ClientCertificateAuthenticationElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509ClientCertificateAuthenticationElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509ClientCertificateAuthenticationElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

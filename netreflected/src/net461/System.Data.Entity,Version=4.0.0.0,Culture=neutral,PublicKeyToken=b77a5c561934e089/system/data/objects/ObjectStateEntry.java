@@ -125,6 +125,9 @@ public class ObjectStateEntry extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectStateEntry}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectStateEntry} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectStateEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

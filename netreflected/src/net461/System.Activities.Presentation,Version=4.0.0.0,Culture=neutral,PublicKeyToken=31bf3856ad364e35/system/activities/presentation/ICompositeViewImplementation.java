@@ -114,6 +114,9 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICompositeView}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICompositeView} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICompositeView ToICompositeView(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

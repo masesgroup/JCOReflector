@@ -121,6 +121,9 @@ public class MetadataProperty extends MetadataItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MetadataProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MetadataProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

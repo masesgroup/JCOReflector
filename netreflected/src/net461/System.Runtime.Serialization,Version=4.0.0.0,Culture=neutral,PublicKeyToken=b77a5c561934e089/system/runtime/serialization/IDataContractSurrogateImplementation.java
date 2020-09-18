@@ -115,6 +115,9 @@ public class IDataContractSurrogateImplementation extends NetObject implements I
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataContractSurrogate}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDataContractSurrogate} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDataContractSurrogate ToIDataContractSurrogate(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

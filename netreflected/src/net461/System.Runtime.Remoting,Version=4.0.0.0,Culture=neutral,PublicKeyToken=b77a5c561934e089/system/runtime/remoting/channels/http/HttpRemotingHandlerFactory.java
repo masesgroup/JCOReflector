@@ -120,6 +120,9 @@ public class HttpRemotingHandlerFactory extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpRemotingHandlerFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpRemotingHandlerFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpRemotingHandlerFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

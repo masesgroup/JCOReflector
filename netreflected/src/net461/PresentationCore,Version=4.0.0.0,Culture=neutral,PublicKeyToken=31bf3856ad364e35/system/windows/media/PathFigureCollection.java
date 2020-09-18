@@ -122,6 +122,9 @@ public class PathFigureCollection extends Animatable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PathFigureCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PathFigureCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PathFigureCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

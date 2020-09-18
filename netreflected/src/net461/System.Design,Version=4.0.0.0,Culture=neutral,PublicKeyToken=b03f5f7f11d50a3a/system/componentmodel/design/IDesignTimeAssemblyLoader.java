@@ -63,6 +63,9 @@ public interface IDesignTimeAssemblyLoader extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.Design.IDesignTimeAssemblyLoader";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignTimeAssemblyLoader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDesignTimeAssemblyLoader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDesignTimeAssemblyLoader ToIDesignTimeAssemblyLoader(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

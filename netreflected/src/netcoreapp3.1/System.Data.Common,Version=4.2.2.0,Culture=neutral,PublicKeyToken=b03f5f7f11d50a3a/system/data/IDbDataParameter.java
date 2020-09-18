@@ -65,6 +65,9 @@ public interface IDbDataParameter extends IJCOBridgeReflected, IDataParameter {
     public static final String className = "System.Data.IDbDataParameter";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDbDataParameter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDbDataParameter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDbDataParameter ToIDbDataParameter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

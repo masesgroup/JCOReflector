@@ -115,6 +115,9 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IKeyboardInputSite}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IKeyboardInputSite} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IKeyboardInputSite ToIKeyboardInputSite(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

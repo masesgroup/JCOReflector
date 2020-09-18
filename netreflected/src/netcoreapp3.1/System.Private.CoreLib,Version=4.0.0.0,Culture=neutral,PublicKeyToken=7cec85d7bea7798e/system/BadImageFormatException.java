@@ -140,9 +140,9 @@ public class BadImageFormatException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BadImageFormatException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link BadImageFormatException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BadImageFormatException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BadImageFormatException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

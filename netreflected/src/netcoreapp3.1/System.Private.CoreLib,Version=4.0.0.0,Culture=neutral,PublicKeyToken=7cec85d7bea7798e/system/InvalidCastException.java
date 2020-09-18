@@ -138,9 +138,9 @@ public class InvalidCastException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InvalidCastException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link InvalidCastException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InvalidCastException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InvalidCastException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

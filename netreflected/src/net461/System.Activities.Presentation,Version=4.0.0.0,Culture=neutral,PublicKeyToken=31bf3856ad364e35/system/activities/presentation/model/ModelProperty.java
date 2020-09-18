@@ -122,6 +122,9 @@ public class ModelProperty extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ModelProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ModelProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

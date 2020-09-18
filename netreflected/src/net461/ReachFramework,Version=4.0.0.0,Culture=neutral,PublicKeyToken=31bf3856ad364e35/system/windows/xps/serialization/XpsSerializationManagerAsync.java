@@ -120,6 +120,9 @@ public class XpsSerializationManagerAsync extends XpsSerializationManager  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XpsSerializationManagerAsync}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XpsSerializationManagerAsync} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XpsSerializationManagerAsync cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

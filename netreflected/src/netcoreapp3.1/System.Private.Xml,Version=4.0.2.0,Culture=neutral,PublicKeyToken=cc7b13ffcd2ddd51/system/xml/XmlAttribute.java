@@ -124,9 +124,9 @@ public class XmlAttribute extends XmlNode  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlAttribute}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link XmlAttribute} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

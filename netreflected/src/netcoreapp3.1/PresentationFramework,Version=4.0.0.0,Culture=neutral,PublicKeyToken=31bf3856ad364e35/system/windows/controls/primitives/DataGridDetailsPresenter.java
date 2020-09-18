@@ -118,9 +118,9 @@ public class DataGridDetailsPresenter extends ContentPresenter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridDetailsPresenter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DataGridDetailsPresenter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridDetailsPresenter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridDetailsPresenter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class TextEffectCollection extends Animatable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextEffectCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TextEffectCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextEffectCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

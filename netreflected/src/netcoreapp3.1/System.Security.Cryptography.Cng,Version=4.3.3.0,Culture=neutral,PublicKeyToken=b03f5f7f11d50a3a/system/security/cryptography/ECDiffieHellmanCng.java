@@ -128,9 +128,9 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ECDiffieHellmanCng}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ECDiffieHellmanCng} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ECDiffieHellmanCng} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ECDiffieHellmanCng cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

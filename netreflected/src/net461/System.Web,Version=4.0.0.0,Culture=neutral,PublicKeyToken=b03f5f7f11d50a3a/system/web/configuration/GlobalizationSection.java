@@ -119,6 +119,9 @@ public class GlobalizationSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GlobalizationSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GlobalizationSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GlobalizationSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -125,6 +125,9 @@ public class UITypeEditor extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UITypeEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UITypeEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UITypeEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

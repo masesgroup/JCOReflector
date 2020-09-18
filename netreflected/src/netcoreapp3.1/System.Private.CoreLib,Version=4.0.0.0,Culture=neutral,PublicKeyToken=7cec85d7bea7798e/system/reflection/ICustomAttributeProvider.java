@@ -60,6 +60,9 @@ public interface ICustomAttributeProvider extends IJCOBridgeReflected {
     public static final String className = "System.Reflection.ICustomAttributeProvider";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICustomAttributeProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICustomAttributeProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICustomAttributeProvider ToICustomAttributeProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");

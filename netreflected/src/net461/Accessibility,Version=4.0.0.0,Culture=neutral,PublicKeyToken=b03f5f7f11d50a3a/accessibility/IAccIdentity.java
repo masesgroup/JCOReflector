@@ -61,6 +61,9 @@ public interface IAccIdentity extends IJCOBridgeReflected {
     public static final String className = "Accessibility.IAccIdentity";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAccIdentity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAccIdentity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAccIdentity ToIAccIdentity(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

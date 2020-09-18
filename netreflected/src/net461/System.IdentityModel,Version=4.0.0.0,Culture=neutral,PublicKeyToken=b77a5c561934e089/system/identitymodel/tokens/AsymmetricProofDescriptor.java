@@ -121,6 +121,9 @@ public class AsymmetricProofDescriptor extends ProofDescriptor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AsymmetricProofDescriptor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AsymmetricProofDescriptor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AsymmetricProofDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

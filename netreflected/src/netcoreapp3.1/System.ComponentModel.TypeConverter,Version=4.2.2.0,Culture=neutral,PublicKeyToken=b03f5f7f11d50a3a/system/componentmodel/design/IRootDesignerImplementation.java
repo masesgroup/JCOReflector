@@ -120,6 +120,9 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRootDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRootDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRootDesigner ToIRootDesigner(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

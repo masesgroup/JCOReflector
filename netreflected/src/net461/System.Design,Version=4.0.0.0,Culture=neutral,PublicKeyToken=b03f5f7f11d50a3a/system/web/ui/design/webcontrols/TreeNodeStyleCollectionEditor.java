@@ -118,6 +118,9 @@ public class TreeNodeStyleCollectionEditor extends StyleCollectionEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TreeNodeStyleCollectionEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TreeNodeStyleCollectionEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TreeNodeStyleCollectionEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

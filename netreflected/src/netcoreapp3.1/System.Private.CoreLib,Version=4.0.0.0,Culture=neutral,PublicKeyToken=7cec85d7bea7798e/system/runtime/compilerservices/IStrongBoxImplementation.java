@@ -112,6 +112,9 @@ public class IStrongBoxImplementation extends NetObject implements IStrongBox {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStrongBox}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IStrongBox} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IStrongBox ToIStrongBox(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

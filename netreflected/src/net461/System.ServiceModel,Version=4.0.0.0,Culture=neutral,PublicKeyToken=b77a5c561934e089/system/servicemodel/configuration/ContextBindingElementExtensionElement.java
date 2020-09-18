@@ -121,6 +121,9 @@ public class ContextBindingElementExtensionElement extends BindingElementExtensi
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContextBindingElementExtensionElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ContextBindingElementExtensionElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContextBindingElementExtensionElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -116,6 +116,9 @@ public class IXmlBinaryWriterInitializerImplementation extends NetObject impleme
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlBinaryWriterInitializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXmlBinaryWriterInitializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXmlBinaryWriterInitializer ToIXmlBinaryWriterInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

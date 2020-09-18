@@ -120,6 +120,9 @@ public class ActivityValidator extends DependencyObjectValidator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityValidator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityValidator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class DirectoryCatalog extends ComposablePartCatalog  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryCatalog}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DirectoryCatalog} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectoryCatalog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class DomainUpDown extends UpDownBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DomainUpDown}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DomainUpDown} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DomainUpDown cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

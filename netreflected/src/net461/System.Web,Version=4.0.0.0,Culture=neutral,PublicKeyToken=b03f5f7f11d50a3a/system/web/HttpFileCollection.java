@@ -120,6 +120,9 @@ public class HttpFileCollection extends NameObjectCollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpFileCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpFileCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpFileCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

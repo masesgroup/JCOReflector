@@ -119,9 +119,9 @@ public class DomainControllerCollection extends ReadOnlyCollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DomainControllerCollection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DomainControllerCollection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DomainControllerCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DomainControllerCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

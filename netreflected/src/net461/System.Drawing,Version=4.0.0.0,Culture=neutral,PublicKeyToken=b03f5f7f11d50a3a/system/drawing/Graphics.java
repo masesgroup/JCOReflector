@@ -82,7 +82,7 @@ import system.drawing.text.TextRenderingHint;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Graphics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Graphics</a>
  */
-public class Graphics extends MarshalByRefObject  {
+public class Graphics extends MarshalByRefObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -153,6 +153,9 @@ public class Graphics extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Graphics}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Graphics} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Graphics cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -1849,7 +1852,20 @@ public class Graphics extends MarshalByRefObject  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

@@ -119,9 +119,9 @@ public class LinearInt32KeyFrame extends Int32KeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LinearInt32KeyFrame}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link LinearInt32KeyFrame} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LinearInt32KeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LinearInt32KeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

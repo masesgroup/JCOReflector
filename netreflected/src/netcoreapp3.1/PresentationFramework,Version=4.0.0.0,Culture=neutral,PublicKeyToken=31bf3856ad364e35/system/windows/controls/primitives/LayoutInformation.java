@@ -122,9 +122,9 @@ public class LayoutInformation extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LayoutInformation}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link LayoutInformation} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LayoutInformation} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LayoutInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -125,6 +125,9 @@ public class RequestSecurityToken extends WSTrustMessage  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RequestSecurityToken}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RequestSecurityToken} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RequestSecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class PeekCompletedEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeekCompletedEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PeekCompletedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PeekCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

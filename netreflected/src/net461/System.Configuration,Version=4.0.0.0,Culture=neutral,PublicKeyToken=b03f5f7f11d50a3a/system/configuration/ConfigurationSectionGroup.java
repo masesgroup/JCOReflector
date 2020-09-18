@@ -119,6 +119,9 @@ public class ConfigurationSectionGroup extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationSectionGroup}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ConfigurationSectionGroup} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConfigurationSectionGroup cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

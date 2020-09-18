@@ -122,6 +122,9 @@ public class ModifierKeysConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModifierKeysConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ModifierKeysConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ModifierKeysConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

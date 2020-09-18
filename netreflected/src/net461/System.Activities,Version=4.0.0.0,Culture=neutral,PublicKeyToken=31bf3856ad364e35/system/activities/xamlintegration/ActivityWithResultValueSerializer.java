@@ -120,6 +120,9 @@ public class ActivityWithResultValueSerializer extends ValueSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityWithResultValueSerializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityWithResultValueSerializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityWithResultValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -125,6 +125,9 @@ public class Regex extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Regex}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Regex} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Regex cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

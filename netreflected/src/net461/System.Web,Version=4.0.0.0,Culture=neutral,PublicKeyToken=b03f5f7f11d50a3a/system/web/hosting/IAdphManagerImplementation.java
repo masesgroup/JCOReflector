@@ -114,6 +114,9 @@ public class IAdphManagerImplementation extends NetObject implements IAdphManage
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAdphManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAdphManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAdphManager ToIAdphManager(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

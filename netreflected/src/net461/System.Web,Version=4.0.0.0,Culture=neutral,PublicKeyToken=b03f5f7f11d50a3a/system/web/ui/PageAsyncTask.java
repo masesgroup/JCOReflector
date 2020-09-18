@@ -119,6 +119,9 @@ public class PageAsyncTask extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageAsyncTask}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PageAsyncTask} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PageAsyncTask cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

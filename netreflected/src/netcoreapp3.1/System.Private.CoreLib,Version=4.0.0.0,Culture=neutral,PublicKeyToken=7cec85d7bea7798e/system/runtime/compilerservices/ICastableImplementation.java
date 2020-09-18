@@ -113,6 +113,9 @@ public class ICastableImplementation extends NetObject implements ICastable {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICastable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICastable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICastable ToICastable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

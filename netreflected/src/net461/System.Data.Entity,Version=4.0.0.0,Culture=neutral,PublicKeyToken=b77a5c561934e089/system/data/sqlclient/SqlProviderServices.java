@@ -119,6 +119,9 @@ public class SqlProviderServices extends DbProviderServices  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlProviderServices}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlProviderServices} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlProviderServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

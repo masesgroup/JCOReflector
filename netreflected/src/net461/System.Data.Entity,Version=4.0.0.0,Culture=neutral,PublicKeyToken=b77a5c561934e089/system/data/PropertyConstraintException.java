@@ -140,6 +140,9 @@ public class PropertyConstraintException extends ConstraintException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyConstraintException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PropertyConstraintException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PropertyConstraintException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

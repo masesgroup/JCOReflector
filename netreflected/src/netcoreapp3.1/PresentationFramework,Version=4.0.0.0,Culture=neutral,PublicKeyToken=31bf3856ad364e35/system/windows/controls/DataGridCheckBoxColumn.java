@@ -119,9 +119,9 @@ public class DataGridCheckBoxColumn extends DataGridBoundColumn  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridCheckBoxColumn}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DataGridCheckBoxColumn} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridCheckBoxColumn} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridCheckBoxColumn cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,9 +121,9 @@ public class StandaloneSignature extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StandaloneSignature}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link StandaloneSignature} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StandaloneSignature} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StandaloneSignature cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

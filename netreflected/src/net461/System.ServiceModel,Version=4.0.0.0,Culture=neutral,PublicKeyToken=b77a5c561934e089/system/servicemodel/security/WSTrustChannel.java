@@ -136,6 +136,9 @@ public class WSTrustChannel extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WSTrustChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WSTrustChannel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

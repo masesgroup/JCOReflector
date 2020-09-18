@@ -138,6 +138,9 @@ public class CommunicationException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommunicationException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CommunicationException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CommunicationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

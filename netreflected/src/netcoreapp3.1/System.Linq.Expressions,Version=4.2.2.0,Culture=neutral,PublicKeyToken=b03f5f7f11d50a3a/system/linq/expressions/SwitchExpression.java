@@ -121,9 +121,9 @@ public class SwitchExpression extends Expression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SwitchExpression}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SwitchExpression} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SwitchExpression} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SwitchExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

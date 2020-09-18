@@ -121,6 +121,9 @@ public class BlurEffect extends Effect  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BlurEffect}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BlurEffect} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BlurEffect cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

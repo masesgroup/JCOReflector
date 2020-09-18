@@ -119,6 +119,9 @@ public class AspCodeRegex extends Regex  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AspCodeRegex}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AspCodeRegex} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AspCodeRegex cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

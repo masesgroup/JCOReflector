@@ -118,6 +118,9 @@ public class EditingScope extends ModelEditingScope  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EditingScope}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EditingScope} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EditingScope cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

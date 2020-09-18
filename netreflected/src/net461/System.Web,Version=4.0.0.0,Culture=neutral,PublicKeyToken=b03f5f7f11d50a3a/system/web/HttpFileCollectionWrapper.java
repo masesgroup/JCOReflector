@@ -123,6 +123,9 @@ public class HttpFileCollectionWrapper extends HttpFileCollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpFileCollectionWrapper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpFileCollectionWrapper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpFileCollectionWrapper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

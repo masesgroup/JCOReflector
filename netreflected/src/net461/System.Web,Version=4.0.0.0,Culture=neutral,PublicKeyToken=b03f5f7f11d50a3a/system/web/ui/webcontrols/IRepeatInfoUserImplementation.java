@@ -116,6 +116,9 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRepeatInfoUser}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRepeatInfoUser} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRepeatInfoUser ToIRepeatInfoUser(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

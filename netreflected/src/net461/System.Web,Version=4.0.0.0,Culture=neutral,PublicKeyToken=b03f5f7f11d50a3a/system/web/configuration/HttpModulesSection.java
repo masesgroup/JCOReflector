@@ -119,6 +119,9 @@ public class HttpModulesSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpModulesSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpModulesSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpModulesSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

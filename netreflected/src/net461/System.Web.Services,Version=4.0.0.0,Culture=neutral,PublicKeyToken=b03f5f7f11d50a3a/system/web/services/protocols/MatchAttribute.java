@@ -118,6 +118,9 @@ public class MatchAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MatchAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MatchAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MatchAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

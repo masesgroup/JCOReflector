@@ -50,7 +50,7 @@ import system.diagnostics.Activity;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.DiagnosticListener" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.DiagnosticListener</a>
  */
-public class DiagnosticListener extends DiagnosticSource  {
+public class DiagnosticListener extends DiagnosticSource implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -121,9 +121,9 @@ public class DiagnosticListener extends DiagnosticSource  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiagnosticListener}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DiagnosticListener} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DiagnosticListener} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiagnosticListener cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -220,7 +220,20 @@ public class DiagnosticListener extends DiagnosticSource  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

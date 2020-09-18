@@ -59,7 +59,7 @@ import system.io.packaging.PackageProperties;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.Package" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.Package</a>
  */
-public class Package extends NetObjectAutoCloseable  {
+public class Package extends NetObject  {
     /**
      * Fully assembly qualified name: System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -130,9 +130,9 @@ public class Package extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Package}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Package} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Package} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Package cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class HttpListenerElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpListenerElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpListenerElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpListenerElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

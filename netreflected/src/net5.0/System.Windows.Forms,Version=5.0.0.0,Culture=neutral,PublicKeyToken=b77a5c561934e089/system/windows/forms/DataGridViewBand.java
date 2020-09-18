@@ -50,7 +50,7 @@ import system.windows.forms.DataGridViewTriState;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBand</a>
  */
-public class DataGridViewBand extends DataGridViewElement  {
+public class DataGridViewBand extends DataGridViewElement implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -161,7 +161,20 @@ public class DataGridViewBand extends DataGridViewElement  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

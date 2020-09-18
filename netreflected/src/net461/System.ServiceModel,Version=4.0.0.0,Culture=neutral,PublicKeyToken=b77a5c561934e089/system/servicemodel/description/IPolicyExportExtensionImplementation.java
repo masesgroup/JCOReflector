@@ -114,6 +114,9 @@ public class IPolicyExportExtensionImplementation extends NetObject implements I
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPolicyExportExtension}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPolicyExportExtension} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPolicyExportExtension ToIPolicyExportExtension(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

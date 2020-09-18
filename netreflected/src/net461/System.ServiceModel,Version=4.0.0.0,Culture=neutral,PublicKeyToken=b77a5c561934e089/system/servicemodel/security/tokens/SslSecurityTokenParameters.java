@@ -118,6 +118,9 @@ public class SslSecurityTokenParameters extends SecurityTokenParameters  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SslSecurityTokenParameters}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SslSecurityTokenParameters} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SslSecurityTokenParameters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

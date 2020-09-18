@@ -113,6 +113,9 @@ public class IReceiveContextSettingsImplementation extends NetObject implements 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReceiveContextSettings}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IReceiveContextSettings} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IReceiveContextSettings ToIReceiveContextSettings(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

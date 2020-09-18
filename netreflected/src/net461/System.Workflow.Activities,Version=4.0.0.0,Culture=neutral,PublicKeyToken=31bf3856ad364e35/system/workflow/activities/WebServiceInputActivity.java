@@ -121,6 +121,9 @@ public class WebServiceInputActivity extends Activity  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebServiceInputActivity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebServiceInputActivity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebServiceInputActivity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

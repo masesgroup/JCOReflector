@@ -112,6 +112,9 @@ public class ITransactionPromoterImplementation extends NetObject implements ITr
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITransactionPromoter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITransactionPromoter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITransactionPromoter ToITransactionPromoter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

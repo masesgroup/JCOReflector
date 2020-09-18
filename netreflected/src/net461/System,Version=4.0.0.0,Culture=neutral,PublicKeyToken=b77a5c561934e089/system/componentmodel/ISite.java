@@ -66,6 +66,9 @@ public interface ISite extends IJCOBridgeReflected, IServiceProvider {
     public static final String className = "System.ComponentModel.ISite";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISite}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISite} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISite ToISite(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

@@ -119,9 +119,9 @@ public class SettingsManageabilityAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SettingsManageabilityAttribute}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SettingsManageabilityAttribute} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SettingsManageabilityAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SettingsManageabilityAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

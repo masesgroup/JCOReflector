@@ -139,6 +139,9 @@ public class InstanceUpdateException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceUpdateException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InstanceUpdateException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InstanceUpdateException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

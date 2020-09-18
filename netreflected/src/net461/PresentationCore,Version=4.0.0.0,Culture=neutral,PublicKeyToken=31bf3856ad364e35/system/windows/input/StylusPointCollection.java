@@ -120,6 +120,9 @@ public class StylusPointCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StylusPointCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StylusPointCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StylusPointCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -112,6 +112,9 @@ public class IDebugTypeImplementation extends NetObject implements IDebugType {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDebugType}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDebugType} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDebugType ToIDebugType(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

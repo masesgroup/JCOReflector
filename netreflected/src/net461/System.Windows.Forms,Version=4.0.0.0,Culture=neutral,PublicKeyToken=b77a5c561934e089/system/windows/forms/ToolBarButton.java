@@ -122,6 +122,9 @@ public class ToolBarButton extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolBarButton}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ToolBarButton} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolBarButton cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

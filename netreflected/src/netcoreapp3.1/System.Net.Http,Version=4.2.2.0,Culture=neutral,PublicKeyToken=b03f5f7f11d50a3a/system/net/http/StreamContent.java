@@ -119,9 +119,9 @@ public class StreamContent extends HttpContent  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StreamContent}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link StreamContent} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StreamContent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StreamContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

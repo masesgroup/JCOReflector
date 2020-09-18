@@ -117,6 +117,9 @@ public class ModelValidationResult extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelValidationResult}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ModelValidationResult} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ModelValidationResult cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

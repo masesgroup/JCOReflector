@@ -115,6 +115,9 @@ public class IMessageFormatterImplementation extends NetObject implements IMessa
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMessageFormatter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMessageFormatter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMessageFormatter ToIMessageFormatter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePartCatalog" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePartCatalog</a>
  */
-public class ComposablePartCatalog extends NetObjectAutoCloseable  {
+public class ComposablePartCatalog extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -117,6 +117,9 @@ public class ComposablePartCatalog extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComposablePartCatalog}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComposablePartCatalog} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComposablePartCatalog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -141,7 +144,20 @@ public class ComposablePartCatalog extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

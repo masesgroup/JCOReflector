@@ -118,6 +118,9 @@ public class GridViewPageEventArgs extends CancelEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GridViewPageEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GridViewPageEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GridViewPageEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

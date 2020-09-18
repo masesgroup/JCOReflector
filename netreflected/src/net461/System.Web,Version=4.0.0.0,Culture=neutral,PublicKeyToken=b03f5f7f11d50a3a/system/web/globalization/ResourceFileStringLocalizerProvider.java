@@ -118,6 +118,9 @@ public class ResourceFileStringLocalizerProvider extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResourceFileStringLocalizerProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ResourceFileStringLocalizerProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResourceFileStringLocalizerProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

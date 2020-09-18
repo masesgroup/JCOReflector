@@ -122,6 +122,9 @@ public class BinaryDataModelBinderProvider extends ModelBinderProvider  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BinaryDataModelBinderProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BinaryDataModelBinderProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BinaryDataModelBinderProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

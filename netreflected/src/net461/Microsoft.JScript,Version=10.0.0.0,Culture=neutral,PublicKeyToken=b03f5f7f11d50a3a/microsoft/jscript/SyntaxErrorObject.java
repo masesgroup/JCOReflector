@@ -118,6 +118,9 @@ public class SyntaxErrorObject extends ErrorObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SyntaxErrorObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SyntaxErrorObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SyntaxErrorObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

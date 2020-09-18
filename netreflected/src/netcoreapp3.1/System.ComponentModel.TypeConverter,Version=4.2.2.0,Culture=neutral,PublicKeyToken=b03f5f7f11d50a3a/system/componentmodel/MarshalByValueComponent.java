@@ -51,7 +51,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.MarshalByValueComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.MarshalByValueComponent</a>
  */
-public class MarshalByValueComponent extends NetObjectAutoCloseable  {
+public class MarshalByValueComponent extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -122,9 +122,9 @@ public class MarshalByValueComponent extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MarshalByValueComponent}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link MarshalByValueComponent} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MarshalByValueComponent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MarshalByValueComponent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -168,7 +168,20 @@ public class MarshalByValueComponent extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

@@ -112,6 +112,9 @@ public class IEqualityComparerImplementation extends NetObject implements IEqual
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEqualityComparer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEqualityComparer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEqualityComparer ToIEqualityComparer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

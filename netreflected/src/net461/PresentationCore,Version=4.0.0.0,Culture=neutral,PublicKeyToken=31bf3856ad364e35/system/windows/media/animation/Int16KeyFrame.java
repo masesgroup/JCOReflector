@@ -119,6 +119,9 @@ public class Int16KeyFrame extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int16KeyFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Int16KeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Int16KeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

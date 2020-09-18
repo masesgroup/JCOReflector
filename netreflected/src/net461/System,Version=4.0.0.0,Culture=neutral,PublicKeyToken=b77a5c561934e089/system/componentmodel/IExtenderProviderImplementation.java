@@ -112,6 +112,9 @@ public class IExtenderProviderImplementation extends NetObject implements IExten
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExtenderProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IExtenderProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IExtenderProvider ToIExtenderProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

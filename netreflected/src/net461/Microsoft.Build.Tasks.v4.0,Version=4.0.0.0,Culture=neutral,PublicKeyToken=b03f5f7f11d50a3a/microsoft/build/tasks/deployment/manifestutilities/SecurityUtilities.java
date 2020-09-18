@@ -122,6 +122,9 @@ public class SecurityUtilities extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityUtilities}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SecurityUtilities} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecurityUtilities cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

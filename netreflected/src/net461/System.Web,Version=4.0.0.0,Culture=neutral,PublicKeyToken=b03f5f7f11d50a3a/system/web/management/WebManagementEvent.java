@@ -119,6 +119,9 @@ public class WebManagementEvent extends WebBaseEvent  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebManagementEvent}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebManagementEvent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebManagementEvent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

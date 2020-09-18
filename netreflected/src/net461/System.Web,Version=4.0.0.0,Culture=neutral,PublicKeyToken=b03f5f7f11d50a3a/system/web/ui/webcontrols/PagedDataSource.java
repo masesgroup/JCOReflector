@@ -120,6 +120,9 @@ public class PagedDataSource extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PagedDataSource}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PagedDataSource} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PagedDataSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

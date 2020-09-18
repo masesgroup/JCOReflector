@@ -124,9 +124,9 @@ public class D3DImage extends ImageSource  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link D3DImage}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link D3DImage} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link D3DImage} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static D3DImage cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

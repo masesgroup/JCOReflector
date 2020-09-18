@@ -126,6 +126,9 @@ public class IInputSessionChannelImplementation extends NetObject implements IIn
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInputSessionChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IInputSessionChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IInputSessionChannel ToIInputSessionChannel(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

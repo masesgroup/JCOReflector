@@ -120,6 +120,9 @@ public class CompileWorkflowCleanupTask extends Task  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompileWorkflowCleanupTask}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CompileWorkflowCleanupTask} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CompileWorkflowCleanupTask cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

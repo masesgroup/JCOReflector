@@ -118,6 +118,9 @@ public class EntityViewGenerationAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityViewGenerationAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EntityViewGenerationAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EntityViewGenerationAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

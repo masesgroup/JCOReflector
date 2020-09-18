@@ -51,7 +51,7 @@ import system.io.compression.CompressionLevel;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive</a>
  */
-public class ZipArchive extends NetObjectAutoCloseable  {
+public class ZipArchive extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.IO.Compression, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -224,7 +224,20 @@ public class ZipArchive extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

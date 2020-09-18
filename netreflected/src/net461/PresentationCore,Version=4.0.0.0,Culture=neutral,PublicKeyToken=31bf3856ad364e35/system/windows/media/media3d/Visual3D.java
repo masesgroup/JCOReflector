@@ -127,6 +127,9 @@ public class Visual3D extends DependencyObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Visual3D}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Visual3D} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Visual3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

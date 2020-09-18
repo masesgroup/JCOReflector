@@ -118,6 +118,9 @@ public class RelatedObjectQuery extends WqlObjectQuery  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RelatedObjectQuery}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RelatedObjectQuery} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RelatedObjectQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

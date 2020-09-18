@@ -119,6 +119,9 @@ public class DefaultClaimSet extends ClaimSet  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultClaimSet}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DefaultClaimSet} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DefaultClaimSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

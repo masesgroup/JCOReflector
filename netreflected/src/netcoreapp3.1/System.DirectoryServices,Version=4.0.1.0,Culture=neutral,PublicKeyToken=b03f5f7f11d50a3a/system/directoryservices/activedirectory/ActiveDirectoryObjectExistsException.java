@@ -137,9 +137,9 @@ public class ActiveDirectoryObjectExistsException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectoryObjectExistsException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ActiveDirectoryObjectExistsException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActiveDirectoryObjectExistsException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActiveDirectoryObjectExistsException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

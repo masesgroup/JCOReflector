@@ -119,6 +119,9 @@ public class HtmlFormParameterReader extends ValueCollectionParameterReader  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlFormParameterReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HtmlFormParameterReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HtmlFormParameterReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

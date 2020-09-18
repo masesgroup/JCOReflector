@@ -117,9 +117,9 @@ public class CompilerError extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompilerError}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link CompilerError} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CompilerError} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CompilerError cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

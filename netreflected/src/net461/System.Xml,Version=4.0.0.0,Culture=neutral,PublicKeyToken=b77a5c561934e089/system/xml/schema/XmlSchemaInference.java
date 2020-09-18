@@ -119,6 +119,9 @@ public class XmlSchemaInference extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaInference}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlSchemaInference} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaInference cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

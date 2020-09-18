@@ -122,6 +122,9 @@ public class DbSpatialServices extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbSpatialServices}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbSpatialServices} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbSpatialServices cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

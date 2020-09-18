@@ -122,9 +122,9 @@ public class AspNetHostingPermissionAttribute extends CodeAccessSecurityAttribut
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AspNetHostingPermissionAttribute}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link AspNetHostingPermissionAttribute} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AspNetHostingPermissionAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AspNetHostingPermissionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

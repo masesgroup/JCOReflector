@@ -61,6 +61,9 @@ public interface IPersonalizable extends IJCOBridgeReflected {
     public static final String className = "System.Web.UI.WebControls.WebParts.IPersonalizable";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPersonalizable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPersonalizable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPersonalizable ToIPersonalizable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

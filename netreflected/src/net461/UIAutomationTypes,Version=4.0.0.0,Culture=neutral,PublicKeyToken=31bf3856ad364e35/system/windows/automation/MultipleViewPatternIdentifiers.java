@@ -117,6 +117,9 @@ public class MultipleViewPatternIdentifiers extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MultipleViewPatternIdentifiers}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MultipleViewPatternIdentifiers} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MultipleViewPatternIdentifiers cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class XmlDesignerDataSourceView extends DesignerDataSourceView  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDesignerDataSourceView}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlDesignerDataSourceView} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlDesignerDataSourceView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MembershipPasswordAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MembershipPasswordAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MembershipPasswordAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

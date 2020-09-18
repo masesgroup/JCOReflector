@@ -120,6 +120,9 @@ public class AesCryptoServiceProvider extends Aes  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AesCryptoServiceProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AesCryptoServiceProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AesCryptoServiceProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -69,6 +69,9 @@ public interface IBindableComponent extends IJCOBridgeReflected, IComponent, IDi
     public static final String className = "System.Windows.Forms.IBindableComponent";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindableComponent}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBindableComponent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBindableComponent ToIBindableComponent(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

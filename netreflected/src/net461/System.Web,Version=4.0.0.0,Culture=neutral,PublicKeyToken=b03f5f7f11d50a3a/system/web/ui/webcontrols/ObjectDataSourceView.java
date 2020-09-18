@@ -132,6 +132,9 @@ public class ObjectDataSourceView extends DataSourceView  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectDataSourceView}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectDataSourceView} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectDataSourceView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

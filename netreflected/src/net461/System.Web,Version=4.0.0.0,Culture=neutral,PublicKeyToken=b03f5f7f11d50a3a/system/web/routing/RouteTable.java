@@ -118,6 +118,9 @@ public class RouteTable extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RouteTable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RouteTable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RouteTable cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

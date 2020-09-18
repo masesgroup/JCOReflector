@@ -47,7 +47,7 @@ import system.diagnostics.performancedata.CounterData;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet</a>
  */
-public class CounterSetInstanceCounterDataSet extends NetObjectAutoCloseable  {
+public class CounterSetInstanceCounterDataSet extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -118,9 +118,9 @@ public class CounterSetInstanceCounterDataSet extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CounterSetInstanceCounterDataSet}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link CounterSetInstanceCounterDataSet} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CounterSetInstanceCounterDataSet} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CounterSetInstanceCounterDataSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -147,7 +147,20 @@ public class CounterSetInstanceCounterDataSet extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

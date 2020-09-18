@@ -62,6 +62,9 @@ public interface ISecurityPolicyEncodable extends IJCOBridgeReflected {
     public static final String className = "System.Security.ISecurityPolicyEncodable";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISecurityPolicyEncodable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISecurityPolicyEncodable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISecurityPolicyEncodable ToISecurityPolicyEncodable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

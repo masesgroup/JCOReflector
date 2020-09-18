@@ -138,6 +138,9 @@ public class HttpListenerException extends Win32Exception {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpListenerException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpListenerException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpListenerException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

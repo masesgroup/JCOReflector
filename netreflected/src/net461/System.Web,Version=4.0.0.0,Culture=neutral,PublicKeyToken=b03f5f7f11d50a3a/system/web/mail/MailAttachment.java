@@ -118,6 +118,9 @@ public class MailAttachment extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MailAttachment}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MailAttachment} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MailAttachment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

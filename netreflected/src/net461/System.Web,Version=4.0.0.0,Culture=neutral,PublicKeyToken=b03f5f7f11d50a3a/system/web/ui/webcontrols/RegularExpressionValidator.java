@@ -118,6 +118,9 @@ public class RegularExpressionValidator extends BaseValidator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegularExpressionValidator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RegularExpressionValidator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegularExpressionValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

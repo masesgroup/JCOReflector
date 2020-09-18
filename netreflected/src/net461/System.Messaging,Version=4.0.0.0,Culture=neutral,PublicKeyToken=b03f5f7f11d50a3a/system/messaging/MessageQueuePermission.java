@@ -125,6 +125,9 @@ public class MessageQueuePermission extends CodeAccessPermission  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageQueuePermission}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessageQueuePermission} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessageQueuePermission cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

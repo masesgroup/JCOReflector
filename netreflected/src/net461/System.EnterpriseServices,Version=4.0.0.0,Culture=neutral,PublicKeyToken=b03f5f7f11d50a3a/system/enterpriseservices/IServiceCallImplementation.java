@@ -112,6 +112,9 @@ public class IServiceCallImplementation extends NetObject implements IServiceCal
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IServiceCall}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IServiceCall} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IServiceCall ToIServiceCall(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

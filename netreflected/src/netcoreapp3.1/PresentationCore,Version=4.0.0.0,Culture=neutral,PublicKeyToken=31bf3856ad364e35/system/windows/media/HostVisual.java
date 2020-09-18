@@ -118,9 +118,9 @@ public class HostVisual extends ContainerVisual  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HostVisual}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link HostVisual} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HostVisual} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HostVisual cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

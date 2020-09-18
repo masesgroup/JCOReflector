@@ -61,6 +61,9 @@ public interface IInputLanguageSource extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Input.IInputLanguageSource";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInputLanguageSource}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IInputLanguageSource} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IInputLanguageSource ToIInputLanguageSource(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

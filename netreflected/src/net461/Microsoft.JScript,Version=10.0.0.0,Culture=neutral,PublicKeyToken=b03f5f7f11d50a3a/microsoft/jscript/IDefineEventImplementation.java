@@ -112,6 +112,9 @@ public class IDefineEventImplementation extends NetObject implements IDefineEven
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDefineEvent}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDefineEvent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDefineEvent ToIDefineEvent(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -123,9 +123,9 @@ public class DbDataRecord extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbDataRecord}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DbDataRecord} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbDataRecord} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbDataRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

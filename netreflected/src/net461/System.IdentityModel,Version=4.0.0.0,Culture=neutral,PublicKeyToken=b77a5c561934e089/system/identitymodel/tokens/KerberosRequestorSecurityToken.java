@@ -123,6 +123,9 @@ public class KerberosRequestorSecurityToken extends SecurityToken  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link KerberosRequestorSecurityToken}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link KerberosRequestorSecurityToken} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static KerberosRequestorSecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

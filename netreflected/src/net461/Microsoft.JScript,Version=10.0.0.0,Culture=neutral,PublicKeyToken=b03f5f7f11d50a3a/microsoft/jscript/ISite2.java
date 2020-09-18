@@ -60,6 +60,9 @@ public interface ISite2 extends IJCOBridgeReflected {
     public static final String className = "Microsoft.JScript.ISite2";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISite2}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISite2} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISite2 ToISite2(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

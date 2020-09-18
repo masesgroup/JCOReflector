@@ -118,6 +118,9 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVsaScriptCodeItem}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IVsaScriptCodeItem} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IVsaScriptCodeItem ToIVsaScriptCodeItem(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

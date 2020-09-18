@@ -118,9 +118,9 @@ public class PropertyManager extends BindingManagerBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyManager}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link PropertyManager} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PropertyManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PropertyManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

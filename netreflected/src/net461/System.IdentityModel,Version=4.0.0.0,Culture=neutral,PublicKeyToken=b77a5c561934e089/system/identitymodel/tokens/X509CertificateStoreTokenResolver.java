@@ -120,6 +120,9 @@ public class X509CertificateStoreTokenResolver extends SecurityTokenResolver  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509CertificateStoreTokenResolver}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509CertificateStoreTokenResolver} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509CertificateStoreTokenResolver cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

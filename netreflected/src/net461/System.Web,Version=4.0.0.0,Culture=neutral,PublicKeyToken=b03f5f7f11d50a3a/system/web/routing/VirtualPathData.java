@@ -119,6 +119,9 @@ public class VirtualPathData extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link VirtualPathData}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link VirtualPathData} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static VirtualPathData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

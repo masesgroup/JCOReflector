@@ -121,6 +121,9 @@ public class GroupDescription extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GroupDescription}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GroupDescription} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GroupDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

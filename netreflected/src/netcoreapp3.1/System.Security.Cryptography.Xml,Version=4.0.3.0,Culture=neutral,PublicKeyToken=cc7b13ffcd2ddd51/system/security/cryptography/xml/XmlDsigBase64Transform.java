@@ -119,9 +119,9 @@ public class XmlDsigBase64Transform extends Transform  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDsigBase64Transform}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link XmlDsigBase64Transform} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlDsigBase64Transform} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlDsigBase64Transform cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

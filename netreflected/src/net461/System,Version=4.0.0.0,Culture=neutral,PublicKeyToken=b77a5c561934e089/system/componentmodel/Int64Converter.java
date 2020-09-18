@@ -118,6 +118,9 @@ public class Int64Converter extends BaseNumberConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int64Converter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Int64Converter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Int64Converter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

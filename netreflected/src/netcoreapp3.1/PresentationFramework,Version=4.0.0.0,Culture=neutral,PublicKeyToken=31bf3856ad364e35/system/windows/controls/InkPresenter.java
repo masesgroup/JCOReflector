@@ -121,9 +121,9 @@ public class InkPresenter extends Decorator  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InkPresenter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link InkPresenter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InkPresenter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InkPresenter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

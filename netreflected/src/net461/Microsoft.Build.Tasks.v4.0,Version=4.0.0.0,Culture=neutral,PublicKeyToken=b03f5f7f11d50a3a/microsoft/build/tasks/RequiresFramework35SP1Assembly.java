@@ -120,6 +120,9 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RequiresFramework35SP1Assembly}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RequiresFramework35SP1Assembly} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RequiresFramework35SP1Assembly cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

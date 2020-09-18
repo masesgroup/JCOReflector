@@ -121,6 +121,9 @@ public class WorkflowViewStateService extends ViewStateService  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowViewStateService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowViewStateService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowViewStateService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

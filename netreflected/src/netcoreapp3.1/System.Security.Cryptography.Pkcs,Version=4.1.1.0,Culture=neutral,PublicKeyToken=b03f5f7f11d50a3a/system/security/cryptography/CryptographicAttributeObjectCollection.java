@@ -120,9 +120,9 @@ public class CryptographicAttributeObjectCollection extends NetObject implements
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CryptographicAttributeObjectCollection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link CryptographicAttributeObjectCollection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CryptographicAttributeObjectCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CryptographicAttributeObjectCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

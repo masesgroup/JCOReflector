@@ -70,6 +70,9 @@ public interface IConvertible extends IJCOBridgeReflected {
     public static final String className = "System.IConvertible";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IConvertible}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IConvertible} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IConvertible ToIConvertible(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");

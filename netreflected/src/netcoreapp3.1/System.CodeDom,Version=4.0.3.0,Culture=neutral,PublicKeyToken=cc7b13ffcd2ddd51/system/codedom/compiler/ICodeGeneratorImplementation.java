@@ -121,6 +121,9 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICodeGenerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICodeGenerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICodeGenerator ToICodeGenerator(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

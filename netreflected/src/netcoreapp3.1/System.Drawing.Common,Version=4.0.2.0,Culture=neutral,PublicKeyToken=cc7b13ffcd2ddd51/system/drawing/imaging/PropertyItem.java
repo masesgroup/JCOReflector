@@ -117,9 +117,9 @@ public class PropertyItem extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PropertyItem}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link PropertyItem} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PropertyItem} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PropertyItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

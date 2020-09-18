@@ -117,9 +117,9 @@ public class SpecialDirectories extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SpecialDirectories}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SpecialDirectories} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SpecialDirectories} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SpecialDirectories cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

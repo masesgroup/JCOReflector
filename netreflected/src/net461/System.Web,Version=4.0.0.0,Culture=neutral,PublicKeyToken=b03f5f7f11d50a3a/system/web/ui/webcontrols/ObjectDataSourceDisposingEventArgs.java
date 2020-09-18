@@ -118,6 +118,9 @@ public class ObjectDataSourceDisposingEventArgs extends CancelEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectDataSourceDisposingEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectDataSourceDisposingEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectDataSourceDisposingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -61,6 +61,9 @@ public interface IHttpModule extends IJCOBridgeReflected {
     public static final String className = "System.Web.IHttpModule";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHttpModule}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHttpModule} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHttpModule ToIHttpModule(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

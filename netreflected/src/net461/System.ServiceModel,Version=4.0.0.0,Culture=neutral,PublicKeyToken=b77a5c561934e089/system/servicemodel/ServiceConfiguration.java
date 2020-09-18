@@ -126,6 +126,9 @@ public class ServiceConfiguration extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceConfiguration}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceConfiguration} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceConfiguration cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -60,6 +60,9 @@ public interface IConnectionPoint extends IJCOBridgeReflected {
     public static final String className = "System.Runtime.InteropServices.ComTypes.IConnectionPoint";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IConnectionPoint}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IConnectionPoint} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IConnectionPoint ToIConnectionPoint(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");

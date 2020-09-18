@@ -118,6 +118,9 @@ public class UrlParameterWriter extends UrlEncodedParameterWriter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UrlParameterWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UrlParameterWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UrlParameterWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

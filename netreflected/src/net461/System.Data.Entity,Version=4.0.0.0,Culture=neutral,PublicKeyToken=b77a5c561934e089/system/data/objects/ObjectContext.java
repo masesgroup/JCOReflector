@@ -60,7 +60,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectContext</a>
  */
-public class ObjectContext extends NetObjectAutoCloseable  {
+public class ObjectContext extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -131,6 +131,9 @@ public class ObjectContext extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -420,7 +423,20 @@ public class ObjectContext extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

@@ -118,6 +118,9 @@ public class ExitEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExitEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ExitEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExitEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

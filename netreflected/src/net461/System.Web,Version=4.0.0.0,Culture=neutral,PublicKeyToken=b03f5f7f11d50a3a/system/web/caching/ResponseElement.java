@@ -117,6 +117,9 @@ public class ResponseElement extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ResponseElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ResponseElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ResponseElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

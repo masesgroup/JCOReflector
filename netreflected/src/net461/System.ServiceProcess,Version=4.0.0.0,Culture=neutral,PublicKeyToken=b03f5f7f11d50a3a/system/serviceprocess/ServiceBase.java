@@ -120,6 +120,9 @@ public class ServiceBase extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceBase}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceBase} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

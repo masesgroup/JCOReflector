@@ -123,6 +123,9 @@ public class IExtendedDataRecordImplementation extends NetObject implements IExt
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExtendedDataRecord}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IExtendedDataRecord} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IExtendedDataRecord ToIExtendedDataRecord(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

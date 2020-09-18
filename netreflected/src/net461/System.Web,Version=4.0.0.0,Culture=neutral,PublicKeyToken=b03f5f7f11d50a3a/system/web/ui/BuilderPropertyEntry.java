@@ -119,6 +119,9 @@ public class BuilderPropertyEntry extends PropertyEntry  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BuilderPropertyEntry}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BuilderPropertyEntry} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BuilderPropertyEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

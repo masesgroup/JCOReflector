@@ -56,7 +56,7 @@ import system.security.authentication.extendedprotection.ServiceNameCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListener" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListener</a>
  */
-public class HttpListener extends NetObjectAutoCloseable  {
+public class HttpListener extends NetObject  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -127,6 +127,9 @@ public class HttpListener extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpListener}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpListener} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpListener cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

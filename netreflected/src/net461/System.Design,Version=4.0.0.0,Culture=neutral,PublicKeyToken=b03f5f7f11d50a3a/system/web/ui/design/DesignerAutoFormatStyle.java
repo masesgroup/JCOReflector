@@ -119,6 +119,9 @@ public class DesignerAutoFormatStyle extends Style  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerAutoFormatStyle}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DesignerAutoFormatStyle} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DesignerAutoFormatStyle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

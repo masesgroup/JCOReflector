@@ -121,6 +121,9 @@ public class XComment extends XNode  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XComment}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XComment} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XComment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

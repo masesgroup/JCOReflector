@@ -118,6 +118,9 @@ public class AudienceUriModeValidationHelper extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AudienceUriModeValidationHelper}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AudienceUriModeValidationHelper} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AudienceUriModeValidationHelper cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

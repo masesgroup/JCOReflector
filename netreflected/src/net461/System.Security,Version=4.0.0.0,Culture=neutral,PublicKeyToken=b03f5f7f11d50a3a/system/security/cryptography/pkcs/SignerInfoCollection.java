@@ -120,6 +120,9 @@ public class SignerInfoCollection extends NetObject implements Iterable<SignerIn
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SignerInfoCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SignerInfoCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SignerInfoCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

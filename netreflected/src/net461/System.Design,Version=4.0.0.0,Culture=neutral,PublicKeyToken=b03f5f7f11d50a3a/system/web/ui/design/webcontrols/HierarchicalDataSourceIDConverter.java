@@ -118,6 +118,9 @@ public class HierarchicalDataSourceIDConverter extends DataSourceIDConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HierarchicalDataSourceIDConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HierarchicalDataSourceIDConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HierarchicalDataSourceIDConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

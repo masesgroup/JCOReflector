@@ -118,6 +118,9 @@ public class DataGridViewRowDividerDoubleClickEventArgs extends HandledMouseEven
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewRowDividerDoubleClickEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridViewRowDividerDoubleClickEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewRowDividerDoubleClickEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class CalendarDataBindingHandler extends DataBindingHandler  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CalendarDataBindingHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CalendarDataBindingHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CalendarDataBindingHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

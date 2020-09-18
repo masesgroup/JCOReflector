@@ -122,6 +122,9 @@ public class MembershipProvider extends ProviderBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MembershipProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MembershipProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MembershipProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

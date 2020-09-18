@@ -123,6 +123,9 @@ public class SendReceiveExtension extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SendReceiveExtension}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SendReceiveExtension} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SendReceiveExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

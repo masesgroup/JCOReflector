@@ -54,7 +54,7 @@ import system.resources.ResXResourceReader;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResXResourceReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResXResourceReader</a>
  */
-public class ResXResourceReader extends NetObjectAutoCloseable  {
+public class ResXResourceReader extends NetObject  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

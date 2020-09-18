@@ -112,6 +112,9 @@ public class ICollectDataImplementation extends NetObject implements ICollectDat
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollectData}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICollectData} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICollectData ToICollectData(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

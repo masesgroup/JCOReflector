@@ -122,9 +122,9 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FrameworkPropertyMetadata}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link FrameworkPropertyMetadata} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FrameworkPropertyMetadata} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FrameworkPropertyMetadata cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

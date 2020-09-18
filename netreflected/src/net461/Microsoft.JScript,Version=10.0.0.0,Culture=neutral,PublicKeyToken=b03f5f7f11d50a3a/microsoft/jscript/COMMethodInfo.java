@@ -131,6 +131,9 @@ public class COMMethodInfo extends JSMethod  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link COMMethodInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link COMMethodInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static COMMethodInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

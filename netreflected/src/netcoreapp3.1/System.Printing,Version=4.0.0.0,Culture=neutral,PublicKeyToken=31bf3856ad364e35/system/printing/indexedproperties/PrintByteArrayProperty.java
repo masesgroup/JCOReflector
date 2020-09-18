@@ -118,9 +118,9 @@ public class PrintByteArrayProperty extends PrintProperty  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintByteArrayProperty}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link PrintByteArrayProperty} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrintByteArrayProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintByteArrayProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

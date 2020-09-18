@@ -118,6 +118,9 @@ public class DirectiveAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectiveAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DirectiveAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectiveAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

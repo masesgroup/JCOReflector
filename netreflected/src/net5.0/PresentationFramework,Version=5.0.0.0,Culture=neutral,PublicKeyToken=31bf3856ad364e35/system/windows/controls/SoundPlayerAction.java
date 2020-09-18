@@ -48,7 +48,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SoundPlayerAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SoundPlayerAction</a>
  */
-public class SoundPlayerAction extends TriggerAction  {
+public class SoundPlayerAction extends TriggerAction implements AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -154,7 +154,20 @@ public class SoundPlayerAction extends TriggerAction  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

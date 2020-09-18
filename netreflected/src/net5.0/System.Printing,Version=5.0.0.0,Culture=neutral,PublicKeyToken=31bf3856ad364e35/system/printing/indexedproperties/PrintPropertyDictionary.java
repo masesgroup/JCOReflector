@@ -50,7 +50,7 @@ import system.runtime.serialization.StreamingContext;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.IndexedProperties.PrintPropertyDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.IndexedProperties.PrintPropertyDictionary</a>
  */
-public class PrintPropertyDictionary extends Hashtable  {
+public class PrintPropertyDictionary extends Hashtable implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Printing, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -207,7 +207,20 @@ public class PrintPropertyDictionary extends Hashtable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

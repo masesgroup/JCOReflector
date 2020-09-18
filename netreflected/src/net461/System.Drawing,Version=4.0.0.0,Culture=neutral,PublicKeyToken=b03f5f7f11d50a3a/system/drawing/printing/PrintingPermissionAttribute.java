@@ -122,6 +122,9 @@ public class PrintingPermissionAttribute extends CodeAccessSecurityAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintingPermissionAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrintingPermissionAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintingPermissionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

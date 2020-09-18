@@ -124,6 +124,9 @@ public class SqlRowUpdatingEventArgs extends RowUpdatingEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlRowUpdatingEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlRowUpdatingEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlRowUpdatingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

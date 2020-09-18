@@ -117,6 +117,9 @@ public class RuleExpressionInfo extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuleExpressionInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RuleExpressionInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RuleExpressionInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

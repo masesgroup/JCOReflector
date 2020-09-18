@@ -125,6 +125,9 @@ public class HtmlTextWriter extends TextWriter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlTextWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HtmlTextWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HtmlTextWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

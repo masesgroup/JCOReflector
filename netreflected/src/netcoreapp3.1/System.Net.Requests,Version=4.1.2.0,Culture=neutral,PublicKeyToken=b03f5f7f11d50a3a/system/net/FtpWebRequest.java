@@ -132,9 +132,9 @@ public class FtpWebRequest extends WebRequest  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FtpWebRequest}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link FtpWebRequest} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FtpWebRequest} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FtpWebRequest cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

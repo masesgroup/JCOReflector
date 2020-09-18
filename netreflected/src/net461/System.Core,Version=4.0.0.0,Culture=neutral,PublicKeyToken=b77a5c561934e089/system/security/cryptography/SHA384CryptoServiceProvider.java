@@ -118,6 +118,9 @@ public class SHA384CryptoServiceProvider extends SHA384  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SHA384CryptoServiceProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SHA384CryptoServiceProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SHA384CryptoServiceProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -60,6 +60,9 @@ public interface IDestinationTypeProvider extends IJCOBridgeReflected {
     public static final String className = "System.Xaml.IDestinationTypeProvider";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDestinationTypeProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDestinationTypeProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDestinationTypeProvider ToIDestinationTypeProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

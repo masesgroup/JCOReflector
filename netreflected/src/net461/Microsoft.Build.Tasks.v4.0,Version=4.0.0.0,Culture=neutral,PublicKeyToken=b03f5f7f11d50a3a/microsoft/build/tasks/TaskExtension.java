@@ -119,6 +119,9 @@ public class TaskExtension extends Task  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TaskExtension}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TaskExtension} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TaskExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class SyndicationItemFormatter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SyndicationItemFormatter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SyndicationItemFormatter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SyndicationItemFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

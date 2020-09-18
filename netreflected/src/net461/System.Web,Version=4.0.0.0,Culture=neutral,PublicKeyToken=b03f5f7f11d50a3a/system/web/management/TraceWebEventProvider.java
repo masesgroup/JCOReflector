@@ -120,6 +120,9 @@ public class TraceWebEventProvider extends WebEventProvider  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TraceWebEventProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TraceWebEventProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TraceWebEventProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

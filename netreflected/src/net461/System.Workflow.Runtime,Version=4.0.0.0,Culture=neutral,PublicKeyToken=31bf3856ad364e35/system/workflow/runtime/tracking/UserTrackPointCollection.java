@@ -117,6 +117,9 @@ public class UserTrackPointCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UserTrackPointCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UserTrackPointCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UserTrackPointCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

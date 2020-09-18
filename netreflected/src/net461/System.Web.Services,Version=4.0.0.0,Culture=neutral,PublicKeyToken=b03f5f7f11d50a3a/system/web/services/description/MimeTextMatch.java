@@ -118,6 +118,9 @@ public class MimeTextMatch extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MimeTextMatch}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MimeTextMatch} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MimeTextMatch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

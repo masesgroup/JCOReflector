@@ -121,6 +121,9 @@ public class XmlComment extends XmlCharacterData  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlComment}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlComment} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlComment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

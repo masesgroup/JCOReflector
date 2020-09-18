@@ -118,6 +118,9 @@ public class WorkflowInstanceManagementElement extends BehaviorExtensionElement 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowInstanceManagementElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowInstanceManagementElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowInstanceManagementElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

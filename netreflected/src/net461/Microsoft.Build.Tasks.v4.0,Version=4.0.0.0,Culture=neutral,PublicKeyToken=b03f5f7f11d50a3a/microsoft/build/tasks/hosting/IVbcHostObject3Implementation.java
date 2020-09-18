@@ -120,6 +120,9 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVbcHostObject3}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IVbcHostObject3} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IVbcHostObject3 ToIVbcHostObject3(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

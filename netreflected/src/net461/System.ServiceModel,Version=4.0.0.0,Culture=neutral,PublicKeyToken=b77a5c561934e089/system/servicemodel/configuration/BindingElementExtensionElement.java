@@ -119,6 +119,9 @@ public class BindingElementExtensionElement extends ServiceModelExtensionElement
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindingElementExtensionElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BindingElementExtensionElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BindingElementExtensionElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

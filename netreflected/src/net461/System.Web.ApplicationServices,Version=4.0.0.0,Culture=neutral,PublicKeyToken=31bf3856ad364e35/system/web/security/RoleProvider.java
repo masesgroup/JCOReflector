@@ -118,6 +118,9 @@ public class RoleProvider extends ProviderBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RoleProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RoleProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RoleProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

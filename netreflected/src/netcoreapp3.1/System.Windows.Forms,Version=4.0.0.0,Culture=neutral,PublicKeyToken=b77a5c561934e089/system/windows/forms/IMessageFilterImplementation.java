@@ -112,6 +112,9 @@ public class IMessageFilterImplementation extends NetObject implements IMessageF
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMessageFilter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMessageFilter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMessageFilter ToIMessageFilter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

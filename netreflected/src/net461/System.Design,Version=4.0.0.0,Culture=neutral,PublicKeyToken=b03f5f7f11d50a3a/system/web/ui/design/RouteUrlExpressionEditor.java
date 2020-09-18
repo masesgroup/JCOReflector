@@ -121,6 +121,9 @@ public class RouteUrlExpressionEditor extends ExpressionEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RouteUrlExpressionEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RouteUrlExpressionEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RouteUrlExpressionEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

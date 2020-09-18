@@ -122,9 +122,9 @@ public class Quaternion extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Quaternion}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Quaternion} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Quaternion} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Quaternion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

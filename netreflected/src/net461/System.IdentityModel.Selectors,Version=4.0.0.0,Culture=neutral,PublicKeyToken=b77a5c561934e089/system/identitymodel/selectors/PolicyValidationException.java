@@ -137,6 +137,9 @@ public class PolicyValidationException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PolicyValidationException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PolicyValidationException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PolicyValidationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

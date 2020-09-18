@@ -60,6 +60,9 @@ public interface IAccessibleHandler extends IJCOBridgeReflected {
     public static final String className = "Accessibility.IAccessibleHandler";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAccessibleHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAccessibleHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAccessibleHandler ToIAccessibleHandler(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

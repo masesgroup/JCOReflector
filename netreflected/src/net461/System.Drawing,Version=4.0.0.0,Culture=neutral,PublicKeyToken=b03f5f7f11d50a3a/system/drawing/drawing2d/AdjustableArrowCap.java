@@ -119,6 +119,9 @@ public class AdjustableArrowCap extends CustomLineCap  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AdjustableArrowCap}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AdjustableArrowCap} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AdjustableArrowCap cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

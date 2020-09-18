@@ -118,6 +118,9 @@ public class HtmlEmbed extends HtmlContainerControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlEmbed}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HtmlEmbed} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HtmlEmbed cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

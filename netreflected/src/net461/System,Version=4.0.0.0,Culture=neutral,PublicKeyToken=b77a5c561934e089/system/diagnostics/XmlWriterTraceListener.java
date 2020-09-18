@@ -123,6 +123,9 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlWriterTraceListener}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlWriterTraceListener} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlWriterTraceListener cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

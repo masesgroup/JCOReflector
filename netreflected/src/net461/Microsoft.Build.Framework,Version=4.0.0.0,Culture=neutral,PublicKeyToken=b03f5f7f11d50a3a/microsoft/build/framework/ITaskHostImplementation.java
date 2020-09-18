@@ -112,6 +112,9 @@ public class ITaskHostImplementation extends NetObject implements ITaskHost {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITaskHost}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITaskHost} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITaskHost ToITaskHost(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

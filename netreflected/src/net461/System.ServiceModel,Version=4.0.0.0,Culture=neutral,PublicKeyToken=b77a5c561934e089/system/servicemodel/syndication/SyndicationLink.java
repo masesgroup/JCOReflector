@@ -120,6 +120,9 @@ public class SyndicationLink extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SyndicationLink}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SyndicationLink} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SyndicationLink cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -117,9 +117,9 @@ public class CollectionViewGroup extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CollectionViewGroup}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link CollectionViewGroup} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CollectionViewGroup} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CollectionViewGroup cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -125,9 +125,9 @@ public class NullableConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NullableConverter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link NullableConverter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NullableConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NullableConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

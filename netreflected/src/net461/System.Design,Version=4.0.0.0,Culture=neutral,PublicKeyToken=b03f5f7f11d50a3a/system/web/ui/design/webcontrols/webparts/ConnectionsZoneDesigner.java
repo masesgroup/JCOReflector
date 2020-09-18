@@ -121,6 +121,9 @@ public class ConnectionsZoneDesigner extends ToolZoneDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConnectionsZoneDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ConnectionsZoneDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConnectionsZoneDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

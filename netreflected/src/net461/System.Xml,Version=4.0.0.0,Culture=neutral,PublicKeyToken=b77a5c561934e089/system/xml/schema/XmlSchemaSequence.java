@@ -119,6 +119,9 @@ public class XmlSchemaSequence extends XmlSchemaGroupBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaSequence}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlSchemaSequence} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaSequence cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

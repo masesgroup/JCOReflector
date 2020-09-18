@@ -118,6 +118,9 @@ public class UIHintAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UIHintAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UIHintAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UIHintAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

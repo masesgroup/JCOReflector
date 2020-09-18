@@ -118,6 +118,9 @@ public class CallingDataMethodsEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CallingDataMethodsEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CallingDataMethodsEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CallingDataMethodsEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

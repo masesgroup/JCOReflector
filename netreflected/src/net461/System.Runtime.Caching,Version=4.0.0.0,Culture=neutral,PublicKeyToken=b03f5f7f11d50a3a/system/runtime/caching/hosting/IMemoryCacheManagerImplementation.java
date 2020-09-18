@@ -113,6 +113,9 @@ public class IMemoryCacheManagerImplementation extends NetObject implements IMem
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMemoryCacheManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMemoryCacheManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMemoryCacheManager ToIMemoryCacheManager(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class WebReferenceCollection extends CollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebReferenceCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebReferenceCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebReferenceCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

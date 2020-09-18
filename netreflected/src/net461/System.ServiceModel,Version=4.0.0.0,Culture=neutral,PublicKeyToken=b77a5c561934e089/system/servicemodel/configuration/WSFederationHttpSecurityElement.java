@@ -120,6 +120,9 @@ public class WSFederationHttpSecurityElement extends ServiceModelConfigurationEl
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSFederationHttpSecurityElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WSFederationHttpSecurityElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WSFederationHttpSecurityElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

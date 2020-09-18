@@ -115,6 +115,9 @@ public class IDesignerDataSchemaImplementation extends NetObject implements IDes
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerDataSchema}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDesignerDataSchema} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDesignerDataSchema ToIDesignerDataSchema(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

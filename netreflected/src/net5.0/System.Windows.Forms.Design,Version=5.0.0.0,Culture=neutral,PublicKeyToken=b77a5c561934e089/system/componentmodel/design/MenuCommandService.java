@@ -53,7 +53,7 @@ import system.componentmodel.design.MenuCommandsChangedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.MenuCommandService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.MenuCommandService</a>
  */
-public class MenuCommandService extends NetObjectAutoCloseable  {
+public class MenuCommandService extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -244,7 +244,20 @@ public class MenuCommandService extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

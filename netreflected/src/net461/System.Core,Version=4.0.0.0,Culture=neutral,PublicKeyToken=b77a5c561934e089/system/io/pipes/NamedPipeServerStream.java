@@ -131,6 +131,9 @@ public class NamedPipeServerStream extends PipeStream  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NamedPipeServerStream}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NamedPipeServerStream} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NamedPipeServerStream cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

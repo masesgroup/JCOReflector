@@ -119,6 +119,9 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IItemContainerGenerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IItemContainerGenerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IItemContainerGenerator ToIItemContainerGenerator(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

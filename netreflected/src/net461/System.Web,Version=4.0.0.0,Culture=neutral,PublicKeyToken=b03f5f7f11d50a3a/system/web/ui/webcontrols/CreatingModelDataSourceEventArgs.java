@@ -119,6 +119,9 @@ public class CreatingModelDataSourceEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CreatingModelDataSourceEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CreatingModelDataSourceEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CreatingModelDataSourceEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class WebRequestModuleElementCollection extends ConfigurationElementColle
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebRequestModuleElementCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebRequestModuleElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebRequestModuleElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class TraceSwitch extends Switch  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TraceSwitch}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TraceSwitch} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TraceSwitch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -126,6 +126,9 @@ public class Vector4 extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Vector4}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Vector4} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Vector4 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

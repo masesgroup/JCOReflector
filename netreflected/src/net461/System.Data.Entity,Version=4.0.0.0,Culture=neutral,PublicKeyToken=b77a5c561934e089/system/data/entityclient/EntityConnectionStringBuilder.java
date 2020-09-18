@@ -120,6 +120,9 @@ public class EntityConnectionStringBuilder extends DbConnectionStringBuilder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityConnectionStringBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EntityConnectionStringBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EntityConnectionStringBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

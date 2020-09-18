@@ -112,6 +112,9 @@ public class IModalServiceImplementation extends NetObject implements IModalServ
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IModalService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IModalService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IModalService ToIModalService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

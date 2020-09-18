@@ -121,6 +121,9 @@ public class EndpointIdentityExtension extends MarkupExtension  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EndpointIdentityExtension}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EndpointIdentityExtension} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EndpointIdentityExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

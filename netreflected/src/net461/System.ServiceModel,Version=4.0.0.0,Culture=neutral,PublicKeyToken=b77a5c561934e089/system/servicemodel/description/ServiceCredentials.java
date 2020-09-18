@@ -129,6 +129,9 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceCredentials}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceCredentials} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceCredentials cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

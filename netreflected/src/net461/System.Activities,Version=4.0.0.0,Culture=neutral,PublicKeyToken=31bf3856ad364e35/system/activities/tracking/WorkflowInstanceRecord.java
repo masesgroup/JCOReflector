@@ -120,6 +120,9 @@ public class WorkflowInstanceRecord extends TrackingRecord  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowInstanceRecord}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowInstanceRecord} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowInstanceRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

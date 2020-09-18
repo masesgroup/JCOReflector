@@ -118,6 +118,9 @@ public class NativeActivity extends Activity  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NativeActivity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NativeActivity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NativeActivity cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

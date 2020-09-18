@@ -120,6 +120,9 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRuleExpression}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRuleExpression} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRuleExpression ToIRuleExpression(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

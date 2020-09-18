@@ -60,6 +60,9 @@ public interface IPersistComponentSettings extends IJCOBridgeReflected {
     public static final String className = "System.Configuration.IPersistComponentSettings";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPersistComponentSettings}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPersistComponentSettings} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPersistComponentSettings ToIPersistComponentSettings(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

@@ -119,9 +119,9 @@ public class SaveFileDialog extends FileDialog  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SaveFileDialog}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SaveFileDialog} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SaveFileDialog} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SaveFileDialog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

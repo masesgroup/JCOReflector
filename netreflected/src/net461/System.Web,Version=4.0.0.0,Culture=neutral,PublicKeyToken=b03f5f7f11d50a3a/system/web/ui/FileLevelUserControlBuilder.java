@@ -118,6 +118,9 @@ public class FileLevelUserControlBuilder extends RootBuilder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileLevelUserControlBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FileLevelUserControlBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileLevelUserControlBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITaskFactory2}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITaskFactory2} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITaskFactory2 ToITaskFactory2(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

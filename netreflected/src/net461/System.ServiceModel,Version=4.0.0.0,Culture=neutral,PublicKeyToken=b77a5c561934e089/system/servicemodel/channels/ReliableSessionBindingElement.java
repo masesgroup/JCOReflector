@@ -120,6 +120,9 @@ public class ReliableSessionBindingElement extends BindingElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReliableSessionBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ReliableSessionBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ReliableSessionBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class InstanceKeyView extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceKeyView}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InstanceKeyView} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InstanceKeyView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

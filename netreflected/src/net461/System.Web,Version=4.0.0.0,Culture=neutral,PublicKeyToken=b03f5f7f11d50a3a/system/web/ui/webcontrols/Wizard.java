@@ -130,6 +130,9 @@ public class Wizard extends CompositeControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Wizard}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Wizard} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Wizard cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

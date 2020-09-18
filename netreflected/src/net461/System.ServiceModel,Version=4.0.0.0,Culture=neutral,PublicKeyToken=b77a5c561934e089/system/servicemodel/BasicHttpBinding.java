@@ -122,6 +122,9 @@ public class BasicHttpBinding extends HttpBindingBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BasicHttpBinding}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BasicHttpBinding} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BasicHttpBinding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

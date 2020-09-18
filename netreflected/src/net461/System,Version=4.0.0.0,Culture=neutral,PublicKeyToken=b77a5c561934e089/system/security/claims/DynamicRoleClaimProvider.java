@@ -118,6 +118,9 @@ public class DynamicRoleClaimProvider extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DynamicRoleClaimProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DynamicRoleClaimProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DynamicRoleClaimProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

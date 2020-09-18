@@ -121,9 +121,9 @@ public class SplineQuaternionKeyFrame extends QuaternionKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SplineQuaternionKeyFrame}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SplineQuaternionKeyFrame} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SplineQuaternionKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SplineQuaternionKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

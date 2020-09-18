@@ -118,6 +118,9 @@ public class CompensationExtension extends PersistenceParticipant  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompensationExtension}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CompensationExtension} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CompensationExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

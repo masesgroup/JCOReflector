@@ -119,6 +119,9 @@ public class CodeCommentStatement extends CodeStatement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeCommentStatement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CodeCommentStatement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeCommentStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

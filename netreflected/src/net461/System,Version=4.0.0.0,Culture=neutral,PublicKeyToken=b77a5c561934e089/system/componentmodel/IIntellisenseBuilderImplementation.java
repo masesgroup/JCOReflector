@@ -112,6 +112,9 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IIntellisenseBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IIntellisenseBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IIntellisenseBuilder ToIIntellisenseBuilder(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

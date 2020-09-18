@@ -120,6 +120,9 @@ public class EdmType extends GlobalItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EdmType}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EdmType} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EdmType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

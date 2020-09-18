@@ -118,6 +118,9 @@ public class SqlColumnEncryptionCngProvider extends SqlColumnEncryptionKeyStoreP
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlColumnEncryptionCngProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlColumnEncryptionCngProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlColumnEncryptionCngProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

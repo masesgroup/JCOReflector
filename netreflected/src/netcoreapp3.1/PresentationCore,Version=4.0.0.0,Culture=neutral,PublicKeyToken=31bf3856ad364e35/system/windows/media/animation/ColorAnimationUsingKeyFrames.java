@@ -120,9 +120,9 @@ public class ColorAnimationUsingKeyFrames extends ColorAnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ColorAnimationUsingKeyFrames}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ColorAnimationUsingKeyFrames} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ColorAnimationUsingKeyFrames} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ColorAnimationUsingKeyFrames cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

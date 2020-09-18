@@ -51,7 +51,7 @@ import system.Guid;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty</a>
  */
-public class ActiveDirectorySchemaProperty extends NetObjectAutoCloseable  {
+public class ActiveDirectorySchemaProperty extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -122,6 +122,9 @@ public class ActiveDirectorySchemaProperty extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectorySchemaProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActiveDirectorySchemaProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActiveDirectorySchemaProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -190,7 +193,20 @@ public class ActiveDirectorySchemaProperty extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

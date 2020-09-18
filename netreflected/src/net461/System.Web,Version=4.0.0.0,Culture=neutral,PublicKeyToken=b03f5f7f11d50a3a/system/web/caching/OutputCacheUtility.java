@@ -119,6 +119,9 @@ public class OutputCacheUtility extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OutputCacheUtility}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OutputCacheUtility} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OutputCacheUtility cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

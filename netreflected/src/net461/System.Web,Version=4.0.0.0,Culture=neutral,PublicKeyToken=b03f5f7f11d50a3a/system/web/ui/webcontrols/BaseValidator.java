@@ -121,6 +121,9 @@ public class BaseValidator extends Label  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BaseValidator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BaseValidator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BaseValidator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

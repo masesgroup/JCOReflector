@@ -118,6 +118,9 @@ public class DefaultTypeArgumentAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultTypeArgumentAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DefaultTypeArgumentAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DefaultTypeArgumentAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -124,6 +124,9 @@ public class XmlTextWriter extends XmlWriter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlTextWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlTextWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlTextWriter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

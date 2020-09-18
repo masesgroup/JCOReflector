@@ -146,9 +146,9 @@ public class ModuleBuilder extends Module  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModuleBuilder}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ModuleBuilder} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ModuleBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ModuleBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

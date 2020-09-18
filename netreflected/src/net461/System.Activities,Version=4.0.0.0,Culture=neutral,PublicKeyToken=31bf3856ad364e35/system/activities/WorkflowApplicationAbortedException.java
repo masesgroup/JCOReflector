@@ -139,6 +139,9 @@ public class WorkflowApplicationAbortedException extends WorkflowApplicationExce
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowApplicationAbortedException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowApplicationAbortedException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowApplicationAbortedException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -47,7 +47,7 @@ import system.Guid;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.EventProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.EventProvider</a>
  */
-public class EventProvider extends NetObjectAutoCloseable  {
+public class EventProvider extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -118,6 +118,9 @@ public class EventProvider extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EventProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -215,7 +218,20 @@ public class EventProvider extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

@@ -120,6 +120,9 @@ public class SecureConversationSecurityTokenParameters extends SecurityTokenPara
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecureConversationSecurityTokenParameters}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SecureConversationSecurityTokenParameters} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecureConversationSecurityTokenParameters cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

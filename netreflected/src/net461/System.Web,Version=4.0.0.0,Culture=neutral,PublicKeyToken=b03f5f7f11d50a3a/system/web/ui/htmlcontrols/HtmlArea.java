@@ -118,6 +118,9 @@ public class HtmlArea extends HtmlControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlArea}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HtmlArea} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HtmlArea cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class WSHttpBindingElement extends WSHttpBindingBaseElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSHttpBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WSHttpBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WSHttpBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

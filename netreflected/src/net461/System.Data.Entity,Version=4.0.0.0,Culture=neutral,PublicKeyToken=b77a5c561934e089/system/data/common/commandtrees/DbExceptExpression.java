@@ -119,6 +119,9 @@ public class DbExceptExpression extends DbBinaryExpression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbExceptExpression}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbExceptExpression} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbExceptExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

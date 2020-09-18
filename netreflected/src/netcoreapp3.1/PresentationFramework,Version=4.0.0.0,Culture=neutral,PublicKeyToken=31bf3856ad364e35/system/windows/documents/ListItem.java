@@ -129,9 +129,9 @@ public class ListItem extends TextElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListItem}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ListItem} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ListItem} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ListItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class PersonalizationState extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PersonalizationState}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PersonalizationState} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PersonalizationState cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

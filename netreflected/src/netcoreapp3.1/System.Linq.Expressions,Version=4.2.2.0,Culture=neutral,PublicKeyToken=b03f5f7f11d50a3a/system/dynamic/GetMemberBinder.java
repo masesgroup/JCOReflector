@@ -119,9 +119,9 @@ public class GetMemberBinder extends DynamicMetaObjectBinder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GetMemberBinder}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link GetMemberBinder} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GetMemberBinder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GetMemberBinder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

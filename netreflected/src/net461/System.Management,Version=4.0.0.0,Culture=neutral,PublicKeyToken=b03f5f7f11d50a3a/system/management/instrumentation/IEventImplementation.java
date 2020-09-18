@@ -112,6 +112,9 @@ public class IEventImplementation extends NetObject implements IEvent {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEvent}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEvent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEvent ToIEvent(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

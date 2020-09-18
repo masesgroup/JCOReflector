@@ -120,6 +120,9 @@ public class NetPipeSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetPipeSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NetPipeSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NetPipeSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -132,6 +132,9 @@ public class XmlSchema extends XmlSchemaObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchema}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlSchema} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchema cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

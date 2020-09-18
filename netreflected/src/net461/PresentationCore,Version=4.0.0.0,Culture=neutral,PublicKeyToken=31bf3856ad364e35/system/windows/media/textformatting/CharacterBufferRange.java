@@ -120,6 +120,9 @@ public class CharacterBufferRange extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CharacterBufferRange}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CharacterBufferRange} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CharacterBufferRange cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class DbProjectExpression extends DbExpression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbProjectExpression}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbProjectExpression} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbProjectExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

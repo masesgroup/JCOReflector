@@ -52,7 +52,7 @@ import system.xaml.XamlType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.XamlDebuggerXmlReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.XamlDebuggerXmlReader</a>
  */
-public class XamlDebuggerXmlReader extends NetObjectAutoCloseable  {
+public class XamlDebuggerXmlReader extends NetObject  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -123,6 +123,9 @@ public class XamlDebuggerXmlReader extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlDebuggerXmlReader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XamlDebuggerXmlReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlDebuggerXmlReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

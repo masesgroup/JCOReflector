@@ -119,6 +119,9 @@ public class SiteMapSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SiteMapSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SiteMapSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SiteMapSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

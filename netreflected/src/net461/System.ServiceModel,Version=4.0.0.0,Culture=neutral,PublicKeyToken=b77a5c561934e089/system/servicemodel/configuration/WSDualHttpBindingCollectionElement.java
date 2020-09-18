@@ -117,6 +117,9 @@ public class WSDualHttpBindingCollectionElement extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSDualHttpBindingCollectionElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WSDualHttpBindingCollectionElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WSDualHttpBindingCollectionElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

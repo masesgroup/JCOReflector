@@ -74,6 +74,9 @@ public interface IReplySessionChannel extends IJCOBridgeReflected, IReplyChannel
     public static final String className = "System.ServiceModel.Channels.IReplySessionChannel";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReplySessionChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IReplySessionChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IReplySessionChannel ToIReplySessionChannel(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

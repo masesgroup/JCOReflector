@@ -138,6 +138,9 @@ public class MappingException extends EntityException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MappingException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MappingException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MappingException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDataEnvironment}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDataEnvironment} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDataEnvironment ToIDataEnvironment(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

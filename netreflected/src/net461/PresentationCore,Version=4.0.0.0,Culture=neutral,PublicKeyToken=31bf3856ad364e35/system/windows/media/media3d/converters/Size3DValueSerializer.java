@@ -120,6 +120,9 @@ public class Size3DValueSerializer extends ValueSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Size3DValueSerializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Size3DValueSerializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Size3DValueSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

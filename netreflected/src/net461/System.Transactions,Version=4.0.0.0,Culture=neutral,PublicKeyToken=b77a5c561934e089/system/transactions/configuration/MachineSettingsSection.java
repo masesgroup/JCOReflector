@@ -119,6 +119,9 @@ public class MachineSettingsSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MachineSettingsSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MachineSettingsSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MachineSettingsSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -61,6 +61,9 @@ public interface IInstanceTable extends IJCOBridgeReflected {
     public static final String className = "System.Workflow.Runtime.DebugEngine.IInstanceTable";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInstanceTable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IInstanceTable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IInstanceTable ToIInstanceTable(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

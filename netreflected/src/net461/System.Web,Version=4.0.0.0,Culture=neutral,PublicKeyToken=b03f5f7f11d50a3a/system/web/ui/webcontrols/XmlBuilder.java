@@ -120,6 +120,9 @@ public class XmlBuilder extends ControlBuilder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

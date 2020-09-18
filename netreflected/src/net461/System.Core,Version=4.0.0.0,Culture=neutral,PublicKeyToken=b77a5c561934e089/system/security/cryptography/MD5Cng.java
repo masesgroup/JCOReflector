@@ -118,6 +118,9 @@ public class MD5Cng extends MD5  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MD5Cng}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MD5Cng} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MD5Cng cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

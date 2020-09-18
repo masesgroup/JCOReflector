@@ -121,6 +121,9 @@ public class WSTrustResponseSerializer extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustResponseSerializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WSTrustResponseSerializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WSTrustResponseSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -112,6 +112,9 @@ public class IInvokeProviderImplementation extends NetObject implements IInvokeP
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IInvokeProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IInvokeProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IInvokeProvider ToIInvokeProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

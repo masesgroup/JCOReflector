@@ -119,9 +119,9 @@ public class MarkupExtension extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MarkupExtension}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link MarkupExtension} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MarkupExtension} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MarkupExtension cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

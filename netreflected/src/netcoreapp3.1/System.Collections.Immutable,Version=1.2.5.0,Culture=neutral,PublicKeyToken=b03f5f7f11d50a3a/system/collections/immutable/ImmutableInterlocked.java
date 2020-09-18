@@ -117,9 +117,9 @@ public class ImmutableInterlocked extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImmutableInterlocked}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ImmutableInterlocked} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ImmutableInterlocked} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ImmutableInterlocked cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

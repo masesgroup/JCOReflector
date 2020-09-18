@@ -120,6 +120,9 @@ public class BlurBitmapEffect extends BitmapEffect  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BlurBitmapEffect}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BlurBitmapEffect} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BlurBitmapEffect cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class WebFormsReferenceManager extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebFormsReferenceManager}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebFormsReferenceManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebFormsReferenceManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

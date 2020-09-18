@@ -122,9 +122,9 @@ public class Site extends EvidenceBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Site}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Site} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Site} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Site cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

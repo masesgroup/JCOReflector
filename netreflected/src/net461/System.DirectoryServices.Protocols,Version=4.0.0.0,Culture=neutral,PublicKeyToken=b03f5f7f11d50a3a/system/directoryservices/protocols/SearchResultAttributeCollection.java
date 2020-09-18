@@ -121,6 +121,9 @@ public class SearchResultAttributeCollection extends DictionaryBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SearchResultAttributeCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SearchResultAttributeCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SearchResultAttributeCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

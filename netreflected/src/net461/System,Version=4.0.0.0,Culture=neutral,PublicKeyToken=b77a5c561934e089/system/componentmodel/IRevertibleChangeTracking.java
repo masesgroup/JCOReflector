@@ -62,6 +62,9 @@ public interface IRevertibleChangeTracking extends IJCOBridgeReflected, IChangeT
     public static final String className = "System.ComponentModel.IRevertibleChangeTracking";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRevertibleChangeTracking}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRevertibleChangeTracking} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRevertibleChangeTracking ToIRevertibleChangeTracking(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

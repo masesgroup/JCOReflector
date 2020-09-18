@@ -120,6 +120,9 @@ public class ConvertToAbsolutePath extends TaskExtension  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConvertToAbsolutePath}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ConvertToAbsolutePath} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConvertToAbsolutePath cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

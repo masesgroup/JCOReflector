@@ -63,6 +63,9 @@ public interface IQueryProvider extends IJCOBridgeReflected {
     public static final String className = "System.Linq.IQueryProvider";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IQueryProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IQueryProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IQueryProvider ToIQueryProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

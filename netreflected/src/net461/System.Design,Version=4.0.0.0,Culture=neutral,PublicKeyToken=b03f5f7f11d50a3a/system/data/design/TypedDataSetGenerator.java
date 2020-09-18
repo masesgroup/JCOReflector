@@ -123,6 +123,9 @@ public class TypedDataSetGenerator extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypedDataSetGenerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TypedDataSetGenerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TypedDataSetGenerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

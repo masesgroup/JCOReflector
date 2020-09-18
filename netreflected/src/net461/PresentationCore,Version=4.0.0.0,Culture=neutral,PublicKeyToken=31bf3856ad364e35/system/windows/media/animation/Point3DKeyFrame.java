@@ -120,6 +120,9 @@ public class Point3DKeyFrame extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Point3DKeyFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Point3DKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Point3DKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

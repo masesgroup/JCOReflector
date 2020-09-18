@@ -112,6 +112,9 @@ public class IISAPIRuntimeImplementation extends NetObject implements IISAPIRunt
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IISAPIRuntime}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IISAPIRuntime} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IISAPIRuntime ToIISAPIRuntime(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class SingleAnimationBase extends AnimationTimeline  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SingleAnimationBase}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SingleAnimationBase} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SingleAnimationBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

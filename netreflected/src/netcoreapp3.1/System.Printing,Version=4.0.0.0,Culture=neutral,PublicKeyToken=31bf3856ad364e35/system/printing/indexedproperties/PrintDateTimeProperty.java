@@ -118,9 +118,9 @@ public class PrintDateTimeProperty extends PrintProperty  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintDateTimeProperty}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link PrintDateTimeProperty} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrintDateTimeProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintDateTimeProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

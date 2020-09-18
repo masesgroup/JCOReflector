@@ -144,6 +144,9 @@ public class SqlMetaData extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlMetaData}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlMetaData} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlMetaData cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

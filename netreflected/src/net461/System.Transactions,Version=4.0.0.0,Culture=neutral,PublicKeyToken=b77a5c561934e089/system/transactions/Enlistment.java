@@ -117,6 +117,9 @@ public class Enlistment extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Enlistment}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Enlistment} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Enlistment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

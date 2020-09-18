@@ -119,6 +119,9 @@ public class ToolBarButtonClickEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolBarButtonClickEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ToolBarButtonClickEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolBarButtonClickEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

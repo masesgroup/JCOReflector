@@ -113,6 +113,9 @@ public class ITransportTokenAssertionProviderImplementation extends NetObject im
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITransportTokenAssertionProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITransportTokenAssertionProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITransportTokenAssertionProvider ToITransportTokenAssertionProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

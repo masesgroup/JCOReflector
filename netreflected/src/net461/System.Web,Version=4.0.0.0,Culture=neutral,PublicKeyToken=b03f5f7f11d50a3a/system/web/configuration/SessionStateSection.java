@@ -123,6 +123,9 @@ public class SessionStateSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SessionStateSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SessionStateSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SessionStateSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

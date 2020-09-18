@@ -119,6 +119,9 @@ public class BuildManagerHostUnloadEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BuildManagerHostUnloadEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BuildManagerHostUnloadEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BuildManagerHostUnloadEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -112,6 +112,9 @@ public class IResourceUrlGeneratorImplementation extends NetObject implements IR
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IResourceUrlGenerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IResourceUrlGenerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IResourceUrlGenerator ToIResourceUrlGenerator(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

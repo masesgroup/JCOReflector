@@ -118,6 +118,9 @@ public class BookmarkResumptionQueryElement extends TrackingQueryElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BookmarkResumptionQueryElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BookmarkResumptionQueryElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BookmarkResumptionQueryElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class BaseProperty extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BaseProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BaseProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BaseProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

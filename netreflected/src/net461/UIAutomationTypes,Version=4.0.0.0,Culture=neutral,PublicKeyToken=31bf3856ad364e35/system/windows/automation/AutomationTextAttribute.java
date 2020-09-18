@@ -119,6 +119,9 @@ public class AutomationTextAttribute extends AutomationIdentifier  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AutomationTextAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AutomationTextAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AutomationTextAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

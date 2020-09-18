@@ -126,9 +126,9 @@ public class WindowChrome extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WindowChrome}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link WindowChrome} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WindowChrome} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WindowChrome cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

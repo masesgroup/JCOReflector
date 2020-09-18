@@ -119,6 +119,9 @@ public class XamlDataDrivenToolTask extends ToolTask  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlDataDrivenToolTask}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XamlDataDrivenToolTask} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlDataDrivenToolTask cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

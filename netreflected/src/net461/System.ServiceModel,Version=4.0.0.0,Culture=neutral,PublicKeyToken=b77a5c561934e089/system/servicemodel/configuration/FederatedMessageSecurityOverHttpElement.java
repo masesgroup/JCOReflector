@@ -124,6 +124,9 @@ public class FederatedMessageSecurityOverHttpElement extends ServiceModelConfigu
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FederatedMessageSecurityOverHttpElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FederatedMessageSecurityOverHttpElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FederatedMessageSecurityOverHttpElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

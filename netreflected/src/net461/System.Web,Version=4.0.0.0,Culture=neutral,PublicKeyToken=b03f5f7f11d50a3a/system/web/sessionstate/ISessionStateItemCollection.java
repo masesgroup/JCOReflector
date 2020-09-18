@@ -63,6 +63,9 @@ public interface ISessionStateItemCollection extends IJCOBridgeReflected, IColle
     public static final String className = "System.Web.SessionState.ISessionStateItemCollection";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISessionStateItemCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISessionStateItemCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISessionStateItemCollection ToISessionStateItemCollection(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

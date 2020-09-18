@@ -115,6 +115,9 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IOperationInvoker}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IOperationInvoker} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IOperationInvoker ToIOperationInvoker(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

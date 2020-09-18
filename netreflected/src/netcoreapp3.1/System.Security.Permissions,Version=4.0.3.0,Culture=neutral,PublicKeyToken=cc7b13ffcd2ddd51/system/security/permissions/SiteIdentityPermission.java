@@ -122,9 +122,9 @@ public class SiteIdentityPermission extends CodeAccessPermission  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SiteIdentityPermission}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SiteIdentityPermission} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SiteIdentityPermission} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SiteIdentityPermission cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

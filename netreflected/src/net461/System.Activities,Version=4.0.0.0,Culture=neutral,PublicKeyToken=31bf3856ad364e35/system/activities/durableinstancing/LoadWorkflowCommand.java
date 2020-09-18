@@ -118,6 +118,9 @@ public class LoadWorkflowCommand extends InstancePersistenceCommand  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LoadWorkflowCommand}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LoadWorkflowCommand} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LoadWorkflowCommand cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

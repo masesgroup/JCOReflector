@@ -122,6 +122,9 @@ public class EndpointReference extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EndpointReference}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EndpointReference} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EndpointReference cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

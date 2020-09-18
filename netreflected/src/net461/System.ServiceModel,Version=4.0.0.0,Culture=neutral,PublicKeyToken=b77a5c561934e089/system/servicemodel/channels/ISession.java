@@ -60,6 +60,9 @@ public interface ISession extends IJCOBridgeReflected {
     public static final String className = "System.ServiceModel.Channels.ISession";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISession}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISession} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISession ToISession(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

@@ -130,6 +130,9 @@ public class PeerContact extends Peer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PeerContact}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PeerContact} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PeerContact cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

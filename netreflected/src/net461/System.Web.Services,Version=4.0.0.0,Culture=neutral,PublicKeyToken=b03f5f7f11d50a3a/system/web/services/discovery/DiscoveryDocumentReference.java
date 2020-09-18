@@ -120,6 +120,9 @@ public class DiscoveryDocumentReference extends DiscoveryReference  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiscoveryDocumentReference}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DiscoveryDocumentReference} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiscoveryDocumentReference cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

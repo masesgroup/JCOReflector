@@ -120,6 +120,9 @@ public class CommonBehaviorsSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CommonBehaviorsSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CommonBehaviorsSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CommonBehaviorsSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

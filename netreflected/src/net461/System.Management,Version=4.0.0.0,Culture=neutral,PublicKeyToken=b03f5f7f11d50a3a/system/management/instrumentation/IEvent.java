@@ -60,6 +60,9 @@ public interface IEvent extends IJCOBridgeReflected {
     public static final String className = "System.Management.Instrumentation.IEvent";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEvent}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEvent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEvent ToIEvent(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

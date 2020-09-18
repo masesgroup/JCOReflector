@@ -138,6 +138,9 @@ public class NavigatorInvalidBodyAccessException extends InvalidBodyAccessExcept
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NavigatorInvalidBodyAccessException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NavigatorInvalidBodyAccessException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NavigatorInvalidBodyAccessException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

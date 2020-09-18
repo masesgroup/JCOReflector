@@ -118,9 +118,9 @@ public class SHA1Managed extends SHA1  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SHA1Managed}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SHA1Managed} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SHA1Managed} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SHA1Managed cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

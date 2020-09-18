@@ -61,6 +61,9 @@ public interface IHasXmlNode extends IJCOBridgeReflected {
     public static final String className = "System.Xml.IHasXmlNode";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHasXmlNode}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHasXmlNode} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHasXmlNode ToIHasXmlNode(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

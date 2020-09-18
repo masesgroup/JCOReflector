@@ -123,6 +123,9 @@ public class WorkflowElementDialog extends ContentControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowElementDialog}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowElementDialog} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowElementDialog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

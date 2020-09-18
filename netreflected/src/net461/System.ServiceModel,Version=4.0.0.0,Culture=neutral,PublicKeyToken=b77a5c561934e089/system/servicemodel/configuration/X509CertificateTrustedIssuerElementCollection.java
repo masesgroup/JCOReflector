@@ -117,6 +117,9 @@ public class X509CertificateTrustedIssuerElementCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509CertificateTrustedIssuerElementCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509CertificateTrustedIssuerElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509CertificateTrustedIssuerElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class WebConfigurationFileMap extends ConfigurationFileMap  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebConfigurationFileMap}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebConfigurationFileMap} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebConfigurationFileMap cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

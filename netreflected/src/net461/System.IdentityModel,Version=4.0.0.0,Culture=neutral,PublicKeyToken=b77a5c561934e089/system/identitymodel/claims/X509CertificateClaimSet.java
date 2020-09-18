@@ -50,7 +50,7 @@ import system.identitymodel.claims.Claim;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.X509CertificateClaimSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.X509CertificateClaimSet</a>
  */
-public class X509CertificateClaimSet extends ClaimSet  {
+public class X509CertificateClaimSet extends ClaimSet implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -121,6 +121,9 @@ public class X509CertificateClaimSet extends ClaimSet  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509CertificateClaimSet}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509CertificateClaimSet} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509CertificateClaimSet cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -157,7 +160,20 @@ public class X509CertificateClaimSet extends ClaimSet  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

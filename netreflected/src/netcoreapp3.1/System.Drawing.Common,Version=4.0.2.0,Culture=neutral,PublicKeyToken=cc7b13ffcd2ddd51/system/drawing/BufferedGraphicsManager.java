@@ -118,9 +118,9 @@ public class BufferedGraphicsManager extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BufferedGraphicsManager}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link BufferedGraphicsManager} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BufferedGraphicsManager} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BufferedGraphicsManager cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

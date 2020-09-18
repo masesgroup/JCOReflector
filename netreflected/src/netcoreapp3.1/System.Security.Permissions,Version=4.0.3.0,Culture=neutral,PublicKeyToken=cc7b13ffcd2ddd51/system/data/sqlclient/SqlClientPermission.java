@@ -122,9 +122,9 @@ public class SqlClientPermission extends DBDataPermission  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlClientPermission}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SqlClientPermission} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlClientPermission} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlClientPermission cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class AuthenticationModuleElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AuthenticationModuleElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AuthenticationModuleElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AuthenticationModuleElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

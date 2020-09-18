@@ -121,9 +121,9 @@ public class ControlType extends AutomationIdentifier  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ControlType}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ControlType} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ControlType} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ControlType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

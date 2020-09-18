@@ -125,9 +125,9 @@ public class ToolStripPanelRow extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolStripPanelRow}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ToolStripPanelRow} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ToolStripPanelRow} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolStripPanelRow cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

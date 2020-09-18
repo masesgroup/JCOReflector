@@ -118,6 +118,9 @@ public class LocalizedEntry extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LocalizedEntry}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LocalizedEntry} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LocalizedEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

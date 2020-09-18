@@ -114,6 +114,9 @@ public class IComponentInitializerImplementation extends NetObject implements IC
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IComponentInitializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IComponentInitializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IComponentInitializer ToIComponentInitializer(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class UseManagedPresentationElement extends BindingElementExtensionElemen
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UseManagedPresentationElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UseManagedPresentationElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UseManagedPresentationElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

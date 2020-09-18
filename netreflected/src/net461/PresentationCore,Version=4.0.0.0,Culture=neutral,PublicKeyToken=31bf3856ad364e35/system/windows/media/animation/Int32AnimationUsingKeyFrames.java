@@ -120,6 +120,9 @@ public class Int32AnimationUsingKeyFrames extends Int32AnimationBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int32AnimationUsingKeyFrames}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Int32AnimationUsingKeyFrames} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Int32AnimationUsingKeyFrames cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

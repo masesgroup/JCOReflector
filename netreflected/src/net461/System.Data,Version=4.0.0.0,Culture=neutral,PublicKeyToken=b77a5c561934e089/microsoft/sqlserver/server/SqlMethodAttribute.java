@@ -118,6 +118,9 @@ public class SqlMethodAttribute extends SqlFunctionAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlMethodAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlMethodAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlMethodAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

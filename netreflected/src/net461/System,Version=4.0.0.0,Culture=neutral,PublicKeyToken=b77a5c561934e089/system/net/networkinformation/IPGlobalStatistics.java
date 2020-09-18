@@ -117,6 +117,9 @@ public class IPGlobalStatistics extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPGlobalStatistics}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPGlobalStatistics} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPGlobalStatistics cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

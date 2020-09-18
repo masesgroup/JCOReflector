@@ -117,6 +117,9 @@ public class PackagePartCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PackagePartCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PackagePartCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PackagePartCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

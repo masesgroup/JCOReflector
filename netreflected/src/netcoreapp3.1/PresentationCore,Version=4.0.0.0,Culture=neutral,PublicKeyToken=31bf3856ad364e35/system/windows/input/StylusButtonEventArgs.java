@@ -120,9 +120,9 @@ public class StylusButtonEventArgs extends StylusEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StylusButtonEventArgs}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link StylusButtonEventArgs} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StylusButtonEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StylusButtonEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

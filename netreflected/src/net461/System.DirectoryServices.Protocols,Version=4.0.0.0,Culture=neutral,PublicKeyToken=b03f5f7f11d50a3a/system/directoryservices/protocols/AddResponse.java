@@ -118,6 +118,9 @@ public class AddResponse extends DirectoryResponse  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AddResponse}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AddResponse} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AddResponse cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

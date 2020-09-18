@@ -118,6 +118,9 @@ public class DefaultWorkflowLoaderService extends WorkflowLoaderService  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultWorkflowLoaderService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DefaultWorkflowLoaderService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DefaultWorkflowLoaderService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

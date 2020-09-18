@@ -121,6 +121,9 @@ public class DiscoveryClientReferenceCollection extends DictionaryBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiscoveryClientReferenceCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DiscoveryClientReferenceCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiscoveryClientReferenceCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

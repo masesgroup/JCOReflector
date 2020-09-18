@@ -60,6 +60,9 @@ public interface IVbcHostObjectFreeThreaded extends IJCOBridgeReflected {
     public static final String className = "Microsoft.Build.Tasks.Hosting.IVbcHostObjectFreeThreaded";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVbcHostObjectFreeThreaded}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IVbcHostObjectFreeThreaded} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IVbcHostObjectFreeThreaded ToIVbcHostObjectFreeThreaded(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

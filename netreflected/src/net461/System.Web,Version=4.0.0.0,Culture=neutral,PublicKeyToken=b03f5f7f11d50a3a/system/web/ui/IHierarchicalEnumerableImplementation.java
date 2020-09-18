@@ -114,6 +114,9 @@ public class IHierarchicalEnumerableImplementation extends IEnumerableImplementa
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHierarchicalEnumerable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHierarchicalEnumerable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHierarchicalEnumerable ToIHierarchicalEnumerable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

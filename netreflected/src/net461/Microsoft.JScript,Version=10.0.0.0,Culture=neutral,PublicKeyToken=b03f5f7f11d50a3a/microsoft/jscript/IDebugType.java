@@ -60,6 +60,9 @@ public interface IDebugType extends IJCOBridgeReflected {
     public static final String className = "Microsoft.JScript.IDebugType";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDebugType}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDebugType} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDebugType ToIDebugType(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

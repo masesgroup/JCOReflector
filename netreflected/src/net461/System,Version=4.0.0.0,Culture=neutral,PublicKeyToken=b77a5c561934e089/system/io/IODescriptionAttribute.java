@@ -118,6 +118,9 @@ public class IODescriptionAttribute extends DescriptionAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IODescriptionAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IODescriptionAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IODescriptionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

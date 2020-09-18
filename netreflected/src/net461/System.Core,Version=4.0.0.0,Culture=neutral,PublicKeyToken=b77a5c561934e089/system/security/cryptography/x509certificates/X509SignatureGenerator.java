@@ -123,6 +123,9 @@ public class X509SignatureGenerator extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509SignatureGenerator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509SignatureGenerator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509SignatureGenerator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

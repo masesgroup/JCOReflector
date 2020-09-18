@@ -126,6 +126,9 @@ public class EntityProviderFactory extends DbProviderFactory  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityProviderFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EntityProviderFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EntityProviderFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,9 +121,9 @@ public class XmlDocumentFragment extends XmlNode  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlDocumentFragment}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link XmlDocumentFragment} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlDocumentFragment} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlDocumentFragment cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -115,6 +115,9 @@ public class IReceiveMarkupExtensionImplementation extends NetObject implements 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReceiveMarkupExtension}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IReceiveMarkupExtension} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IReceiveMarkupExtension ToIReceiveMarkupExtension(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

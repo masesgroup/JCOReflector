@@ -120,9 +120,9 @@ public class DataGridViewRowHeaderCell extends DataGridViewHeaderCell  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewRowHeaderCell}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DataGridViewRowHeaderCell} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridViewRowHeaderCell} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewRowHeaderCell cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

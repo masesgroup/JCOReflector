@@ -114,6 +114,9 @@ public class IProductImplementation extends NetObject implements IProduct {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProduct}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IProduct} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IProduct ToIProduct(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class SingleType extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SingleType}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SingleType} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SingleType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

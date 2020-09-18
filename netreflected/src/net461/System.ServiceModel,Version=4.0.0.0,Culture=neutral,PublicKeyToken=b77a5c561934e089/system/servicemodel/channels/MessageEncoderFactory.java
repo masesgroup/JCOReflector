@@ -119,6 +119,9 @@ public class MessageEncoderFactory extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageEncoderFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessageEncoderFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessageEncoderFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

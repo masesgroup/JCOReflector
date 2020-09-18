@@ -126,6 +126,9 @@ public class HttpServerChannel extends BaseChannelWithProperties  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpServerChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpServerChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpServerChannel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

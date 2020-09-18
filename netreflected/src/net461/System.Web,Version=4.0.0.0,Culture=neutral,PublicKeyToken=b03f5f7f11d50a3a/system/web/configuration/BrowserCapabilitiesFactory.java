@@ -120,6 +120,9 @@ public class BrowserCapabilitiesFactory extends BrowserCapabilitiesFactoryBase  
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BrowserCapabilitiesFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BrowserCapabilitiesFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BrowserCapabilitiesFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

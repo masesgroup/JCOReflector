@@ -60,6 +60,9 @@ public interface IWin32Window extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Interop.IWin32Window";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWin32Window}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWin32Window} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWin32Window ToIWin32Window(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

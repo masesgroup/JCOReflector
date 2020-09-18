@@ -117,6 +117,9 @@ public class PageScalingFactorRange extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PageScalingFactorRange}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PageScalingFactorRange} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PageScalingFactorRange cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

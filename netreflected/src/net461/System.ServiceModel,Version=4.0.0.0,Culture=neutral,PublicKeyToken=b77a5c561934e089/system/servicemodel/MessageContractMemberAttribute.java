@@ -119,6 +119,9 @@ public class MessageContractMemberAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageContractMemberAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessageContractMemberAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessageContractMemberAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

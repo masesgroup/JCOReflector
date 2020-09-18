@@ -114,6 +114,9 @@ public class IPersistUIStateImplementation extends NetObject implements IPersist
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPersistUIState}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPersistUIState} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPersistUIState ToIPersistUIState(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

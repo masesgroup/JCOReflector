@@ -114,6 +114,9 @@ public class IPropertyFilterTargetImplementation extends NetObject implements IP
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPropertyFilterTarget}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPropertyFilterTarget} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPropertyFilterTarget ToIPropertyFilterTarget(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

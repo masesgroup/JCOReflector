@@ -120,6 +120,9 @@ public class WindowsTokenRoleProvider extends RoleProvider  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WindowsTokenRoleProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WindowsTokenRoleProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WindowsTokenRoleProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

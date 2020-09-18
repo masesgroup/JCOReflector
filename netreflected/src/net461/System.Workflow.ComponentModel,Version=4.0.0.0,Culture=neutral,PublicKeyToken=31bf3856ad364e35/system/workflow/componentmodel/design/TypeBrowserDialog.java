@@ -123,6 +123,9 @@ public class TypeBrowserDialog extends Form  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeBrowserDialog}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TypeBrowserDialog} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TypeBrowserDialog cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LocalServiceSecuritySettingsElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LocalServiceSecuritySettingsElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LocalServiceSecuritySettingsElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

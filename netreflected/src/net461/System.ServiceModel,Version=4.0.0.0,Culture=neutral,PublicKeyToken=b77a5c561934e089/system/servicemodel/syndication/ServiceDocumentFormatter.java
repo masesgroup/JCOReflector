@@ -120,6 +120,9 @@ public class ServiceDocumentFormatter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceDocumentFormatter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceDocumentFormatter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceDocumentFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

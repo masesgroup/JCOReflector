@@ -119,6 +119,9 @@ public class DocumentPageViewAutomationPeer extends FrameworkElementAutomationPe
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DocumentPageViewAutomationPeer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DocumentPageViewAutomationPeer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DocumentPageViewAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

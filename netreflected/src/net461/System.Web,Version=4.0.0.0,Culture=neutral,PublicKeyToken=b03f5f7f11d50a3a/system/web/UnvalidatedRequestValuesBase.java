@@ -121,6 +121,9 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnvalidatedRequestValuesBase}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UnvalidatedRequestValuesBase} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UnvalidatedRequestValuesBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

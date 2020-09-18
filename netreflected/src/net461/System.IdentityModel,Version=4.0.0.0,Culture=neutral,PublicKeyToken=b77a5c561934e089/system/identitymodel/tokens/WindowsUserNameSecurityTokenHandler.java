@@ -118,6 +118,9 @@ public class WindowsUserNameSecurityTokenHandler extends UserNameSecurityTokenHa
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WindowsUserNameSecurityTokenHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WindowsUserNameSecurityTokenHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WindowsUserNameSecurityTokenHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

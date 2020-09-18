@@ -118,6 +118,9 @@ public class Expando extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Expando}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Expando} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Expando cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

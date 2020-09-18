@@ -140,9 +140,9 @@ public class PrintServerException extends PrintSystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintServerException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link PrintServerException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrintServerException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintServerException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

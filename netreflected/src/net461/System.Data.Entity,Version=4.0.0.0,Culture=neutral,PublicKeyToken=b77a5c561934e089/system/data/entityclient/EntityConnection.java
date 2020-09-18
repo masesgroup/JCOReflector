@@ -124,6 +124,9 @@ public class EntityConnection extends DbConnection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EntityConnection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EntityConnection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EntityConnection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

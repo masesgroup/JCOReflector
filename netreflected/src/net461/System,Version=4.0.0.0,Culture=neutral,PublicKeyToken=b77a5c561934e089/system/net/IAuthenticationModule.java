@@ -64,6 +64,9 @@ public interface IAuthenticationModule extends IJCOBridgeReflected {
     public static final String className = "System.Net.IAuthenticationModule";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAuthenticationModule}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAuthenticationModule} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAuthenticationModule ToIAuthenticationModule(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

@@ -118,6 +118,9 @@ public class HttpModuleAction extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpModuleAction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpModuleAction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpModuleAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

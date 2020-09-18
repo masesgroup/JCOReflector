@@ -112,6 +112,9 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICollectionViewLiveShaping}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICollectionViewLiveShaping} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICollectionViewLiveShaping ToICollectionViewLiveShaping(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

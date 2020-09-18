@@ -118,6 +118,9 @@ public class ActivityChangeAction extends WorkflowChangeAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityChangeAction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityChangeAction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityChangeAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

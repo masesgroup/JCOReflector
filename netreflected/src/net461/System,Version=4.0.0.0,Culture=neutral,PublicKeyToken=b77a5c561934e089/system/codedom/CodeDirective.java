@@ -118,6 +118,9 @@ public class CodeDirective extends CodeObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeDirective}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CodeDirective} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeDirective cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

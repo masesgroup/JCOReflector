@@ -143,9 +143,9 @@ public class CodeDomSerializerException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeDomSerializerException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link CodeDomSerializerException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CodeDomSerializerException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeDomSerializerException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

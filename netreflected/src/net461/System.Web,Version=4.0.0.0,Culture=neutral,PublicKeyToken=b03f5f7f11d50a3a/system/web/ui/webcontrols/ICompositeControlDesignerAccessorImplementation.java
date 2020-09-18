@@ -112,6 +112,9 @@ public class ICompositeControlDesignerAccessorImplementation extends NetObject i
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICompositeControlDesignerAccessor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICompositeControlDesignerAccessor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICompositeControlDesignerAccessor ToICompositeControlDesignerAccessor(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -123,9 +123,9 @@ public class GeneralTransform3D extends Animatable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GeneralTransform3D}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link GeneralTransform3D} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GeneralTransform3D} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GeneralTransform3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

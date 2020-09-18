@@ -63,6 +63,9 @@ public interface IExpressionEvaluationFrame extends IJCOBridgeReflected {
     public static final String className = "System.Workflow.Runtime.DebugEngine.IExpressionEvaluationFrame";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExpressionEvaluationFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IExpressionEvaluationFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IExpressionEvaluationFrame ToIExpressionEvaluationFrame(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

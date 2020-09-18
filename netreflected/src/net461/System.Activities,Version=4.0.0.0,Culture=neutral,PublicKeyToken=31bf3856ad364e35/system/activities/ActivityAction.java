@@ -118,6 +118,9 @@ public class ActivityAction extends ActivityDelegate  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityAction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityAction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityAction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

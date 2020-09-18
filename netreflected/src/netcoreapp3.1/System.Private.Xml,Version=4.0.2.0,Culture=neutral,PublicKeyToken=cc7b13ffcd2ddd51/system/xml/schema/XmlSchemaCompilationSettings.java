@@ -117,9 +117,9 @@ public class XmlSchemaCompilationSettings extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlSchemaCompilationSettings}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link XmlSchemaCompilationSettings} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlSchemaCompilationSettings} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlSchemaCompilationSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

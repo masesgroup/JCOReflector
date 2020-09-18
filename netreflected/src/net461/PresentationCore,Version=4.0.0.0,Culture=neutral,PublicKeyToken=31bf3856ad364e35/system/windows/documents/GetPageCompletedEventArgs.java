@@ -119,6 +119,9 @@ public class GetPageCompletedEventArgs extends AsyncCompletedEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GetPageCompletedEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GetPageCompletedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GetPageCompletedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

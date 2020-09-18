@@ -60,6 +60,9 @@ public interface IDtcTransaction extends IJCOBridgeReflected {
     public static final String className = "System.Transactions.IDtcTransaction";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDtcTransaction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDtcTransaction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDtcTransaction ToIDtcTransaction(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

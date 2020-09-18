@@ -120,6 +120,9 @@ public class Types extends DocumentableItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Types}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Types} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Types cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

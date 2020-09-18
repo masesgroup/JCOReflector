@@ -123,6 +123,9 @@ public class WorkflowViewElement extends ContentControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowViewElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowViewElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowViewElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

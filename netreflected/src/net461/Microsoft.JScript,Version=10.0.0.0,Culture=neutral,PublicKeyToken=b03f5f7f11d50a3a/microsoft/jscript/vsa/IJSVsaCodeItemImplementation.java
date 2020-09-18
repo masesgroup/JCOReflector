@@ -116,6 +116,9 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IJSVsaCodeItem}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IJSVsaCodeItem} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IJSVsaCodeItem ToIJSVsaCodeItem(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

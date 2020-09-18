@@ -121,6 +121,9 @@ public class LowerCaseStringConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LowerCaseStringConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LowerCaseStringConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LowerCaseStringConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

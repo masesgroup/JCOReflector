@@ -115,6 +115,9 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISerializerFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISerializerFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISerializerFactory ToISerializerFactory(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

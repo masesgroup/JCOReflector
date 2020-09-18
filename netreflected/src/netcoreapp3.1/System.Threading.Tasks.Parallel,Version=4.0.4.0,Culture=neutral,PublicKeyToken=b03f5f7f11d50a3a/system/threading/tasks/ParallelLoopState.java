@@ -117,9 +117,9 @@ public class ParallelLoopState extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ParallelLoopState}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ParallelLoopState} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ParallelLoopState} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ParallelLoopState cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class IMembershipConditionImplementation extends NetObject implements IMe
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMembershipCondition}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMembershipCondition} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMembershipCondition ToIMembershipCondition(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

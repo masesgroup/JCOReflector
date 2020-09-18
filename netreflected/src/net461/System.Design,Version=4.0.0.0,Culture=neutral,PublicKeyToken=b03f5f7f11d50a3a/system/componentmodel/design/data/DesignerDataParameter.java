@@ -119,6 +119,9 @@ public class DesignerDataParameter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DesignerDataParameter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DesignerDataParameter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DesignerDataParameter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

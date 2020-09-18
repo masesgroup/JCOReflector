@@ -115,6 +115,9 @@ public class IUnvalidatedValueProviderImplementation extends NetObject implement
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IUnvalidatedValueProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IUnvalidatedValueProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IUnvalidatedValueProvider ToIUnvalidatedValueProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

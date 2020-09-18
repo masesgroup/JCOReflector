@@ -121,6 +121,9 @@ public class X509InitiatorCertificateServiceElement extends ConfigurationElement
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509InitiatorCertificateServiceElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509InitiatorCertificateServiceElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509InitiatorCertificateServiceElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -52,7 +52,7 @@ import system.drawing.Graphics;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.FontFamily" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.FontFamily</a>
  */
-public class FontFamily extends MarshalByRefObject  {
+public class FontFamily extends MarshalByRefObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -123,6 +123,9 @@ public class FontFamily extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FontFamily}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FontFamily} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FontFamily cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -256,7 +259,20 @@ public class FontFamily extends MarshalByRefObject  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

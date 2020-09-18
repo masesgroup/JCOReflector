@@ -55,7 +55,7 @@ import system.workflow.componentmodel.design.AmbientTheme;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowTheme" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowTheme</a>
  */
-public class WorkflowTheme extends NetObjectAutoCloseable  {
+public class WorkflowTheme extends NetObject  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -126,6 +126,9 @@ public class WorkflowTheme extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowTheme}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowTheme} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowTheme cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

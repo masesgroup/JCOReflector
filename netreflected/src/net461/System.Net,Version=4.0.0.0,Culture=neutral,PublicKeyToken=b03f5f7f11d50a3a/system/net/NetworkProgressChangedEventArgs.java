@@ -118,6 +118,9 @@ public class NetworkProgressChangedEventArgs extends ProgressChangedEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetworkProgressChangedEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NetworkProgressChangedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NetworkProgressChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

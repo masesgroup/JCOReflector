@@ -64,6 +64,9 @@ public interface IManipulator extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Input.IManipulator";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IManipulator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IManipulator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IManipulator ToIManipulator(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

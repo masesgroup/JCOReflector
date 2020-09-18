@@ -118,9 +118,9 @@ public class FileVersionInfo extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileVersionInfo}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link FileVersionInfo} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FileVersionInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileVersionInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

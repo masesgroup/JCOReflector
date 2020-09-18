@@ -118,6 +118,9 @@ public class ActivityStateQuery extends TrackingQuery  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityStateQuery}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityStateQuery} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityStateQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

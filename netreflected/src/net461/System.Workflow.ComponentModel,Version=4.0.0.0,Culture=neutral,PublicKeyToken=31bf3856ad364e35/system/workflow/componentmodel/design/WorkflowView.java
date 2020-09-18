@@ -131,6 +131,9 @@ public class WorkflowView extends UserControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowView}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowView} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowView cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

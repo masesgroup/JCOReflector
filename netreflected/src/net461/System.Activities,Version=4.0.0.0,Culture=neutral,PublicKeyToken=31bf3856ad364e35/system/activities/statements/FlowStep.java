@@ -119,6 +119,9 @@ public class FlowStep extends FlowNode  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FlowStep}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FlowStep} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FlowStep cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

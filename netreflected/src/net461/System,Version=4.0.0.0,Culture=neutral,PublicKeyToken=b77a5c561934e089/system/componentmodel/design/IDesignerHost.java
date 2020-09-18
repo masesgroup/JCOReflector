@@ -74,6 +74,9 @@ public interface IDesignerHost extends IJCOBridgeReflected, IServiceContainer, I
     public static final String className = "System.ComponentModel.Design.IDesignerHost";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerHost}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDesignerHost} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDesignerHost ToIDesignerHost(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

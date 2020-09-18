@@ -116,6 +116,9 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITemplateEditingFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ITemplateEditingFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ITemplateEditingFrame ToITemplateEditingFrame(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

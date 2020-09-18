@@ -114,6 +114,9 @@ public class IXamlObjectWriterFactoryImplementation extends NetObject implements
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXamlObjectWriterFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXamlObjectWriterFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXamlObjectWriterFactory ToIXamlObjectWriterFactory(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

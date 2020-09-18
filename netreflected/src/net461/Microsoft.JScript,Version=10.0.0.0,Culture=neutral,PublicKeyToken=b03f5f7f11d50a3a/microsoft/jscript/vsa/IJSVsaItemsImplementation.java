@@ -116,6 +116,9 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IJSVsaItems}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IJSVsaItems} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IJSVsaItems ToIJSVsaItems(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

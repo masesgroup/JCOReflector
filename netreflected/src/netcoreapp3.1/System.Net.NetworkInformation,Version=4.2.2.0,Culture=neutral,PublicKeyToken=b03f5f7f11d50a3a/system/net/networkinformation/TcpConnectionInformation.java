@@ -119,9 +119,9 @@ public class TcpConnectionInformation extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TcpConnectionInformation}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TcpConnectionInformation} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TcpConnectionInformation} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TcpConnectionInformation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

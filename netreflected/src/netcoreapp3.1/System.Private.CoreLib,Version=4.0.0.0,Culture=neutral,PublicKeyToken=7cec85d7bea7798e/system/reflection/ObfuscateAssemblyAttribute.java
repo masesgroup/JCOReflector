@@ -118,9 +118,9 @@ public class ObfuscateAssemblyAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObfuscateAssemblyAttribute}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ObfuscateAssemblyAttribute} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObfuscateAssemblyAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObfuscateAssemblyAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

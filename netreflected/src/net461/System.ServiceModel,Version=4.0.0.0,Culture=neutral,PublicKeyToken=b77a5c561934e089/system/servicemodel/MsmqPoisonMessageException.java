@@ -140,6 +140,9 @@ public class MsmqPoisonMessageException extends PoisonMessageException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MsmqPoisonMessageException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MsmqPoisonMessageException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MsmqPoisonMessageException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class IdentityProviderSingleSignOnDescriptor extends SingleSignOnDescript
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IdentityProviderSingleSignOnDescriptor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IdentityProviderSingleSignOnDescriptor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IdentityProviderSingleSignOnDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

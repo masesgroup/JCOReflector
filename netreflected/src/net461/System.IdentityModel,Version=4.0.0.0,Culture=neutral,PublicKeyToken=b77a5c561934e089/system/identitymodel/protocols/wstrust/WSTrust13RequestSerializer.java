@@ -122,6 +122,9 @@ public class WSTrust13RequestSerializer extends WSTrustRequestSerializer  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrust13RequestSerializer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WSTrust13RequestSerializer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WSTrust13RequestSerializer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

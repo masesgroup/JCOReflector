@@ -120,6 +120,9 @@ public class ModelStateDictionary extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ModelStateDictionary}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ModelStateDictionary} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ModelStateDictionary cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

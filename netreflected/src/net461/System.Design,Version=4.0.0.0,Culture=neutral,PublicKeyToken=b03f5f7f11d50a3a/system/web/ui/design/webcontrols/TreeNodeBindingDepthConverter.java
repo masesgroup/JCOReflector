@@ -121,6 +121,9 @@ public class TreeNodeBindingDepthConverter extends Int32Converter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TreeNodeBindingDepthConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TreeNodeBindingDepthConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TreeNodeBindingDepthConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

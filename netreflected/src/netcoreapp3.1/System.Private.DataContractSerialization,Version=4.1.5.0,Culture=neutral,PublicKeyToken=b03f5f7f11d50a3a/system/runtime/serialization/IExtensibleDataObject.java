@@ -61,6 +61,9 @@ public interface IExtensibleDataObject extends IJCOBridgeReflected {
     public static final String className = "System.Runtime.Serialization.IExtensibleDataObject";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IExtensibleDataObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IExtensibleDataObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IExtensibleDataObject ToIExtensibleDataObject(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.DataContractSerialization, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

@@ -119,9 +119,9 @@ public class FrameworkRichTextComposition extends FrameworkTextComposition  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FrameworkRichTextComposition}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link FrameworkRichTextComposition} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FrameworkRichTextComposition} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FrameworkRichTextComposition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

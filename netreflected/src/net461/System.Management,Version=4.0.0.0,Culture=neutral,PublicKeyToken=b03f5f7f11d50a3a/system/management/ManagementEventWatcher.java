@@ -124,6 +124,9 @@ public class ManagementEventWatcher extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ManagementEventWatcher}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ManagementEventWatcher} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ManagementEventWatcher cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

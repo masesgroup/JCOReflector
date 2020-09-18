@@ -122,6 +122,9 @@ public class ToolboxService extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ToolboxService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ToolboxService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ToolboxService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

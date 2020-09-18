@@ -122,9 +122,9 @@ public class ScaleTransform3D extends AffineTransform3D  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ScaleTransform3D}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ScaleTransform3D} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ScaleTransform3D} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ScaleTransform3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

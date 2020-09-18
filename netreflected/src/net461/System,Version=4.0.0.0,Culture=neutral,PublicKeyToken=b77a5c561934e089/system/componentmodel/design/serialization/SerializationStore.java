@@ -49,7 +49,7 @@ import system.collections.ICollectionImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.SerializationStore" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.SerializationStore</a>
  */
-public class SerializationStore extends NetObjectAutoCloseable  {
+public class SerializationStore extends NetObject  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -120,6 +120,9 @@ public class SerializationStore extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SerializationStore}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SerializationStore} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SerializationStore cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

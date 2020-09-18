@@ -120,6 +120,9 @@ public class ExpressionActivityEditor extends UserControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExpressionActivityEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ExpressionActivityEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExpressionActivityEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

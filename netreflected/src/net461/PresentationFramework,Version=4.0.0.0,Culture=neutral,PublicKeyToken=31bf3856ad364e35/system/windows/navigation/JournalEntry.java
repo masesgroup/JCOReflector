@@ -122,6 +122,9 @@ public class JournalEntry extends DependencyObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link JournalEntry}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link JournalEntry} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static JournalEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

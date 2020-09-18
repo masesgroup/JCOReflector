@@ -119,6 +119,9 @@ public class BindingsCollection extends BaseCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BindingsCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BindingsCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BindingsCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

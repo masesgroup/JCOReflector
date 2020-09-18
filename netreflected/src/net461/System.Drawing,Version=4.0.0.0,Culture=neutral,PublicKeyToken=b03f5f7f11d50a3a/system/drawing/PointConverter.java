@@ -125,6 +125,9 @@ public class PointConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PointConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PointConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PointConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

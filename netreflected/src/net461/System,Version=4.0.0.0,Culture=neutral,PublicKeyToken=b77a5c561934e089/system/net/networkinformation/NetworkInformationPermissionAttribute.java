@@ -121,6 +121,9 @@ public class NetworkInformationPermissionAttribute extends CodeAccessSecurityAtt
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetworkInformationPermissionAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NetworkInformationPermissionAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NetworkInformationPermissionAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

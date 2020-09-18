@@ -113,6 +113,9 @@ public class IHttpModuleImplementation extends NetObject implements IHttpModule 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHttpModule}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHttpModule} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHttpModule ToIHttpModule(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class FormAttribute extends ValueProviderSourceAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FormAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FormAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FormAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

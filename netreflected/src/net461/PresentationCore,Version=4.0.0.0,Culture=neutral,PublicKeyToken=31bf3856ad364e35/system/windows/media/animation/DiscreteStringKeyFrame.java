@@ -119,6 +119,9 @@ public class DiscreteStringKeyFrame extends StringKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiscreteStringKeyFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DiscreteStringKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiscreteStringKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

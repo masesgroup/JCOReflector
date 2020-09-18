@@ -129,6 +129,9 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CompositeActivityDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CompositeActivityDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CompositeActivityDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

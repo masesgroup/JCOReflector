@@ -118,6 +118,9 @@ public class DiagnosticSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiagnosticSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DiagnosticSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiagnosticSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

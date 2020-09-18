@@ -118,6 +118,9 @@ public class BoolProperty extends BaseProperty  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BoolProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BoolProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BoolProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

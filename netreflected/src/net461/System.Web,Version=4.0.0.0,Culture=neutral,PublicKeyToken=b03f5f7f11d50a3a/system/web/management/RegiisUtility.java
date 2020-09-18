@@ -117,6 +117,9 @@ public class RegiisUtility extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegiisUtility}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RegiisUtility} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegiisUtility cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,6 +122,9 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceModelSecurityTokenRequirement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceModelSecurityTokenRequirement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceModelSecurityTokenRequirement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

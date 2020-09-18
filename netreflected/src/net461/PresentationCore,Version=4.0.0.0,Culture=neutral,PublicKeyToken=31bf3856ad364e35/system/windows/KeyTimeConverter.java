@@ -121,6 +121,9 @@ public class KeyTimeConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyTimeConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link KeyTimeConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static KeyTimeConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

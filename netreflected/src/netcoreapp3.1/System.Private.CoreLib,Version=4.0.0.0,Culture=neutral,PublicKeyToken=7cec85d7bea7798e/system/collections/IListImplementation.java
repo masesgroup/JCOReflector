@@ -115,6 +115,9 @@ public class IListImplementation extends IEnumerableImplementation implements IL
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IList}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IList} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IList ToIList(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

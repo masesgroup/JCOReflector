@@ -118,9 +118,9 @@ public class DispatcherUnhandledExceptionEventArgs extends DispatcherEventArgs  
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DispatcherUnhandledExceptionEventArgs}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DispatcherUnhandledExceptionEventArgs} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DispatcherUnhandledExceptionEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DispatcherUnhandledExceptionEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

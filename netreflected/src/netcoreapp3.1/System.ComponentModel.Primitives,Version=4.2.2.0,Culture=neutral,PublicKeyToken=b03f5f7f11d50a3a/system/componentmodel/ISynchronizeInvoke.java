@@ -62,6 +62,9 @@ public interface ISynchronizeInvoke extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.ISynchronizeInvoke";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISynchronizeInvoke}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISynchronizeInvoke} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISynchronizeInvoke ToISynchronizeInvoke(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

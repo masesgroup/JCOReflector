@@ -118,6 +118,9 @@ public class ISiteImplementation extends NetObject implements ISite {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISite}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISite} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISite ToISite(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

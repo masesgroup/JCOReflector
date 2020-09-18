@@ -119,6 +119,9 @@ public class TagRegex35 extends Regex  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TagRegex35}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TagRegex35} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TagRegex35 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

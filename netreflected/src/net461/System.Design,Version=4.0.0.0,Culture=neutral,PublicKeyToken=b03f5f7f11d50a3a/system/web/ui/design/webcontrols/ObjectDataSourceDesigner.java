@@ -119,6 +119,9 @@ public class ObjectDataSourceDesigner extends DataSourceDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectDataSourceDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectDataSourceDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectDataSourceDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

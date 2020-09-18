@@ -121,6 +121,9 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Saml2AuthorizationDecisionStatement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Saml2AuthorizationDecisionStatement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Saml2AuthorizationDecisionStatement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

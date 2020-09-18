@@ -138,6 +138,9 @@ public class WorkflowAuthorizationException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowAuthorizationException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowAuthorizationException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowAuthorizationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

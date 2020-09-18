@@ -65,6 +65,9 @@ public interface IComponentChangeService extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.Design.IComponentChangeService";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IComponentChangeService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IComponentChangeService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IComponentChangeService ToIComponentChangeService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

@@ -119,6 +119,9 @@ public class HtmlInputGenericControl extends HtmlInputControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlInputGenericControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HtmlInputGenericControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HtmlInputGenericControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

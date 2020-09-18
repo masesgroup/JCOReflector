@@ -130,6 +130,9 @@ public class ActivityDesignerTheme extends DesignerTheme  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActivityDesignerTheme}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActivityDesignerTheme} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActivityDesignerTheme cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -115,6 +115,9 @@ public class IRouteHandlerImplementation extends NetObject implements IRouteHand
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRouteHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRouteHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRouteHandler ToIRouteHandler(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -143,6 +143,9 @@ public class InstanceKeyNotReadyException extends InstancePersistenceCommandExce
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceKeyNotReadyException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InstanceKeyNotReadyException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InstanceKeyNotReadyException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

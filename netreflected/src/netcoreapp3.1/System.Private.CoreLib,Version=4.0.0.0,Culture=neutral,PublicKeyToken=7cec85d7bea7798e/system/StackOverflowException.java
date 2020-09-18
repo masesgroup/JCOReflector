@@ -138,9 +138,9 @@ public class StackOverflowException extends SystemException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StackOverflowException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link StackOverflowException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StackOverflowException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StackOverflowException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

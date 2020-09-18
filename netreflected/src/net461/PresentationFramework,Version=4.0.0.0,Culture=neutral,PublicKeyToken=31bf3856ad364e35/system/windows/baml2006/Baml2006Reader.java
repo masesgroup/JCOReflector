@@ -53,7 +53,7 @@ import system.xaml.XamlType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Baml2006.Baml2006Reader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Baml2006.Baml2006Reader</a>
  */
-public class Baml2006Reader extends NetObjectAutoCloseable  {
+public class Baml2006Reader extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -124,6 +124,9 @@ public class Baml2006Reader extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Baml2006Reader}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Baml2006Reader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Baml2006Reader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

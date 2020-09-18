@@ -112,6 +112,9 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProcessHost}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IProcessHost} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IProcessHost ToIProcessHost(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

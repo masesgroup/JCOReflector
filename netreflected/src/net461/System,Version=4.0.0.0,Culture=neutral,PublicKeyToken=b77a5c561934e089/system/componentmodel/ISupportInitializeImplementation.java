@@ -112,6 +112,9 @@ public class ISupportInitializeImplementation extends NetObject implements ISupp
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISupportInitialize}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISupportInitialize} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISupportInitialize ToISupportInitialize(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -61,6 +61,9 @@ public interface IXmlTextParser extends IJCOBridgeReflected {
     public static final String className = "System.Xml.Serialization.IXmlTextParser";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlTextParser}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXmlTextParser} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXmlTextParser ToIXmlTextParser(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

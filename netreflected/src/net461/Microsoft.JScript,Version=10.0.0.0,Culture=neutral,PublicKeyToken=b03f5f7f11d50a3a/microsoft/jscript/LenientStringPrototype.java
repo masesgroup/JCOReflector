@@ -118,6 +118,9 @@ public class LenientStringPrototype extends StringPrototype  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link LenientStringPrototype}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link LenientStringPrototype} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static LenientStringPrototype cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

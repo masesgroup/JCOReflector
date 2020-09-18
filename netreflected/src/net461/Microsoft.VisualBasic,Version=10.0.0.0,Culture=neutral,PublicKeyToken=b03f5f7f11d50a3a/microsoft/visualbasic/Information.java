@@ -120,6 +120,9 @@ public class Information extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Information}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Information} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Information cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

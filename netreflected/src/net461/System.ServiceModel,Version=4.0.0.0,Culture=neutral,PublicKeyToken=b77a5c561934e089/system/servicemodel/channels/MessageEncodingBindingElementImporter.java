@@ -117,6 +117,9 @@ public class MessageEncodingBindingElementImporter extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageEncodingBindingElementImporter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessageEncodingBindingElementImporter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessageEncodingBindingElementImporter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -122,9 +122,9 @@ public class GridViewColumn extends DependencyObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GridViewColumn}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link GridViewColumn} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GridViewColumn} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GridViewColumn cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class DefaultProfile extends ProfileBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultProfile}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DefaultProfile} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DefaultProfile cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

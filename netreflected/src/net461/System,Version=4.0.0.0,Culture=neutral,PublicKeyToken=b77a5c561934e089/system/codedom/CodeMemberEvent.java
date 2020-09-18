@@ -120,6 +120,9 @@ public class CodeMemberEvent extends CodeTypeMember  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeMemberEvent}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CodeMemberEvent} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeMemberEvent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

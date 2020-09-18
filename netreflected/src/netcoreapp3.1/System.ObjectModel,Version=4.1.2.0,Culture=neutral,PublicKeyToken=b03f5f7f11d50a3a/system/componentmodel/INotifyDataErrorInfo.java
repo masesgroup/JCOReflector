@@ -60,6 +60,9 @@ public interface INotifyDataErrorInfo extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.INotifyDataErrorInfo";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyDataErrorInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link INotifyDataErrorInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static INotifyDataErrorInfo ToINotifyDataErrorInfo(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ObjectModel, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

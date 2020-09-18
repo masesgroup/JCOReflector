@@ -115,6 +115,9 @@ public class IQueryableImplementation extends IEnumerableImplementation implemen
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IQueryable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IQueryable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IQueryable ToIQueryable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509SubjectKeyIdentifierClause}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509SubjectKeyIdentifierClause} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509SubjectKeyIdentifierClause cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

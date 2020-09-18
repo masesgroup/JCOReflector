@@ -117,6 +117,9 @@ public class WorkflowRuntimeService extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowRuntimeService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowRuntimeService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowRuntimeService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class Padding extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Padding}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Padding} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Padding cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

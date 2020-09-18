@@ -120,6 +120,9 @@ public class PerformanceCounterPermissionEntryCollection extends CollectionBase 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PerformanceCounterPermissionEntryCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PerformanceCounterPermissionEntryCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PerformanceCounterPermissionEntryCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

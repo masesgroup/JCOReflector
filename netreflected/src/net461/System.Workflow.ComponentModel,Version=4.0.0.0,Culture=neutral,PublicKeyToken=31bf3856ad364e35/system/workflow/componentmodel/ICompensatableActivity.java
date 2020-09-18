@@ -62,6 +62,9 @@ public interface ICompensatableActivity extends IJCOBridgeReflected {
     public static final String className = "System.Workflow.ComponentModel.ICompensatableActivity";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICompensatableActivity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICompensatableActivity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICompensatableActivity ToICompensatableActivity(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

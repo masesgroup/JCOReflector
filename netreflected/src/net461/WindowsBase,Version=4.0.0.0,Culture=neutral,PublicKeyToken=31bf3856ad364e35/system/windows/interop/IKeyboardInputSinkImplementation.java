@@ -117,6 +117,9 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IKeyboardInputSink}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IKeyboardInputSink} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IKeyboardInputSink ToIKeyboardInputSink(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

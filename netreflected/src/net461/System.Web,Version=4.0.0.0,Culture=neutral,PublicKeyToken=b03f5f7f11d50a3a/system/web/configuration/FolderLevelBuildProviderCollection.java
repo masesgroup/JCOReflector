@@ -120,6 +120,9 @@ public class FolderLevelBuildProviderCollection extends ConfigurationElementColl
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FolderLevelBuildProviderCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FolderLevelBuildProviderCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FolderLevelBuildProviderCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

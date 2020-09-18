@@ -114,6 +114,9 @@ public class IReadOnlySessionStateImplementation extends NetObject implements IR
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReadOnlySessionState}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IReadOnlySessionState} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IReadOnlySessionState ToIReadOnlySessionState(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

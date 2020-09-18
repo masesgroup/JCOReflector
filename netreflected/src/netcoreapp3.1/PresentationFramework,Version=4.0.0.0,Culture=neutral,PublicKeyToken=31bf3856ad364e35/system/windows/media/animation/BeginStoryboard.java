@@ -120,9 +120,9 @@ public class BeginStoryboard extends TriggerAction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BeginStoryboard}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link BeginStoryboard} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BeginStoryboard} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BeginStoryboard cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

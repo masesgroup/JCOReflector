@@ -119,6 +119,9 @@ public class CreateUserWizardStep extends TemplatedWizardStep  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CreateUserWizardStep}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CreateUserWizardStep} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CreateUserWizardStep cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

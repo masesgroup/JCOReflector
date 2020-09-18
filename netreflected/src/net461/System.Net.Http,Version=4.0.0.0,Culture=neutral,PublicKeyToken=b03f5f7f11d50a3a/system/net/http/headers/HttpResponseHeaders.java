@@ -122,6 +122,9 @@ public class HttpResponseHeaders extends HttpHeaders  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpResponseHeaders}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpResponseHeaders} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpResponseHeaders cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

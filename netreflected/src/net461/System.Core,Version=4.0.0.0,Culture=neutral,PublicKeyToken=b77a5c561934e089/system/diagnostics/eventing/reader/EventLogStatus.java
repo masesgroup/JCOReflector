@@ -117,6 +117,9 @@ public class EventLogStatus extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EventLogStatus}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EventLogStatus} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EventLogStatus cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

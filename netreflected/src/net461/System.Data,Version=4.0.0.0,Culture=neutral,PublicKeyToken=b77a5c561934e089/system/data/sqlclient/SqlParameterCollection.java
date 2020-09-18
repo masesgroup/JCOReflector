@@ -121,6 +121,9 @@ public class SqlParameterCollection extends DbParameterCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlParameterCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlParameterCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlParameterCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

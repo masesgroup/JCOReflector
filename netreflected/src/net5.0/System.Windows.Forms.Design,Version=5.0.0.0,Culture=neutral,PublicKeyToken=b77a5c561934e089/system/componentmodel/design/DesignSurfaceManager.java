@@ -53,7 +53,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignSurfaceManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignSurfaceManager</a>
  */
-public class DesignSurfaceManager extends NetObjectAutoCloseable  {
+public class DesignSurfaceManager extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -202,7 +202,20 @@ public class DesignSurfaceManager extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

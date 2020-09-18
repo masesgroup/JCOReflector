@@ -116,6 +116,9 @@ public class IOperationBehaviorImplementation extends NetObject implements IOper
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IOperationBehavior}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IOperationBehavior} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IOperationBehavior ToIOperationBehavior(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

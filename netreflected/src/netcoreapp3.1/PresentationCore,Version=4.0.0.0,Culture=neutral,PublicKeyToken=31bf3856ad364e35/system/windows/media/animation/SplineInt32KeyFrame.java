@@ -120,9 +120,9 @@ public class SplineInt32KeyFrame extends Int32KeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SplineInt32KeyFrame}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SplineInt32KeyFrame} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SplineInt32KeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SplineInt32KeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

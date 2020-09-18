@@ -114,6 +114,9 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IGridItemProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IGridItemProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IGridItemProvider ToIGridItemProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

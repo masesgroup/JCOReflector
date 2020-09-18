@@ -120,9 +120,9 @@ public class SettingsProviderCollection extends ProviderCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SettingsProviderCollection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SettingsProviderCollection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SettingsProviderCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SettingsProviderCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

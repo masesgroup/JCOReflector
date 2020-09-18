@@ -60,6 +60,9 @@ public interface IIdentity extends IJCOBridgeReflected {
     public static final String className = "System.Security.Principal.IIdentity";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IIdentity}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IIdentity} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IIdentity ToIIdentity(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");

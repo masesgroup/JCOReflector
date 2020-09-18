@@ -118,6 +118,9 @@ public class RuleSetReference extends DependencyObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RuleSetReference}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RuleSetReference} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RuleSetReference cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

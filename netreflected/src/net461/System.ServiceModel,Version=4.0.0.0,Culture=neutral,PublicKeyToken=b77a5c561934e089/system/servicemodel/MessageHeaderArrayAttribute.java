@@ -118,6 +118,9 @@ public class MessageHeaderArrayAttribute extends MessageHeaderAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageHeaderArrayAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessageHeaderArrayAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessageHeaderArrayAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -113,6 +113,9 @@ public class IUriContextImplementation extends NetObject implements IUriContext 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IUriContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IUriContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IUriContext ToIUriContext(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class UnitConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnitConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UnitConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UnitConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

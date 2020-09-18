@@ -117,6 +117,9 @@ public class CloudCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CloudCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CloudCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CloudCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

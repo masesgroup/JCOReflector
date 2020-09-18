@@ -47,7 +47,7 @@ import system.security.cryptography.ECParameters;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECDiffieHellmanPublicKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECDiffieHellmanPublicKey</a>
  */
-public class ECDiffieHellmanPublicKey extends NetObjectAutoCloseable  {
+public class ECDiffieHellmanPublicKey extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Algorithms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -196,7 +196,20 @@ public class ECDiffieHellmanPublicKey extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

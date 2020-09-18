@@ -119,6 +119,9 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceAuthenticationBehavior}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceAuthenticationBehavior} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceAuthenticationBehavior cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

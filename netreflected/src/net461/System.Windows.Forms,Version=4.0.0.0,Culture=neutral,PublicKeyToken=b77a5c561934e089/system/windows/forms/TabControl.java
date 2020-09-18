@@ -135,6 +135,9 @@ public class TabControl extends Control  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TabControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TabControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TabControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

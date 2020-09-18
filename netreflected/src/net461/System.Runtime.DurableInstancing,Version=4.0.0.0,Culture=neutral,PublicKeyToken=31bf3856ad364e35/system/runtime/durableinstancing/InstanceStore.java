@@ -126,6 +126,9 @@ public class InstanceStore extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceStore}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InstanceStore} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InstanceStore cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

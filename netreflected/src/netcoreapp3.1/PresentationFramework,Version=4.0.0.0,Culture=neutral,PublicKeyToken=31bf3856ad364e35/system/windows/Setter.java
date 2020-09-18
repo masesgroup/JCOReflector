@@ -121,9 +121,9 @@ public class Setter extends SetterBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Setter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Setter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Setter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Setter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

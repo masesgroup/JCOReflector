@@ -122,9 +122,9 @@ public class Glyphs extends FrameworkElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Glyphs}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Glyphs} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Glyphs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Glyphs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

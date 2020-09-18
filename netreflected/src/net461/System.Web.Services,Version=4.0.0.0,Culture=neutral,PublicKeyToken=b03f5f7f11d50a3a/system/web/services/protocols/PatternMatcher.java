@@ -117,6 +117,9 @@ public class PatternMatcher extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PatternMatcher}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PatternMatcher} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PatternMatcher cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

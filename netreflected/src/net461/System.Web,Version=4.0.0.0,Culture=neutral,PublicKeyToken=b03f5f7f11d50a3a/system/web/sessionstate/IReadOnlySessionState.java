@@ -62,6 +62,9 @@ public interface IReadOnlySessionState extends IJCOBridgeReflected, IRequiresSes
     public static final String className = "System.Web.SessionState.IReadOnlySessionState";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IReadOnlySessionState}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IReadOnlySessionState} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IReadOnlySessionState ToIReadOnlySessionState(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

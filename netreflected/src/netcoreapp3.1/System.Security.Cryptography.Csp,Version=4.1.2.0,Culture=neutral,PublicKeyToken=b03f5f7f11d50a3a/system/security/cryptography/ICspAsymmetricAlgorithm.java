@@ -61,6 +61,9 @@ public interface ICspAsymmetricAlgorithm extends IJCOBridgeReflected {
     public static final String className = "System.Security.Cryptography.ICspAsymmetricAlgorithm";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICspAsymmetricAlgorithm}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICspAsymmetricAlgorithm} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICspAsymmetricAlgorithm ToICspAsymmetricAlgorithm(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

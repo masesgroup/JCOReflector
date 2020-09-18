@@ -118,6 +118,9 @@ public class EdmItemCollection extends ItemCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EdmItemCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EdmItemCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EdmItemCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

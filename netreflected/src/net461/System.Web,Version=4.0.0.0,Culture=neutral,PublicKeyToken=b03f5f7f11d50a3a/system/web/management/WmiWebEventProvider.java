@@ -120,6 +120,9 @@ public class WmiWebEventProvider extends WebEventProvider  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WmiWebEventProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WmiWebEventProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WmiWebEventProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

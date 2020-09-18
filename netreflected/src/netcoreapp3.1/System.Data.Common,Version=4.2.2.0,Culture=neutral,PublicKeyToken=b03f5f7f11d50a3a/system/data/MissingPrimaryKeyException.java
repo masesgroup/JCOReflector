@@ -138,9 +138,9 @@ public class MissingPrimaryKeyException extends DataException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MissingPrimaryKeyException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link MissingPrimaryKeyException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MissingPrimaryKeyException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MissingPrimaryKeyException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

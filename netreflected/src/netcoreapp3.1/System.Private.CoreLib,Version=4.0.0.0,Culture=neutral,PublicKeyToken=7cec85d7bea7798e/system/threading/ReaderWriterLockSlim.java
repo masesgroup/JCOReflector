@@ -48,7 +48,7 @@ import system.TimeSpan;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ReaderWriterLockSlim" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ReaderWriterLockSlim</a>
  */
-public class ReaderWriterLockSlim extends NetObjectAutoCloseable  {
+public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -119,9 +119,9 @@ public class ReaderWriterLockSlim extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ReaderWriterLockSlim}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ReaderWriterLockSlim} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ReaderWriterLockSlim} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ReaderWriterLockSlim cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -284,7 +284,20 @@ public class ReaderWriterLockSlim extends NetObjectAutoCloseable  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

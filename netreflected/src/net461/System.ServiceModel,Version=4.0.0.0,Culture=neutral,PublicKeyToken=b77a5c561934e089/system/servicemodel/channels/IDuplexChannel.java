@@ -77,6 +77,9 @@ public interface IDuplexChannel extends IJCOBridgeReflected, IInputChannel, ICha
     public static final String className = "System.ServiceModel.Channels.IDuplexChannel";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDuplexChannel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDuplexChannel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDuplexChannel ToIDuplexChannel(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

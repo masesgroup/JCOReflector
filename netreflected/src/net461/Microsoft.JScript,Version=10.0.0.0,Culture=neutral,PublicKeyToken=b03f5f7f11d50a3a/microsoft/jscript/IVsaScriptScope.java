@@ -65,6 +65,9 @@ public interface IVsaScriptScope extends IJCOBridgeReflected, IJSVsaItem {
     public static final String className = "Microsoft.JScript.IVsaScriptScope";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IVsaScriptScope}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IVsaScriptScope} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IVsaScriptScope ToIVsaScriptScope(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

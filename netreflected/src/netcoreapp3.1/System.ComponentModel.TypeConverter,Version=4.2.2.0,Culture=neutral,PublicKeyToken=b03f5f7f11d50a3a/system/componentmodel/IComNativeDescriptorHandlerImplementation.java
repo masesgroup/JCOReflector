@@ -119,6 +119,9 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IComNativeDescriptorHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IComNativeDescriptorHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IComNativeDescriptorHandler ToIComNativeDescriptorHandler(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

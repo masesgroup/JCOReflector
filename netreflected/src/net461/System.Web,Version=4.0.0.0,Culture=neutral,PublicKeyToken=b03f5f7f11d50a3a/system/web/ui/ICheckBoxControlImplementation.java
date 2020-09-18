@@ -113,6 +113,9 @@ public class ICheckBoxControlImplementation extends NetObject implements ICheckB
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICheckBoxControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICheckBoxControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICheckBoxControl ToICheckBoxControl(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

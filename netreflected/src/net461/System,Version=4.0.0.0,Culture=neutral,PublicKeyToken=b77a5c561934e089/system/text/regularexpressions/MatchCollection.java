@@ -119,6 +119,9 @@ public class MatchCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MatchCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MatchCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MatchCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

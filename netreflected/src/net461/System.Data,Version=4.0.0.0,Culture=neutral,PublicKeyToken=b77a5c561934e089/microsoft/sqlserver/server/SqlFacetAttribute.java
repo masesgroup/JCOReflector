@@ -118,6 +118,9 @@ public class SqlFacetAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlFacetAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlFacetAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlFacetAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

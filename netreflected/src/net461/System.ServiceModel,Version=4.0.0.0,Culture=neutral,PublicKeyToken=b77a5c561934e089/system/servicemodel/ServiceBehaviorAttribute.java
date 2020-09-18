@@ -122,6 +122,9 @@ public class ServiceBehaviorAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceBehaviorAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceBehaviorAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceBehaviorAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

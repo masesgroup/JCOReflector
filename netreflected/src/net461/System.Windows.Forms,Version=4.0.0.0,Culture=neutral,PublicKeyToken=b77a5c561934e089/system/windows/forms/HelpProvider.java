@@ -120,6 +120,9 @@ public class HelpProvider extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HelpProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HelpProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HelpProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -120,6 +120,9 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MsmqIntegrationMessageProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MsmqIntegrationMessageProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MsmqIntegrationMessageProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class CheckBoxDesigner extends ControlDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CheckBoxDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CheckBoxDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CheckBoxDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

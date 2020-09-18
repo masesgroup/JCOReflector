@@ -121,6 +121,9 @@ public class WorkflowIdentityConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowIdentityConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowIdentityConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowIdentityConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

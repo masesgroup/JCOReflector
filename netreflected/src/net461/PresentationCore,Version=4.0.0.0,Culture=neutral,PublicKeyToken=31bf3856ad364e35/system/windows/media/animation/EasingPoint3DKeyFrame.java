@@ -122,6 +122,9 @@ public class EasingPoint3DKeyFrame extends Point3DKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EasingPoint3DKeyFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EasingPoint3DKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EasingPoint3DKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

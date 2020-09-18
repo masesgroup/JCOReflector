@@ -120,9 +120,9 @@ public class Sse41 extends Ssse3  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Sse41}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Sse41} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Sse41} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Sse41 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class ObjectPrototype extends JSObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectPrototype}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectPrototype} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectPrototype cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

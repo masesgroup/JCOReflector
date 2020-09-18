@@ -118,6 +118,9 @@ public class HttpPostClientProtocol extends HttpSimpleClientProtocol  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpPostClientProtocol}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpPostClientProtocol} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpPostClientProtocol cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

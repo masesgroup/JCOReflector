@@ -117,6 +117,9 @@ public class StateItem extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StateItem}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StateItem} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StateItem cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

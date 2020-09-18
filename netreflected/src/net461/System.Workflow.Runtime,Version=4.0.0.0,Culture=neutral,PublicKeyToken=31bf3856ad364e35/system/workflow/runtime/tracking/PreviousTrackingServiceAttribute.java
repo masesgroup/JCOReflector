@@ -118,6 +118,9 @@ public class PreviousTrackingServiceAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PreviousTrackingServiceAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PreviousTrackingServiceAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PreviousTrackingServiceAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -56,7 +56,7 @@ import system.servicemodel.security.TrustVersion;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustChannelFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.WSTrustChannelFactory</a>
  */
-public class WSTrustChannelFactory extends NetObjectAutoCloseable  {
+public class WSTrustChannelFactory extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -127,6 +127,9 @@ public class WSTrustChannelFactory extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WSTrustChannelFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WSTrustChannelFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WSTrustChannelFactory cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

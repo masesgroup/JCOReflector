@@ -119,9 +119,9 @@ public class MouseWheelEventArgs extends MouseEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MouseWheelEventArgs}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link MouseWheelEventArgs} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MouseWheelEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MouseWheelEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

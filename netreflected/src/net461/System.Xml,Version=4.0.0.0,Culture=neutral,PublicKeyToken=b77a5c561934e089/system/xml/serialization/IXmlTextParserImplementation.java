@@ -113,6 +113,9 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlTextParser}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXmlTextParser} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXmlTextParser ToIXmlTextParser(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

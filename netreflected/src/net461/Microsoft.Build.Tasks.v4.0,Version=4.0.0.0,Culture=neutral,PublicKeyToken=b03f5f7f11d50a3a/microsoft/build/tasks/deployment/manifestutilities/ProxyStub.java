@@ -117,6 +117,9 @@ public class ProxyStub extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProxyStub}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ProxyStub} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ProxyStub cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

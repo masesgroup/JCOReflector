@@ -119,6 +119,9 @@ public class ProtocolElementCollection extends ConfigurationElementCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProtocolElementCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ProtocolElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ProtocolElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

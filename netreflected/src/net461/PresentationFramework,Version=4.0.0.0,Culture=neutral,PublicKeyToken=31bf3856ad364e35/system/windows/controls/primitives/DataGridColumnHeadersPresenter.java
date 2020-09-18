@@ -118,6 +118,9 @@ public class DataGridColumnHeadersPresenter extends ItemsControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridColumnHeadersPresenter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridColumnHeadersPresenter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridColumnHeadersPresenter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

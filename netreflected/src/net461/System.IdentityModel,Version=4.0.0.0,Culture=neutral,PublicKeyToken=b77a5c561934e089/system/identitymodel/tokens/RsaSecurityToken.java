@@ -121,6 +121,9 @@ public class RsaSecurityToken extends SecurityToken  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RsaSecurityToken}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RsaSecurityToken} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RsaSecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

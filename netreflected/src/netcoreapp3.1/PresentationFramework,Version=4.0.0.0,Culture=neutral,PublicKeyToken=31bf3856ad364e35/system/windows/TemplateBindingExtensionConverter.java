@@ -121,9 +121,9 @@ public class TemplateBindingExtensionConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateBindingExtensionConverter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TemplateBindingExtensionConverter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TemplateBindingExtensionConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TemplateBindingExtensionConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

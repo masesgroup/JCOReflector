@@ -123,9 +123,9 @@ public class Panel extends ScrollableControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Panel}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Panel} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Panel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Panel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

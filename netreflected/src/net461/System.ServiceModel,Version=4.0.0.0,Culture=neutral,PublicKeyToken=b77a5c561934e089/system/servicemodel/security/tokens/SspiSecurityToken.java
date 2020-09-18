@@ -121,6 +121,9 @@ public class SspiSecurityToken extends SecurityToken  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SspiSecurityToken}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SspiSecurityToken} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SspiSecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

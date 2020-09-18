@@ -64,6 +64,9 @@ public interface IMetadataExchange extends IJCOBridgeReflected {
     public static final String className = "System.ServiceModel.Description.IMetadataExchange";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMetadataExchange}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMetadataExchange} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMetadataExchange ToIMetadataExchange(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

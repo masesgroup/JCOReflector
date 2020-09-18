@@ -61,6 +61,9 @@ public interface INotifyCollectionChanged extends IJCOBridgeReflected {
     public static final String className = "System.Collections.Specialized.INotifyCollectionChanged";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link INotifyCollectionChanged}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link INotifyCollectionChanged} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static INotifyCollectionChanged ToINotifyCollectionChanged(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

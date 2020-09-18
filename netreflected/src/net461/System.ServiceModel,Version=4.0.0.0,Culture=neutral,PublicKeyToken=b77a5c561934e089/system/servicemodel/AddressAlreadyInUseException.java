@@ -138,6 +138,9 @@ public class AddressAlreadyInUseException extends CommunicationException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AddressAlreadyInUseException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AddressAlreadyInUseException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AddressAlreadyInUseException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

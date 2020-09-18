@@ -118,6 +118,9 @@ public class Relational extends BinaryOp  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Relational}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Relational} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Relational cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

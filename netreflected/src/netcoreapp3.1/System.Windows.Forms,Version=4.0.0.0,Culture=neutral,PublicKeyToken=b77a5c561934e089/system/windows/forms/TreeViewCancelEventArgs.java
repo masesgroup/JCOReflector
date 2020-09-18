@@ -120,9 +120,9 @@ public class TreeViewCancelEventArgs extends CancelEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TreeViewCancelEventArgs}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TreeViewCancelEventArgs} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TreeViewCancelEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TreeViewCancelEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

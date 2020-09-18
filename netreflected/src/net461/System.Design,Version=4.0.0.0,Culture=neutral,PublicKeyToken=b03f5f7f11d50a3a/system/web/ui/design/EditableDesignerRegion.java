@@ -121,6 +121,9 @@ public class EditableDesignerRegion extends DesignerRegion  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EditableDesignerRegion}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EditableDesignerRegion} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EditableDesignerRegion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

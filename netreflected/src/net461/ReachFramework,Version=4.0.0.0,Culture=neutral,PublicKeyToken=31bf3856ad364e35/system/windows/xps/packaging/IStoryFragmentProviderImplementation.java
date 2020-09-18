@@ -113,6 +113,9 @@ public class IStoryFragmentProviderImplementation extends NetObject implements I
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStoryFragmentProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IStoryFragmentProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IStoryFragmentProvider ToIStoryFragmentProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

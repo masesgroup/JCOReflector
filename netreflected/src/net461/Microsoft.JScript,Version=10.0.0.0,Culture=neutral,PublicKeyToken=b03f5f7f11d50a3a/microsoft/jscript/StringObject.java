@@ -118,6 +118,9 @@ public class StringObject extends JSObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link StringObject}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link StringObject} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static StringObject cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

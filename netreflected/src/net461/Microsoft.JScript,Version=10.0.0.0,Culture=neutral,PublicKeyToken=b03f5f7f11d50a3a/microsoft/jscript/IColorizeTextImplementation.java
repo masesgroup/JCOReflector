@@ -115,6 +115,9 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IColorizeText}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IColorizeText} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IColorizeText ToIColorizeText(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

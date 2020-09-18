@@ -117,6 +117,9 @@ public class CharArrayType extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CharArrayType}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CharArrayType} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CharArrayType cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

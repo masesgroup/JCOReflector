@@ -138,6 +138,9 @@ public class DsmlInvalidDocumentException extends DirectoryException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DsmlInvalidDocumentException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DsmlInvalidDocumentException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DsmlInvalidDocumentException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

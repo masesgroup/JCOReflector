@@ -137,6 +137,9 @@ public class ImportCardinalityMismatchException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ImportCardinalityMismatchException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ImportCardinalityMismatchException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ImportCardinalityMismatchException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

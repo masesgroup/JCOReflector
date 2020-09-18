@@ -133,9 +133,9 @@ public class NegotiateStream extends AuthenticatedStream  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NegotiateStream}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link NegotiateStream} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NegotiateStream} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NegotiateStream cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

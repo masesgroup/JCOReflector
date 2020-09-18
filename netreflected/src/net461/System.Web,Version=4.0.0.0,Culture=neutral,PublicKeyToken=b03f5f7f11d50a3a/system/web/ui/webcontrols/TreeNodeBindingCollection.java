@@ -119,6 +119,9 @@ public class TreeNodeBindingCollection extends StateManagedCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TreeNodeBindingCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TreeNodeBindingCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TreeNodeBindingCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class SplineColorKeyFrame extends ColorKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SplineColorKeyFrame}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SplineColorKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SplineColorKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

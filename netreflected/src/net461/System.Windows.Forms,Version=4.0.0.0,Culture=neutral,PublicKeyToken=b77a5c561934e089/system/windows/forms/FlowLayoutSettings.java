@@ -120,6 +120,9 @@ public class FlowLayoutSettings extends LayoutSettings  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FlowLayoutSettings}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FlowLayoutSettings} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FlowLayoutSettings cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

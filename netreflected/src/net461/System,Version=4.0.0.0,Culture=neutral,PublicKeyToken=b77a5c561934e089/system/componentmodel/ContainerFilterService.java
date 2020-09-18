@@ -118,6 +118,9 @@ public class ContainerFilterService extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ContainerFilterService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ContainerFilterService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ContainerFilterService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

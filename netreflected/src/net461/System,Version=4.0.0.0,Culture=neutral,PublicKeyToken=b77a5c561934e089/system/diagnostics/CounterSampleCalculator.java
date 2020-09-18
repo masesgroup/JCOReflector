@@ -119,6 +119,9 @@ public class CounterSampleCalculator extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CounterSampleCalculator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CounterSampleCalculator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CounterSampleCalculator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

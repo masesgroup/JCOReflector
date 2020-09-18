@@ -119,9 +119,9 @@ public class AppSettingsSection extends ConfigurationSection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AppSettingsSection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link AppSettingsSection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AppSettingsSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AppSettingsSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

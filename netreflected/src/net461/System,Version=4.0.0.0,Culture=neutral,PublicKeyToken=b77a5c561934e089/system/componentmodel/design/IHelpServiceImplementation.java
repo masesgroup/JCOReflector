@@ -116,6 +116,9 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHelpService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHelpService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHelpService ToIHelpService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

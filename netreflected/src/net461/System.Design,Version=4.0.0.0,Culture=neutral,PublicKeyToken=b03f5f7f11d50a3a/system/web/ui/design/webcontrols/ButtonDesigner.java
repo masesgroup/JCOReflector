@@ -118,6 +118,9 @@ public class ButtonDesigner extends ControlDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ButtonDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ButtonDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ButtonDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

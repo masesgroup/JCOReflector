@@ -118,6 +118,9 @@ public class WebServiceDescriptor extends RoleDescriptor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebServiceDescriptor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebServiceDescriptor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebServiceDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -112,6 +112,9 @@ public class IPartialSessionStateImplementation extends NetObject implements IPa
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPartialSessionState}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPartialSessionState} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPartialSessionState ToIPartialSessionState(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

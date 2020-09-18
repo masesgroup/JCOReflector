@@ -118,6 +118,9 @@ public class AutoCompleteStringCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AutoCompleteStringCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AutoCompleteStringCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AutoCompleteStringCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

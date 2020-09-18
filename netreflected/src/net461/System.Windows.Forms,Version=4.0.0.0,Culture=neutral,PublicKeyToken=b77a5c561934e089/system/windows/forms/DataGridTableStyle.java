@@ -126,6 +126,9 @@ public class DataGridTableStyle extends Component  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridTableStyle}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridTableStyle} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridTableStyle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

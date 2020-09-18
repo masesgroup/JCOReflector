@@ -112,6 +112,9 @@ public class IMultitargetHelperServiceImplementation extends NetObject implement
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMultitargetHelperService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMultitargetHelperService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMultitargetHelperService ToIMultitargetHelperService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

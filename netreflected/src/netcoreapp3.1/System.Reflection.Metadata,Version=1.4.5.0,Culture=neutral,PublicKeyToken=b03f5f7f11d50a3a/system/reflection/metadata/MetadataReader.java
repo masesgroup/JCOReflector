@@ -214,9 +214,9 @@ public class MetadataReader extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataReader}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link MetadataReader} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MetadataReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MetadataReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

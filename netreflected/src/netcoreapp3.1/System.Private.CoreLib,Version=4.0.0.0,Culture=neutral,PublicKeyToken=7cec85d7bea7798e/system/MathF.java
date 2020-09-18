@@ -119,9 +119,9 @@ public class MathF extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MathF}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link MathF} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MathF} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MathF cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

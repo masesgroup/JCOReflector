@@ -53,7 +53,7 @@ import system.activities.WorkflowIdentity;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.WorkflowUpdateableControlClient" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.WorkflowUpdateableControlClient</a>
  */
-public class WorkflowUpdateableControlClient extends NetObjectAutoCloseable  {
+public class WorkflowUpdateableControlClient extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -124,6 +124,9 @@ public class WorkflowUpdateableControlClient extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowUpdateableControlClient}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowUpdateableControlClient} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowUpdateableControlClient cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

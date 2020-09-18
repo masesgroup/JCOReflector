@@ -119,6 +119,9 @@ public class SqlTrackingService extends TrackingService  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlTrackingService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlTrackingService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlTrackingService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

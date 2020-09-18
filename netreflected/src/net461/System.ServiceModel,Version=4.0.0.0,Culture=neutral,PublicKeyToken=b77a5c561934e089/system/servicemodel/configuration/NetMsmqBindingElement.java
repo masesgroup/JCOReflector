@@ -121,6 +121,9 @@ public class NetMsmqBindingElement extends MsmqBindingElementBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NetMsmqBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NetMsmqBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NetMsmqBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

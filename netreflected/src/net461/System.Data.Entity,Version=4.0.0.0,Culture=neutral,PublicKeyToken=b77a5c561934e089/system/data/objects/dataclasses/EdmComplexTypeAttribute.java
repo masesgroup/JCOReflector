@@ -118,6 +118,9 @@ public class EdmComplexTypeAttribute extends EdmTypeAttribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EdmComplexTypeAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EdmComplexTypeAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EdmComplexTypeAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

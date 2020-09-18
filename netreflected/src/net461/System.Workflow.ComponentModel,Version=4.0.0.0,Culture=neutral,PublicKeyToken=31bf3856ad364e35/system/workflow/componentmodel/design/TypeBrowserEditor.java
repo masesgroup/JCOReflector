@@ -123,6 +123,9 @@ public class TypeBrowserEditor extends UITypeEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TypeBrowserEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TypeBrowserEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TypeBrowserEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

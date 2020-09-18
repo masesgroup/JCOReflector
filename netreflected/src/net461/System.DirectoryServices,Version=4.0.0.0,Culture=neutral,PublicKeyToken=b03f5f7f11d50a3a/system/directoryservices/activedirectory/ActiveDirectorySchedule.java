@@ -121,6 +121,9 @@ public class ActiveDirectorySchedule extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectorySchedule}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActiveDirectorySchedule} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActiveDirectorySchedule cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

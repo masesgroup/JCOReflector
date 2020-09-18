@@ -119,6 +119,9 @@ public class DbQueryCommandTree extends DbCommandTree  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbQueryCommandTree}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbQueryCommandTree} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbQueryCommandTree cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

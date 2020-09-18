@@ -118,9 +118,9 @@ public class AttachedPropertyBrowsableForTypeAttribute extends AttachedPropertyB
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AttachedPropertyBrowsableForTypeAttribute}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link AttachedPropertyBrowsableForTypeAttribute} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AttachedPropertyBrowsableForTypeAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AttachedPropertyBrowsableForTypeAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class CodeActivityContext extends ActivityContext  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeActivityContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CodeActivityContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeActivityContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

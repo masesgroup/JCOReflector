@@ -121,9 +121,9 @@ public class EditAndContinueLogEntry extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EditAndContinueLogEntry}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link EditAndContinueLogEntry} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EditAndContinueLogEntry} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EditAndContinueLogEntry cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

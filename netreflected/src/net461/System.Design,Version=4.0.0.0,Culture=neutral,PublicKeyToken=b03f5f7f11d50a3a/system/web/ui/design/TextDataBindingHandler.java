@@ -121,6 +121,9 @@ public class TextDataBindingHandler extends DataBindingHandler  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextDataBindingHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TextDataBindingHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextDataBindingHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

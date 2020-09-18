@@ -117,6 +117,9 @@ public class SecurityTokenVersion extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityTokenVersion}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SecurityTokenVersion} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecurityTokenVersion cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

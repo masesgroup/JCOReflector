@@ -119,6 +119,9 @@ public class EndTagRegex extends Regex  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EndTagRegex}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EndTagRegex} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EndTagRegex cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

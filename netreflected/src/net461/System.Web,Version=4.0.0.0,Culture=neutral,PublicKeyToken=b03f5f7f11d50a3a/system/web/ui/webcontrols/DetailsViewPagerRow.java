@@ -120,6 +120,9 @@ public class DetailsViewPagerRow extends DetailsViewRow  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DetailsViewPagerRow}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DetailsViewPagerRow} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DetailsViewPagerRow cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

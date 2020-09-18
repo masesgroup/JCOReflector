@@ -121,6 +121,9 @@ public class OleDbTransaction extends DbTransaction  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OleDbTransaction}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OleDbTransaction} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OleDbTransaction cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

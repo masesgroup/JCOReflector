@@ -114,6 +114,9 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IMenuEditorService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IMenuEditorService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IMenuEditorService ToIMenuEditorService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

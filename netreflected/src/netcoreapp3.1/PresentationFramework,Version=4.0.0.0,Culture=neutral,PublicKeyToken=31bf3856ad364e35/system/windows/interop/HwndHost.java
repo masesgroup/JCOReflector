@@ -48,7 +48,7 @@ import system.windows.DpiChangedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.HwndHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Interop.HwndHost</a>
  */
-public class HwndHost extends FrameworkElement  {
+public class HwndHost extends FrameworkElement implements AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -119,9 +119,9 @@ public class HwndHost extends FrameworkElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HwndHost}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link HwndHost} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HwndHost} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HwndHost cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -156,7 +156,20 @@ public class HwndHost extends FrameworkElement  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

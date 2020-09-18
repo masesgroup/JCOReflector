@@ -112,6 +112,9 @@ public class IRegisterMetadataImplementation extends NetObject implements IRegis
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRegisterMetadata}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRegisterMetadata} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRegisterMetadata ToIRegisterMetadata(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

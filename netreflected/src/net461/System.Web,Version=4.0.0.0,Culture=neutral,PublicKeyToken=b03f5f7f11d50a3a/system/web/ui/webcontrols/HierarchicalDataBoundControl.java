@@ -118,6 +118,9 @@ public class HierarchicalDataBoundControl extends BaseDataBoundControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HierarchicalDataBoundControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HierarchicalDataBoundControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HierarchicalDataBoundControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

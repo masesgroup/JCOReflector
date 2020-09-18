@@ -121,6 +121,9 @@ public class CertificateReferenceElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CertificateReferenceElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CertificateReferenceElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CertificateReferenceElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

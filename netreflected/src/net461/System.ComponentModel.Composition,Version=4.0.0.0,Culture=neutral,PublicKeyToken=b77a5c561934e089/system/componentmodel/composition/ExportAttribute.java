@@ -118,6 +118,9 @@ public class ExportAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExportAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ExportAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExportAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

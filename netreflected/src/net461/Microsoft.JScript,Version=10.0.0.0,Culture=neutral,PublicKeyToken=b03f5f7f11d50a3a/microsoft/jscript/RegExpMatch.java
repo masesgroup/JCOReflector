@@ -118,6 +118,9 @@ public class RegExpMatch extends ArrayObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RegExpMatch}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RegExpMatch} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RegExpMatch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class WorkflowInstanceUnhandledExceptionRecord extends WorkflowInstanceRe
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowInstanceUnhandledExceptionRecord}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowInstanceUnhandledExceptionRecord} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowInstanceUnhandledExceptionRecord cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

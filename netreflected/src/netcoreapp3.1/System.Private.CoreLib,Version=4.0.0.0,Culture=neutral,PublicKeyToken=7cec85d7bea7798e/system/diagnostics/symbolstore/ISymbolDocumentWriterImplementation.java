@@ -113,6 +113,9 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISymbolDocumentWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISymbolDocumentWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISymbolDocumentWriter ToISymbolDocumentWriter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

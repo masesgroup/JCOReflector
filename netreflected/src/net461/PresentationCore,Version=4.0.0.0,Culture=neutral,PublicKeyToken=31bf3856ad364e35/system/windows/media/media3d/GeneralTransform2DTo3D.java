@@ -120,6 +120,9 @@ public class GeneralTransform2DTo3D extends Freezable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GeneralTransform2DTo3D}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GeneralTransform2DTo3D} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GeneralTransform2DTo3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

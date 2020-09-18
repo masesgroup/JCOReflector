@@ -126,6 +126,9 @@ public class TemplateField extends DataControlField  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateField}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TemplateField} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TemplateField cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

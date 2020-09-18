@@ -120,9 +120,9 @@ public class RC2CryptoServiceProvider extends RC2  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link RC2CryptoServiceProvider}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link RC2CryptoServiceProvider} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link RC2CryptoServiceProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static RC2CryptoServiceProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

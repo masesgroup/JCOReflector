@@ -123,6 +123,9 @@ public class DefaultPropertiesToSend extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DefaultPropertiesToSend}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DefaultPropertiesToSend} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DefaultPropertiesToSend cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

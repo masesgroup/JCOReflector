@@ -118,6 +118,9 @@ public class FileAssociationCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FileAssociationCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FileAssociationCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FileAssociationCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

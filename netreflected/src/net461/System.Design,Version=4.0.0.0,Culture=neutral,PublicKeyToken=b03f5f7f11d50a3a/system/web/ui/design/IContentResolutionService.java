@@ -63,6 +63,9 @@ public interface IContentResolutionService extends IJCOBridgeReflected {
     public static final String className = "System.Web.UI.Design.IContentResolutionService";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContentResolutionService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IContentResolutionService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IContentResolutionService ToIContentResolutionService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

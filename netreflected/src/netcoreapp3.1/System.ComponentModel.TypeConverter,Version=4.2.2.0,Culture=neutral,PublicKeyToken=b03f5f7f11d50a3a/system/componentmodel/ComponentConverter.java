@@ -122,9 +122,9 @@ public class ComponentConverter extends ReferenceConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComponentConverter}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ComponentConverter} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComponentConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComponentConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

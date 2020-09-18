@@ -119,6 +119,9 @@ public class DirectoryRequest extends DirectoryOperation  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryRequest}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DirectoryRequest} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectoryRequest cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

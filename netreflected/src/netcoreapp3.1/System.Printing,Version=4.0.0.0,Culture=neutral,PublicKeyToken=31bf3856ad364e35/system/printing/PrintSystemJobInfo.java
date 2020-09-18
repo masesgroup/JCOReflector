@@ -125,9 +125,9 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PrintSystemJobInfo}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link PrintSystemJobInfo} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PrintSystemJobInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PrintSystemJobInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

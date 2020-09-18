@@ -138,6 +138,9 @@ public class HttpUnhandledException extends HttpException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpUnhandledException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HttpUnhandledException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HttpUnhandledException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

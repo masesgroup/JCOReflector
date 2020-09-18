@@ -61,6 +61,9 @@ public interface IWebProxyScript extends IJCOBridgeReflected {
     public static final String className = "System.Net.IWebProxyScript";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWebProxyScript}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWebProxyScript} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWebProxyScript ToIWebProxyScript(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Net.WebProxy, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

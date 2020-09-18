@@ -138,6 +138,9 @@ public class TransactionManagerCommunicationException extends TransactionExcepti
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TransactionManagerCommunicationException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TransactionManagerCommunicationException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TransactionManagerCommunicationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class HtmlInputFile extends HtmlInputControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlInputFile}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HtmlInputFile} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HtmlInputFile cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

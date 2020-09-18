@@ -121,6 +121,9 @@ public class ObjectDataSourceSelectingEventArgs extends ObjectDataSourceMethodEv
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ObjectDataSourceSelectingEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ObjectDataSourceSelectingEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ObjectDataSourceSelectingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

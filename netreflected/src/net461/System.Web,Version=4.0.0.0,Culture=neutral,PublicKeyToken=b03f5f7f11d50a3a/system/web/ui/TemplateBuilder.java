@@ -122,6 +122,9 @@ public class TemplateBuilder extends ControlBuilder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TemplateBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TemplateBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

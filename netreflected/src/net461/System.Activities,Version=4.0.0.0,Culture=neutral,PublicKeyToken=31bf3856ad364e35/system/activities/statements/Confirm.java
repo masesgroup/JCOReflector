@@ -118,6 +118,9 @@ public class Confirm extends NativeActivity  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Confirm}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Confirm} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Confirm cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

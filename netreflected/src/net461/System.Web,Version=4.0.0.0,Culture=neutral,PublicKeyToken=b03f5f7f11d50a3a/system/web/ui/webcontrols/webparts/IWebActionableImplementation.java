@@ -113,6 +113,9 @@ public class IWebActionableImplementation extends NetObject implements IWebActio
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWebActionable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWebActionable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWebActionable ToIWebActionable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

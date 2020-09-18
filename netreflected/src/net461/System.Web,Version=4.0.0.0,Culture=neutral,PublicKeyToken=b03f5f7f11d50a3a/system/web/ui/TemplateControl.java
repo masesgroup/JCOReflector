@@ -121,6 +121,9 @@ public class TemplateControl extends Control  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TemplateControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TemplateControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TemplateControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

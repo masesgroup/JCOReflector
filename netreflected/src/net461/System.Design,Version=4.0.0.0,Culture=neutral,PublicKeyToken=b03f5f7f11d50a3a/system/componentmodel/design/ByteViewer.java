@@ -119,6 +119,9 @@ public class ByteViewer extends TableLayoutPanel  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ByteViewer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ByteViewer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ByteViewer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

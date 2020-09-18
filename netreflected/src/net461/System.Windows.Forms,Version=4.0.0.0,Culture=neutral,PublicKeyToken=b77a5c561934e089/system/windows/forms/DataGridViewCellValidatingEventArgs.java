@@ -118,6 +118,9 @@ public class DataGridViewCellValidatingEventArgs extends CancelEventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewCellValidatingEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridViewCellValidatingEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewCellValidatingEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

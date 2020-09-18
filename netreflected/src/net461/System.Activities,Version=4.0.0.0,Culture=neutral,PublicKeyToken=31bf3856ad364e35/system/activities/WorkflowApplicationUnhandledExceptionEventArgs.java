@@ -119,6 +119,9 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends WorkflowAppl
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowApplicationUnhandledExceptionEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowApplicationUnhandledExceptionEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowApplicationUnhandledExceptionEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

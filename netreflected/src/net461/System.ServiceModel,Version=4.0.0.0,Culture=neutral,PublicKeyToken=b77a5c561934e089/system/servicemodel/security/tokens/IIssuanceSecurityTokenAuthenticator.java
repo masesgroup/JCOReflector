@@ -62,6 +62,9 @@ public interface IIssuanceSecurityTokenAuthenticator extends IJCOBridgeReflected
     public static final String className = "System.ServiceModel.Security.Tokens.IIssuanceSecurityTokenAuthenticator";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IIssuanceSecurityTokenAuthenticator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IIssuanceSecurityTokenAuthenticator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IIssuanceSecurityTokenAuthenticator ToIIssuanceSecurityTokenAuthenticator(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

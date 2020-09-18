@@ -61,6 +61,9 @@ public interface IAutomationLiveRegion extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Forms.Automation.IAutomationLiveRegion";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAutomationLiveRegion}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAutomationLiveRegion} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAutomationLiveRegion ToIAutomationLiveRegion(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

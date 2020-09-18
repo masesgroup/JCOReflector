@@ -47,7 +47,7 @@ import system.xml.XmlNode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeList</a>
  */
-public class XmlNodeList extends NetObjectAutoCloseable  {
+public class XmlNodeList extends NetObject  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -118,6 +118,9 @@ public class XmlNodeList extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlNodeList}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlNodeList} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlNodeList cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

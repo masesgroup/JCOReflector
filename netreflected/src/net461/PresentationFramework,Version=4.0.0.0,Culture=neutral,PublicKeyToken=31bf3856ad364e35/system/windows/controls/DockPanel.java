@@ -120,6 +120,9 @@ public class DockPanel extends Panel  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DockPanel}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DockPanel} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DockPanel cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

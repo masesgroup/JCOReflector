@@ -121,6 +121,9 @@ public class DataSourceCacheDurationConverter extends Int32Converter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataSourceCacheDurationConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataSourceCacheDurationConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataSourceCacheDurationConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

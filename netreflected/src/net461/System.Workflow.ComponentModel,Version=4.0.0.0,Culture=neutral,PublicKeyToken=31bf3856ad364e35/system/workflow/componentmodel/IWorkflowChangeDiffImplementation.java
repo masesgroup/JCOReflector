@@ -112,6 +112,9 @@ public class IWorkflowChangeDiffImplementation extends NetObject implements IWor
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWorkflowChangeDiff}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWorkflowChangeDiff} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWorkflowChangeDiff ToIWorkflowChangeDiff(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

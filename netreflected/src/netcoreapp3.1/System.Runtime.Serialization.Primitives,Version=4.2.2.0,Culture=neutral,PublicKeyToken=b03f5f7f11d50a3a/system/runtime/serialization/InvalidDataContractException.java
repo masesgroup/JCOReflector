@@ -137,9 +137,9 @@ public class InvalidDataContractException extends NetException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InvalidDataContractException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link InvalidDataContractException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InvalidDataContractException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InvalidDataContractException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

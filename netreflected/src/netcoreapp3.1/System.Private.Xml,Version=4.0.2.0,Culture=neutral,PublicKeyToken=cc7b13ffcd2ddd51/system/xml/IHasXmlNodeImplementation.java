@@ -113,6 +113,9 @@ public class IHasXmlNodeImplementation extends NetObject implements IHasXmlNode 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IHasXmlNode}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IHasXmlNode} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IHasXmlNode ToIHasXmlNode(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

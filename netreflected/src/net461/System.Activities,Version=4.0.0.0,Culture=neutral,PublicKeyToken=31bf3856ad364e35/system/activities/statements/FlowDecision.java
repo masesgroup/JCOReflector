@@ -118,6 +118,9 @@ public class FlowDecision extends FlowNode  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FlowDecision}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FlowDecision} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FlowDecision cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

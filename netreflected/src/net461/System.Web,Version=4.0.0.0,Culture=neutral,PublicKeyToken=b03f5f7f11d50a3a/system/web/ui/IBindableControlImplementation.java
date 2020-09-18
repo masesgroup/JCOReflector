@@ -114,6 +114,9 @@ public class IBindableControlImplementation extends NetObject implements IBindab
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindableControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBindableControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBindableControl ToIBindableControl(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -128,6 +128,9 @@ public class MetadataExchangeClient extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataExchangeClient}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MetadataExchangeClient} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MetadataExchangeClient cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,6 +118,9 @@ public class DirectoryNotificationControl extends DirectoryControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DirectoryNotificationControl}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DirectoryNotificationControl} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DirectoryNotificationControl cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

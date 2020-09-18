@@ -120,6 +120,9 @@ public class ConfigurationBuilder extends ProviderBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ConfigurationBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ConfigurationBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ConfigurationBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

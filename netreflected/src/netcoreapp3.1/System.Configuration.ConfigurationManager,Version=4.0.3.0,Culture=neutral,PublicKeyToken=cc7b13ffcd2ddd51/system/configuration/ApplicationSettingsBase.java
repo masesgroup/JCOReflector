@@ -126,9 +126,9 @@ public class ApplicationSettingsBase extends SettingsBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ApplicationSettingsBase}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ApplicationSettingsBase} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ApplicationSettingsBase} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ApplicationSettingsBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

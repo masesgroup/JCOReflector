@@ -120,6 +120,9 @@ public class ActionMessageFilter extends MessageFilter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActionMessageFilter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActionMessageFilter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActionMessageFilter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

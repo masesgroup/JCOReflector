@@ -118,6 +118,9 @@ public class AccessDataSource extends SqlDataSource  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AccessDataSource}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AccessDataSource} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AccessDataSource cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

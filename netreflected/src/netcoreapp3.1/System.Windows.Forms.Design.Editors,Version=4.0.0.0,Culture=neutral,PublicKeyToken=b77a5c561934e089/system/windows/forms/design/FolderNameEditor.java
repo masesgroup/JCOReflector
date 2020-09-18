@@ -123,9 +123,9 @@ public class FolderNameEditor extends UITypeEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FolderNameEditor}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link FolderNameEditor} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FolderNameEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FolderNameEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

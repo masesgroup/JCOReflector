@@ -120,6 +120,9 @@ public class XPathPrecedingDocOrderIterator extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XPathPrecedingDocOrderIterator}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XPathPrecedingDocOrderIterator} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XPathPrecedingDocOrderIterator cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

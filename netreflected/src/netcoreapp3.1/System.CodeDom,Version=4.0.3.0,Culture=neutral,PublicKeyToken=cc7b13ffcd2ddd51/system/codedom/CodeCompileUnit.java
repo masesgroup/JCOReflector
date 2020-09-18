@@ -122,9 +122,9 @@ public class CodeCompileUnit extends CodeObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CodeCompileUnit}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link CodeCompileUnit} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CodeCompileUnit} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CodeCompileUnit cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

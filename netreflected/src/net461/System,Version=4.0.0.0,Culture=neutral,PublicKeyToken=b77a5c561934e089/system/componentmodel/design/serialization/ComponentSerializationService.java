@@ -124,6 +124,9 @@ public class ComponentSerializationService extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ComponentSerializationService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ComponentSerializationService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ComponentSerializationService cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

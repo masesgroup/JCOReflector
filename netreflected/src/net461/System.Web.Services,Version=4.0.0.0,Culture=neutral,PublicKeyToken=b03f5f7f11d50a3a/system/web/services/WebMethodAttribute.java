@@ -119,6 +119,9 @@ public class WebMethodAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WebMethodAttribute}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WebMethodAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WebMethodAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

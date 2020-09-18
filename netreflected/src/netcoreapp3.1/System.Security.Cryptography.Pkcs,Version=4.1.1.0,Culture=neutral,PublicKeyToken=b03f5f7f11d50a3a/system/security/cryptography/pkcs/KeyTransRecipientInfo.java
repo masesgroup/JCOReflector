@@ -120,9 +120,9 @@ public class KeyTransRecipientInfo extends RecipientInfo  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyTransRecipientInfo}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link KeyTransRecipientInfo} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link KeyTransRecipientInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static KeyTransRecipientInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

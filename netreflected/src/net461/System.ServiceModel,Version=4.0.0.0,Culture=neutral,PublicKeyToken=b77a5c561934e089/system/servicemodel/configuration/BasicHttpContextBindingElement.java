@@ -118,6 +118,9 @@ public class BasicHttpContextBindingElement extends BasicHttpBindingElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BasicHttpContextBindingElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BasicHttpContextBindingElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BasicHttpContextBindingElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

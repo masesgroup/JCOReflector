@@ -124,6 +124,9 @@ public class CmsSigner extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CmsSigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CmsSigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CmsSigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

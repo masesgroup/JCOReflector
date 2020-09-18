@@ -127,6 +127,9 @@ public class DependencyPropertyDescriptor extends PropertyDescriptor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DependencyPropertyDescriptor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DependencyPropertyDescriptor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DependencyPropertyDescriptor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

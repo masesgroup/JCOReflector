@@ -143,6 +143,9 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceKeyCollisionException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InstanceKeyCollisionException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InstanceKeyCollisionException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

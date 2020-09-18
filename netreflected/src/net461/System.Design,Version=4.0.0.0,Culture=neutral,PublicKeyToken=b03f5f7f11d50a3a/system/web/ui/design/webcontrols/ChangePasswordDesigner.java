@@ -125,6 +125,9 @@ public class ChangePasswordDesigner extends ControlDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ChangePasswordDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ChangePasswordDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ChangePasswordDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

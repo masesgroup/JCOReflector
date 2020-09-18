@@ -125,6 +125,9 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXpsFixedPageWriter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXpsFixedPageWriter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXpsFixedPageWriter ToIXpsFixedPageWriter(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

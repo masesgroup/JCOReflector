@@ -119,6 +119,9 @@ public class SubMenuStyleCollection extends StateManagedCollection  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SubMenuStyleCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SubMenuStyleCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SubMenuStyleCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

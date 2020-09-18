@@ -122,6 +122,9 @@ public class EncryptedSecurityToken extends SecurityToken  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EncryptedSecurityToken}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EncryptedSecurityToken} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EncryptedSecurityToken cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

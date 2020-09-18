@@ -65,6 +65,9 @@ public interface IContainer extends IJCOBridgeReflected, IDisposable {
     public static final String className = "System.ComponentModel.IContainer";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IContainer}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IContainer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IContainer ToIContainer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.Primitives, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

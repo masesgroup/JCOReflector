@@ -121,6 +121,9 @@ public class AtomPub10CategoriesDocumentFormatter extends CategoriesDocumentForm
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AtomPub10CategoriesDocumentFormatter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AtomPub10CategoriesDocumentFormatter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AtomPub10CategoriesDocumentFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

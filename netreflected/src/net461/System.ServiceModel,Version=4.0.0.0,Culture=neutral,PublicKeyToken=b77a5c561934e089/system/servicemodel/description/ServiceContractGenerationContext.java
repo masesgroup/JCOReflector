@@ -120,6 +120,9 @@ public class ServiceContractGenerationContext extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceContractGenerationContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceContractGenerationContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceContractGenerationContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

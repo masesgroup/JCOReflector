@@ -138,6 +138,9 @@ public class SecurityTokenValidationException extends SecurityTokenException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SecurityTokenValidationException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SecurityTokenValidationException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SecurityTokenValidationException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

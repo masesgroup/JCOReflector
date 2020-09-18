@@ -119,6 +119,9 @@ public class HtmlInputReset extends HtmlInputButton  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link HtmlInputReset}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link HtmlInputReset} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static HtmlInputReset cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

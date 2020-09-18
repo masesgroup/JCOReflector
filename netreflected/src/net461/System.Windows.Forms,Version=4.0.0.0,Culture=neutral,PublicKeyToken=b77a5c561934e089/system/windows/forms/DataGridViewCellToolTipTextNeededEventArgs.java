@@ -118,6 +118,9 @@ public class DataGridViewCellToolTipTextNeededEventArgs extends DataGridViewCell
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewCellToolTipTextNeededEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridViewCellToolTipTextNeededEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewCellToolTipTextNeededEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

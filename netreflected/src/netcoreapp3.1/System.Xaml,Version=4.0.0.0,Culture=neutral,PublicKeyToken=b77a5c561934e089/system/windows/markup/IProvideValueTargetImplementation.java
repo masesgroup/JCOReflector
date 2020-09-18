@@ -112,6 +112,9 @@ public class IProvideValueTargetImplementation extends NetObject implements IPro
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProvideValueTarget}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IProvideValueTarget} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IProvideValueTarget ToIProvideValueTarget(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

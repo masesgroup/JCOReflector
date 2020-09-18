@@ -118,9 +118,9 @@ public class Sse3 extends Sse2  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Sse3}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Sse3} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Sse3} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Sse3 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

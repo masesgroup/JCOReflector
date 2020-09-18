@@ -140,6 +140,9 @@ public class UnsupportedTokenTypeBadRequestException extends BadRequestException
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link UnsupportedTokenTypeBadRequestException}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link UnsupportedTokenTypeBadRequestException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static UnsupportedTokenTypeBadRequestException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

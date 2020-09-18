@@ -112,6 +112,9 @@ public class IUnrestrictedPermissionImplementation extends NetObject implements 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IUnrestrictedPermission}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IUnrestrictedPermission} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IUnrestrictedPermission ToIUnrestrictedPermission(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

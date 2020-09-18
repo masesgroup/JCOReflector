@@ -118,6 +118,9 @@ public class CustomTrackingQuery extends TrackingQuery  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CustomTrackingQuery}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CustomTrackingQuery} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CustomTrackingQuery cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

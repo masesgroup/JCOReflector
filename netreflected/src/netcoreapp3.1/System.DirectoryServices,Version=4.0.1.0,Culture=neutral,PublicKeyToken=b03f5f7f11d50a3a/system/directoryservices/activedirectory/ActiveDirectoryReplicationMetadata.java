@@ -121,9 +121,9 @@ public class ActiveDirectoryReplicationMetadata extends DictionaryBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ActiveDirectoryReplicationMetadata}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ActiveDirectoryReplicationMetadata} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ActiveDirectoryReplicationMetadata} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ActiveDirectoryReplicationMetadata cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

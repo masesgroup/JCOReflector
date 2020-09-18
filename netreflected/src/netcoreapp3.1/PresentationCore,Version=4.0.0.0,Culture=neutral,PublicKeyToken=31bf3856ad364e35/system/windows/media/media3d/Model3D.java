@@ -123,9 +123,9 @@ public class Model3D extends Animatable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Model3D}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Model3D} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Model3D} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Model3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

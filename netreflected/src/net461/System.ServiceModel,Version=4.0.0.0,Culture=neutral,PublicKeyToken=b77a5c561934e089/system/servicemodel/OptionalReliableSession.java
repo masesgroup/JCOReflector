@@ -119,6 +119,9 @@ public class OptionalReliableSession extends ReliableSession  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OptionalReliableSession}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OptionalReliableSession} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OptionalReliableSession cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

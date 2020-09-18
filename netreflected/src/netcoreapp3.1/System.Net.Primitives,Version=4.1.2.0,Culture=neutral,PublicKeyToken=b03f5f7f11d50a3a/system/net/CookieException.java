@@ -140,9 +140,9 @@ public class CookieException extends FormatException {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CookieException}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link CookieException} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CookieException} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CookieException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

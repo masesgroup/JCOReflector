@@ -118,6 +118,9 @@ public class Ipv6Element extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Ipv6Element}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Ipv6Element} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Ipv6Element cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

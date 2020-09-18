@@ -119,6 +119,9 @@ public class Pkcs9DocumentDescription extends Pkcs9AttributeObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Pkcs9DocumentDescription}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Pkcs9DocumentDescription} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Pkcs9DocumentDescription cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

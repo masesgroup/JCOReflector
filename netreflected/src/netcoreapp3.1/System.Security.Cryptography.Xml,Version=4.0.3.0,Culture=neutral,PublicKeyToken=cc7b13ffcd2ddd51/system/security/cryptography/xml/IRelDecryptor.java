@@ -63,6 +63,9 @@ public interface IRelDecryptor extends IJCOBridgeReflected {
     public static final String className = "System.Security.Cryptography.Xml.IRelDecryptor";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRelDecryptor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IRelDecryptor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IRelDecryptor ToIRelDecryptor(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");

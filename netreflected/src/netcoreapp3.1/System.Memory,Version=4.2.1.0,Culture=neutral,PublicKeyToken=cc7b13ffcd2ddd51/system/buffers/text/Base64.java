@@ -118,9 +118,9 @@ public class Base64 extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Base64}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Base64} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Base64} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Base64 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

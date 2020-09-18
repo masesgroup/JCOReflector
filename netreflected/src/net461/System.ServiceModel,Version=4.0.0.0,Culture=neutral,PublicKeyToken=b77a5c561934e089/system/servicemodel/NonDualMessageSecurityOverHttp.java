@@ -118,6 +118,9 @@ public class NonDualMessageSecurityOverHttp extends MessageSecurityOverHttp  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link NonDualMessageSecurityOverHttp}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link NonDualMessageSecurityOverHttp} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static NonDualMessageSecurityOverHttp cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

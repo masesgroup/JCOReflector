@@ -60,6 +60,9 @@ public interface IPartImportsSatisfiedNotification extends IJCOBridgeReflected {
     public static final String className = "System.ComponentModel.Composition.IPartImportsSatisfiedNotification";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IPartImportsSatisfiedNotification}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IPartImportsSatisfiedNotification} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IPartImportsSatisfiedNotification ToIPartImportsSatisfiedNotification(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");

@@ -118,6 +118,9 @@ public class MessageProcessingHandler extends DelegatingHandler  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MessageProcessingHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MessageProcessingHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MessageProcessingHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

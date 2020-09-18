@@ -120,9 +120,9 @@ public class DiscreteSingleKeyFrame extends SingleKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiscreteSingleKeyFrame}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DiscreteSingleKeyFrame} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DiscreteSingleKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiscreteSingleKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

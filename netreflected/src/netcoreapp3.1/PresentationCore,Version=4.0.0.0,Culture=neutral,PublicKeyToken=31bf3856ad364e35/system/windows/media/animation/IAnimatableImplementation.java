@@ -116,6 +116,9 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IAnimatable}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IAnimatable} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IAnimatable ToIAnimatable(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

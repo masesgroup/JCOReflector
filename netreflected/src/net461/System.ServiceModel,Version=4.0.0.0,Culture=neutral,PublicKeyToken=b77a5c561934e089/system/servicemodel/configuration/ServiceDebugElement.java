@@ -120,6 +120,9 @@ public class ServiceDebugElement extends BehaviorExtensionElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ServiceDebugElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ServiceDebugElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ServiceDebugElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -149,6 +149,9 @@ public class Form extends ContainerControl  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Form}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Form} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Form cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

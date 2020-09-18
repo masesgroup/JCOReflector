@@ -121,6 +121,9 @@ public class Rss20ItemFormatter extends SyndicationItemFormatter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Rss20ItemFormatter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Rss20ItemFormatter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Rss20ItemFormatter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

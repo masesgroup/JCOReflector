@@ -121,6 +121,9 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbRelationshipNavigationExpression}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbRelationshipNavigationExpression} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbRelationshipNavigationExpression cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -113,6 +113,9 @@ public class IStreamProviderImplementation extends NetObject implements IStreamP
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IStreamProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IStreamProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IStreamProvider ToIStreamProvider(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

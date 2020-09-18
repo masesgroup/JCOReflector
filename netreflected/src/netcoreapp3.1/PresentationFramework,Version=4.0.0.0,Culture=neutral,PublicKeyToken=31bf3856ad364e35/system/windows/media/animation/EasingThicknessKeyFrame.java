@@ -122,9 +122,9 @@ public class EasingThicknessKeyFrame extends ThicknessKeyFrame  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link EasingThicknessKeyFrame}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link EasingThicknessKeyFrame} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link EasingThicknessKeyFrame} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static EasingThicknessKeyFrame cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

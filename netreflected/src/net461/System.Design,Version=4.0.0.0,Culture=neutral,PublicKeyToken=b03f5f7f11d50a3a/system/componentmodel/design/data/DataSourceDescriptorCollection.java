@@ -119,6 +119,9 @@ public class DataSourceDescriptorCollection extends CollectionBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataSourceDescriptorCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataSourceDescriptorCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataSourceDescriptorCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

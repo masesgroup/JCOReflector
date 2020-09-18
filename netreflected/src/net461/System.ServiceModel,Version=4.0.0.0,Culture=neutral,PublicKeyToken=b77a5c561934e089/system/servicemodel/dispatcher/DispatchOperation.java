@@ -123,6 +123,9 @@ public class DispatchOperation extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DispatchOperation}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DispatchOperation} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DispatchOperation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

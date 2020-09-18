@@ -51,7 +51,7 @@ import system.xaml.XamlType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlBackgroundReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlBackgroundReader</a>
  */
-public class XamlBackgroundReader extends NetObjectAutoCloseable  {
+public class XamlBackgroundReader extends NetObject  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -122,9 +122,9 @@ public class XamlBackgroundReader extends NetObjectAutoCloseable  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XamlBackgroundReader}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link XamlBackgroundReader} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XamlBackgroundReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XamlBackgroundReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class DiscoveryDocumentSearchPattern extends DiscoverySearchPattern  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiscoveryDocumentSearchPattern}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DiscoveryDocumentSearchPattern} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiscoveryDocumentSearchPattern cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

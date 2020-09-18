@@ -62,6 +62,9 @@ public interface IWorkBatch extends IJCOBridgeReflected {
     public static final String className = "System.Workflow.Runtime.IWorkBatch";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IWorkBatch}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IWorkBatch} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IWorkBatch ToIWorkBatch(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

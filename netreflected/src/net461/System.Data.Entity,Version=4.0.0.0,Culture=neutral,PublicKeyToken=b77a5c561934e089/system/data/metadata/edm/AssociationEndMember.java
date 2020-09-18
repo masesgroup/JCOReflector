@@ -119,6 +119,9 @@ public class AssociationEndMember extends RelationshipEndMember  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssociationEndMember}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AssociationEndMember} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AssociationEndMember cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

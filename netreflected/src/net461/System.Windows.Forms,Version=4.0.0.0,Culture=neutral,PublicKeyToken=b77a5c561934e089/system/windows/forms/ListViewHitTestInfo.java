@@ -119,6 +119,9 @@ public class ListViewHitTestInfo extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ListViewHitTestInfo}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ListViewHitTestInfo} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ListViewHitTestInfo cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

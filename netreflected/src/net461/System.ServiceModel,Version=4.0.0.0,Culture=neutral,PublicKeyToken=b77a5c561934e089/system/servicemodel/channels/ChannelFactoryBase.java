@@ -118,6 +118,9 @@ public class ChannelFactoryBase extends ChannelManagerBase  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ChannelFactoryBase}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ChannelFactoryBase} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ChannelFactoryBase cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

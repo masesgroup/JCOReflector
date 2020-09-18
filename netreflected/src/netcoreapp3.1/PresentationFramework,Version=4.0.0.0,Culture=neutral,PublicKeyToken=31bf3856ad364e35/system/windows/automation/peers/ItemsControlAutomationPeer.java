@@ -119,9 +119,9 @@ public class ItemsControlAutomationPeer extends FrameworkElementAutomationPeer  
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ItemsControlAutomationPeer}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link ItemsControlAutomationPeer} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ItemsControlAutomationPeer} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ItemsControlAutomationPeer cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

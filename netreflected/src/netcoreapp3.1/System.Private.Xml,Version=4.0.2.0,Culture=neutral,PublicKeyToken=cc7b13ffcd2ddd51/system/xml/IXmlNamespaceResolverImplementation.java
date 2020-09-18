@@ -112,6 +112,9 @@ public class IXmlNamespaceResolverImplementation extends NetObject implements IX
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IXmlNamespaceResolver}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IXmlNamespaceResolver} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IXmlNamespaceResolver ToIXmlNamespaceResolver(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

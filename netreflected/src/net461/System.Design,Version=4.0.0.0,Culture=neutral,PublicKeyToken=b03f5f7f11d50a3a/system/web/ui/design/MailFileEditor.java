@@ -118,6 +118,9 @@ public class MailFileEditor extends UrlEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MailFileEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MailFileEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MailFileEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

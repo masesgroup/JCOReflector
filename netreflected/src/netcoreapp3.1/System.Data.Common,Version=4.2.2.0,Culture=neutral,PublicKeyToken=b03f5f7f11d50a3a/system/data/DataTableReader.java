@@ -123,9 +123,9 @@ public class DataTableReader extends DbDataReader  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataTableReader}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DataTableReader} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataTableReader} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataTableReader cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

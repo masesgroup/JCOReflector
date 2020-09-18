@@ -117,6 +117,9 @@ public class OrElse extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link OrElse}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link OrElse} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static OrElse cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

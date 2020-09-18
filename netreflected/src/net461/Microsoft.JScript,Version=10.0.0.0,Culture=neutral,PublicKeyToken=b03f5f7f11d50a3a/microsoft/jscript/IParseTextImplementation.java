@@ -114,6 +114,9 @@ public class IParseTextImplementation extends NetObject implements IParseText {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IParseText}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IParseText} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IParseText ToIParseText(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

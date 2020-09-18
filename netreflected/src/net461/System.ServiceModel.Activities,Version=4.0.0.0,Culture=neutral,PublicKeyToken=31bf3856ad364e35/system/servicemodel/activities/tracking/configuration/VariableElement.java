@@ -118,6 +118,9 @@ public class VariableElement extends TrackingConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link VariableElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link VariableElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static VariableElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

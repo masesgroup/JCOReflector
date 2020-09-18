@@ -121,9 +121,9 @@ public class Condition extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link Condition}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link Condition} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link Condition} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static Condition cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -118,9 +118,9 @@ public class DebuggerHiddenAttribute extends Attribute  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DebuggerHiddenAttribute}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link DebuggerHiddenAttribute} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DebuggerHiddenAttribute} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DebuggerHiddenAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

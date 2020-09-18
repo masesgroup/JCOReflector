@@ -121,6 +121,9 @@ public class SocketTaskExtensions extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SocketTaskExtensions}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SocketTaskExtensions} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SocketTaskExtensions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

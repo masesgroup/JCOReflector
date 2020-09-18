@@ -118,6 +118,9 @@ public class PagesChangedEventArgs extends EventArgs  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link PagesChangedEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link PagesChangedEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static PagesChangedEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

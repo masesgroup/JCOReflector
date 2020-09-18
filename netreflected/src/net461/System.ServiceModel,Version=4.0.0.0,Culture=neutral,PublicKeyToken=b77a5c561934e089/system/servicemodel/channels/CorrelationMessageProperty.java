@@ -120,6 +120,9 @@ public class CorrelationMessageProperty extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link CorrelationMessageProperty}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link CorrelationMessageProperty} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static CorrelationMessageProperty cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

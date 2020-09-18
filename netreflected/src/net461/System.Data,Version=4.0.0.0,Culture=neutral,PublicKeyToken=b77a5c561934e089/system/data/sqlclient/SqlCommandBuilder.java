@@ -121,6 +121,9 @@ public class SqlCommandBuilder extends DbCommandBuilder  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SqlCommandBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SqlCommandBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SqlCommandBuilder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

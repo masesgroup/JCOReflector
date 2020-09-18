@@ -113,6 +113,9 @@ public class ICom2PropertyPageDisplayServiceImplementation extends NetObject imp
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ICom2PropertyPageDisplayService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ICom2PropertyPageDisplayService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ICom2PropertyPageDisplayService ToICom2PropertyPageDisplayService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class ProxyElement extends ConfigurationElement  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ProxyElement}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ProxyElement} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ProxyElement cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

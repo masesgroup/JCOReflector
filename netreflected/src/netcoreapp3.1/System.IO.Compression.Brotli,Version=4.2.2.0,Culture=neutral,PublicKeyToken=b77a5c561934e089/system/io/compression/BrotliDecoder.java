@@ -48,7 +48,7 @@ import system.buffers.OperationStatus;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.BrotliDecoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.BrotliDecoder</a>
  */
-public class BrotliDecoder extends ValueType  {
+public class BrotliDecoder extends ValueType implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -119,9 +119,9 @@ public class BrotliDecoder extends ValueType  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link BrotliDecoder}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link BrotliDecoder} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link BrotliDecoder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static BrotliDecoder cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -148,7 +148,20 @@ public class BrotliDecoder extends ValueType  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

@@ -118,6 +118,9 @@ public class AddValidationError extends NativeActivity  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AddValidationError}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AddValidationError} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AddValidationError cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

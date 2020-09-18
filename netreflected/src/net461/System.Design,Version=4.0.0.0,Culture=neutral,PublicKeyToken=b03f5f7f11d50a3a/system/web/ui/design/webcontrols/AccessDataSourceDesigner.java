@@ -118,6 +118,9 @@ public class AccessDataSourceDesigner extends SqlDataSourceDesigner  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AccessDataSourceDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AccessDataSourceDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AccessDataSourceDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

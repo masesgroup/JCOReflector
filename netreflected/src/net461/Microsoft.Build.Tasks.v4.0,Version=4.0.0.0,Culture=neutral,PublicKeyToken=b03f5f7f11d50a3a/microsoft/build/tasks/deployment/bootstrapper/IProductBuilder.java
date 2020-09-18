@@ -61,6 +61,9 @@ public interface IProductBuilder extends IJCOBridgeReflected {
     public static final String className = "Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilder";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IProductBuilder}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IProductBuilder} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IProductBuilder ToIProductBuilder(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");

@@ -122,6 +122,9 @@ public class InMemorySymmetricSecurityKey extends SymmetricSecurityKey  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InMemorySymmetricSecurityKey}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InMemorySymmetricSecurityKey} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InMemorySymmetricSecurityKey cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

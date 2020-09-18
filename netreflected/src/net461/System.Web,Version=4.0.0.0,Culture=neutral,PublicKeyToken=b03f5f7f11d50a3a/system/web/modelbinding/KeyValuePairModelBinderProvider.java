@@ -122,6 +122,9 @@ public class KeyValuePairModelBinderProvider extends ModelBinderProvider  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link KeyValuePairModelBinderProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link KeyValuePairModelBinderProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static KeyValuePairModelBinderProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

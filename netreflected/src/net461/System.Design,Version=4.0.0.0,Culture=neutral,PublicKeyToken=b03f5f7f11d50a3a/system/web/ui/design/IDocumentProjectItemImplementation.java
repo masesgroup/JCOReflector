@@ -113,6 +113,9 @@ public class IDocumentProjectItemImplementation extends NetObject implements IDo
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDocumentProjectItem}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDocumentProjectItem} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDocumentProjectItem ToIDocumentProjectItem(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

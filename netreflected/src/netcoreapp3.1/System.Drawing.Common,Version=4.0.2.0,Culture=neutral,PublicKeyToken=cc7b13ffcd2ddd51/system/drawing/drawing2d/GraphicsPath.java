@@ -61,7 +61,7 @@ import system.drawing.drawing2d.PathData;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.GraphicsPath" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.GraphicsPath</a>
  */
-public class GraphicsPath extends MarshalByRefObject  {
+public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -132,9 +132,9 @@ public class GraphicsPath extends MarshalByRefObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link GraphicsPath}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link GraphicsPath} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link GraphicsPath} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static GraphicsPath cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -1052,7 +1052,20 @@ public class GraphicsPath extends MarshalByRefObject  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

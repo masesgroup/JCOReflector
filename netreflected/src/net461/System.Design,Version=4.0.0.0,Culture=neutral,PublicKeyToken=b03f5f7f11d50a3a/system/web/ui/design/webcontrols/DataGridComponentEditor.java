@@ -118,6 +118,9 @@ public class DataGridComponentEditor extends BaseDataListComponentEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridComponentEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridComponentEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridComponentEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

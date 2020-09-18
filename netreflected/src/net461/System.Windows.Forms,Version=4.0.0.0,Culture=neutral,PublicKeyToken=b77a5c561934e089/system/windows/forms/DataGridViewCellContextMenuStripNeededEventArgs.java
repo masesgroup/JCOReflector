@@ -119,6 +119,9 @@ public class DataGridViewCellContextMenuStripNeededEventArgs extends DataGridVie
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DataGridViewCellContextMenuStripNeededEventArgs}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DataGridViewCellContextMenuStripNeededEventArgs} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DataGridViewCellContextMenuStripNeededEventArgs cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class AffineTransform3D extends Transform3D  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AffineTransform3D}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AffineTransform3D} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AffineTransform3D cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

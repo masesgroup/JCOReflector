@@ -123,6 +123,9 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBindingListView}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBindingListView} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBindingListView ToIBindingListView(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -62,6 +62,9 @@ public interface IGridProvider extends IJCOBridgeReflected {
     public static final String className = "System.Windows.Automation.Provider.IGridProvider";
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IGridProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IGridProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IGridProvider ToIGridProvider(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");

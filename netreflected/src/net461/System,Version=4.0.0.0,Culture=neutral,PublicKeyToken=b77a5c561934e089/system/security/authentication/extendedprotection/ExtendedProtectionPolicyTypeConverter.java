@@ -121,6 +121,9 @@ public class ExtendedProtectionPolicyTypeConverter extends TypeConverter  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ExtendedProtectionPolicyTypeConverter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ExtendedProtectionPolicyTypeConverter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ExtendedProtectionPolicyTypeConverter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

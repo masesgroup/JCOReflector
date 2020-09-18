@@ -114,6 +114,9 @@ public class IEnumConnectionPointsImplementation extends NetObject implements IE
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IEnumConnectionPoints}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IEnumConnectionPoints} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IEnumConnectionPoints ToIEnumConnectionPoints(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

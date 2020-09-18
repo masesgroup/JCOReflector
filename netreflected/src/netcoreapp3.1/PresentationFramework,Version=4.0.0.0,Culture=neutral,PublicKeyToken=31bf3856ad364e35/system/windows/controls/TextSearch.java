@@ -118,9 +118,9 @@ public class TextSearch extends DependencyObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link TextSearch}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link TextSearch} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link TextSearch} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static TextSearch cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

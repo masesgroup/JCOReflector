@@ -124,6 +124,9 @@ public class WorkflowDesigner extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowDesigner}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowDesigner} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowDesigner cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

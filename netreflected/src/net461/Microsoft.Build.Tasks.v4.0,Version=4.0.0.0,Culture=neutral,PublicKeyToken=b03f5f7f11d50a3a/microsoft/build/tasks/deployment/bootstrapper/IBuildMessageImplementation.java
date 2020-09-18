@@ -113,6 +113,9 @@ public class IBuildMessageImplementation extends NetObject implements IBuildMess
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IBuildMessage}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IBuildMessage} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IBuildMessage ToIBuildMessage(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

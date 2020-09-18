@@ -113,6 +113,9 @@ public class IToolboxUserImplementation extends NetObject implements IToolboxUse
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IToolboxUser}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IToolboxUser} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IToolboxUser ToIToolboxUser(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

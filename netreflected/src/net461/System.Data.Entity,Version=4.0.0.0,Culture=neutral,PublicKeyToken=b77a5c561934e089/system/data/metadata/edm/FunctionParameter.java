@@ -122,6 +122,9 @@ public class FunctionParameter extends MetadataItem  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link FunctionParameter}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link FunctionParameter} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static FunctionParameter cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

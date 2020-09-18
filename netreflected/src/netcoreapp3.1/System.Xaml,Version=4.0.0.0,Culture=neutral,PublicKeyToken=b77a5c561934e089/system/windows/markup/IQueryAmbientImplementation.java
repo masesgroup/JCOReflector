@@ -112,6 +112,9 @@ public class IQueryAmbientImplementation extends NetObject implements IQueryAmbi
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IQueryAmbient}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IQueryAmbient} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IQueryAmbient ToIQueryAmbient(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -121,6 +121,9 @@ public class InstanceContext extends CommunicationObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link InstanceContext}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link InstanceContext} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static InstanceContext cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

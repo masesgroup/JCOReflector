@@ -120,6 +120,9 @@ public class DbFunctionCommandTree extends DbCommandTree  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DbFunctionCommandTree}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DbFunctionCommandTree} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DbFunctionCommandTree cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -119,6 +119,9 @@ public class AssociatedMetadataProvider extends ModelMetadataProvider  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link AssociatedMetadataProvider}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link AssociatedMetadataProvider} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static AssociatedMetadataProvider cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

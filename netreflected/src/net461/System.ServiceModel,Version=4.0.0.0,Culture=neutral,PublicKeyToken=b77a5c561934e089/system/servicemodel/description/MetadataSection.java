@@ -121,6 +121,9 @@ public class MetadataSection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link MetadataSection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link MetadataSection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static MetadataSection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

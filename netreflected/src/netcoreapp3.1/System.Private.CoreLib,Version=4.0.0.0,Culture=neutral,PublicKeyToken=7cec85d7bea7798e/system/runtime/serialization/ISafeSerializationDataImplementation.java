@@ -112,6 +112,9 @@ public class ISafeSerializationDataImplementation extends NetObject implements I
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link ISafeSerializationData}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link ISafeSerializationData} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static ISafeSerializationData ToISafeSerializationData(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

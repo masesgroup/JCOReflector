@@ -123,6 +123,9 @@ public class XmlFileEditor extends UITypeEditor  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link XmlFileEditor}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link XmlFileEditor} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static XmlFileEditor cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

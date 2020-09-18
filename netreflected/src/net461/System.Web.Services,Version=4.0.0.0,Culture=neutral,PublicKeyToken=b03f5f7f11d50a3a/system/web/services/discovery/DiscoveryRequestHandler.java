@@ -118,6 +118,9 @@ public class DiscoveryRequestHandler extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link DiscoveryRequestHandler}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link DiscoveryRequestHandler} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static DiscoveryRequestHandler cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

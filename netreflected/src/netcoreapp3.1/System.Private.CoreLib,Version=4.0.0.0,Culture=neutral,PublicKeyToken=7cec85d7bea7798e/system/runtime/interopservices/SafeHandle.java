@@ -47,7 +47,7 @@ import system.runtime.constrainedexecution.CriticalFinalizerObject;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.SafeHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.SafeHandle</a>
  */
-public class SafeHandle extends CriticalFinalizerObject  {
+public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -118,9 +118,9 @@ public class SafeHandle extends CriticalFinalizerObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SafeHandle}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SafeHandle} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SafeHandle} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SafeHandle cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
@@ -175,7 +175,20 @@ public class SafeHandle extends CriticalFinalizerObject  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

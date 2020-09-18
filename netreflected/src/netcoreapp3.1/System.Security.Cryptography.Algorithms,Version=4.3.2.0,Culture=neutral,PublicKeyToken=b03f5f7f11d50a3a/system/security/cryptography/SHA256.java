@@ -119,9 +119,9 @@ public class SHA256 extends HashAlgorithm  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link SHA256}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link SHA256} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link SHA256} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static SHA256 cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

@@ -40,22 +40,18 @@ public class HelloHierarchy {
                 File.WriteAllText(fileinputname, fileText);
             }
 
-            FileStream sourceStream = null;
-            FileStream destinationStream = null;
             Stream str;
 
             //emulate the using directive (.net) with a try...finally  
-            try
+            try(FileStream sourceStream = File.Open(fileinputname, FileMode.Open) ; 
+            FileStream destinationStream = File.Create(fileoutputname);)
             {
-                //open the input FileStream and create the ouput FileStream
-                sourceStream = File.Open(fileinputname, FileMode.Open);
-                destinationStream = File.Create(fileoutputname);
                 //Cast to destination stream to stream base class
                 str = (Stream) destinationStream;
                 //Copy the Source content to the destination stream using the casted object
                 sourceStream.CopyTo(str);
                 //Cast the base stram to the FileStream and assign to a Filestream
-                FileStream destinationStreamInstance = (FileStream) destinationStream;
+                FileStream destinationStreamInstance = (FileStream) str;
                 //Write using the casted stream
                 byte[] toWrite = Encoding.getASCII().GetBytes(fileText);
                 destinationStreamInstance.Write(toWrite,0,toWrite.length);
@@ -81,19 +77,14 @@ public class HelloHierarchy {
                     Console.WriteLine(expectedText);
                 }
             }
-            finally
-            {
-                //dispose the streams
-                if(sourceStream != null) sourceStream.Dispose();
-                if(destinationStream != null) destinationStream.Dispose();
-            }
+            
             //check if the dispose affected the casted class
             if(str.getCanRead() == true) result += " Hierarchy dispose NOT OK";
             if(str.getCanWrite() == true) result += " Hierarchy dispose NOT OK";
             
             Console.WriteLine(result);
             Console.WriteLine("Exiting");
-            Environment.Exit(1);
+            Environment.Exit(0);
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();
         } catch (Throwable tre) {

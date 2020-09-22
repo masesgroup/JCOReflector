@@ -24,35 +24,23 @@
 
 package mscorlib;
 
+import system.Console;
 import system.Environment;
-import system.threading.Thread;
-import system.threading.ThreadStart;
-import system.timers.Timer;
 
-public class HelloNETEvent {
+
+public class HelloIterator {
     public static void main(String[] args) {
-        try (Timer timer = new Timer();){
-            TimerElapsed elapsed = new TimerElapsed();
-            
-            timer.addElapsed(elapsed);
-            timer.setInterval(1000);
+        try {
+            //Get an iterable array and populate a sorted array
 
-            Thread thread = new Thread(new ThreadStart() {
-                public void Invoke() {
-                    try {
-                        System.out.println("Running thread.");
-                        timer.setEnabled(true);
-                    } catch (Throwable e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-            thread.Start();
-            Thread.Sleep(10000);
-            timer.Stop();
-            timer.removeElapsed(elapsed);
+            String[] ld = Environment.GetLogicalDrives();
+            for (String drive : ld) {
+                Console.WriteLine(drive); 
+                //System.out.println(drive); viable Alternative
+            }
             Environment.Exit(0);
-        } catch (Throwable tre) {
+        }
+        catch (Throwable tre) {
             tre.printStackTrace();
         }
     }

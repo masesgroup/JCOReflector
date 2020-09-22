@@ -22,37 +22,41 @@
  *  SOFTWARE.
  */
 
-package mscorlib;
+package hierarchy;
 
+import org.mases.jcobridge.netreflection.NetObject;
+
+import system.Console;
 import system.Environment;
-import system.threading.Thread;
-import system.threading.ThreadStart;
-import system.timers.Timer;
+import system.collections.*;
 
-public class HelloNETEvent {
+public class HelloInterfaces {
     public static void main(String[] args) {
-        try (Timer timer = new Timer();){
-            TimerElapsed elapsed = new TimerElapsed();
+        try {
+            //Create and populate a sorted array
+            SortedList sr = new SortedList();
+            sr.Add(new NetObject("Hello"), new NetObject("test"));
+            sr.Add(new NetObject("Hello2"), new NetObject("test2"));
+            sr.Add(new NetObject("Hello3"), new NetObject("test3"));
+            // Get the IList interface 
+            IList keyList = sr.GetKeyList();
+            IList valueList = sr.GetValueList();
             
-            timer.addElapsed(elapsed);
-            timer.setInterval(1000);
-
-            Thread thread = new Thread(new ThreadStart() {
-                public void Invoke() {
-                    try {
-                        System.out.println("Running thread.");
-                        timer.setEnabled(true);
-                    } catch (Throwable e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-            thread.Start();
-            Thread.Sleep(10000);
-            timer.Stop();
-            timer.removeElapsed(elapsed);
+            //operate on interface
+            for (NetObject netObject : keyList) {
+                Console.WriteLine(netObject.ToString());
+            }
+            for (NetObject netObject : valueList) {
+                Console.WriteLine(netObject.ToString());
+            }
+            IDictionary ev = Environment.GetEnvironmentVariables();
+            for (NetObject netObject : ev.getKeys()) {
+                Console.WriteLine(netObject.ToString()); 
+                //System.out.println(netObject.ToString()); viable Alternative
+            }
             Environment.Exit(0);
-        } catch (Throwable tre) {
+        }
+        catch (Throwable tre) {
             tre.printStackTrace();
         }
     }

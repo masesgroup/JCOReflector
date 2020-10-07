@@ -38,9 +38,9 @@ namespace MASES.C2JReflector
             Source, Compiled
         }
 
-        const string JavaCompiler = @"bin\javac.exe";
-        const string JavaDoc = @"bin\javadoc.exe";
-        const string JarCompiler = @"bin\jar.exe";
+        static string JavaCompiler = Path.Combine("bin", "javac");
+        static string JavaDoc = Path.Combine("bin", "javadoc");
+        static string JarCompiler = Path.Combine("bin", "jar");
 
         public static appendToConsoleHandler AppendToConsoleHandler;
         public static EventHandler<EndOperationEventArgs> EndOperationHandler;
@@ -61,6 +61,7 @@ namespace MASES.C2JReflector
 
         public static void CompileClasses(object o)
         {
+            bool failed = false;
             JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
 
             CancellationToken = args.CancellationToken;
@@ -83,19 +84,26 @@ namespace MASES.C2JReflector
                 var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Compilation of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
-            catch (Exception ex)
+            catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, reportStr);
             }
+            catch (Exception ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, reportStr);
+                failed = true;
+            }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
             }
         }
 
         public static void GenerateDocs(object o)
         {
+            bool failed = false;
             JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
             CancellationToken = args.CancellationToken;
             logLevel = args.LogLevel;
@@ -118,19 +126,26 @@ namespace MASES.C2JReflector
                 var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, destinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
-            catch (Exception ex)
+            catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, reportStr);
             }
+            catch (Exception ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, reportStr);
+                failed = true;
+            }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
             }
         }
 
         public static AssemblyDataCollection CreateFolderList(object o)
         {
+            bool failed = false;
             FolderBuilderEventArgs args = o as FolderBuilderEventArgs;
             CancellationToken = args.CancellationToken;
             logLevel = args.LogLevel;
@@ -173,14 +188,20 @@ namespace MASES.C2JReflector
                 }
                 return coll;
             }
-            catch (Exception ex)
+            catch (OperationCanceledException ex)
             {
                 AppendToConsole(LogLevel.Error, "Error {0}", ex.Message);
                 return new AssemblyDataCollection();
             }
+            catch (Exception ex)
+            {
+                AppendToConsole(LogLevel.Error, "Error {0}", ex.Message);
+                failed = true;
+                return new AssemblyDataCollection();
+            }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(string.Empty));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(string.Empty, failed));
             }
         }
 
@@ -196,6 +217,7 @@ namespace MASES.C2JReflector
                 var path = Path.GetFullPath(item);
                 path = path.Replace(originFolder, string.Empty);
                 path = path.Replace("\\", string.Empty);
+                path = path.Replace("/", string.Empty);
                 dirs.Add(path);
             }
 
@@ -273,6 +295,7 @@ namespace MASES.C2JReflector
 
         public static void CreateJars(object o)
         {
+            bool failed = false;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
             try
@@ -299,14 +322,20 @@ namespace MASES.C2JReflector
                 var jars = CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource);
                 reportStr = string.Format("{0} Jars created in {1}.", jars, DateTime.Now - dtStart);
             }
-            catch (Exception ex)
+            catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 AppendToConsole(LogLevel.Error, reportStr);
             }
+            catch (Exception ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, reportStr);
+                failed = true;
+            }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -372,6 +401,7 @@ namespace MASES.C2JReflector
 
             var assemblyName = pathName.Replace(Const.Framework.RuntimeFolder, string.Empty);
             assemblyName = assemblyName.Replace("\\", string.Empty);
+            assemblyName = assemblyName.Replace("/", string.Empty);
             var destinationJar = string.Format(patternName, assemblyName);
             destinationJar = Path.Combine(destinationFolder, destinationJar);
             var searchPath = Path.Combine(originFolder, pathName);

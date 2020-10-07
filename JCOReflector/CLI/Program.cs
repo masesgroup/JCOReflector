@@ -217,6 +217,7 @@ namespace MASES.C2JReflector
         static void endOperation(object sender, EndOperationEventArgs args)
         {
             Console.WriteLine(args.Report);
+            if (args.Failed) Environment.ExitCode = -1;
         }
 
         static void showHelp()

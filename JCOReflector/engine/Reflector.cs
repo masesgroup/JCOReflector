@@ -278,6 +278,7 @@ namespace MASES.C2JReflector
 
         public static async Task ExportAssembly(object o)
         {
+            bool failed = false;
             List<Type> typesToExport = new List<Type>();
             ReflectorEventArgs args = o as ReflectorEventArgs;
 
@@ -344,13 +345,18 @@ namespace MASES.C2JReflector
                     reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine;
                 }
             }
+            catch (OperationCanceledException ex)
+            {
+                AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
+            }
             catch (Exception ex)
             {
-                AppendToConsole(LogLevel.Error, "ExportAssembly report section error:{0}", ex.Message);
+                AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
+                failed = true;
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, statisticsCsv));
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
             }
         }
 

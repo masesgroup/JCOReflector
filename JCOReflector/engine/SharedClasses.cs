@@ -174,19 +174,14 @@ namespace MASES.C2JReflector
     #region EndOperationEventArgs class
     public class EndOperationEventArgs : EventArgs
     {
-        public EndOperationEventArgs(string report)
+        public EndOperationEventArgs(string report, bool failed)
         {
             Report = report;
-        }
-
-        public EndOperationEventArgs(string report, string statisticsCsv)
-        {
-            Report = report;
-            StatisticsCsv = statisticsCsv;
+            Failed = failed;
         }
 
         public string Report { get; private set; }
-        public string StatisticsCsv { get; private set; }
+        public bool Failed { get; private set; }
     }
     #endregion
 

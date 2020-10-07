@@ -321,6 +321,10 @@ namespace MASES.C2JReflector
                 if (args != null)
                 {
                     tbReport.Text = args.Report;
+                    if (args.Failed)
+                    {
+                        MessageBox.Show("Operation failed, check console for error.");
+                    }
                 }
                 else tbReport.Text = "Missing managed event args.";
             });

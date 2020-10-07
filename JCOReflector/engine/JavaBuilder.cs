@@ -510,7 +510,7 @@ namespace MASES.C2JReflector
                             AppendToConsole(LogLevel.Error, outputData);
                         }
 
-                        if (!string.IsNullOrEmpty(errorData))
+                        if (!string.IsNullOrEmpty(errorData) && errorData != Environment.NewLine)
                         {
                             AppendToConsole(LogLevel.Error, errorData);
                         }

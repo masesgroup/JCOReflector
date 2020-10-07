@@ -37,7 +37,7 @@ namespace MASES.C2JReflector
             if (args.Length < 2)
             {
                 showHelp();
-                Environment.ExitCode = 1;
+                Environment.ExitCode = -1;
                 return;
             }
 
@@ -47,7 +47,7 @@ namespace MASES.C2JReflector
             {
                 var assemblyLoc = typeof(Program).Assembly.Location;
                 assemblyLoc = Path.GetDirectoryName(assemblyLoc);
-                RepositoryRoot = Path.GetFullPath(Path.Combine(assemblyLoc, @"..\..\"));
+                RepositoryRoot = Path.GetFullPath(Path.Combine(assemblyLoc, @".." + Path.DirectorySeparatorChar + @".." + Path.DirectorySeparatorChar));
 
                 string tbDestinationFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, Const.FileNameAndDirectory.RootDirectory));
                 string tbJarDestinationFolder = Const.FileNameAndDirectory.GetRelativePath(assemblyLoc, RepositoryRoot);
@@ -183,7 +183,7 @@ namespace MASES.C2JReflector
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Environment.ExitCode = 1;
+                Environment.ExitCode = -1;
             }
         }
 

@@ -418,13 +418,15 @@ namespace MASES.C2JReflector
             if (string.IsNullOrEmpty(outputStr)) return string.Empty; // discard empty folders
 
             File.WriteAllText(Path.Combine(searchPath, fileWithNames), sb.ToString());
+
+            string jarParam = (logLevel > LogLevel.Info) ? "cvf" : "cf";
             if (string.IsNullOrEmpty(manifestFile))
             {
-                launchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), "cvf " + destinationJar + " @" + fileWithNames, timeout);
+                launchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), jarParam + " " + destinationJar + " @" + fileWithNames, timeout);
             }
             else
             {
-                launchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), "cvfm " + destinationJar + " " + manifestFile + " @" + fileWithNames, timeout);
+                launchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), jarParam + "m " + destinationJar + " " + manifestFile + " @" + fileWithNames, timeout);
             }
             return assemblyName;
         }

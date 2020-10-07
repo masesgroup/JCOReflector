@@ -117,6 +117,9 @@ public class WorkflowInstanceQueryElementCollection extends NetObject  {
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link WorkflowInstanceQueryElementCollection}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link WorkflowInstanceQueryElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static WorkflowInstanceQueryElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

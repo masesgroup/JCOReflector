@@ -38,29 +38,28 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.text.json.serialization.JsonConverter;
-import system.text.json.JsonSerializerOptions;
+import system.text.json.serialization.JsonAttribute;
 
 
 /**
- * The base .NET class managing System.Text.Json.Serialization.JsonConverterFactory, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.Serialization.JsonPropertyNameAttribute, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonConverterFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonConverterFactory</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonPropertyNameAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonPropertyNameAttribute</a>
  */
-public class JsonConverterFactory extends JsonConverter  {
+public class JsonPropertyNameAttribute extends JsonAttribute  {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.Serialization.JsonConverterFactory
+     * Qualified class name: System.Text.Json.Serialization.JsonPropertyNameAttribute
      */
-    public static final String className = "System.Text.Json.Serialization.JsonConverterFactory";
+    public static final String className = "System.Text.Json.Serialization.JsonPropertyNameAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -85,7 +84,7 @@ public class JsonConverterFactory extends JsonConverter  {
         }
     }
 
-    public JsonConverterFactory(Object instance) throws Throwable {
+    public JsonPropertyNameAttribute(Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,39 +117,50 @@ public class JsonConverterFactory extends JsonConverter  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonConverterFactory}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonPropertyNameAttribute}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link JsonConverterFactory} instance
+     * @return {@link JsonPropertyNameAttribute} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static JsonConverterFactory cast(IJCOBridgeReflected from) throws Throwable {
+    public static JsonPropertyNameAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new JsonConverterFactory(from.getJCOInstance());
+        return new JsonPropertyNameAttribute(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public JsonConverterFactory() throws Throwable {
+    public JsonPropertyNameAttribute() throws Throwable {
     }
 
-    
-    // Methods section
-    
-    public JsonConverter CreateConverter(NetType typeToConvert, JsonSerializerOptions options) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public JsonPropertyNameAttribute(java.lang.String name) throws Throwable {
         try {
-            JCObject objCreateConverter = (JCObject)classInstance.Invoke("CreateConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            return new JsonConverter(objCreateConverter);
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
 
+
+    
+    // Methods section
+    
+
     
     // Properties section
     
+    public java.lang.String getName() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Name");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

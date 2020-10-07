@@ -38,28 +38,30 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.text.json.JsonNamingPolicy;
+import system.ValueType;
+import system.text.json.JsonEncodedText;
+import system.text.encodings.web.JavaScriptEncoder;
 
 
 /**
- * The base .NET class managing System.Text.Json.JsonNamingPolicy, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.JsonEncodedText, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonNamingPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonNamingPolicy</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonEncodedText" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonEncodedText</a>
  */
-public class JsonNamingPolicy extends NetObject  {
+public class JsonEncodedText extends ValueType  {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.JsonNamingPolicy
+     * Qualified class name: System.Text.Json.JsonEncodedText
      */
-    public static final String className = "System.Text.Json.JsonNamingPolicy";
+    public static final String className = "System.Text.Json.JsonEncodedText";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -84,7 +86,7 @@ public class JsonNamingPolicy extends NetObject  {
         }
     }
 
-    public JsonNamingPolicy(Object instance) throws Throwable {
+    public JsonEncodedText(Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,29 +119,42 @@ public class JsonNamingPolicy extends NetObject  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonNamingPolicy}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonEncodedText}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link JsonNamingPolicy} instance
+     * @return {@link JsonEncodedText} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static JsonNamingPolicy cast(IJCOBridgeReflected from) throws Throwable {
+    public static JsonEncodedText cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new JsonNamingPolicy(from.getJCOInstance());
+        return new JsonEncodedText(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public JsonNamingPolicy() throws Throwable {
+    public JsonEncodedText() throws Throwable {
     }
+
+
 
     
     // Methods section
     
-    public java.lang.String ConvertName(java.lang.String name) throws Throwable {
+    public boolean Equals(JsonEncodedText other) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("ConvertName", name);
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonEncodedText Encode(java.lang.String value, JavaScriptEncoder encoder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objEncode = (JCObject)classType.Invoke("Encode", value, encoder == null ? null : encoder.getJCOInstance());
+            return new JsonEncodedText(objEncode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -149,17 +164,6 @@ public class JsonNamingPolicy extends NetObject  {
     
     // Properties section
     
-    public static JsonNamingPolicy getCamelCase() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("CamelCase");
-            return new JsonNamingPolicy(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

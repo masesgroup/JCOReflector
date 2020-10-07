@@ -31,38 +31,36 @@
  * </auto-generated>
  *************************************************************************************/
 
-package system.text.json.serialization;
+package system.text.json;
 
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.text.json.serialization.JsonConverterFactory;
-import system.text.json.JsonNamingPolicy;
-import system.text.json.serialization.JsonConverter;
-import system.text.json.JsonSerializerOptions;
+import system.ValueType;
+import system.text.json.JsonCommentHandling;
 
 
 /**
- * The base .NET class managing System.Text.Json.Serialization.JsonStringEnumConverter, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.JsonReaderOptions, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonStringEnumConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonStringEnumConverter</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonReaderOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonReaderOptions</a>
  */
-public class JsonStringEnumConverter extends JsonConverterFactory  {
+public class JsonReaderOptions extends ValueType  {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.Serialization.JsonStringEnumConverter
+     * Qualified class name: System.Text.Json.JsonReaderOptions
      */
-    public static final String className = "System.Text.Json.Serialization.JsonStringEnumConverter";
+    public static final String className = "System.Text.Json.JsonReaderOptions";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -87,7 +85,7 @@ public class JsonStringEnumConverter extends JsonConverterFactory  {
         }
     }
 
-    public JsonStringEnumConverter(Object instance) throws Throwable {
+    public JsonReaderOptions(Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,67 +118,91 @@ public class JsonStringEnumConverter extends JsonConverterFactory  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonStringEnumConverter}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonReaderOptions}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link JsonStringEnumConverter} instance
+     * @return {@link JsonReaderOptions} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static JsonStringEnumConverter cast(IJCOBridgeReflected from) throws Throwable {
+    public static JsonReaderOptions cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new JsonStringEnumConverter(from.getJCOInstance());
+        return new JsonReaderOptions(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public JsonStringEnumConverter() throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
+    public JsonReaderOptions() throws Throwable {
     }
 
-    public JsonStringEnumConverter(JsonNamingPolicy namingPolicy, boolean allowIntegerValues) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(namingPolicy == null ? null : namingPolicy.getJCOInstance(), allowIntegerValues));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
 
 
     
     // Methods section
     
-    public boolean CanConvert(NetType typeToConvert) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("CanConvert", typeToConvert == null ? null : typeToConvert.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public JsonConverter CreateConverter(NetType typeToConvert, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateConverter = (JCObject)classInstance.Invoke("CreateConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            return new JsonConverter(objCreateConverter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section
     
+    public boolean getAllowTrailingCommas() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Get("AllowTrailingCommas");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AllowTrailingCommas", AllowTrailingCommas);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int getMaxDepth() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Get("MaxDepth");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MaxDepth", MaxDepth);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public JsonCommentHandling getCommentHandling() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject val = (JCObject)classInstance.Get("CommentHandling");
+            return new JsonCommentHandling(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCommentHandling(JsonCommentHandling CommentHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CommentHandling", CommentHandling == null ? null : CommentHandling.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -31,36 +31,36 @@
  * </auto-generated>
  *************************************************************************************/
 
-package system.text.json;
+package system.text.json.serialization;
 
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.ValueType;
-import system.text.encodings.web.JavaScriptEncoder;
+import system.text.json.serialization.JsonAttribute;
+import system.text.json.serialization.JsonConverter;
 
 
 /**
- * The base .NET class managing System.Text.Json.JsonWriterOptions, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.Serialization.JsonConverterAttribute, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonWriterOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonWriterOptions</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonConverterAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonConverterAttribute</a>
  */
-public class JsonWriterOptions extends ValueType  {
+public class JsonConverterAttribute extends JsonAttribute  {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.JsonWriterOptions
+     * Qualified class name: System.Text.Json.Serialization.JsonConverterAttribute
      */
-    public static final String className = "System.Text.Json.JsonWriterOptions";
+    public static final String className = "System.Text.Json.Serialization.JsonConverterAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -85,7 +85,7 @@ public class JsonWriterOptions extends ValueType  {
         }
     }
 
-    public JsonWriterOptions(Object instance) throws Throwable {
+    public JsonConverterAttribute(Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,19 +118,29 @@ public class JsonWriterOptions extends ValueType  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonWriterOptions}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonConverterAttribute}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link JsonWriterOptions} instance
+     * @return {@link JsonConverterAttribute} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static JsonWriterOptions cast(IJCOBridgeReflected from) throws Throwable {
+    public static JsonConverterAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new JsonWriterOptions(from.getJCOInstance());
+        return new JsonConverterAttribute(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public JsonWriterOptions() throws Throwable {
+    public JsonConverterAttribute() throws Throwable {
+    }
+
+    public JsonConverterAttribute(NetType converterType) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(converterType == null ? null : converterType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 
@@ -138,66 +148,37 @@ public class JsonWriterOptions extends ValueType  {
     
     // Methods section
     
+    public JsonConverter CreateConverter(NetType typeToConvert) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateConverter = (JCObject)classInstance.Invoke("CreateConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance());
+            return new JsonConverter(objCreateConverter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public boolean getIndented() throws Throwable {
+    public NetType getConverterType() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Get("Indented");
+            JCObject val = (JCObject)classInstance.Get("ConverterType");
+            return new NetType(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setIndented(boolean Indented) throws Throwable {
+    public void setConverterType(NetType ConverterType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("Indented", Indented);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public boolean getSkipValidation() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Get("SkipValidation");
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setSkipValidation(boolean SkipValidation) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("SkipValidation", SkipValidation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public JavaScriptEncoder getEncoder() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Encoder");
-            return new JavaScriptEncoder(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setEncoder(JavaScriptEncoder Encoder) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Encoder", Encoder == null ? null : Encoder.getJCOInstance());
+            classInstance.Set("ConverterType", ConverterType == null ? null : ConverterType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

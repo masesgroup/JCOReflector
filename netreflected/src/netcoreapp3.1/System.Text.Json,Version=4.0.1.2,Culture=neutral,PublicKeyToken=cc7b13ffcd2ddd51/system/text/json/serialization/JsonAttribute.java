@@ -31,36 +31,35 @@
  * </auto-generated>
  *************************************************************************************/
 
-package system.text.json;
+package system.text.json.serialization;
 
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.ValueType;
-import system.text.json.JsonReaderOptions;
+import system.Attribute;
 
 
 /**
- * The base .NET class managing System.Text.Json.JsonReaderState, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.Serialization.JsonAttribute, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonReaderState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonReaderState</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonAttribute</a>
  */
-public class JsonReaderState extends ValueType  {
+public class JsonAttribute extends Attribute  {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.JsonReaderState
+     * Qualified class name: System.Text.Json.Serialization.JsonAttribute
      */
-    public static final String className = "System.Text.Json.JsonReaderState";
+    public static final String className = "System.Text.Json.Serialization.JsonAttribute";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -85,7 +84,7 @@ public class JsonReaderState extends ValueType  {
         }
     }
 
-    public JsonReaderState(Object instance) throws Throwable {
+    public JsonAttribute(Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,32 +117,20 @@ public class JsonReaderState extends ValueType  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonReaderState}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonAttribute}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link JsonReaderState} instance
+     * @return {@link JsonAttribute} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static JsonReaderState cast(IJCOBridgeReflected from) throws Throwable {
+    public static JsonAttribute cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new JsonReaderState(from.getJCOInstance());
+        return new JsonAttribute(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public JsonReaderState() throws Throwable {
+    public JsonAttribute() throws Throwable {
     }
-
-    public JsonReaderState(JsonReaderOptions options) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(options == null ? null : options.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-
 
     
     // Methods section
@@ -152,17 +139,6 @@ public class JsonReaderState extends ValueType  {
     
     // Properties section
     
-    public JsonReaderOptions getOptions() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Options");
-            return new JsonReaderOptions(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

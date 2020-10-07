@@ -35,7 +35,9 @@ public class HelloNETSocket {
     static boolean asyncMode = false;
     public static void main(String[] args)
             throws ArgumentNullException, InvalidOperationException, SecurityException, Throwable {
-
+        for (String string : args) {
+            if(string == "-async") asyncMode = true;
+        }
         // create the server thread
         Thread threadServer = new Thread(new ThreadStart() {
             public void Invoke() {

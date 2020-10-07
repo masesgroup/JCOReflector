@@ -392,7 +392,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static NameValueCollection ParseQueryString(java.lang.String query) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static NameValueCollection ParseQueryString(java.lang.String query) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -403,7 +403,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static NameValueCollection ParseQueryString(java.lang.String query, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.threading.ThreadAbortException {
+    public static NameValueCollection ParseQueryString(java.lang.String query, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -454,7 +454,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String JavaScriptStringEncode(java.lang.String value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static java.lang.String JavaScriptStringEncode(java.lang.String value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -464,7 +464,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String JavaScriptStringEncode(java.lang.String value, boolean addDoubleQuotes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static java.lang.String JavaScriptStringEncode(java.lang.String value, boolean addDoubleQuotes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

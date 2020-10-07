@@ -31,52 +31,47 @@
  * </auto-generated>
  *************************************************************************************/
 
-package system.text.json;
+package system.text.json.serialization;
 
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
+import java.util.ArrayList;
 
 // Import section
-// PACKAGE_IMPORT_SECTION
+import system.text.json.serialization.JsonConverter;
+import system.text.json.JsonSerializerOptions;
+
 
 /**
- * The base .NET class managing System.Text.Json.JsonValueKind, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.Serialization.JsonConverterFactory, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonValueKind" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonValueKind</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonConverterFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonConverterFactory</a>
  */
-public class JsonValueKind extends NetObject  {
+public class JsonConverterFactory extends JsonConverter  {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.JsonValueKind
+     * Qualified class name: System.Text.Json.Serialization.JsonConverterFactory
      */
-    public static final String className = "System.Text.Json.JsonValueKind";
+    public static final String className = "System.Text.Json.Serialization.JsonConverterFactory";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
      */
     public static JCType classType = createType();
-    static JCEnum enumReflected = createEnum();
-    JCEnum classInstance = null;
+    static JCEnum enumInstance = null;
+    JCObject classInstance = null;
 
     static JCType createType() {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
-        } catch (JCException e) {
-            return null;
-        }
-    }
-
-    static JCEnum createEnum() {
-        try {
-            return bridge.GetEnum(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             return null;
         }
@@ -90,31 +85,12 @@ public class JsonValueKind extends NetObject  {
         }
     }
 
-    public JsonValueKind(Object instance) {
+    public JsonConverterFactory(Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
-            try {
-                String enumName = NetEnum.GetName(classType, (JCObject)instance);
-                classInstance = enumReflected.fromValue(enumName);
-            } catch (Throwable t) {
-                if (JCOBridgeInstance.getDebug())
-                    t.printStackTrace();
-                classInstance = enumReflected;
-            }
-        } else if (instance instanceof JCEnum) {
-            classInstance = (JCEnum)instance;
-        }
-    }
-
-    public JsonValueKind() {
-        super();
-        // add reference to assemblyName.dll file
-        try {
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-        } catch (Throwable jcne) {
-            if (JCOBridgeInstance.getDebug())
-                jcne.printStackTrace();
-        }
+            classInstance = (JCObject) instance;
+        } else
+            throw new Exception("Cannot manage object, it is not a JCObject");
     }
 
     public String getJCOAssemblyName() {
@@ -133,31 +109,51 @@ public class JsonValueKind extends NetObject  {
         return classInstance;
     }
 
+    public void setJCOInstance(JCObject instance) {
+        classInstance = instance;
+        super.setJCOInstance(classInstance);
+    }
+
     public JCType getJCOType() {
         return classType;
     }
+    /**
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonConverterFactory}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link JsonConverterFactory} instance
+     * @throws java.lang.Throwable in case of error during cast operation
+     */
+    public static JsonConverterFactory cast(IJCOBridgeReflected from) throws Throwable {
+        NetType.AssertCast(classType, from);
+        return new JsonConverterFactory(from.getJCOInstance());
+    }
 
-    final static JsonValueKind getFrom(JCEnum object, String value) {
+    // Constructors section
+    
+    public JsonConverterFactory() throws Throwable {
+    }
+
+    
+    // Methods section
+    
+    public JsonConverter CreateConverter(NetType typeToConvert, JsonSerializerOptions options) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return new JsonValueKind(object.fromValue(value));
-        } catch (JCException e) {
-            return new JsonValueKind(object);
+            JCObject objCreateConverter = (JCObject)classInstance.Invoke("CreateConverter", typeToConvert == null ? null : typeToConvert.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            return new JsonConverter(objCreateConverter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
         }
     }
 
-    // Enum fields section
+
     
-    public static JsonValueKind Undefined = getFrom(enumReflected, "Undefined");
-    public static JsonValueKind Object = getFrom(enumReflected, "Object");
-    public static JsonValueKind Array = getFrom(enumReflected, "Array");
-    public static JsonValueKind String = getFrom(enumReflected, "String");
-    public static JsonValueKind Number = getFrom(enumReflected, "Number");
-    public static JsonValueKind True = getFrom(enumReflected, "True");
-    public static JsonValueKind False = getFrom(enumReflected, "False");
-    public static JsonValueKind Null = getFrom(enumReflected, "Null");
+    // Properties section
+    
 
 
-    // Flags management section
-
+    // Instance Events section
+    
 
 }

@@ -154,7 +154,7 @@ public class ObjectStateFormatter extends NetObject  {
         }
     }
 
-    public NetObject Deserialize(java.lang.String inputString) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpException, system.web.HttpRequestValidationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException, system.TypeLoadException {
+    public NetObject Deserialize(java.lang.String inputString) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpException, system.web.HttpRequestValidationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException, system.TypeLoadException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -165,7 +165,7 @@ public class ObjectStateFormatter extends NetObject  {
         }
     }
 
-    public java.lang.String Serialize(NetObject stateGraph) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.UnauthorizedAccessException, system.threading.ThreadAbortException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+    public java.lang.String Serialize(NetObject stateGraph) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.UnauthorizedAccessException, system.threading.ThreadAbortException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

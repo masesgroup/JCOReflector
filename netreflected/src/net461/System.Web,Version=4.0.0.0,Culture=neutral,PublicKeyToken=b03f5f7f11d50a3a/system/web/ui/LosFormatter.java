@@ -176,7 +176,7 @@ public class LosFormatter extends NetObject  {
         }
     }
 
-    public NetObject Deserialize(TextReader input) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException {
+    public NetObject Deserialize(TextReader input) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -187,7 +187,7 @@ public class LosFormatter extends NetObject  {
         }
     }
 
-    public NetObject Deserialize(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpException, system.resources.MissingManifestResourceException, system.web.HttpRequestValidationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.NotImplementedException, system.TypeLoadException {
+    public NetObject Deserialize(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpException, system.resources.MissingManifestResourceException, system.web.HttpRequestValidationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.NotImplementedException, system.TypeLoadException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -198,7 +198,7 @@ public class LosFormatter extends NetObject  {
         }
     }
 
-    public void Serialize(Stream stream, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.UnauthorizedAccessException, system.threading.ThreadAbortException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+    public void Serialize(Stream stream, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.UnauthorizedAccessException, system.threading.ThreadAbortException, system.web.HttpException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -208,7 +208,7 @@ public class LosFormatter extends NetObject  {
         }
     }
 
-    public void Serialize(TextWriter output, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException {
+    public void Serialize(TextWriter output, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

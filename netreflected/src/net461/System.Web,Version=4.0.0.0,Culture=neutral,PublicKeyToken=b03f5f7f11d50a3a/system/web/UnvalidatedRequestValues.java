@@ -155,7 +155,7 @@ public class UnvalidatedRequestValues extends NetObject  {
         }
     }
 
-    public NameValueCollection getHeaders() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+    public NameValueCollection getHeaders() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -218,7 +218,7 @@ public class UnvalidatedRequestValues extends NetObject  {
         }
     }
 
-    public HttpCookieCollection getCookies() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.web.HttpException {
+    public HttpCookieCollection getCookies() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -229,7 +229,7 @@ public class UnvalidatedRequestValues extends NetObject  {
         }
     }
 
-    public HttpFileCollection getFiles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.FormatException, system.OverflowException, system.web.HttpRequestValidationException, system.NullReferenceException {
+    public HttpFileCollection getFiles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.security.SecurityException, system.FormatException, system.OverflowException, system.web.HttpRequestValidationException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

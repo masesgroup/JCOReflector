@@ -40,24 +40,24 @@ import org.mases.jcobridge.netreflection.*;
 // PACKAGE_IMPORT_SECTION
 
 /**
- * The base .NET class managing System.Text.Json.JsonCommentHandling, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.JsonTokenType, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonCommentHandling" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonCommentHandling</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonTokenType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonTokenType</a>
  */
-public class JsonCommentHandling extends NetObject  {
+public class JsonTokenType extends NetObject  {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.JsonCommentHandling
+     * Qualified class name: System.Text.Json.JsonTokenType
      */
-    public static final String className = "System.Text.Json.JsonCommentHandling";
+    public static final String className = "System.Text.Json.JsonTokenType";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -90,7 +90,7 @@ public class JsonCommentHandling extends NetObject  {
         }
     }
 
-    public JsonCommentHandling(Object instance) {
+    public JsonTokenType(Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -106,7 +106,7 @@ public class JsonCommentHandling extends NetObject  {
         }
     }
 
-    public JsonCommentHandling() {
+    public JsonTokenType() {
         super();
         // add reference to assemblyName.dll file
         try {
@@ -137,19 +137,28 @@ public class JsonCommentHandling extends NetObject  {
         return classType;
     }
 
-    final static JsonCommentHandling getFrom(JCEnum object, String value) {
+    final static JsonTokenType getFrom(JCEnum object, String value) {
         try {
-            return new JsonCommentHandling(object.fromValue(value));
+            return new JsonTokenType(object.fromValue(value));
         } catch (JCException e) {
-            return new JsonCommentHandling(object);
+            return new JsonTokenType(object);
         }
     }
 
     // Enum fields section
     
-    public static JsonCommentHandling Disallow = getFrom(enumReflected, "Disallow");
-    public static JsonCommentHandling Skip = getFrom(enumReflected, "Skip");
-    public static JsonCommentHandling Allow = getFrom(enumReflected, "Allow");
+    public static JsonTokenType None = getFrom(enumReflected, "None");
+    public static JsonTokenType StartObject = getFrom(enumReflected, "StartObject");
+    public static JsonTokenType EndObject = getFrom(enumReflected, "EndObject");
+    public static JsonTokenType StartArray = getFrom(enumReflected, "StartArray");
+    public static JsonTokenType EndArray = getFrom(enumReflected, "EndArray");
+    public static JsonTokenType PropertyName = getFrom(enumReflected, "PropertyName");
+    public static JsonTokenType Comment = getFrom(enumReflected, "Comment");
+    public static JsonTokenType String = getFrom(enumReflected, "String");
+    public static JsonTokenType Number = getFrom(enumReflected, "Number");
+    public static JsonTokenType True = getFrom(enumReflected, "True");
+    public static JsonTokenType False = getFrom(enumReflected, "False");
+    public static JsonTokenType Null = getFrom(enumReflected, "Null");
 
 
     // Flags management section

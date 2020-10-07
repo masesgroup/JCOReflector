@@ -566,7 +566,7 @@ public class DataGridView extends Control  {
         }
     }
 
-    public void SelectAll() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.TypeLoadException, system.InvalidCastException, system.ObjectDisposedException {
+    public void SelectAll() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.TypeLoadException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

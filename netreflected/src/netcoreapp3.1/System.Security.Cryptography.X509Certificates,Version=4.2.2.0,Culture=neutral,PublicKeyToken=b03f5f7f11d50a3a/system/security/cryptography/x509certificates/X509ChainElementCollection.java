@@ -119,9 +119,9 @@ public class X509ChainElementCollection extends NetObject implements Iterable<X5
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link X509ChainElementCollection}, a cast assert is made to check if types are compatible.
-	 * @param {@link IJCOBridgeReflected} instance to be casted
-	 * @return {@link X509ChainElementCollection} instance
-	 * @throws java.lang.Throwable in case of error during cast operation
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link X509ChainElementCollection} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static X509ChainElementCollection cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

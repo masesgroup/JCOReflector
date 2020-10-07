@@ -140,7 +140,7 @@ public class ZipArchiveEntry extends NetObject  {
     
     // Methods section
     
-    public Stream Open() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.io.InvalidDataException, system.io.IOException, system.io.compression.ZLibException, system.NotSupportedException {
+    public Stream Open() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.io.InvalidDataException, system.io.compression.ZLibException, system.io.IOException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

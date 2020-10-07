@@ -31,35 +31,35 @@
  * </auto-generated>
  *************************************************************************************/
 
-package system.text.json.serialization;
+package system.text.json;
 
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.text.json.serialization.JsonAttribute;
+import system.text.json.JsonNamingPolicy;
 
 
 /**
- * The base .NET class managing System.Text.Json.Serialization.JsonIgnoreAttribute, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.JsonNamingPolicy, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonIgnoreAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonIgnoreAttribute</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonNamingPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonNamingPolicy</a>
  */
-public class JsonIgnoreAttribute extends JsonAttribute  {
+public class JsonNamingPolicy extends NetObject  {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.Serialization.JsonIgnoreAttribute
+     * Qualified class name: System.Text.Json.JsonNamingPolicy
      */
-    public static final String className = "System.Text.Json.Serialization.JsonIgnoreAttribute";
+    public static final String className = "System.Text.Json.JsonNamingPolicy";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -84,7 +84,7 @@ public class JsonIgnoreAttribute extends JsonAttribute  {
         }
     }
 
-    public JsonIgnoreAttribute(Object instance) throws Throwable {
+    public JsonNamingPolicy(Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,23 +117,29 @@ public class JsonIgnoreAttribute extends JsonAttribute  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonIgnoreAttribute}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonNamingPolicy}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link JsonIgnoreAttribute} instance
+     * @return {@link JsonNamingPolicy} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static JsonIgnoreAttribute cast(IJCOBridgeReflected from) throws Throwable {
+    public static JsonNamingPolicy cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new JsonIgnoreAttribute(from.getJCOInstance());
+        return new JsonNamingPolicy(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public JsonIgnoreAttribute() throws Throwable {
+    public JsonNamingPolicy() throws Throwable {
+    }
+
+    
+    // Methods section
+    
+    public java.lang.String ConvertName(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject());
+            return (java.lang.String)classInstance.Invoke("ConvertName", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -141,12 +147,19 @@ public class JsonIgnoreAttribute extends JsonAttribute  {
 
 
     
-    // Methods section
-    
-
-    
     // Properties section
     
+    public static JsonNamingPolicy getCamelCase() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject val = (JCObject)classType.Get("CamelCase");
+            return new JsonNamingPolicy(val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

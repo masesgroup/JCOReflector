@@ -38,30 +38,28 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.ValueType;
-import system.text.json.JsonEncodedText;
-import system.text.encodings.web.JavaScriptEncoder;
-
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 
 /**
- * The base .NET class managing System.Text.Json.JsonEncodedText, System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.JsonException, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetException}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonEncodedText" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonEncodedText</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonException</a>
  */
-public class JsonEncodedText extends ValueType  {
+public class JsonException extends NetException {
     /**
-     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+     * Fully assembly qualified name: System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
-    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+    public static final String assemblyFullName = "System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     /**
      * Assembly name: System.Text.Json
      */
     public static final String assemblyShortName = "System.Text.Json";
     /**
-     * Qualified class name: System.Text.Json.JsonEncodedText
+     * Qualified class name: System.Text.Json.JsonException
      */
-    public static final String className = "System.Text.Json.JsonEncodedText";
+    public static final String className = "System.Text.Json.JsonException";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -69,11 +67,14 @@ public class JsonEncodedText extends ValueType  {
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
+    JCNativeException jcNativeException = null;
 
     static JCType createType() {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
-        } catch (JCException e) {
+        } catch (JCException jce) {
+            if (JCOBridgeInstance.getDebug())
+                jce.printStackTrace();
             return null;
         }
     }
@@ -86,12 +87,30 @@ public class JsonEncodedText extends ValueType  {
         }
     }
 
-    public JsonEncodedText(Object instance) throws Throwable {
+    public JsonException() {
+        super();
+    }
+
+    public JsonException(Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
-        } else
-            throw new Exception("Cannot manage object, it is not a JCObject");
+        } else if (instance instanceof JCNativeException) {
+            jcNativeException = (JCNativeException) instance;
+            classInstance = jcNativeException.getCLRException();
+        }
+    }
+
+    public JsonException(String message) {
+        super(message);
+    }
+
+    public JsonException(NetException cause) {
+        super(cause);
+    }
+
+    public JsonException(String message, NetException cause) {
+        super(message, cause);
     }
 
     public String getJCOAssemblyName() {
@@ -119,42 +138,27 @@ public class JsonEncodedText extends ValueType  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonEncodedText}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link JsonException}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link JsonEncodedText} instance
+     * @return {@link JsonException} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static JsonEncodedText cast(IJCOBridgeReflected from) throws Throwable {
+    public static JsonException cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new JsonEncodedText(from.getJCOInstance());
+        return new JsonException(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public JsonEncodedText() throws Throwable {
-    }
-
-
 
     
     // Methods section
     
-    public boolean Equals(JsonEncodedText other) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static JsonEncodedText Encode(java.lang.String value, JavaScriptEncoder encoder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objEncode = (JCObject)classType.Invoke("Encode", value, encoder == null ? null : encoder.getJCOInstance());
-            return new JsonEncodedText(objEncode);
+            classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,25 @@ public class JsonEncodedText extends ValueType  {
     
     // Properties section
     
+    public java.lang.String getPath() throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Get("Path");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
+    public void setPath(java.lang.String Path) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Path", Path);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
-    // Instance Events section
-    
 
 }

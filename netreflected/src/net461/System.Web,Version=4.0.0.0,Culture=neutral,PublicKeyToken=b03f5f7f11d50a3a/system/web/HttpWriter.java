@@ -209,7 +209,7 @@ public class HttpWriter extends TextWriter  {
         }
     }
 
-    public void WriteBytes(byte[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.NullReferenceException {
+    public void WriteBytes(byte[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -219,7 +219,7 @@ public class HttpWriter extends TextWriter  {
         }
     }
 
-    public void WriteBytes(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.NullReferenceException {
+    public void WriteBytes(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

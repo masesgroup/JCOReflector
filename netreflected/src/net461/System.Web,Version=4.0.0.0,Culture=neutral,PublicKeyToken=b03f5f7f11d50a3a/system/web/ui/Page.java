@@ -230,7 +230,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public java.lang.String GetPostBackClientEvent(Control control, java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public java.lang.String GetPostBackClientEvent(Control control, java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -250,7 +250,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public java.lang.String GetPostBackEventReference(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public java.lang.String GetPostBackEventReference(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -260,7 +260,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public java.lang.String GetPostBackEventReference(Control control, java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public java.lang.String GetPostBackEventReference(Control control, java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -313,7 +313,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public void AddOnPreRenderCompleteAsync(BeginEventHandler beginHandler, EndEventHandler endHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ApplicationException, system.web.HttpUnhandledException, system.PlatformNotSupportedException, system.threading.ThreadStateException {
+    public void AddOnPreRenderCompleteAsync(BeginEventHandler beginHandler, EndEventHandler endHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ApplicationException, system.web.HttpUnhandledException, system.PlatformNotSupportedException, system.threading.ThreadStateException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -323,7 +323,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public void AddOnPreRenderCompleteAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ApplicationException, system.web.HttpUnhandledException, system.security.SecurityException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public void AddOnPreRenderCompleteAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.OutOfMemoryException, system.ApplicationException, system.web.HttpUnhandledException, system.security.SecurityException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -353,7 +353,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public void ProcessRequest(HttpContext context) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.web.HttpUnhandledException, system.PlatformNotSupportedException {
+    public void ProcessRequest(HttpContext context) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.web.HttpUnhandledException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -373,7 +373,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public void RegisterAsyncTask(PageAsyncTask task) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.threading.ThreadStateException, system.ObjectDisposedException {
+    public void RegisterAsyncTask(PageAsyncTask task) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.threading.ThreadStateException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -899,7 +899,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public void setCulture(java.lang.String Culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
+    public void setCulture(java.lang.String Culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -1079,7 +1079,7 @@ public class Page extends TemplateControl  {
         }
     }
 
-    public void setUICulture(java.lang.String UICulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
+    public void setUICulture(java.lang.String UICulture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -374,7 +374,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.InvalidOperationException, system.xml.XmlException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -385,7 +385,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.InvalidOperationException, system.xml.XmlException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -407,7 +407,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.InvalidOperationException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

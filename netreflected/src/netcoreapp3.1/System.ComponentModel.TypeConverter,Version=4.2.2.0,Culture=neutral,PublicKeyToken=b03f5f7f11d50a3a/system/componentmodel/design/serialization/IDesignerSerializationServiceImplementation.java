@@ -114,6 +114,9 @@ public class IDesignerSerializationServiceImplementation extends NetObject imple
     }
     /**
      * Try to cast the {@link IJCOBridgeReflected} instance into {@link IDesignerSerializationService}, a cast assert is made to check if types are compatible.
+     * @param from {@link IJCOBridgeReflected} instance to be casted
+     * @return {@link IDesignerSerializationService} instance
+     * @throws java.lang.Throwable in case of error during cast operation
      */
     public static IDesignerSerializationService ToIDesignerSerializationService(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);

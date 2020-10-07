@@ -1,0 +1,59 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI_LINUX
+
+# Controls when the action will run. Triggers the workflow after CI_WINDOWS workflow is completed
+# only for the master branch
+on:
+  workflow_run:
+    workflows: ["CI_WINDOWS"]
+    branches: [master]
+    types: 
+      - completed
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+      if: ${{ github.event.workflow_run.conclusion == 'success' }}
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
+
+      # Steps represent a sequence of tasks that will be executed as part of the job
+      steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+          with: 
+            fetch-depth: '1'
+        # Runs a single command using the runners shell
+        # Link the folder
+        - name: Make link
+          run: |
+            sudo ln -sv  /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ /home/runner/work/JCOReflector/JCOReflector/jdk
+
+        # Runs a set of commands using the runners shell
+        - name: Build JCOReflectorCLI
+          run: |
+            dotnet build --no-incremental --framework netcoreapp3.1 JCOReflector/JCOReflectorCLI.sln				   
+
+        - name: Build Java files
+          run: |
+            dotnet bin/netcoreapp3.1/JCOReflectorCLI.dll build .github/workflows/build_linux.job
+
+        - name: Build JAR files
+          run: |
+            dotnet bin/netcoreapp3.1/JCOReflectorCLI.dll createjars .github/workflows/createjars_core_linux.job																	  
+
+        - name: Build test source file
+          run: |
+            javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/src/hierarchy/*.java ./netreflected-tests/src/mscorlib/*.java ./netreflected-tests/src/nettest/*.java
+
+        - name: Execute tests
+          run: 
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/src/" hierarchy.HelloHierarchy
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/src/" hierarchy.HelloInterfaces
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/src/" mscorlib.HelloNET
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/src/" mscorlib.HelloNETEvent
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/src/" mscorlib.HelloIterator
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/src/" nettest.HelloNETSocket
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/src/" nettest.HelloNETSocket -async

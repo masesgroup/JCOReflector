@@ -1,0 +1,98 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI_WINDOWS
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: windows-2019
+  
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with: 
+          fetch-depth: '1'
+
+      # Runs a set of commands using the runners shell
+      - name: Build JCOReflectorCLI
+        run: |
+          dotnet build --no-incremental --framework netcoreapp3.1 JCOReflector\JCOReflectorCLI.sln
+          dotnet build --no-incremental --framework net461 JCOReflector\JCOReflectorCLI.sln  
+
+      # Runs a set of commands using the runners shell
+      - name: Copy configuration file
+        run: Copy-Item .github\workflows\JCOReflectorCLI.runtimeconfig.json -Destination bin\netcoreapp3.1\JCOReflectorCLI.runtimeconfig.json -Force
+
+      - name: Remove Java files
+        run: |
+          Remove-Item .\netreflected\src\netcoreapp3.1 -Recurse -Force 
+          Remove-Item .\netreflected\src\net461 -Recurse -Force
+          
+      - name: Reflect .NET Core 3.1 Java files
+        run:
+          dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll reflect .github\workflows\reflect_netcoreapp3.1.job
+          
+      - name: Reflect .NET Framework Java files
+        run:
+          .\bin\net461\JCOReflectorCLI reflect .github\workflows\reflect_net461.job
+          
+      - name: Build Java files
+        run: |
+          dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll build .github\workflows\build_win19.job
+          .\bin\net461\JCOReflectorCLI build .github\workflows\build_win19.job
+          
+      - name: Build JAR files
+        run: |
+          dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll createjars .github\workflows\createjars_core_win19.job
+          .\bin\net461\JCOReflectorCLI createjars .github\workflows\createjars_framework_win19.job
+          
+      - name: Build test source file
+        run: |
+          javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/src/hierarchy/*.java ./netreflected-tests/src/mscorlib/*.java ./netreflected-tests/src/nettest/*.java
+          javac -cp ./bin/net461/JCOReflector.jar ./netreflected-tests/src/hierarchy/HelloInterfaces.java ./netreflected-tests/src/mscorlib/*.java ./netreflected-tests/src/nettest/*.java
+          
+      - name: Execute tests
+        run: |
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" hierarchy.HelloHierarchy
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" hierarchy.HelloInterfaces
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloNET
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloNETEvent
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloIterator
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" nettest.HelloNETSocket
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" nettest.HelloNETSocket -async
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" hierarchy.HelloInterfaces
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloNET
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloNETEvent
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloIterator
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" nettest.HelloNETSocket
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" nettest.HelloNETSocket -async
+
+      - name: Extract commit SHA
+        run: |
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          add: '.\netreflected\src\*.java'
+          message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

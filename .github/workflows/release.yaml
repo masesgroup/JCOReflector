@@ -1,0 +1,74 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI_RELEASE
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  release:
+    types: 
+      - published
+      - edited
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build_release:
+    # The type of runner that the job will run on
+    runs-on: windows-2019
+  
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with: 
+          fetch-depth: '1'
+
+      # Runs a set of commands using the runners shell
+      - name: Build JCOReflectorCLI
+        run: |
+          dotnet build --no-incremental --framework netcoreapp3.1 JCOReflector\JCOReflectorCLI.sln
+          dotnet build --no-incremental --framework net461 JCOReflector\JCOReflectorCLI.sln  
+
+      # Runs a set of commands using the runners shell
+      - name: Copy configuration file
+        run: Copy-Item .github\workflows\JCOReflectorCLI.runtimeconfig.json -Destination bin\netcoreapp3.1\JCOReflectorCLI.runtimeconfig.json -Force
+   
+      - name: Build Java files
+        run: |
+          dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll build .github\workflows\build_win19.job
+          .\bin\net461\JCOReflectorCLI build .github\workflows\build_win19.job
+          
+      - name: Build JAR files
+        run: |
+          dotnet .\bin\netcoreapp3.1\JCOReflectorCLI.dll createjars .github\workflows\createjars_core_win19.job
+          .\bin\net461\JCOReflectorCLI createjars .github\workflows\createjars_framework_win19.job
+          
+ 
+      - name: Compress release files
+        run: | 
+          Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
+          Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: .\bin\netcoreapp3.1.zip
+          asset_name: netcoreapp3.1.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: .\bin\net461.zip
+          asset_name: net461.zip
+          tag: ${{ github.ref }}
+          overwrite: true

@@ -22,7 +22,7 @@
  *  SOFTWARE.
  */
 
- package nettest;
+package nettest;
 
 import system.ArgumentNullException;
 import system.Environment;
@@ -33,15 +33,23 @@ import system.threading.ThreadStart;
 
 public class HelloNETSocket {
     static boolean asyncMode = false;
+    static String serverAddress = "0.0.0.0";
+
     public static void main(String[] args)
             throws ArgumentNullException, InvalidOperationException, SecurityException, Throwable {
-        for (String string : args) {
-            if(string == "-async") asyncMode = true;
+        for (int x = 0; x < args.length; x++) {
+            String arg = args[x];
+            if (arg == "-async")
+                asyncMode = true;
+            if (arg == "-server") {
+                serverAddress = args[x + 1];
+                x++;
+            }
         }
         // create the server thread
         Thread threadServer = new Thread(new ThreadStart() {
             public void Invoke() {
-                HelloNETSocketServer.StartListening(asyncMode, "0.0.0.0", 11000);
+                HelloNETSocketServer.StartListening(asyncMode, serverAddress, 11000);
             }
         });
         // create the client thread
@@ -52,6 +60,7 @@ public class HelloNETSocket {
         });
         // start threads
         threadServer.Start();
+        Thread.Sleep(5000);
         threadClient.Start();
         // let it communicate
         Thread.Sleep(5000);

@@ -34,6 +34,13 @@ namespace MASES.C2JReflector
     {
         static void Main(string[] args)
         {
+            const string REFLECT = "reflect";
+            const string BUILD = "build";
+            const string BUILDDOCS = "builddocs";
+            const string CREATEJARS = "createjars";
+            const string DEFAULTJDK = "jdk-14.0.1";
+            const string JDKPARAM = "-jdk=";
+
             if (args.Length < 2)
             {
                 showHelp();
@@ -43,6 +50,17 @@ namespace MASES.C2JReflector
 
             string RepositoryRoot;
             string tbJDKFolder = string.Empty;
+
+            for (int index = 2; index < args.Length; index++)
+            {
+                var arg = args[index];
+                if (arg.StartsWith(JDKPARAM))
+                {
+                    tbJDKFolder = arg.Substring(JDKPARAM.Length);
+                    tbJDKFolder = Path.GetFullPath(tbJDKFolder);
+                }
+            }
+
             try
             {
                 var assemblyLoc = typeof(Program).Assembly.Location;
@@ -59,7 +77,7 @@ namespace MASES.C2JReflector
 
                 switch (args[0])
                 {
-                    case "reflect":
+                    case REFLECT:
                         {
                             var input = readInput<ReflectorEventArgs>(args[1]);
                             input.CancellationToken = new CancellationTokenSource().Token;
@@ -72,7 +90,7 @@ namespace MASES.C2JReflector
                             Task.Factory.StartNew(Reflector.ExportAssembly, input).Wait();
                         }
                         break;
-                    case "build":
+                    case BUILD:
                         {
                             var input = readInput<JavaBuilderEventArgs>(args[1]);
                             input.CancellationToken = new CancellationTokenSource().Token;
@@ -90,10 +108,15 @@ namespace MASES.C2JReflector
                             if (string.IsNullOrEmpty(input.JDKFolder))
                             {
 #if DEBUG
-                                input.JDKFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, "jdk-14.0.1"));
+                                input.JDKFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, DEFAULTJDK));
 #else
                                 throw new ArgumentException("Missing JDKFolder input");
 #endif
+                            }
+
+                            if (!string.IsNullOrEmpty(tbJDKFolder))
+                            {
+                                input.JDKFolder = tbJDKFolder;
                             }
 
                             if (input.AssembliesToUse == null || input.AssembliesToUse.Length == 0)
@@ -104,7 +127,7 @@ namespace MASES.C2JReflector
                             Task.Factory.StartNew(JavaBuilder.CompileClasses, input).Wait();
                         }
                         break;
-                    case "builddocs":
+                    case BUILDDOCS:
                         {
                             var input = readInput<JavaBuilderEventArgs>(args[1]);
                             input.CancellationToken = new CancellationTokenSource().Token;
@@ -122,10 +145,15 @@ namespace MASES.C2JReflector
                             if (string.IsNullOrEmpty(input.JDKFolder))
                             {
 #if DEBUG
-                                input.JDKFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, "jdk-14.0.1"));
+                                input.JDKFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, DEFAULTJDK));
 #else
                                 throw new ArgumentException("Missing JDKFolder input");
 #endif
+                            }
+
+                            if (!string.IsNullOrEmpty(tbJDKFolder))
+                            {
+                                input.JDKFolder = tbJDKFolder;
                             }
 
                             if (input.AssembliesToUse == null || input.AssembliesToUse.Length == 0)
@@ -136,7 +164,7 @@ namespace MASES.C2JReflector
                             Task.Factory.StartNew(JavaBuilder.GenerateDocs, input).Wait();
                         }
                         break;
-                    case "createjars":
+                    case CREATEJARS:
                         {
                             var input = readInput<JARBuilderEventArgs>(args[1]);
                             input.CancellationToken = new CancellationTokenSource().Token;
@@ -160,10 +188,15 @@ namespace MASES.C2JReflector
                             if (string.IsNullOrEmpty(input.JDKFolder))
                             {
 #if DEBUG
-                                input.JDKFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, "jdk-14.0.1"));
+                                input.JDKFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, DEFAULTJDK));
 #else
                                 throw new ArgumentException("Missing JDKFolder input");
 #endif
+                            }
+
+                            if (!string.IsNullOrEmpty(tbJDKFolder))
+                            {
+                                input.JDKFolder = tbJDKFolder;
                             }
 
                             if (input.AssembliesToUse == null || input.AssembliesToUse.Length == 0)
@@ -176,7 +209,7 @@ namespace MASES.C2JReflector
                         break;
                     default:
                         showHelp();
-                        Environment.ExitCode = 0;
+                        Environment.ExitCode = -1;
                         return;
                 }
             }
@@ -235,10 +268,11 @@ namespace MASES.C2JReflector
 #endif
 
             Console.WriteLine(title + " - Version " + assembly.GetName().Version.ToString());
-            Console.WriteLine(assembly.GetName().Name + " <OPERATION> <CONFIGURATION FILE>");
+            Console.WriteLine(assembly.GetName().Name + " <OPERATION> <CONFIGURATION FILE> -jdk=<JDKFOLDER>");
             Console.WriteLine();
             Console.WriteLine("OPERATION: reflect, build, builddocs, createjars");
             Console.WriteLine("CONFIGURATION FILE: a file containing the information to complete each OPERATION.");
+            Console.WriteLine("-jdk: valid only if OPERATION are build, builddocs and createjars. Overrides value found in CONFIGURATION FILE");
         }
     }
 }

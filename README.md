@@ -1,5 +1,7 @@
 # JCOReflector
 
+![CI_WINDOWS](https://github.com/marcocappolimases/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/marcocappolimases/JCOReflector/workflows/CI_LINUX/badge.svg)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
+
 JCOReflector is a reflection engine which automatically writes Java classes using .NET class reflection.
 The generated classes are based on the powerful [JCOBridge](https://www.jcobridge.com) engine and extends its use to simplify the use of .NET from Java(JVM).
 It was created internally from us to support our customers, now we made it available for everyone.

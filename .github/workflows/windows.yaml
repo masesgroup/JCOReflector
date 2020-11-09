@@ -10,13 +10,55 @@ on:
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# This workflow contains two jobs called "check" and "build_windows"
 jobs:
-  # This workflow contains a single job called "build"
+  # Verify if a build is needed
+  check:
+    name: Check changed files
+    outputs:
+      run_job: ${{ steps.check_files.outputs.run_job }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
+
+    - name: check files
+      id: check_files
+      run: |
+        echo "=============== list changed files ==============="
+        git diff --name-only HEAD^ HEAD
+        
+        echo "::set-output name=run_job::false"
+        echo "========== check paths of changed files =========="
+        git diff --name-only HEAD^ HEAD > files.txt
+        while IFS= read -r file
+        do
+          echo $file
+          if [[ $file == "netreflected/src/JCOReflector/"* ]]; then
+            echo "This file is under the directory 'JCOReflector/netreflected/src/JCOReflector'."
+            echo "::set-output name=run_job::true"
+            break
+          fi
+          if [[ $file == "JCOReflector/"* ]]; then
+            echo "This file is under the directory 'JCOReflector/JCOReflector/'."
+            echo "::set-output name=run_job::true"
+            break
+          fi
+          if [[ $file == "netreflected-tests/"* ]]; then
+            echo "This file is under the directory 'netreflected-tests/'."
+            echo "::set-output name=run_job::true"
+            break
+          fi
+        done < files.txt
+
   build_windows:
+    needs: check
+    if: needs.check.outputs.run_job == 'true'
     # The type of runner that the job will run on
     runs-on: windows-2019
-  
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a set of commands using the runners shell
@@ -64,24 +106,24 @@ jobs:
           
       - name: Build test source file
         run: |
-          javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/src/hierarchy/*.java ./netreflected-tests/src/mscorlib/*.java ./netreflected-tests/src/nettest/*.java
-          javac -cp ./bin/net461/JCOReflector.jar ./netreflected-tests/src/hierarchy/HelloInterfaces.java ./netreflected-tests/src/mscorlib/*.java ./netreflected-tests/src/nettest/*.java
+          javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+          javac -cp ./bin/net461/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/HelloInterfaces.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
           
       - name: Execute tests
         run: |
-          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" hierarchy.HelloHierarchy
-          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" hierarchy.HelloInterfaces
-          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloNET
-          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloNETEvent
-          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloIterator
-          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" nettest.HelloNETSocket
-          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/src/" nettest.HelloNETSocket -async
-          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" hierarchy.HelloInterfaces
-          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloNET
-          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloNETEvent
-          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" mscorlib.HelloIterator
-          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" nettest.HelloNETSocket
-          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/src/" nettest.HelloNETSocket -async
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNETEvent
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
+          java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNETEvent
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
+          java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
 
       - name: Extract commit SHA
         run: |

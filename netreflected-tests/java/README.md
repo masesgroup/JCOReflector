@@ -1,6 +1,6 @@
 # netreflected-test
 
-The folder contains a set of example and unit tests for JCOReflector
+The folder contains a set of Java example and unit tests for JCOReflector
 
 ## How to use
 

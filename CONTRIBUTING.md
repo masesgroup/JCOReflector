@@ -15,6 +15,7 @@ The project is organized in this folder structure:
 * **bin** (The output folder, automatically generated and not in git)
     * net461 (folder for .NET Framework output)
     * netcoreapp3.1 (folder for .NET Core 3.1 output)
+    * net5.0 (folder for .NET 5 output)
 * **JCOReflector** (The folder containing the source of the reflection engine)
     * **CLI** (command line interface)
     * **GUI** (graphical interface)
@@ -34,11 +35,12 @@ The project is organized in this folder structure:
         * **net461** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		* **net5.0** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 
-* **netreflected-tests** (container of Java test classes)
-    * **src** (a standard folder used in any Java IDE)
-        * **mscorlib** (contains an example class which use mscorlib API)
-		* **nettest** (contains an example class which use network API)
-		* **hierarchy** (contains an example class which use hierarchy)
+* **netreflected-tests** (container test classes)
+	* **java** (container of Java test classes)
+		* **src** (a standard folder used in any Java IDE)
+			* **mscorlib** (contains an example class which use mscorlib API)
+			* **nettest** (contains an example class which use network API)
+			* **hierarchy** (contains an example class which use hierarchy)
 
 # How Can I Contribute?
 

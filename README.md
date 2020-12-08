@@ -116,7 +116,7 @@ Within the folder bin you will find two subfolders:
 
 - **net461** (available only on Windows platform)
 - **netcoreapp3.1** (available on .NET Core supported platforms)
-- **net5.0** (available on .NET 5 supported platforms - prerelease done on v5.0.0-rc.1)
+- **net5.0** (available on .NET 5 supported platforms)
 
 in each subfolder will be available two executables:
 
@@ -480,7 +480,7 @@ The folder [netreflected](/netreflected/src) contains all reflected classes gene
 > * System.Security.Claims, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-### .NET 5 list of analyzed and reflected assemblies (reference is .NET v5.0.0-rc.1)
+### .NET 5 list of analyzed and reflected assemblies (reference is .NET v5.0.100)
 
 > Analyzed Assemblies:
 > * PresentationFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35

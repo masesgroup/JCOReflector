@@ -24,7 +24,7 @@
 
 package mscorlib;
 
-import org.mases.jcobridge.netreflection.NetObject;
+import org.mases.jcobridge.netreflection.*;
 
 import system.*;
 import system.io.*;
@@ -32,6 +32,7 @@ import system.text.Encoding;
 
 public class HelloNET {
     public static void main(String[] args) {
+        JCOBridgeInstance.setCommandLineArgs(args);
         try {
             String filename = "test.txt";
             String result = "";

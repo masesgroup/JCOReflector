@@ -24,7 +24,7 @@
 
 package hierarchy;
 
-import org.mases.jcobridge.netreflection.NetObject;
+import org.mases.jcobridge.netreflection.*;
 
 import system.Console;
 import system.Environment;
@@ -32,6 +32,7 @@ import system.collections.*;
 
 public class HelloInterfaces {
     public static void main(String[] args) {
+        JCOBridgeInstance.setCommandLineArgs(args);
         try {
             //Create and populate a sorted array
             SortedList sr = new SortedList();

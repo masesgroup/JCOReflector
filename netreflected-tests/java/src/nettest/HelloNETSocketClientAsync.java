@@ -24,7 +24,7 @@
 
 package nettest;
 
-import org.mases.jcobridge.netreflection.NetObject;
+import org.mases.jcobridge.netreflection.*;
 
 import system.*;
 import system.net.*;
@@ -110,6 +110,8 @@ public class HelloNETSocketClientAsync {
     }
 
     public static void main(String[] args) throws Throwable {
+        JCOBridgeInstance.setCommandLineArgs(args);
+
         connectDone = new ManualResetEvent(false);
         sendDone = new ManualResetEvent(false);
         receiveDone = new ManualResetEvent(false);

@@ -24,6 +24,8 @@
 
 package nettest;
 
+import org.mases.jcobridge.netreflection.*;
+
 import system.ArgumentNullException;
 import system.Environment;
 import system.InvalidOperationException;
@@ -37,6 +39,9 @@ public class HelloNETSocket {
 
     public static void main(String[] args)
             throws ArgumentNullException, InvalidOperationException, SecurityException, Throwable {
+
+        JCOBridgeInstance.setCommandLineArgs(args);
+
         for (int x = 0; x < args.length; x++) {
             String arg = args[x];
             if (arg == "-async")

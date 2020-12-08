@@ -93,10 +93,10 @@ jobs:
 
         - name: Execute tests
           run: |
-            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy
-            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces
-            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET
-            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent
-            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator
-            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1
-            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NETCore.App
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NETCore.App
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App

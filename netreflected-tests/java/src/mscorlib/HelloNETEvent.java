@@ -24,6 +24,8 @@
 
 package mscorlib;
 
+import org.mases.jcobridge.netreflection.*;
+
 import system.Environment;
 import system.threading.Thread;
 import system.threading.ThreadStart;
@@ -31,6 +33,7 @@ import system.timers.Timer;
 
 public class HelloNETEvent {
     public static void main(String[] args) {
+        JCOBridgeInstance.setCommandLineArgs(args);
         try (Timer timer = new Timer();){
             TimerElapsed elapsed = new TimerElapsed();
             

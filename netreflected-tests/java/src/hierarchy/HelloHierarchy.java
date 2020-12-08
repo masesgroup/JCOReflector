@@ -24,6 +24,8 @@
 
 package hierarchy;
 
+import org.mases.jcobridge.netreflection.*;
+
 import org.mases.jcobridge.JCRefOut;
 import system.*;
 import system.io.*;
@@ -31,6 +33,7 @@ import system.text.Encoding;
 
 public class HelloHierarchy {
     public static void main(String[] args) {
+        JCOBridgeInstance.setCommandLineArgs(args);
         try {
             String fileinputname = "input.txt";
             String fileoutputname = "output.txt";

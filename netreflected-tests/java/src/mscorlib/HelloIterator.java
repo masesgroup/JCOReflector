@@ -24,12 +24,14 @@
 
 package mscorlib;
 
+import org.mases.jcobridge.netreflection.*;
+
 import system.Console;
 import system.Environment;
 
-
 public class HelloIterator {
     public static void main(String[] args) {
+        JCOBridgeInstance.setCommandLineArgs(args);
         try {
             //Get an iterable array and populate a sorted array
 

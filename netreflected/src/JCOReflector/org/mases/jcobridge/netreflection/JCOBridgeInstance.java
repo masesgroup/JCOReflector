@@ -47,6 +47,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
     static Object synchObj = new Object();
     static HashMap<String, JCOBridge> bridgeInstances = new HashMap<String, JCOBridge>();
     static JCOBridge bridgeInstance = null;
+    static String[] _commandLineArgs = new String[0];
 
     BufferedWriter bw = null;
     FileWriter fw = null;
@@ -206,6 +207,19 @@ public final class JCOBridgeInstance implements IJCEventLog {
         _isMultiInstance = isMultiInstance;
     }
 
+     /**
+     * Set command-line arguments
+     * <p>
+     * It can be applied only before any operation
+     * 
+     * @param args the command-line arguments
+     */
+    public static void setCommandLineArgs(String[] args) {
+        if (initialized)
+            return;
+        _commandLineArgs = args;
+    }
+
     /**
      * Returns the {@link JCOBridge} instance associated to the assmebly.
      * <p>
@@ -219,7 +233,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
             if (!initialized) {
                 try {
                     try {
-                        JCOBridge.Initialize();
+                        JCOBridge.Initialize(_commandLineArgs);
                     } catch (JCNativeException e) {
                         if (!e.getCLRType().contains("FallbackInTrialModeException")) {
                             if (_isDebug)

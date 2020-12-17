@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JARBuilderEventArgs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CancellationToken />
+  <LogLevel>Error</LogLevel>
+  <SourceFolder>netreflected</SourceFolder>
+  <SplitFolderByAssembly>true</SplitFolderByAssembly>
+  <JDKFolder>jdk</JDKFolder>
+  <JDKTarget>Version8</JDKTarget>
+  <JarDestinationFolder>bin/net5.0</JarDestinationFolder>
+  <WithJARSource>false</WithJARSource>
+</JARBuilderEventArgs>

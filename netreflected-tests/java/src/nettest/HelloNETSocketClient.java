@@ -42,7 +42,7 @@ import system.text.Encoding;
 // https://docs.microsoft.com/en-us/dotnet/framework/network-programming/using-an-asynchronous-client-socket
 
 public class HelloNETSocketClient {
-    public static boolean run = true;
+    public static volatile boolean run = true;
     // Incoming data from the client.
     public static String data = null;
 
